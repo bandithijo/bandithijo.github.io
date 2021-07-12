@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Here's where I started writing some notes that someday I will call it, a book">
+<meta name="keywords" content="">
+<meta name="author" content="Rizqi Nur Assyaufi">
+<meta name="theme-color" content="#008352">
+<meta name="msapplication-navbutton-color" content="#008352">
+<meta name="apple-mobile-web-app-status-bar-style" content="#008352">
+<title>Step 3: Installing Arch Linux Base Packages | BanditHijo (R)-Chive</title>
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/github-markdown-bandit.css">
+<link rel="icon" href="/assets/img/favicon/favicon.png" type="image/png">
+<link rel="manifest" href="/manifest.json">
+
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Step 3: Installing Arch Linux Base Packages" />
+<meta name="author" content="BanditHijo" />
+<meta property="og:locale" content="id" />
+<meta name="description" content="STEP 3 : Installing Arch Linux Base Packages" />
+<meta property="og:description" content="STEP 3 : Installing Arch Linux Base Packages" />
+<link rel="canonical" href="https://bandithijo.github.io/arch/step-3-installing-arch-linux-base-packages" />
+<meta property="og:url" content="https://bandithijo.github.io/arch/step-3-installing-arch-linux-base-packages" />
+<meta property="og:site_name" content="BanditHijo (R)-Chive" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-02-09T04:00:00+08:00" />
+<script type="application/ld+json">
+{"description":"STEP 3 : Installing Arch Linux Base Packages","url":"https://bandithijo.github.io/arch/step-3-installing-arch-linux-base-packages","@type":"BlogPosting","headline":"Step 3: Installing Arch Linux Base Packages","dateModified":"2021-07-12T16:52:32+08:00","datePublished":"2018-02-09T04:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://bandithijo.github.io/arch/step-3-installing-arch-linux-base-packages"},"author":{"@type":"Person","name":"BanditHijo"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <meta property="og:country-name"   content="Indonesia"/>
+<meta property="og:image"          content="/assets/img/banner/bndt_banner.png"/>
+<meta property="og:image:width"    content="460"/>
+<meta property="og:image:height"   content="230"/>
+
+<meta property="twitter:card"      content="summary_large_image"/>
+<meta property="twitter:title"     content="Step 3: Installing Arch Linux Base Packages"/>
+<meta property="twitter:author"    content="BanditHijo"/>
+<meta property="twitter:image:src" content="/assets/img/banner/bndt_banner.png"/>
+
+  <!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-116004889-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+  <meta name="google-site-verification" content="qXp9Kgb5hIHVp5T9vFOa_motqUmNuF5STbkJKF70wLc">
+
+</head>
+
+
+<body>
+
+<header id="header" class="noselect">
+  <div class="container container-strip">
+    <div class="container-inner container-inner-strip">
+    <div class="logo">
+      <img src="/assets/img/logo/logo_bandithijo.png">
+    </div>
+
+    <div class="title">
+      <h1><span class="nobr">BanditHijo (R)-Chive</span></h1>
+    </div>
+    <div class="description">
+      <h2>Here's where I started writing some notes that someday <span class="nobr">I will call it, a book</span></h2>
+      <br>
+      <span class="emblem-f">TECHNICAL<span class="emblem-e">BLOG : JOURNAL</span></span>
+    </div>
+
+    <nav class="nav nav-strip">
+      <div class="toggle">
+        <div class="menu" onmouseover="this.style.cursor='pointer'" onclick="navBtn()">
+          <span class="menu-title">BANDITHIJO</span>
+          <img style="width:30px;" src="/assets/img/logo/logo_menu.svg" id="nav-btn">
+        </div><!-- menu -->
+      </div><!-- toggle -->
+      <ul id="menu-ul">
+        <li><a href="/">Home</a></li>
+        
+        
+        
+        <li><a href="/blog/" class="">Blog</a></li>
+        
+        
+        
+        <li><a href="/note/" class="">Note</a></li>
+        
+        
+        
+        <li><a href="/vlog/" class="">Vlog</a></li>
+        
+        
+        
+        <li><a href="/book/" class="">Books</a></li>
+        
+        
+        
+        <li><a href="/about/" class="">About</a></li>
+        
+        
+        
+        <li><a href="https://bandithijo.github.io/v2" class="">v2 (beta)</a></li>
+        
+      </ul>
+    </nav>
+    </div><!-- container-inner -->
+  </div><!-- header container -->
+</header>
+
+
+<section id="main">
+  <div class="container">
+    <div class="container-edge-border">
+
+      
+
+      <article class="post-pre-title">
+        <div class="post-body">
+          
+            <h1 class="post-title"><a href="/arch/step-3-installing-arch-linux-base-packages">Step 3: Installing Arch Linux Base Packages</a></h1>
+          
+          <label class="hideAside noselect" title="On/Off Sidebar" onclick="toggleShowHideSidebar()"><img style="width:20px;margin-top:5px;" src="/assets/img/logo/logo_menu.svg" alt=""></label>
+
+          
+            
+            
+            
+              <span class="post-details noselect">Ditulis: 2018/02/09</span> <span class="post-details noselect">Diperbaharui: 2021/07/12</span>
+            
+          
+
+          <div class="breadcrumbs noselect">
+
+<span style="color:#232323;">&#9654;</span>&nbsp;<a href="/">Home</a>
+
+  
+    / <a href="/arch/">Arch</a>
+  
+
+  
+    / Step 3 installing arch linux base packages
+  
+
+</div>
+
+          <div class="tags-in-post noselect">
+  
+  
+</div>
+
+        </div>
+      </article>
+
+      <article>
+        <div class="post-body-sidebar">
+          <aside class="sidebar noselect" id="sidebar-head">
+
+    <div class="sidebar-body">
+  <h1 style="font-size:1.5em;border-bottom:1px dashed #9E9E9E;">
+    <img src="/assets/img/logo/logo_tahapan.svg">Tahapan
+  </h1>
+  <div class="toc">
+  <ul>
+  
+  
+  
+  
+  <li style="list-style:none;margin-left:-20px;"><a href="/arch/step-0-introduction" class="">Step 0: Introduction</a></li>
+  
+  
+  
+  <li style="list-style:none;margin-left:-20px;"><a href="/arch/step-1-connecting-to-the-internet" class="">Step 1: Connecting to the Internet</a></li>
+  
+  
+  
+  <li style="list-style:none;margin-left:-20px;"><a href="/arch/step-2-disk-partitioning" class="">Step 2: Disk Partitioning</a></li>
+  
+  
+  
+  <li style="list-style:none;margin-left:-20px;"><a href="/arch/step-3-installing-arch-linux-base-packages" class="current">Step 3: Installing Arch Linux Base Packages</a></li>
+  
+  
+  
+  <li style="list-style:none;margin-left:-20px;"><a href="/arch/step-4-set-up-bootloader" class="">Step 4: Set up Bootloader</a></li>
+  
+  
+  
+  <li style="list-style:none;margin-left:-20px;"><a href="/arch/step-5-set-language-and-time-zone" class="">Step 5: Set Language and Time Zone</a></li>
+  
+  
+  
+  <li style="list-style:none;margin-left:-20px;"><a href="/arch/step-6-create-user-password-and-hostname" class="">Step 6: Create User, Password and Hostname</a></li>
+  
+  
+  
+  <li style="list-style:none;margin-left:-20px;"><a href="/arch/step-7-install-gnome-and-complete-installation" class="">Step 7: Install Gnome and Complete Installation</a></li>
+  
+  
+  
+  <li style="list-style:none;margin-left:-20px;"><a href="/arch/bonus-backup-restore-and-recovery" class="">Bonus: Backup, Restore, and Recovery</a></li>
+  
+  
+  
+  <li style="list-style:none;margin-left:-20px;"><a href="/arch/references" class="">References</a></li>
+  
+  </ul>
+  </div>
+</div>
+
+    <div class="sidebar-body">
+  <h1 style="font-size:1.5em;border-bottom:1px dashed #9E9E9E;">
+    <img src="/assets/img/logo/logo_toc.svg">Daftar Isi
+  </h1>
+  <div class="toc">
+    
+    <ul>
+  <li><a href="#step-3--installing-arch-linux-base-packages">STEP 3 : Installing Arch Linux Base Packages</a>
+    <ul>
+      <li><a href="#31-mounting-partition">3.1 Mounting Partition</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+</div>
+
+
+</aside>
+
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-body">
+          <div class="doa-awal noselect">
+<p><img src="/assets/img/logo/logo_doa_awal.svg" alt="بسم الله الرحمن الرحيم" style="height:40px" align="right"></p>
+<div style="clear:both;"></div>
+</div>
+
+        </div>
+        <div class="markdown-body highlight">
+
+          <!-- The Modal -->
+<div class="modal">
+  <img class="modal-content">
+</div>
+
+
+          <p><h1 id="step-3--installing-arch-linux-base-packages">STEP 3 : Installing Arch Linux Base Packages</h1>
+
+<p>Arch Linux adalah salah satu distribusi sistem operasi yang proses instalasinya membutuhkan koneksi internet untuk mengunduh paket-paket yang terdapat pada <em>server</em> repositori.</p>
+
+<h2 id="31-mounting-partition">3.1 Mounting Partition</h2>
+
+<p>Sebelum memasang <em>base package</em> terlebih dahulu kita akan memasang (<em>mounting</em>) dua partisi yang telah kita buat <code class="language-plaintext highlighter-rouge">/dev/sda1</code> dan <code class="language-plaintext highlighter-rouge">/dev/mapper/volume-root</code> pada partisi <code class="language-plaintext highlighter-rouge">/mnt</code> untuk proses instalasi.</p>
+
+<p><em>Mount</em> partisi <code class="language-plaintext highlighter-rouge">/dev/mapper/volume-root</code> ke partisi <code class="language-plaintext highlighter-rouge">/mnt</code>.</p>
+
+<pre><span class="cmd"># </span><b>mount /dev/mapper/volume-root /mnt</b><br /></pre>
+
+<pre>
+NAME                          RM   SIZE RO TYPE  MOUNTPOINT
+/dev/loop0                     0 559.5M  1 loop  /run/archiso/sfs/airootfs
+/dev/sr0                       1 682.3M  0 rom   /run/archiso/bootmnt
+/dev/sda                       0    10G  0 disk
+├─/dev/sda1                    0   512M  0 part
+└─/dev/sda2                    0   9.5G  0 part
+  └─/dev/mapper/lvm            0   9.5G  0 crypt
+    └─/dev/mapper/volume-root  0   9.5G  0 lvm   <mark>/mnt</mark>
+</pre>
+
+<!-- PERTANYAAN -->
+<div class="blockquote-yellow"><div class="blockquote-yellow-title"><img src="/assets/img/logo/logo_tanya.svg" />Pertanyaan</div><div>
+    <p><b>Mengapa bukan partisi /dev/sda2 yang dimount ke /mnt?</b></p>
+    <p>Karena partisi <code>/dev/sda2</code> sudah kita enkripsi, kemudian kita dekripsi menjadi <code>/dev/mapper/volume-root</code>. Maka hanya partisi yang telah didekripsi yang dapat kita <i>mount</i> untuk di-<i>install</i> <code>base</code> <i>package</i>.</p>
+  </div></div>
+
+<p>Selanjutnya, membuat direktori <code class="language-plaintext highlighter-rouge">/boot</code> pada <code class="language-plaintext highlighter-rouge">/mnt/boot</code>.</p>
+
+<pre><span class="cmd"># </span><b>mkdir -p /mnt/boot</b><br /></pre>
+
+<p><em>Mount</em> partisi <code class="language-plaintext highlighter-rouge">/dev/sda1</code> ke partisi <code class="language-plaintext highlighter-rouge">/mnt/boot</code>.</p>
+
+<pre><span class="cmd"># </span><b>mount /dev/sda1 /mnt/boot</b><br /></pre>
+
+<pre>
+NAME                          RM   SIZE RO TYPE  MOUNTPOINT
+/dev/loop0                     0 559.5M  1 loop  /run/archiso/sfs/airootfs
+/dev/sr0                       1 682.3M  0 rom   /run/archiso/bootmnt
+/dev/vda                       0    10G  0 disk
+├─/dev/vda1                    0   512M  0 part  <mark>/mnt/boot</mark>
+└─/dev/vda2                    0   9.5G  0 part
+  └─/dev/mapper/lvm            0   9.5G  0 crypt
+    └─/dev/mapper/volume-root  0   9.5G  0 lvm   /mnt
+</pre>
+
+<!-- PERHATIAN -->
+<div class="blockquote-red"><div class="blockquote-red-title"><img src="/assets/img/logo/logo_warning.svg" />Perhatian</div><div>
+    <p>Proses mounting di atas <b>harus berurutan</b> dan <b>tidak dapat dibolak-balik</b>. Misal, <i>mounting</i> <code>/dev/sda1 /mnt/boot</code> partisi terlebih dahulu. Apabila hal ini dilakukan akan menyebabkan <b>kegagalan saat instalasi bootloader</b>.</p>
+  </div></div>
+
+<p>Setelah partisi yang kita siapkan telah kita <em>mounting</em>, langkah selanjutnya adalah kita akan menggunakan <code class="language-plaintext highlighter-rouge">pacstrap</code> <em>script</em> untuk menginstal <code class="language-plaintext highlighter-rouge">base</code> <em>package</em> Arch Linux.</p>
+
+<pre><span class="cmd"># </span><b>pacstrap /mnt base base-devel linux linux-headers linux-firmware archlinux-keyring</b><br /></pre>
+
+<p>Pada proses instalasi di atas saya menambahkan <code class="language-plaintext highlighter-rouge">base-devel</code> <em>package</em>. Proses instalasi ini akan berjalan lumayan lama. “Total <em>download size</em>” saat dokumentasi ini dibuat adalah 418.26 MiB.</p>
+
+<p>Saya juga menambahkan kernel <code class="language-plaintext highlighter-rouge">linux</code> beserta <code class="language-plaintext highlighter-rouge">linux-headers</code> (yang biasanya diperlukan oleh paket seperti virtualbox, dll), serta <code class="language-plaintext highlighter-rouge">linux-firmware</code>. Karena pada berita ini, <a href="https://www.archlinux.org/news/new-kernel-packages-and-mkinitcpio-hooks/" target="_blank">(New kernel packages and mkinitcpio hooks 2019-11-10)</a>, paket linux sudah dipisahkan dari group <code class="language-plaintext highlighter-rouge">base</code>. Tentunya ini merupakan keuntungan untuk yang ingin menggunakan paket kernel yang lain, seperti kernel <code class="language-plaintext highlighter-rouge">linux-lts</code>, <code class="language-plaintext highlighter-rouge">linux-hardened</code> dan <code class="language-plaintext highlighter-rouge">linux-zen</code>.</p>
+
+<p>Apabila proses <code class="language-plaintext highlighter-rouge">pacstrap</code> telah selesai, langkah selanjutnya adalah <em>generate</em> <code class="language-plaintext highlighter-rouge">fstab</code>.</p>
+
+<pre><span class="cmd"># </span><b>genfstab -U /mnt &gt; /mnt/etc/fstab</b><br /></pre>
+
+<p>Perintah ini bertujuan untuk <em>mounting blok</em> partisi mana yang akan di-<em>mounted</em> saat sistem di-<em>bootup</em>.  Kita bisa mengecek apakah hasil dari <em>generate</em> <code class="language-plaintext highlighter-rouge">fstab</code> dengan perintah <code class="language-plaintext highlighter-rouge"># cat /mnt/etc/fstab</code>.</p>
+
+<p>Hasil dari <em>generate</em> <code class="language-plaintext highlighter-rouge">fstab</code> tersebut adalah sebagai berikut :</p>
+
+<div class="highlight-caption"><span class="label">FILE</span><code>/mnt/etc/fstab</code></div>
+<pre class="caption">
+# /dev/mapper/volume-root
+UUID=be69e81c-90aa-4db9-be19-1444ecb76a35       /               ext4            rw,relatime     0 1
+
+# /dev/vda1
+UUID=3834-9DA2   /boot   vfat    rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro       0 2
+</pre>
+
+<p>Kita dapat melihat <code class="language-plaintext highlighter-rouge">/dev/sda1</code> dan <code class="language-plaintext highlighter-rouge">/dev/mapper/volume-root</code>, artinya <em>mounting</em> partisi dan <em>generate</em> <code class="language-plaintext highlighter-rouge">fstab</code> telah berhasil dan benar. Karena apabila proses <em>mouting</em> pada Step 3.1 salah, maka hasil <em>generate</em> <code class="language-plaintext highlighter-rouge">fstab</code> juga akan salah. Misal, tidak terdapat partisi <code class="language-plaintext highlighter-rouge">/boot</code> yaitu <code class="language-plaintext highlighter-rouge">/dev/sda1</code>, maka apabila terjadi seperti ini, akan berdampak pada kegagalan saat proses instalasi <code class="language-plaintext highlighter-rouge">bootloader</code>.</p>
+
+<p>Setelah kita selesai meng-<em>install</em> <em>base package</em>, langkah selanjutnya adalah konfigurasi komponen-komponen lain yang diperlukan oleh sistem operasi seperti <em>Bootloader</em>, <em>Time Zone</em>, <em>Locale</em>, <em>Hostname</em>, <em>Username</em>, <em>Passwords</em>, dll.</p>
+
+<p>Untuk masuk ke dalam sistem yang sudah kita <em>install</em> kita akan berpindah dari <em>root</em> Arch <em>Installer</em> ke <em>root</em> Arch sistem yang baru saja kita buat.</p>
+
+<p>Caranya dengan menggunakan <code class="language-plaintext highlighter-rouge">chroot</code> (<em>change root</em>).</p>
+
+<pre><span class="cmd"># </span><b>arch-chroot /mnt</b><br /></pre>
+
+<!-- INFORMATION -->
+<div class="blockquote-blue"><div class="blockquote-blue-title"><img src="/assets/img/logo/logo_note.svg" />Informasi</div><div>
+    <p>Apabila perintah di atas berhasil, makan kalian dapat melihat perubahan pada <code class="language-plaintext highlighter-rouge">username</code> dan <code class="language-plaintext highlighter-rouge">hostname</code> yang terbungkus oleh tanda <code class="language-plaintext highlighter-rouge">[ ... ]</code>. Artinya kita telah masuk ke dalam <code class="language-plaintext highlighter-rouge">root</code> sistem yang baru saja kita <em>install</em>.</p>
+
+    <p>Sebelum <code class="language-plaintext highlighter-rouge">arch-chroot</code>.</p>
+    <pre>
+<span style="color:red;">root</span>@archiso ~ #
+</pre>
+
+    <p>Setelah <code class="language-plaintext highlighter-rouge">arch-chroot</code>.</p>
+    <pre>
+[root@archiso /]#
+</pre>
+  </div></div>
+
+<p>Pada tahap ini, kita dapat bergerak ke <em>step</em> selanjutnya.</p>
+
+<!-- NEXT PREV BUTTON -->
+
+<div class="post-nav">
+<a class="btn-blue-l" href="/arch/step-2-disk-partitioning"><img class="btn-img" src="/assets/img/logo/logo_ap.png" /></a>
+<a class="btn-blue-c" href="/arch/"><img class="btn-img" src="/assets/img/logo/logo_menu.svg" /></a>
+<a class="btn-blue-r" href="/arch/step-4-set-up-bootloader"><img class="btn-img" src="/assets/img/logo/logo_an.png" /></a>
+</div>
+</p>
+
+          <!-- wip -->
+          
+            <br>
+          
+
+          <!-- License -->
+          
+
+          <div style="clear:both;"></div>
+
+          <!-- Penulis -->
+          
+            <div style="text-align:center; margin:0 0 10px 0;"></div>
+
+            
+
+            
+              <div class="noselect">
+  <h1 style="font-size:2em;">Penulis</h1>
+  
+  
+    
+      <div class="penulis-img">
+        <img style="margin:0 auto;border-radius:50%;" src="https://github.com/bandithijo.png?size=200" alt="bandithijo" onerror="imgError(this);">
+      </div><!-- penulis-img -->
+
+      <div class="penulis-text">
+        <p><p><b>BanditHijo</b> adalah nama pena saya – meminjam istilah keren dari para penulis. Teman-teman menyebut saya sebagai GNU/Linux Enthusiast. Saya memang gemar mengutak-atik sistem operasi ini. Bukan karena hobi tapi karena saya perlu untuk menggunakannya. Hehe.</p>
+</p>
+        <p style="text-align:right;">- <b>Rizqi Nur Assyaufi</b></p>
+      </div><!-- penulis-text -->
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</div>
+
+            
+          
+
+          <div style="clear:both;"></div>
+
+          <!-- Begin Mailchimp Signup Form -->
+<link href="/assets/css/mailchimp-classic-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+  #mc_embed_signup form {
+    padding: 10px 0 !important;
+  }
+
+  #mc_embed_signup .button {
+    background-color: #008352;
+  }
+
+  #mc_embed_signup h2 {
+    font-size: 32px !important;
+    padding-bottom: .3em;
+  }
+
+  .mc-field-group {
+    width: 100% !important;
+    padding-bottom: 2% !important;
+  }
+
+  .mce-label {
+    margin-bottom: 3% !important;
+    font-size: 14px;
+  }
+
+  .mc-form {
+    float: left;
+    width: 50% !important;
+  }
+
+  .mc-text {
+    float: right;
+    font-size: 14px;
+    width: 50%;
+    padding: 5px 10px;
+    text-align: justify;
+  }
+
+  @media (max-width: 640px) {
+    .mc-field-group {
+      width: 100% !important;
+      padding-bottom: 4% !important;
+    }
+
+    .mc-form {
+      float: none;
+      width: 100% !important;
+    }
+
+    .mc-text {
+      float: none;
+      font-size: 14px;
+      width: 100%;
+      padding: 0;
+    }
+
+  {
+</style>
+<div id="mc_embed_signup">
+  <form action="https://github.us4.list-manage.com/subscribe/post?u=68e5540d98defef56764f64df&amp;id=39ab92c3ed" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+      <h2>Berlangganan via Email</h2>
+      <div class="mc-text">Jangan sampai ketinggalan kabar dan info terbaru mengenai BanditHijo (R)-Chive.<br>Ayo bergabung!</div>
+      <div class="mc-form">
+        <div class="mc-field-group">
+          <label class="mce-label"></label>
+          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Masukkan email di sini...">
+        </div>
+        <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_68e5540d98defef56764f64df_39ab92c3ed" tabindex="-1" value=""></div>
+        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!--End mc_embed_signup-->
+
+
+        </div><!-- markdown-body -->
+      </article>
+
+      <article>
+        <div class="post-body-sidebar">
+          <aside class="sidebar noselect" id="sidebar-tail">
+
+    <div class="sidebar-body-rss"">
+  <h1 style="border-bottom:1px dashed #ACA573;margin-bottom:5px;">
+    <img src="/assets/img/logo/logo_bantuan.svg">Bantuan
+  </h1>
+   <p>Kebingungan dengan simbol-simbol yang terdapat pada halaman blog ini?</p>
+   <p>Kamu dapat mempelajari bagaimana cara membaca setiap komponen yang ada di dalam blog, <a href="/bantuan/"><b>di sini</b></a>.</p>
+</div>
+
+
+</aside>
+
+        </div>
+      </article>
+
+    </div><!-- container-edge-border -->
+  </div><!-- main container -->
+</section><!-- main -->
+
+
+<footer id="footer" class="noselect">
+  <div class="container">
+    <div class="container-inner">
+      <div class="footer-line">
+        <p style="font-size:20px;"><a href="/"><strong>BanditHijo (R)-Chive</strong></a> &copy; 2012 - 2021</p>
+        <p style="font-size:12px;margin-top:-35px;color:#404040;">
+          Blog ini dibuat di atas distribusi sistem operasi <a href="https://archlinux.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Arch Linux</a>.<br>
+          Source code dan artikel-artikel ditulis menggunakan <span class="nobr"><a href="http://vim.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Vim</a> text editor.</span><br>
+          Semua elemen gambar dikerjakan menggunakan <span class="nobr"><a href="https://inkscape.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Inkscape</a> dan <a href="https://gimp.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">GIMP</a>.</span><br>
+          Menggunakan <a href="https://jekyllrb.com" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Jekyll</a> sebagai Static Site Generator.<br>
+          Dihosting menggunakan <a href="https://github.com/bandithijo/bandithijo.github.io" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">GitHub</a>.<br>
+          Terakhir update: <b>12/07/2021</b>
+        </p>
+        <p class="footer-menu">
+          <br>
+          <a href="/contact/"><strong>Contact</strong></a> |&nbsp;
+          <a href="https://twitter.com/bandithijo" target="_blank" rel="noreferrer"><strong>Twitter</strong></a> |&nbsp;
+          <a rel="me" href="https://www.youtube.com/c/BanditHijo" target="_blank" rel="noreferrer"><strong>YouTube</strong></a> |&nbsp;
+          <a rel="me" href="https://github.com/bandithijo" target="_blank" rel="noreferrer"><strong>GitHub</strong></a> |&nbsp;
+          
+            <a href="/feed/blog.xml" target="_blank"><strong>RSS</strong></a>
+          
+        </p>
+
+        <div class="notif-donasi">
+          <div class="notif-donasi-col-1">
+            <a href="https://saweria.co/bandithijo" target="_blank" rel="noopener">
+              <p>Apabila ingin memberikan <b>apresiasi</b> atas tulisan-tulisan di blog ini, dapat melalui <span class="nobr"><b>Saweria</b></span> atas nama <span class="nobr"><b>Rizqi Nur Assyaufi</b></span>.</p>
+              <p style="margin-top:-8px;">Berapapun besarnya dukungan dari kamu, akan sangat bermanfaat untuk proses produksi tulisan di blog ini.</p>
+              <p style="margin-top:-8px;">Terima kasih, mas Bro!</p>
+            </a>
+          </div>
+          <div class="notif-donasi-col-2">
+            <a href="https://saweria.co/bandithijo" target="_blank" rel="noopener">
+              <img class="notif-donasi-img" src="/assets/img/logo/logo_qr_saweria.png">
+            </a>
+          </div>
+        </div><!-- notif-donasi -->
+
+        <div class="tech-i-used-desktop">
+          <a href="https://jekyllrb.com" target="_blank" rel="noopener">
+            <img class="footer-img-jekyll" src="/assets/img/logo/logo_jekyll.png">
+          </a>
+          <a href="https://github.com/bandithijo" target="_blank" rel="noopener">
+            <img class="footer-img-github" src="/assets/img/logo/logo_github.png">
+          </a>
+          <a href="https://github.com/features/actions" target="_blank" rel="noopener">
+            <img class="footer-img-githubactions" src="/assets/img/logo/logo_github_actions.png">
+          </a>
+        </div><!-- tech-i-used-desktop -->
+
+        <div class="tech-i-used-mobile">
+          <a href="https://github.com/features/actions" target="_blank" rel="noopener" rel="noreferrer">
+            <img class="footer-img-1" src="/assets/img/logo/logo_github_actions_mobile.png">
+          </a>
+          <a href="https://github.com/bandithijo" target="_blank" rel="noopener" rel="noreferrer">
+            <img class="footer-img-2" src="/assets/img/logo/logo_github_mobile.png">
+          </a>
+          <a href="https://jekyllrb.com/" target="_blank" rel="noopener" rel="noreferrer">
+            <img class="footer-img-3" src="/assets/img/logo/logo_jekyll_mobile.png">
+          </a>
+        </div><!-- tech-i-used-mobile -->
+      </div><!-- footer-line -->
+    </div><!-- container-innner -->
+  </div><!-- footer container -->
+</footer>
+
+<!-- site.git.build_version -->
+<div class="tech-i-used-desktop" style="text-align:center;font-size:9px;color:#8F8879;margin: -5px 0 10px 0;">
+  c2deb4abbcb1b30e9079c35732dca589f2d7b6e8
+</div>
+<!-- END site.git.build_version -->
+
+<script type="text/javascript" src="/assets/js/nav.js"></script>
+<script type="text/javascript" src="/assets/js/lazyload.js"></script>
+<script type="text/javascript" src="/assets/js/headings-permalink.js"></script>
+<script type="text/javascript" src="/assets/js/newsline-sticky.js"></script>
+
+<script type="text/javascript" src="/assets/js/aside.js"></script>
+
+
+<script type="text/javascript" src="/assets/js/enlarge-image-modal.js"></script>
+
+
+
+
+</body>
+</html>

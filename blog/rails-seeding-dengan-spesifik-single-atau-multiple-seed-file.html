@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Here's where I started writing some notes that someday I will call it, a book">
+<meta name="keywords" content="tips, rails">
+<meta name="author" content="Rizqi Nur Assyaufi">
+<meta name="theme-color" content="#008352">
+<meta name="msapplication-navbutton-color" content="#008352">
+<meta name="apple-mobile-web-app-status-bar-style" content="#008352">
+<title>Rails Seeding dengan Spesifik Single atau Multiple Seed File (Modularisasi Seeds) | BanditHijo (R)-Chive</title>
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/github-markdown-bandit.css">
+<link rel="icon" href="/assets/img/favicon/favicon.png" type="image/png">
+<link rel="manifest" href="/manifest.json">
+
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Rails Seeding dengan Spesifik Single atau Multiple Seed File (Modularisasi Seeds)" />
+<meta name="author" content="BanditHijo" />
+<meta property="og:locale" content="id" />
+<meta name="description" content="Catatan kali ini, saya akan mencatatat tentang bagaimana mendiferensiasi seeds sesuai kategori tertentu dan juga menjalankan rails db:seed untuk single ataupun multiple spesifik file." />
+<meta property="og:description" content="Catatan kali ini, saya akan mencatatat tentang bagaimana mendiferensiasi seeds sesuai kategori tertentu dan juga menjalankan rails db:seed untuk single ataupun multiple spesifik file." />
+<link rel="canonical" href="https://bandithijo.github.io/blog/rails-seeding-dengan-spesifik-single-atau-multiple-seed-file" />
+<meta property="og:url" content="https://bandithijo.github.io/blog/rails-seeding-dengan-spesifik-single-atau-multiple-seed-file" />
+<meta property="og:site_name" content="BanditHijo (R)-Chive" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-29T19:00:00+08:00" />
+<script type="application/ld+json">
+{"description":"Catatan kali ini, saya akan mencatatat tentang bagaimana mendiferensiasi seeds sesuai kategori tertentu dan juga menjalankan rails db:seed untuk single ataupun multiple spesifik file.","url":"https://bandithijo.github.io/blog/rails-seeding-dengan-spesifik-single-atau-multiple-seed-file","@type":"BlogPosting","headline":"Rails Seeding dengan Spesifik Single atau Multiple Seed File (Modularisasi Seeds)","dateModified":"2021-07-12T16:52:32+08:00","datePublished":"2021-03-29T19:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://bandithijo.github.io/blog/rails-seeding-dengan-spesifik-single-atau-multiple-seed-file"},"author":{"@type":"Person","name":"BanditHijo"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <meta property="og:country-name"   content="Indonesia"/>
+<meta property="og:image"          content="/assets/img/banner/bndt_banner.png"/>
+<meta property="og:image:width"    content="460"/>
+<meta property="og:image:height"   content="230"/>
+
+<meta property="twitter:card"      content="summary_large_image"/>
+<meta property="twitter:title"     content="Rails Seeding dengan Spesifik Single atau Multiple Seed File (Modularisasi Seeds)"/>
+<meta property="twitter:author"    content="BanditHijo"/>
+<meta property="twitter:image:src" content="/assets/img/banner/bndt_banner.png"/>
+
+  <!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-116004889-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+  <meta name="google-site-verification" content="qXp9Kgb5hIHVp5T9vFOa_motqUmNuF5STbkJKF70wLc">
+
+</head>
+
+
+<body>
+
+<header id="header" class="noselect">
+  <div class="container container-strip">
+    <div class="container-inner container-inner-strip">
+    <div class="logo">
+      <img src="/assets/img/logo/logo_bandithijo.png">
+    </div>
+
+    <div class="title">
+      <h1><span class="nobr">BanditHijo (R)-Chive</span></h1>
+    </div>
+    <div class="description">
+      <h2>Here's where I started writing some notes that someday <span class="nobr">I will call it, a book</span></h2>
+      <br>
+      <span class="emblem-f">TECHNICAL<span class="emblem-e">BLOG : JOURNAL</span></span>
+    </div>
+
+    <nav class="nav nav-strip">
+      <div class="toggle">
+        <div class="menu" onmouseover="this.style.cursor='pointer'" onclick="navBtn()">
+          <span class="menu-title">BANDITHIJO</span>
+          <img style="width:30px;" src="/assets/img/logo/logo_menu.svg" id="nav-btn">
+        </div><!-- menu -->
+      </div><!-- toggle -->
+      <ul id="menu-ul">
+        <li><a href="/">Home</a></li>
+        
+        
+        
+        <li><a href="/blog/" class="active">Blog</a></li>
+        
+        
+        
+        <li><a href="/note/" class="">Note</a></li>
+        
+        
+        
+        <li><a href="/vlog/" class="">Vlog</a></li>
+        
+        
+        
+        <li><a href="/book/" class="">Books</a></li>
+        
+        
+        
+        <li><a href="/about/" class="">About</a></li>
+        
+        
+        
+        <li><a href="https://bandithijo.github.io/v2" class="">v2 (beta)</a></li>
+        
+      </ul>
+    </nav>
+    </div><!-- container-inner -->
+  </div><!-- header container -->
+</header>
+
+
+<section id="main">
+  <div class="container">
+    <div class="container-edge-border">
+
+      
+
+      <article class="post-pre-title">
+        <div class="post-body">
+          
+            <h1 class="post-title"><a href="/blog/rails-seeding-dengan-spesifik-single-atau-multiple-seed-file">Rails Seeding dengan Spesifik Single atau Multiple Seed File (Modularisasi Seeds)</a></h1>
+          
+          <label class="hideAside noselect" title="On/Off Sidebar" onclick="toggleShowHideSidebar()"><img style="width:20px;margin-top:5px;" src="/assets/img/logo/logo_menu.svg" alt=""></label>
+
+          
+            
+            
+            
+              <span class="post-details noselect">Ditulis: 2021/03/29</span> <span class="post-details noselect">Diperbaharui: 2021/07/12</span>
+            
+          
+
+          <div class="breadcrumbs noselect">
+
+<span style="color:#232323;">&#9654;</span>&nbsp;<a href="/">Home</a>
+
+  
+    / <a href="/blog/">Blog</a>
+  
+
+  
+    / Rails seeding dengan spesifik single atau multiple seed file
+  
+
+</div>
+
+          <div class="tags-in-post noselect">
+  
+  
+    <span class="tags"><a href="https://bandithijo.github.io/tags/#rails">Rails</a></span>
+  
+    <span class="tags"><a href="https://bandithijo.github.io/tags/#tips">Tips</a></span>
+  
+</div>
+
+        </div>
+      </article>
+
+      <article>
+        <div class="post-body-sidebar">
+          <aside class="sidebar noselect" id="sidebar-head">
+
+    <div class="sidebar-body">
+  <h1 style="font-size:1.5em;border-bottom:1px dashed #9E9E9E;">
+    <img src="/assets/img/logo/logo_toc.svg">Daftar Isi
+  </h1>
+  <div class="toc">
+    
+    <ul>
+  <li><a href="#prerequisite">Prerequisite</a></li>
+  <li><a href="#latar-belakang-masalah">Latar Belakang Masalah</a></li>
+  <li><a href="#pemecahan-masalah">Pemecahan Masalah</a>
+    <ul>
+      <li><a href="#file-induk-seedsrb">File Induk seeds.rb</a></li>
+      <li><a href="#seeding">Seeding</a>
+        <ul>
+          <li><a href="#seeding-hanya-pada-single-seed-file">Seeding hanya pada single seed file</a></li>
+          <li><a href="#seeding-pada-multiple-seed-file">Seeding pada multiple seed file</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#pesan-penulis">Pesan Penulis</a></li>
+  <li><a href="#referensi">Referensi</a></li>
+</ul>
+
+  </div>
+</div>
+
+
+</aside>
+
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-body">
+          <div class="doa-awal noselect">
+<p><img src="/assets/img/logo/logo_doa_awal.svg" alt="بسم الله الرحمن الرحيم" style="height:40px" align="right"></p>
+<div style="clear:both;"></div>
+</div>
+
+        </div>
+        <div class="markdown-body highlight">
+
+          <!-- The Modal -->
+<div class="modal">
+  <img class="modal-content">
+</div>
+
+
+          <p><h1 id="prerequisite">Prerequisite</h1>
+
+<p><code class="language-plaintext highlighter-rouge">Ruby 3.0.0</code> <code class="language-plaintext highlighter-rouge">Rails 6.1.3.1</code></p>
+
+<h1 id="latar-belakang-masalah">Latar Belakang Masalah</h1>
+
+<p>Pada Rails project yang sederhana, mungkin tidak akan terlalu mengalami kendala apabila menjalankan seeds dari file <strong>db/seeds.rb</strong>.</p>
+
+<p>Umumnya, Junior Rails Developer akan meletakkan semua seeds pada file tersebut. Mulai dari seed untuk membuat berbagai tipe user (misal; admin, guest, customer, dll.), membuat dan mengisi table product, dan lain sebagainya, akan campur aduk menjadi satu di dalam file <strong>db/seeds.rb</strong> tersebut.</p>
+
+<p>Hal ini wajar, karena secara default, saat membuat project baru, Rails menyediakan skeleton seperti itu.</p>
+
+<pre class="whiteboard"> app<br /> bin<br /> config<br /> db<br />│  migrate<br />│  schema.rb<br />└  <mark>seeds.rb</mark><br /> lib<br /> log<br /> public<br />...<br /></pre>
+
+<p>Lantas, <strong>bagaimana apabila kita hanya ingin menjalankan satu buah seed saja?</strong></p>
+
+<p>Misalkan, hanya ingin menjalankan seed untuk mengenerate user dengan tipe “subscriber”, tanpa harus menjalankan semua seeds.</p>
+
+<h1 id="pemecahan-masalah">Pemecahan Masalah</h1>
+
+<p>Secara sederhana, saya akan mengistilahkan “<strong>Modularisasi</strong>-kan, saja!”.</p>
+
+<p>Modularisasi, merujuk pada proses yang biasa digunakan untuk memecah-mecah sebuah single file yang berisi banyak komponen, menjadi beberapa komponen-komponen yang dikategorikan berdasarkan fungsi dan tujuan tertentu.</p>
+
+<p>Kira-kira seperti ini project skeleton untuk seeds apabila telah dipecah-pecah.</p>
+
+<pre class="whiteboard"> app<br /> bin<br /> config<br /> db<br />│  migrate<br />│  <mark>seeds</mark><br />│ │  <mark>01_admins.seeds.rb</mark><br />│ │  <mark>02_customers.seeds.rb</mark><br />│ │  <mark>03_subscribers.seeds.rb</mark><br />│ │  <mark>04_products.seeds.rb</mark><br />│ └  <mark>05_orders.seeds.rb</mark><br />│  schema.rb<br />└  <mark>seeds.rb</mark><br /> lib<br /> log<br /> public<br />...<br /></pre>
+
+<p>Pemecahan file <strong>db/seeds.rb</strong>, saya letakkan pada direktori <strong>db/seeds/</strong> dan saya berikan nama dengan sufix <strong>*.seeds.rb</strong>.</p>
+
+<p>Tidak ada aturan (convention) baku untuk hal ini.</p>
+
+<h2 id="file-induk-seedsrb">File Induk seeds.rb</h2>
+
+<p>Untuk membaca semua file-file yang berakhiran <strong>*.seeds.rb</strong> yang ada di dalam direktori <strong>db/seeds/</strong>, saya menggunakan cara seperti ini di dalam file <strong>db/seeds.rb</strong>.</p>
+
+<div class="highlight-caption"><span class="label">FILE</span><code>db/seeds.rb</code></div>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre><span class="no">Dir</span><span class="p">[</span><span class="no">File</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="no">Rails</span><span class="p">.</span><span class="nf">root</span><span class="p">,</span> <span class="s2">"db"</span><span class="p">,</span> <span class="s2">"seeds"</span><span class="p">,</span> <span class="s2">"*.seeds.rb"</span><span class="p">)].</span><span class="nf">sort</span><span class="p">.</span><span class="nf">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">seed</span><span class="o">|</span> <span class="nb">load</span> <span class="n">seed</span> <span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p><br />
+Untuk isi dari file-file <strong>db/seeds/*.seeds.rb</strong> tidak perlu saya tuliskan lah yaa. Sama saja isinya seperti tipikal seeds pada umumnya, hanya saja dipisah/dikategorikan berdasarkan tujuan atau fungsi tertentu.</p>
+
+<h2 id="seeding">Seeding</h2>
+
+<p>Rails menyediakan rake task untuk melakukan seeding,</p>
+
+<pre><span class="cmd">$ </span><b>rails db:seed</b><br /></pre>
+
+<p>Meskipun kita sudah me-modularisasi-kan seeds, kalau kita melakukan seeding dengan perintah di atas, maka rails akan menjalankan semua file seeding tersebut.</p>
+
+<h3 id="seeding-hanya-pada-single-seed-file">Seeding hanya pada single seed file</h3>
+
+<p>Seperti yang sudah saya singgung sebelumnya, catatan ini adalah mengenai cara melakukan seeding hanya pada single seed file yang kita tentukan.</p>
+
+<p>Kita perlu membuat file tasks untuk mengcover hal tersebut.</p>
+
+<pre class="whiteboard"> app<br /> bin<br /> config<br /> db<br /> lib<br />│  assets<br />└  tasks<br />  └  <mark>db_seed_single.rake</mark><br /> log<br /> public<br />...<br /></pre>
+
+<div class="highlight-caption"><span class="label">FILE</span><code>lib/tasks/db_seed_single.rake</code></div>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre><span class="n">namespace</span> <span class="ss">:db</span> <span class="k">do</span>
+  <span class="n">namespace</span> <span class="ss">:seed</span> <span class="k">do</span>
+    <span class="n">desc</span> <span class="s2">"Loads the single selected file seed data from directory db/seeds/"</span>
+    <span class="n">task</span> <span class="ss">:single</span> <span class="o">=&gt;</span> <span class="ss">:environment</span> <span class="k">do</span>
+      <span class="n">filename</span> <span class="o">=</span> <span class="no">Dir</span><span class="p">[</span><span class="no">File</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="no">Rails</span><span class="p">.</span><span class="nf">root</span><span class="p">,</span> <span class="s1">'db'</span><span class="p">,</span> <span class="s1">'seeds'</span><span class="p">,</span> <span class="s2">"</span><span class="si">#{</span><span class="no">ENV</span><span class="p">[</span><span class="s1">'SEED'</span><span class="p">]</span><span class="si">}</span><span class="s2">.seeds.rb"</span><span class="p">)][</span><span class="mi">0</span><span class="p">]</span>
+      <span class="nb">puts</span> <span class="s2">"Seeding </span><span class="si">#{</span><span class="n">filename</span><span class="si">}</span><span class="s2">..."</span>
+      <span class="nb">load</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">if</span> <span class="no">File</span><span class="p">.</span><span class="nf">exist?</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Nah, dengan begini, kita sudah membuat 1 buah rake task baru dengan perintah,</p>
+
+<p>Misal, untuk file <strong>db/seeds/01_admins.seeds.rb</strong>.</p>
+
+<pre><span class="cmd">$ </span><b>rails db:seed:single SEED=01_admins</b><br /></pre>
+
+<p>Kalau berhasil,</p>
+
+<pre>
+Seeding /home/bandithijo/rails_project/db/seeds/01_admins.seeds.rb...
+Admin has created: bandithijo@gmail.com
+</pre>
+
+<p>Kita hanya perlu menuliskan nama file, tanpa sufix <strong>*.seeds.rb</strong>.</p>
+
+<h3 id="seeding-pada-multiple-seed-file">Seeding pada multiple seed file</h3>
+
+<p>Kali ini, kebutuhannya adalah melakukan seeding pada 1 atau lebih file seeds.</p>
+
+<p>Misalkan, untuk file seed <strong>01_admins.seeds.rb</strong> dan <strong>03_subscribers.seeds.rb</strong>.</p>
+
+<p>Sebelumnya, kita perlu membuat fle rake task lagi. Saya akan beri nama <strong>db_seed_multiple.rake</strong>.</p>
+
+<pre class="whiteboard"> app<br /> bin<br /> config<br /> db<br /> lib<br />│  assets<br />└  tasks<br />  │  <mark>db_seed_multiple.rake</mark><br />  └  db_seed_single.rake<br /> log<br /> public<br />...<br /></pre>
+
+<div class="highlight-caption"><span class="label">FILE</span><code>lib/tasks/db_seed_multiple.rake</code></div>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="code"><pre><span class="n">namespace</span> <span class="ss">:db</span> <span class="k">do</span>
+  <span class="n">namespace</span> <span class="ss">:seed</span> <span class="k">do</span>
+    <span class="n">desc</span> <span class="s2">"Loads the single or multiple selected file seed data from directory db/seeds/ (SEEDS=seed_1,seed_2,seed_3)"</span>
+    <span class="n">task</span> <span class="ss">:multiple</span> <span class="o">=&gt;</span> <span class="ss">:environment</span> <span class="k">do</span>
+      <span class="n">seeds</span> <span class="o">=</span> <span class="no">ENV</span><span class="p">[</span><span class="s1">'SEEDS'</span><span class="p">].</span><span class="nf">split</span><span class="p">(</span><span class="s1">','</span><span class="p">)</span>
+      <span class="n">seeds</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">seed</span><span class="o">|</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="no">Dir</span><span class="p">[</span><span class="no">File</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="no">Rails</span><span class="p">.</span><span class="nf">root</span><span class="p">,</span> <span class="s1">'db'</span><span class="p">,</span> <span class="s1">'seeds'</span><span class="p">,</span> <span class="s2">"</span><span class="si">#{</span><span class="n">seed</span><span class="si">}</span><span class="s2">.seeds.rb"</span><span class="p">)][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="nb">puts</span> <span class="s2">"Seeding </span><span class="si">#{</span><span class="n">filename</span><span class="si">}</span><span class="s2">..."</span>
+        <span class="nb">load</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">if</span> <span class="no">File</span><span class="p">.</span><span class="nf">exist?</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Cara menjalankanya,</p>
+
+<pre><span class="cmd">$ </span><b>rails db:seed:multiple SEEDS=01_admins,03_subscribers</b><br /></pre>
+
+<p>* <strong>Jangan ada spasi diantara koma</strong>.</p>
+
+<p>Kalau berhasil,</p>
+
+<pre>
+Seeding /home/bandithijo/rails_project/db/seeds/01_admins.seeds.rb...
+Admin has created: bandithijo@gmail.com
+Seeding /home/bandithijo/rails_project/db/seeds/02_subscribers.seeds.rb...
+Customer has created: budidibu@gmail.com
+Customer has created: bayuyuba@gmail.com
+</pre>
+
+<p><br />
+Nah, mantap!</p>
+
+<p>Kita dapat melihat rake task spesifik untuk namespace <strong>db:</strong> yang baru saja kita buat pada daftar task dengan cara,</p>
+
+<pre><span class="cmd">$ </span><b>rails -T | grep 'db:'</b><br /></pre>
+
+<pre>
+rails db:create                          # Creates the database from DATABASE_URL or config/database.yml for the current RAILS_ENV (use db:create:all to create all databases in the config). Without RAILS_ENV or when RAILS_ENV is development, it defaults to creating the development and test databases, except when DATABASE_URL is present
+rails db:drop                            # Drops the database from DATABASE_URL or config/database.yml for the current RAILS_ENV (use db:drop:all to drop all databases
+in the config). Without RAILS_ENV or when RAILS_ENV is development, it defaults to dropping the development and test databases, except when DATABASE_URL is present
+rails db:environment:set                 # Set the environment value for the database
+rails db:fixtures:load                   # Loads fixtures into the current environment's database
+rails db:migrate                         # Migrate the database (options: VERSION=x, VERBOSE=false, SCOPE=blog)
+rails db:migrate:down                    # Runs the "down" for a given migration VERSION
+rails db:migrate:redo                    # Rolls back the database one migration and re-migrates up (options: STEP=x, VERSION=x)
+rails db:migrate:status                  # Display status of migrations
+rails db:migrate:up                      # Runs the "up" for a given migration VERSION
+rails db:prepare                         # Runs setup if database does not exist, or runs migrations if it does
+rails db:reset                           # Drops and recreates the database from db/schema.rb for the current environment and loads the seeds
+rails db:rollback                        # Rolls the schema back to the previous version (specify steps w/ STEP=n)
+rails db:schema:cache:clear              # Clears a db/schema_cache.yml file
+rails db:schema:cache:dump               # Creates a db/schema_cache.yml file
+rails db:schema:dump                     # Creates a database schema file (either db/schema.rb or db/structure.sql, depending on `config.active_record.schema_format`)
+rails db:schema:load                     # Loads a database schema file (either db/schema.rb or db/structure.sql, depending on `config.active_record.schema_format`) into the database
+rails db:seed                            # Loads the seed data from db/seeds.rb
+<mark>rails db:seed:multiple                   # Loads the single or multiple selected file seed data from directory db/seeds/ (SEEDS=seed_1,seed_2,seed_3)</mark>
+rails db:seed:replant                    # Truncates tables of each database for current environment and loads the seeds
+<mark>rails db:seed:single                     # Loads the single selected file seed data from directory db/seeds/ (SEEDS=seed_1)</mark>
+rails db:setup                           # Creates the database, loads the schema, and initializes with the seed data (use db:reset to also drop the database first)
+rails db:structure:dump                  # Dumps the database structure to db/structure.sql
+rails db:structure:load                  # Recreates the databases from the structure.sql file
+rails db:version                         # Retrieves the current schema version number
+</pre>
+
+<p><br /></p>
+<h1 id="pesan-penulis">Pesan Penulis</h1>
+
+<p>Sepertinya, segini dulu yang dapat saya tuliskan.</p>
+
+<p>Selanjutnya, saya serahkan kepada imajinasi dan kreatifitas teman-teman. Hehe.</p>
+
+<p>Mudah-mudahan dapat bermanfaat.</p>
+
+<p>Terima kasih.</p>
+
+<p>(^_^)</p>
+
+<h1 id="referensi">Referensi</h1>
+
+<ol>
+  <li><a href="https://stackoverflow.com/a/31815032/4862516" target="_blank">https://stackoverflow.com/a/31815032/4862516</a>
+<br />Diakses tanggal: 2021/03/29</li>
+</ol>
+</p>
+
+          <!-- wip -->
+          
+            <br>
+          
+
+          <!-- License -->
+          
+            <div style="text-align:center; margin:0 0 10px 0;"></div>
+            
+              <div class="noselect">
+<h1 style="font-size:2em;">Lisensi</h1>
+<div class="ccbysa-img noselect"><img class="ccbysa-img-img" style="margin-top: 5px;" src="/assets/img/logo/cc-by-nc-sa.png" alt="logo_cc-by-nc-sa"/></div><!-- ccbysa -->
+<div class="ccbysa-text noselect">
+Tulisan ini dilisensikan dengan :<br>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.id" target="_blank">Atribusi-NonKomersial-BerbagiSerupa 4.0 Internasional (CC BY-NC-SA 4.0)</a>
+</div><!-- ccbysa-text -->
+</div>
+
+            
+          
+
+          <div style="clear:both;"></div>
+
+          <!-- Penulis -->
+          
+            <div style="text-align:center; margin:0 0 10px 0;"></div>
+
+            
+
+            
+              <div class="noselect">
+  <h1 style="font-size:2em;">Penulis</h1>
+  
+  
+    
+      <div class="penulis-img">
+        <img style="margin:0 auto;border-radius:50%;" src="https://github.com/bandithijo.png?size=200" alt="bandithijo" onerror="imgError(this);">
+      </div><!-- penulis-img -->
+
+      <div class="penulis-text">
+        <p><p><b>BanditHijo</b> adalah nama pena saya – meminjam istilah keren dari para penulis. Teman-teman menyebut saya sebagai GNU/Linux Enthusiast. Saya memang gemar mengutak-atik sistem operasi ini. Bukan karena hobi tapi karena saya perlu untuk menggunakannya. Hehe.</p>
+</p>
+        <p style="text-align:right;">- <b>Rizqi Nur Assyaufi</b></p>
+      </div><!-- penulis-text -->
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</div>
+
+            
+          
+
+          <div style="clear:both;"></div>
+
+          <!-- Begin Mailchimp Signup Form -->
+<link href="/assets/css/mailchimp-classic-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+  #mc_embed_signup form {
+    padding: 10px 0 !important;
+  }
+
+  #mc_embed_signup .button {
+    background-color: #008352;
+  }
+
+  #mc_embed_signup h2 {
+    font-size: 32px !important;
+    padding-bottom: .3em;
+  }
+
+  .mc-field-group {
+    width: 100% !important;
+    padding-bottom: 2% !important;
+  }
+
+  .mce-label {
+    margin-bottom: 3% !important;
+    font-size: 14px;
+  }
+
+  .mc-form {
+    float: left;
+    width: 50% !important;
+  }
+
+  .mc-text {
+    float: right;
+    font-size: 14px;
+    width: 50%;
+    padding: 5px 10px;
+    text-align: justify;
+  }
+
+  @media (max-width: 640px) {
+    .mc-field-group {
+      width: 100% !important;
+      padding-bottom: 4% !important;
+    }
+
+    .mc-form {
+      float: none;
+      width: 100% !important;
+    }
+
+    .mc-text {
+      float: none;
+      font-size: 14px;
+      width: 100%;
+      padding: 0;
+    }
+
+  {
+</style>
+<div id="mc_embed_signup">
+  <form action="https://github.us4.list-manage.com/subscribe/post?u=68e5540d98defef56764f64df&amp;id=39ab92c3ed" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+      <h2>Berlangganan via Email</h2>
+      <div class="mc-text">Jangan sampai ketinggalan kabar dan info terbaru mengenai BanditHijo (R)-Chive.<br>Ayo bergabung!</div>
+      <div class="mc-form">
+        <div class="mc-field-group">
+          <label class="mce-label"></label>
+          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Masukkan email di sini...">
+        </div>
+        <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_68e5540d98defef56764f64df_39ab92c3ed" tabindex="-1" value=""></div>
+        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!--End mc_embed_signup-->
+
+
+        </div><!-- markdown-body -->
+      </article>
+
+      <article>
+        <div class="post-body-sidebar">
+          <aside class="sidebar noselect" id="sidebar-tail">
+
+    <div class="sidebar-body">
+  <h1 style="font-size:1.5em;border-bottom:1px dashed #9E9E9E;">
+    <img src="/assets/img/logo/logo_terbaru.svg">Tulisan Terbaru
+  </h1>
+  <div class="toc">
+  <ul>
+  
+  
+    
+      <li><a href="/blog/mudah-downgrade-paket-di-artix-linux">Mudah Downgrade Paket di Artix Linux</a></li>
+    
+  
+    
+      <li><a href="/blog/sharing-direktori-antara-host-dan-guest-pada-virt-manager">Sharing Direktori Antara Host Linux dan Guest Windows pada Virt-Manager/KVM/Qemu</a></li>
+    
+  
+    
+      <li><a href="/blog/authorization-dengan-pundit-untuk-nested-controller-dan-user-turunan-pada-rails">Authorization dengan Pundit untuk Nested Controller dan User Turunan pada Rails</a></li>
+    
+  
+    
+      <li><a href="/blog/rails-ujs-dan-ajax-serta-button-animation-loading">Rails UJS dan AJAX, serta Button Animation Loading</a></li>
+    
+  
+    
+      <li><a href="/blog/rails-seeding-dengan-spesifik-single-atau-multiple-seed-file">Rails Seeding dengan Spesifik Single atau Multiple Seed File (Modularisasi Seeds)</a></li>
+    
+  
+    
+      <li><a href="/blog/notifikasi-user-signup-ke-email-admin-degan-actionmailer-rails">Notifikasi User Sign Up ke Email Admin dengan ActionMailer Rails</a></li>
+    
+  
+    
+      <li><a href="/blog/devise-registration-tanpa-password-set-password-after-confirmation">Devise Registration Tanpa Password, Set Password Setelah Confirmation</a></li>
+    
+  
+    
+      <li><a href="/blog/ruby-on-rails-actionmailer-local-mailcatcher">Konfigurasi Ruby on Rails ActionMailer pada Local Environment dengan MailCatcher</a></li>
+    
+  
+    
+      <li><a href="/blog/membuat-recovery-partition-artix-iso-dengan-grub2">Membuat Recovery Partition Artix Linux ISO dengan GRUB2</a></li>
+    
+  
+    
+      <li><a href="/blog/akses-ssh-ke-virtualbox-via-nat">Mengakses VirtualBox Instance dengan SSH via NAT</a></li>
+    
+  
+  </ul>
+  </div>
+  <div style="margin:10px 0 10px 0;border-bottom:1px dashed #9E9E9E;"></div>
+  <p style="text-align:left;"><a style="border-bottom:0;" href="/blog/"><b>Selengkapnya >></b></a></p>
+</div>
+
+    <div class="sidebar-body">
+  <h1 style="font-size:1.5em;border-bottom:1px dashed #9E9E9E;">
+    <img src="/assets/img/logo/logo_tags.svg"><a style="color:#000;border-bottom:none;" href="/tags/">Tags</a>
+  </h1>
+  <div class="toc">
+    
+    
+      
+        
+        <span class="tags"><a href="/tags/#android">Android</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#arch-linux">Arch Linux</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#artix-linux">Artix Linux</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#bootstrap">Bootstrap</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#database">Database</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#django">Django</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#docker">Docker</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#dwm">Dwm</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#fedora">Fedora</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#freebsd">FreeBSD</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#heroku">Heroku</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#i3wm">I3WM</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#java">Java</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#javascript">Javascript</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#jekyll">Jekyll</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#kvm">KVM</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#network">Network</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#osx">OSX</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#python">Python</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#qemu">Qemu</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#rspec">RSpec</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#rails">Rails</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#ruby">Ruby</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#script">Script</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#security">Security</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#terminal">Terminal</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#thinkpad">ThinkPad</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#tips">Tips</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#tools">Tools</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#ulasan">Ulasan</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#vim">Vim</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#virt-manager">Virt-Manager</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#wine">Wine</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#xfce">XFCE</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#jquery">jQuery</a></span>
+      
+    
+    
+  </div><!-- toc -->
+</div><!-- sidebar-body -->
+
+    <div class="sidebar-body">
+  <h1 style="font-size:1.5em;border-bottom:1px dashed #9E9E9E;margin-bottom:5px;">
+    <img src="/assets/img/logo/logo_dotfriends.svg">dotFriends
+  </h1>
+  <!-- untuk random dotfriends list sebanyak 8 -->
+  
+  
+    <p>+&nbsp;<a href="https://ypraw.github.io/" target="_blank">Yunindyo Prabowo</a></p>
+  
+    <p>+&nbsp;<a href="https://linuxisekai.site/" target="_blank">Galih Wisnuaji</a></p>
+  
+    <p>+&nbsp;<a href="https://agung-setiawan.com/" target="_blank">Agung Setiawan</a></p>
+  
+    <p>+&nbsp;<a href="https://tsarafatma.com/" target="_blank">Tsara Fatma</a></p>
+  
+    <p>+&nbsp;<a href="https://kabarlinux.id/" target="_blank">Kabar Linux</a></p>
+  
+  <p style="font-size:10px;color:#00603C;margin-top:12px;text-align:left;">*5 daftar blog di atas digenerate secara random</p>
+  <div style="margin:10px 0 10px 0;border-bottom:1px dashed #9E9E9E;"></div>
+  <p style="text-align:left;"><a style="border-bottom:0;" href="/dotfriends/"><b>Selengkapnya >></b></a></p>
+</div>
+
+    <div class="sidebar-body-rss"">
+  <h1 style="border-bottom:1px dashed #ACA573;margin-bottom:5px;">
+    <img src="/assets/img/logo/logo_bantuan.svg">Bantuan
+  </h1>
+   <p>Kebingungan dengan simbol-simbol yang terdapat pada halaman blog ini?</p>
+   <p>Kamu dapat mempelajari bagaimana cara membaca setiap komponen yang ada di dalam blog, <a href="/bantuan/"><b>di sini</b></a>.</p>
+</div>
+
+    <div class="sidebar-body-rss">
+  <h1 style="font-size:1.5em;border-bottom:1px dashed #ACA573;margin-bottom:5px;">
+    <img src="/assets/img/logo/logo_rss.svg">Berlangganan RSS
+  </h1>
+  <p>Untuk dapat berlangganan catatan/post terbaru, kamu dapat mengklik tombol RSS yang terdapat di <a href="#footer"><b>footer</b></a>.</p>
+  <p>Blog ini memiliki dua buah RSS feed, Blog dan Vlog.</p>
+  <p>Apabila kamu mengklik tombol RSS yang ada pada halaman yang berkategori Blog, maka RSS feed url yang keluar adalah untuk kategori Blog, begitu pula sebaliknya untuk halaman Vlog.</p>
+  <div style="margin:15px 0 10px 0;border-bottom:1px dashed #ACA573;"></div>
+  <p>Belum tahu tentang RSS? Yuk, <a href="https://bandithijo.github.io/blog/newsboat-rss-feed-reader"><b>ke sini</b></a></p>
+</div>
+
+
+</aside>
+
+        </div>
+      </article>
+
+    </div><!-- container-edge-border -->
+  </div><!-- main container -->
+</section><!-- main -->
+
+
+<footer id="footer" class="noselect">
+  <div class="container">
+    <div class="container-inner">
+      <div class="footer-line">
+        <p style="font-size:20px;"><a href="/"><strong>BanditHijo (R)-Chive</strong></a> &copy; 2012 - 2021</p>
+        <p style="font-size:12px;margin-top:-35px;color:#404040;">
+          Blog ini dibuat di atas distribusi sistem operasi <a href="https://archlinux.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Arch Linux</a>.<br>
+          Source code dan artikel-artikel ditulis menggunakan <span class="nobr"><a href="http://vim.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Vim</a> text editor.</span><br>
+          Semua elemen gambar dikerjakan menggunakan <span class="nobr"><a href="https://inkscape.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Inkscape</a> dan <a href="https://gimp.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">GIMP</a>.</span><br>
+          Menggunakan <a href="https://jekyllrb.com" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Jekyll</a> sebagai Static Site Generator.<br>
+          Dihosting menggunakan <a href="https://github.com/bandithijo/bandithijo.github.io" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">GitHub</a>.<br>
+          Terakhir update: <b>12/07/2021</b>
+        </p>
+        <p class="footer-menu">
+          <br>
+          <a href="/contact/"><strong>Contact</strong></a> |&nbsp;
+          <a href="https://twitter.com/bandithijo" target="_blank" rel="noreferrer"><strong>Twitter</strong></a> |&nbsp;
+          <a rel="me" href="https://www.youtube.com/c/BanditHijo" target="_blank" rel="noreferrer"><strong>YouTube</strong></a> |&nbsp;
+          <a rel="me" href="https://github.com/bandithijo" target="_blank" rel="noreferrer"><strong>GitHub</strong></a> |&nbsp;
+          
+            <a href="/feed/blog.xml" target="_blank"><strong>RSS</strong></a>
+          
+        </p>
+
+        <div class="notif-donasi">
+          <div class="notif-donasi-col-1">
+            <a href="https://saweria.co/bandithijo" target="_blank" rel="noopener">
+              <p>Apabila ingin memberikan <b>apresiasi</b> atas tulisan-tulisan di blog ini, dapat melalui <span class="nobr"><b>Saweria</b></span> atas nama <span class="nobr"><b>Rizqi Nur Assyaufi</b></span>.</p>
+              <p style="margin-top:-8px;">Berapapun besarnya dukungan dari kamu, akan sangat bermanfaat untuk proses produksi tulisan di blog ini.</p>
+              <p style="margin-top:-8px;">Terima kasih, mas Bro!</p>
+            </a>
+          </div>
+          <div class="notif-donasi-col-2">
+            <a href="https://saweria.co/bandithijo" target="_blank" rel="noopener">
+              <img class="notif-donasi-img" src="/assets/img/logo/logo_qr_saweria.png">
+            </a>
+          </div>
+        </div><!-- notif-donasi -->
+
+        <div class="tech-i-used-desktop">
+          <a href="https://jekyllrb.com" target="_blank" rel="noopener">
+            <img class="footer-img-jekyll" src="/assets/img/logo/logo_jekyll.png">
+          </a>
+          <a href="https://github.com/bandithijo" target="_blank" rel="noopener">
+            <img class="footer-img-github" src="/assets/img/logo/logo_github.png">
+          </a>
+          <a href="https://github.com/features/actions" target="_blank" rel="noopener">
+            <img class="footer-img-githubactions" src="/assets/img/logo/logo_github_actions.png">
+          </a>
+        </div><!-- tech-i-used-desktop -->
+
+        <div class="tech-i-used-mobile">
+          <a href="https://github.com/features/actions" target="_blank" rel="noopener" rel="noreferrer">
+            <img class="footer-img-1" src="/assets/img/logo/logo_github_actions_mobile.png">
+          </a>
+          <a href="https://github.com/bandithijo" target="_blank" rel="noopener" rel="noreferrer">
+            <img class="footer-img-2" src="/assets/img/logo/logo_github_mobile.png">
+          </a>
+          <a href="https://jekyllrb.com/" target="_blank" rel="noopener" rel="noreferrer">
+            <img class="footer-img-3" src="/assets/img/logo/logo_jekyll_mobile.png">
+          </a>
+        </div><!-- tech-i-used-mobile -->
+      </div><!-- footer-line -->
+    </div><!-- container-innner -->
+  </div><!-- footer container -->
+</footer>
+
+<!-- site.git.build_version -->
+<div class="tech-i-used-desktop" style="text-align:center;font-size:9px;color:#8F8879;margin: -5px 0 10px 0;">
+  c2deb4abbcb1b30e9079c35732dca589f2d7b6e8
+</div>
+<!-- END site.git.build_version -->
+
+<script type="text/javascript" src="/assets/js/nav.js"></script>
+<script type="text/javascript" src="/assets/js/lazyload.js"></script>
+<script type="text/javascript" src="/assets/js/headings-permalink.js"></script>
+<script type="text/javascript" src="/assets/js/newsline-sticky.js"></script>
+
+<script type="text/javascript" src="/assets/js/aside.js"></script>
+
+
+<script type="text/javascript" src="/assets/js/enlarge-image-modal.js"></script>
+
+
+
+
+</body>
+</html>

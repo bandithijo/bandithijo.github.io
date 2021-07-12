@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Here's where I started writing some notes that someday I will call it, a book">
+<meta name="keywords" content="">
+<meta name="author" content="Rizqi Nur Assyaufi">
+<meta name="theme-color" content="#008352">
+<meta name="msapplication-navbutton-color" content="#008352">
+<meta name="apple-mobile-web-app-status-bar-style" content="#008352">
+<title>Video Testing Flickering Screen Setelah Gagal Menggunakan Compiz | BanditHijo (R)-Chive</title>
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/github-markdown-bandit.css">
+<link rel="icon" href="/assets/img/favicon/favicon.png" type="image/png">
+<link rel="manifest" href="/manifest.json">
+
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Video Testing Flickering Screen Setelah Gagal Menggunakan Compiz" />
+<meta name="author" content="BanditHijo" />
+<meta property="og:locale" content="id" />
+<meta name="description" content="Here’s where I started writing some notes that someday I will call it, a book" />
+<meta property="og:description" content="Here’s where I started writing some notes that someday I will call it, a book" />
+<link rel="canonical" href="https://bandithijo.github.io/vlog/flickering-testing-setelah-gagal-menggunakan-compiz" />
+<meta property="og:url" content="https://bandithijo.github.io/vlog/flickering-testing-setelah-gagal-menggunakan-compiz" />
+<meta property="og:site_name" content="BanditHijo (R)-Chive" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-05-06T00:00:00+08:00" />
+<script type="application/ld+json">
+{"description":"Here’s where I started writing some notes that someday I will call it, a book","url":"https://bandithijo.github.io/vlog/flickering-testing-setelah-gagal-menggunakan-compiz","@type":"BlogPosting","headline":"Video Testing Flickering Screen Setelah Gagal Menggunakan Compiz","dateModified":"2021-07-12T16:52:32+08:00","datePublished":"2018-05-06T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://bandithijo.github.io/vlog/flickering-testing-setelah-gagal-menggunakan-compiz"},"author":{"@type":"Person","name":"BanditHijo"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <meta property="og:country-name"   content="Indonesia"/>
+<meta property="og:image"          content="/assets/img/banner/bndt_banner.png"/>
+<meta property="og:image:width"    content="460"/>
+<meta property="og:image:height"   content="230"/>
+
+<meta property="twitter:card"      content="summary_large_image"/>
+<meta property="twitter:title"     content="Video Testing Flickering Screen Setelah Gagal Menggunakan Compiz"/>
+<meta property="twitter:author"    content="BanditHijo"/>
+<meta property="twitter:image:src" content="/assets/img/banner/bndt_banner.png"/>
+
+  <!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-116004889-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+  <meta name="google-site-verification" content="qXp9Kgb5hIHVp5T9vFOa_motqUmNuF5STbkJKF70wLc">
+
+</head>
+
+
+<body>
+
+<header id="header" class="noselect">
+  <div class="container container-strip">
+    <div class="container-inner container-inner-strip">
+    <div class="logo">
+      <img src="/assets/img/logo/logo_bandithijo.png">
+    </div>
+
+    <div class="title">
+      <h1><span class="nobr">BanditHijo (R)-Chive</span></h1>
+    </div>
+    <div class="description">
+      <h2>Here's where I started writing some notes that someday <span class="nobr">I will call it, a book</span></h2>
+      <br>
+      <span class="emblem-f">TECHNICAL<span class="emblem-e">BLOG : JOURNAL</span></span>
+    </div>
+
+    <nav class="nav nav-strip">
+      <div class="toggle">
+        <div class="menu" onmouseover="this.style.cursor='pointer'" onclick="navBtn()">
+          <span class="menu-title">BANDITHIJO</span>
+          <img style="width:30px;" src="/assets/img/logo/logo_menu.svg" id="nav-btn">
+        </div><!-- menu -->
+      </div><!-- toggle -->
+      <ul id="menu-ul">
+        <li><a href="/">Home</a></li>
+        
+        
+        
+        <li><a href="/blog/" class="">Blog</a></li>
+        
+        
+        
+        <li><a href="/note/" class="">Note</a></li>
+        
+        
+        
+        <li><a href="/vlog/" class="active">Vlog</a></li>
+        
+        
+        
+        <li><a href="/book/" class="">Books</a></li>
+        
+        
+        
+        <li><a href="/about/" class="">About</a></li>
+        
+        
+        
+        <li><a href="https://bandithijo.github.io/v2" class="">v2 (beta)</a></li>
+        
+      </ul>
+    </nav>
+    </div><!-- container-inner -->
+  </div><!-- header container -->
+</header>
+
+
+<section id="main">
+  <div class="container">
+    <div class="container-edge-border">
+
+      
+
+      <article class="post-pre-title">
+        <div class="post-body">
+          
+            <h1 class="post-title"><a href="/vlog/flickering-testing-setelah-gagal-menggunakan-compiz">Video Testing Flickering Screen Setelah Gagal Menggunakan Compiz</a></h1>
+          
+          <label class="hideAside noselect" title="On/Off Sidebar" onclick="toggleShowHideSidebar()"><img style="width:20px;margin-top:5px;" src="/assets/img/logo/logo_menu.svg" alt=""></label>
+
+          
+            
+            
+            
+              <span class="post-details noselect">Ditulis: 2018/05/06</span> <span class="post-details noselect">Diperbaharui: 2021/07/12</span>
+            
+          
+
+          <div class="breadcrumbs noselect">
+
+<span style="color:#232323;">&#9654;</span>&nbsp;<a href="/">Home</a>
+
+  
+    / <a href="/vlog/">Vlog</a>
+  
+
+  
+    / Flickering testing setelah gagal menggunakan compiz
+  
+
+</div>
+
+          <div class="tags-in-post noselect">
+  
+  
+</div>
+
+        </div>
+      </article>
+
+      <article>
+        <div class="post-body-sidebar">
+          <aside class="sidebar noselect" id="sidebar-head">
+
+</aside>
+
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-body">
+          <div class="doa-awal noselect">
+<p><img src="/assets/img/logo/logo_doa_awal.svg" alt="بسم الله الرحمن الرحيم" style="height:40px" align="right"></p>
+<div style="clear:both;"></div>
+</div>
+
+        </div>
+        <div class="markdown-body highlight">
+
+          <!-- The Modal -->
+<div class="modal">
+  <img class="modal-content">
+</div>
+
+
+          <p><div style="margin-top:30px;"></div>
+
+<div class="embed-container"><iframe style="display:block;margin:0 auto;" src="/assets/img/logo/logo_blank_banner.svg" data-echo="//www.youtube.com/embed/OYcgTL2JpIU" onerror="imgError(this);" frameborder="0" allowfullscreen=""></iframe></div>
+
+<h1 id="deskripsi">Deskripsi</h1>
+
+<p>Habis atur-atur desktop environtment, testing2 pakai Compiz dan gagal, hancur lebur, balik lagi ke backup semula.</p>
+
+<p>Coba testing-testing rendering apakah ada flickering atau tidak. Haiyah utak atik terus sampai enak.</p>
+</p>
+
+          <!-- wip -->
+          
+            <br>
+          
+
+          <!-- License -->
+          
+            <div style="text-align:center; margin:0 0 10px 0;"></div>
+            
+              <div class="noselect">
+<h1 style="font-size:2em;">Lisensi</h1>
+<div class="ccbysa-img noselect"><img class="ccbysa-img-img" style="margin-top: 5px;" src="/assets/img/logo/cc-by-nc-sa.png" alt="logo_cc-by-nc-sa"/></div><!-- ccbysa -->
+<div class="ccbysa-text noselect">
+Tulisan ini dilisensikan dengan :<br>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.id" target="_blank">Atribusi-NonKomersial-BerbagiSerupa 4.0 Internasional (CC BY-NC-SA 4.0)</a>
+</div><!-- ccbysa-text -->
+</div>
+
+            
+          
+
+          <div style="clear:both;"></div>
+
+          <!-- Penulis -->
+          
+            <div style="text-align:center; margin:0 0 10px 0;"></div>
+
+            
+
+            
+              <div class="noselect">
+  <h1 style="font-size:2em;">Penulis</h1>
+  
+  
+    
+      <div class="penulis-img">
+        <img style="margin:0 auto;border-radius:50%;" src="https://github.com/bandithijo.png?size=200" alt="bandithijo" onerror="imgError(this);">
+      </div><!-- penulis-img -->
+
+      <div class="penulis-text">
+        <p><p><b>BanditHijo</b> adalah nama pena saya – meminjam istilah keren dari para penulis. Teman-teman menyebut saya sebagai GNU/Linux Enthusiast. Saya memang gemar mengutak-atik sistem operasi ini. Bukan karena hobi tapi karena saya perlu untuk menggunakannya. Hehe.</p>
+</p>
+        <p style="text-align:right;">- <b>Rizqi Nur Assyaufi</b></p>
+      </div><!-- penulis-text -->
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</div>
+
+            
+          
+
+          <div style="clear:both;"></div>
+
+          <!-- Begin Mailchimp Signup Form -->
+<link href="/assets/css/mailchimp-classic-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+  #mc_embed_signup form {
+    padding: 10px 0 !important;
+  }
+
+  #mc_embed_signup .button {
+    background-color: #008352;
+  }
+
+  #mc_embed_signup h2 {
+    font-size: 32px !important;
+    padding-bottom: .3em;
+  }
+
+  .mc-field-group {
+    width: 100% !important;
+    padding-bottom: 2% !important;
+  }
+
+  .mce-label {
+    margin-bottom: 3% !important;
+    font-size: 14px;
+  }
+
+  .mc-form {
+    float: left;
+    width: 50% !important;
+  }
+
+  .mc-text {
+    float: right;
+    font-size: 14px;
+    width: 50%;
+    padding: 5px 10px;
+    text-align: justify;
+  }
+
+  @media (max-width: 640px) {
+    .mc-field-group {
+      width: 100% !important;
+      padding-bottom: 4% !important;
+    }
+
+    .mc-form {
+      float: none;
+      width: 100% !important;
+    }
+
+    .mc-text {
+      float: none;
+      font-size: 14px;
+      width: 100%;
+      padding: 0;
+    }
+
+  {
+</style>
+<div id="mc_embed_signup">
+  <form action="https://github.us4.list-manage.com/subscribe/post?u=68e5540d98defef56764f64df&amp;id=39ab92c3ed" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+      <h2>Berlangganan via Email</h2>
+      <div class="mc-text">Jangan sampai ketinggalan kabar dan info terbaru mengenai BanditHijo (R)-Chive.<br>Ayo bergabung!</div>
+      <div class="mc-form">
+        <div class="mc-field-group">
+          <label class="mce-label"></label>
+          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Masukkan email di sini...">
+        </div>
+        <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_68e5540d98defef56764f64df_39ab92c3ed" tabindex="-1" value=""></div>
+        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!--End mc_embed_signup-->
+
+
+        </div><!-- markdown-body -->
+      </article>
+
+      <article>
+        <div class="post-body-sidebar">
+          <aside class="sidebar noselect" id="sidebar-tail">
+
+    <div class="sidebar-body">
+  <h1 style="font-size:1.5em;border-bottom:1px dashed #9E9E9E;">
+    <img src="/assets/img/logo/logo_terbaru.svg">Video Terbaru
+  </h1>
+  <div class="toc">
+  <ul>
+  
+  
+    <li><a href="/vlog/membuat-recovery-partition-artix-linux-iso-dengan-grub2">Membuat Recovery Partition Artix Linux ISO dengan GRUB2</a></li>
+  
+    <li><a href="/vlog/sti-specific-relation-for-each-user-type">Rails - Singel Table Inheritance, Specific Relation for Each User Type</a></li>
+  
+    <li><a href="/vlog/mudah-menggunakan-bluetoothctl">Mudah Menggunakan Bluetoothctl</a></li>
+  
+    <li><a href="/vlog/bagaimana-menggunakan-iwd-iwctl">Bagaimana Menggunakan iwd/iwctl</a></li>
+  
+    <li><a href="/vlog/membuat-session-baru-dalam-tmux">Membuat Session Baru dan Mengganti CWD dari dalam Tmux</a></li>
+  
+    <li><a href="/vlog/dual-monitor-setup-on-dwm-with-thinkpad-x61-and-lgtv">My Dual Monitor Setup on DWM with ThinkPad X61 and LG TV</a></li>
+  
+    <li><a href="/vlog/konfigurasi-actionmailer-dengan-gmail">Rails - Menkonfigurasi ActionMailer dengan Gmail SMTP</a></li>
+  
+    <li><a href="/vlog/intip-proses-produksi-video-bandithijo">Intip Proses Produksi Video</a></li>
+  
+    <li><a href="/vlog/otput-ajax-in-rails">Rails - Membuat Output Result dengan AJAX</a></li>
+  
+    <li><a href="/vlog/menambahkan-patch-centeredmaster-dwm">DWM - Mudah Menambahkan Patch CenteredMaster (Manual)</a></li>
+  
+  </ul>
+  </div>
+  <div style="margin:10px 0 10px 0;border-bottom:1px dashed #9E9E9E;"></div>
+  <p style="text-align:left;"><a style="border-bottom:0;" href="/vlog/"><b>Selengkapnya >></b></a></p>
+</div>
+
+    <div class="sidebar-body-rss">
+  <h1 style="font-size:1.5em;border-bottom:1px dashed #ACA573;margin-bottom:5px;">
+    <img src="/assets/img/logo/logo_rss.svg">Berlangganan RSS
+  </h1>
+  <p>Untuk dapat berlangganan catatan/post terbaru, kamu dapat mengklik tombol RSS yang terdapat di <a href="#footer"><b>footer</b></a>.</p>
+  <p>Blog ini memiliki dua buah RSS feed, Blog dan Vlog.</p>
+  <p>Apabila kamu mengklik tombol RSS yang ada pada halaman yang berkategori Blog, maka RSS feed url yang keluar adalah untuk kategori Blog, begitu pula sebaliknya untuk halaman Vlog.</p>
+  <div style="margin:15px 0 10px 0;border-bottom:1px dashed #ACA573;"></div>
+  <p>Belum tahu tentang RSS? Yuk, <a href="https://bandithijo.github.io/blog/newsboat-rss-feed-reader"><b>ke sini</b></a></p>
+</div>
+
+
+</aside>
+
+        </div>
+      </article>
+
+    </div><!-- container-edge-border -->
+  </div><!-- main container -->
+</section><!-- main -->
+
+
+<footer id="footer" class="noselect">
+  <div class="container">
+    <div class="container-inner">
+      <div class="footer-line">
+        <p style="font-size:20px;"><a href="/"><strong>BanditHijo (R)-Chive</strong></a> &copy; 2012 - 2021</p>
+        <p style="font-size:12px;margin-top:-35px;color:#404040;">
+          Blog ini dibuat di atas distribusi sistem operasi <a href="https://archlinux.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Arch Linux</a>.<br>
+          Source code dan artikel-artikel ditulis menggunakan <span class="nobr"><a href="http://vim.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Vim</a> text editor.</span><br>
+          Semua elemen gambar dikerjakan menggunakan <span class="nobr"><a href="https://inkscape.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Inkscape</a> dan <a href="https://gimp.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">GIMP</a>.</span><br>
+          Menggunakan <a href="https://jekyllrb.com" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Jekyll</a> sebagai Static Site Generator.<br>
+          Dihosting menggunakan <a href="https://github.com/bandithijo/bandithijo.github.io" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">GitHub</a>.<br>
+          Terakhir update: <b>12/07/2021</b>
+        </p>
+        <p class="footer-menu">
+          <br>
+          <a href="/contact/"><strong>Contact</strong></a> |&nbsp;
+          <a href="https://twitter.com/bandithijo" target="_blank" rel="noreferrer"><strong>Twitter</strong></a> |&nbsp;
+          <a rel="me" href="https://www.youtube.com/c/BanditHijo" target="_blank" rel="noreferrer"><strong>YouTube</strong></a> |&nbsp;
+          <a rel="me" href="https://github.com/bandithijo" target="_blank" rel="noreferrer"><strong>GitHub</strong></a> |&nbsp;
+          
+            <a href="/feed/vlog.xml" target="_blank"><strong>RSS</strong></a>
+          
+        </p>
+
+        <div class="notif-donasi">
+          <div class="notif-donasi-col-1">
+            <a href="https://saweria.co/bandithijo" target="_blank" rel="noopener">
+              <p>Apabila ingin memberikan <b>apresiasi</b> atas tulisan-tulisan di blog ini, dapat melalui <span class="nobr"><b>Saweria</b></span> atas nama <span class="nobr"><b>Rizqi Nur Assyaufi</b></span>.</p>
+              <p style="margin-top:-8px;">Berapapun besarnya dukungan dari kamu, akan sangat bermanfaat untuk proses produksi tulisan di blog ini.</p>
+              <p style="margin-top:-8px;">Terima kasih, mas Bro!</p>
+            </a>
+          </div>
+          <div class="notif-donasi-col-2">
+            <a href="https://saweria.co/bandithijo" target="_blank" rel="noopener">
+              <img class="notif-donasi-img" src="/assets/img/logo/logo_qr_saweria.png">
+            </a>
+          </div>
+        </div><!-- notif-donasi -->
+
+        <div class="tech-i-used-desktop">
+          <a href="https://jekyllrb.com" target="_blank" rel="noopener">
+            <img class="footer-img-jekyll" src="/assets/img/logo/logo_jekyll.png">
+          </a>
+          <a href="https://github.com/bandithijo" target="_blank" rel="noopener">
+            <img class="footer-img-github" src="/assets/img/logo/logo_github.png">
+          </a>
+          <a href="https://github.com/features/actions" target="_blank" rel="noopener">
+            <img class="footer-img-githubactions" src="/assets/img/logo/logo_github_actions.png">
+          </a>
+        </div><!-- tech-i-used-desktop -->
+
+        <div class="tech-i-used-mobile">
+          <a href="https://github.com/features/actions" target="_blank" rel="noopener" rel="noreferrer">
+            <img class="footer-img-1" src="/assets/img/logo/logo_github_actions_mobile.png">
+          </a>
+          <a href="https://github.com/bandithijo" target="_blank" rel="noopener" rel="noreferrer">
+            <img class="footer-img-2" src="/assets/img/logo/logo_github_mobile.png">
+          </a>
+          <a href="https://jekyllrb.com/" target="_blank" rel="noopener" rel="noreferrer">
+            <img class="footer-img-3" src="/assets/img/logo/logo_jekyll_mobile.png">
+          </a>
+        </div><!-- tech-i-used-mobile -->
+      </div><!-- footer-line -->
+    </div><!-- container-innner -->
+  </div><!-- footer container -->
+</footer>
+
+<!-- site.git.build_version -->
+<div class="tech-i-used-desktop" style="text-align:center;font-size:9px;color:#8F8879;margin: -5px 0 10px 0;">
+  c2deb4abbcb1b30e9079c35732dca589f2d7b6e8
+</div>
+<!-- END site.git.build_version -->
+
+<script type="text/javascript" src="/assets/js/nav.js"></script>
+<script type="text/javascript" src="/assets/js/lazyload.js"></script>
+<script type="text/javascript" src="/assets/js/headings-permalink.js"></script>
+<script type="text/javascript" src="/assets/js/newsline-sticky.js"></script>
+
+<script type="text/javascript" src="/assets/js/aside.js"></script>
+
+
+<script type="text/javascript" src="/assets/js/enlarge-image-modal.js"></script>
+
+
+
+
+</body>
+</html>

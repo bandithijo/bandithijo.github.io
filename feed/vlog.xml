@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="id"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://bandithijo.github.io/feed/vlog.xml" rel="self" type="application/atom+xml" /><link href="https://bandithijo.github.io/" rel="alternate" type="text/html" hreflang="id" /><updated>2021-07-12T16:58:32+08:00</updated><id>https://bandithijo.github.io/feed/vlog.xml</id><title type="html">BanditHijo (R)-Chive | Vlog</title><subtitle>Here's where I started writing some notes that someday I will call it, a book</subtitle><author><name>Rizqi Nur Assyaufi</name></author><entry><title type="html">Membuat Recovery Partition Artix Linux ISO dengan GRUB2</title><link href="https://bandithijo.github.io/vlog/membuat-recovery-partition-artix-linux-iso-dengan-grub2" rel="alternate" type="text/html" title="Membuat Recovery Partition Artix Linux ISO dengan GRUB2" /><published>2021-03-01T15:23:00+08:00</published><updated>2021-07-12T16:52:32+08:00</updated><id>https://bandithijo.github.io/vlog/membuat-recovery-partition-artix-linux-iso-dengan-grub2</id><content type="html" xml:base="https://bandithijo.github.io/vlog/membuat-recovery-partition-artix-linux-iso-dengan-grub2">&lt;div style=&quot;margin-top:30px;&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;embed-container&quot;&gt;&lt;iframe style=&quot;display:block;margin:0 auto;&quot; src=&quot;/assets/img/logo/logo_blank_banner.svg&quot; data-echo=&quot;//www.youtube.com/embed/1WImC1ge40c&quot; onerror=&quot;imgError(this);&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;deskripsi&quot;&gt;Deskripsi&lt;/h1&gt;
+
+&lt;p&gt;Pada vlog ini , saya mendemonstrasikan hasil dari pembuatan recovery partition yang diisi dengan artix linux iso lalu dipanggil dengan GRUB2.&lt;/p&gt;
+
+&lt;p&gt;Artikel:&lt;br /&gt;
+&lt;a href=&quot;/blog/membuat-recovery-partition-artix-iso-dengan-grub2&quot; target=&quot;_blank&quot;&gt;Membuat Recovery Partition Artix Linux ISO dengan GRUB2&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+💰 Berikan support kepada channel ini, di sini: &lt;a href=&quot;https://saweria.co/bandithijo&quot; target=&quot;_blank&quot;&gt;https://saweria.co/bandithijo&lt;/a&gt;&lt;/p&gt;</content><author><name>BanditHijo</name></author><category term="vlog" /><category term="Tips" /><summary type="html"></summary></entry><entry><title type="html">Rails - Singel Table Inheritance, Specific Relation for Each User Type</title><link href="https://bandithijo.github.io/vlog/sti-specific-relation-for-each-user-type" rel="alternate" type="text/html" title="Rails - Singel Table Inheritance, Specific Relation for Each User Type" /><published>2021-02-16T15:23:00+08:00</published><updated>2021-07-12T16:52:32+08:00</updated><id>https://bandithijo.github.io/vlog/sti-specific-relation-for-each-user-type</id><content type="html" xml:base="https://bandithijo.github.io/vlog/sti-specific-relation-for-each-user-type">&lt;div style=&quot;margin-top:30px;&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;embed-container&quot;&gt;&lt;iframe style=&quot;display:block;margin:0 auto;&quot; src=&quot;/assets/img/logo/logo_blank_banner.svg&quot; data-echo=&quot;//www.youtube.com/embed/f_RVg5bJHxA&quot; onerror=&quot;imgError(this);&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;deskripsi&quot;&gt;Deskripsi&lt;/h1&gt;
+
+&lt;p&gt;Vlog kali ini saya mendemokan single table inherirtance untuk table users dengan hanya salah satu user type, yaitu “copywriter” yang memiliki relasi dengan table news. Sedangkan, user dengan type yang lain tidak.&lt;/p&gt;
+
+&lt;p&gt;Artikel:&lt;br /&gt;
+&lt;a href=&quot;/blog/relasi-dengan-salah-satu-type-pada-sti-pada-rails&quot; target=&quot;_blank&quot;&gt;Membuat Relasi dengan Hanya Salah Satu Type pada Single Table Inheritance Model di Rails&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+💰 Berikan support kepada channel ini, di sini: &lt;a href=&quot;https://saweria.co/bandithijo&quot; target=&quot;_blank&quot;&gt;https://saweria.co/bandithijo&lt;/a&gt;&lt;/p&gt;</content><author><name>BanditHijo</name></author><category term="vlog" /><category term="Tips" /><category term="Rails" /><summary type="html"></summary></entry><entry><title type="html">Mudah Menggunakan Bluetoothctl</title><link href="https://bandithijo.github.io/vlog/mudah-menggunakan-bluetoothctl" rel="alternate" type="text/html" title="Mudah Menggunakan Bluetoothctl" /><published>2021-01-21T15:23:00+08:00</published><updated>2021-07-12T16:52:32+08:00</updated><id>https://bandithijo.github.io/vlog/mudah-menggunakan-bluetoothctl</id><content type="html" xml:base="https://bandithijo.github.io/vlog/mudah-menggunakan-bluetoothctl">&lt;div style=&quot;margin-top:30px;&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;embed-container&quot;&gt;&lt;iframe style=&quot;display:block;margin:0 auto;&quot; src=&quot;/assets/img/logo/logo_blank_banner.svg&quot; data-echo=&quot;//www.youtube.com/embed/Bxc3e6lnEUg&quot; onerror=&quot;imgError(this);&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;deskripsi&quot;&gt;Deskripsi&lt;/h1&gt;
+
+&lt;p&gt;Pada vlog kali ini saya ingin mendemonstrasikan catatan saya tentang “Mudah Menggunakan Bluetoothctl” .
+Bluetoothctl adalah interaktif shell yang dapat kita gunakan untuk berinteraksi dengan bluetooth device tanpa perlu menggunakan GUI seperti Blueman Manager.&lt;/p&gt;
+
+&lt;p&gt;Artikel:&lt;br /&gt;
+&lt;a href=&quot;/blog/mudah-menggunakan-bluetoothctl&quot; target=&quot;_blank&quot;&gt;Mudah Menggunakan Bluetoothctl&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+💰 Berikan support kepada channel ini, di sini: &lt;a href=&quot;https://saweria.co/bandithijo&quot; target=&quot;_blank&quot;&gt;https://saweria.co/bandithijo&lt;/a&gt;&lt;/p&gt;</content><author><name>BanditHijo</name></author><category term="vlog" /><category term="Tips" /><category term="Tools" /><summary type="html"></summary></entry><entry><title type="html">Bagaimana Menggunakan iwd/iwctl</title><link href="https://bandithijo.github.io/vlog/bagaimana-menggunakan-iwd-iwctl" rel="alternate" type="text/html" title="Bagaimana Menggunakan iwd/iwctl" /><published>2021-01-07T15:23:00+08:00</published><updated>2021-07-12T16:52:32+08:00</updated><id>https://bandithijo.github.io/vlog/bagaimana-menggunakan-iwd-iwctl</id><content type="html" xml:base="https://bandithijo.github.io/vlog/bagaimana-menggunakan-iwd-iwctl">&lt;div style=&quot;margin-top:30px;&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;embed-container&quot;&gt;&lt;iframe style=&quot;display:block;margin:0 auto;&quot; src=&quot;/assets/img/logo/logo_blank_banner.svg&quot; data-echo=&quot;//www.youtube.com/embed/E-InIIfIxCs&quot; onerror=&quot;imgError(this);&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;deskripsi&quot;&gt;Deskripsi&lt;/h1&gt;
+
+&lt;p&gt;Pada vlog kali ini saya mendemonstrasikan bagaimana cara saya dalam terhubung dengan jaringan wi-fi menggunakan iwd / iwctl.&lt;/p&gt;
+
+&lt;p&gt;Artikel:&lt;br /&gt;
+&lt;a href=&quot;https://bandithijo.github.io/blog/mudah-mengkonfigurasi-wifi-dengan-iwd&quot; target=&quot;_blank&quot;&gt;Mudah Mengkonfigurasi Wi-Fi dengan iwd (iwctl)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+💰 Berikan support kepada channel ini, di sini: &lt;a href=&quot;https://saweria.co/bandithijo&quot; target=&quot;_blank&quot;&gt;https://saweria.co/bandithijo&lt;/a&gt;&lt;/p&gt;</content><author><name>BanditHijo</name></author><category term="vlog" /><category term="Tips" /><category term="Tools" /><summary type="html"></summary></entry><entry><title type="html">Membuat Session Baru dan Mengganti CWD dari dalam Tmux</title><link href="https://bandithijo.github.io/vlog/membuat-session-baru-dalam-tmux" rel="alternate" type="text/html" title="Membuat Session Baru dan Mengganti CWD dari dalam Tmux" /><published>2020-12-23T02:00:00+08:00</published><updated>2021-07-12T16:52:32+08:00</updated><id>https://bandithijo.github.io/vlog/membuat-session-baru-dalam-tmux</id><content type="html" xml:base="https://bandithijo.github.io/vlog/membuat-session-baru-dalam-tmux">&lt;div style=&quot;margin-top:30px;&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;embed-container&quot;&gt;&lt;iframe style=&quot;display:block;margin:0 auto;&quot; src=&quot;/assets/img/logo/logo_blank_banner.svg&quot; data-echo=&quot;//www.youtube.com/embed/G8Zy54EnoHM&quot; onerror=&quot;imgError(this);&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;deskripsi&quot;&gt;Deskripsi&lt;/h1&gt;
+
+&lt;p&gt;Pada vlog kali ini saya mendemonstrasikan “Bagaimana cara untuk membuat session baru dan mengganti current working directory secara langsung dari dalam Tmux”.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+💰 Berikan support kepada channel ini, di sini: &lt;a href=&quot;https://saweria.co/bandithijo&quot; target=&quot;_blank&quot;&gt;https://saweria.co/bandithijo&lt;/a&gt;&lt;/p&gt;</content><author><name>BanditHijo</name></author><category term="vlog" /><category term="Tips" /><category term="Tools" /><summary type="html"></summary></entry><entry><title type="html">My Dual Monitor Setup on DWM with ThinkPad X61 and LG TV</title><link href="https://bandithijo.github.io/vlog/dual-monitor-setup-on-dwm-with-thinkpad-x61-and-lgtv" rel="alternate" type="text/html" title="My Dual Monitor Setup on DWM with ThinkPad X61 and LG TV" /><published>2020-12-23T01:00:00+08:00</published><updated>2021-07-12T16:52:32+08:00</updated><id>https://bandithijo.github.io/vlog/dual-monitor-setup-on-dwm-with-thinkpad-x61-and-lgtv</id><content type="html" xml:base="https://bandithijo.github.io/vlog/dual-monitor-setup-on-dwm-with-thinkpad-x61-and-lgtv">&lt;div style=&quot;margin-top:30px;&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;embed-container&quot;&gt;&lt;iframe style=&quot;display:block;margin:0 auto;&quot; src=&quot;/assets/img/logo/logo_blank_banner.svg&quot; data-echo=&quot;//www.youtube.com/embed/Vio7yGUJEgw&quot; onerror=&quot;imgError(this);&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;deskripsi&quot;&gt;Deskripsi&lt;/h1&gt;
+
+&lt;p&gt;Pada vlog ini, saya mendemonstrasikan bagaimana keseharian saya dalam melakukan setup awal sebelum menggunakan multi monitor antara ThinkPad X61 (VGAbl output) dengan LG TV (HDMI input).&lt;/p&gt;
+
+&lt;p&gt;Karena resolusi yang didapat oleh LGTV secara default hanya sebesar 1024x768, maka saya pun mrnambahkan sendiri resolusi yg saya inginkan.&lt;/p&gt;
+
+&lt;p&gt;Caranya, bisa baca di blog yaa.&lt;br /&gt;
+&lt;a href=&quot;/blog/menambahkan-custom-resolution-gnu-linux&quot; target=&quot;_blank&quot;&gt;Menambahkan Custom Resolution pada GNU/Linux&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+💰 Berikan support kepada channel ini, di sini: &lt;a href=&quot;https://saweria.co/bandithijo&quot; target=&quot;_blank&quot;&gt;https://saweria.co/bandithijo&lt;/a&gt;&lt;/p&gt;</content><author><name>BanditHijo</name></author><category term="vlog" /><category term="Tips" /><summary type="html"></summary></entry><entry><title type="html">Rails - Menkonfigurasi ActionMailer dengan Gmail SMTP</title><link href="https://bandithijo.github.io/vlog/konfigurasi-actionmailer-dengan-gmail" rel="alternate" type="text/html" title="Rails - Menkonfigurasi ActionMailer dengan Gmail SMTP" /><published>2020-12-22T01:00:00+08:00</published><updated>2021-07-12T16:52:32+08:00</updated><id>https://bandithijo.github.io/vlog/konfigurasi-actionmailer-dengan-gmail</id><content type="html" xml:base="https://bandithijo.github.io/vlog/konfigurasi-actionmailer-dengan-gmail">&lt;div style=&quot;margin-top:30px;&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;embed-container&quot;&gt;&lt;iframe style=&quot;display:block;margin:0 auto;&quot; src=&quot;/assets/img/logo/logo_blank_banner.svg&quot; data-echo=&quot;//www.youtube.com/embed/Vio7yGUJEgw&quot; onerror=&quot;imgError(this);&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;deskripsi&quot;&gt;Deskripsi&lt;/h1&gt;
+
+&lt;p&gt;Pada vlog kali ini saya mendemonstrasikan pengujian hasil konfigurasi ActionMailer dengan Gmail SMTP.&lt;/p&gt;
+
+&lt;p&gt;Catatan:&lt;br /&gt;
+&lt;a href=&quot;/blog/konfigurasi-rails-actionmailer-dengan-gmail&quot; target=&quot;_blank&quot;&gt;Konfigurasi Ruby on Rails ActionMailer dengan Gmail&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+💰 Berikan support kepada channel ini, di sini: &lt;a href=&quot;https://saweria.co/bandithijo&quot; target=&quot;_blank&quot;&gt;https://saweria.co/bandithijo&lt;/a&gt;&lt;/p&gt;</content><author><name>BanditHijo</name></author><category term="vlog" /><category term="Tips" /><category term="Rails" /><summary type="html"></summary></entry><entry><title type="html">Intip Proses Produksi Video</title><link href="https://bandithijo.github.io/vlog/intip-proses-produksi-video-bandithijo" rel="alternate" type="text/html" title="Intip Proses Produksi Video" /><published>2020-11-28T02:00:00+08:00</published><updated>2021-07-12T16:52:32+08:00</updated><id>https://bandithijo.github.io/vlog/intip-proses-produksi-video-bandithijo</id><content type="html" xml:base="https://bandithijo.github.io/vlog/intip-proses-produksi-video-bandithijo">&lt;div style=&quot;margin-top:30px;&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;embed-container&quot;&gt;&lt;iframe style=&quot;display:block;margin:0 auto;&quot; src=&quot;/assets/img/logo/logo_blank_banner.svg&quot; data-echo=&quot;//www.youtube.com/embed/8WoSYx3V7xA&quot; onerror=&quot;imgError(this);&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;deskripsi&quot;&gt;Deskripsi&lt;/h1&gt;
+
+&lt;p&gt;Berikut ini adalah workflow yang biasa saya gunakan dalam memproduksi video-video pendek.&lt;/p&gt;
+
+&lt;p&gt;Hasilnya:&lt;br /&gt;
+&lt;a href=&quot;https://youtu.be/8S0mVml2TAA&quot; target=&quot;_blank&quot;&gt;Rails - Membuat Output Result dengan AJAX&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Tools yang saya pergunakan:&lt;br /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Kdenlive (Video Editor)&lt;/li&gt;
+  &lt;li&gt;FreeRDP (RDP Client)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;
+💰 Berikan support kepada channel ini, di sini: &lt;a href=&quot;https://saweria.co/bandithijo&quot; target=&quot;_blank&quot;&gt;https://saweria.co/bandithijo&lt;/a&gt;&lt;/p&gt;</content><author><name>BanditHijo</name></author><category term="vlog" /><category term="Tips" /><summary type="html"></summary></entry><entry><title type="html">Rails - Membuat Output Result dengan AJAX</title><link href="https://bandithijo.github.io/vlog/otput-ajax-in-rails" rel="alternate" type="text/html" title="Rails - Membuat Output Result dengan AJAX" /><published>2020-11-28T01:00:00+08:00</published><updated>2021-07-12T16:52:32+08:00</updated><id>https://bandithijo.github.io/vlog/otput-ajax-in-rails</id><content type="html" xml:base="https://bandithijo.github.io/vlog/otput-ajax-in-rails">&lt;div style=&quot;margin-top:30px;&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;embed-container&quot;&gt;&lt;iframe style=&quot;display:block;margin:0 auto;&quot; src=&quot;/assets/img/logo/logo_blank_banner.svg&quot; data-echo=&quot;//www.youtube.com/embed/8S0mVml2TAA&quot; onerror=&quot;imgError(this);&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;deskripsi&quot;&gt;Deskripsi&lt;/h1&gt;
+
+&lt;p&gt;Vlog iseng kali ini nyobain merubah output yang merender seluruh template dengan output yang hanya merubah bagian result dengan AJAX, sehingga template hanya dipanggil sekali.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+💰 Berikan support kepada channel ini, di sini: &lt;a href=&quot;https://saweria.co/bandithijo&quot; target=&quot;_blank&quot;&gt;https://saweria.co/bandithijo&lt;/a&gt;&lt;/p&gt;</content><author><name>BanditHijo</name></author><category term="vlog" /><category term="Tips" /><category term="Rails" /><summary type="html"></summary></entry><entry><title type="html">DWM - Mudah Menambahkan Patch CenteredMaster (Manual)</title><link href="https://bandithijo.github.io/vlog/menambahkan-patch-centeredmaster-dwm" rel="alternate" type="text/html" title="DWM - Mudah Menambahkan Patch CenteredMaster (Manual)" /><published>2020-11-21T02:00:00+08:00</published><updated>2021-07-12T16:52:32+08:00</updated><id>https://bandithijo.github.io/vlog/menambahkan-patch-centeredmaster-dwm</id><content type="html" xml:base="https://bandithijo.github.io/vlog/menambahkan-patch-centeredmaster-dwm">&lt;div style=&quot;margin-top:30px;&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;embed-container&quot;&gt;&lt;iframe style=&quot;display:block;margin:0 auto;&quot; src=&quot;/assets/img/logo/logo_blank_banner.svg&quot; data-echo=&quot;//www.youtube.com/embed/jsz3sDS1MZQ&quot; onerror=&quot;imgError(this);&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;deskripsi&quot;&gt;Deskripsi&lt;/h1&gt;
+
+&lt;p&gt;Vlog kali ini saya mendemonstrasikan cara manual dalam melakukan patch terhadap dwm yang saya bangun.
+Sekaligus saya juga menambahkan modifikasi layout symbol untuk master apabila lebih dari 1.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+💰 Berikan support kepada channel ini, di sini:
+&lt;a href=&quot;https://saweria.co/bandithijo&quot; target=&quot;_blank&quot;&gt;https://saweria.co/bandithijo&lt;/a&gt;&lt;/p&gt;</content><author><name>BanditHijo</name></author><category term="vlog" /><category term="Tips" /><summary type="html"></summary></entry></feed>

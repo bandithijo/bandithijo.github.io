@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Here's where I started writing some notes that someday I will call it, a book">
+<meta name="keywords" content="tools, tips">
+<meta name="author" content="Rizqi Nur Assyaufi">
+<meta name="theme-color" content="#008352">
+<meta name="msapplication-navbutton-color" content="#008352">
+<meta name="apple-mobile-web-app-status-bar-style" content="#008352">
+<title>Memasang WhatsApp Desktop pada GNU/Linux | BanditHijo (R)-Chive</title>
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/github-markdown-bandit.css">
+<link rel="icon" href="/assets/img/favicon/favicon.png" type="image/png">
+<link rel="manifest" href="/manifest.json">
+
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Memasang WhatsApp Desktop pada GNU/Linux" />
+<meta name="author" content="BanditHijo" />
+<meta property="og:locale" content="id" />
+<meta name="description" content="Here’s where I started writing some notes that someday I will call it, a book" />
+<meta property="og:description" content="Here’s where I started writing some notes that someday I will call it, a book" />
+<link rel="canonical" href="https://bandithijo.github.io/blog/memasang-whatsapp-desktop-linux" />
+<meta property="og:url" content="https://bandithijo.github.io/blog/memasang-whatsapp-desktop-linux" />
+<meta property="og:site_name" content="BanditHijo (R)-Chive" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-04-25T21:11:00+08:00" />
+<script type="application/ld+json">
+{"description":"Here’s where I started writing some notes that someday I will call it, a book","url":"https://bandithijo.github.io/blog/memasang-whatsapp-desktop-linux","@type":"BlogPosting","headline":"Memasang WhatsApp Desktop pada GNU/Linux","dateModified":"2021-07-12T16:52:32+08:00","datePublished":"2018-04-25T21:11:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://bandithijo.github.io/blog/memasang-whatsapp-desktop-linux"},"author":{"@type":"Person","name":"BanditHijo"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <meta property="og:country-name"   content="Indonesia"/>
+<meta property="og:image"          content="/assets/img/banner/bndt_banner.png"/>
+<meta property="og:image:width"    content="460"/>
+<meta property="og:image:height"   content="230"/>
+
+<meta property="twitter:card"      content="summary_large_image"/>
+<meta property="twitter:title"     content="Memasang WhatsApp Desktop pada GNU/Linux"/>
+<meta property="twitter:author"    content="BanditHijo"/>
+<meta property="twitter:image:src" content="/assets/img/banner/bndt_banner.png"/>
+
+  <!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-116004889-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+  <meta name="google-site-verification" content="qXp9Kgb5hIHVp5T9vFOa_motqUmNuF5STbkJKF70wLc">
+
+</head>
+
+
+<body>
+
+<header id="header" class="noselect">
+  <div class="container container-strip">
+    <div class="container-inner container-inner-strip">
+    <div class="logo">
+      <img src="/assets/img/logo/logo_bandithijo.png">
+    </div>
+
+    <div class="title">
+      <h1><span class="nobr">BanditHijo (R)-Chive</span></h1>
+    </div>
+    <div class="description">
+      <h2>Here's where I started writing some notes that someday <span class="nobr">I will call it, a book</span></h2>
+      <br>
+      <span class="emblem-f">TECHNICAL<span class="emblem-e">BLOG : JOURNAL</span></span>
+    </div>
+
+    <nav class="nav nav-strip">
+      <div class="toggle">
+        <div class="menu" onmouseover="this.style.cursor='pointer'" onclick="navBtn()">
+          <span class="menu-title">BANDITHIJO</span>
+          <img style="width:30px;" src="/assets/img/logo/logo_menu.svg" id="nav-btn">
+        </div><!-- menu -->
+      </div><!-- toggle -->
+      <ul id="menu-ul">
+        <li><a href="/">Home</a></li>
+        
+        
+        
+        <li><a href="/blog/" class="active">Blog</a></li>
+        
+        
+        
+        <li><a href="/note/" class="">Note</a></li>
+        
+        
+        
+        <li><a href="/vlog/" class="">Vlog</a></li>
+        
+        
+        
+        <li><a href="/book/" class="">Books</a></li>
+        
+        
+        
+        <li><a href="/about/" class="">About</a></li>
+        
+        
+        
+        <li><a href="https://bandithijo.github.io/v2" class="">v2 (beta)</a></li>
+        
+      </ul>
+    </nav>
+    </div><!-- container-inner -->
+  </div><!-- header container -->
+</header>
+
+
+<section id="main">
+  <div class="container">
+    <div class="container-edge-border">
+
+      
+
+      <article class="post-pre-title">
+        <div class="post-body">
+          
+            <h1 class="post-title"><a href="/blog/memasang-whatsapp-desktop-linux">Memasang WhatsApp Desktop pada GNU/Linux</a></h1>
+          
+          <label class="hideAside noselect" title="On/Off Sidebar" onclick="toggleShowHideSidebar()"><img style="width:20px;margin-top:5px;" src="/assets/img/logo/logo_menu.svg" alt=""></label>
+
+          
+            
+            
+            
+              <span class="post-details noselect">Ditulis: 2018/04/25</span> <span class="post-details noselect">Diperbaharui: 2021/07/12</span>
+            
+          
+
+          <div class="breadcrumbs noselect">
+
+<span style="color:#232323;">&#9654;</span>&nbsp;<a href="/">Home</a>
+
+  
+    / <a href="/blog/">Blog</a>
+  
+
+  
+    / Memasang whatsapp desktop linux
+  
+
+</div>
+
+          <div class="tags-in-post noselect">
+  
+  
+    <span class="tags"><a href="https://bandithijo.github.io/tags/#tips">Tips</a></span>
+  
+    <span class="tags"><a href="https://bandithijo.github.io/tags/#tools">Tools</a></span>
+  
+</div>
+
+        </div>
+      </article>
+
+      <article>
+        <div class="post-body-sidebar">
+          <aside class="sidebar noselect" id="sidebar-head">
+
+    <div class="sidebar-body">
+  <h1 style="font-size:1.5em;border-bottom:1px dashed #9E9E9E;">
+    <img src="/assets/img/logo/logo_toc.svg">Daftar Isi
+  </h1>
+  <div class="toc">
+    
+    <ul>
+  <li><a href="#latar-belakang">Latar Belakang</a></li>
+  <li><a href="#permasalahan">Permasalahan</a></li>
+  <li><a href="#solusi">Solusi</a></li>
+  <li><a href="#instalasi">Instalasi</a></li>
+  <li><a href="#referensi">Referensi</a></li>
+</ul>
+
+  </div>
+</div>
+
+
+</aside>
+
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-body">
+          <div class="doa-awal noselect">
+<p><img src="/assets/img/logo/logo_doa_awal.svg" alt="بسم الله الرحمن الرحيم" style="height:40px" align="right"></p>
+<div style="clear:both;"></div>
+</div>
+
+        </div>
+        <div class="markdown-body highlight">
+
+          <!-- The Modal -->
+<div class="modal">
+  <img class="modal-content">
+</div>
+
+
+          <p><!-- BANNER OF THE POST -->
+<p><img class="post-body-img" src="/assets/img/logo/logo_blank_banner.svg" data-echo="https://s20.postimg.cc/tbrdrb9t9/banner_post_07.png" onerror="imgError(this);" alt="banner" /></p>
+
+<h1 id="latar-belakang">Latar Belakang</h1>
+
+<p>Memegang <em>smartphone</em> adalah hal yang jarang sekali saya lakukan. Tangan saya setiap saat selalu berada di atas keyboard. Dampaknya, setiap pesan yang masuk melalui aplikasi <em>messenger</em> tidak segera dapat saya baca dan balas. Waktu-waktu dimana saya baru akan memegang <em>smartphone</em> adalah ketika urusan saya di atas keyboard telah selesai. Hahaha.</p>
+
+<p><strong>Smartphone-nya di mode <em>silent</em>, bang ?</strong></p>
+
+<p>Nah, justru ndak saya silent loh. Saya suarakan dan getar juga. Yaa mohon maklum saja yaa, kalo sudah asik, suka gak bisa teralihkan dengan yang lain.</p>
+
+<h1 id="permasalahan">Permasalahan</h1>
+
+<p>Mayoritas teman-teman yang mempunyai urusan dengan saya belum menggunakan platform <em>messenger</em> yang saya gunakan. Aplikasi yang <del>seperti</del> berjalan secara <em>native</em> pada distribusi sistem operasi GNU/Linux, yaitu <strong>Telegram</strong>. Kebanyakan masih menggunakan <strong>WhatsApp</strong> dan sebagian kecil menggunakan <strong>Line</strong>.</p>
+
+<p>Sebenarnya, WhatsApp menyediakan layanan <a href="https://web.whatsapp.com/" target="_blank">WhatsApp-Web</a> untuk pengguna Linux – sedangkan untuk Windows dan macOS, mereka memberikan aplikasi <em>native desktop</em>.</p>
+
+<p><img src="/assets/img/logo/logo_blank.svg" alt="gambar_1" data-echo="https://s20.postimg.cc/cd9zmy9lp/gambar_02.png" onerror="imgError(this);" class="myImg" /></p>
+
+<p>Namun, saya merasa kurang praktis karena sebagian besar saya beraktifitas menggunakan browser yang saya tidak ingin diganggu oleh hal-hal lain selain pekerjaan yang sedang saya kerjakan.</p>
+
+<h1 id="solusi">Solusi</h1>
+
+<p>Pada tahun 2016 - 2017 saya masih sempat menggunakan aplikasi <em>unofficial</em> yang bernama <strong>Whatsie</strong>. Namun, proyek ini sudah lama ditutup dan tidak diteruskan kembali. Aplikasi ini menyerupai aplikasi <em>native desktop</em> WhatsApp yang berajalan pada sistem operasi Windows dan macOS.</p>
+
+<p>Beberapa waktu lalu saya menemukan sebuah aplikasi yang mirip dengan Whatsie. Aplikasi yang berbasis Whatsapp Web dan dibangun menggunakan <a href="http://electron.atom.io/" target="_blank">Electron</a> juga. Aplikasi ini bernama <strong>Whatsapp-Desktop</strong> yang dikelola oleh <strong>Enrico204</strong> yang semula dikelola oleh <strong>bcalik</strong>.</p>
+
+<p><img src="/assets/img/logo/logo_blank.svg" alt="gambar_2" data-echo="https://s20.postimg.cc/ujj3orbst/gambar_01.png" onerror="imgError(this);" class="myImg" /></p>
+<p class="img-caption">Gambar 2 - User Interface dari Whatsapp-Desktop</p>
+
+<p>Whatsapp-Desktop ini juga mempunyai <em>tray icon</em> dan memiliki notifikasi yang terintegrasi dengan sistem.</p>
+
+<h1 id="instalasi">Instalasi</h1>
+
+<p>Proses instalasi menggunakan <em>package manager</em> pada distribusi sistem operasi GNU/Linux yang kalian miliki dapat merujuk pada <em>official page</em> dari halaman GitHub Whatssapp-Desktop, <a href="https://github.com/Enrico204/Whatsapp-Desktop" target="_blank">di sini</a>.</p>
+
+<p>Namun pada dokumentasi ini saya hanya akan menuliskan proses instalasi menggunakan <em>build from source</em>.</p>
+
+<p><br />
+Langkah awal, kita membutuhkan <em>package manager</em> bernama <a href="https://yarnpkg.com" target="_blank"><strong>Yarn</strong></a>. Yarn merupakan <em>package manager</em> untuk Java Script.</p>
+
+<pre><span class="cmd">$ </span><b>sudo pacman -S yarn</b><br /></pre>
+
+<p>Lakukan pengetesan apakah yarn sudah berhasil dipasang atau belum.</p>
+
+<pre><span class="cmd">$ </span><b>yarn --version</b><br /></pre>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.6.0
+</code></pre></div></div>
+
+<p><br />
+Pasang juga paket <strong>Git</strong> karena kita akan memerlukannya untuk melakukan <em>repository cloning</em>.</p>
+
+<pre><span class="cmd">$ </span><b>sudo pacman -S git</b><br /></pre>
+
+<p>Lakukan pengetesan apakah git sudah berhasil di pasang atau belum.</p>
+
+<pre><span class="cmd">$ </span><b>git --version</b><br /></pre>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git version 2.17.0
+</code></pre></div></div>
+
+<p><br /></p>
+
+<!-- PERHATIAN -->
+<div class="blockquote-red"><div class="blockquote-red-title"><img src="/assets/img/logo/logo_warning.svg" />Perhatian</div><div>
+    <p>Untuk distribusi sistem operasi yang lain dapat melakukan instalasi <code class="language-plaintext highlighter-rouge">yarn</code> dan <code class="language-plaintext highlighter-rouge">git</code> menggunakan <em>package manager</em> masing-masing.</p>
+  </div></div>
+
+<p><br />
+Setelah <code class="language-plaintext highlighter-rouge">yarn</code> dan <code class="language-plaintext highlighter-rouge">git</code> berhasil terpasang, langkah selanjutnya melakukan <em>cloning</em> terhadap repositori Whatsapp-Desktop.</p>
+
+<pre><span class="cmd">$ </span><b>mkdir -p ~/app/whatsapp</b><br /><span class="cmd">$ </span><b>cd ~/app/whatsapp</b><br /><span class="cmd">$ </span><b>git clone https://github.com/Enrico204/Whatsapp-Desktop.git</b><br /><span class="cmd">$ </span><b>cd Whatsapp-Desktop</b><br /></pre>
+
+<p>Kita dapat melihat isi dari direktori hasil <em>repository cloning</em>.</p>
+
+<pre><span class="cmd">$ </span><b>ls -al</b><br /></pre>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app
+assets
+debian
+.git
+.gitignore
+.prepare-release.sh
+ISSUE_TEMPLATE.md
+LICENSE
+clean.js
+flatpak.config.json
+it.enrico204.whatsapp-desktop.appdata.xml
+package.json
+packager.json
+readme.md
+whatsapp-desktop.spec
+whatsappdesktop.desktop
+yarn.lock
+</code></pre></div></div>
+
+<p><br />
+Sekarang, tinggal melakukan kompilasi saja menggunakan <strong>Yarn</strong>.</p>
+
+<p>Masih pada direktori yang sama – direktori hasil <em>repository cloning</em> Whatsapp-Desktop.</p>
+
+<pre><span class="cmd">$ </span><b>yarn install</b><br /></pre>
+
+<p>Tunggu proses ini hinggal selesai.</p>
+
+<p>Selanjutnya,</p>
+
+<pre><span class="cmd">$ </span><b>yarn run build:linux</b><br /></pre>
+
+<p>Pada tahap ini, apabila telah selesai maka, akan terdapat sebuah direktori baru bernama <code class="language-plaintext highlighter-rouge">dist</code>.</p>
+
+<p>Untuk menjalankan Whatsapp-Desktop, kita cukup menjalankan file bernama <code class="language-plaintext highlighter-rouge">WhatsApp</code> yang terdapat di dalam direktori <code class="language-plaintext highlighter-rouge">dist/WhatsApp-linux-x64</code>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dist
+└── WhatsApp-linux-x64
+    └── WhatsApp
+</code></pre></div></div>
+
+<p>Sekarang, tinggal kita buatkan <em>application launcher</em> nya saja.</p>
+
+<pre><span class="cmd">$ </span><b>touch ~/.local/share/applications/whatsapp-desktop.desktop</b><br /></pre>
+
+<p>Buka file <code class="language-plaintext highlighter-rouge">whatsapp-desktop.desktop</code> yang baru saja kita buat menggunakan <em>text editor</em> favorit kalian dan copy paste kode di bawah.</p>
+
+<div class="highlight-caption"><span class="label">FILE</span><code>$HOME/.local/share/applications/whatsapp-desktop.desktop</code></div>
+<pre class="caption">#!/usr/bin/env xdg-open<br />[Desktop Entry]<br />Name=Whatsapp-Desktop<br />Comment=A simple &amp; beautiful desktop client for WhatsApp Web.<br />Exec=<mark>/home/bandithijo/app/whatsapp/Whatsapp-Desktop/dist/WhatsApp-linux-x64/WhatsApp</mark><br />Icon=whatsapp<br />Terminal=false<br />Type=Application<br />StartupNotify=true<br />StartupWMClass=whatsapp<br />Keywords=WhatsApp;Whats;<br />Categories=Network;InstantMessaging;<br />X-GNOME-UsesNotifications=true<br /></pre>
+
+<p>Perhatikan pada bagian <code class="language-plaintext highlighter-rouge">Exec=</code>, berisi lokasi dimana file <code class="language-plaintext highlighter-rouge">WhatsApp</code> tersimpan. Pada kasus saya, saya menyimpan direktori <em>cloning</em> dari Whatsapp-Desktop berada pada lokasi <code class="language-plaintext highlighter-rouge">/home/bandithijo/app/whatsapp</code>, kamu harus menyesuaikan lokasi ini dengan lokasi dimana kamu menyimpan hasil <em>clone</em> Whatsapp-Desktop dari GitHub.</p>
+
+<h1 id="referensi">Referensi</h1>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/Enrico204/Whatsapp-Desktop/blob/master/readme.md" target="_blank">github.com/Enrico204/Whatsapp-Desktop/blob/master/readme.md</a>
+<br />Diakses tanggal: 2018/04/25</p>
+  </li>
+  <li>
+    <p><a href="https://yarnpkg.com/en/docs" target="_blank">yarnpkg.com/en/docs</a>
+<br />Diakses tanggal: 2018/04/25</p>
+  </li>
+</ol>
+</p>
+
+          <!-- wip -->
+          
+            <br>
+          
+
+          <!-- License -->
+          
+            <div style="text-align:center; margin:0 0 10px 0;"></div>
+            
+              <div class="noselect">
+<h1 style="font-size:2em;">Lisensi</h1>
+<div class="ccbysa-img noselect"><img class="ccbysa-img-img" style="margin-top: 5px;" src="/assets/img/logo/cc-by-nc-sa.png" alt="logo_cc-by-nc-sa"/></div><!-- ccbysa -->
+<div class="ccbysa-text noselect">
+Tulisan ini dilisensikan dengan :<br>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.id" target="_blank">Atribusi-NonKomersial-BerbagiSerupa 4.0 Internasional (CC BY-NC-SA 4.0)</a>
+</div><!-- ccbysa-text -->
+</div>
+
+            
+          
+
+          <div style="clear:both;"></div>
+
+          <!-- Penulis -->
+          
+            <div style="text-align:center; margin:0 0 10px 0;"></div>
+
+            
+
+            
+              <div class="noselect">
+  <h1 style="font-size:2em;">Penulis</h1>
+  
+  
+    
+      <div class="penulis-img">
+        <img style="margin:0 auto;border-radius:50%;" src="https://github.com/bandithijo.png?size=200" alt="bandithijo" onerror="imgError(this);">
+      </div><!-- penulis-img -->
+
+      <div class="penulis-text">
+        <p><p><b>BanditHijo</b> adalah nama pena saya – meminjam istilah keren dari para penulis. Teman-teman menyebut saya sebagai GNU/Linux Enthusiast. Saya memang gemar mengutak-atik sistem operasi ini. Bukan karena hobi tapi karena saya perlu untuk menggunakannya. Hehe.</p>
+</p>
+        <p style="text-align:right;">- <b>Rizqi Nur Assyaufi</b></p>
+      </div><!-- penulis-text -->
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</div>
+
+            
+          
+
+          <div style="clear:both;"></div>
+
+          <!-- Begin Mailchimp Signup Form -->
+<link href="/assets/css/mailchimp-classic-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+  #mc_embed_signup form {
+    padding: 10px 0 !important;
+  }
+
+  #mc_embed_signup .button {
+    background-color: #008352;
+  }
+
+  #mc_embed_signup h2 {
+    font-size: 32px !important;
+    padding-bottom: .3em;
+  }
+
+  .mc-field-group {
+    width: 100% !important;
+    padding-bottom: 2% !important;
+  }
+
+  .mce-label {
+    margin-bottom: 3% !important;
+    font-size: 14px;
+  }
+
+  .mc-form {
+    float: left;
+    width: 50% !important;
+  }
+
+  .mc-text {
+    float: right;
+    font-size: 14px;
+    width: 50%;
+    padding: 5px 10px;
+    text-align: justify;
+  }
+
+  @media (max-width: 640px) {
+    .mc-field-group {
+      width: 100% !important;
+      padding-bottom: 4% !important;
+    }
+
+    .mc-form {
+      float: none;
+      width: 100% !important;
+    }
+
+    .mc-text {
+      float: none;
+      font-size: 14px;
+      width: 100%;
+      padding: 0;
+    }
+
+  {
+</style>
+<div id="mc_embed_signup">
+  <form action="https://github.us4.list-manage.com/subscribe/post?u=68e5540d98defef56764f64df&amp;id=39ab92c3ed" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+      <h2>Berlangganan via Email</h2>
+      <div class="mc-text">Jangan sampai ketinggalan kabar dan info terbaru mengenai BanditHijo (R)-Chive.<br>Ayo bergabung!</div>
+      <div class="mc-form">
+        <div class="mc-field-group">
+          <label class="mce-label"></label>
+          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Masukkan email di sini...">
+        </div>
+        <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_68e5540d98defef56764f64df_39ab92c3ed" tabindex="-1" value=""></div>
+        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!--End mc_embed_signup-->
+
+
+        </div><!-- markdown-body -->
+      </article>
+
+      <article>
+        <div class="post-body-sidebar">
+          <aside class="sidebar noselect" id="sidebar-tail">
+
+    <div class="sidebar-body">
+  <h1 style="font-size:1.5em;border-bottom:1px dashed #9E9E9E;">
+    <img src="/assets/img/logo/logo_terbaru.svg">Tulisan Terbaru
+  </h1>
+  <div class="toc">
+  <ul>
+  
+  
+    
+      <li><a href="/blog/mudah-downgrade-paket-di-artix-linux">Mudah Downgrade Paket di Artix Linux</a></li>
+    
+  
+    
+      <li><a href="/blog/sharing-direktori-antara-host-dan-guest-pada-virt-manager">Sharing Direktori Antara Host Linux dan Guest Windows pada Virt-Manager/KVM/Qemu</a></li>
+    
+  
+    
+      <li><a href="/blog/authorization-dengan-pundit-untuk-nested-controller-dan-user-turunan-pada-rails">Authorization dengan Pundit untuk Nested Controller dan User Turunan pada Rails</a></li>
+    
+  
+    
+      <li><a href="/blog/rails-ujs-dan-ajax-serta-button-animation-loading">Rails UJS dan AJAX, serta Button Animation Loading</a></li>
+    
+  
+    
+      <li><a href="/blog/rails-seeding-dengan-spesifik-single-atau-multiple-seed-file">Rails Seeding dengan Spesifik Single atau Multiple Seed File (Modularisasi Seeds)</a></li>
+    
+  
+    
+      <li><a href="/blog/notifikasi-user-signup-ke-email-admin-degan-actionmailer-rails">Notifikasi User Sign Up ke Email Admin dengan ActionMailer Rails</a></li>
+    
+  
+    
+      <li><a href="/blog/devise-registration-tanpa-password-set-password-after-confirmation">Devise Registration Tanpa Password, Set Password Setelah Confirmation</a></li>
+    
+  
+    
+      <li><a href="/blog/ruby-on-rails-actionmailer-local-mailcatcher">Konfigurasi Ruby on Rails ActionMailer pada Local Environment dengan MailCatcher</a></li>
+    
+  
+    
+      <li><a href="/blog/membuat-recovery-partition-artix-iso-dengan-grub2">Membuat Recovery Partition Artix Linux ISO dengan GRUB2</a></li>
+    
+  
+    
+      <li><a href="/blog/akses-ssh-ke-virtualbox-via-nat">Mengakses VirtualBox Instance dengan SSH via NAT</a></li>
+    
+  
+  </ul>
+  </div>
+  <div style="margin:10px 0 10px 0;border-bottom:1px dashed #9E9E9E;"></div>
+  <p style="text-align:left;"><a style="border-bottom:0;" href="/blog/"><b>Selengkapnya >></b></a></p>
+</div>
+
+    <div class="sidebar-body">
+  <h1 style="font-size:1.5em;border-bottom:1px dashed #9E9E9E;">
+    <img src="/assets/img/logo/logo_tags.svg"><a style="color:#000;border-bottom:none;" href="/tags/">Tags</a>
+  </h1>
+  <div class="toc">
+    
+    
+      
+        
+        <span class="tags"><a href="/tags/#android">Android</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#arch-linux">Arch Linux</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#artix-linux">Artix Linux</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#bootstrap">Bootstrap</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#database">Database</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#django">Django</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#docker">Docker</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#dwm">Dwm</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#fedora">Fedora</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#freebsd">FreeBSD</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#heroku">Heroku</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#i3wm">I3WM</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#java">Java</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#javascript">Javascript</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#jekyll">Jekyll</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#kvm">KVM</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#network">Network</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#osx">OSX</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#python">Python</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#qemu">Qemu</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#rspec">RSpec</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#rails">Rails</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#ruby">Ruby</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#script">Script</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#security">Security</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#terminal">Terminal</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#thinkpad">ThinkPad</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#tips">Tips</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#tools">Tools</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#ulasan">Ulasan</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#vim">Vim</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#virt-manager">Virt-Manager</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#wine">Wine</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#xfce">XFCE</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#jquery">jQuery</a></span>
+      
+    
+    
+  </div><!-- toc -->
+</div><!-- sidebar-body -->
+
+    <div class="sidebar-body">
+  <h1 style="font-size:1.5em;border-bottom:1px dashed #9E9E9E;margin-bottom:5px;">
+    <img src="/assets/img/logo/logo_dotfriends.svg">dotFriends
+  </h1>
+  <!-- untuk random dotfriends list sebanyak 8 -->
+  
+  
+    <p>+&nbsp;<a href="https://tsarafatma.com/" target="_blank">Tsara Fatma</a></p>
+  
+    <p>+&nbsp;<a href="https://elianiva.me/" target="_blank">Dicha Zelianivan Arkana</a></p>
+  
+    <p>+&nbsp;<a href="https://sucipto.id/" target="_blank">Sucipto</a></p>
+  
+    <p>+&nbsp;<a href="https://fathurhoho.id/" target="_blank">Fathurhoho</a></p>
+  
+    <p>+&nbsp;<a href="https://raniaamina.id/" target="_blank">Rania Amina</a></p>
+  
+  <p style="font-size:10px;color:#00603C;margin-top:12px;text-align:left;">*5 daftar blog di atas digenerate secara random</p>
+  <div style="margin:10px 0 10px 0;border-bottom:1px dashed #9E9E9E;"></div>
+  <p style="text-align:left;"><a style="border-bottom:0;" href="/dotfriends/"><b>Selengkapnya >></b></a></p>
+</div>
+
+    <div class="sidebar-body-rss"">
+  <h1 style="border-bottom:1px dashed #ACA573;margin-bottom:5px;">
+    <img src="/assets/img/logo/logo_bantuan.svg">Bantuan
+  </h1>
+   <p>Kebingungan dengan simbol-simbol yang terdapat pada halaman blog ini?</p>
+   <p>Kamu dapat mempelajari bagaimana cara membaca setiap komponen yang ada di dalam blog, <a href="/bantuan/"><b>di sini</b></a>.</p>
+</div>
+
+    <div class="sidebar-body-rss">
+  <h1 style="font-size:1.5em;border-bottom:1px dashed #ACA573;margin-bottom:5px;">
+    <img src="/assets/img/logo/logo_rss.svg">Berlangganan RSS
+  </h1>
+  <p>Untuk dapat berlangganan catatan/post terbaru, kamu dapat mengklik tombol RSS yang terdapat di <a href="#footer"><b>footer</b></a>.</p>
+  <p>Blog ini memiliki dua buah RSS feed, Blog dan Vlog.</p>
+  <p>Apabila kamu mengklik tombol RSS yang ada pada halaman yang berkategori Blog, maka RSS feed url yang keluar adalah untuk kategori Blog, begitu pula sebaliknya untuk halaman Vlog.</p>
+  <div style="margin:15px 0 10px 0;border-bottom:1px dashed #ACA573;"></div>
+  <p>Belum tahu tentang RSS? Yuk, <a href="https://bandithijo.github.io/blog/newsboat-rss-feed-reader"><b>ke sini</b></a></p>
+</div>
+
+
+</aside>
+
+        </div>
+      </article>
+
+    </div><!-- container-edge-border -->
+  </div><!-- main container -->
+</section><!-- main -->
+
+
+<footer id="footer" class="noselect">
+  <div class="container">
+    <div class="container-inner">
+      <div class="footer-line">
+        <p style="font-size:20px;"><a href="/"><strong>BanditHijo (R)-Chive</strong></a> &copy; 2012 - 2021</p>
+        <p style="font-size:12px;margin-top:-35px;color:#404040;">
+          Blog ini dibuat di atas distribusi sistem operasi <a href="https://archlinux.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Arch Linux</a>.<br>
+          Source code dan artikel-artikel ditulis menggunakan <span class="nobr"><a href="http://vim.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Vim</a> text editor.</span><br>
+          Semua elemen gambar dikerjakan menggunakan <span class="nobr"><a href="https://inkscape.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Inkscape</a> dan <a href="https://gimp.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">GIMP</a>.</span><br>
+          Menggunakan <a href="https://jekyllrb.com" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Jekyll</a> sebagai Static Site Generator.<br>
+          Dihosting menggunakan <a href="https://github.com/bandithijo/bandithijo.github.io" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">GitHub</a>.<br>
+          Terakhir update: <b>12/07/2021</b>
+        </p>
+        <p class="footer-menu">
+          <br>
+          <a href="/contact/"><strong>Contact</strong></a> |&nbsp;
+          <a href="https://twitter.com/bandithijo" target="_blank" rel="noreferrer"><strong>Twitter</strong></a> |&nbsp;
+          <a rel="me" href="https://www.youtube.com/c/BanditHijo" target="_blank" rel="noreferrer"><strong>YouTube</strong></a> |&nbsp;
+          <a rel="me" href="https://github.com/bandithijo" target="_blank" rel="noreferrer"><strong>GitHub</strong></a> |&nbsp;
+          
+            <a href="/feed/blog.xml" target="_blank"><strong>RSS</strong></a>
+          
+        </p>
+
+        <div class="notif-donasi">
+          <div class="notif-donasi-col-1">
+            <a href="https://saweria.co/bandithijo" target="_blank" rel="noopener">
+              <p>Apabila ingin memberikan <b>apresiasi</b> atas tulisan-tulisan di blog ini, dapat melalui <span class="nobr"><b>Saweria</b></span> atas nama <span class="nobr"><b>Rizqi Nur Assyaufi</b></span>.</p>
+              <p style="margin-top:-8px;">Berapapun besarnya dukungan dari kamu, akan sangat bermanfaat untuk proses produksi tulisan di blog ini.</p>
+              <p style="margin-top:-8px;">Terima kasih, mas Bro!</p>
+            </a>
+          </div>
+          <div class="notif-donasi-col-2">
+            <a href="https://saweria.co/bandithijo" target="_blank" rel="noopener">
+              <img class="notif-donasi-img" src="/assets/img/logo/logo_qr_saweria.png">
+            </a>
+          </div>
+        </div><!-- notif-donasi -->
+
+        <div class="tech-i-used-desktop">
+          <a href="https://jekyllrb.com" target="_blank" rel="noopener">
+            <img class="footer-img-jekyll" src="/assets/img/logo/logo_jekyll.png">
+          </a>
+          <a href="https://github.com/bandithijo" target="_blank" rel="noopener">
+            <img class="footer-img-github" src="/assets/img/logo/logo_github.png">
+          </a>
+          <a href="https://github.com/features/actions" target="_blank" rel="noopener">
+            <img class="footer-img-githubactions" src="/assets/img/logo/logo_github_actions.png">
+          </a>
+        </div><!-- tech-i-used-desktop -->
+
+        <div class="tech-i-used-mobile">
+          <a href="https://github.com/features/actions" target="_blank" rel="noopener" rel="noreferrer">
+            <img class="footer-img-1" src="/assets/img/logo/logo_github_actions_mobile.png">
+          </a>
+          <a href="https://github.com/bandithijo" target="_blank" rel="noopener" rel="noreferrer">
+            <img class="footer-img-2" src="/assets/img/logo/logo_github_mobile.png">
+          </a>
+          <a href="https://jekyllrb.com/" target="_blank" rel="noopener" rel="noreferrer">
+            <img class="footer-img-3" src="/assets/img/logo/logo_jekyll_mobile.png">
+          </a>
+        </div><!-- tech-i-used-mobile -->
+      </div><!-- footer-line -->
+    </div><!-- container-innner -->
+  </div><!-- footer container -->
+</footer>
+
+<!-- site.git.build_version -->
+<div class="tech-i-used-desktop" style="text-align:center;font-size:9px;color:#8F8879;margin: -5px 0 10px 0;">
+  c2deb4abbcb1b30e9079c35732dca589f2d7b6e8
+</div>
+<!-- END site.git.build_version -->
+
+<script type="text/javascript" src="/assets/js/nav.js"></script>
+<script type="text/javascript" src="/assets/js/lazyload.js"></script>
+<script type="text/javascript" src="/assets/js/headings-permalink.js"></script>
+<script type="text/javascript" src="/assets/js/newsline-sticky.js"></script>
+
+<script type="text/javascript" src="/assets/js/aside.js"></script>
+
+
+<script type="text/javascript" src="/assets/js/enlarge-image-modal.js"></script>
+
+
+
+
+</body>
+</html>

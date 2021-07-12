@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Here's where I started writing some notes that someday I will call it, a book">
+<meta name="keywords" content="tips">
+<meta name="author" content="Rizqi Nur Assyaufi">
+<meta name="theme-color" content="#008352">
+<meta name="msapplication-navbutton-color" content="#008352">
+<meta name="apple-mobile-web-app-status-bar-style" content="#008352">
+<title>Membuat Table dengan Rounded Corner pada Bootstrap 4 | BanditHijo (R)-Chive</title>
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/github-markdown-bandit.css">
+<link rel="icon" href="/assets/img/favicon/favicon.png" type="image/png">
+<link rel="manifest" href="/manifest.json">
+
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Membuat Table dengan Rounded Corner pada Bootstrap 4" />
+<meta name="author" content="BanditHijo" />
+<meta property="og:locale" content="id" />
+<meta name="description" content="Hal yang masih menjadi misteri buat saya saat menggunakan Bootstrap adalah, hampir semua elemen seperti button, input field, card, alerts, dan lain-lain, sudah menggunakan rounded corner. Tapi kenapa tabel masih belum? Catatan kali ini adalah cara yang saya lakukan untuk membuat Bootstrap tabel memiliki rounded corner." />
+<meta property="og:description" content="Hal yang masih menjadi misteri buat saya saat menggunakan Bootstrap adalah, hampir semua elemen seperti button, input field, card, alerts, dan lain-lain, sudah menggunakan rounded corner. Tapi kenapa tabel masih belum? Catatan kali ini adalah cara yang saya lakukan untuk membuat Bootstrap tabel memiliki rounded corner." />
+<link rel="canonical" href="https://bandithijo.github.io/blog/membuat-table-rounded-corner-bootstrap-4" />
+<meta property="og:url" content="https://bandithijo.github.io/blog/membuat-table-rounded-corner-bootstrap-4" />
+<meta property="og:site_name" content="BanditHijo (R)-Chive" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-11-29T10:38:00+08:00" />
+<script type="application/ld+json">
+{"description":"Hal yang masih menjadi misteri buat saya saat menggunakan Bootstrap adalah, hampir semua elemen seperti button, input field, card, alerts, dan lain-lain, sudah menggunakan rounded corner. Tapi kenapa tabel masih belum? Catatan kali ini adalah cara yang saya lakukan untuk membuat Bootstrap tabel memiliki rounded corner.","url":"https://bandithijo.github.io/blog/membuat-table-rounded-corner-bootstrap-4","@type":"BlogPosting","headline":"Membuat Table dengan Rounded Corner pada Bootstrap 4","dateModified":"2021-07-12T16:52:32+08:00","datePublished":"2020-11-29T10:38:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://bandithijo.github.io/blog/membuat-table-rounded-corner-bootstrap-4"},"author":{"@type":"Person","name":"BanditHijo"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <meta property="og:country-name"   content="Indonesia"/>
+<meta property="og:image"          content="/assets/img/banner/bndt_banner.png"/>
+<meta property="og:image:width"    content="460"/>
+<meta property="og:image:height"   content="230"/>
+
+<meta property="twitter:card"      content="summary_large_image"/>
+<meta property="twitter:title"     content="Membuat Table dengan Rounded Corner pada Bootstrap 4"/>
+<meta property="twitter:author"    content="BanditHijo"/>
+<meta property="twitter:image:src" content="/assets/img/banner/bndt_banner.png"/>
+
+  <!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-116004889-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+  <meta name="google-site-verification" content="qXp9Kgb5hIHVp5T9vFOa_motqUmNuF5STbkJKF70wLc">
+
+</head>
+
+
+<body>
+
+<header id="header" class="noselect">
+  <div class="container container-strip">
+    <div class="container-inner container-inner-strip">
+    <div class="logo">
+      <img src="/assets/img/logo/logo_bandithijo.png">
+    </div>
+
+    <div class="title">
+      <h1><span class="nobr">BanditHijo (R)-Chive</span></h1>
+    </div>
+    <div class="description">
+      <h2>Here's where I started writing some notes that someday <span class="nobr">I will call it, a book</span></h2>
+      <br>
+      <span class="emblem-f">TECHNICAL<span class="emblem-e">BLOG : JOURNAL</span></span>
+    </div>
+
+    <nav class="nav nav-strip">
+      <div class="toggle">
+        <div class="menu" onmouseover="this.style.cursor='pointer'" onclick="navBtn()">
+          <span class="menu-title">BANDITHIJO</span>
+          <img style="width:30px;" src="/assets/img/logo/logo_menu.svg" id="nav-btn">
+        </div><!-- menu -->
+      </div><!-- toggle -->
+      <ul id="menu-ul">
+        <li><a href="/">Home</a></li>
+        
+        
+        
+        <li><a href="/blog/" class="active">Blog</a></li>
+        
+        
+        
+        <li><a href="/note/" class="">Note</a></li>
+        
+        
+        
+        <li><a href="/vlog/" class="">Vlog</a></li>
+        
+        
+        
+        <li><a href="/book/" class="">Books</a></li>
+        
+        
+        
+        <li><a href="/about/" class="">About</a></li>
+        
+        
+        
+        <li><a href="https://bandithijo.github.io/v2" class="">v2 (beta)</a></li>
+        
+      </ul>
+    </nav>
+    </div><!-- container-inner -->
+  </div><!-- header container -->
+</header>
+
+
+<section id="main">
+  <div class="container">
+    <div class="container-edge-border">
+
+      
+
+      <article class="post-pre-title">
+        <div class="post-body">
+          
+            <h1 class="post-title"><a href="/blog/membuat-table-rounded-corner-bootstrap-4">Membuat Table dengan Rounded Corner pada Bootstrap 4</a></h1>
+          
+          <label class="hideAside noselect" title="On/Off Sidebar" onclick="toggleShowHideSidebar()"><img style="width:20px;margin-top:5px;" src="/assets/img/logo/logo_menu.svg" alt=""></label>
+
+          
+            
+            
+            
+              <span class="post-details noselect">Ditulis: 2020/11/29</span> <span class="post-details noselect">Diperbaharui: 2021/07/12</span>
+            
+          
+
+          <div class="breadcrumbs noselect">
+
+<span style="color:#232323;">&#9654;</span>&nbsp;<a href="/">Home</a>
+
+  
+    / <a href="/blog/">Blog</a>
+  
+
+  
+    / Membuat table rounded corner bootstrap 4
+  
+
+</div>
+
+          <div class="tags-in-post noselect">
+  
+  
+    <span class="tags"><a href="https://bandithijo.github.io/tags/#tips">Tips</a></span>
+  
+</div>
+
+        </div>
+      </article>
+
+      <article>
+        <div class="post-body-sidebar">
+          <aside class="sidebar noselect" id="sidebar-head">
+
+    <div class="sidebar-body">
+  <h1 style="font-size:1.5em;border-bottom:1px dashed #9E9E9E;">
+    <img src="/assets/img/logo/logo_toc.svg">Daftar Isi
+  </h1>
+  <div class="toc">
+    
+    <ul>
+  <li><a href="#latar-belakang">Latar Belakang</a></li>
+  <li><a href="#masalah">Masalah</a></li>
+  <li><a href="#pemecahan-masalah">Pemecahan Masalah</a></li>
+  <li><a href="#pesan-penulis">Pesan Penulis</a></li>
+  <li><a href="#referensi">Referensi</a></li>
+</ul>
+
+  </div>
+</div>
+
+
+</aside>
+
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-body">
+          <div class="doa-awal noselect">
+<p><img src="/assets/img/logo/logo_doa_awal.svg" alt="بسم الله الرحمن الرحيم" style="height:40px" align="right"></p>
+<div style="clear:both;"></div>
+</div>
+
+        </div>
+        <div class="markdown-body highlight">
+
+          <!-- The Modal -->
+<div class="modal">
+  <img class="modal-content">
+</div>
+
+
+          <p><h1 id="latar-belakang">Latar Belakang</h1>
+
+<p>Kalau teman-teman menggunakan Bootstrap sebagai CSS Framework –terkhusus Bootstrap 4– pasti akan mendapatkan table dengan bagian corner yang bersiku.</p>
+
+<p><img src="/assets/img/logo/logo_blank.svg" alt="gambar_1" data-echo="https://i.postimg.cc/c1TKPGPS/gambar-01.png" onerror="imgError(this);" class="myImg" /></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered table-hover my-3"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Ticker<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Price<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>...<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>...<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>...<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</code></pre></div></div>
+
+<h1 id="masalah">Masalah</h1>
+
+<p>Saya ingin memodifikasi agar tampilan dari masing-masing corner dari tabel memiliki tampilan yang rounded.</p>
+
+<p>Namun, Bootstrap 4 tidak menyediakan class agar user dapat membuat table dengan corner yang rounded.</p>
+
+<h1 id="pemecahan-masalah">Pemecahan Masalah</h1>
+
+<p>Kita akan mengoverride class table bawaan Bootstrap.</p>
+
+<p><strong>SYARAT</strong></p>
+
+<p>Tabel harus memiliki struktur seperti di bawah ini.</p>
+
+<pre class="whiteboard">&lt;table&gt;<br /><br />  &lt;thead&gt;<br />    &lt;tr&gt;<br />      &lt;th&gt;&lt;/th&gt;<br />      &lt;th&gt;&lt;/th&gt;<br />    &lt;/tr&gt;<br />  &lt;/thead&gt;<br /><br />  &lt;tbody&gt;<br />    &lt;tr&gt;<br />      &lt;td&gt;&lt;/td&gt;<br />      &lt;td&gt;&lt;/td&gt;<br />    &lt;/tr&gt;<br />  &lt;/tbody&gt;<br /><br />&lt;/table&gt;<br /></pre>
+
+<p>Oke, langsung ke penerapan.</p>
+
+<p>Pada table, gunakan class <code class="language-plaintext highlighter-rouge">table-borderless</code> agar border bawaan bootstrap tidak mengoverride tabel border yang akan kita custom.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="code"><pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-borderless"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Ticker<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Price<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Action<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>...<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>...<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>...<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>...<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Selanjutnya, tambahkan custom CSS untuk mengoverride class table dari Bootstrap.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+</pre></td><td class="code"><pre><span class="nt">table</span> <span class="p">{</span>
+  <span class="nl">border-collapse</span><span class="p">:</span> <span class="nb">separate</span> <span class="cp">!important</span><span class="p">;</span>
+  <span class="nl">border-spacing</span><span class="p">:</span> <span class="m">0</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">table</span> <span class="nt">tr</span> <span class="nt">th</span><span class="o">,</span>
+<span class="nt">table</span> <span class="nt">tr</span> <span class="nt">td</span> <span class="p">{</span>
+  <span class="nl">border-right</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="m">#dee2e6</span> <span class="cp">!important</span><span class="p">;</span>
+  <span class="nl">border-bottom</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="m">#dee2e6</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">table</span> <span class="nt">tr</span> <span class="nt">th</span><span class="nd">:first-child</span><span class="o">,</span>
+<span class="nt">table</span> <span class="nt">tr</span> <span class="nt">td</span><span class="nd">:first-child</span> <span class="p">{</span>
+  <span class="nl">border-left</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="m">#dee2e6</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">table</span> <span class="nt">tr</span> <span class="nt">th</span> <span class="p">{</span>
+  <span class="nl">border-top</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="m">#dee2e6</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* top-left border-radius */</span>
+<span class="nt">table</span> <span class="nt">tr</span><span class="nd">:first-child</span> <span class="nt">th</span><span class="nd">:first-child</span> <span class="p">{</span>
+  <span class="nl">border-top-left-radius</span><span class="p">:</span> <span class="m">0.25rem</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* top-right border-radius */</span>
+<span class="nt">table</span> <span class="nt">tr</span><span class="nd">:first-child</span> <span class="nt">th</span><span class="nd">:last-child</span> <span class="p">{</span>
+  <span class="nl">border-top-right-radius</span><span class="p">:</span> <span class="m">0.25rem</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* bottom-left border-radius */</span>
+<span class="nt">table</span> <span class="nt">tr</span><span class="nd">:last-child</span> <span class="nt">td</span><span class="nd">:first-child</span> <span class="p">{</span>
+  <span class="nl">border-bottom-left-radius</span><span class="p">:</span> <span class="m">0.25rem</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* bottom-right border-radius */</span>
+<span class="nt">table</span> <span class="nt">tr</span><span class="nd">:last-child</span> <span class="nt">td</span><span class="nd">:last-child</span> <span class="p">{</span>
+  <span class="nl">border-bottom-right-radius</span><span class="p">:</span> <span class="m">0.25rem</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Besar dari radius <code class="language-plaintext highlighter-rouge">0.25rem</code> saya samakan dengan besar radius dari input box.</p>
+
+<p>Warna border <code class="language-plaintext highlighter-rouge">#dee2e6</code> juga saya samakan dengan warna border dari input box.</p>
+
+<p>Tujuannya agar terlihat menyatu dan seragam –tidak terlihat seperti custom abal-abal.</p>
+
+<p>Dan beginilah hasilnya setelah modifikasi di atas kita lakukan.</p>
+
+<p><img src="/assets/img/logo/logo_blank.svg" alt="gambar_2" data-echo="https://i.postimg.cc/NFWvZMcD/gambar-02.png" onerror="imgError(this);" class="myImg" /></p>
+
+<h1 id="pesan-penulis">Pesan Penulis</h1>
+
+<p>Sepertinya, segini dulu yang dapat saya tuliskan.</p>
+
+<p>Sebenarnya, implementasi ini tidak spesifik untuk Bootstrap 4 saja, namun sangat general dan dapat digunakan dimana saja.</p>
+
+<p>Bahkan saya pun menggunakannya di blog ini yang notabennya menggunakan CSS buatan sendiri.</p>
+
+<p>Mudah-mudahan dapat bermanfaat.</p>
+
+<p>Terima kasih.</p>
+
+<p>(^_^)</p>
+
+<h1 id="referensi">Referensi</h1>
+
+<ol>
+  <li><a href="https://codepen.io/mlms13/pen/CGgLF" target="_blank">codepen.io/mlms13/pen/CGgLF</a>
+<br />Diakses tanggal: 2020/11/29</li>
+</ol>
+</p>
+
+          <!-- wip -->
+          
+            <br>
+          
+
+          <!-- License -->
+          
+            <div style="text-align:center; margin:0 0 10px 0;"></div>
+            
+              <div class="noselect">
+<h1 style="font-size:2em;">Lisensi</h1>
+<div class="ccbysa-img noselect"><img class="ccbysa-img-img" style="margin-top: 5px;" src="/assets/img/logo/cc-by-nc-sa.png" alt="logo_cc-by-nc-sa"/></div><!-- ccbysa -->
+<div class="ccbysa-text noselect">
+Tulisan ini dilisensikan dengan :<br>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.id" target="_blank">Atribusi-NonKomersial-BerbagiSerupa 4.0 Internasional (CC BY-NC-SA 4.0)</a>
+</div><!-- ccbysa-text -->
+</div>
+
+            
+          
+
+          <div style="clear:both;"></div>
+
+          <!-- Penulis -->
+          
+            <div style="text-align:center; margin:0 0 10px 0;"></div>
+
+            
+
+            
+              <div class="noselect">
+  <h1 style="font-size:2em;">Penulis</h1>
+  
+  
+    
+      <div class="penulis-img">
+        <img style="margin:0 auto;border-radius:50%;" src="https://github.com/bandithijo.png?size=200" alt="bandithijo" onerror="imgError(this);">
+      </div><!-- penulis-img -->
+
+      <div class="penulis-text">
+        <p><p><b>BanditHijo</b> adalah nama pena saya – meminjam istilah keren dari para penulis. Teman-teman menyebut saya sebagai GNU/Linux Enthusiast. Saya memang gemar mengutak-atik sistem operasi ini. Bukan karena hobi tapi karena saya perlu untuk menggunakannya. Hehe.</p>
+</p>
+        <p style="text-align:right;">- <b>Rizqi Nur Assyaufi</b></p>
+      </div><!-- penulis-text -->
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</div>
+
+            
+          
+
+          <div style="clear:both;"></div>
+
+          <!-- Begin Mailchimp Signup Form -->
+<link href="/assets/css/mailchimp-classic-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+  #mc_embed_signup form {
+    padding: 10px 0 !important;
+  }
+
+  #mc_embed_signup .button {
+    background-color: #008352;
+  }
+
+  #mc_embed_signup h2 {
+    font-size: 32px !important;
+    padding-bottom: .3em;
+  }
+
+  .mc-field-group {
+    width: 100% !important;
+    padding-bottom: 2% !important;
+  }
+
+  .mce-label {
+    margin-bottom: 3% !important;
+    font-size: 14px;
+  }
+
+  .mc-form {
+    float: left;
+    width: 50% !important;
+  }
+
+  .mc-text {
+    float: right;
+    font-size: 14px;
+    width: 50%;
+    padding: 5px 10px;
+    text-align: justify;
+  }
+
+  @media (max-width: 640px) {
+    .mc-field-group {
+      width: 100% !important;
+      padding-bottom: 4% !important;
+    }
+
+    .mc-form {
+      float: none;
+      width: 100% !important;
+    }
+
+    .mc-text {
+      float: none;
+      font-size: 14px;
+      width: 100%;
+      padding: 0;
+    }
+
+  {
+</style>
+<div id="mc_embed_signup">
+  <form action="https://github.us4.list-manage.com/subscribe/post?u=68e5540d98defef56764f64df&amp;id=39ab92c3ed" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+      <h2>Berlangganan via Email</h2>
+      <div class="mc-text">Jangan sampai ketinggalan kabar dan info terbaru mengenai BanditHijo (R)-Chive.<br>Ayo bergabung!</div>
+      <div class="mc-form">
+        <div class="mc-field-group">
+          <label class="mce-label"></label>
+          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Masukkan email di sini...">
+        </div>
+        <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_68e5540d98defef56764f64df_39ab92c3ed" tabindex="-1" value=""></div>
+        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!--End mc_embed_signup-->
+
+
+        </div><!-- markdown-body -->
+      </article>
+
+      <article>
+        <div class="post-body-sidebar">
+          <aside class="sidebar noselect" id="sidebar-tail">
+
+    <div class="sidebar-body">
+  <h1 style="font-size:1.5em;border-bottom:1px dashed #9E9E9E;">
+    <img src="/assets/img/logo/logo_terbaru.svg">Tulisan Terbaru
+  </h1>
+  <div class="toc">
+  <ul>
+  
+  
+    
+      <li><a href="/blog/mudah-downgrade-paket-di-artix-linux">Mudah Downgrade Paket di Artix Linux</a></li>
+    
+  
+    
+      <li><a href="/blog/sharing-direktori-antara-host-dan-guest-pada-virt-manager">Sharing Direktori Antara Host Linux dan Guest Windows pada Virt-Manager/KVM/Qemu</a></li>
+    
+  
+    
+      <li><a href="/blog/authorization-dengan-pundit-untuk-nested-controller-dan-user-turunan-pada-rails">Authorization dengan Pundit untuk Nested Controller dan User Turunan pada Rails</a></li>
+    
+  
+    
+      <li><a href="/blog/rails-ujs-dan-ajax-serta-button-animation-loading">Rails UJS dan AJAX, serta Button Animation Loading</a></li>
+    
+  
+    
+      <li><a href="/blog/rails-seeding-dengan-spesifik-single-atau-multiple-seed-file">Rails Seeding dengan Spesifik Single atau Multiple Seed File (Modularisasi Seeds)</a></li>
+    
+  
+    
+      <li><a href="/blog/notifikasi-user-signup-ke-email-admin-degan-actionmailer-rails">Notifikasi User Sign Up ke Email Admin dengan ActionMailer Rails</a></li>
+    
+  
+    
+      <li><a href="/blog/devise-registration-tanpa-password-set-password-after-confirmation">Devise Registration Tanpa Password, Set Password Setelah Confirmation</a></li>
+    
+  
+    
+      <li><a href="/blog/ruby-on-rails-actionmailer-local-mailcatcher">Konfigurasi Ruby on Rails ActionMailer pada Local Environment dengan MailCatcher</a></li>
+    
+  
+    
+      <li><a href="/blog/membuat-recovery-partition-artix-iso-dengan-grub2">Membuat Recovery Partition Artix Linux ISO dengan GRUB2</a></li>
+    
+  
+    
+      <li><a href="/blog/akses-ssh-ke-virtualbox-via-nat">Mengakses VirtualBox Instance dengan SSH via NAT</a></li>
+    
+  
+  </ul>
+  </div>
+  <div style="margin:10px 0 10px 0;border-bottom:1px dashed #9E9E9E;"></div>
+  <p style="text-align:left;"><a style="border-bottom:0;" href="/blog/"><b>Selengkapnya >></b></a></p>
+</div>
+
+    <div class="sidebar-body">
+  <h1 style="font-size:1.5em;border-bottom:1px dashed #9E9E9E;">
+    <img src="/assets/img/logo/logo_tags.svg"><a style="color:#000;border-bottom:none;" href="/tags/">Tags</a>
+  </h1>
+  <div class="toc">
+    
+    
+      
+        
+        <span class="tags"><a href="/tags/#android">Android</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#arch-linux">Arch Linux</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#artix-linux">Artix Linux</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#bootstrap">Bootstrap</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#database">Database</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#django">Django</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#docker">Docker</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#dwm">Dwm</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#fedora">Fedora</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#freebsd">FreeBSD</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#heroku">Heroku</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#i3wm">I3WM</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#java">Java</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#javascript">Javascript</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#jekyll">Jekyll</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#kvm">KVM</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#network">Network</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#osx">OSX</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#python">Python</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#qemu">Qemu</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#rspec">RSpec</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#rails">Rails</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#ruby">Ruby</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#script">Script</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#security">Security</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#terminal">Terminal</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#thinkpad">ThinkPad</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#tips">Tips</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#tools">Tools</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#ulasan">Ulasan</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#vim">Vim</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#virt-manager">Virt-Manager</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#wine">Wine</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#xfce">XFCE</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#jquery">jQuery</a></span>
+      
+    
+    
+  </div><!-- toc -->
+</div><!-- sidebar-body -->
+
+    <div class="sidebar-body">
+  <h1 style="font-size:1.5em;border-bottom:1px dashed #9E9E9E;margin-bottom:5px;">
+    <img src="/assets/img/logo/logo_dotfriends.svg">dotFriends
+  </h1>
+  <!-- untuk random dotfriends list sebanyak 8 -->
+  
+  
+    <p>+&nbsp;<a href="https://ypraw.github.io/" target="_blank">Yunindyo Prabowo</a></p>
+  
+    <p>+&nbsp;<a href="https://okitavera.me/" target="_blank">Nanda Okitavera</a></p>
+  
+    <p>+&nbsp;<a href="https://kabarlinux.id/" target="_blank">Kabar Linux</a></p>
+  
+    <p>+&nbsp;<a href="https://se7entime.wordpress.com/" target="_blank">Se7entime</a></p>
+  
+    <p>+&nbsp;<a href="https://addy-dclxvi.github.io/" target="_blank">Addy</a></p>
+  
+  <p style="font-size:10px;color:#00603C;margin-top:12px;text-align:left;">*5 daftar blog di atas digenerate secara random</p>
+  <div style="margin:10px 0 10px 0;border-bottom:1px dashed #9E9E9E;"></div>
+  <p style="text-align:left;"><a style="border-bottom:0;" href="/dotfriends/"><b>Selengkapnya >></b></a></p>
+</div>
+
+    <div class="sidebar-body-rss"">
+  <h1 style="border-bottom:1px dashed #ACA573;margin-bottom:5px;">
+    <img src="/assets/img/logo/logo_bantuan.svg">Bantuan
+  </h1>
+   <p>Kebingungan dengan simbol-simbol yang terdapat pada halaman blog ini?</p>
+   <p>Kamu dapat mempelajari bagaimana cara membaca setiap komponen yang ada di dalam blog, <a href="/bantuan/"><b>di sini</b></a>.</p>
+</div>
+
+    <div class="sidebar-body-rss">
+  <h1 style="font-size:1.5em;border-bottom:1px dashed #ACA573;margin-bottom:5px;">
+    <img src="/assets/img/logo/logo_rss.svg">Berlangganan RSS
+  </h1>
+  <p>Untuk dapat berlangganan catatan/post terbaru, kamu dapat mengklik tombol RSS yang terdapat di <a href="#footer"><b>footer</b></a>.</p>
+  <p>Blog ini memiliki dua buah RSS feed, Blog dan Vlog.</p>
+  <p>Apabila kamu mengklik tombol RSS yang ada pada halaman yang berkategori Blog, maka RSS feed url yang keluar adalah untuk kategori Blog, begitu pula sebaliknya untuk halaman Vlog.</p>
+  <div style="margin:15px 0 10px 0;border-bottom:1px dashed #ACA573;"></div>
+  <p>Belum tahu tentang RSS? Yuk, <a href="https://bandithijo.github.io/blog/newsboat-rss-feed-reader"><b>ke sini</b></a></p>
+</div>
+
+
+</aside>
+
+        </div>
+      </article>
+
+    </div><!-- container-edge-border -->
+  </div><!-- main container -->
+</section><!-- main -->
+
+
+<footer id="footer" class="noselect">
+  <div class="container">
+    <div class="container-inner">
+      <div class="footer-line">
+        <p style="font-size:20px;"><a href="/"><strong>BanditHijo (R)-Chive</strong></a> &copy; 2012 - 2021</p>
+        <p style="font-size:12px;margin-top:-35px;color:#404040;">
+          Blog ini dibuat di atas distribusi sistem operasi <a href="https://archlinux.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Arch Linux</a>.<br>
+          Source code dan artikel-artikel ditulis menggunakan <span class="nobr"><a href="http://vim.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Vim</a> text editor.</span><br>
+          Semua elemen gambar dikerjakan menggunakan <span class="nobr"><a href="https://inkscape.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Inkscape</a> dan <a href="https://gimp.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">GIMP</a>.</span><br>
+          Menggunakan <a href="https://jekyllrb.com" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Jekyll</a> sebagai Static Site Generator.<br>
+          Dihosting menggunakan <a href="https://github.com/bandithijo/bandithijo.github.io" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">GitHub</a>.<br>
+          Terakhir update: <b>12/07/2021</b>
+        </p>
+        <p class="footer-menu">
+          <br>
+          <a href="/contact/"><strong>Contact</strong></a> |&nbsp;
+          <a href="https://twitter.com/bandithijo" target="_blank" rel="noreferrer"><strong>Twitter</strong></a> |&nbsp;
+          <a rel="me" href="https://www.youtube.com/c/BanditHijo" target="_blank" rel="noreferrer"><strong>YouTube</strong></a> |&nbsp;
+          <a rel="me" href="https://github.com/bandithijo" target="_blank" rel="noreferrer"><strong>GitHub</strong></a> |&nbsp;
+          
+            <a href="/feed/blog.xml" target="_blank"><strong>RSS</strong></a>
+          
+        </p>
+
+        <div class="notif-donasi">
+          <div class="notif-donasi-col-1">
+            <a href="https://saweria.co/bandithijo" target="_blank" rel="noopener">
+              <p>Apabila ingin memberikan <b>apresiasi</b> atas tulisan-tulisan di blog ini, dapat melalui <span class="nobr"><b>Saweria</b></span> atas nama <span class="nobr"><b>Rizqi Nur Assyaufi</b></span>.</p>
+              <p style="margin-top:-8px;">Berapapun besarnya dukungan dari kamu, akan sangat bermanfaat untuk proses produksi tulisan di blog ini.</p>
+              <p style="margin-top:-8px;">Terima kasih, mas Bro!</p>
+            </a>
+          </div>
+          <div class="notif-donasi-col-2">
+            <a href="https://saweria.co/bandithijo" target="_blank" rel="noopener">
+              <img class="notif-donasi-img" src="/assets/img/logo/logo_qr_saweria.png">
+            </a>
+          </div>
+        </div><!-- notif-donasi -->
+
+        <div class="tech-i-used-desktop">
+          <a href="https://jekyllrb.com" target="_blank" rel="noopener">
+            <img class="footer-img-jekyll" src="/assets/img/logo/logo_jekyll.png">
+          </a>
+          <a href="https://github.com/bandithijo" target="_blank" rel="noopener">
+            <img class="footer-img-github" src="/assets/img/logo/logo_github.png">
+          </a>
+          <a href="https://github.com/features/actions" target="_blank" rel="noopener">
+            <img class="footer-img-githubactions" src="/assets/img/logo/logo_github_actions.png">
+          </a>
+        </div><!-- tech-i-used-desktop -->
+
+        <div class="tech-i-used-mobile">
+          <a href="https://github.com/features/actions" target="_blank" rel="noopener" rel="noreferrer">
+            <img class="footer-img-1" src="/assets/img/logo/logo_github_actions_mobile.png">
+          </a>
+          <a href="https://github.com/bandithijo" target="_blank" rel="noopener" rel="noreferrer">
+            <img class="footer-img-2" src="/assets/img/logo/logo_github_mobile.png">
+          </a>
+          <a href="https://jekyllrb.com/" target="_blank" rel="noopener" rel="noreferrer">
+            <img class="footer-img-3" src="/assets/img/logo/logo_jekyll_mobile.png">
+          </a>
+        </div><!-- tech-i-used-mobile -->
+      </div><!-- footer-line -->
+    </div><!-- container-innner -->
+  </div><!-- footer container -->
+</footer>
+
+<!-- site.git.build_version -->
+<div class="tech-i-used-desktop" style="text-align:center;font-size:9px;color:#8F8879;margin: -5px 0 10px 0;">
+  c2deb4abbcb1b30e9079c35732dca589f2d7b6e8
+</div>
+<!-- END site.git.build_version -->
+
+<script type="text/javascript" src="/assets/js/nav.js"></script>
+<script type="text/javascript" src="/assets/js/lazyload.js"></script>
+<script type="text/javascript" src="/assets/js/headings-permalink.js"></script>
+<script type="text/javascript" src="/assets/js/newsline-sticky.js"></script>
+
+<script type="text/javascript" src="/assets/js/aside.js"></script>
+
+
+<script type="text/javascript" src="/assets/js/enlarge-image-modal.js"></script>
+
+
+
+
+</body>
+</html>

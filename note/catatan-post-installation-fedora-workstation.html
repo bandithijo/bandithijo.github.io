@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Here's where I started writing some notes that someday I will call it, a book">
+<meta name="keywords" content="tips, fedora">
+<meta name="author" content="Rizqi Nur Assyaufi">
+<meta name="theme-color" content="#008352">
+<meta name="msapplication-navbutton-color" content="#008352">
+<meta name="apple-mobile-web-app-status-bar-style" content="#008352">
+<title>Catatan Post Installation Fedora Workstation | BanditHijo (R)-Chive</title>
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/github-markdown-bandit.css">
+<link rel="icon" href="/assets/img/favicon/favicon.png" type="image/png">
+<link rel="manifest" href="/manifest.json">
+
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Catatan Post Installation Fedora Workstation" />
+<meta name="author" content="BanditHijo" />
+<meta property="og:locale" content="id" />
+<meta name="description" content="Catatan ini merupakan kumpulan packages dan beberapa konfigurasi yang saya lakukan setelah melakukan proses instalasi Fedora Workstation." />
+<meta property="og:description" content="Catatan ini merupakan kumpulan packages dan beberapa konfigurasi yang saya lakukan setelah melakukan proses instalasi Fedora Workstation." />
+<link rel="canonical" href="https://bandithijo.github.io/note/catatan-post-installation-fedora-workstation" />
+<meta property="og:url" content="https://bandithijo.github.io/note/catatan-post-installation-fedora-workstation" />
+<meta property="og:site_name" content="BanditHijo (R)-Chive" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-06-10T09:51:00+08:00" />
+<script type="application/ld+json">
+{"description":"Catatan ini merupakan kumpulan packages dan beberapa konfigurasi yang saya lakukan setelah melakukan proses instalasi Fedora Workstation.","url":"https://bandithijo.github.io/note/catatan-post-installation-fedora-workstation","@type":"BlogPosting","headline":"Catatan Post Installation Fedora Workstation","dateModified":"2021-07-12T16:52:32+08:00","datePublished":"2021-06-10T09:51:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://bandithijo.github.io/note/catatan-post-installation-fedora-workstation"},"author":{"@type":"Person","name":"BanditHijo"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <meta property="og:country-name"   content="Indonesia"/>
+<meta property="og:image"          content="/assets/img/banner/bndt_banner.png"/>
+<meta property="og:image:width"    content="460"/>
+<meta property="og:image:height"   content="230"/>
+
+<meta property="twitter:card"      content="summary_large_image"/>
+<meta property="twitter:title"     content="Catatan Post Installation Fedora Workstation"/>
+<meta property="twitter:author"    content="BanditHijo"/>
+<meta property="twitter:image:src" content="/assets/img/banner/bndt_banner.png"/>
+
+  <!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-116004889-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+  <meta name="google-site-verification" content="qXp9Kgb5hIHVp5T9vFOa_motqUmNuF5STbkJKF70wLc">
+
+</head>
+
+
+<body>
+
+<header id="header" class="noselect">
+  <div class="container container-strip">
+    <div class="container-inner container-inner-strip">
+    <div class="logo">
+      <img src="/assets/img/logo/logo_bandithijo.png">
+    </div>
+
+    <div class="title">
+      <h1><span class="nobr">BanditHijo (R)-Chive</span></h1>
+    </div>
+    <div class="description">
+      <h2>Here's where I started writing some notes that someday <span class="nobr">I will call it, a book</span></h2>
+      <br>
+      <span class="emblem-f">TECHNICAL<span class="emblem-e">BLOG : JOURNAL</span></span>
+    </div>
+
+    <nav class="nav nav-strip">
+      <div class="toggle">
+        <div class="menu" onmouseover="this.style.cursor='pointer'" onclick="navBtn()">
+          <span class="menu-title">BANDITHIJO</span>
+          <img style="width:30px;" src="/assets/img/logo/logo_menu.svg" id="nav-btn">
+        </div><!-- menu -->
+      </div><!-- toggle -->
+      <ul id="menu-ul">
+        <li><a href="/">Home</a></li>
+        
+        
+        
+        <li><a href="/blog/" class="">Blog</a></li>
+        
+        
+        
+        <li><a href="/note/" class="active">Note</a></li>
+        
+        
+        
+        <li><a href="/vlog/" class="">Vlog</a></li>
+        
+        
+        
+        <li><a href="/book/" class="">Books</a></li>
+        
+        
+        
+        <li><a href="/about/" class="">About</a></li>
+        
+        
+        
+        <li><a href="https://bandithijo.github.io/v2" class="">v2 (beta)</a></li>
+        
+      </ul>
+    </nav>
+    </div><!-- container-inner -->
+  </div><!-- header container -->
+</header>
+
+
+<section id="main">
+  <div class="container">
+    <div class="container-edge-border">
+
+      
+
+      <article class="post-pre-title">
+        <div class="post-body">
+          
+            <h1 class="post-title"><a href="/note/catatan-post-installation-fedora-workstation"><span class="wiptag_title">WIP:</span> Catatan Post Installation Fedora Workstation</a></h1>
+          
+          <label class="hideAside noselect" title="On/Off Sidebar" onclick="toggleShowHideSidebar()"><img style="width:20px;margin-top:5px;" src="/assets/img/logo/logo_menu.svg" alt=""></label>
+
+          
+            
+            
+            
+              <span class="post-details noselect">Ditulis: 2021/06/10</span> <span class="post-details noselect">Diperbaharui: 2021/07/12</span>
+            
+          
+
+          <div class="breadcrumbs noselect">
+
+<span style="color:#232323;">&#9654;</span>&nbsp;<a href="/">Home</a>
+
+  
+    / <a href="/note/">Note</a>
+  
+
+  
+    / Catatan post installation fedora workstation
+  
+
+</div>
+
+          <div class="tags-in-post noselect">
+  
+  
+    <span class="tags"><a href="https://bandithijo.github.io/tags/#fedora">Fedora</a></span>
+  
+    <span class="tags"><a href="https://bandithijo.github.io/tags/#tips">Tips</a></span>
+  
+</div>
+
+        </div>
+      </article>
+
+      <article>
+        <div class="post-body-sidebar">
+          <aside class="sidebar noselect" id="sidebar-head">
+
+    <div class="sidebar-body">
+  <h1 style="font-size:1.5em;border-bottom:1px dashed #9E9E9E;">
+    <img src="/assets/img/logo/logo_toc.svg">Daftar Isi
+  </h1>
+  <div class="toc">
+    
+    <ul>
+  <li><a href="#prakata">Prakata</a></li>
+  <li><a href="#pre-install">Pre Install</a>
+    <ul>
+      <li><a href="#verify-your-download-with-checksum-files">Verify your download with CHECKSUM files.</a></li>
+    </ul>
+  </li>
+  <li><a href="#todo">TODO:</a>
+    <ul>
+      <li><a href="#enable-fastest-mirror-and-delta-rpm">Enable fastest mirror and Delta RPM</a></li>
+      <li><a href="#update-system">Update system</a></li>
+      <li><a href="#enable-rpmfusion-repository">Enable RPMFusion Repository</a></li>
+      <li><a href="#install-gnome-tweak-tool">Install gnome-tweak-tool</a></li>
+      <li><a href="#install-vim">Install Vim</a></li>
+      <li><a href="#install-downgrade-package-sample-fprintd">Install downgrade package (sample: fprintd)</a></li>
+      <li><a href="#exlude-some-packages">Exlude some packages</a></li>
+      <li><a href="#htop">Htop</a></li>
+      <li><a href="#iftop">Iftop</a></li>
+      <li><a href="#iperf">iperf</a></li>
+      <li><a href="#neofetch">Neofetch</a></li>
+      <li><a href="#nmon">Nmon</a></li>
+      <li><a href="#nethogs">Nethogs</a></li>
+      <li><a href="#lm-sensors">LM Sensors</a></li>
+      <li><a href="#sound-converter">Sound Converter</a></li>
+      <li><a href="#audacity">Audacity</a></li>
+      <li><a href="#audacious">Audacious</a></li>
+      <li><a href="#pass">Pass</a></li>
+      <li><a href="#change-zsh-to-your-shell">Change ZSH to your shell</a></li>
+      <li><a href="#arandr">Arandr</a></li>
+      <li><a href="#git-svn">GIT-SVN</a></li>
+      <li><a href="#tig">TIG</a></li>
+      <li><a href="#git-credential-libsecret">Git-Credential-Libsecret</a></li>
+      <li><a href="#ssh-askpass">SSH AskPass</a></li>
+      <li><a href="#glances">Glances</a></li>
+      <li><a href="#wavemon">Wavemon</a></li>
+      <li><a href="#transmission-daemon">Transmission Daemon</a></li>
+      <li><a href="#youtube-dl">YouTube-DL</a></li>
+      <li><a href="#newsboat-rss-reader">Newsboat (RSS Reader)</a></li>
+      <li><a href="#ranger-file-manager">Ranger File Manager</a></li>
+      <li><a href="#samba">Samba</a></li>
+      <li><a href="#install-opus-audio-codec">Install Opus Audio Codec</a></li>
+      <li><a href="#virt-manager-libvirt">Virt-Manager (libvirt)</a></li>
+      <li><a href="#chromium-browser">Chromium browser</a></li>
+      <li><a href="#chromedriver">Chromedriver</a></li>
+      <li><a href="#google-chrome">Google Chrome</a></li>
+      <li><a href="#codec-from-rpmfusion">Codec from RPMFusion</a></li>
+      <li><a href="#another-audio-video-support">Another audio video support</a></li>
+      <li><a href="#install-ffmpeg">Install FFMPEG</a></li>
+      <li><a href="#tor">Tor</a></li>
+      <li><a href="#handbrake">HandBrake</a></li>
+      <li><a href="#mpv">MPV</a></li>
+      <li><a href="#dnscrypt-proxy">DNSCrypt-Proxy</a></li>
+      <li><a href="#adwaita-qt5-theme">Adwaita-Qt5 theme</a></li>
+      <li><a href="#qt5ct">Qt5Ct</a></li>
+      <li><a href="#change-default-cursor-on-lightdm">Change default cursor on lightdm</a></li>
+      <li><a href="#change-default-cursor-on-gdm">Change default cursor on GDM</a></li>
+      <li><a href="#neovim-nightly-build">Neovim Nightly (build)</a></li>
+      <li><a href="#postgresql">PostgreSQL</a></li>
+      <li><a href="#ruby-or-rails-developer">Ruby or Rails Developer</a></li>
+      <li><a href="#build-advcmp">Build ADVCMP</a></li>
+      <li><a href="#tlp">TLP</a></li>
+      <li><a href="#email-backend">Email Backend</a></li>
+      <li><a href="#neomutt">Neomutt</a></li>
+      <li><a href="#rdp">RDP</a></li>
+      <li><a href="#qutebrowser">Qutebrowser</a></li>
+      <li><a href="#rofi">Rofi</a></li>
+      <li><a href="#rofi-calc">Rofi-Calc</a></li>
+      <li><a href="#lazygit">LazyGit</a></li>
+      <li><a href="#seahorse">Seahorse</a></li>
+      <li><a href="#crow-translate">Crow translate</a></li>
+      <li><a href="#libva-intel-driver">libva-intel-driver</a></li>
+      <li><a href="#inkscape">Inkscape</a></li>
+      <li><a href="#weechat-build">WeeChat (build)</a></li>
+      <li><a href="#weechat-matrix">WeeChat-Matrix</a></li>
+      <li><a href="#flameshot">Flameshot</a></li>
+      <li><a href="#optipng">Optipng</a></li>
+      <li><a href="#scrot">Scrot</a></li>
+      <li><a href="#maim">Maim</a></li>
+      <li><a href="#changeswap-pipewire-with-pulseaudio">Change/Swap Pipewire with Pulseaudio</a></li>
+      <li><a href="#pamixer">Pamixer</a></li>
+      <li><a href="#dconf--gconf-editor">DConf &amp; GConf Editor</a></li>
+      <li><a href="#hexchat">HexChat</a></li>
+      <li><a href="#gping">Gping</a></li>
+      <li><a href="#prettyping">PrettyPing</a></li>
+      <li><a href="#dunst">Dunst</a></li>
+      <li><a href="#telegram-tg">Telegram TG</a></li>
+      <li><a href="#simplescreenrecorder">SimpleScreenRecorder</a></li>
+      <li><a href="#ps_mem">ps_mem</a></li>
+      <li><a href="#how-to-disable-gnome-software-autostart">How to disable Gnome Software autostart</a></li>
+      <li><a href="#pavucontrol">Pavucontrol</a></li>
+      <li><a href="#gcolor2">GColor2</a></li>
+      <li><a href="#suckless">Suckless</a>
+        <ul>
+          <li><a href="#st">st</a></li>
+          <li><a href="#dwm">dwm</a></li>
+          <li><a href="#pinentry-dmenu-still-failed">pinentry-dmenu (still failed)</a></li>
+          <li><a href="#sxiv">sxiv</a></li>
+        </ul>
+      </li>
+      <li><a href="#telegram-desktop">Telegram Desktop</a></li>
+      <li><a href="#hide-desktop-icon-on-application-list">Hide desktop icon on Application List</a></li>
+      <li><a href="#flatpak-via-flathub-remote">Flatpak via Flathub Remote</a></li>
+      <li><a href="#gromit-mpx">Gromit-MPX</a></li>
+      <li><a href="#center-window-in-gnome">Center window in GNOME</a></li>
+      <li><a href="#polybar">Polybar</a></li>
+      <li><a href="#feh">Feh</a></li>
+      <li><a href="#sxhkd">SXHKD</a></li>
+      <li><a href="#j4-dmenu-desktop-dmenu-wrapper">j4-dmenu-desktop (dmenu wrapper)</a></li>
+      <li><a href="#xcompmgr">XCompmgr</a></li>
+      <li><a href="#picom">Picom</a></li>
+      <li><a href="#xbacklight">XBacklight</a></li>
+      <li><a href="#udiskie">Udiskie</a></li>
+      <li><a href="#abduco">Abduco</a></li>
+      <li><a href="#dtach">dtach</a></li>
+      <li><a href="#lxappearance">LXappearance</a></li>
+      <li><a href="#unclutter-xfixes">unclutter-xfixes</a></li>
+      <li><a href="#calibre">Calibre</a></li>
+      <li><a href="#system-config-printer">System Config Printer</a></li>
+      <li><a href="#ppd-from-foomatic-db">PPD from foomatic-db</a></li>
+      <li><a href="#xsane-scanner">XSane (Scanner)</a></li>
+      <li><a href="#gparted">Gparted</a></li>
+      <li><a href="#numix-solarized-theme-build">Numix Solarized Theme Build</a></li>
+      <li><a href="#aria2">Aria2</a></li>
+      <li><a href="#mate-polkit">Mate Polkit</a></li>
+      <li><a href="#lxpolkit">LXpolkit</a></li>
+      <li><a href="#p7zip">P7Zip</a></li>
+      <li><a href="#screenkey">Screenkey</a></li>
+      <li><a href="#development-group-packages">Development Group Packages</a></li>
+      <li><a href="#docker">Docker</a></li>
+      <li><a href="#kbbi-qt">KBBI-Qt</a></li>
+      <li><a href="#zathura">Zathura</a></li>
+      <li><a href="#kamus">Kamus</a></li>
+      <li><a href="#thunderbird">Thunderbird</a></li>
+      <li><a href="#gucharmap-character-map">Gucharmap (Character Map)</a></li>
+      <li><a href="#dragon-drag-and-drop-helper">Dragon (drag and drop helper)</a></li>
+      <li><a href="#zoom-meeting-client">Zoom Meeting Client</a></li>
+      <li><a href="#ffmulticonverter">ffmulticonverter</a></li>
+      <li><a href="#handbrake-1">HandBrake</a></li>
+      <li><a href="#x11vnc">x11vnc</a></li>
+      <li><a href="#discord">Discord</a></li>
+      <li><a href="#slack">Slack</a></li>
+      <li><a href="#pdf-arranger">PDF Arranger</a></li>
+      <li><a href="#master-pdf-editor-4">Master PDF Editor 4</a></li>
+      <li><a href="#intel-gpu-tools">Intel GPU Tools</a></li>
+      <li><a href="#autocutsel">Autocutsel</a></li>
+      <li><a href="#xzoom">XZoom</a></li>
+      <li><a href="#minder-mind-mapping">Minder (mind mapping)</a></li>
+      <li><a href="#taskell-kanban-board">Taskell (Kanban Board)</a></li>
+      <li><a href="#showhide-grub-menu">Show/Hide GRUB Menu</a></li>
+      <li><a href="#zeal">Zeal</a></li>
+      <li><a href="#xinput">xinput</a></li>
+      <li><a href="#gthumb-image-viewer-editor-organizer">gThumb (image viewer, editor, organizer)</a></li>
+      <li><a href="#speedtest-cli">Speedtest CLI</a></li>
+      <li><a href="#spotify">Spotify</a></li>
+      <li><a href="#rpkg">rpkg</a></li>
+      <li><a href="#asciidoc">asciidoc</a></li>
+      <li><a href="#tmux">Tmux</a></li>
+      <li><a href="#emacs">Emacs</a></li>
+      <li><a href="#wireshark">Wireshark</a></li>
+      <li><a href="#scrcpy">Scrcpy</a></li>
+      <li><a href="#faketime">Faketime</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+</div>
+
+
+</aside>
+
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-body">
+          <div class="doa-awal noselect">
+<p><img src="/assets/img/logo/logo_doa_awal.svg" alt="بسم الله الرحمن الرحيم" style="height:40px" align="right"></p>
+<div style="clear:both;"></div>
+</div>
+
+        </div>
+        <div class="markdown-body highlight">
+
+          <!-- The Modal -->
+<div class="modal">
+  <img class="modal-content">
+</div>
+
+
+          <p><h1 id="prakata">Prakata</h1>
+
+<p>Catatan ini merupakan kumpulan packages dan beberapa konfigurasi yang saya lakukan setelah melakukan proses instalasi Fedora Workstation.</p>
+
+<p>Saya memutuskan untuk mengkategorikan catatan ini sebagai “note” dan bukan sebagai “blog” karena kemungkinan saya akan terus memperbaharui isinya seiring dengan berjalannya waktu pemakaian apabila saya menemupak paket-paket yang menarik.</p>
+
+<p>Selain itu, memiliki sebuah catatan “perjalanan” akan <strong>menumbuhkan rasa percaya diri untuk terus maju ke depan</strong>. Karena, apabila gagal, kita tidak takut untuk memulai lagi dari awal. Ataupun, kita dapat dengan mudah memulai percabangan untuk awal baru yang lain.</p>
+
+<h1 id="pre-install">Pre Install</h1>
+
+<h2 id="verify-your-download-with-checksum-files">Verify your download with CHECKSUM files.</h2>
+
+<p>Setelah mengunduh file ISO, lakukan verifikasi untuk menguji keamanan dan integritas file ISO yang telah didownload.</p>
+
+<p>Langkah awal, import Fedora’s GPG key(s).</p>
+
+<pre><span class="cmd">$ </span><b>curl https://getfedora.org/static/fedora.gpg | gpg --import</b><br /></pre>
+
+<pre>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 12543  100 12543    0     0  10945      0  0:00:01  0:00:01 --:--:-- 10945
+gpg: key 1161AE6945719A39: public key "Fedora (34) &lt;fedora-34-primary@fedoraproject.org&gt;" imported
+gpg: key 49FD77499570FF31: public key "Fedora (33) &lt;fedora-33-primary@fedoraproject.org&gt;" imported
+gpg: key 6C13026D12C944D0: public key "Fedora (32) &lt;fedora-32-primary@fedoraproject.org&gt;" imported
+gpg: key 50CB390B3C3359C4: public key "Fedora (31) &lt;fedora-31-primary@fedoraproject.org&gt;" imported
+gpg: key 7BB90722DBBDCF7C: public key "Fedora (iot 2019) &lt;fedora-iot-2019@fedoraproject.org&gt;" imported
+gpg: key 21EA45AB2F86D6A1: public key "Fedora EPEL (8) &lt;epel@fedoraproject.org&gt;" imported
+gpg: key 6A2FAEA2352C64E5: public key "Fedora EPEL (7) &lt;epel@fedoraproject.org&gt;" imported
+gpg: key 3B49DF2A0608B895: public key "EPEL (6) &lt;epel@fedoraproject.org&gt;" imported
+gpg: Total number processed: 8
+gpg:               imported: 8
+</pre>
+
+<p>Dapat dilihat, kita telah berhasil mengimport 8 public keys.</p>
+
+<p>Kemudian, download file <strong>CHECKSUM</strong> dari yang dapat kita download di halaman ini, <a href="https://getfedora.org/en/security/" target="_blank"><strong>di sini</strong></a>. Download file CHECKSUM yang sesuai dengan file ISO yang teman-teman gunakan.</p>
+
+<p>Kemudian, verifikasi file CHECKSUM tersebut.</p>
+
+<pre class="url">$ gpg --verify-files *-CHECKSUM<br /></pre>
+
+<pre><span class="cmd">$ </span><b>gpg --verify-files Fedora-Workstation-34-1.2-x86_64-CHECKSUM</b><br /></pre>
+
+<pre>
+gpg: Signature made Sat 24 Apr 2021 03:37:01 AM WITA
+gpg:                using RSA key 8C5BA6990BDB26E19F2A1A801161AE6945719A39
+gpg: Good signature from "Fedora (34) &lt;fedora-34-primary@fedoraproject.org&gt;" [unknown]
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: 8C5B A699 0BDB 26E1 9F2A  1A80 1161 AE69 4571 9A39
+</pre>
+
+<p>CHECKSUM harus memiliki keterangan “Good signature”dari salah satu key.</p>
+
+<p>Letakkan file ISO (*.iso) dengan file checksum (*-CHECKSUM) pada direktori yang sama.</p>
+
+<pre>
+├─ Fedora-Workstation-34-1.2-x86_64-CHECKSUM
+└─ Fedora-Workstation-Live-x86_64-34-1.2.iso
+</pre>
+
+<p>Selanjutnya, lakukan pengecekan checksum terhadap file ISO yang telah kita download.</p>
+
+<pre class="url">$ sha256sum -c *-CHECKSUM<br /></pre>
+
+<pre><span class="cmd">$ </span><b>sha256sum -c Fedora-Workstation-34-1.2-x86_64-CHECKSUM</b><br /></pre>
+
+<pre>
+Fedora-Workstation-Live-x86_64-34-1.2.iso: OK
+sha256sum: WARNING: 19 lines are improperly formatted
+</pre>
+
+<p>* Abaikan saja warning 19 lines are improperly formated, hal ini terjadi karena di dalam file *-CHECKSUM tersebut juga terdapat PGP Signature. Coba komentar saja baris-baris selain SHA256SUM valuenya (termasuk blankline), maka warningnya akan <del>berkurang</del> hilang.</p>
+
+<h1 id="todo">TODO:</h1>
+
+<h2 id="enable-fastest-mirror-and-delta-rpm">Enable fastest mirror and Delta RPM</h2>
+<p>Sumber: <a href="https://www.linuxsec.org/2020/03/menggunakan-fastest-mirror-di-fedora.html" target="_blank">https://www.linuxsec.org/2020/03/menggunakan-fastest-mirror-di-fedora.html</a></p>
+
+<p>Edit file <code class="language-plaintext highlighter-rouge">/etc/dnf/dnf.conf</code>, lalu tambahkan baris,</p>
+
+<div class="highlight-caption"><span class="label">FILE</span><code>/etc/dnf/dnf.conf</code></div>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="o">[</span>main]
+...
+...
+...
+<span class="nv">fastestmirror</span><span class="o">=</span>True
+<span class="nv">deltarpm</span><span class="o">=</span><span class="nb">true</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Kemudian, tambahkan “kode negara” <code class="language-plaintext highlighter-rouge">&amp;country=ID</code> di belakang meta link repository yang ada di <code class="language-plaintext highlighter-rouge">/etc/yum.repos.d/</code>.</p>
+
+<p>Repository utamanya adalah <code class="language-plaintext highlighter-rouge">fedora-updates.repo</code>.</p>
+
+<div class="highlight-caption"><span class="label">FILE</span><code>/etc/yum.repos.d/fedora-updates.repo</code></div>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="code"><pre><span class="o">[</span>updates]
+...
+<span class="nv">metalink</span><span class="o">=</span>https://mirrors.fedoraproject.org/metalink?repo<span class="o">=</span>updates-released-f<span class="nv">$releasever</span>&amp;arch<span class="o">=</span><span class="nv">$basearch</span>&amp;country<span class="o">=</span>ID
+...
+...
+
+<span class="o">[</span>updates-debuginfo]
+...
+<span class="nv">metalink</span><span class="o">=</span>https://mirrors.fedoraproject.org/metalink?repo<span class="o">=</span>updates-released-debug-f<span class="nv">$releasever</span>&amp;arch<span class="o">=</span><span class="nv">$basearch</span>&amp;country<span class="o">=</span>ID
+...
+...
+
+<span class="o">[</span>updates-source]
+...
+<span class="nv">metalink</span><span class="o">=</span>https://mirrors.fedoraproject.org/metalink?repo<span class="o">=</span>updates-released-debug-f<span class="nv">$releasever</span>&amp;arch<span class="o">=</span><span class="nv">$basearch</span>&amp;country<span class="o">=</span>ID
+...
+...
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="update-system">Update system</h2>
+
+<p>Lakukan refresh dan update repository dengan perintah,</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf upgrade --refresh</b><br /></pre>
+
+<p>* <strong>dnf update</strong> dan <strong>dnf upgrade</strong> sama, namun konvensi terbaru sudah menggunakan <strong>dnf upgrade</strong>.</p>
+
+<h2 id="enable-rpmfusion-repository">Enable RPMFusion Repository</h2>
+<p>Sumber: <a href="https://docs.fedoraproject.org/en-US/quick-docs/setup_rpmfusion/" target="_blank">https://docs.fedoraproject.org/en-US/quick-docs/setup_rpmfusion/</a></p>
+
+<p>Free Repository</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm</b><br /></pre>
+
+<p>Nonfrere Repository</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm</b><br /></pre>
+
+<p>Enabling Appstream data from the RPM Fusion repositories (GNOME)</p>
+
+<p>This procedure describes how to install the Appstream data provided by the RPM Fusion software repositories.</p>
+
+<p>Prerequisites</p>
+
+<ul>
+  <li>You have internet access.</li>
+  <li>You are using the Gnome desktop environment.</li>
+  <li>You have the RPMFusion repositories installed</li>
+</ul>
+
+<p>Procedure</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf group update core</b><br /></pre>
+
+<h2 id="install-gnome-tweak-tool">Install gnome-tweak-tool</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install gnome-tweak-tool</b><br /></pre>
+
+<h2 id="install-vim">Install Vim</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install vim</b><br /></pre>
+
+<h2 id="install-downgrade-package-sample-fprintd">Install downgrade package (sample: fprintd)</h2>
+<p>Sumber: <a href="https://unix.stackexchange.com/a/408511" target="_blank">https://unix.stackexchange.com/a/408511</a></p>
+
+<p>Saya harus mendowngrade paket <strong>fprintd</strong> dikarenakan fingerprint device yang ada di laptop saya (ThinkPad X61 keluaran tahun 2007), tidak dapat berfungsi pada fprintd versi 1.0. Setidaknya saya memerlukan versi 0.9.</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf downgrade --releasever=31 fprintd</b><br /></pre>
+
+<h2 id="exlude-some-packages">Exlude some packages</h2>
+
+<p>Edit file <code class="language-plaintext highlighter-rouge">/etc/dnf/dnf.conf</code></p>
+
+<div class="highlight-caption"><span class="label">FILE</span><code>/etc/dnf/dnf.conf</code></div>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre><span class="o">[</span>main]
+<span class="nv">exclude</span><span class="o">=</span>fprintd fprintd-pam libfprint
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="htop">Htop</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install htop</b><br /></pre>
+
+<h2 id="iftop">Iftop</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install iftop</b><br /></pre>
+
+<h2 id="iperf">iperf</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install iperf</b><br /></pre>
+
+<h2 id="neofetch">Neofetch</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install w3m-img</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install neofetch</b><br /></pre>
+
+<h2 id="nmon">Nmon</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install nmon</b><br /></pre>
+
+<h2 id="nethogs">Nethogs</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install nethogs</b><br /></pre>
+
+<h2 id="lm-sensors">LM Sensors</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install lm_sensors</b><br /></pre>
+
+<h2 id="sound-converter">Sound Converter</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install soundconverter</b><br /></pre>
+
+<h2 id="audacity">Audacity</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install audacity</b><br /></pre>
+
+<h2 id="audacious">Audacious</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install audacious</b><br /></pre>
+
+<h2 id="pass">Pass</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install pass</b><br /></pre>
+
+<h2 id="change-zsh-to-your-shell">Change ZSH to your shell</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install zsh</b><br /><span class="cmd">$ </span><b>sudo dnf install util-linux-user</b><br /><span class="cmd">$ </span><b>chsh -s $(which zsh)</b><br /></pre>
+
+<h2 id="arandr">Arandr</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install arandr</b><br /></pre>
+
+<h2 id="git-svn">GIT-SVN</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install git-svn</b><br /></pre>
+
+<h2 id="tig">TIG</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install tig</b><br /></pre>
+
+<h2 id="git-credential-libsecret">Git-Credential-Libsecret</h2>
+<p>Sumber: <a href="https://discussion.fedoraproject.org/t/attention-git-credential-libsecret-for-storing-git-passwords-in-the-gnome-keyring-is-now-an-extra-package/18275" target="_blank">https://discussion.fedoraproject.org/t/attention-git-credential-libsecret-for-storing-git-passwords-in-the-gnome-keyring-is-now-an-extra-package/18275</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install git-credential-libsecret</b><br /></pre>
+
+<div class="highlight-caption"><span class="label">FILE</span><code>$HOME/.gitconfig</code></div>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="code"><pre>...
+
+<span class="o">[</span>credential]
+	helper <span class="o">=</span> /usr/libexec/git-core/git-credential-libsecret
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="ssh-askpass">SSH AskPass</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install lxqt-openssh-askpass</b><br /></pre>
+
+<p>Saya memilih menggunakan versi <strong>lxqt-openssh-askpass.x86_64</strong>, daripada versi <strong>openssh-askpass.x86_64</strong> dan <strong>x11-ssh-askpass.x86_64</strong>.</p>
+
+<h2 id="glances">Glances</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install glances</b><br /></pre>
+
+<h2 id="wavemon">Wavemon</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install wavemon</b><br /></pre>
+
+<h2 id="transmission-daemon">Transmission Daemon</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install transmission-daemon</b><br /></pre>
+
+<h2 id="youtube-dl">YouTube-DL</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install youtube-dl</b><br /></pre>
+
+<h2 id="newsboat-rss-reader">Newsboat (RSS Reader)</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install newsboat</b><br /></pre>
+
+<h2 id="ranger-file-manager">Ranger File Manager</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install ranger</b><br /><span class="cmd">$ </span><b>sudo dnf install python3-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install libX11-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install libXext-devel</b><br /><span class="cmd">$ </span><b>pip install ueberzug</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install mediainfo</b><br /><span class="cmd">$ </span><b>sudo dnf install highlight</b><br /><span class="cmd">$ </span><b>sudo dnf install atool</b><br /><span class="cmd">$ </span><b>sudo dnf install bsdtar</b><br /><span class="cmd">$ </span><b>sudo dnf install unrar</b><br /><span class="cmd">$ </span><b>sudo dnf install p7zip</b><br /><span class="cmd">$ </span><b>sudo dnf install odt2txt</b><br /></pre>
+
+<h2 id="samba">Samba</h2>
+<p>Sumber: <a href="https://docs.fedoraproject.org/en-US/quick-docs/samba/" target="_blank">https://docs.fedoraproject.org/en-US/quick-docs/samba/</a></p>
+
+<p>Install dan enable samba service.</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install samba</b><br /><span class="cmd">$ </span><b>sudo systemctl enable smb --now</b><br /><span class="cmd">$ </span><b>firewall-cmd --get-active-zones</b><br /><span class="cmd">$ </span><b>sudo firewall-cmd --permanent --zone=FedoraWorkstation --add-service=samba</b><br /><span class="cmd">$ </span><b>sudo firewall-cmd --reload</b><br /></pre>
+
+<p>Membuat user samba.</p>
+
+<pre><span class="cmd">$ </span><b>sudo smbpasswd -a bandithijo</b><br /></pre>
+
+<p>Install samba support for file manager gui.</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install gvfs-smb</b><br /></pre>
+
+<h2 id="install-opus-audio-codec">Install Opus Audio Codec</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install libogg</b><br /><span class="cmd">$ </span><b>sudo dnf install opus-tools</b><br /></pre>
+
+<p>(RPMFusion - Nonfree)</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install audacious-plugins-freeworld-ffaudio</b><br /></pre>
+
+<h2 id="virt-manager-libvirt">Virt-Manager (libvirt)</h2>
+<p>Sumber: <a href="https://fedoramagazine.org/full-virtualization-system-on-fedora-workstation-30/" target="_blank">https://fedoramagazine.org/full-virtualization-system-on-fedora-workstation-30/</a></p>
+
+<p>Sumber: <a href="https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-virtualization/" target="_blank">https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-virtualization/</a></p>
+
+<p>Cek apakah CPU spport untuk virtualization,</p>
+
+<pre><span class="cmd">$ </span><b>egrep '^flags.*(vmx|svm)' /proc/cpuinfo</b><br /></pre>
+
+<p>Kalau tidak menampilkan apapun, berarti CPU yang kamu gunakan tidak mendukung fitur virtualization.</p>
+
+<p>Cek group package untuk virtualization.</p>
+
+<pre><span class="cmd">$ </span><b>dnf groupinfo virtualization</b><br /></pre>
+
+<p>Install dengan cara,</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install @virtualization</b><br /></pre>
+
+<p>Alternatively, to install the mandatory, default, and optional packages, run:</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf group install --with-optional virtualization</b><br /></pre>
+
+<p>Verifikasi KVM kernel module berhasil diload.</p>
+
+<pre><span class="cmd">$ </span><b>lsmod | grep kvm</b><br /></pre>
+
+<p>Edit file <code class="language-plaintext highlighter-rouge">/etc/libvirt/libvirtd.conf</code></p>
+
+<pre><span class="cmd">$ </span><b>sudo vi /etc/libvirt/libvirtd.conf</b><br /></pre>
+
+<p>Set the domain socket group ownership to libvirt</p>
+
+<div class="highlight-caption"><span class="label">FILE</span><code>/etc/libvirt/libvirtd.conf</code></div>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="code"><pre>...
+unix_sock_group <span class="o">=</span> <span class="s2">"libvirt"</span>
+...
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Adjust the UNIX socket permissions for the R/W socket</p>
+
+<div class="highlight-caption"><span class="label">FILE</span><code>/etc/libvirt/libvirtd.conf</code></div>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="code"><pre>...
+unix_sock_rw_perms <span class="o">=</span> <span class="s2">"0770"</span>
+...
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Add user to libvirt gorup</p>
+
+<pre><span class="cmd">$ </span><b>sudo usermod -a -G libvirt $(whoami)</b><br /></pre>
+
+<p>This adds the current user to the group. You must log out and log in to apply the changes.</p>
+
+<h2 id="chromium-browser">Chromium browser</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install chromium</b><br /><span class="cmd">$ </span><b>sudo dnf install chromium-libs-media-freeworld</b><br /></pre>
+
+<p>If Chromium can’t play video, replace chromium with chromium-freeworld by RPMFusion.</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf swap chromium chromium-freeworld</b><br /></pre>
+
+<h2 id="chromedriver">Chromedriver</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install chromedriver</b><br /></pre>
+
+<h2 id="google-chrome">Google Chrome</h2>
+<p>Sumber: <a href="https://docs.fedoraproject.org/en-US/quick-docs/installing-chromium-or-google-chrome-browsers/#installing-chrome" target="_blank">https://docs.fedoraproject.org/en-US/quick-docs/installing-chromium-or-google-chrome-browsers/#installing-chrome</a></p>
+
+<p>Click the following link: <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank">https://www.google.com/chrome/browser/desktop/index.html</a></p>
+
+<p>Click on Download Chrome and select Fedora 64 or 32 bits download and install the repo.</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install google-chrome-stable_current_x86_64.rpm</b><br /></pre>
+
+<p>Enabling Chromium plugins (<em>under construction</em>).</p>
+
+<pre><span class="cmd">$ </span><b>rpm2cpio ./google-chrome-stable_current_x86_64.rpm | cpio -idmv</b><br /></pre>
+
+<h2 id="codec-from-rpmfusion">Codec from RPMFusion</h2>
+<p>Sumber: <a href="https://docs.fedoraproject.org/en-US/quick-docs/assembly_installing-plugins-for-playing-movies-and-music/" target="_blank">https://docs.fedoraproject.org/en-US/quick-docs/assembly_installing-plugins-for-playing-movies-and-music/</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install lame\* --exclude=lame-devel</b><br /><span class="cmd">$ </span><b>sudo dnf group upgrade --with-optional Multimedia</b><br /></pre>
+
+<h2 id="another-audio-video-support">Another audio video support</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install ffmpegthumbnailer</b><br /><span class="cmd">$ </span><b>sudo dnf install rpmfusion-free-obsolete-packages</b><br /></pre>
+
+<h2 id="install-ffmpeg">Install FFMPEG</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install ffmpeg</b><br /><span class="cmd">$ </span><b>sudo dnf install ffmpeg-libs</b><br /><span class="cmd">$ </span><b>sudo dnf install compat-ffmpeg28</b><br /></pre>
+
+<h2 id="tor">Tor</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install tor</b><br /></pre>
+
+<h2 id="handbrake">HandBrake</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install handbrake</b><br /></pre>
+
+<h2 id="mpv">MPV</h2>
+
+<p>(RPMFusion - Free)</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install mpv</b><br /><span class="cmd">$ </span><b>suod dnf install celluloid</b><br /></pre>
+
+<p>User script that may help you steroid your mpv.</p>
+
+<ol>
+  <li><a href="https://github.com/jonniek/mpv-playlistmanager" target="_blank">mpv-playlistmanager</a></li>
+  <li><a href="https://github.com/cvzi/mpv-youtube-download" target="_blank">mpv-youtube-download</a></li>
+  <li><a href="https://github.com/jgreco/mpv-youtube-quality" target="_blank">mpv-youtube-quality</a></li>
+</ol>
+
+<p>Manual Build</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install ffmpeg-devel</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>./bootstrap.py</b><br /><span class="cmd">$ </span><b>./waf configure</b><br /><span class="cmd">$ </span><b>./waf</b><br /><span class="cmd">$ </span><b>sudo ./waf install</b><br /></pre>
+
+<h2 id="dnscrypt-proxy">DNSCrypt-Proxy</h2>
+<p>Sumber: <a href="https://wiki.archlinux.org/title/Systemd-resolved#Manually" target="_blank">https://wiki.archlinux.org/title/Systemd-resolved#Manually</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install dnscrypt-proxy</b><br /></pre>
+
+<p>Create file /etc/systemd/resolved.conf.d/dns_servers.conf</p>
+
+<div class="highlight-caption"><span class="label">FILE</span><code>/etc/systemd/resolved.conf.d/dns_servers.conf</code></div>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="code"><pre><span class="o">[</span>Resolve]
+<span class="nv">DNS</span><span class="o">=</span>127.0.0.1
+<span class="nv">Domains</span><span class="o">=</span>~.
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Kemudian, restart systemd-resolved service</p>
+
+<pre><span class="cmd">$ </span><b>sudo systemctl restart systemd-resolved.conf</b><br /></pre>
+
+<h2 id="adwaita-qt5-theme">Adwaita-Qt5 theme</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install adwaita-qt5</b><br /></pre>
+
+<h2 id="qt5ct">Qt5Ct</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install qt5ct</b><br /></pre>
+
+<h2 id="change-default-cursor-on-lightdm">Change default cursor on lightdm</h2>
+
+<p>Change value of <code class="language-plaintext highlighter-rouge">/usr/share/icons/default/index.theme</code></p>
+
+<div class="highlight-caption"><span class="label">FILE</span><code>/usr/share/icons/default/index.theme</code></div>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre><span class="o">[</span>Icon Theme]
+<span class="nv">Inherits</span><span class="o">=</span>ComixCursors-Opaque-White
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="change-default-cursor-on-gdm">Change default cursor on GDM</h2>
+<p>Sumber: <a href="https://wiki.archlinux.org/title/GDM#Changing_the_cursor_theme" target="_blank">https://wiki.archlinux.org/title/GDM#Changing_the_cursor_theme</a></p>
+
+<p>GDM disregards GNOME cursor theme settings and it also ignores the cursor theme set according to the XDG specification. To change the cursor theme used in GDM, either create the following keyfile</p>
+
+<div class="highlight-caption"><span class="label">FILE</span><code>/etc/dconf/db/gdm.d/10-cursor-settings</code></div>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre><span class="o">[</span>org/gnome/desktop/interface]
+cursor-theme<span class="o">=</span><span class="s1">'theme-name'</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>and then recompile the GDM database or alternatively log in to the GDM user and execute the following:</p>
+
+<pre><span class="cmd">$ </span><b>gsettings set org.gnome.desktop.interface cursor-theme 'theme-name'</b><br /></pre>
+
+<h2 id="neovim-nightly-build">Neovim Nightly (build)</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install cmake</b><br /><span class="cmd">$ </span><b>sudo dnf install gcc-c++</b><br /><span class="cmd">$ </span><b>sudo dnf install luajit-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install libtool</b><br /><span class="cmd">$ </span><b>sudo dnf install libvterm-devel</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install nodejs</b><br /><span class="cmd">$ </span><b>sudo dnf install python3-neovim</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>cd ~/.local/src</b><br /><span class="cmd">$ </span><b>git clone https://github.com/neovim/neovim.git</b><br /><span class="cmd">$ </span><b>cd neovim</b><br /><span class="cmd">$ </span><b>make CMAKE_BUILD_TYPE=RelWithDebInfo -j3</b><br /><span class="cmd">$ </span><b>sudo make install</b><br /></pre>
+
+<p>For plugins,</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install ripgrep</b><br /></pre>
+
+<h2 id="postgresql">PostgreSQL</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install postgresql-server</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>sudo /usr/bin/postgresql-setup --initdb</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>sudo systemctl start postgresql.service</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>sudo -iu postgres</b><br /></pre>
+
+<pre><span class="cmd">[postgres@fedora-x61 ~]$ </span><b>createuser --interactive</b><br /></pre>
+
+<pre>
+Enter name of role to add: bandithijo
+Shall the new role be a superuser? (y/n) y
+</pre>
+
+<pre><span class="cmd">[postgres@fedora-x61 ~]$ </span><b>createdb bandithijo</b><br /></pre>
+
+<pre><span class="cmd">[postgres@fedora-x61 ~]$ </span><b>psql</b><br /></pre>
+
+<pre><span class="cmd">postgres=# </span><b>ALTER DATABASE bandithijo OWNER TO bandithijo;</b><br /></pre>
+
+<p>Tambahkan pada file <code class="language-plaintext highlighter-rouge">/var/lib/pgsql/data/pg_hba.conf</code>.</p>
+
+<div class="highlight-caption"><span class="label">FILE</span><code>/var/lib/pgsql/data/pg_hba.conf</code></div>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="c"># TYPE  DATABASE        USER            ADDRESS                 METHOD</span>
+...
+...
+<span class="c">#host   all             all              127.0.0.1/32            ident</span>
+host    all             bandithijo       127.0.0.1/32            trust
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Or, using another way with Container.</p>
+
+<p>Since, Fedora has built in container utility named as <strong>Podman</strong>. So, I decided to use this tool than using Docker.</p>
+
+<p>I’ll use <strong>bitnami/postgresql</strong> container image from <strong>quay.io</strong>.</p>
+
+<pre><span class="cmd"># </span><b>podman pull quay.io/bitnami/postgresql:13.3.0</b><br /><span class="cmd"># </span><b>podman run --name postgresql --net host -v /var/lib/pgsql/data/userdata:/bitnami/postgresql/data:Z -e ALLOW_EMPTY_PASSWORD=yes bitnami/postgresql:13.3.0</b><br /></pre>
+
+<p>postgresql container imge from bitnami is set <strong>User: 1001</strong>. So, for convenient purposes,</p>
+
+<pre><span class="cmd">$ </span><b>sudo chown -R 1001:1001 /var/lib/pgsql</b><br /></pre>
+
+<p>* <strong>/var/lib/pgsql</strong> is where Fedora put postgresql data.</p>
+
+<p>Generate systemd unit file.</p>
+
+<pre><span class="cmd"># </span><b>podman generate systemd --new --files --name postgresql</b><br /><span class="cmd"># </span><b>mv container-postgresql.service /etc/systemd/system</b><br /><span class="cmd"># </span><b>systemctl daemon-reload</b><br /></pre>
+
+<p>Stop and remove postgresql running container.</p>
+
+<pre><span class="cmd"># </span><b>podman stop postgresql</b><br /><span class="cmd"># </span><b>podman rm postgresql</b><br /></pre>
+
+<p>That’s it! Now you’re able to start and check the status of running container with systemct start and status.</p>
+
+<h2 id="ruby-or-rails-developer">Ruby or Rails Developer</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install openssl-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install libpq-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install libxml2-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install libxslt-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install readline-devel</b><br /></pre>
+
+<p>Reinstall all your ruby with rbenv (remove and install).</p>
+
+<h2 id="build-advcmp">Build ADVCMP</h2>
+<p>Sumber: <a href="https://github.com/jarun/advcpmv" target="_blank">https://github.com/jarun/advcpmv</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install patch</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>wget http://ftp.gnu.org/gnu/coreutils/coreutils-8.32.tar.xz</b><br /><span class="cmd">$ </span><b>tar xvJf coreutils-8.32.tar.xz</b><br /><span class="cmd">$ </span><b>cd coreutils-8.32/</b><br /><span class="cmd">$ </span><b>wget https://raw.githubusercontent.com/jarun/advcpmv/master/advcpmv-0.8-8.32.patch</b><br /><span class="cmd">$ </span><b>patch -p1 -i advcpmv-0.8-8.32.patch</b><br /><span class="cmd">$ </span><b>./configure</b><br /><span class="cmd">$ </span><b>make</b><br /></pre>
+
+<h2 id="tlp">TLP</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install tlp</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>sudo dnf copr enable suhanc/tp_smapi</b><br /><span class="cmd">$ </span><b>sudo dnf install tp_smapi</b><br /></pre>
+
+<h2 id="email-backend">Email Backend</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install isync</b><br /><span class="cmd">$ </span><b>sudo dnf install msmtp</b><br /></pre>
+
+<h2 id="neomutt">Neomutt</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf copr enable chriscowleyunix/neomutt</b><br /></pre>
+
+<p><strong>Manual Build</strong></p>
+
+<p>Sumber: <a href="https://neomutt.org/dev/build/build" target="_blank">https://neomutt.org/dev/build/build</a></p>
+
+<p>Deps</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install libidn-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install gpgme-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install notmuch-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install sqlite-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install cyrus-sasl-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install tokyocabinet-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install tokyocabinet</b><br /><span class="cmd">$ </span><b>sudo dnf install urlview</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>./configure --ssl --lua --notmuch --gpgme --gss --autocrypt --sqlite --sasl --mixmaster --fmemopen --homespool --tokyocabinet --locales-fix</b><br /><span class="cmd">$ </span><b>make</b><br /><span class="cmd">$ </span><b>sudo make install</b><br /></pre>
+
+<h2 id="rdp">RDP</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install freerdp</b><br /></pre>
+
+<h2 id="qutebrowser">Qutebrowser</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install qutebrowser</b><br /></pre>
+
+<p>Install Breave adblock,</p>
+
+<pre><span class="cmd">$ </span><b>pip install adblock</b><br /></pre>
+
+<p>Kemudian, update list dengan <code class="language-plaintext highlighter-rouge">:adblock-update</code>.</p>
+
+<p>Additional hints, Sumber: <a href="https://github.com/qutebrowser/qutebrowser/blob/master/doc/install.asciidoc#on-fedora" target="_blank">https://github.com/qutebrowser/qutebrowser/blob/master/doc/install.asciidoc#on-fedora</a></p>
+
+<p>Fedora only ships free software in the repositories. To be able to play videos with proprietary codecs with QtWebEngine, you will need to install an additional package from the RPM Fusion Free repository.</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install qt5-qtwebengine-freeworld</b><br /></pre>
+
+<h2 id="rofi">Rofi</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install rofi</b><br /></pre>
+
+<h2 id="rofi-calc">Rofi-Calc</h2>
+<p>Sumber: <a href="https://github.com/svenstaro/rofi-calc" target="_blank">https://github.com/svenstaro/rofi-calc</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install qalculate</b><br /></pre>
+
+<p>Manual Build</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install rofi-devel</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>autoreconf -i</b><br /><span class="cmd">$ </span><b>mkdir build</b><br /><span class="cmd">$ </span><b>cd build/</b><br /><span class="cmd">$ </span><b>../configure</b><br /><span class="cmd">$ </span><b>make</b><br /><span class="cmd">$ </span><b>sudo make install</b><br /></pre>
+
+<h2 id="lazygit">LazyGit</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf copr enable atim/lazygit</b><br /><span class="cmd">$ </span><b>sudo dnf install lazygit</b><br /></pre>
+
+<h2 id="seahorse">Seahorse</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install seahorse</b><br /></pre>
+
+<h2 id="crow-translate">Crow translate</h2>
+<p>Sumber: <a href="https://github.com/crow-translate/crow-translate" target="_blank">https://github.com/crow-translate/crow-translate</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install extra-cmake-modules</b><br /><span class="cmd">$ </span><b>sudo dnf install qt5-qtbase-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install qt5-qtx11extras-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install qt5-qtmultimedia-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install tesseract-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install libSM-devel</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>mkdir build</b><br /><span class="cmd">$ </span><b>cd build</b><br /><span class="cmd">$ </span><b>cmake ..</b><br /><span class="cmd">$ </span><b>cmake --build .</b><br /></pre>
+
+<h2 id="libva-intel-driver">libva-intel-driver</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install libva-intel-driver</b><br /></pre>
+
+<h2 id="inkscape">Inkscape</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install inkscape</b><br /></pre>
+
+<h2 id="weechat-build">WeeChat (build)</h2>
+<p>Sumber: <a href="https://github.com/weechat/weechat" target="_blank">https://github.com/weechat/weechat</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install gnutls-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install perl-ExtUtils-Embed</b><br /><span class="cmd">$ </span><b>sudo dnf install libgcrypt-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install libcurl-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install ncurses-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install aspell-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install php-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install lua-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install tcl-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install guile-devel</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>mkdir build</b><br /><span class="cmd">$ </span><b>cd build</b><br /><span class="cmd">$ </span><b>cmake ..</b><br /><span class="cmd">$ </span><b>make</b><br /><span class="cmd">$ </span><b>sudo make install</b><br /></pre>
+
+<p>Kalau masih ada warning error perihal language, bisa menggunakan,</p>
+
+<pre><span class="cmd">$ </span><b>ccmake ..</b><br /></pre>
+
+<p>Lalu set <strong>OFF</strong> untuk language support yang tidak ingin disertakan atau yang menyebabkan error.</p>
+
+<h2 id="weechat-matrix">WeeChat-Matrix</h2>
+<p>Sumber: <a href="https://github.com/poljar/weechat-matrix" target="_blank">https://github.com/poljar/weechat-matrix</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install libolm-devel</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>git clone https://github.com/poljar/weechat-matrix.git</b><br /><span class="cmd">$ </span><b>cd weechat-matrix</b><br /><span class="cmd">$ </span><b>pip install -r requirements.txt</b><br /></pre>
+
+<p>Kalau kamu sudah pernah mengkonfigurasi weechat, tinggal jalankan,</p>
+
+<pre><span class="cmd">$ </span><b>make install</b><br /></pre>
+
+<p>Selanjutnya tinggal membuat plugin matrix menjadi autostart ketika weechat dijalankan.</p>
+
+<pre><span class="cmd">$ </span><b>cd ~/.weechat/python/autoload</b><br /><span class="cmd">$ </span><b>ln -s ../matrix.py ~/.weechat/python/autoload</b><br /></pre>
+
+<h2 id="flameshot">Flameshot</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install flameshot</b><br /></pre>
+
+<h2 id="optipng">Optipng</h2>
+
+<pre><span class="cmd">$ </span><b>$ sudo dnf install optipng</b><br /></pre>
+
+<h2 id="scrot">Scrot</h2>
+<p>Sumber: <a href="https://github.com/resurrecting-open-source-projects/scrot" target="_blank">https://github.com/resurrecting-open-source-projects/scrot</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install autoconf-archive</b><br /><span class="cmd">$ </span><b>sudo dnf install imlib2-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install libtool</b><br /><span class="cmd">$ </span><b>sudo dnf install libXcomposite-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install libXfixes-devel</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>git clone https://github.com/resurrecting-open-source-projects/scrot.git</b><br /><span class="cmd">$ </span><b>cd scrot</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>./autogen.sh</b><br /><span class="cmd">$ </span><b>./configure</b><br /><span class="cmd">$ </span><b>make</b><br /><span class="cmd">$ </span><b>sudo make install</b><br /></pre>
+
+<h2 id="maim">Maim</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install maim</b><br /></pre>
+
+<h2 id="changeswap-pipewire-with-pulseaudio">Change/Swap Pipewire with Pulseaudio</h2>
+<p>Sumber: <a href="https://fedoraproject.org/wiki/Changes/DefaultPipeWire#Upgrade.2Fcompatibility_impact" target="_blank">https://fedoraproject.org/wiki/Changes/DefaultPipeWire#Upgrade.2Fcompatibility_impact</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf swap --allowerasing pipewire-pulseaudio pulseaudio</b><br /></pre>
+
+<p>Install PulseAudio sound server utilities</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install pulseaudio-utils</b><br /></pre>
+
+<h2 id="pamixer">Pamixer</h2>
+<p>Sumber: <a href="https://copr.fedorainfracloud.org/coprs/opuk/pamixer/" target="_blank">https://copr.fedorainfracloud.org/coprs/opuk/pamixer/</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf copr enable opuk/pamixer</b><br /><span class="cmd">$ </span><b>sudo dnf install pamixer</b><br /></pre>
+
+<p>Atau manual build (my recomended).</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install boost-devel</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>git clone https://github.com/cdemoulins/pamixer.git</b><br /><span class="cmd">$ </span><b>make</b><br /></pre>
+
+<h2 id="dconf--gconf-editor">DConf &amp; GConf Editor</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install dconf-editor</b><br /><span class="cmd">$ </span><b>sudo dnf install gconf-editor</b><br /></pre>
+
+<h2 id="hexchat">HexChat</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install hexchat</b><br /></pre>
+
+<p>Install adwaita-gtk2-theme for fix issue theme,
+Sumber: <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1963223" target="_blank">https://bugzilla.redhat.com/show_bug.cgi?id=1963223</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install adwaita-gtk2-theme</b><br /></pre>
+
+<h2 id="gping">Gping</h2>
+<p>Sumber: <a href="https://github.com/orf/gping" target="_blank">https://github.com/orf/gping</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf copr enable atim/gping</b><br /><span class="cmd">$ </span><b>sudo dnf install gping</b><br /></pre>
+
+<h2 id="prettyping">PrettyPing</h2>
+<p>Sumber: <a href="https://github.com/denilsonsa/prettyping" target="_blank">https://github.com/denilsonsa/prettyping</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install prettyping</b><br /></pre>
+
+<h2 id="dunst">Dunst</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install dunst</b><br /></pre>
+
+<h2 id="telegram-tg">Telegram TG</h2>
+<p>Sumber: <a href="https://github.com/paul-nameless/tg.git" target="_blank">https://github.com/paul-nameless/tg.git</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install tdlib</b><br /><span class="cmd">$ </span><b>pip install python-telegram</b><br /><span class="cmd">$ </span><b>pip install .</b><br /></pre>
+
+<h2 id="simplescreenrecorder">SimpleScreenRecorder</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install simplescreenrecorder</b><br /></pre>
+
+<h2 id="ps_mem">ps_mem</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install ps_mem</b><br /></pre>
+
+<h2 id="how-to-disable-gnome-software-autostart">How to disable Gnome Software autostart</h2>
+<p>Sumber: <a href="https://forums.fedoraforum.org/showthread.php?315410-How-to-disable-Gnome-Software-autostart" target="_blank">https://forums.fedoraforum.org/showthread.php?315410-How-to-disable-Gnome-Software-autostart</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo systemctl disable packagekit.service</b><br /></pre>
+
+<p>Disable <code class="language-plaintext highlighter-rouge">download-updates</code> of Gnome Software with dcof-editor.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[org/gnome/software]
+download-updates=false
+</code></pre></div></div>
+
+<p>Disable autostart gnome-software service.
+Sumber: <a href="https://askubuntu.com/questions/959353/disable-gnome-software-from-loading-at-startup" target="_blank">https://askubuntu.com/questions/959353/disable-gnome-software-from-loading-at-startup</a></p>
+
+<ol>
+  <li>
+    <p>Copy of the <code class="language-plaintext highlighter-rouge">/etc/xdg/autostart/gnome-software-service.desktop</code> file to the <code class="language-plaintext highlighter-rouge">~/.config/autostart/</code> directory.</p>
+  </li>
+  <li>
+    <p>Open the copied <code class="language-plaintext highlighter-rouge">.desktop</code> file with a text editor and remove the <code class="language-plaintext highlighter-rouge">NoDisplay=true</code></p>
+  </li>
+  <li>
+    <p>Now GNOME Software should appear in your Startup Applications list. Disable it. Alternatively, you may append an <code class="language-plaintext highlighter-rouge">X-GNOME-Autostart-enabled=false</code></p>
+  </li>
+</ol>
+
+<h2 id="pavucontrol">Pavucontrol</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install pavucontrol</b><br /></pre>
+
+<h2 id="gcolor2">GColor2</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install gcolor2</b><br /></pre>
+
+<h2 id="suckless">Suckless</h2>
+
+<h3 id="st">st</h3>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install libXft-devel</b><br /></pre>
+
+<p>For Emoji support,</p>
+
+<p>Sumber: <a href="https://copr.fedorainfracloud.org/coprs/linuxredneck/libXft-bgra/" target="_blank">https://copr.fedorainfracloud.org/coprs/linuxredneck/libXft-bgra/</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf copr enable linuxredneck/libXft-bgra</b><br /><span class="cmd">$ </span><b>sudo rpm -e --nodeps libXft-2.3.3-6.fc34.x86_64 libXft-devel-2.3.3-6.fc34.x86_64</b><br /><span class="cmd">$ </span><b>sudo dnf install libXft-bgra</b><br /></pre>
+
+<p>Add <code class="language-plaintext highlighter-rouge">libXft</code> to <code class="language-plaintext highlighter-rouge">exclude=</code> package on <code class="language-plaintext highlighter-rouge">/etc/dnf/dnf.conf</code>.</p>
+
+<h3 id="dwm">dwm</h3>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install libXinerama-devel</b><br /></pre>
+
+<h3 id="pinentry-dmenu-still-failed">pinentry-dmenu (still failed)</h3>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install libassuan-devel</b><br /></pre>
+
+<h3 id="sxiv">sxiv</h3>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install imlib2-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install libexif-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install giflib-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install libXft-bgra-devel</b><br /></pre>
+
+<h2 id="telegram-desktop">Telegram Desktop</h2>
+
+<p>(RPMFusion - Free)</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install telegram-desktop</b><br /></pre>
+
+<h2 id="hide-desktop-icon-on-application-list">Hide desktop icon on Application List</h2>
+<p>Sumber: <a href="https://wiki.archlinux.org/title/desktop_entries#Hide_desktop_entries" target="_blank">https://wiki.archlinux.org/title/desktop_entries#Hide_desktop_entries</a></p>
+
+<p>Firstly, copy the desktop entry file in question to <code class="language-plaintext highlighter-rouge">~/.local/share/applications</code> to avoid your changes being overwritten.</p>
+
+<p>Then, to hide the entry in all environments, open the desktop entry file in a text editor and add the following line: <code class="language-plaintext highlighter-rouge">NoDisplay=true</code>.</p>
+
+<p>To hide the entry in a specific desktop, add the following line to the desktop entry file: <code class="language-plaintext highlighter-rouge">NotShowIn=desktop-name</code>.</p>
+
+<p>where desktop-name can be option such as <code class="language-plaintext highlighter-rouge">GNOME</code>, <code class="language-plaintext highlighter-rouge">Xfce</code>, <code class="language-plaintext highlighter-rouge">KDE</code> etc.</p>
+
+<p>A desktop entry can be hidden in more than desktop at once - simply separate the desktop names with a semi-colon.</p>
+
+<h2 id="flatpak-via-flathub-remote">Flatpak via Flathub Remote</h2>
+
+<pre><span class="cmd">$ </span><b>flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</b><br /></pre>
+
+<h2 id="gromit-mpx">Gromit-MPX</h2>
+
+<p>(Flatpak - Flathub)</p>
+
+<pre><span class="cmd">$ </span><b>flatpak install flathub net.christianbeier.Gromit-MPX</b><br /></pre>
+
+<h2 id="center-window-in-gnome">Center window in GNOME</h2>
+<p>Sumber: <a href="https://www.reddit.com/r/gnome/comments/aaqy2p/center_windows_in_gnome/" target="_blank">https://www.reddit.com/r/gnome/comments/aaqy2p/center_windows_in_gnome/</a></p>
+
+<p>By: carmanaughty</p>
+
+<p>For a keyboard shortcut, there’s a dconf key under <code class="language-plaintext highlighter-rouge">/org/gnome/desktop/wm/keybindings</code> which is <code class="language-plaintext highlighter-rouge">move-to-center</code> and it should be empty. Change that to whatever you want (for instance, I use [‘<Super><Control><Shift>Home']).</Shift></Control></Super></p>
+
+<p>By: [deleted]</p>
+
+<p>Its also in GNOME Tweaks. It is under “Windows” -&gt; “Center New Windows”.</p>
+
+<h2 id="polybar">Polybar</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install polybar</b><br /></pre>
+
+<h2 id="feh">Feh</h2>
+
+<p>Image viewer and cataloguer.</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install feh</b><br /></pre>
+
+<h2 id="sxhkd">SXHKD</h2>
+
+<p>Simple HotKey Daemon.</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install sxhkd</b><br /></pre>
+
+<h2 id="j4-dmenu-desktop-dmenu-wrapper">j4-dmenu-desktop (dmenu wrapper)</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install j4-dmenu-desktop</b><br /></pre>
+
+<h2 id="xcompmgr">XCompmgr</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install libXcomposite-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install libXdamage-devel</b><br /></pre>
+
+<h2 id="picom">Picom</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install meson</b><br /><span class="cmd">$ </span><b>sudo dnf install libev-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install xcb-util-renderutil-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install xcb-util-image-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install pixman-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install uthash-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install libconfig-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install dbus-devel</b><br /></pre>
+
+<h2 id="xbacklight">XBacklight</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install xbacklight</b><br /></pre>
+
+<h2 id="udiskie">Udiskie</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install udiskie</b><br /></pre>
+
+<h2 id="abduco">Abduco</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install abduco</b><br /></pre>
+
+<h2 id="dtach">dtach</h2>
+<p>Sumber: <a href="https://github.com/crigler/dtach" target="_blank">https://github.com/crigler/dtach</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install dtach</b><br /></pre>
+
+<h2 id="lxappearance">LXappearance</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install lxappearance</b><br /></pre>
+
+<h2 id="unclutter-xfixes">unclutter-xfixes</h2>
+<p>Sumber: <a href="https://github.com/Airblader/unclutter-xfixes" target="_blank">https://github.com/Airblader/unclutter-xfixes</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf intall libXi-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install asciidoc</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>git clone https://github.com/Airblader/unclutter-xfixes.git</b><br /><span class="cmd">$ </span><b>cd unclutter-xfixes</b><br /><span class="cmd">$ </span><b>make</b><br /><span class="cmd">$ </span><b>sudo make install</b><br /></pre>
+
+<h2 id="calibre">Calibre</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install calibre</b><br /></pre>
+
+<h2 id="system-config-printer">System Config Printer</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install system-config-printer</b><br /></pre>
+
+<h2 id="ppd-from-foomatic-db">PPD from foomatic-db</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install foomatic-db</b><br /><span class="cmd">$ </span><b>sudo dnf install foomatic-db-ppds</b><br /></pre>
+
+<h2 id="xsane-scanner">XSane (Scanner)</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install xsane</b><br /></pre>
+
+<h2 id="gparted">Gparted</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install gparted</b><br /></pre>
+
+<h2 id="numix-solarized-theme-build">Numix Solarized Theme Build</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install sassc</b><br /><span class="cmd">$ </span><b>sudo dnf install gdk-pixbuf2-devel</b><br /></pre>
+
+<p>Saya memiliki Codedark.colors</p>
+
+<pre><span class="cmd">$ </span><b>sudo make THEME=Codedark install</b><br /></pre>
+
+<p>Install dependensi numix theme,</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install numix-gtk-theme</b><br /></pre>
+
+<h2 id="aria2">Aria2</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install aria2</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>pip install "aria2p[tui]"</b><br /></pre>
+
+<h2 id="mate-polkit">Mate Polkit</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install mate-polkit</b><br /></pre>
+
+<h2 id="lxpolkit">LXpolkit</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install lxpolkit</b><br /></pre>
+
+<h2 id="p7zip">P7Zip</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install p7zip</b><br /></pre>
+
+<h2 id="screenkey">Screenkey</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install screenkey</b><br /></pre>
+
+<h2 id="development-group-packages">Development Group Packages</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf group install "Development Tools"</b><br /></pre>
+
+<h2 id="docker">Docker</h2>
+<p>Sumber: <a href="https://developer.fedoraproject.org/tools/docker/docker-installation.html" target="_blank">https://developer.fedoraproject.org/tools/docker/docker-installation.html</a></p>
+
+<p>Install the <code class="language-plaintext highlighter-rouge">docker-ce</code> package using the Docker repository:</p>
+
+<p>To install the dnf-plugins-core package (which provides the commands to manage your DNF repositories) and set up the stable repository.</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install dnf-plugins-core</b><br /></pre>
+
+<p>To add the <code class="language-plaintext highlighter-rouge">docker-ce</code> repository</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo</b><br /></pre>
+
+<p>To install the docker engine. The Docker daemon relies on a OCI compliant runtime (invoked via the containerd daemon) as its interface to the Linux kernel namespaces, cgroups, and SELinux.</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install docker-ce docker-ce-cli containerd.io</b><br /></pre>
+
+<p>Afterwards you need to enable the backward compatability for Cgroups. Docker Engine on Linux relies on control groups (cgroups). A cgroup limits an application to a specific set of resources. Control groups allow Docker Engine to share available hardware resources to containers and optionally enforce limits and constraints.</p>
+
+<pre><span class="cmd">$ </span><b>sudo grubby --update-kernel=ALL --args="systemd.unified_cgroup_hierarchy=0"</b><br /></pre>
+
+<p>You must reboot after running the command for the changes to take effect</p>
+
+<p>To start the Docker service use:</p>
+
+<pre><span class="cmd">$ </span><b>sudo systemctl start docker</b><br /></pre>
+
+<p>Now you can verify that Docker was correctly installed and is running by running the Docker hello-world image.</p>
+
+<pre><span class="cmd">$ </span><b>sudo docker run hello-world</b><br /></pre>
+
+<!-- PERTANYAAN -->
+<div class="blockquote-yellow"><div class="blockquote-yellow-title"><img src="/assets/img/logo/logo_tanya.svg" />Pertanyaan</div><div>
+    <p><b>Why can’t I use docker command as a non root user, by default?</b></p>
+    <p>The Docker daemon binds to a Unix socket instead of a TCP port. By default that Unix socket is owned by the user <code class="language-plaintext highlighter-rouge">root</code> and other users can access it with <code class="language-plaintext highlighter-rouge">sudo</code>. For this reason, Docker daemon always runs as the <code class="language-plaintext highlighter-rouge">root</code> user.</p>
+    <p>You can either <a href="http://www.projectatomic.io/blog/2015/08/why-we-dont-let-non-root-users-run-docker-in-centos-fedora-or-rhel" target="_blank">set up sudo</a> to give docker access to non-root users.</p>
+    <p>Or you can create a Unix group called <code class="language-plaintext highlighter-rouge">docker</code> and add users to it. When the Docker daemon starts, it makes the ownership of the Unix socket read/writable by the <code class="language-plaintext highlighter-rouge">docker</code> group.</p>
+    <p><strong>Warning</strong>: The <code class="language-plaintext highlighter-rouge">docker</code> group is equivalent to the <code class="language-plaintext highlighter-rouge">root</code> user; For details on how this impacts security in your system, see <a href="https://docs.docker.com/engine/security/security/#docker-daemon-attack-surface" target="_blank">Docker Daemon Attack Surface</a> for details.</p>
+    <p>To create the <code class="language-plaintext highlighter-rouge">docker</code> group and add your user:</p>
+    <pre><span class="cmd">$ </span><b>sudo groupadd docker &amp;&amp; sudo gpasswd -a ${USER} docker &amp;&amp; sudo systemctl restart docker</b><br /><span class="cmd">$ </span><b>newgrp docker</b><br /></pre>
+    <p>You have to log out and log back in (or restart Docker daemon and use <code class="language-plaintext highlighter-rouge">newgrp</code> command as mentioned here) for these changes to take effect. Then you can verify if your changes were successful by running Docker without <code class="language-plaintext highlighter-rouge">sudo</code>.</p>
+  </div></div>
+
+<h2 id="kbbi-qt">KBBI-Qt</h2>
+<p>Sumber: <a href="https://github.com/bgli/kbbi-qt" target="_blank">https://github.com/bgli/kbbi-qt</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install qt5-qtbase-devel</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>git clone https://github.com/bgli/kbbi-qt.git</b><br /><span class="cmd">$ </span><b>cd kbbi-qt</b><br /><span class="cmd">$ </span><b>qmake-qt5 KBBI-Qt.pro</b><br /><span class="cmd">$ </span><b>make</b><br /><span class="cmd">$ </span><b>sudo make install</b><br /></pre>
+
+<h2 id="zathura">Zathura</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install zathura</b><br /><span class="cmd">$ </span><b>sudo dnf install zathura-pdf-mupdf</b><br /></pre>
+
+<h2 id="kamus">Kamus</h2>
+<p>Sumber: <a href="https://github.com/abihf/kamus" target="_blank">https://github.com/abihf/kamus</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install vala</b><br /><span class="cmd">$ </span><b>sudo dnf install libvala-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install gtk3-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install libgee-devel</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>./configure</b><br /><span class="cmd">$ </span><b>make</b><br /><span class="cmd">$ </span><b>sudo make install</b><br /></pre>
+
+<h2 id="thunderbird">Thunderbird</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install thunderbird</b><br /></pre>
+
+<h2 id="gucharmap-character-map">Gucharmap (Character Map)</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install gucharmap</b><br /></pre>
+
+<h2 id="dragon-drag-and-drop-helper">Dragon (drag and drop helper)</h2>
+<p>Sumber: <a href="https://github.com/mwh/dragon.git" target="_blank">https://github.com/mwh/dragon.git</a></p>
+
+<pre><span class="cmd">$ </span><b>git clone https://github.com/mwh/dragon.git</b><br /><span class="cmd">$ </span><b>cd dragon</b><br /><span class="cmd">$ </span><b>make</b><br /><span class="cmd">$ </span><b>make install</b><br /></pre>
+
+<h2 id="zoom-meeting-client">Zoom Meeting Client</h2>
+<p>Sumber: <a href="https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux#h_825b50ac-ad15-44a8-9959-28c97e4803ef" target="_blank">https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux#h_825b50ac-ad15-44a8-9959-28c97e4803ef</a></p>
+
+<p>Sumber: <a href="https://tecadmin.net/install-zoom-client-on-fedora/" target="_blank">https://tecadmin.net/install-zoom-client-on-fedora/</a></p>
+
+<pre><span class="cmd">$ </span><b>wget https://zoom.us/client/latest/zoom_x86_64.rpm</b><br /><span class="cmd">$ </span><b>sudo dnf localinstall zoom_x86_64.rpm</b><br /></pre>
+
+<h2 id="ffmulticonverter">ffmulticonverter</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install ffmulticonverter</b><br /></pre>
+
+<h2 id="handbrake-1">HandBrake</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install HandBrake-gui</b><br /></pre>
+
+<h2 id="x11vnc">x11vnc</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install x11vnc</b><br /></pre>
+
+<h2 id="discord">Discord</h2>
+
+<p>(RPMFusion - NonFree)</p>
+<pre><span class="cmd">$ </span><b>sudo dnf install discord</b><br /></pre>
+
+<h2 id="slack">Slack</h2>
+<p>Sumber: <a href="https://slack.com/intl/en-id/downloads/linux" target="_blank">https://slack.com/intl/en-id/downloads/linux</a></p>
+
+<pre><span class="cmd">$ </span><b>wget https://downloads.slack-edge.com/linux_releases/slack-4.17.0-0.1.fc21.x86_64.rpm</b><br /><span class="cmd">$ </span><b>sudo dnf localinstall slack-4.17.0-0.1.fc21.x86_64.rpm</b><br /></pre>
+
+<h2 id="pdf-arranger">PDF Arranger</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install pdfarranger</b><br /></pre>
+
+<h2 id="master-pdf-editor-4">Master PDF Editor 4</h2>
+<p>Sumber: <a href="https://www.linuxuprising.com/2019/04/download-master-pdf-editor-4-for-linux.html" target="_blank">https://www.linuxuprising.com/2019/04/download-master-pdf-editor-4-for-linux.html</a></p>
+
+<pre><span class="cmd">$ </span><b>wget http://code-industry.net/public/master-pdf-editor-4.3.89_qt5.x86_64.rpm</b><br /><span class="cmd">$ </span><b>sudo dnf localinstall master-pdf-editor-4.3.89_qt5.x86_64.rpm</b><br /></pre>
+
+<h2 id="intel-gpu-tools">Intel GPU Tools</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install igt-gpu-tools</b><br /></pre>
+
+<h2 id="autocutsel">Autocutsel</h2>
+<p>Sumber: <a href="http://www.nongnu.org/autocutsel/" target="_blank">http://www.nongnu.org/autocutsel/</a></p>
+
+<p>Sumber: <a href="https://github.com/sigmike/autocutsel" target="_blank">https://github.com/sigmike/autocutsel</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install libXaw-devel</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>git clone https://github.com/sigmike/autocutsel</b><br /><span class="cmd">$ </span><b>cd autocutsel</b><br /><span class="cmd">$ </span><b>./bootstrap</b><br /><span class="cmd">$ </span><b>./configure</b><br /><span class="cmd">$ </span><b>make</b><br /><span class="cmd">$ </span><b>sudo make install</b><br /></pre>
+
+<h2 id="xzoom">XZoom</h2>
+<p>Sumber: <a href="https://copr.fedorainfracloud.org/coprs/bgstack15/stackrpms/" target="_blank">https://copr.fedorainfracloud.org/coprs/bgstack15/stackrpms/</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf copr enable bgstack15/stackrpms</b><br /><span class="cmd">$ </span><b>sudo dnf install xzoom</b><br /></pre>
+
+<h2 id="minder-mind-mapping">Minder (mind mapping)</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install minder</b><br /></pre>
+
+<h2 id="taskell-kanban-board">Taskell (Kanban Board)</h2>
+<p>Sumber: <a href="https://github.com/smallhadroncollider/taskell" target="_blank">https://github.com/smallhadroncollider/taskell</a></p>
+
+<p>Command-line Kanban board/task manager with support for Trello boards and GitHub projects</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install ncurses-compat-libs</b><br /></pre>
+
+<h2 id="showhide-grub-menu">Show/Hide GRUB Menu</h2>
+<p>Sumber: <a href="https://fedoraproject.org/wiki/Changes/HiddenGrubMenu" target="_blank">https://fedoraproject.org/wiki/Changes/HiddenGrubMenu</a></p>
+
+<p>On systems with only a single OS installed, the grub menu does not offer any useful functionality, so we should hide it by default.</p>
+
+<p>This new auto-hide functionality will be automatically enabled on new Fedora Workstation installs. This can be disabled by running:</p>
+
+<pre><span class="cmd">$ </span><b>sudo grub2-editenv - unset menu_auto_hide</b><br /></pre>
+
+<h2 id="zeal">Zeal</h2>
+
+<p>Offline documentation browser inspired by Dash</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install zeal</b><br /></pre>
+
+<h2 id="xinput">xinput</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install xinput</b><br /></pre>
+
+<h2 id="gthumb-image-viewer-editor-organizer">gThumb (image viewer, editor, organizer)</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install gthumb</b><br /></pre>
+
+<h2 id="speedtest-cli">Speedtest CLI</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install speedtest-cli</b><br /></pre>
+
+<h2 id="spotify">Spotify</h2>
+
+<p>(Flatpak - Flathub)</p>
+
+<pre><span class="cmd">$ </span><b>flatpak install flathub com.spotify.Client</b><br /></pre>
+
+<h2 id="rpkg">rpkg</h2>
+<p>Sumber: <a href="https://pagure.io/rpkg-util" target="_blank">https://pagure.io/rpkg-util</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install rpkg</b><br /></pre>
+
+<h2 id="asciidoc">asciidoc</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install asciidoc</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>gem install asciidoctor</b><br /><span class="cmd">$ </span><b>gem install asciidoctor-pdf --pre</b><br /><span class="cmd">$ </span><b>gem install pygments.rb</b><br /></pre>
+
+<h2 id="tmux">Tmux</h2>
+<p>Sumber: <a href="https://github.com/tmux/tmux" target="_blank">https://github.com/tmux/tmux</a></p>
+
+<p>Manual build</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install libevent-devel</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>git clone https://github.com/tmux/tmux.git</b><br /><span class="cmd">$ </span><b>cd tmux</b><br /><span class="cmd">$ </span><b>sh autogen.sh</b><br /><span class="cmd">$ </span><b>./configure</b><br /><span class="cmd">$ </span><b>make</b><br /><span class="cmd">$ </span><b>sudo make install</b><br /></pre>
+
+<p>Fedora repo</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf instal tmux</b><br /></pre>
+
+<h2 id="emacs">Emacs</h2>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install emacs</b><br /></pre>
+
+<h2 id="wireshark">Wireshark</h2>
+<p>Sumber: <a href="https://fedoramagazine.org/how-to-install-wireshark-fedora/" target="_blank">https://fedoramagazine.org/how-to-install-wireshark-fedora/</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install wireshark</b><br /></pre>
+
+<p>Add user ke dalam group <strong>wireshark</strong>.</p>
+
+<pre><span class="cmd">$ </span><b>sudo usermod -a -G wireshark bandithijo</b><br /></pre>
+
+<p>* Perlu restart</p>
+
+<h2 id="scrcpy">Scrcpy</h2>
+<p>Sumber: <a href="https://github.com/Genymobile/scrcpy" target="_blank">https://github.com/Genymobile/scrcpy</a></p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install SDL2-devel</b><br /><span class="cmd">$ </span><b>sudo dnf install android-tools</b><br /></pre>
+
+<pre><span class="cmd">$ </span><b>git clone https://github.com/Genymobile/scrcpy</b><br /><span class="cmd">$ </span><b>cd scrcpy</b><br /><span class="cmd">$ </span><b>./install_release.sh</b><br /></pre>
+
+<p>When a new release is out, update the repo and reinstall:</p>
+
+<pre><span class="cmd">$ </span><b>git pull</b><br /><span class="cmd">$ </span><b>./install_release.sh</b><br /></pre>
+
+<p>To uninstall:</p>
+
+<pre><span class="cmd">$ </span><b>sudo ninja -Cbuild-auto uninstall</b><br /></pre>
+
+<h2 id="faketime">Faketime</h2>
+
+<p>Manipulate system time per process for testing purposes.</p>
+
+<pre><span class="cmd">$ </span><b>sudo dnf install libfaketime</b><br /></pre>
+
+</p>
+
+          <!-- wip -->
+          
+            <br>
+            <p class='font-latin' style='padding-top:20px;text-align:left;'>Sedang dalam proses penulisan... </p>
+          
+
+          <!-- License -->
+          
+
+          <div style="clear:both;"></div>
+
+          <!-- Penulis -->
+          
+            <div style="text-align:center; margin:0 0 10px 0;"></div>
+
+            
+
+            
+          
+
+          <div style="clear:both;"></div>
+
+          <!-- Begin Mailchimp Signup Form -->
+<link href="/assets/css/mailchimp-classic-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+  #mc_embed_signup form {
+    padding: 10px 0 !important;
+  }
+
+  #mc_embed_signup .button {
+    background-color: #008352;
+  }
+
+  #mc_embed_signup h2 {
+    font-size: 32px !important;
+    padding-bottom: .3em;
+  }
+
+  .mc-field-group {
+    width: 100% !important;
+    padding-bottom: 2% !important;
+  }
+
+  .mce-label {
+    margin-bottom: 3% !important;
+    font-size: 14px;
+  }
+
+  .mc-form {
+    float: left;
+    width: 50% !important;
+  }
+
+  .mc-text {
+    float: right;
+    font-size: 14px;
+    width: 50%;
+    padding: 5px 10px;
+    text-align: justify;
+  }
+
+  @media (max-width: 640px) {
+    .mc-field-group {
+      width: 100% !important;
+      padding-bottom: 4% !important;
+    }
+
+    .mc-form {
+      float: none;
+      width: 100% !important;
+    }
+
+    .mc-text {
+      float: none;
+      font-size: 14px;
+      width: 100%;
+      padding: 0;
+    }
+
+  {
+</style>
+<div id="mc_embed_signup">
+  <form action="https://github.us4.list-manage.com/subscribe/post?u=68e5540d98defef56764f64df&amp;id=39ab92c3ed" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+      <h2>Berlangganan via Email</h2>
+      <div class="mc-text">Jangan sampai ketinggalan kabar dan info terbaru mengenai BanditHijo (R)-Chive.<br>Ayo bergabung!</div>
+      <div class="mc-form">
+        <div class="mc-field-group">
+          <label class="mce-label"></label>
+          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Masukkan email di sini...">
+        </div>
+        <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_68e5540d98defef56764f64df_39ab92c3ed" tabindex="-1" value=""></div>
+        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!--End mc_embed_signup-->
+
+
+        </div><!-- markdown-body -->
+      </article>
+
+      <article>
+        <div class="post-body-sidebar">
+          <aside class="sidebar noselect" id="sidebar-tail">
+
+    <div class="sidebar-body">
+  <h1 style="font-size:1.5em;border-bottom:1px dashed #9E9E9E;">
+    <img src="/assets/img/logo/logo_terbaru.svg">Note Terbaru
+  </h1>
+  <div class="toc">
+  <ul>
+  
+  
+    <li><a href="/note/catatan-post-installation-fedora-workstation">Catatan Post Installation Fedora Workstation</a></li>
+  
+    <li><a href="/note/catatan-daftar-terminal-tools">Catatan Daftar Terminal Tools</a></li>
+  
+    <li><a href="/note/catatan-perihal-emacs-tutorial">Catatan dalam Berinteraksi dengan Emacs Tutorial</a></li>
+  
+    <li><a href="/note/catatan-perihal-pacman">Catatan dalam Berinteraksi dengan Pacman</a></li>
+  
+    <li><a href="/note/catatan-perihal-git">Catatan dalam Berinteraksi dengan Git</a></li>
+  
+    <li><a href="/note/catatan-perihal-vboxmanage">Catatan dalam Berinteraksi dengan VBoxManage</a></li>
+  
+    <li><a href="/note/catatan-perihal-tmux">Catatan dalam Berinteraksi dengan Tmux</a></li>
+  
+    <li><a href="/note/catatan-perihal-disk-dan-partition">Catatan dalam Berinteraksi dengan Disk dan Partition</a></li>
+  
+    <li><a href="/note/catatan-perihal-command-line-shell">Catatan dalam Menggunakan Command Line Shell</a></li>
+  
+    <li><a href="/note/catatan-perihal-instalasi-openbsd">Catatan Instalasi OpenBSD</a></li>
+  
+  </ul>
+  </div>
+  <div style="margin:10px 0 10px 0;border-bottom:1px dashed #9E9E9E;"></div>
+  <p style="text-align:left;"><a style="border-bottom:0;" href="/vlog/"><b>Selengkapnya >></b></a></p>
+</div>
+
+    <div class="sidebar-body">
+  <h1 style="font-size:1.5em;border-bottom:1px dashed #9E9E9E;">
+    <img src="/assets/img/logo/logo_tags.svg"><a style="color:#000;border-bottom:none;" href="/tags/">Tags</a>
+  </h1>
+  <div class="toc">
+    
+    
+      
+        
+        <span class="tags"><a href="/tags/#android">Android</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#arch-linux">Arch Linux</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#artix-linux">Artix Linux</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#bootstrap">Bootstrap</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#database">Database</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#django">Django</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#docker">Docker</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#dwm">Dwm</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#fedora">Fedora</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#freebsd">FreeBSD</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#heroku">Heroku</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#i3wm">I3WM</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#java">Java</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#javascript">Javascript</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#jekyll">Jekyll</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#kvm">KVM</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#network">Network</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#osx">OSX</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#python">Python</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#qemu">Qemu</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#rspec">RSpec</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#rails">Rails</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#ruby">Ruby</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#script">Script</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#security">Security</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#terminal">Terminal</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#thinkpad">ThinkPad</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#tips">Tips</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#tools">Tools</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#ulasan">Ulasan</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#vim">Vim</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#virt-manager">Virt-Manager</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#wine">Wine</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#xfce">XFCE</a></span>
+      
+        
+        <span class="tags"><a href="/tags/#jquery">jQuery</a></span>
+      
+    
+    
+  </div><!-- toc -->
+</div><!-- sidebar-body -->
+
+    <div class="sidebar-body-rss"">
+  <h1 style="border-bottom:1px dashed #ACA573;margin-bottom:5px;">
+    <img src="/assets/img/logo/logo_bantuan.svg">Bantuan
+  </h1>
+   <p>Kebingungan dengan simbol-simbol yang terdapat pada halaman blog ini?</p>
+   <p>Kamu dapat mempelajari bagaimana cara membaca setiap komponen yang ada di dalam blog, <a href="/bantuan/"><b>di sini</b></a>.</p>
+</div>
+
+    <div class="sidebar-body-rss">
+  <h1 style="font-size:1.5em;border-bottom:1px dashed #ACA573;margin-bottom:5px;">
+    <img src="/assets/img/logo/logo_rss.svg">Berlangganan RSS
+  </h1>
+  <p>Untuk dapat berlangganan catatan/post terbaru, kamu dapat mengklik tombol RSS yang terdapat di <a href="#footer"><b>footer</b></a>.</p>
+  <p>Blog ini memiliki dua buah RSS feed, Blog dan Vlog.</p>
+  <p>Apabila kamu mengklik tombol RSS yang ada pada halaman yang berkategori Blog, maka RSS feed url yang keluar adalah untuk kategori Blog, begitu pula sebaliknya untuk halaman Vlog.</p>
+  <div style="margin:15px 0 10px 0;border-bottom:1px dashed #ACA573;"></div>
+  <p>Belum tahu tentang RSS? Yuk, <a href="https://bandithijo.github.io/blog/newsboat-rss-feed-reader"><b>ke sini</b></a></p>
+</div>
+
+
+</aside>
+
+        </div>
+      </article>
+
+    </div><!-- container-edge-border -->
+  </div><!-- main container -->
+</section><!-- main -->
+
+
+<footer id="footer" class="noselect">
+  <div class="container">
+    <div class="container-inner">
+      <div class="footer-line">
+        <p style="font-size:20px;"><a href="/"><strong>BanditHijo (R)-Chive</strong></a> &copy; 2012 - 2021</p>
+        <p style="font-size:12px;margin-top:-35px;color:#404040;">
+          Blog ini dibuat di atas distribusi sistem operasi <a href="https://archlinux.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Arch Linux</a>.<br>
+          Source code dan artikel-artikel ditulis menggunakan <span class="nobr"><a href="http://vim.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Vim</a> text editor.</span><br>
+          Semua elemen gambar dikerjakan menggunakan <span class="nobr"><a href="https://inkscape.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Inkscape</a> dan <a href="https://gimp.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">GIMP</a>.</span><br>
+          Menggunakan <a href="https://jekyllrb.com" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Jekyll</a> sebagai Static Site Generator.<br>
+          Dihosting menggunakan <a href="https://github.com/bandithijo/bandithijo.github.io" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">GitHub</a>.<br>
+          Terakhir update: <b>12/07/2021</b>
+        </p>
+        <p class="footer-menu">
+          <br>
+          <a href="/contact/"><strong>Contact</strong></a> |&nbsp;
+          <a href="https://twitter.com/bandithijo" target="_blank" rel="noreferrer"><strong>Twitter</strong></a> |&nbsp;
+          <a rel="me" href="https://www.youtube.com/c/BanditHijo" target="_blank" rel="noreferrer"><strong>YouTube</strong></a> |&nbsp;
+          <a rel="me" href="https://github.com/bandithijo" target="_blank" rel="noreferrer"><strong>GitHub</strong></a> |&nbsp;
+          
+            <a href="/feed/note.xml" target="_blank"><strong>RSS</strong></a>
+          
+        </p>
+
+        <div class="notif-donasi">
+          <div class="notif-donasi-col-1">
+            <a href="https://saweria.co/bandithijo" target="_blank" rel="noopener">
+              <p>Apabila ingin memberikan <b>apresiasi</b> atas tulisan-tulisan di blog ini, dapat melalui <span class="nobr"><b>Saweria</b></span> atas nama <span class="nobr"><b>Rizqi Nur Assyaufi</b></span>.</p>
+              <p style="margin-top:-8px;">Berapapun besarnya dukungan dari kamu, akan sangat bermanfaat untuk proses produksi tulisan di blog ini.</p>
+              <p style="margin-top:-8px;">Terima kasih, mas Bro!</p>
+            </a>
+          </div>
+          <div class="notif-donasi-col-2">
+            <a href="https://saweria.co/bandithijo" target="_blank" rel="noopener">
+              <img class="notif-donasi-img" src="/assets/img/logo/logo_qr_saweria.png">
+            </a>
+          </div>
+        </div><!-- notif-donasi -->
+
+        <div class="tech-i-used-desktop">
+          <a href="https://jekyllrb.com" target="_blank" rel="noopener">
+            <img class="footer-img-jekyll" src="/assets/img/logo/logo_jekyll.png">
+          </a>
+          <a href="https://github.com/bandithijo" target="_blank" rel="noopener">
+            <img class="footer-img-github" src="/assets/img/logo/logo_github.png">
+          </a>
+          <a href="https://github.com/features/actions" target="_blank" rel="noopener">
+            <img class="footer-img-githubactions" src="/assets/img/logo/logo_github_actions.png">
+          </a>
+        </div><!-- tech-i-used-desktop -->
+
+        <div class="tech-i-used-mobile">
+          <a href="https://github.com/features/actions" target="_blank" rel="noopener" rel="noreferrer">
+            <img class="footer-img-1" src="/assets/img/logo/logo_github_actions_mobile.png">
+          </a>
+          <a href="https://github.com/bandithijo" target="_blank" rel="noopener" rel="noreferrer">
+            <img class="footer-img-2" src="/assets/img/logo/logo_github_mobile.png">
+          </a>
+          <a href="https://jekyllrb.com/" target="_blank" rel="noopener" rel="noreferrer">
+            <img class="footer-img-3" src="/assets/img/logo/logo_jekyll_mobile.png">
+          </a>
+        </div><!-- tech-i-used-mobile -->
+      </div><!-- footer-line -->
+    </div><!-- container-innner -->
+  </div><!-- footer container -->
+</footer>
+
+<!-- site.git.build_version -->
+<div class="tech-i-used-desktop" style="text-align:center;font-size:9px;color:#8F8879;margin: -5px 0 10px 0;">
+  c2deb4abbcb1b30e9079c35732dca589f2d7b6e8
+</div>
+<!-- END site.git.build_version -->
+
+<script type="text/javascript" src="/assets/js/nav.js"></script>
+<script type="text/javascript" src="/assets/js/lazyload.js"></script>
+<script type="text/javascript" src="/assets/js/headings-permalink.js"></script>
+<script type="text/javascript" src="/assets/js/newsline-sticky.js"></script>
+
+<script type="text/javascript" src="/assets/js/aside.js"></script>
+
+
+<script type="text/javascript" src="/assets/js/enlarge-image-modal.js"></script>
+
+
+
+
+</body>
+</html>
