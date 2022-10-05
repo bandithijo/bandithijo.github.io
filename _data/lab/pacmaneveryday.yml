@@ -351,3 +351,10 @@ experiment:
       <li>warning: failed to retrieve some files</li>
       <li>error: failed to commit transaction (unexpected error)</li>
       </ul>
+
+  - date:   '2022-10-05'
+    number: '050'
+    status: 'OK'
+    url:    'https://youtu.be/NiDRjHNa5BA'
+    note:   >-
+      -
