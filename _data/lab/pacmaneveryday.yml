@@ -407,3 +407,14 @@ experiment:
     url:    'https://youtu.be/FDL8xYIM1N0'
     note:   >-
       -
+
+  - date:   '2022-10-13'
+    number: '058'
+    status: 'ERROR, OK'
+    url:    'https://youtu.be/MJ9_LwbM6XM'
+    note:   >-
+      <ul>
+      <li>error: failed retrieving file 'linux-headers-6.0.1.arch1-1-x86_64.pkg.tar.zst.sig' from at.arch.mirror.kescher.at : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>warning: failed to retrieve some files</li>
+      <li>error: failed to commit transaction (unexpected error)</li>
+      </ul>
