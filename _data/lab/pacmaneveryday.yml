@@ -474,3 +474,14 @@ experiment:
     url:    'https://youtu.be/F5ET2_aybZY'
     note:   >-
       -
+
+  - date:   '2022-10-22'
+    number: '067'
+    status: 'ERROR, OK'
+    url:    'https://youtu.be/OL8ztKksrr4'
+    note:   >-
+      <ul>
+      <li>error: failed retrieving file 'qt5-webengine-5.15.10-4-x86_64.pkg.tar.zst.sig' from at.arch.mirror.kescher.at :</li>
+      <li>warning: failed to retrieve some files</li>
+      <li>error: failed to commit transaction (unexpected error)</li>
+      </ul
