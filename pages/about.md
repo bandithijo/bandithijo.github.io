@@ -93,6 +93,7 @@ Berikut ini adalah spesifikasi mesin maupun aplikasi yang pernah atau hingga saa
 | Screen Recorder       | **ffmpeg** & **SimpleScreenRecorder** |
 | Webcam                | **ffplay** & **mpv**                  |
 | Video Player          | **mpv**                               |
+| Audio Player          | **namp**                              |
 | Browser               | **qutebrowser**                       |
 | File Manager          | **ranger**                            |
 | Email Client          | **neomutt**                           |
