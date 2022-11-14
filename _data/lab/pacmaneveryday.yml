@@ -639,3 +639,14 @@ experiment:
     url:    'https://youtu.be/vIF7LV8Es9c'
     note:   >-
       -
+
+  - date:   '2022-11-14'
+    number: '090'
+    status: 'ERROR, OK'
+    url:    'https://youtu.be/4VO4gJ-IPfQ'
+    note:   >-
+      <ul>
+      <li>error: failed retrieving file 'opencv-4.6.0-6-x86_64.pkg.tar.zst.sig' from at.arch.mirror.kescher.at :</li>
+      <li>warning: failed to retrieve some files</li>
+      <li>error: failed to commit transaction (download library error)</li>
+      </ul>
