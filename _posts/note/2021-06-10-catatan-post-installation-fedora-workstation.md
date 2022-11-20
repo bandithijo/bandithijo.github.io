@@ -2113,6 +2113,11 @@ For Emoji support,
 
 Sumber: [https://copr.fedorainfracloud.org/coprs/linuxredneck/libXft-bgra/](https://copr.fedorainfracloud.org/coprs/linuxredneck/libXft-bgra/){:target="_blank"}
 
+{% box_info %}
+<p markdown=1>**libxft** sudah support BGRA glyph for emoji color.</p>
+[https://gitlab.freedesktop.org/xorg/lib/libxft/-/blob/libXft-2.3.5/NEWS](https://gitlab.freedesktop.org/xorg/lib/libxft/-/blob/libXft-2.3.5/NEWS){:target="_blank"}
+{% endbox_info %}
+
 {% shell_term $ %}
 sudo dnf copr enable linuxredneck/libXft-bgra
 sudo rpm -e --nodeps libXft libXft-devel
