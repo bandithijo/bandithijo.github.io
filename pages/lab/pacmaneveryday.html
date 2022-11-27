@@ -12,14 +12,20 @@ permalink: '/lab/pacmaneveryday/'
   <script>
     const arr_packages = [{% for exp in exps %}{{ exp.count }},{% endfor %}]
     const arr_sizes = [{% for exp in exps %}{{ exp.size }},{% endfor %}]
+    const average_pkgs = arr_packages.reduce((a, b) => a + b, 0) / arr_packages.length;
+    const average_size = arr_sizes.reduce((a, b) => a + b, 0) / arr_sizes.length;
 
     document.addEventListener('DOMContentLoaded', function () {
       const chart = Highcharts.chart('container', {
         chart: {
-          type: 'column'
+          type: 'column',
+          zoomType: 'x'
         },
         title: {
-          text: ''
+          text: '#PacmanEveryday'
+        },
+        subtitle: {
+          text: '<a href="https://bandithijo.dev/lab/pacmaneveryday" target="_blank">bandithijo.dev</a>'
         },
         xAxis: {
           type: 'datetime'
@@ -46,14 +52,19 @@ permalink: '/lab/pacmaneveryday/'
           tooltip: {
 	    valueDecimals: 2
           }
-        }]
+	}],
+	annotations: [{
+	  labels: [{
+            point: { x: 0, y: 0 },
+            shape: 'rect',
+            padding: 10,
+            text: `Average download package: <b>${parseFloat(average_pkgs).toFixed(2)}</b> pkgs<br>` +
+                  `Average download size: <b>${parseFloat(average_size).toFixed(2)}</b> MiB`
+          }],
+          draggable: ''
+	}]
       });
     });
-
-    const package_average = arr_packages.reduce((a, b) => a + b, 0) / arr_packages.length;
-    console.log(`Average download package: ${package_average} Packages`);
-    const size_average = arr_sizes.reduce((a, b) => a + b, 0) / arr_sizes.length;
-    console.log(`Average download size: ${size_average} MiB`);
   </script>
 
   {% for exp in exps %}
