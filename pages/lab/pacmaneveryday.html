@@ -7,7 +7,7 @@ permalink: '/lab/pacmaneveryday/'
 
 <div class="post-body noselect">
 
-  <div id="container" style="width:100%;height:400px;margin-bottom:20px;"></div>
+  <div id="container" style="width:100%;height:500px;margin-bottom:20px;"></div>
   {% assign exps = site.data.lab.pacmaneveryday.experiment %}
   <script>
     const arr_packages = [{% for exp in exps %}{{ exp.count }},{% endfor %}]
@@ -16,10 +16,13 @@ permalink: '/lab/pacmaneveryday/'
     document.addEventListener('DOMContentLoaded', function () {
       const chart = Highcharts.chart('container', {
         chart: {
-          type: 'line'
+          type: 'column'
         },
         title: {
-          text: ''
+          text: '#PacmanEveryday'
+        },
+        subtitle: {
+          text: '<a href="https://bandithijo.dev/lab/pacmaneveryday" target="_blank">bandithijo.dev</a>'
         },
         xAxis: {
           type: 'datetime'
@@ -32,7 +35,9 @@ permalink: '/lab/pacmaneveryday/'
         plotOptions: {
           series: {
             pointStart: Date.UTC(2022, 7, 17),
-            pointIntervalUnit: 'day'
+            pointIntervalUnit: 'day',
+	    stacking: 'overlap',
+            lineWidth: 1
           }
         },
         series: [{
@@ -42,7 +47,7 @@ permalink: '/lab/pacmaneveryday/'
           name: 'Download Size (MiB)',
           data: arr_sizes,
           tooltip: {
-              valueDecimals: 2
+	    valueDecimals: 2
           }
         }]
       });
