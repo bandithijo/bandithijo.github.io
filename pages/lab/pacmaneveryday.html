@@ -7,7 +7,7 @@ permalink: '/lab/pacmaneveryday/'
 
 <div class="post-body noselect">
 
-  <div id="container" style="width:100%;height:500px;margin-bottom:20px;"></div>
+  <div id="container" style="width:100%;height:500px;margin:20px 0;"></div>
   {% assign exps = site.data.lab.pacmaneveryday.experiment %}
   <script>
     const arr_packages = [{% for exp in exps %}{{ exp.count }},{% endfor %}]
@@ -19,10 +19,7 @@ permalink: '/lab/pacmaneveryday/'
           type: 'column'
         },
         title: {
-          text: '#PacmanEveryday'
-        },
-        subtitle: {
-          text: '<a href="https://bandithijo.dev/lab/pacmaneveryday" target="_blank">bandithijo.dev</a>'
+          text: ''
         },
         xAxis: {
           type: 'datetime'
