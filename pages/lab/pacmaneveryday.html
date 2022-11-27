@@ -7,7 +7,53 @@ permalink: '/lab/pacmaneveryday/'
 
 <div class="post-body noselect">
 
+  <div id="container" style="width:100%;height:400px;margin-bottom:20px;"></div>
   {% assign exps = site.data.lab.pacmaneveryday.experiment %}
+  <script>
+    const arr_packages = [{% for exp in exps %}{{ exp.count }},{% endfor %}]
+    const arr_sizes = [{% for exp in exps %}{{ exp.size }},{% endfor %}]
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const chart = Highcharts.chart('container', {
+        chart: {
+          type: 'line'
+        },
+        title: {
+          text: ''
+        },
+        xAxis: {
+          type: 'datetime'
+        },
+        yAxis: {
+          title: {
+            text: 'Count/Size'
+          }
+        },
+        plotOptions: {
+          series: {
+            pointStart: Date.UTC(2022, 7, 17),
+            pointIntervalUnit: 'day'
+          }
+        },
+        series: [{
+          name: 'Packages',
+          data: arr_packages
+        }, {
+          name: 'Download Size (MiB)',
+          data: arr_sizes,
+          tooltip: {
+              valueDecimals: 2
+          }
+        }]
+      });
+    });
+
+    const package_average = arr_packages.reduce((a, b) => a + b, 0) / arr_packages.length;
+    console.log(`Average download package: ${package_average} Packages`);
+    const size_average = arr_sizes.reduce((a, b) => a + b, 0) / arr_sizes.length;
+    console.log(`Average download size: ${size_average} MiB`);
+  </script>
+
   {% for exp in exps %}
     <p type="button" class="post-title-index collapsible-title"><span class="mono">{{ exp.number }}</span>&nbsp;|&nbsp;
       {% assign status = exp.status | split: ', ' %}
@@ -25,6 +71,8 @@ permalink: '/lab/pacmaneveryday/'
         <p>
         Experiment Name: #PacmanEveryday<br>
         Experiment No. : #{{ exp.number }}<br>
+        Upgradeable Package: {{ exp.count }} Packages<br>
+        Total Download Size: {{ exp.size }} MiB<br>
         Evidence: <a href="{{ exp.url }}" target="_blank">{{ exp.url }}</a><br>
         Note: {{ exp.note }}
         </p>
