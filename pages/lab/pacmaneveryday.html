@@ -5,9 +5,13 @@ author: 'BanditHijo'
 permalink: '/lab/pacmaneveryday/'
 ---
 
+<style>
+</style>
+
 <div class="post-body noselect">
 
   <div id="container" style="width:100%;height:500px;margin:20px 0;"></div>
+
   {% assign exps = site.data.lab.pacmaneveryday.experiment %}
   <script>
     const arr_packages = [{% for exp in exps %}{{ exp.count }},{% endfor %}]
@@ -28,19 +32,23 @@ permalink: '/lab/pacmaneveryday/'
           text: '<a href="https://bandithijo.dev/lab/pacmaneveryday" target="_blank">bandithijo.dev</a>'
         },
         xAxis: {
-          type: 'datetime'
+          type: 'datetime',
+          crosshair: true
         },
         yAxis: {
           title: {
             text: 'Count/Size'
-          }
+          },
+          crosshair: true
         },
         plotOptions: {
+          column: {
+            pointPadding: 0.1,
+            borderWidth: 0
+          },
           series: {
             pointStart: Date.UTC(2022, 7, 17),
-            pointIntervalUnit: 'day',
-	    stacking: 'overlap',
-            lineWidth: 1
+            pointIntervalUnit: 'day'
           }
         },
         series: [{
