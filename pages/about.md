@@ -33,7 +33,7 @@ Ilmu itu seharusnya mengalir, jangan sampai berhenti di kamu, yaa!
 
 # Apa yang Ditulis di dalam Blog?
 
-Sebagian besar isi dari blog ini mengenai hal-hal teknis tentang pemecahan suatu masalah yang saya alami saat menggunakan sistem operasi GNU/Linux. Namun, perlu digaris bawahi, bahwa **saya bukan seorang pakar bersertifikat dalam sistem operasi GNU/Linux. Saya hanya seorang penggemar sekaligus pemakai**. Apabila terdapat kesalahan dalam penulisan, mohon untuk dapat dimaklumi keterbatasan saya, hehehe.
+Sebagian besar isi dari blog ini mengenai hal-hal teknis tentang pemecahan suatu masalah yang saya alami saat menggunakan sistem operasi Linux. Namun, perlu digaris bawahi, bahwa **saya bukan seorang pakar bersertifikat dalam sistem operasi Linux. Saya hanya seorang penggemar sekaligus pemakai**. Apabila terdapat kesalahan dalam penulisan, mohon untuk dapat dimaklumi keterbatasan saya, hehehe.
 
 Sebaik-baik tulisan dokumentasi tentu saja yang dibuat langsung oleh developer aplikasi yang bersangkutan. Karenanya, saya selalu menyertakan sumber literatur yang saya gunakan dalam membuat tulisan.
 
@@ -45,12 +45,9 @@ Tampilan dari tema blog ini pun saya buat sendiri. Tujuannya agar saya lebih beb
 
 Ceritanya dapat teman-teman baca [di sini]({{ site.url }}/blog/migrasi-blog-2-0){:target="_blank"}.
 
-# Spesifikasi Mesin Ketik & Aplikasi Favorit
+# Apa mesin ketik yang digunakan?
 
 Berikut ini adalah spesifikasi mesin maupun aplikasi yang pernah atau hingga saat ini saya gunakan untuk berkomputasi ataupun untuk mengukir tulisan di blog ini.
-
-<br>
-**Daftar Mesin Ketik**
 
 |---------------------------|---------------------------------|----------------------------------|
 | <center>Mesin</center>    | <center>Tahun Produksi</center> | <center>Tahun Digunakan</center> |
@@ -63,8 +60,7 @@ Berikut ini adalah spesifikasi mesin maupun aplikasi yang pernah atau hingga saa
 | **Lenovo ThinkPad X260**  | 2016                            | Dec 2021 - Sekarang              |
 |---------------------------|---------------------------------|----------------------------------|
 
-<br>
-**Aplikasi Favorit**
+# Aplikasi favorit yang digunakan di Linux?
 
 |-----------------------|---------------------------------------|
 | <center>Data</center> | <center>Keterangan</center>           |
@@ -73,7 +69,7 @@ Berikut ini adalah spesifikasi mesin maupun aplikasi yang pernah atau hingga saa
 | Static Site Generator | **Jekyll**                            |
 | Hosting               | **GitHub Pages**                      |
 | Format Text           | **markdown** & **asciidoc**           |
-| Sistem Operasi        | **GNU/Linux**                         |
+| Sistem Operasi        | **Linux**                             |
 | Distribusi            | **Arch Linux**                        |
 | Desktop Env.          | -                                     |
 | Window Manager        | **dwm**                               |
@@ -110,7 +106,7 @@ Seperti yang teman-teman lihat di atas, saya banyak menggunakan *free and open s
 
 Catatan tentang bagaimana cara untuk berdonasi, dapat teman-teman baca di sini, [**Hanya dengan 100 Ribu Rupiah, Bisa Berdonasi ke 6 Open Source Project!**](/blog/berdonasi-ke-project-open-source-yang-digunakan).
 
-# Ilustrasi Workflow
+# Bagimana workflow dalam menggunakan Linux?
 
 ![gambar_1]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/T3wM3s7N/gambar-01.png" onerror="imgError(this);"}{:class="myImg"}
 <p class="img-caption">i3 Window Manger + Polybar + Conky + Solarized Dark = My Perfect Desktop</p>
@@ -133,9 +129,7 @@ Catatan tentang bagaimana cara untuk berdonasi, dapat teman-teman baca di sini, 
 Tema gelap dapat berganti sesuai kebutuhan saya menjadi tema terang (*light*). Biasanya saya menyesuaikan dengan kondisi pencahayaan dari ruangan/lingkungan.
 
 
-# Dahulu
-
-## Perjalanan mengenal komputer
+# Bagaimana perjalanan mengenal komputer?
 
 Sejak duduk di bangku SMP, saya sudah bermain-main menggunakan aplikasi multimedia seperti Adobe Photoshop dan Adobe Premiere Pro pada sistem operasi Microsoft Windows.
 
@@ -143,43 +137,41 @@ Belajar secara mandiri dengan cara mencoba-coba menggunakan tiap-tiap menu *tool
 
 Kalau diingat-ingat, hampir setiap hari saya memproduksi gambar. Baik gambar baru maupun modifikasi dari gambar sebelumnya.
 
-## Perjalanan mengenal GNU/Linux
+# Bagaimana perjalanan mengenal Linux?
 
-**Yudo Drajat Baskoro**, seorang sahabat, teman seangkatan, sekaligus teman bertukar pikiran mengenai komputer. Beliaulah yang menjadi orang pertama yang mengenalkan saya dengan GNU/Linux di bangku sekolah.
+**Yudo Drajat Baskoro**, seorang sahabat, teman seangkatan, sekaligus teman bertukar pikiran mengenai komputer. Beliaulah yang menjadi orang pertama yang mengenalkan saya dengan Linux di bangku sekolah.
 
-## Perjalanan mengenal OSX
+# Bagaimana perjalanan mengenal OSX
 
 2009, mulai merasakan sistem operasi OSX, menggunakan aplikasi multimedia pada sistem operasi ini memang tidak ada bandingnya. Namun, semua kesan itu berubah sejak negara api menyerang.
 
-## Perjalanan menetap ke GNU/Linux
+# Bagaimana akhirnya bisa memutuskan untuk menetap ke Linux?
 
-Desember 2014, saya memutuskan untuk migrasi penuh menggunakan sistem operasi GNU/Linux, saat itu Fedora. Berusaha mencoba belajar, mencari-cari dan memaksakan diri saya untuk menggunakan aplikasi multimedia FOSS. Ternyata, saya benar-benar jatuh cinta dan tenggelam.
+Desember 2014, saya memutuskan untuk migrasi penuh menggunakan sistem operasi Linux, saat itu Fedora. Berusaha mencoba belajar, mencari-cari dan memaksakan diri saya untuk menggunakan aplikasi multimedia FOSS. Ternyata, saya benar-benar jatuh cinta dan tenggelam.
 
-Apalagi setelah akhir 2016, masuk dunia **Desktop Customization**, wah semakin menambah kekaguman dan kegigihan untuk tidak beralih menggunakan OSX lagi. Pada saat inilah saya sedikit banyak mendapatkan pengetahuan mengenai komponen-komponen apa saja yang digunakan untuk membuat sebuah distribusi sistem operasi GNU/Linux dapat digunakan.
+Apalagi setelah akhir 2016, masuk dunia **Desktop Customization**, wah semakin menambah kekaguman dan kegigihan untuk tidak beralih menggunakan OSX lagi. Pada saat inilah saya sedikit banyak mendapatkan pengetahuan mengenai komponen-komponen apa saja yang digunakan untuk membuat sebuah distribusi sistem operasi Linux dapat digunakan.
 
 Benar-benar tidak ada jalan lagi untuk berbalik dan kembali menggunakan OSX.
 
-# Sekarang
-
-## Berpisah dengan Apple
+# Bagaimana bisa untuk memutuskan berpisah dengan Apple?
 
 Saat ini sudah tidak lagi menggunakan MacBook Pro sejak Januari 2017. Saya sudah cukup lama berada di Apple Environment. Di mulai sekitar tahun 2009 dengan MacBook White. Dan berakhir dengan MacBook Pro pada tahun 2012.
 
-Dengan waktu yang cukup lama tersebut, tidak menjadikan saya sebagai Apple FanBoy yang fanatik. Mungkin, karena rasa ingin tahu yang sangat besar akan dunia GNU/Linux yang masih asing buat saya, maka saya pun mulai beralih menggunakan sistem operasi GNU/Linux pada tahun 2014 yang berjalan di atas mesin Apple. Wkwkwk.
+Dengan waktu yang cukup lama tersebut, tidak menjadikan saya sebagai Apple FanBoy yang fanatik. Mungkin, karena rasa ingin tahu yang sangat besar akan dunia Linux yang masih asing buat saya, maka saya pun mulai beralih menggunakan sistem operasi Linux pada tahun 2014 yang berjalan di atas mesin Apple. Wkwkwk.
 
 Setelah MacBook Pro yang saya gunakan mengalami kendala pada akhir Desember 2016, saya pun memilih untuk mencoba brand dan tipe yang sudah saya incar sejak SMA, yes, ThinkPad! Kebetulan saya memang sangat mengincar ThinkPad, kalau tidak T series, X series. Menggunakan ThinkPad + Linux, adalah sebuah kombinasi yang hakiki.
 
-## Pertemuan dengan ThinkPad pertama saya
+# Bagaimana pertemuan dengan ThinkPad pertama?
 
 Di awali dengan ThinkPad X260 pada awal tahun 2017, mesin ini benar-benar membuat saya semakin produktif. Tidak ada kendala resource yang berarti, yang menghalangi saya untuk berkreasi membuat sesuatu dengan mesin ini.
 
-## Menantang diri menggunakan ThinkPad jadul
+# Bagaimana bisa berani menantang diri menggunakan ThinkPad jadul?
 
 Pada Maret 2019, karena istri saya memerlukan laptop, maka saya pun bertukar laptop. Istri saya, menggunakan ThinkPad X260 dan saya pun beralih menggunakan ThinkPad X61. Laptop keluaran tahun 2007 ini, benar-benar membuat saya kagum, karena masih dapat saya gunakan sebagai *daily driver* untuk bekerja. Meskipun terdapat beberapa hal yang harus saya adaptasikan. Seperti terbatasnya Memory resource yang hanya 4 GB. Namun, hal ini tidak begitu menjadi kendala karena saya sudah mempersiapkan lingkungan sistem operasi se-minimal dan se-efektif mungkin.
 
 Hal ini sangat sesuai dengan keinginan saya untuk dapat menggunakan laptop yang tidak terbatas oleh vendor, sehingga dapat saya gunakan selama mungkin hingga menemukan batas maksimalnya.
 
-## Kembali menggunakan ThinkPad anyar
+# Apakah sudah kembali menggunakan ThinkPad anyar?
 
 Akhir 2021, saya sudah kembali menggunakan ThinkPad X260, karena tuntutan pekerjaan saya sebagai Backend Engineer di perusahaan swasta yang berlokasi Jakarta secara remote.
 
