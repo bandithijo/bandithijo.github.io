@@ -20,10 +20,6 @@
             <a href="/feed/blog.xml" target="_blank"><strong>RSS</strong></a>
           {% elsif page.permalink == '/note/' or page.permalink == '/note/:title' %}
             <a href="/feed/note.xml" target="_blank"><strong>RSS</strong></a>
-          {% elsif page.permalink == '/vlog/' or page.permalink == '/vlog/:title' %}
-            <a href="/feed/vlog.xml" target="_blank"><strong>RSS</strong></a>
-          {% elsif page.permalink == '/python/' or page.permalink == '/python/:title' %}
-            <a href="/feed/python.xml" target="_blank"><strong>RSS</strong></a>
           {% else %}
             <a href="/feed/blog.xml" target="_blank"><strong>RSS</strong></a>
           {% endif %}

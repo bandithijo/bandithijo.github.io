@@ -94,8 +94,6 @@ feed:
   categories:
     - blog
     - note
-    - vlog
-    - python
 
 keep_files:
     - images
