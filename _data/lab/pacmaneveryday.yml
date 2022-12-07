@@ -1021,3 +1021,14 @@ experiment:
     url:    'https://youtu.be/wIm6Awrku18'
     note:   >-
       -
+
+  - date:   '2022-12-05'
+    number: '111'
+    count:  '15'
+    size:   '352.34'
+    status: 'ERROR, OK'
+    url:    'https://youtu.be/XW_qh18xkpA'
+    note:   >-
+      <ul>
+      <li>error: failed retrieving file 'qt5-webengine-5.15.11-3-x86_64.pkg.tar.zst' from at.arch.mirror.kescher.at : OpenSSL SSL_read: Connection reset by peer, errno 104</li>
+      </ul>
