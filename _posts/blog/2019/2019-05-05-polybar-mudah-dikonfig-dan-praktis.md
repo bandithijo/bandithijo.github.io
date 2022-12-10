@@ -1099,7 +1099,17 @@ Untuk penjelasan lebih lengkap mengenai kode blok global/wm di atas, silahkan me
 
 # Tips
 
-## Show/Hide Bar untuk Trayicon
+## Show/Hide Bar untuk Trayicon (konvensional)
+
+{% box_perhatian %}
+<p markdown=1>**Pendekatan ini sudah tidak lagi saya pergunakan. Saya lebih merekomendasikan menggunakan pendekatan terbaru.**</p>
+<p markdown=1>Terdapat banyak sekali kelemahan dari menggunakan pendekatan konvensional.</p>
+<p markdown=1>Namun, yang paling mengganggu saya adalah: Fungsi aplikasi yang sangat tergantung dengan trayicon, tidak berjalan dengan semestinya.</p>
+<p markdown=1>Contohnya seperti **nm-applet** yang apabila tidak disimpan di trayicon dan hanya berjalan sebagai background process, tidak akan memberikan notifikasi status network. Maka dari itu, saya lebih merekomendasikan untuk menggunakan pendekatan terbaru.</p>
+<p markdown=1>Cara terbaru ini memanfaatkan IPC (*Interprocess Communication*) agar kita dapat mengirimkan message process ke Polybar dengan menggunakan perintah `polybar-msg`.</p>
+<p markdown=1>Cara terbaru saya tulis pada artikel terpisah, [**Polybar sebagai Trayicon dengan Fitur Hide/Show Menggunakan polybar-msg**](/blog/2022-12-10-polybar-sebagai-trayicon-dengan-fitur-hide-show-menggunakan-polybar-msg){:target="_blank"}</p>
+{% endbox_perhatian %}
+
 
 Karena saya tidak memerlukan trayicon selalu muncul pada tampilan Polybar saya. Karena icon-icon pada trayicon tidak selalu berinteraksi dengan saya. Saya berinteraksi dengan trayicon hanya apabila saya perlukan saja.
 
