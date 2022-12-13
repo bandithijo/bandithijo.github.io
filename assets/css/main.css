@@ -24,11 +24,34 @@ Created : Maret 2018
 :root {
   --WHITE: #FFFFFF;
   --BLACK: #000000;
-  --SIDEBAR-BODY:#FFFFFF;
+  --GREY-01: #444d56;
+  --GREY-02: #586E75;
+  --GREY-03: #B8B8B8;
+  --GREY-04: #8A8A8A;
+  --GREY-05: #C4BBB0;
+  --GREY-06: #999999;
+  --GREY-07: #E0E0E0;
+  --SIDEBAR-BODY: #FFFFFF;
+  --BODY-OUTSIDE-YOUNG: #D7CCBC;
+  --WHITE-01: #FAFBFC;
+  --WHITE-02: #C6CBD1;
+  --WHITE-03: #FBD7D2;
+  --MARK: #FFCC00;
+  --GREEN-01: #00603C;
+  --GREEN-02: #008352;
+  --GREEN-03: #859900;
+  --GREEN-04: #0C4B33;
+  --RED-01: #DC322F;
+  --RED-02: #C00000;
+  --ORANGE-01: #FF7700;
+  --YELLOW-01: #F3E681;
+  --YELLOW-02: #FFDD57;
+  --BROWN-01: #B2A493;
+  --BROWN-02: #9B9185;
 }
 
 body {
-  background: #D7CCBC;
+  background: var(--BODY-OUTSIDE-YOUNG);
   font: 16px/1.5 'Fira Sans';
   letter-spacing: 0;
   width: 100%;
@@ -116,13 +139,13 @@ td.gutter.gl, td.code {
 
 mark {
   padding: 0.1em;
-  background-color: #FFCC00; /* <-- yellow */
+  background-color: var(--MARK); /* <-- yellow */
   border-radius: 2px;
-  color: #000;
+  color: var(--BLACK);
 }
 
 border {
-  border: 1px solid black;
+  border: 1px solid var(--BLACK);
   border-radius: 3px;
   padding:1px 3px;
 }
@@ -178,11 +201,11 @@ p {
 
 a, a:visited {
   text-decoration: none;
-  color: #00603C;
+  color: var(--GREEN-01);
 }
 
 a:hover {
-  border-bottom: 1px dashed #008352;
+  border-bottom: 1px dashed var(--GREEN-02);
 }
 
 kbd {
@@ -191,26 +214,26 @@ kbd {
   font-size: 13px monospace;
   font-weight: normal;
   line-height: 10px;
-  color: #444d56;
+  color: var(--GREY-01);
   vertical-align: middle;
-  background-color: #fafbfc;
-  border: solid 1px #c6cbd1;
-  border-bottom-color: #c6cbd1;
+  background-color: var(--WHITE-01);
+  border: solid 1px var(--WHITE-02);
+  border-bottom-color: var(--WHITE-02);
   border-radius: 4px;
-  box-shadow: inset 0 -1px 0 #c6cbd1;
+  box-shadow: inset 0 -1px 0 var(--WHITE-02);
 }
 
 /* pre color style */
 .url {
-  background-color: white !important;
-  border: 1px solid black !important;
-  color: black !important;
+  background-color: var(--WHITE) !important;
+  border: 1px solid var(--BLACK) !important;
+  color: var(--BLACK) !important;
 }
 
 .whiteboard {
-  background-color: white !important;
-  border: 1px solid white !important;
-  color: black !important;
+  background-color: var(--WHITE) !important;
+  border: 1px solid var(--WHITE) !important;
+  color: var(--BLACK) !important;
   user-select: none !important;
   -webkit-user-select: none !important;
   -ms-user-select: none !important;
@@ -220,12 +243,12 @@ kbd {
 }
 
 .is-comment {
-  color: #586e75;
+  color: var(--GREY-02);
   font-style: italic;
 }
 
 .is-success {
-  color: #859900;
+  color: var(--GREEN-03);
 }
 
 .is-white {
@@ -233,11 +256,11 @@ kbd {
 }
 
 .is-danger {
-  color: #DC322F;
+  color: var(--RED-01);
 }
 
 .is-warning {
-  color: #FFCC00;
+  color: var(--MARK);
 }
 
 .has-text-weight-bold {
@@ -246,8 +269,8 @@ kbd {
 
 /* Header ----------------------------------------------------------------- */
 #header {
-  background: #B2A493;
-  border-bottom: 1px solid #9B9185;
+  background: var(--BROWN-01);
+  border-bottom: 1px solid var(--BROWN-02);
   margin: 0;
   padding-top: 10px;
 }
@@ -315,21 +338,21 @@ kbd {
 #header .nav li a:hover,
 #header .nav li a:active {
   background: var(--WHITE);
-  color: #00603C;
+  color: var(--GREEN-01);
   border-radius: 5px;
   padding: 5px 7.5px;
 }
 
 #header .nav .active {
   background: var(--WHITE);
-  color: #00603C;
+  color: var(--GREEN-01);
   border-radius: 5px;
   padding: 5px 7.5px;
 }
 
 /* untuk media queries */
 .toggle {
-  background: #0C4B33;
+  background: var(--GREEN-04);
   width: 100%;
   box-sizing: border-box;
   text-align: center;
@@ -363,7 +386,7 @@ kbd {
 #main .container-edge-border {
   border-width: 0 1px 0 1px;
   border-style: solid;
-  border-color: #B8B8B8;
+  border-color: var(--GREY-03);
   padding-bottom: 30px;
   /* untuk memunculkan properties di atas */
   overflow: hidden;
@@ -427,7 +450,7 @@ img.post-header-img {
   font-family: 'Fira Sans Condensed','Ubuntu Condensed';
   font-size: 34px;
   color: #000;
-  border-bottom: 1px dashed #B8B8B8;
+  border-bottom: 1px dashed var(--GREY-03);
   padding-top: 14px;
   padding-bottom: 14px;
   text-align: left;
@@ -438,18 +461,18 @@ img.post-header-img {
 }
 
 .post-title a {
-  color: #000;
+  color: var(--BLACK);
 }
 
 .post-title a:hover {
-  color: #00603C;
+  color: var(--GREEN-01);
   border-bottom: none;
 }
 
 p.post-title-index {
   font-size: 16px;
-  color: #000;
-  border-bottom: 1px dashed #B8B8B8;
+  color: var(--BLACK);
+  border-bottom: 1px dashed var(--GREY-03);
   text-align: left;
   padding-top: 10px;
   /* untuk indentasi title*/
@@ -468,14 +491,14 @@ p.post-title-index a {
 }
 
 p.post-title-index a:hover {
-  color: #0C4B33;
+  color: var(--GREEN-04);
   border-bottom: none;
 }
 
 .mono {
   font-family: 'FiraCodeNerdFontComplete-Medium';
   font-size: 16px;
-  color: #000;
+  color: var(--BLACK);
   text-align: left;
 }
 
@@ -504,7 +527,7 @@ p.post-details-index {
   font-family: 'Fira Code';
   font-size: 14px;
   text-align: right;
-  background: #B8B8B8;
+  background: var(--GREY-03);
   padding: 3px 4px;
   position: relative;
   top: -28px;
@@ -521,7 +544,7 @@ p.post-details-index a {
 p.post-details-index:before {
   content: "";
   border-top: 8px solid transparent;
-  border-right: 8px solid #B8B8B8;
+  border-right: 8px solid var(--GREY-03);
   border-bottom: 8px solid transparent;
   position: absolute;
   left: -7px;
@@ -533,7 +556,7 @@ p.post-details-index-pin {
   font-family: 'Fira Code';
   font-size: 14px;
   text-align: right;
-  background: #FF7700;
+  background: var(--ORANGE-01);
   padding: 3px 4px;
   position: relative;
   top: -28px;
@@ -550,7 +573,7 @@ p.post-details-index-pin a {
 p.post-details-index-pin:before {
   content: "";
   border-top: 8px solid transparent;
-  border-right: 8px solid #FF7700;
+  border-right: 8px solid var(--ORANGE-01);
   border-bottom: 8px solid transparent;
   position: absolute;
   left: -7px;
@@ -616,7 +639,7 @@ aside p.sidebar-isi {
 
 aside .sidebar-body {
   background: var(--SIDEBAR-BODY);
-  border: 1px dashed #B8B8B8;
+  border: 1px dashed var(--GREY-03);
   border-radius: 10px;
   /* width: 91%; */
   margin: 25px 0 0 0;
@@ -624,8 +647,8 @@ aside .sidebar-body {
 }
 
 aside .sidebar-body-rss {
-  background: #F3E681;
-  border: 1px dashed #B8B8B8;
+  background: var(--YELLOW-01);
+  border: 1px dashed var(--GREY-03);
   border-radius: 10px;
   /* width: 91%; */
   margin: 25px 0 0 0;
@@ -634,17 +657,17 @@ aside .sidebar-body-rss {
 
 aside .sidebar-body-hollow {
   background: transparent;
-  border: 1px dashed #B8B8B8;
+  border: 1px dashed var(--GREY-03);
   border-radius: 10px;
   /* width: 91%; */
   margin: 25px 0;
   padding: 5px 10px;
-  border: 1px dashed #8A8A8A;
+  border: 1px dashed var(--GREY-04);
 }
 
 aside .sidebar-body-helper {
-  background:#F3E681;
-  border: 1px dashed #B8B8B8;
+  background: var(--YELLOW-01);
+  border: 1px dashed var(--GREY-03);
   border-radius: 10px;
   /* width: 91%; */
   margin: 25px 0;
@@ -662,7 +685,7 @@ aside.sidebar h1 {
   color: var(--BLACK);
   font-family: 'Fira Sans Condensed', 'Ubuntu Condensed';
   font-size: 1.5em;
-  border-bottom: 1px dashed #C4BBB0;
+  border-bottom: 1px dashed var(--GREY-05);
   margin-bottom: 5px;
   display: flex !important;
 }
@@ -679,7 +702,7 @@ div.sidebar-body-rss h1 img {
 
 aside.sidebar ul {
   list-style-type: disc;
-  color: #0C4B33;
+  color: var(--GREEN-04);
   margin: 0 0 0 15px;
   padding: 5px 2px 5px 5px;
 }
@@ -717,7 +740,7 @@ aside.sidebar p {
 }
 
 #footer .container-inner {
-  background: #B8B8B8;
+  background: var(--GREY-03);
   border-radius: 0 0 8px 8px;
   height: 100%;
   margin: 0 auto;
@@ -728,7 +751,7 @@ aside.sidebar p {
   /* untuk garis di dalma kotak footer bawah */
   border-width: 0 0 1px 0;
   border-style: solid;
-  border-color: #999999;
+  border-color: var(--GREY-06);
   border-radius: 0 0 8px 8px;
 }
 
@@ -828,7 +851,7 @@ img.footer-bedge-1 {
   font-size: 22px;
   font-weight: bold;
   padding-bottom: 1.5%;
-  border-bottom: 1px dashed #00603C;
+  border-bottom: 1px dashed var(--GREEN-01);
 }
 
 /* Post Navigation -------------------------------------------------------- */
@@ -848,12 +871,12 @@ img.footer-bedge-1 {
 }
 
 a.btn-blue-l {
-  color: white;
+  color: var(--WHITE);
   border-bottom: none;
 }
 
 .btn-blue-l {
-  background: #008352!important;
+  background: var(--GREEN-02)!important;
   border-radius: 5px;
   padding: 8px 20px;
   text-align: center;
@@ -863,17 +886,17 @@ a.btn-blue-l {
 }
 
 .btn-blue-l:active {
-  color: white;
+  color: var(--WHITE);
   transform: translateY(2px)
 }
 
 a.btn-blue-r {
-  color: white;
+  color: var(--WHITE);
   border-bottom: none;
 }
 
 .btn-blue-r {
-  background: #008352!important;
+  background: var(--GREEN-02)!important;
   border-radius: 5px;
   padding: 8px 20px;
   text-align: center;
@@ -883,17 +906,17 @@ a.btn-blue-r {
 }
 
 .btn-blue-r:active {
-  color: white;
+  color: var(--WHITE);
   transform: translateY(2px)
 }
 
 a.btn-blue-c {
-  color: white;
+  color: var(--WHITE);
   border-bottom: none;
 }
 
 .btn-blue-c {
-  background: #008352!important;
+  background: var(--GREEN-02)!important;
   border-radius: 5px;
   padding: 8px 20px;
   text-align: center;
@@ -903,7 +926,7 @@ a.btn-blue-c {
 }
 
 .btn-blue-c:active {
-  color: white;
+  color: var(--WHITE);
   transform: translateY(2px)
 }
 
@@ -974,9 +997,9 @@ article.homepage .notif-157 {
   margin: auto;
   margin-top: -10px;
   margin-bottom: 0;
-  border: 1px solid #C00000;
+  border: 1px solid var(--RED-02);
   border-radius: 5px;
-  background:#FBD7D2;
+  background: var(--WHITE-03);
 }
 
 article.homepage .notif-157 p,
@@ -1032,19 +1055,19 @@ p.kalender-item {
 
 p.kalender-item.on {
   border: 1px solid var(--BLACK) !important;
-  background:#FFDD57 !important;
+  background: var(--YELLOW-02) !important;
 }
 
 p.kalender-item.off {
-  border: 1px solid #B8B8B8 !important;
-  background:#E0E0E0 !important;
-  color:#B8B8B8 !important;
+  border: 1px solid var(--GREY-03) !important;
+  background: var(--GREY-07) !important;
+  color: var(--GREY-03) !important;
 }
 
 p.kalender-item.next {
-  border: 1px dashed #B8B8B8 !important;
-  background:var(--WHITE) !important;
-  color:#B8B8B8 !important;
+  border: 1px dashed var(--GREY-03) !important;
+  background: var(--WHITE) !important;
+  color: var(--GREY-03) !important;
 }
 
 .notif-rundown {
@@ -1088,19 +1111,19 @@ p.rundown-item {
 
 p.rundown-item.on {
   border: 1px solid var(--BLACK) !important;
-  background:#FFDD57 !important;
+  background: var(--YELLOW-02) !important;
 }
 
 p.rundown-item.off {
-  border: 1px solid #B8B8B8 !important;
-  background:#E0E0E0 !important;
-  color:#B8B8B8 !important;
+  border: 1px solid var(--GREY-03) !important;
+  background: var(--GREY-07) !important;
+  color: var(--GREY-03) !important;
 }
 
 p.rundown-item.next {
-  border: 1px dashed #B8B8B8 !important;
-  background:var(--WHITE) !important;
-  color:#B8B8B8 !important;
+  border: 1px dashed var(--GREY-03) !important;
+  background: var(--WHITE) !important;
+  color: var(--GREY-03) !important;
 }
 
 p.notif-post {
