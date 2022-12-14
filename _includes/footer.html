@@ -3,11 +3,11 @@
     <div class="container-inner">
       <div class="footer-line">
         <p style="font-size:20px;"><a href="/"><strong>{{ site.title }}</strong></a> &copy; 2012 - {{ site.time | date: '%Y' }}</p>
-        <p style="font-size:12px;margin-top:-35px;color:#404040;">
-          Source code dan artikel-artikel ditulis menggunakan <span class="nobr"><a href="http://vim.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Vim</a> text editor.</span><br>
-          Semua elemen gambar dikerjakan menggunakan <span class="nobr"><a href="https://inkscape.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Inkscape</a> dan <a href="https://gimp.org" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">GIMP</a>.</span><br>
-          Menggunakan <a href="https://jekyllrb.com" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">Jekyll</a> sebagai Static Site Generator.<br>
-          Dihosting menggunakan <a href="https://github.com/bandithijo/bandithijo.github.io" target="_blank" rel="noreferrer" style="font-weight:bold;color:#404040;">GitHub</a>.<br>
+        <p class="footer-body" style="font-size:12px;margin-top:-35px;">
+          Source code dan artikel-artikel ditulis menggunakan <span class="nobr"><a href="http://vim.org" target="_blank" rel="noreferrer" style="font-weight:bold;">Vim</a> text editor.</span><br>
+          Semua elemen gambar dikerjakan menggunakan <span class="nobr"><a href="https://inkscape.org" target="_blank" rel="noreferrer" style="font-weight:bold;">Inkscape</a> dan <a href="https://gimp.org" target="_blank" rel="noreferrer" style="font-weight:bold;">GIMP</a>.</span><br>
+          Menggunakan <a href="https://jekyllrb.com" target="_blank" rel="noreferrer" style="font-weight:bold;">Jekyll</a> sebagai Static Site Generator.<br>
+          Dihosting menggunakan <a href="https://github.com/bandithijo/bandithijo.github.io" target="_blank" rel="noreferrer" style="font-weight:bold;">GitHub</a>.<br>
           Terakhir update: <b>{{ site.time | date: '%d/%m/%Y' }}</b>
         </p>
         <p class="footer-menu">
@@ -42,13 +42,13 @@
 
         <div class="tech-i-used-desktop">
           <a href="https://jekyllrb.com" target="_blank" rel="noopener">
-            <img class="footer-img-jekyll" src="/assets/img/logo/logo_jekyll.png">
+            <img class="footer-img-jekyll icon" src="/assets/img/logo/logo_jekyll.svg">
           </a>
           <a href="https://www.ruby-lang.org" target="_blank" rel="noopener">
-            <img class="footer-img-ruby" src="/assets/img/logo/logo_ruby.png">
+            <img class="footer-img-ruby icon" src="/assets/img/logo/logo_ruby.svg">
           </a>
           <a href="https://netlify.app" target="_blank" rel="noopener">
-            <img class="footer-img-netlify" src="/assets/img/logo/logo_netlify.png">
+            <img class="footer-img-netlify icon" src="/assets/img/logo/logo_netlify.svg">
           </a>
           {% comment %} <a href="https://github.com/bandithijo" target="_blank" rel="noopener"> {% endcomment %}
           {% comment %}   <img class="footer-img-github" src="/assets/img/logo/logo_github.png"> {% endcomment %}
@@ -68,14 +68,17 @@
           {% comment %} <a href="https://jekyllrb.com/" target="_blank" rel="noopener" rel="noreferrer"> {% endcomment %}
           {% comment %}   <img class="footer-img-3" src="/assets/img/logo/logo_jekyll_mobile.png"> {% endcomment %}
           {% comment %} </a> {% endcomment %}
-          <a href="https://netlify.app" target="_blank" rel="noopener" rel="noreferrer">
-            <img class="footer-img-netlify-mobile" src="/assets/img/logo/logo_netlify_mobile.png">
-          </a>
-          <a href="https://www.ruby-lang.org" target="_blank" rel="noopener" rel="noreferrer">
-            <img class="footer-img-ruby-mobile" src="/assets/img/logo/logo_ruby_mobile.png">
-          </a>
+          {% comment %} <a href="https://netlify.app" target="_blank" rel="noopener" rel="noreferrer"> {% endcomment %}
+          {% comment %}   <img class="footer-img-netlify-mobile icon" src="/assets/img/logo/logo_netlify_mobile.svg"> {% endcomment %}
+          {% comment %} </a> {% endcomment %}
+          {% comment %} <a href="https://www.ruby-lang.org" target="_blank" rel="noopener" rel="noreferrer"> {% endcomment %}
+          {% comment %}   <img class="footer-img-ruby-mobile" src="/assets/img/logo/logo_ruby_mobile.png"> {% endcomment %}
+          {% comment %} </a> {% endcomment %}
+          {% comment %} <a href="https://jekyllrb.com/" target="_blank" rel="noopener" rel="noreferrer"> {% endcomment %}
+          {% comment %}   <img class="footer-img-jekyll-mobile" src="/assets/img/logo/logo_jekyll_mobile.png"> {% endcomment %}
+          {% comment %} </a> {% endcomment %}
           <a href="https://jekyllrb.com/" target="_blank" rel="noopener" rel="noreferrer">
-            <img class="footer-img-jekyll-mobile" src="/assets/img/logo/logo_jekyll_mobile.png">
+            <img class="footer-img-jekyll-mobile icon" src="/assets/img/logo/logo_jekyll.svg">
           </a>
         </div><!-- tech-i-used-mobile -->
       </div><!-- footer-line -->
@@ -84,7 +87,7 @@
 </footer>
 
 <!-- site.git.build_version -->
-<div class="tech-i-used-desktop" style="text-align:center;font-size:9px;color:#8F8879;margin: -5px 0 10px 0;">
+<div class="tech-i-used-desktop" style="text-align:center;font-size:9px;margin: -5px 0 10px 0;">
   {{ site.data['longhash'] }}
 </div>
 <!-- END site.git.build_version -->
