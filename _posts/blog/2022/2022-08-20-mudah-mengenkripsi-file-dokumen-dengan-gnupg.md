@@ -110,7 +110,7 @@ gpg --symmetric tabel_users.md
 
 Setelah itu, kita akan diminta memasukkan password sebanyak 2x.
 
-![gambar_1]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/0jhyjs0t/gambar-01.png" onerror="imgerror(this);"}{:class="myImg"}
+![gambar_1]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/0jhyjs0t/gambar-01.png" onerror="imgError(this);"}{:class="myImg"}
 
 Outputnya akan berupa file `tabel_users.md.gpg`.
 

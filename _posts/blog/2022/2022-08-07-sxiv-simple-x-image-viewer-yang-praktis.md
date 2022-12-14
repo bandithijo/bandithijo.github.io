@@ -49,41 +49,41 @@ Kalau kekurangan dari sxiv (subjektif menurut saya):
 
 # Screenshots
 
-![gambar_1]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/3NZg3CYc/gambar-01.png" onerror="imgerror(this);"}{:class="myImg"}
+![gambar_1]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/3NZg3CYc/gambar-01.png" onerror="imgError(this);"}{:class="myImg"}
 <p class="img-caption">Gambar 1 - sxiv with image mode</p>
 
-![gambar_2]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/y6hhhBcy/gambar-02.png" onerror="imgerror(this);"}{:class="myImg"}
+![gambar_2]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/y6hhhBcy/gambar-02.png" onerror="imgError(this);"}{:class="myImg"}
 <p class="img-caption">Gambar 2 - sxiv with thumbnail mode</p>
 
 # Demo
 
 ## Rotation
 
-![gambar_3]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/SK0jtYp2/gambar-03.gif" onerror="imgerror(this);"}{:class="myImg"}
+![gambar_3]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/SK0jtYp2/gambar-03.gif" onerror="imgError(this);"}{:class="myImg"}
 <p class="img-caption">Gambar 3 - sxiv with rotate left & right</p>
 
 ## Flipping
 
-![gambar_4]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/5twjc9xP/gambar-04.gif" onerror="imgerror(this);"}{:class="myImg"}
+![gambar_4]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/5twjc9xP/gambar-04.gif" onerror="imgError(this);"}{:class="myImg"}
 <p class="img-caption">Gambar 4 - sxiv with flip vertical & horizontal</p>
 
 ## Zooming & Panning
 
-![gambar_5]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/gjrY0GWb/gambar-05.gif" onerror="imgerror(this);"}{:class="myImg"}
+![gambar_5]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/gjrY0GWb/gambar-05.gif" onerror="imgError(this);"}{:class="myImg"}
 <p class="img-caption">Gambar 5 - sxiv with zoom in & out</p>
 
-![gambar_6]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/mkqTzKLz/gambar-06.gif" onerror="imgerror(this);"}{:class="myImg"}
+![gambar_6]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/mkqTzKLz/gambar-06.gif" onerror="imgError(this);"}{:class="myImg"}
 <p class="img-caption">Gambar 6 - sxiv with zoom in movement, zoom level 100%, fit image to window</p>
 
 ## Navigation
 
-![gambar_7]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/2Sdfr1ZB/gambar-07.gif" onerror="imgerror(this);"}{:class="myImg"}
+![gambar_7]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/2Sdfr1ZB/gambar-07.gif" onerror="imgError(this);"}{:class="myImg"}
 <p class="img-caption">Gambar 7 - sxiv with navibation next & previous</p>
 
-![gambar_8]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/7Lxr6q3t/gambar-08.gif" onerror="imgerror(this);"}{:class="myImg"}
+![gambar_8]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/7Lxr6q3t/gambar-08.gif" onerror="imgError(this);"}{:class="myImg"}
 <p class="img-caption">Gambar 8 - sxiv with navigation on thumbnails mode</p>
 
-![gambar_9]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/HkBm4FKB/gambar-09.gif" onerror="imgerror(this);"}{:class="myImg"}
+![gambar_9]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/HkBm4FKB/gambar-09.gif" onerror="imgError(this);"}{:class="myImg"}
 <p class="img-caption">Gambar 9 - sxiv with zoom in/out thumbnails</p>
 
 # Rekomendasi

@@ -66,7 +66,7 @@ Syarat untuk melakukan verifikasi, hanya dengan menunjukkan/mengirimkan/menguplo
 
 {% box_info %}
 <p markdown=1>Untuk membuat dan memverifikasi akun PayPal tidak diperlukan saldo sama sekali.</p>
-![gambar_2]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/vTTnP1qH/gambar-02.png" onerror="imgerror(this);"}{:class="myImg"}
+![gambar_2]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/vTTnP1qH/gambar-02.png" onerror="imgError(this);"}{:class="myImg"}
 {% endbox_info %}
 
 ## Buat Akun Bank Jago
@@ -75,7 +75,7 @@ Teman-teman juga perlu membuat akun di Bank Jago.
 
 Kita akan memanfaatkan **Virtual Debit Card** yang diberikan oleh Bank Jago untuk didaftarkan pada PayPal dan membuat pengaturan pembayaran utama akan ditarik dari saldo Bank Jago melalui Virtual Debit Card Bank Jago.
 
-![gambar_1]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/7ZspcjZH/gambar-01.jpg" onerror="imgerror(this);"}{:class="myImg"}
+![gambar_1]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/7ZspcjZH/gambar-01.jpg" onerror="imgError(this);"}{:class="myImg"}
 
 Ada biaya tambahan untuk mendaftarkan **Virtual Debit Card** Bank Jago ke PayPal sebesar USD$ 1 yang nantinya juga akan dikembalikan (*refund*) setelah proses pendaftaran kartu berhasil.
 
@@ -83,7 +83,7 @@ Ada biaya tambahan untuk mendaftarkan **Virtual Debit Card** Bank Jago ke PayPal
 <p markdown=1>Ada biaya tambahan untuk mendaftarkan **Virtual Debit Card** Bank Jago ke PayPal sebesar USD$ 1 yang nantinya akan dikembalikan ke saldo Bank Jago kita (*refund*) setelah proses pendaftaran kartu berhasil.</p>
 <p markdown=1>Biaya tersebut akan diambil dari saldo Bank Jago. Jadi, pastikan teman-teman memiliki cukup saldo di Bank Jago.</p>
 <p markdown=1>\* USD$ 1 = Rp 14.656,- (Kurs tanggal 2 April 2022)</p>
-![gambar_3]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/v82f4zT1/gambar-03.jpg" onerror="imgerror(this);"}{:class="myImg"}
+![gambar_3]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/v82f4zT1/gambar-03.jpg" onerror="imgError(this);"}{:class="myImg"}
 <p markdown=1>Kalau saldo tidak mencukupi, proses mendaftarkan **Virtual Debit Card** Bank Jago ke PayPayl akan ditolak (gagal).</p>
 {% endbox_perhatian %}
 
@@ -93,13 +93,13 @@ Pergi ke menu **Wallet** di PayPal, [https://www.paypal.com/myaccount/money/](ht
 
 Pilih menu **Hubungkan Kartu**, [https://www.paypal.com/myaccount/money/cards/new/manual](https://www.paypal.com/myaccount/money/cards/new/manual){:target="_blank"}, untuk mendaftarkan **Virtual Debit Card** Bank Jago.
 
-![gambar_5]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/05hGtnsT/gambar-05.png" onerror="imgerror(this);"}{:class="myImg"}
+![gambar_5]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/05hGtnsT/gambar-05.png" onerror="imgError(this);"}{:class="myImg"}
 
 Virtual Debit Card Bank Jago akan terbaca sebagai Visa Card.
 
 {% box_perhatian %}
 <p markdown=1>Sebelum menghubungkan kartu, pastikan pengaturan kartu untuk **International Payment** sudah aktif.</p>
-![gambar_4]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/brZGx7rZ/gambar-04.jpg" onerror="imgerror(this);"}{:class="myImg"}
+![gambar_4]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/brZGx7rZ/gambar-04.jpg" onerror="imgError(this);"}{:class="myImg"}
 {% endbox_perhatian %}
 
 ## Jadikan Virtual Debit Card Bank Jago sebagai Alat Pembayaran Utama di PayPal Wallet
@@ -108,7 +108,7 @@ Untuk mempermudah proses transaksi dengan merchan-merchant PayPal, kita perlu me
 
 Dengan begini, kita sama sekali tidak memerlukan/mengisi saldo PayPal sama sekali. Karena, semua transaksi akan ditarik dari saldo Bank Jago yang terkait dengan Virtual Debit Card Bank Jago.
 
-![gambar_6]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/mr61PZZv/gambar-06.png" onerror="imgerror(this);"}{:class="myImg"}
+![gambar_6]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/mr61PZZv/gambar-06.png" onerror="imgError(this);"}{:class="myImg"}
 
 # Ayo Berdonasi!
 
@@ -122,10 +122,10 @@ Penjelasan mengenai donasi dapat dibaca di [https://suckless.org/donations/](htt
 
 Akun PayPal dari Suckless: `finance@suckless.org` (Bisa dicari akun tersebut pada menu **Kirim pembayaran**)
 
-![gambar_7]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/sXhx1pNW/gambar-07.png" onerror="imgerror(this);"}{:class="myImg"}
+![gambar_7]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/sXhx1pNW/gambar-07.png" onerror="imgError(this);"}{:class="myImg"}
 <p class="img-caption">Email dari PayPal setelah melakukan donasi ke Suckless Project</p>
 
-![gambar_10]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/xTcmTHMw/gambar-10.png" onerror="imgerror(this);"}{:class="myImg"}
+![gambar_10]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/xTcmTHMw/gambar-10.png" onerror="imgError(this);"}{:class="myImg"}
 <p markdown=1 class="img-caption">1-2 bulan kemudian, nama saya masuk ke dalam daftar donatur di halaman [https://suckless.org/donations/](https://suckless.org/donations/){:target="_blank"}</p>
 
 ## Arch Linux
@@ -136,12 +136,12 @@ Saya tidak berhasil berdonasi menggunakan **SPI PayPal**, terdapat keterangan "D
 
 Sehingga saya menggunakan **Click&Pledge**, [https://co.clickandpledge.com/advanced/default.aspx?wid=47294](https://co.clickandpledge.com/advanced/default.aspx?wid=47294){:target="_blank"}
 
-![gambar_8]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/PJnxDPgR/gambar-08.png" onerror="imgerror(this);"}{:class="myImg"}
+![gambar_8]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/PJnxDPgR/gambar-08.png" onerror="imgError(this);"}{:class="myImg"}
 <p class="img-caption">Email dari Click&Pledge setelah melakukan donasi ke Arch Linux</p>
 
 Kerennya, di Arch Linux, setelah berdonasi meski USD$ 1, nama kita akan langsung terpajang di website Arch Linux halaman donation.
 
-![gambar_9]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/8zzCL8YN/gambar-09.png" onerror="imgerror(this);"}{:class="myImg"}
+![gambar_9]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/8zzCL8YN/gambar-09.png" onerror="imgError(this);"}{:class="myImg"}
 
 
 

@@ -170,10 +170,10 @@ super + shift + ~b
 
 # Demonstrasi
 
-![gambar_1]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/prp0W01t/gambar-01.gif" onerror="imgerror(this);"}{:class="myImg"}
+![gambar_1]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/prp0W01t/gambar-01.gif" onerror="imgError(this);"}{:class="myImg"}
 <p class="img-caption">Gambar 1 - Notifikasi dari nm-applet masih dapat keluar meskipun Polybar dalam keadaan hidden</p>
 
-![gambar_2]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/cLQFLtT6/gambar-02.gif" onerror="imgerror(this);"}{:class="myImg"}
+![gambar_2]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/cLQFLtT6/gambar-02.gif" onerror="imgError(this);"}{:class="myImg"}
 <p class="img-caption" markdown=1>Gambar 2 - Hide & Show Polybar dengan hotkey yang telah dideklarasikan dengan `polybar-msg`</p>
 
 
