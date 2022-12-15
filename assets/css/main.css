@@ -3106,9 +3106,9 @@ ul#results-container > li {
     font-size: 95%;
     font-weight: normal;
     margin: auto;
-    border: 1px solid var(--BLACK);
+    /* border: 1px solid var(--BLACK); */
     border-radius: 5px;
-    background:var(--WHITE);
+    /* background:var(--WHITE); */
   }
 
   article.homepage .notif-home p,
