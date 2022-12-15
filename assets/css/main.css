@@ -1488,56 +1488,6 @@ article.homepage .notif-home a {
   text-indent: -27px;
 }
 
-article.homepage .notif-157 {
-  width: 100%;
-  padding: 1em 1em;
-  font-size: 95%;
-  font-weight: normal;
-  margin: auto;
-  margin-top: -10px;
-  margin-bottom: 0;
-  border: 1px solid var(--RED-02);
-  border-radius: 5px;
-  background: var(--WHITE-03);
-}
-
-article.homepage .notif-157 p,
-article.homepage .notif-157 a {
-  color: var(--BLACK);
-  font-size: 95%;
-  font-weight: normal;
-  border-bottom: none;
-  text-align: left;
-  /* untuk indentasi title*/
-  padding-left: 64px;
-  text-indent: -128px;
-}
-
-article.homepage .notif-157-kalender {
-  width: 100%;
-  padding: 1em 1em;
-  font-size: 95%;
-  font-weight: normal;
-  margin: auto;
-  margin-top: -10px;
-  margin-bottom: 0;
-  border: 1px solid var(--BLACK);
-  border-radius: 5px;
-  background:var(--WHITE);
-}
-
-article.homepage .notif-157-kalender p,
-article.homepage .notif-157-kalender a {
-  color: var(--BLACK);
-  font-size: 95%;
-  font-weight: normal;
-  border-bottom: none;
-  text-align: left;
-  /* untuk indentasi title */
-  padding-left: 64px;
-  text-indent: -128px;
-}
-
 p.kalender-item {
   border: 1px solid var(--BLACK) !important;
   border-radius: 5px;
@@ -3118,31 +3068,6 @@ ul#results-container > li {
     /* text-indent: -135px; */
     padding-left: 16px;
     text-indent: -27px;
-  }
-
-  article.homepage .notif-157 {
-    width: 100%;
-    padding: 1em 1em;
-    font-size: 95%;
-    font-weight: normal;
-    margin: auto;
-    margin-top: -10px;
-    margin-bottom: 0;
-    border: 1px solid #C00000;
-    border-radius: 5px;
-    background:#FBD7D2;
-  }
-
-  article.homepage .notif-157 p,
-  article.homepage .notif-157 a {
-    color: var(--BLACK);
-    font-size: 95%;
-    font-weight: normal;
-    border-bottom: none;
-    text-align: left;
-    /* untuk indentasi title*/
-    padding-left: 65px;
-    text-indent: -130px;
   }
 
   #footer .container p {
