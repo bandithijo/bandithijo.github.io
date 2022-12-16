@@ -207,6 +207,10 @@ Created : Maret 2018
     border-bottom-color: var(--BLACK);
   }
 
+  .markdown-body blockquote a, .markdown-body blockquote a:hover {
+    color: var(--GREEN-01);
+  }
+
   .markdown-body table th {
     background: var(--LGT-TABLE-TH);
     border-color: var(--BLACK) !important;
@@ -437,6 +441,10 @@ Created : Maret 2018
 
   .markdown-body h1 {
     border-bottom-color: var(--WHITE);
+  }
+
+  .markdown-body blockquote a, .markdown-body blockquote a:hover {
+    color: var(--BLACK);
   }
 
   .markdown-body table th {
