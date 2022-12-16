@@ -638,7 +638,9 @@ SourceURL: https://github.com/sindresorhus/github-markdown-css
 }
 
 .markdown-body h1 {
-  border-bottom: 1px dashed #C4BBB0;
+  /* border-bottom: 1px dashed #C4BBB0; */
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
   padding-bottom: .3em;
 }
 

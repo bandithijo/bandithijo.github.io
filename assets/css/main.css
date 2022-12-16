@@ -203,6 +203,10 @@ Created : Maret 2018
     color: var(--BLACK);
   }
 
+  .markdown-body h1 {
+    border-bottom-color: var(--BLACK);
+  }
+
   .markdown-body table th {
     background: var(--LGT-TABLE-TH);
     border-color: var(--BLACK) !important;
@@ -429,6 +433,10 @@ Created : Maret 2018
 
   .markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
     color: var(--WHITE);
+  }
+
+  .markdown-body h1 {
+    border-bottom-color: var(--WHITE);
   }
 
   .markdown-body table th {
