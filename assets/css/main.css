@@ -148,12 +148,12 @@ Created : Maret 2018
 
   aside .sidebar-body {
     background: var(--SIDEBAR-BODY);
-    border-color: var(--GREY-03);
+    border-color: var(--BLACK);
   }
 
   aside .sidebar-body-rss {
     background: var(--YELLOW-01);
-    border-color: var(--GREY-03);
+    border-color: var(--BLACK);
   }
 
   aside.sidebar h1 {
@@ -376,12 +376,12 @@ Created : Maret 2018
 
   aside .sidebar-body {
     background: var(--DRK-CONTAINER);
-    border-color: var(--GREY-03);
+    border-color: var(--WHITE);
   }
 
   aside .sidebar-body-rss {
     background: var(--DRK-CONTAINER);
-    border-color: var(--GREY-03);
+    border-color: var(--WHITE);
   }
 
   aside.sidebar h1 {
