@@ -96,6 +96,9 @@ permalink: '/lab/pacmaneveryday/'
         Total Download Size: {{ exp.size }} MiB<br>
         Evidence: <a href="{{ exp.url }}" target="_blank">{{ exp.url }}</a><br>
         Note: {{ exp.note }}
+        {% if exp.solution %}
+          Solution: {{ exp.solution }}
+        {% endif %}
         </p>
     </div>
     <div class="post-title-tags">
