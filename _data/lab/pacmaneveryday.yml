@@ -451,6 +451,7 @@ experiment:
       <li>warning: failed to retrieve some files</li>
       <li>error: failed to commit transaction (unexpected error)</li>
       </ul>
+    solution: 'sudo pacman -Syyu'
 
   - date:   '2022-10-05'
     number: '050'
@@ -536,6 +537,7 @@ experiment:
       <li>warning: failed to retrieve some files</li>
       <li>error: failed to commit transaction (unexpected error)</li>
       </ul>
+    solution: 'sudo pacman -Syyu'
 
   - date:   '2022-10-14'
     number: '059'
@@ -621,6 +623,7 @@ experiment:
       <li>warning: failed to retrieve some files</li>
       <li>error: failed to commit transaction (unexpected error)</li>
       </ul
+    solution: 'sudo pacman -Syyu'
 
   - date:   '2022-10-23'
     number: '068'
@@ -832,6 +835,7 @@ experiment:
       <li>warning: failed to retrieve some files</li>
       <li>error: failed to commit transaction (download library error)</li>
       </ul>
+    solution: 'sudo pacman -Syyu'
 
   - date:   '2022-11-15'
     number: '091'
@@ -931,6 +935,7 @@ experiment:
       <li>warning: failed to retrieve some files</li>
       <li>error: failed to commit transaction (unexpected error)</li>
       </ul>
+    solution: 'sudo pacman -Syyu'
 
   - date:   '2022-11-25'
     number: '101'
@@ -1032,6 +1037,7 @@ experiment:
       <ul>
       <li>error: failed retrieving file 'qt5-webengine-5.15.11-3-x86_64.pkg.tar.zst' from at.arch.mirror.kescher.at : OpenSSL SSL_read: Connection reset by peer, errno 104</li>
       </ul>
+    solution: 'sudo pacman -Syyu'
 
   - date:   '2022-12-06'
     number: '112'
@@ -1082,6 +1088,7 @@ experiment:
       <li>warning: failed to retrieve some files</li>
       <li>error: failed to commit transaction (unexpected error)</li>
       </ul>
+    solution: 'sudo pacman -Syyu'
 
   - date:   '2022-12-11'
     number: '117'
@@ -1109,3 +1116,18 @@ experiment:
     url:    'https://youtu.be/UoSPK5t790Y'
     note:   >-
       -
+
+  - date:   '2022-12-14'
+    number: '120'
+    count:  '23'
+    size:   '73.89'
+    status: 'ERROR, OK'
+    url:    'https://youtu.be/TfJ20ceaSe0'
+    note:   >-
+      <ul>
+      <li>error: failed retrieving file 'neomutt-20220429-3-x86_64.pkg.tar.zst' from arch.mirror.constant.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>error: failed retrieving file 'perl-5.36.0-3-x86_64.pkg.tar.zst.sig' from arch.mirror.constant.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>warning: failed to retrieve some files</li>
+      <li>error: failed to commit transaction (unexpected error)</li>
+      </ul>
+    solution: 'sudo pacman -Syyu'
