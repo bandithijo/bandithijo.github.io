@@ -23,29 +23,31 @@ Sehingga, apabila dibaca secara utuh menjadi, /BanditHijo Arkaiv/ yang berarti A
 
 # Apa Alasan Menulis Blog?
 
-Karena ilmu yang saya dapat, sejatinya adalah titipan dari Allah *Subhanahu Wa Ta'ala* yang saya terima dari ratusan orang-orang yang memberikannya/menurunkannya kepada saya -- Terima kasih kepada: guru-guru sekolah, dosen-dosen kuliah, teman-teman diskusi, mentor, senior yang dengan besar hati mengajarkan saya dengan penuh kesabaran.
+Blog adalah salah satu strategi saya, agar cangkupan ilmu yang bisa saya sebarkan menjadi lebih luas. Dan lebih bisa menjangkau siapa saja, tanpa perlu jauh-jauh datang untuk bertemu dengan saya.
 
-*Blogging* merupakan aktivitas diluar kesibukan saya yang lain. Menulis, bagi saya, bukan untuk mencari popularitas. Tapi, karena memang saya senang untuk menulis. Saya senang bercerita tentang apa yang saya alami dan saya pelajari. Saya senang dapat memiliki sebuah *platform* untuk menuliskan dan mendokumentasikan hasil belajar saya.
+**Kenapa ilmunya harus disebarkan?**
+
+Karena ilmu yang saya dapat, sejatinya adalah titipan dari Allah *Subhanahu Wa Ta'ala* yang saya terima dari ratusan orang-orang yang memberikannya/menurunkannya (baik sengaja atau tidak) kepada saya -- Terima kasih kepada: guru-guru sekolah, dosen-dosen kuliah, teman-teman diskusi, mentor, senior, dan rekan kerja yang dengan besar hati mengajarkan saya dengan penuh kesabaran.
+
+*Blogging* merupakan aktivitas diluar kesibukan saya yang lain. Menulis, bagi saya, adalah kemampuan luar biasa yang ditemukan oleh manusia karena dapat mentransformasikan apa yang ada dipikiran menjadi sesuatu yang berwujud yang disebut dengan tulisan. Karena itu, saya senang untuk menulis. Saya senang bercerita tentang apa yang saya alami dan saya pelajari. Saya senang dapat memiliki sebuah tempat untuk menuliskan dan mendokumentasikan hasil belajar saya.
 
 Mudah-mudahan catatan-catatan kecil yang sederhana di blog ini dapat bermanfaat bagi teman-teman yang memerlukan.
 
-Ilmu itu seharusnya mengalir, jangan sampai berhenti di kamu, yaa!
+> Ilmu itu seharusnya mengalir, jangan sampai berhenti di kamu.
 
 # Apa yang Ditulis di dalam Blog?
 
-Sebagian besar isi dari blog ini mengenai hal-hal teknis tentang pemecahan suatu masalah yang saya alami saat menggunakan sistem operasi Linux. Namun, perlu digaris bawahi, bahwa **saya bukan seorang pakar bersertifikat dalam sistem operasi Linux. Saya hanya seorang penggemar sekaligus pemakai**. Apabila terdapat kesalahan dalam penulisan, mohon untuk dapat dimaklumi keterbatasan saya, hehehe.
-
-Sebaik-baik tulisan dokumentasi tentu saja yang dibuat langsung oleh developer aplikasi yang bersangkutan. Karenanya, saya selalu menyertakan sumber literatur yang saya gunakan dalam membuat tulisan.
+Sebagian besar isi dari blog ini mengenai ulasan dari perkakas yang saya gunakan, atau juga hal-hal teknis tentang pemecahan suatu masalah yang saya alami saat menggunakan sistem operasi Linux.
 
 # Blognya Dibuat Pakai Apa?
 
 Blog ini saya bangun menggunakan *Static Site Generator* yang bernama **Jekyll**.
 
-Tampilan dari tema blog ini pun saya buat sendiri. Tujuannya agar saya lebih bebas membongkar dan memasang fitur-fitur yang ingin saya tambah dan kurangi di dalam blog ini.
+Tampilan dari tema blog ini juga dibuat sendiri agar saya lebih bebas membongkar dan memasang fitur-fitur yang ingin saya tambah dan kurangi di dalam blog ini.
 
-Ceritanya dapat teman-teman baca [di sini]({{ site.url }}/blog/migrasi-blog-2-0){:target="_blank"}.
+Ceritanya dapat teman-teman baca [**Migrasi BLog 2.0**]({{ site.url }}/blog/migrasi-blog-2-0){:target="_blank"}.
 
-# Apa mesin ketik yang digunakan?
+# Mesin ketik yang digunakan?
 
 Berikut ini adalah spesifikasi mesin maupun aplikasi yang pernah atau hingga saat ini saya gunakan untuk berkomputasi ataupun untuk mengukir tulisan di blog ini.
 
@@ -62,45 +64,45 @@ Berikut ini adalah spesifikasi mesin maupun aplikasi yang pernah atau hingga saa
 
 # Aplikasi favorit yang digunakan di Linux?
 
-|-----------------------|---------------------------------------|
-| <center>Data</center> | <center>Keterangan</center>           |
-| :---                  | :---                                  |
-|-----------------------|---------------------------------------|
-| Static Site Generator | **Jekyll**                            |
-| Hosting               | **GitHub Pages**                      |
-| Format Text           | **markdown** & **asciidoc**           |
-| Sistem Operasi        | **Linux**                             |
-| Distribusi            | **Arch Linux**                        |
-| Desktop Env.          | -                                     |
-| Window Manager        | **dwm**                               |
-| Terminal Emulator     | **st**                                |
-| Shell                 | **bash**                              |
-| Application Launcher  | **dmenu** & **rofi**                  |
-| Statusbar             | **slstatus**                          |
-| Text Editor           | **neovim**                            |
-| Raster Image Editor   | **gimp** & **gthumb**                 |
-| Vector Image Editor   | **inkscape**                          |
-| Image Preview         | **nsxiv**                             |
-| Office                | **libreoffice**                       |
-| Get Things Done       | **taskell** & **notion**              |
-| ScreenShoter          | **scrot** & **flameshot**             |
-| PDF Reader            | **zathura** & **evince**              |
-| Video Editor          | **kdenlive** & **olive** & **LWKS**   |
-| Screen Recorder       | **ffmpeg** & **SimpleScreenRecorder** |
-| Webcam                | **ffplay** & **mpv**                  |
-| Video Player          | **mpv**                               |
-| Audio Player          | **namp**                              |
-| Browser               | **qutebrowser**                       |
-| File Manager          | **ranger**                            |
-| Email Client          | **neomutt**                           |
-| IRC Client            | **weechat**                           |
-| RSS Feed Reader       | **newsboat**                          |
-| Torrent Client        | **tremc**                             |
-| RDP Client            | **xfreerdp**                          |
-| VNC Server            | **x11vnc**                            |
-| Ebook Library         | **calibre**                           |
-| Smartphone Mirroring  | **scrcpy**                            |
-|-----------------------|---------------------------------------|
+|------------------------|---------------------------------------|
+| <center>Data</center>  | <center>Keterangan</center>           |
+| :---                   | :---                                  |
+|------------------------|---------------------------------------|
+| Static Site Generator  | **Jekyll**                            |
+| Format Text            | **markdown** & **asciidoc**           |
+| Sistem Operasi         | **Linux**                             |
+| Distribusi             | **Arch Linux**                        |
+| Desktop Env.           | -                                     |
+| Window Manager         | **dwm**                               |
+| Terminal Emulator      | **st**                                |
+| Shell                  | **bash**                              |
+| Application Launcher   | **dmenu** & **rofi**                  |
+| Statusbar              | **slstatus**                          |
+| Text Editor            | **neovim**                            |
+| Raster Image Editor    | **gimp** & **gthumb**                 |
+| Vector Image Editor    | **inkscape**                          |
+| Image Preview          | **nsxiv**                             |
+| Office                 | **libreoffice**                       |
+| Get Things Done        | **taskell** & **notion**              |
+| ScreenShoter           | **scrot** & **flameshot**             |
+| PDF Reader             | **zathura** & **evince**              |
+| Video Editor           | **kdenlive** & **olive** & **LWKS**   |
+| Screen Recorder        | **ffmpeg** & **SimpleScreenRecorder** |
+| Webcam                 | **ffplay** & **mpv**                  |
+| Video Player           | **mpv**                               |
+| Audio Player           | **namp**                              |
+| Browser                | **qutebrowser** & **firefox**         |
+| File Manager           | **ranger**                            |
+| Email Client           | **neomutt**                           |
+| IRC Client             | **weechat**                           |
+| RSS Feed Reader        | **newsboat**                          |
+| Torrent Client         | **tremc**                             |
+| RDP Client             | **xfreerdp**                          |
+| VNC Server             | **x11vnc**                            |
+| Ebook Library          | **calibre**                           |
+| Smartphone Mirroring   | **scrcpy**                            |
+| Git Control Management | **lazygit**                           |
+|------------------------|---------------------------------------|
 
 Seperti yang teman-teman lihat di atas, saya banyak menggunakan *free and open source software*. Kalau teman-teman sudah memiliki penghasilan sendiri, jangan lupa untuk berdonasi terhadap project-project *free and open source software* yang teman-teman pergunakan.
 
