@@ -163,7 +163,7 @@ Created : Maret 2018
 
   .post-title {
     color: var(--BLACK);
-    border-bottom-color: var(--GREY-03);
+    border-bottom-color: var(--BLACK);
   }
 
   .post-title a {
@@ -395,7 +395,7 @@ Created : Maret 2018
 
   .post-title {
     color: var(--WHITE);
-    border-bottom-color: var(--GREY-03);
+    border-bottom-color: var(--WHITE);
   }
 
   .post-title a {
