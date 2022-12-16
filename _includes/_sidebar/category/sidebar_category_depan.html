@@ -1,5 +1,6 @@
 <div class="sidebar-body">
-  <h1 style="font-size:1.5em;border-bottom:1px dashed #9E9E9E;">Daftar Kategori</h1>
+  {% comment %} <h1 style="font-size:1.5em;border-bottom:1px dashed #9E9E9E;">Daftar Kategori</h1> {% endcomment %}
+  <h1 style="font-size:1.5em;border-bottom:1px dashed;">Daftar Kategori</h1>
   {% assign categories_list = site.categories %}
   {% if categories_list.first[0] == null %}
   {% for category in categories_list %}
@@ -12,6 +13,7 @@
   {% endif %}
   {% assign categories_list = nil %}
   <p style="font-size:10px;color:#00603C;margin-top:10px;">*8 category di atas digenerate secara random</p>
-  <div style="margin:10px 0 10px 0;border-bottom:1px dashed #9E9E9E;"></div>
+  {% comment %} <div style="margin:10px 0 10px 0;border-bottom:1px dashed #9E9E9E;"></div> {% endcomment %}
+  <div style="margin:10px 0 10px 0;border-bottom:1px dashed;"></div>
   <p style="text-align:right;"><a style="border-bottom:0;" href="/category/"><b>Selengkapnya >></b></a></p>
 </div>

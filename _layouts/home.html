@@ -21,7 +21,7 @@ permalink: :title
               <span style="font-size:14px;font-family:'Fira Sans Condensed','Ubuntu Condensed';font-weight:bold;">Blog Terbaru</span>
               <p><a href="{{ post.url }}">&plus; {{ post.title }}</a></p>
             {% endfor %}
-            <div style="margin:10px 0 10px 0;border-bottom:1px dashed #000;"></div>
+            <div style="margin:10px 0 10px 0;border-bottom:1px dashed;"></div>
             {% assign posts = site.posts | where_exp: 'page', "page.category == 'note'" | sort: 'date','last' | reverse %}
             {% for post in posts limit: 1 %}
               <span style="font-size:14px;font-family:'Fira Sans Condensed','Ubuntu Condensed';font-weight:bold;">Note Terbaru</span>
