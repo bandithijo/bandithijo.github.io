@@ -161,6 +161,10 @@ Created : Maret 2018
     border-bottom-color: var(--GREY-05);
   }
 
+  aside.sidebar h1 a, aside.sidebar h1 a:hover {
+    color: var(--BLACK);
+  }
+
   .post-title {
     color: var(--BLACK);
     border-bottom-color: var(--BLACK);
@@ -395,6 +399,10 @@ Created : Maret 2018
   aside.sidebar h1 {
     color: var(--WHITE);
     border-bottom-color: var(--WHITE);
+  }
+
+  aside.sidebar h1 a, aside.sidebar h1 a:hover {
+    color: var(--WHITE);
   }
 
   .post-title {
