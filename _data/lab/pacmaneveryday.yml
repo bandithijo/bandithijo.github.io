@@ -1131,3 +1131,20 @@ experiment:
       <li>error: failed to commit transaction (unexpected error)</li>
       </ul>
     solution: 'sudo pacman -Syyu'
+
+  - date:   '2022-12-15'
+    number: '121'
+    count:  '20'
+    size:   '232.78'
+    status: 'ERROR, OK'
+    url:    'https://youtu.be/CWAoucCLaTw'
+    note:   >-
+      <ul>
+      <li>error: failed retrieving file 'nodejs-19.3.0-1-x86_64.pkg.tar.zst.sig' from arch.mirror.constant.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>error: failed retrieving file 'samba-4.17.4-1-x86_64.pkg.tar.zst.sig' from arch.mirror.constant.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>error: failed retrieving file 'erlang-nox-25.2-1-x86_64.pkg.tar.zst.sig' from arch.mirror.constant.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>warning: too many errors from arch.mirror.constant.com, skipping for the remainder of this transaction</li>
+      <li>warning: failed to retrieve some files</li>
+      <li>error: failed to commit transaction (unexpected error)</li>
+      </ul>
+    solution: 'sudo pacman -Syyu'
