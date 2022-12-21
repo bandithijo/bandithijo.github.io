@@ -47,6 +47,22 @@ Tampilan dari tema blog ini juga dibuat sendiri agar saya lebih bebas membongkar
 
 Ceritanya dapat teman-teman baca [**Migrasi BLog 2.0**]({{ site.url }}/blog/migrasi-blog-2-0){:target="_blank"}.
 
+# Sistem Operasi yang digunakan?
+
+{% assign date0 = site.time | date: '%Y' | integer %}
+{% assign date1 = 2016 %}
+{% assign date2 = date0 | minus: date1 %}
+
+|-----------------------------------------------------|----------------------------------|-------------------------|
+| <center>Sistem Operasi</center>                     | <center>Tahun Digunakan</center> | <center>Durasi</center> |
+| :---                                                | :---                             | :---                    |
+|-----------------------------------------------------|----------------------------------|-------------------------|
+| **Microsoft Windows ME, XP, Vista**                 | 2002 - 2008                      | 6 tahun                 |
+| **OS X 10.5, 10.6, 10.7, 10.8, 10.9, 10.10, 10.11** | 2009 - 2015                      | 6 tahun                 |
+| **Linux**                                           | 2016 - Sekarang                  | {{ date2 }} tahun       |
+|-----------------------------------------------------|----------------------------------|-------------------------|
+
+
 # Mesin ketik yang digunakan?
 
 Berikut ini adalah spesifikasi mesin maupun aplikasi yang pernah atau hingga saat ini saya gunakan untuk berkomputasi ataupun untuk mengukir tulisan di blog ini.
