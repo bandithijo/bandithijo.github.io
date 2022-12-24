@@ -23,7 +23,7 @@ Sehingga, apabila dibaca secara utuh menjadi, /BanditHijo Arkaiv/ yang berarti A
 
 # Apa Alasan Menulis Blog?
 
-Blog adalah salah satu strategi saya, agar cangkupan ilmu yang bisa saya sebarkan menjadi lebih luas. Dan lebih bisa menjangkau siapa saja, tanpa perlu jauh-jauh datang untuk bertemu dengan saya.
+Blog adalah salah satu strategi saya, agar cangkupan ilmu yang bisa saya sebarkan menjadi lebih luas dan lebih bisa menjangkau siapa saja, tanpa perlu jauh-jauh datang untuk bertemu dengan saya.
 
 **Kenapa ilmunya harus disebarkan?**
 
