@@ -1252,3 +1252,13 @@ experiment:
     note:   >-
       -
 
+  - date:   '2022-12-27'
+    number: '133'
+    kernel: '6.1.1-arch1-1'
+    server: 'https://mirror.lty.me/archlinux/$repo/os/$arch'
+    count:  '39'
+    size:   '24.48'
+    status: 'OK'
+    url:    'https://youtu.be/EvnRdgiiYLI'
+    note:   >-
+      -
