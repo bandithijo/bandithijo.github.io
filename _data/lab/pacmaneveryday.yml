@@ -1262,3 +1262,14 @@ experiment:
     url:    'https://youtu.be/EvnRdgiiYLI'
     note:   >-
       -
+
+  - date:   '2022-12-28'
+    number: '134'
+    kernel: '6.1.1-arch1-1'
+    server: 'https://mirror.lty.me/archlinux/$repo/os/$arch'
+    count:  '11'
+    size:   '11.55'
+    status: 'OK'
+    url:    'https://youtu.be/xHP61vrkxv0'
+    note:   >-
+      -
