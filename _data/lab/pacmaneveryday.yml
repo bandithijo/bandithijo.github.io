@@ -1295,3 +1295,21 @@ experiment:
     url:    'https://youtu.be/gG5ndqLpJ_M'
     note:   >-
       -
+
+  - date:   '2022-12-31'
+    number: '137'
+    kernel: '6.1.1-arch1-1'
+    server: 'https://mirror.lty.me/archlinux/$repo/os/$arch'
+    count:  '6'
+    size:   '43.92'
+    status: 'ERROR, OK'
+    url:    'https://youtu.be/Q8BTevHf1V0'
+    note:   >-
+      <ul>
+      <li>error: failed retrieving file 'mesa-22.3.1-2-x86_64.pkg.tar.zst' from mirror.lty.me : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>error: failed retrieving file 'vulkan-intel-22.3.1-2-x86_64.pkg.tar.zst' from mirror.lty.me : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>error: failed retrieving file 'wolfssl-5.5.4-1-x86_64.pkg.tar.zst' from mirror.lty.me : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>warning: too many errors from mirror.lty.me, skipping for the remainder of this transaction</li>
+      <li>error: failed retrieving file 'vulkan-mesa-layers-22.3.1-2-x86_64.pkg.tar.zst' from mirror.lty.me : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      </ul>
+    solution: '-'
