@@ -1313,3 +1313,14 @@ experiment:
       <li>error: failed retrieving file 'vulkan-mesa-layers-22.3.1-2-x86_64.pkg.tar.zst' from mirror.lty.me : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
       </ul>
     solution: '-'
+
+  - date:   '2023-01-01'
+    number: '138'
+    kernel: '6.1.1-arch1-1'
+    server: 'https://mirror.lty.me/archlinux/$repo/os/$arch'
+    count:  '2'
+    size:   '1.14'
+    status: 'OK'
+    url:    'https://youtu.be/6x6ngwjODSk'
+    note:   >-
+      -
