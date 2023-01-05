@@ -1335,3 +1335,14 @@ experiment:
     url:    'https://youtu.be/UiAjcQrrL9Q'
     note:   >-
       -
+
+  - date:   '2023-01-03'
+    number: '140'
+    kernel: '6.1.1-arch1-1'
+    server: 'https://mirror.cyberbits.asia/archlinux/$repo/os/$arch'
+    count:  '121'
+    size:   '814.35'
+    status: 'OK'
+    url:    'https://youtu.be/rXSsuT51NMY'
+    note:   >-
+      -
