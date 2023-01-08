@@ -41,7 +41,7 @@ Sebagian besar isi dari blog ini mengenai ulasan dari perkakas yang saya gunakan
 
 # Blognya Dibuat Pakai Apa?
 
-Blog ini saya bangun menggunakan *Static Site Generator* yang bernama **Jekyll**.
+Blog ini saya bangun menggunakan *Static Site Generator* yang bernama [**Jekyll**](http://jekyllrb.com/){:target="_blank"}.
 
 Tampilan dari tema blog ini juga dibuat sendiri agar saya lebih bebas membongkar dan memasang fitur-fitur yang ingin saya tambah dan kurangi di dalam blog ini.
 
