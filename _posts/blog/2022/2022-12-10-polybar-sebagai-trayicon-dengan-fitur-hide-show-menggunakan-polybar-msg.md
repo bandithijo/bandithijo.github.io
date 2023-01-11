@@ -39,7 +39,7 @@ Cara ini memanfaatkan IPC (*Interprocess Communication*) agar kita dapat mengiri
 
 ## 1. Tambahkan attribute enable-ipc = true
 
-Pada sement atau section bar yang dijadikan sebagai trayicon, tambahkan attribute `enable-ipc = true`.
+Pada segment atau section bar yang dijadikan sebagai trayicon, tambahkan attribute `enable-ipc = true`.
 
 Contoh seperti yang saya pergunakan,
 
