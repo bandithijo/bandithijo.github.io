@@ -1426,3 +1426,24 @@ experiment:
       <li>error: failed to commit transaction (unexpected error)</li>
       </ul>
     solution: 'sudo pacman -Syyu'
+
+  - date:   '2023-01-10'
+    number: '147'
+    kernel: '6.1.4-arch1-1'
+    server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
+    count:  '4'
+    size:   '2.47'
+    status: 'ERROR, OK'
+    url:    'https://youtu.be/k2k-CebY3EE'
+    note:   >-
+      <ul>
+      <li>error: failed retrieving file 'extra.db' from mirrors.neusoft.edu.cn : Failed to connect to mirrors.neusoft.edu.cn port 443 after 7962 ms: Couldn't connect to server</li>
+      <li>error: failed retrieving file 'community.db' from mirrors.neusoft.edu.cn : Failed to connect to mirrors.neusoft.edu.cn port 443 after 7963 ms: Couldn't connect to server</li>
+      <li>error: failed retrieving file 'core.db' from mirrors.neusoft.edu.cn : Connection timeout after 10029 ms</li>
+      <li>warning: too many errors from mirrors.neusoft.edu.cn, skipping for the remainder of this transaction</li>
+      </ul>
+    solution: >-
+      <ul>
+      <li>sudo pacman -Syyu</li>
+      <li>sudo reflector --verbose --protocol https --latest 5 --sort rate --save /etc/pacman.d/mirrorlist</li>
+      </ul>
