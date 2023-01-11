@@ -1401,3 +1401,28 @@ experiment:
     url:    'https://youtu.be/9W8s8o0OgkE'
     note:   >-
       -
+
+  - date:   '2023-01-09'
+    number: '146'
+    kernel: '6.1.4-arch1-1'
+    server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
+    count:  '21'
+    size:   '196.40'
+    status: 'ERROR, OK'
+    url:    'https://youtu.be/qok6qgZTCxQ'
+    note:   >-
+      <ul>
+      <li>error: failed retrieving file 'chromium-109.0.5414.74-1-x86_64.pkg.tar.zst' from mirrors.neusoft.edu.cn : HTTP server doesn't seem to support byte ranges. Cannot resume.</li>
+      <li>error: failed retrieving file 'rust-1:1.66.1-1-x86_64.pkg.tar.zst' from mirrors.neusoft.edu.cn : HTTP server doesn't seem to support byte ranges. Cannot resume.</li>
+      <li>error: failed retrieving file 'qt5-declarative-5.15.8+kde+r24-1-x86_64.pkg.tar.zst' from mirrors.neusoft.edu.cn : HTTP server doesn't seem to support byte ranges. Cannot resume.</li>
+      <li>warning: too many errors from mirrors.neusoft.edu.cn, skipping for the remainder of this transaction</li>
+      <li>error: failed retrieving file 'taskell-1.11.4-278-x86_64.pkg.tar.zst' from mirrors.neusoft.edu.cn : HTTP server doesn't seem to support byte ranges. Cannot resume.</li>
+      <li>error: failed retrieving file 'haskell-http-client-0.7.13.1-32-x86_64.pkg.tar.zst' from arch.mirror.constant.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>error: failed retrieving file 'libva-utils-2.17.1-1-x86_64.pkg.tar.zst.sig' from arch.mirror.constant.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>error: failed retrieving file 'qt5-declarative-5.15.8+kde+r24-1-x86_64.pkg.tar.zst.sig' from arch.mirror.constant.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>warning: too many errors from arch.mirror.constant.com, skipping for the remainder of this transaction</li>
+      <li>error: failed retrieving file 'frei0r-plugins-2.2.0-1-x86_64.pkg.tar.zst.sig' from arch.mirror.constant.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>warning: failed to retrieve some files</li>
+      <li>error: failed to commit transaction (unexpected error)</li>
+      </ul>
+    solution: 'sudo pacman -Syyu'
