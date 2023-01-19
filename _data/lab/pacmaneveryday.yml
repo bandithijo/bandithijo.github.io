@@ -1513,3 +1513,14 @@ experiment:
     url:    'https://youtu.be/PA0O8U1bcms'
     note:   >-
       -
+
+  - date:   '2023-01-17'
+    number: '154'
+    kernel: '6.1.6-arch1-3'
+    server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
+    count:  '3'
+    size:   '0.72'
+    status: 'OK'
+    url:    'https://youtu.be/sldpUw85R4U'
+    note:   >-
+      -
