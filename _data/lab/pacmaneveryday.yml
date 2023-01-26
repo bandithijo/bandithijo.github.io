@@ -1579,3 +1579,14 @@ experiment:
     url:    'https://youtu.be/1Kq1Xhgc78E'
     note:   >-
       -
+
+  - date:   '2023-01-23'
+    number: '160'
+    kernel: '6.1.7-arch1-1'
+    server: 'https://mirror.chaoticum.net/arch/$repo/os/$arch'
+    count:  '40'
+    size:   '650.84'
+    status: 'OK'
+    url:    'https://youtu.be/VHdx71-VTwM'
+    note:   >-
+      -
