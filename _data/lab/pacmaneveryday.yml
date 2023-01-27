@@ -1590,3 +1590,14 @@ experiment:
     url:    'https://youtu.be/VHdx71-VTwM'
     note:   >-
       -
+
+  - date:   '2023-01-24'
+    number: '161'
+    kernel: '6.1.8-arch1-1'
+    server: 'https://mirror.chaoticum.net/arch/$repo/os/$arch'
+    count:  '18'
+    size:   '33.76'
+    status: 'OK'
+    url:    'https://youtu.be/otMrpfFqxlk'
+    note:   >-
+      -
