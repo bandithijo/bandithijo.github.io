@@ -1689,3 +1689,14 @@ experiment:
     url:    'https://youtu.be/PapgGm7Psbc'
     note:   >-
       -
+
+  - date:   '2023-02-02'
+    number: '170'
+    kernel: '6.1.9-arch1-1'
+    server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
+    count:  '2'
+    size:   '0.97'
+    status: 'OK'
+    url:    'https://youtu.be/SZ8S1OtPlcs'
+    note:   >-
+      -
