@@ -1733,3 +1733,14 @@ experiment:
     url:    'https://youtu.be/sYNFT1PToZk'
     note:   >-
       -
+
+  - date:   '2023-02-06'
+    number: '174'
+    kernel: '6.1.9-arch1-2'
+    server: 'https://mirror.cyberbits.asia/archlinux/$repo/os/$arch'
+    count:  '65'
+    size:   '356.19'
+    status: 'OK'
+    url:    'https://youtu.be/bXES3hx7fKM'
+    note:   >-
+      -
