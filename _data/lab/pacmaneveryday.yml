@@ -1766,3 +1766,14 @@ experiment:
     url:    'https://youtu.be/NqDvgwEkB_8'
     note:   >-
       -
+
+  - date:   '2023-02-09'
+    number: '177'
+    kernel: '6.1.11-arch1-1'
+    server: 'https://sydney.mirror.pkgbuild.com/$repo/os/$arch'
+    count:  '17'
+    size:   '75.33'
+    status: 'OK'
+    url:    'https://youtu.be/rFfzIC-bENU'
+    note:   >-
+      -
