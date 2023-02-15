@@ -1777,3 +1777,22 @@ experiment:
     url:    'https://youtu.be/rFfzIC-bENU'
     note:   >-
       -
+
+  - date:   '2023-02-10'
+    number: '178'
+    kernel: '6.1.11-arch1-1'
+    server: 'https://sydney.mirror.pkgbuild.com/$repo/os/$arch'
+    count:  '65'
+    size:   '168.93'
+    status: 'ERROR, OK'
+    url:    'https://youtu.be/fSgfTx590kQ'
+    note:   >-
+      <ul>
+      <li>error: failed retrieving file 'python-pip-23.0-1-any.pkg.tar.zst.sig' from sydney.mirror.pkgbuild.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>error: failed retrieving file 'ki18n-5.103.0-1-x86_64.pkg.tar.zst' from sydney.mirror.pkgbuild.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>error: failed retrieving file 'lvm2-2.03.18-5-x86_64.pkg.tar.zst' from sydney.mirror.pkgbuild.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>warning: too many errors from sydney.mirror.pkgbuild.com, skipping for the remainder of this transaction</li>
+      <li>warning: failed to retrieve some files</li>
+      <li>error: failed to commit transaction (unexpected error)</li>
+      </ul>
+    solution: 'sudo pacman -Syyu'
