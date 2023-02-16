@@ -1796,3 +1796,23 @@ experiment:
       <li>error: failed to commit transaction (unexpected error)</li>
       </ul>
     solution: 'sudo pacman -Syyu'
+
+  - date:   '2023-02-11'
+    number: '179'
+    kernel: '6.1.11-arch1-1'
+    server: 'https://sydney.mirror.pkgbuild.com/$repo/os/$arch'
+    count:  '23'
+    size:   '425.74'
+    status: 'ERROR, OK'
+    url:    'https://youtu.be/SJd7VggOmpg'
+    note:   >-
+      <ul>
+      <li>error: failed retrieving file 'webkit2gtk-2.38.5-1-x86_64.pkg.tar.zst' from sydney.mirror.pkgbuild.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>error: failed retrieving file 'webkit2gtk-4.1-2.38.5-1-x86_64.pkg.tar.zst' from sydney.mirror.pkgbuild.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>error: failed retrieving file 'js102-102.8.0-1-x86_64.pkg.tar.zst' from sydney.mirror.pkgbuild.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>warning: too many errors from sydney.mirror.pkgbuild.com, skipping for the remainder of this transaction</li>
+      <li>error: failed retrieving file 'telegram-desktop-4.6.3-1-x86_64.pkg.tar.zst.sig' from sydney.mirror.pkgbuild.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>warning: failed to retrieve some files</li>
+      <li>error: failed to commit transaction (unexpected error)</li>
+      </ul>
+    solution: 'sudo pacman -Syyu'
