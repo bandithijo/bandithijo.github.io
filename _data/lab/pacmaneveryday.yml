@@ -1816,3 +1816,20 @@ experiment:
       <li>error: failed to commit transaction (unexpected error)</li>
       </ul>
     solution: 'sudo pacman -Syyu'
+
+  - date:   '2023-02-12'
+    number: '180'
+    kernel: '6.1.12-arch1-1'
+    server: 'https://sydney.mirror.pkgbuild.com/$repo/os/$arch'
+    count:  '28'
+    size:   '399.68'
+    status: 'ERROR, OK'
+    url:    'https://youtu.be/luyB9AXtJKk'
+    note:   >-
+      <ul>
+      <li>error: failed retrieving file 'linux-firmware-nfp-20230210.bf4115c-1-any.pkg.tar.zst' from sydney.mirror.pkgbuild.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>error: failed retrieving file 'docker-scan-0.25.0-1-x86_64.pkg.tar.zst.sig' from sydney.mirror.pkgbuild.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>warning: failed to retrieve some files</li>
+      <li>error: failed to commit transaction (unexpected error)</li>
+      </ul>
+    solution: 'sudo reflector --verbose --protocol https --latest 5 --sort rate --save /etc/pacman.d/mirrorlist'
