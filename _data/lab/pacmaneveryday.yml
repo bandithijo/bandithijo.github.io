@@ -1833,3 +1833,14 @@ experiment:
       <li>error: failed to commit transaction (unexpected error)</li>
       </ul>
     solution: 'sudo reflector --verbose --protocol https --latest 5 --sort rate --save /etc/pacman.d/mirrorlist'
+
+  - date:   '2023-02-13'
+    number: '181'
+    kernel: '6.1.12-arch1-1'
+    server: 'https://mirror.pseudoform.org/$repo/os/$arch'
+    count:  '17'
+    size:   '40.21'
+    status: 'OK'
+    url:    'https://youtu.be/iHW4nGQizEc'
+    note:   >-
+      -
