@@ -1931,3 +1931,14 @@ experiment:
     url:    'https://youtu.be/Qnjj89xQgCs'
     note:   >-
       -
+
+  - date:   '2023-02-22'
+    number: '190'
+    kernel: '6.2.1-arch1-1'
+    server: 'https://mirror.osbeck.com/archlinux/$repo/os/$arch'
+    count:  '5'
+    size:   '4.79'
+    status: 'OK'
+    url:    'https://youtu.be/5vTgweWxgJo'
+    note:   >-
+      -
