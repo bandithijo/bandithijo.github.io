@@ -5,7 +5,7 @@ SourceURL: https://github.com/sindresorhus/github-markdown-css
 */
 
 :root {
-  --background-code: #1E1E1E;
+  --background-code: #002B36;
 }
 
 .markdown-body .octicon {

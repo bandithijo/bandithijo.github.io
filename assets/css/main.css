@@ -13,7 +13,7 @@ Created : Maret 2018
 @import url(/assets/fonts/fira_sans_condensed/FiraSansCondensed.css);
 
 /* CODE COLORSCHEME */
-@import url(/assets/css/codedark.css);
+@import url(/assets/css/solarizeddark.css);
 
 /* PRELOAD */
 @import url(/assets/css/preload.css);
@@ -24,7 +24,7 @@ Created : Maret 2018
 :root {
   --WHITE: #FFFFFF;
   --BLACK: #000000;
-  --BACKGROUND-CODE: #1E1E1E;
+  --BACKGROUND-CODE: #002B36;
   --GREY-01: #444d56;
   --GREY-02: #586E75;
   --GREY-03: #B8B8B8;
@@ -52,22 +52,22 @@ Created : Maret 2018
   --BROWN-02: #9B9185;
 
   --LGT-BG-OUTTER-01: #D7CCBC;
-  --DRK-BG-OUTTER-01: #262626;
+  --DRK-BG-OUTTER-01: #002B36;
 
   --LGT-BG-OUTTER-02: #B2A493;
-  --DRK-BG-OUTTER-02: #1E1E1E;
+  --DRK-BG-OUTTER-02: #002B36;
 
   --LGT-BG-OUTTER-BORDER-BTM: #9B9185;
   --DRK-BG-OUTTER-BORDER-BTM: #0E0E0E;
 
   --LGT-CONTAINER: #FFFFFF;
-  --DRK-CONTAINER: #333333;
+  --DRK-CONTAINER: #073642;
 
   --LGT-CONTAINER-BORDER: #B8B8B8;
-  --DRK-CONTAINER-BORDER: #262626;
+  --DRK-CONTAINER-BORDER: #002B36;
 
   --LGT-FOOTER: #B8B8B8;
-  --DRK-FOOTER: #262626;
+  --DRK-FOOTER: #002B36;
 
   --LGT-TABLE-TH: #C5D796;
   --DRK-TABLE-TH: #637044;
@@ -242,11 +242,25 @@ Created : Maret 2018
     border-color: var(--BLACK);
   }
 
+  p.post-details-index {
+    color: var(--BLACK);
+    background: var(--GREY-03);
+  }
+
+  p.post-details-index a {
+    color: var(--BLACK);
+  }
+
+  p.post-details-index:before {
+    border-right: 8px solid var(--GREY-03);
+  }
+
   a.headings-permalink,
   a:hover.headings-permalink {
     color: var(--BLACK);
   }
 
+  /* https://codepen.io/sosuke/pen/Pjoqqp */
   img.icon {
     filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(7461%) hue-rotate(20deg) brightness(94%) contrast(110%);
   }
@@ -314,12 +328,26 @@ Created : Maret 2018
   .blockquote-red a:hover, .blockquote-blue a:hover, .blockquote-yellow a:hover {
     color: var(--GREEN-01);
   }
+
+  div.highlight-caption {
+    background-color: var(--base021);
+  }
+
+  div.highlight-caption span.label {
+    background-color: var(--WHITE);
+    color: var(--BLACK);
+  }
+
+  div.highlight-caption code {
+    background-color: var(--background-cap) !important;
+    color: var(--WHITE);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   body{
     background: var(--DRK-BG-OUTTER-01);
-    color: var(--WHITE);
+    color: var(--base1);
   }
 
   #header {
@@ -350,7 +378,7 @@ Created : Maret 2018
 
   article.homepage .notif-home p,
   article.homepage .notif-home a {
-    color: var(--WHITE);
+    color: var(--base1);
   }
 
   #footer .container {
@@ -367,7 +395,7 @@ Created : Maret 2018
   }
 
   .footer-body {
-    color: var(--WHITE)
+    color: var(--base1)
   }
 
   .tech-i-used-desktop,
@@ -376,79 +404,79 @@ Created : Maret 2018
   }
 
   a, a:visited {
-    color: var(--WHITE);
+    color: var(--base1);
   }
 
   input#search-input,
   input#search-input:focus {
     background: var(--DRK-CONTAINER);
     border-color: var(--DRK-CONTAINER);
-    color: var(--WHITE);
+    color: var(--base1);
   }
 
   aside .sidebar-body {
     background: var(--DRK-CONTAINER);
-    border-color: var(--WHITE);
+    border-color: var(--base1);
   }
 
   aside .sidebar-body-rss {
     background: var(--DRK-CONTAINER);
-    border-color: var(--WHITE);
+    border-color: var(--base1);
   }
 
   aside.sidebar h1 {
-    color: var(--WHITE);
+    color: var(--base1);
     border-bottom-color: var(--WHITE);
   }
 
   aside.sidebar h1 a, aside.sidebar h1 a:hover {
-    color: var(--WHITE);
+    color: var(--base1);
   }
 
   .post-title {
-    color: var(--WHITE);
-    border-bottom-color: var(--WHITE);
+    color: var(--base1);
+    border-bottom-color: var(--base1);
   }
 
   .post-title a {
-    color: var(--WHITE);
+    color: var(--base1);
   }
 
   .post-title a:hover {
-    color: var(--WHITE);
+    color: var(--base1);
   }
 
   p.post-title-index {
-    color: var(--WHITE);
+    color: var(--base1);
     border-bottom-color: var(--GREY-03);
   }
 
   p.post-title-index a {
-    color: var(--WHITE);
+    color: var(--base1);
   }
 
   p.post-title-index a:hover {
-    color: var(--WHITE);
+    color: var(--base1);
   }
 
   .collapsible-title:before {
-    color: var(--WHITE);
+    color: var(--base1);
   }
 
   .markdown-body {
-    color: var(--WHITE);
+    color: var(--base1);
   }
 
   .markdown-body li {
-    color: var(--WHITE);
+    color: var(--base1);
   }
 
   .markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
-    color: var(--WHITE);
+    color: var(--base1);
   }
 
   .markdown-body h1 {
-    border-bottom-color: var(--WHITE);
+    border-bottom-color: var(--base1);
   }
 
   .markdown-body blockquote a, .markdown-body blockquote a:hover {
@@ -457,7 +485,8 @@ Created : Maret 2018
 
   .markdown-body table th {
     background: var(--DRK-TABLE-TH);
-    border-color: var(--WHITE) !important;
+    border-color: var(--base1) !important;
+    color: var(--base03);
   }
 
   .markdown-body table tr {
@@ -465,11 +494,11 @@ Created : Maret 2018
   }
 
   .markdown-body table tr:nth-child(2n) {
-    background-color: var(--DRK-TABLE-TR-2N);
+    background-color: var(--base03);
   }
 
   .markdown-body table td {
-    border-color: var(--WHITE) !important;
+    border-color: var(--base1) !important;
   }
 
   .markdown-body figure.highlight table td {
@@ -477,22 +506,36 @@ Created : Maret 2018
   }
 
   .post-details {
-    background: var(--WHITE);
-    color: var(--BLACK);
-    border-color: var(--WHITE);
+    background: var(--base1);
+    color: var(--base03);
+    border-color: var(--base1);
+  }
+
+  p.post-details-index {
+    color: var(--base03);
+    background: var(--base1);
+  }
+
+  p.post-details-index a {
+    color: var(--base1);
+  }
+
+  p.post-details-index:before {
+    border-right: 8px solid var(--base1);
   }
 
   a.headings-permalink,
   a:hover.headings-permalink {
-    color: var(--WHITE);
+    color: var(--base1);
   }
 
+  /* https://codepen.io/sosuke/pen/Pjoqqp */
   img.icon {
-    filter: brightness(0) saturate(100%) invert(100%) sepia(4%) saturate(14%) hue-rotate(59deg) brightness(103%) contrast(106%);
+    filter: invert(73%) sepia(21%) saturate(68%) hue-rotate(132deg) brightness(84%) contrast(87%);
   }
 
   .mono {
-    color: var(--WHITE);
+    color: var(--base1);
   }
 
   .notag {
@@ -501,25 +544,25 @@ Created : Maret 2018
   }
 
   small {
-    color: var(--WHITE);
+    color: var(--base1);
   }
 
   .post-body li {
-    color: var(--WHITE);
+    color: var(--base1);
   }
 
   aside.sidebar ul {
-    color: var(--WHITE);
+    color: var(--base1);
   }
 
   .wiptag_title {
-    background: var(--WHITE);
-    color: var(--BLACK);
+    background: var(--base1);
+    color: var(--base03);
   }
 
   .wiptag {
-    background: var(--WHITE);
-    color: var(--BLACK);
+    background: var(--base1);
+    color: var(--base03);
   }
 
   .keyboard-mapping {
@@ -529,20 +572,20 @@ Created : Maret 2018
   .whiteboard {
     background-color: var(--DRK-CONTAINER) !important;
     border-color: var(--DRK-CONTAINER) !important;
-    color: var(--WHITE) !important;
+    color: var(--base1) !important;
   }
 
   .whiteboard border {
-    border-color: var(--WHITE) !important;
+    border-color: var(--base1) !important;
   }
   .url {
     background-color: var(--DRK-CONTAINER) !important;
-    border-color: var(--WHITE) !important;
-    color: var(--WHITE) !important;
+    border-color: var(--base1) !important;
+    color: var(--base1) !important;
   }
 
   pre.url b {
-    color: var(--WHITE) !important;
+    color: var(--base1) !important;
   }
 
   .blockquote-red table, .blockquote-blue table, .blockquote-yellow table {
@@ -552,6 +595,20 @@ Created : Maret 2018
   .blockquote-red a, .blockquote-blue a, .blockquote-yellow a,
   .blockquote-red a:hover, .blockquote-blue a:hover, .blockquote-yellow a:hover {
     color: var(--BLACK);
+  }
+
+  div.highlight-caption {
+    background-color: var(--base021);
+  }
+
+  div.highlight-caption span.label {
+    background-color: var(--base1);
+    color: var(--base03);
+  }
+
+  div.highlight-caption code {
+    background-color: var(--base021) !important;
+    color: var(--base1);
   }
 }
 
@@ -575,7 +632,7 @@ body {
 }
 
 pre, code {
-  color: var(--WHITE);
+  color: var(--base1);
   font-size: 13px !important;
   border-radius: 5px;
 }
@@ -590,7 +647,7 @@ pre.highlight {
 }
 
 pre.lineno {
-  color: var(--BASE04);
+  color: var(--base01);
   padding-right: 0 !important;
 }
 
@@ -1038,11 +1095,11 @@ p.post-title-index a:hover {
 }
 
 p.post-details-index {
-  color: var(--BLACK);
+  /* color: var(--BLACK); */
   font-family: 'Fira Code';
   font-size: 14px;
   text-align: right;
-  background: var(--GREY-03);
+  /* background: var(--GREY-03); */
   padding: 3px 4px;
   position: relative;
   top: -28px;
@@ -1052,14 +1109,14 @@ p.post-details-index {
 }
 
 p.post-details-index a {
-  color: var(--BLACK);
+  /* color: var(--BLACK); */
   border-bottom:none;
 }
 
 p.post-details-index:before {
   content: "";
   border-top: 8px solid transparent;
-  border-right: 8px solid var(--GREY-03);
+  /* border-right: 8px solid var(--GREY-03); */
   border-bottom: 8px solid transparent;
   position: absolute;
   left: -7px;
@@ -2587,7 +2644,7 @@ div.highlight-caption {
   padding-right: 8.5px;
   padding-bottom: 6.25px;
   padding-left: 8.5px;
-  background-color: var(--BASE01);
+  /* background-color: var(--base021); */
   border: 1px solid #ccc;
   border: 1px solid rgba(0,0,0,0.15);
   border-bottom: none;
@@ -2609,8 +2666,8 @@ div.highlight-caption span.label {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: .25em;
-  background-color: var(--WHITE);
-  color: var(--BLACK);
+  /* background-color: var(--WHITE); */
+  /* color: var(--BLACK); */
   user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -2621,8 +2678,8 @@ div.highlight-caption span.label {
 
 div.highlight-caption code {
   border: none;
-  background-color: var(--background-cap) !important;
-  color: var(--WHITE);
+  /* background-color: var(--background-cap) !important; */
+  /* color: var(--WHITE); */
   font-weight: bold;
   margin-left: 0.2em;
 }
