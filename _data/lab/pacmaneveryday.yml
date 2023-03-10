@@ -1997,3 +1997,14 @@ experiment:
     url:    'https://youtu.be/ZCkFFrddOqU'
     note:   >-
       -
+
+  - date:   '2023-02-28'
+    number: '196'
+    kernel: '6.2.2-arch1-1'
+    server: 'https://archlinux.uk.mirror.allworldit.com/archlinux/$repo/os/$arch'
+    count:  '49'
+    size:   '499.63'
+    status: 'OK'
+    url:    'https://youtu.be/sd_qd4djpEs'
+    note:   >-
+      -
