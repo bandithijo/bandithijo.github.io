@@ -2063,3 +2063,14 @@ experiment:
     url:    'https://youtu.be/tEeId2UmjWY'
     note:   >-
       -
+
+  - date:   '2023-03-06'
+    number: '202'
+    kernel: '6.2.5-arch1-1'
+    server: 'https://archlinux.uk.mirror.allworldit.com/archlinux/$repo/os/$arch'
+    count:  '23'
+    size:   '450.75'
+    status: 'OK'
+    url:    'https://youtu.be/dHotCqvsjqk'
+    note:   >-
+      -
