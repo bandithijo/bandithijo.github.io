@@ -2173,3 +2173,19 @@ experiment:
     url:    'https://youtu.be/qKxPPiPRbr8'
     note:   >-
       -
+
+  - date:   '2023-03-14'
+    number: '212'
+    kernel: '6.2.7-arch1-1'
+    server: 'https://at.arch.mirror.kescher.at/$repo/os/$arch'
+    count:  '66'
+    size:   '469.31'
+    status: 'ERROR, OK'
+    url:    'https://youtu.be/wGX7nhtgNhM'
+    note:   >-
+      <ul>
+      <li>error: failed retrieving file 'linux-headers-6.2.8.arch1-1-x86_64.pkg.tar.zst.sig' from at.arch.mirror.kescher.at : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>warning: failed to retrieve some files</li>
+      <li>error: failed to commit transaction (unexpected error)</li>
+      </ul>
+    solution: 'sudo pacman -Syyu'
