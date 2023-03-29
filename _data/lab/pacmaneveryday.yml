@@ -2222,3 +2222,14 @@ experiment:
     url:    'https://youtu.be/hGWRz2aQVz8'
     note:   >-
       -
+
+  - date:   '2023-03-18'
+    number: '216'
+    kernel: '6.2.8-arch1-1'
+    server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
+    count:  '3'
+    size:   '2.60'
+    status: 'OK'
+    url:    'https://youtu.be/t-Endf_HXUU'
+    note:   >-
+      -
