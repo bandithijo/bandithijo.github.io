@@ -2376,3 +2376,14 @@ experiment:
     url:    'https://youtu.be/aeuLN0pBPJU'
     note:   >-
       -
+
+  - date:   '2023-04-01'
+    number: '230'
+    kernel: '6.2.10-arch1-1'
+    server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
+    count:  '49'
+    size:   '321.20'
+    status: 'OK'
+    url:    'https://youtu.be/J6qyUGecggw'
+    note:   >-
+      -
