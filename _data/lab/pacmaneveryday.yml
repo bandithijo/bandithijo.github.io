@@ -2442,3 +2442,33 @@ experiment:
     url:    'https://youtu.be/W9tPazbGv3c'
     note:   >-
       -
+
+  - date:   '2023-04-07'
+    number: '236'
+    kernel: '6.2.11-arch1-1'
+    server: 'https://archlinux.thaller.ws/$repo/os/$arch'
+    count:  '183'
+    size:   '1694.99'
+    status: 'ERROR, OK'
+    url:    'https://youtu.be/CKwAprLQCoM'
+    note:   >-
+      <ul>
+      <li>error: failed retrieving file 'discord-0.0.27-1-x86_64.pkg.tar.zst' from archlinux.thaller.ws :</li>
+      <li>error: failed retrieving file 'gnucash-5.0-1-x86_64.pkg.tar.zst' from archlinux.thaller.ws : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>error: failed retrieving file 'linux-firmware-qlogic-20230404.2e92a49f-1-any.pkg.tar.zst' from archlinux.thaller.ws : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>warning: too many errors from archlinux.thaller.ws, skipping for the remainder of this transaction</li>
+      <li>error: failed retrieving file 'rnote-0.6.0-1-x86_64.pkg.tar.zst' from archlinux.thaller.ws : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>error: failed retrieving file 'edk2-ovmf-202302-1-any.pkg.tar.zst.sig' from archlinux.thaller.ws : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>error: failed retrieving file 'iso-codes-4.15.0-1-any.pkg.tar.zst' from archlinux.thaller.ws : Recv failure: Connection reset by peer</li>
+      <li>error: failed retrieving file 'vulkan-headers-1:1.3.248-1-any.pkg.tar.zst' from archlinux.thaller.ws : HTTP/2 stream 67 was not closed cleanly before end of the underlying connection</li>
+      <li>error: failed retrieving file 'pam-1.5.2-2-x86_64.pkg.tar.zst' from archlinux.thaller.ws : HTTP/2 stream 25 was not closed cleanly before end of the underlying connection</li>
+      <li>warning: too many errors from archlinux.thaller.ws, skipping for the remainder of this transaction</li>
+      <li>error: failed retrieving file 'hwloc-2.9.1-1-x86_64.pkg.tar.zst.sig' from archlinux.thaller.ws :</li>
+      <li>error: failed retrieving file 'vulkan-mesa-layers-23.0.3-1-x86_64.pkg.tar.zst' from archlinux.thaller.ws : Recv failure: Connection reset by peer</li>
+      <li>error: failed retrieving file 'qemu-vhost-user-gpu-8.0.0-1-x86_64.pkg.tar.zst.sig' from archlinux.thaller.ws :</li>
+      </ul>
+    solution: >-
+      <ol>
+      <li>sudo pacman -Syyu</li>
+      <li>sudo reflector --verbose --protocol https --latest 5 --sort rate --save /etc/pacman.d/mirrorlist</li>
+      </ol>
