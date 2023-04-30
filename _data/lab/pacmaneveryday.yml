@@ -2472,3 +2472,20 @@ experiment:
       <li>sudo pacman -Syyu</li>
       <li>sudo reflector --verbose --protocol https --latest 5 --sort rate --save /etc/pacman.d/mirrorlist</li>
       </ol>
+
+  - date:   '2023-04-08'
+    number: '237'
+    kernel: '6.2.13-arch1-1'
+    server: 'https://archlinux.thaller.ws/$repo/os/$arch'
+    count:  '9'
+    size:   '13.36'
+    status: 'ERROR, OK'
+    url:    'https://youtu.be/pntuDlWji4I'
+    note:   >-
+      <ul>
+      <li>error: failed retrieving file 'iw-5.19-2-x86_64.pkg.tar.zst' from archlinux.thaller.ws :</li>
+      <li>error: failed retrieving file 'mediainfo-23.04-1-x86_64.pkg.tar.zst.sig' from archlinux.thaller.ws :</li>
+      <li>warning: failed to retrieve some files</li>
+      <li>error: failed to commit transaction (download library error)</li>
+      </ul>
+    solution: sudo pacman -Syyu
