@@ -2489,3 +2489,24 @@ experiment:
       <li>error: failed to commit transaction (download library error)</li>
       </ul>
     solution: sudo pacman -Syyu
+
+  - date:   '2023-04-09'
+    number: '238'
+    kernel: '6.2.13-arch1-1'
+    server: 'https://archlinux.thaller.ws/$repo/os/$arch'
+    count:  '8'
+    size:   '106.55'
+    status: 'ERROR, OK'
+    url:    'https://youtu.be/hv_GAA2Lcwc'
+    note:   >-
+      <ul>
+      <li>error: failed retrieving file 'ttf-firacode-nerd-3.0.0-1-any.pkg.tar.zst.sig' from archlinux.thaller.ws : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>error: failed retrieving file 'thunar-4.18.6-1-x86_64.pkg.tar.zst.sig' from archlinux.thaller.ws :</li>
+      <li>warning: failed to retrieve some files</li>
+      <li>error: failed to commit transaction (unexpected error)</li>
+      </ul>
+    solution: >-
+      <ol>
+      <li>sudo reflector --verbose --protocol https --latest 5 --sort rate --save /etc/pacman.d/mirrorlist</li>
+      <li>sudo pacman -Syyu</li>
+      </ol>
