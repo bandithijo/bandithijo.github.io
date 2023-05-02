@@ -325,7 +325,7 @@ community/gping 1.2.7-1
 Langkah pertama, pasang paket `gping`.
 
 {% shell_term [bandithijo@arch-distrobox] %}
-sudo pacaman -S gping
+sudo pacman -S gping
 {% endshell_term %}
 
 Setelah dipasang, coba langsung jalankan, seharusnya berhasil.
