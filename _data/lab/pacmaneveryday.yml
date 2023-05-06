@@ -2510,3 +2510,14 @@ experiment:
       <li>sudo reflector --verbose --protocol https --latest 5 --sort rate --save /etc/pacman.d/mirrorlist</li>
       <li>sudo pacman -Syyu</li>
       </ol>
+
+  - date:   '2023-04-10'
+    number: '239'
+    kernel: '6.2.13-arch1-1'
+    server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
+    count:  '467'
+    size:   '1391.87'
+    status: 'OK'
+    url:    'https://youtu.be/OZHnbc48KCs'
+    note:   >-
+      -
