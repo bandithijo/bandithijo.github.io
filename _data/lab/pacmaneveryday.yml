@@ -2576,3 +2576,14 @@ experiment:
     url:    'https://youtu.be/3sGIo5n_0gM'
     note:   >-
       -
+
+  - date:   '2023-04-16'
+    number: '245'
+    kernel: '6.3.1-arch2-1'
+    server: 'https://asia.mirror.pkgbuild.com/$repo/os/$arch'
+    count:  '29'
+    size:   '191.43'
+    status: 'OK'
+    url:    'https://youtu.be/1vadNyK5w7g'
+    note:   >-
+      -
