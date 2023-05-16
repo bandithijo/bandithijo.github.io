@@ -2598,3 +2598,14 @@ experiment:
     url:    'https://youtu.be/h60TUoFqo3k'
     note:   >-
       -
+
+  - date:   '2023-04-18'
+    number: '247'
+    kernel: '6.3.2-arch1-1'
+    server: 'https://seoul.mirror.pkgbuild.com/$repo/os/$arch'
+    count:  '9'
+    size:   '5.79'
+    status: 'OK'
+    url:    'https://youtu.be/e-RR0VIbBBo'
+    note:   >-
+      -
