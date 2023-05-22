@@ -2675,3 +2675,14 @@ experiment:
     url:    'https://youtu.be/my9hkX1hhA8'
     note:   >-
       -
+
+  - date:   '2023-04-25'
+    number: '254'
+    kernel: '6.3.2-arch1-1'
+    server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
+    count:  '20'
+    size:   '199.07'
+    status: 'OK'
+    url:    'https://youtu.be/z7699EFxopI'
+    note:   >-
+      -
