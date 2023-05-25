@@ -2697,3 +2697,20 @@ experiment:
     url:    'https://youtu.be/4Sqeh7UI5Hw'
     note:   >-
       -
+
+  - date:   '2023-04-27'
+    number: '256'
+    kernel: '6.3.3-arch1-1'
+    server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
+    count:  '46'
+    size:   '344.64'
+    status: 'ERROR, OK'
+    url:    'https://youtu.be/FwwQ8lej6rY'
+    note:   >-
+      <ul>
+        <li>error: failed retrieving file 'linux-headers-6.3.4.arch1-1-x86_64.pkg.tar.zst.sig' from mirror.theo546.fr : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+        <li>error: failed retrieving file 'wireshark-cli-4.0.6-1-x86_64.pkg.tar.zst.sig' from mirror.theo546.fr : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+        <li>warning: failed to retrieve some files</li>
+        <li>error: failed to commit transaction (unexpected error)</li>
+      </ul>
+    solution: sudo pacman -Syyu
