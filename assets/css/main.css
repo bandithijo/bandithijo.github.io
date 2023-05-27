@@ -677,6 +677,7 @@ td.gutter.gl, td.code {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   margin-bottom: 0 !important;
+  border-radius: 0 !important;
 }
 
 .markdown-body figure.highlight {
@@ -2637,6 +2638,7 @@ pre span.cmd {
   -webkit-touch-callout: none;
   -o-user-select: none;
   -moz-user-select: none;
+  border-radius: 0;
 }
 
 div.highlight-caption {
