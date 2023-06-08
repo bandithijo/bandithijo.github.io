@@ -2734,3 +2734,26 @@ experiment:
       sudo reflector --verbose --protocol https --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
       sudo pacman -Syyu
       </ul>
+
+  - date:   '2023-04-29'
+    number: '258'
+    kernel: '6.3.5-arch1-1'
+    server: 'https://america.mirror.pkgbuild.com/$repo/os/$arch'
+    count:  '219'
+    size:   '652.22'
+    status: 'ERROR, OK'
+    url:    'https://youtu.be/hgcHixNatPQ'
+    note:   >-
+      <ul>
+      <li>error: failed retrieving file 'gst-plugins-bad-libs-1.22.3-4-x86_64.pkg.tar.zst.sig' from america.mirror.pkgbuild.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>error: failed retrieving file 'python-sphinx-7.0.1-2-any.pkg.tar.zst.sig' from america.mirror.pkgbuild.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>error: failed retrieving file 'ttf-firacode-nerd-3.0.2-1-any.pkg.tar.zst.sig' from america.mirror.pkgbuild.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds</li>
+      <li>warning: too many errors from america.mirror.pkgbuild.com, skipping for the remainder of this transaction</li>
+      <li>warning: failed to retrieve some files</li>
+      <li>error: failed to commit transaction (unexpected error)</li>
+      </ul>
+    solution: >-
+      <ul>
+      sudo reflector --verbose --protocol https --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
+      sudo pacman -Syyu
+      </ul>
