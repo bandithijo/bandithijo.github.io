@@ -2812,3 +2812,23 @@ experiment:
     url:    'https://youtu.be/B05DK2saXZI'
     note:   >-
       -
+
+  - date:   '2023-05-05'
+    number: '264'
+    kernel: '6.3.7-arch1-1'
+    server: 'https://mirror.cyberbits.eu/archlinux/$repo/os/$arch'
+    count:  '51'
+    size:   '147.20'
+    status: 'ERROR, OK'
+    url:    'https://youtu.be/5WTIRha2dV8'
+    note:   >-
+      <ul>
+      <li>error: failed retrieving file 'knotifyconfig-5.107.0-1-x86_64.pkg.tar.zst.sig' from mirror.cyberbits.eu :</li>
+      <li>error: failed retrieving file 'kded-5.107.0-1-x86_64.pkg.tar.zst' from mirror.cyberbits.eu :</li>
+      <li>warning: failed to retrieve some files</li>
+      <li>error: failed to commit transaction (unexpected error)</li>
+      </ul>
+    solution: >-
+      <ul>
+      sudo pacman -Syyu
+      </ul>
