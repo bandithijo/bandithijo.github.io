@@ -2801,3 +2801,14 @@ experiment:
     url:    'https://youtu.be/ZE1mBXo5vfw'
     note:   >-
       -
+
+  - date:   '2023-05-04'
+    number: '263'
+    kernel: '6.3.7-arch1-1'
+    server: 'https://mirror.cyberbits.eu/archlinux/$repo/os/$arch'
+    count:  '7'
+    size:   '51.78'
+    status: 'OK'
+    url:    'https://youtu.be/B05DK2saXZI'
+    note:   >-
+      -
