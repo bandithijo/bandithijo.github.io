@@ -2832,3 +2832,14 @@ experiment:
       <ul>
       sudo pacman -Syyu
       </ul>
+
+  - date:   '2023-05-06'
+    number: '265'
+    kernel: '6.3.7-arch1-1'
+    server: 'https://mirror.cyberbits.eu/archlinux/$repo/os/$arch'
+    count:  '15'
+    size:   '5.57'
+    status: 'OK'
+    url:    'https://youtu.be/eMC7wCGTdI0'
+    note:   >-
+      -
