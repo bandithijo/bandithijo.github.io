@@ -2854,3 +2854,21 @@ experiment:
     url:    'https://youtu.be/-b9u2VkuMXw'
     note:   >-
       -
+
+  - date:   '2023-05-08'
+    number: '267'
+    kernel: '6.3.7-arch1-1'
+    server: 'https://mirror.cyberbits.eu/archlinux/$repo/os/$arch'
+    count:  '20'
+    size:   '155.84'
+    status: 'ERROR, OK'
+    url:    'https://youtu.be/JT3-D26qQIA'
+    note:   >-
+      <ul>
+      <li>Slow</li>
+      </ul>
+    solution: >-
+      <ul>
+      sudo reflector --verbose --protocol https --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
+      sudo pacman -Syyu
+      </ul>
