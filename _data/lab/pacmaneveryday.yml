@@ -2872,3 +2872,14 @@ experiment:
       sudo reflector --verbose --protocol https --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
       sudo pacman -Syyu
       </ul>
+
+  - date:   '2023-05-09'
+    number: '268'
+    kernel: '6.3.7-arch1-1'
+    server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
+    count:  '8'
+    size:   '110.18'
+    status: 'OK'
+    url:    'https://youtu.be/fS5ceHO5Nj4'
+    note:   >-
+      -
