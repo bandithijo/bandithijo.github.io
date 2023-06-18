@@ -2927,3 +2927,14 @@ experiment:
     url:    'https://youtu.be/POQnO0BbMLE'
     note:   >-
       -
+
+  - date:   '2023-05-14'
+    number: '273'
+    kernel: '6.3.8-arch1-1'
+    server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
+    count:  '2'
+    size:   '8.70'
+    status: 'OK'
+    url:    'https://youtu.be/QVQxjSPWjPw'
+    note:   >-
+      -
