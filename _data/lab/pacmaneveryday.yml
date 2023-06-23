@@ -3015,3 +3015,14 @@ experiment:
     url:    'https://youtu.be/Vl-i5E10gyY'
     note:   >-
       -
+
+  - date:   '2023-05-22'
+    number: '281'
+    kernel: '6.3.8-arch1-1'
+    server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
+    count:  '14'
+    size:   '222.64'
+    status: 'OK'
+    url:    'https://youtu.be/w3LUVZMQV4o'
+    note:   >-
+      -
