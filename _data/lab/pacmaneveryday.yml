@@ -3070,3 +3070,14 @@ experiment:
     url:    'https://youtu.be/Qu3Pa7YzycM'
     note:   >-
       -
+
+  - date:   '2023-05-27'
+    number: '286'
+    kernel: '6.3.9-arch1-1'
+    server: 'https://mirror.cyberbits.asia/archlinux/$repo/os/$arch'
+    count:  '7'
+    size:   '16.42'
+    status: 'OK'
+    url:    'https://youtu.be/_zDMU1mPwjY'
+    note:   >-
+      -
