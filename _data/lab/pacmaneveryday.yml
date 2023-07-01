@@ -3114,3 +3114,18 @@ experiment:
     url:    'https://youtu.be/XvuLiDIkGwg'
     note:   >-
       -
+
+  - date:   '2023-05-31'
+    number: '290'
+    kernel: '6.3.9-arch1-1'
+    server: 'https://mirror.cyberbits.asia/archlinux/$repo/os/$arch'
+    count:  '30'
+    size:   '388.41'
+    status: 'ERROR, OK'
+    url:    'https://youtu.be/W94gdZOS1Eg'
+    note:   >-
+      <p>
+      error: noto-fonts-extra: signature from "Antonio Rojas <arojas@archlinux.org>" is invalid<br>
+      :: File /var/cache/pacman/pkg/noto-fonts-extra-1:23.7.1-1-any.pkg.tar.zst is corrupted (invalid or corrupted package (PGP signature)).
+      </p>
+    solution: 'sudo pacman -R noto-fonts-extra'
