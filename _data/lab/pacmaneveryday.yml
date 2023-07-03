@@ -3129,3 +3129,14 @@ experiment:
       :: File /var/cache/pacman/pkg/noto-fonts-extra-1:23.7.1-1-any.pkg.tar.zst is corrupted (invalid or corrupted package (PGP signature)).
       </p>
     solution: 'sudo pacman -R noto-fonts-extra'
+
+  - date:   '2023-06-01'
+    number: '291'
+    kernel: '6.3.9-arch1-1'
+    server: 'https://mirror.telepoint.bg/archlinux/$repo/os/$arch'
+    count:  '35'
+    size:   '287.28'
+    status: 'OK'
+    url:    'https://youtu.be/gAW_D-WxdKY'
+    note:   >-
+      -
