@@ -53,7 +53,7 @@
 .highlight .ld  { color: var(--BASE04) } /* Literal.Date */
 .highlight .m   { color: var(--BASE0E) } /* Literal.Number */
 .highlight .s   { color: var(--BASE09) } /* Literal.String */
-.highlight .na  { color: var(--BASE04) } /* Name.Attribute */
+.highlight .na  { color: var(--BASE0C) } /* Name.Attribute */
 .highlight .nb  { color: var(--BASE0D) } /* Name.Builtin */
 .highlight .nc  { color: var(--BASE0D) } /* Name.Class */
 .highlight .no  { color: var(--BASE0D) } /* Name.Constant */
