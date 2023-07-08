@@ -57,7 +57,7 @@ Solargraph belum akan berjalan karena kita perlu memasang Solargraph gem terlebi
 
 ## Setup Solargraph di Rails project
 
-### Install solargraph & solargraph-rails & rubocop
+### Install solargraph & solargraph-rails
 
 Gem yang diperlukan tentu saja `solargraph` dan juga `solargraph-rails`. Namun, kita **tidak perlu memasukkannya** ke dalam `Gemfile` project kita.
 
@@ -66,8 +66,6 @@ Cukup install sendiri di dalam lokal project kita. Karena bisa jadi anggota tim 
 {% shell_user %}
 gem install solargraph solargraph-rails
 {% endshell_user %}
-
-### Initialize File Konfigurasi .solargraph.yml
 
 Initialize file konfigurasi dengan menjalankan perintah di bawah pada direktori root dari Rails project.
 
@@ -149,7 +147,6 @@ solargraph scan -v
 ### Daftarkan .solargraph.yml, .rubocop.yml, dan .rubocop_todo.yml ke .gitignore
 
 Agar tidak mengganggu isi dari direktori Root Rails project, kita perlu mendaftarkan file-file konfigurasi yaml yang telah dibuat ke dalam file `.gitignore`.
-
 
 ```conf
 /.rubocop*.yml
