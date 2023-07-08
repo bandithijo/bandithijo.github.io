@@ -42,4 +42,4 @@ systemctl restart --user wireplumber.service
 # Referensi
 
 1. [Arch Wiki - PipeWire](https://wiki.archlinux.org/title/PipeWire){:target="_blank"}
-<br>Diakses tanggal: 2022/06/17
+<br>Diakses tanggal: 2023/06/17

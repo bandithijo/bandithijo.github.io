@@ -116,10 +116,10 @@ Terima kasih sudah mampir yaa.
 # Referensi
 
 1. [Arch Wiki: GDM > Login Screen Logo](https://wiki.archlinux.org/title/GDM#Login_screen_logo){:target="_blank"}
-<br>Diakses tanggal: 2022/06/27
+<br>Diakses tanggal: 2023/06/27
 
 1. [Arch Wiki: GDM > Change Cursor Theme](https://wiki.archlinux.org/title/GDM#Changing_the_cursor_theme){:target="_blank"}
-<br>Diakses tanggal: 2022/06/27
+<br>Diakses tanggal: 2023/06/27
 
 1. [Disable the default app key (super+num) functionality on Ubuntu 17.10 and later](https://askubuntu.com/a/1425621/777616){:target="_blank"}
-<br>Diakses tanggal: 2022/06/27
+<br>Diakses tanggal: 2023/06/27
