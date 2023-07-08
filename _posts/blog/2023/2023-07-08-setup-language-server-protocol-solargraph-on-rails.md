@@ -134,25 +134,6 @@ rubocop --auto-gen-config
 
 Perintah di atas akan mengenerate konfigurasi default untuk Rubocop yaitu file `.rubocop.yml` dan `.rubocop_todo.yml` di Root Rails prject kita.
 
-### Scanning Problem with Solargraph
-
-Setelah memasang `solargraph` dan memasang plugin `solargraph-rails`, selanjutnya tinggal menjalankan proses *scaning*.
-
-Hanya untuk memastikan saja kalau solargraph sudah bekerja di Rails project kita.
-
-{% shell_user %}
-solargraph scan -v
-{% endshell_user %}
-
-### Daftarkan .solargraph.yml, .rubocop.yml, dan .rubocop_todo.yml ke .gitignore
-
-Agar tidak mengganggu isi dari direktori Root Rails project, kita perlu mendaftarkan file-file konfigurasi yaml yang telah dibuat ke dalam file `.gitignore`.
-
-```conf
-/.rubocop*.yml
-/.solargraph.yml
-```
-
 Sip!
 
 Konfigurasi sudah selesai, dengan begini kita sudah dapat memanfaatkan kemampuan LSP Solargraph di Neovim kita.
@@ -163,6 +144,15 @@ Konfigurasi sudah selesai, dengan begini kita sudah dapat memanfaatkan kemampuan
 | <kbd>shift</kbd>+<kbd>k</kbd>	| Show hover documentation |
 | <kbd>g</kbd>+<kbd>r</kbd>	| Open quickfix with all references to method |
 | <kbd>r</kbd>+<kbd>n</kbd>	| Rename method and update references |
+
+### Daftarkan .solargraph.yml, .rubocop.yml, dan .rubocop_todo.yml ke .gitignore
+
+Agar tidak mengganggu isi dari direktori Root Rails project, kita perlu mendaftarkan file-file konfigurasi yaml yang telah dibuat ke dalam file `.gitignore`.
+
+```conf
+/.rubocop*.yml
+/.solargraph.yml
+```
 
 # Pesan Penulis
 
