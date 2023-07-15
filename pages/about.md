@@ -17,9 +17,11 @@ Dapat dikatakan **BanditHijo** adalah nama pena saya -- meminjam istilah keren p
 
 # Bagaimana Cara Membaca Nama Blog Ini?
 
-**BanditHijo (R)-Chive**, **(R)-Chive** sendiri diambil dari kata **ar.chive** /ˈärˌkīv/ yang berarti **arsip** dalam bahasa Indonesia.
+Pada mulanya, blog ini saya namai **BanditHijo (R)-Chive**. **(R)-Chive** sendiri diambil dari kata **ar.chive** /ˈärˌkīv/ yang berarti **arsip** dalam bahasa Indonesia.
 
 Sehingga, apabila dibaca secara utuh menjadi, /BanditHijo Arkaiv/ yang berarti Arsip milik BanditHijo (anggap saja begitu, haha).
+
+Namun, akhirnya saya memutuskan untuk mengganti nama blog ini menjadi **BanditHijo.dev** agar lebih mudah diingat dan lebih menunjukkan identitas blog milik developer.
 
 # Apa Alasan Menulis Blog?
 

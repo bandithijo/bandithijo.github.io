@@ -11,7 +11,7 @@ toc: true
 
 Selamat datang, mas Bro!
 
-Halaman bantuan BanditHijo (R)-Chive. Ini adalah halaman yang berisi beberapa penjelasan dan keterangan mengenai bentuk-bentuk tanda baca, atau saya sebut rambu-rambu, yang mungkin diperlukan untuk memahami dalam membaca artikel yang ada di dalam blog ini.
+Halaman bantuan BanditHijo.dev. Ini adalah halaman yang berisi beberapa penjelasan dan keterangan mengenai bentuk-bentuk tanda baca, atau saya sebut rambu-rambu, yang mungkin diperlukan untuk memahami dalam membaca artikel yang ada di dalam blog ini.
 
 # Anatomi Blog
 
