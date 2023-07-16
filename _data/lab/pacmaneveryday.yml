@@ -3294,3 +3294,14 @@ experiment:
     url:    'https://youtu.be/EbOBgxNI_rk'
     note:   >-
       -
+
+  - date:   '2023-06-16'
+    number: '306'
+    kernel: '6.4.3-arch1-1'
+    server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
+    count:  '8'
+    size:   '112.25'
+    status: 'OK'
+    url:    'https://youtu.be/BzHMJ2PS67A'
+    note:   >-
+      -
