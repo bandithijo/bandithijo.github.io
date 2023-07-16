@@ -1,37 +1,61 @@
 # 📦 BanditHijo.dev
 
 <a href="https://bandithijo.github.io">
-<img alt="banner" width="100%" src="/assets/img/banner/banner.png" />
+<img alt="banner" width="100%" src="./assets/img/banner/banner.png" />
 </a>
 
 ## 🍱 Requirements
 
-`Ruby 3.0.2` `Jekyll 4.2.1`
+`Ruby 3.2.2` `Jekyll 4.3.2`
 
 ## 🏃 Menjalankan Blog secara Offline
 
 Untuk menjalankan blog ini secara offline, berikut langkah-langkahnya:
 
-1. <b>Cloning</b><br>
-   `$ git clone https://github.com/bandithijo/bandithijo.github.io.git`
+1. **Cloning**
+    ```
+    $ git clone https://github.com/bandithijo/bandithijo.github.io.git
+    ```
 
-2. <b>Install daftar gem yang diperlukan</b><br>
-   `$ bundle install`
+1. **Install daftar gem yang diperlukan**
+    ```
+    $ bundle install
+    ```
 
-3. <b>Jalankan Jekyll pada localhost</b><br>
-   `$ rake jekyll:server`<br>
-   \* Blog ini berisi ratusan artikel, tunggu proses build hingga selesai, <u>+</u> 40 detik.
+1. **Jalankan Jekyll pada localhost**
+    ```
+    $ rake jekyll:server
+    ```
+    \* Blog ini berisi ratusan artikel, tunggu proses build hingga selesai, <u>+</u> 40 detik. \
+    Untuk proses edit, yang tidak berhubungan dengan perubahan style, penambahan file, dll, dapat menggunakan \
+    ```
+    $ rake jekyll:server:inc
+    ```
+    \* Dengan penambahan flag `:inc` / `--incremental` proses build saat mengedit artikel akan menjadi lebih cepat! ⚡
 
-4. <b>Buka browser, akses blog pada alamat:</b><br>
-   `http://localhost:4000`
+1. **Buka Browser, akses blog pada alamat:**
+    ```
+    http://localhost:4000
+   ```
+
+1. **Push to Source Branch** \
+    Setelah selesai menambahkan atau mengedit *content*, jalankan perintah berikut ini untuk mendeploy perubahan ke *remote repo*.
+    ```
+    $ rake jekyll:push
+    ```
 
 
 ## 📬 Update Konten Terbaru
 
 Untuk mengunduh konten terbaru ke lokal repo, berikut langkahnya:
 
-1. <b>Pulling</b><br>
-   `$ git pull origin source`
+1. **Pulling** \
+    Selalu lakukan _pulling_ untuk mensinkronisasikan dengan data _remote repo_.
+    ```
+    $ git pull origin source
+    ```
+1. **Jalankan blog secara offline, di mulai dari nomor 3** \
+    [di sini](#🏃-menjalankan-blog-secara-offline) 
 
 
 ## 🧱 Ingin Ikut Berkontribusi Menulis/Mengedit Artikel?
