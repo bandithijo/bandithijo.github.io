@@ -3327,3 +3327,14 @@ experiment:
     url:    'https://youtu.be/Z4mPJWyChTk'
     note:   >-
       -
+
+  - date:   '2023-06-19'
+    number: '309'
+    kernel: '6.4.3-arch1-2'
+    server: 'https://asia.mirror.pkgbuild.com/$repo/os/$arch'
+    count:  '40'
+    size:   '61.50'
+    status: 'OK'
+    url:    'https://youtu.be/-nzCE3gyUak'
+    note:   >-
+      -
