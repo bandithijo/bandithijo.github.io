@@ -3338,3 +3338,14 @@ experiment:
     url:    'https://youtu.be/-nzCE3gyUak'
     note:   >-
       -
+
+  - date:   '2023-06-20'
+    number: '310'
+    kernel: '6.4.3-arch1-2'
+    server: 'https://asia.mirror.pkgbuild.com/$repo/os/$arch'
+    count:  '10'
+    size:   '262.81'
+    status: 'OK'
+    url:    'https://youtu.be/sJMuhpN2ec0'
+    note:   >-
+      -
