@@ -84,7 +84,7 @@ git config --global -e
 ## Konfigurasi End of Line
 
 {% pre_whiteboard %}
-# End of line on Windows
+End of line on Windows
 
   a b c <border>\r</border> <border>\n</border>
         │   │
@@ -93,7 +93,7 @@ git config --global -e
         └─────> Carriage Return
 
 
-# End of line on Linux/macOS
+End of line on Linux/macOS
 
   a b c <border>\n</border>
         │
