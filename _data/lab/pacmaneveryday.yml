@@ -3547,3 +3547,14 @@ experiment:
     url:    'https://youtu.be/jGcHmJ-ek3E'
     note:   >-
       -
+
+  - date:   '2023-07-09'
+    number: '329'
+    kernel: '6.4.7-arch1-1'
+    server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
+    count:  '6'
+    size:   '98.11'
+    status: 'OK'
+    url:    'https://youtu.be/CzGyq0niIW4'
+    note:   >-
+      -
