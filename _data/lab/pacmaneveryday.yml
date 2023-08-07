@@ -3613,3 +3613,14 @@ experiment:
     url:    'https://youtu.be/i-qk287vtFQ'
     note:   >-
       -
+
+  - date:   '2023-07-22'
+    number: '335'
+    kernel: '6.4.8-arch1-1'
+    server: 'https://mirror.ubrco.de/archlinux/$repo/os/$arch'
+    count:  '17'
+    size:   '7.73'
+    status: 'OK'
+    url:    'https://youtu.be/hzu-JN5ZKwM'
+    note:   >-
+      -
