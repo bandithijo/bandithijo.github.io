@@ -73,6 +73,8 @@ navigation:
     url: /book/
   - title: Lab
     url: /lab/
+  - title: Donate
+    url: /donate/
   - title: About
     url: /about/
 
