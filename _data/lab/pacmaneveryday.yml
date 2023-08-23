@@ -3833,3 +3833,14 @@ experiment:
     url:    'https://youtu.be/RfoYOZpfccI'
     note:   >-
       -
+
+  - date:   '2023-08-11'
+    number: '355'
+    kernel: '6.4.11-arch2-1'
+    server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
+    count:  '11'
+    size:   '319.97'
+    status: 'OK'
+    url:    'https://youtu.be/szUbMnm84Fs'
+    note:   >-
+      -
