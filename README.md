@@ -55,7 +55,7 @@ Untuk mengunduh konten terbaru ke lokal repo, berikut langkahnya:
     $ git pull origin source
     ```
 1. **Jalankan blog secara offline, di mulai dari nomor 3** \
-    [di sini](#🏃-menjalankan-blog-secara-offline) 
+    [di sini](#-menjalankan-blog-secara-offline) 
 
 
 ## 🧱 Ingin Ikut Berkontribusi Menulis/Mengedit Artikel?
