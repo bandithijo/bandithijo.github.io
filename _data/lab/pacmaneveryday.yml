@@ -2174,7 +2174,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-03-14'
+  - date:   '2023-03-16'
     number: '212'
     kernel: '6.2.7-arch1-1'
     server: 'https://at.arch.mirror.kescher.at/$repo/os/$arch'
@@ -2190,7 +2190,7 @@ experiment:
       </ul>
     solution: 'sudo pacman -Syyu'
 
-  - date:   '2023-03-15'
+  - date:   '2023-03-17'
     number: '213'
     kernel: '6.2.8-arch1-1'
     server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
@@ -2201,7 +2201,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-03-16'
+  - date:   '2023-03-18'
     number: '214'
     kernel: '6.2.8-arch1-1'
     server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
@@ -2212,7 +2212,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-03-17'
+  - date:   '2023-03-19'
     number: '215'
     kernel: '6.2.8-arch1-1'
     server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
@@ -2223,7 +2223,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-03-18'
+  - date:   '2023-03-20'
     number: '216'
     kernel: '6.2.8-arch1-1'
     server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
@@ -2234,7 +2234,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-03-19'
+  - date:   '2023-03-21'
     number: '217'
     kernel: '6.2.8-arch1-1'
     server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
@@ -2245,7 +2245,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-03-20'
+  - date:   '2023-03-22'
     number: '218'
     kernel: '6.2.8-arch1-1'
     server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
@@ -2256,7 +2256,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-03-21'
+  - date:   '2023-03-23'
     number: '219'
     kernel: '6.2.8-arch1-1'
     server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
@@ -2267,7 +2267,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-03-22'
+  - date:   '2023-03-24'
     number: '220'
     kernel: '6.2.8-arch1-1'
     server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
@@ -2278,7 +2278,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-03-23'
+  - date:   '2023-03-25'
     number: '221'
     kernel: '6.2.8-arch1-1'
     server: 'https://sydney.mirror.pkgbuild.com/$repo/os/$arch'
@@ -2289,7 +2289,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-03-24'
+  - date:   '2023-03-26'
     number: '222'
     kernel: '6.2.9-arch1-1'
     server: 'https://sydney.mirror.pkgbuild.com/$repo/os/$arch'
@@ -2300,7 +2300,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-03-25'
+  - date:   '2023-03-27'
     number: '223'
     kernel: '6.2.9-arch1-1'
     server: 'https://sydney.mirror.pkgbuild.com/$repo/os/$arch'
@@ -2311,7 +2311,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-03-26'
+  - date:   '2023-03-28'
     number: '224'
     kernel: '6.2.9-arch1-1'
     server: 'https://sydney.mirror.pkgbuild.com/$repo/os/$arch'
@@ -2322,7 +2322,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-03-27'
+  - date:   '2023-03-29'
     number: '225'
     kernel: '6.2.9-arch1-1'
     server: 'https://sydney.mirror.pkgbuild.com/$repo/os/$arch'
@@ -2333,7 +2333,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-03-28'
+  - date:   '2023-03-30'
     number: '226'
     kernel: '6.2.9-arch1-1'
     server: 'https://sydney.mirror.pkgbuild.com/$repo/os/$arch'
@@ -2344,7 +2344,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-03-29'
+  - date:   '2023-03-31'
     number: '227'
     kernel: '6.2.10-arch1-1'
     server: 'https://sydney.mirror.pkgbuild.com/$repo/os/$arch'
@@ -2355,7 +2355,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-03-30'
+  - date:   '2023-04-01'
     number: '228'
     kernel: '6.2.10-arch1-1'
     server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
@@ -2366,7 +2366,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-03-31'
+  - date:   '2023-04-02'
     number: '229'
     kernel: '6.2.10-arch1-1'
     server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
@@ -2377,7 +2377,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-01'
+  - date:   '2023-04-03'
     number: '230'
     kernel: '6.2.10-arch1-1'
     server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
@@ -2388,7 +2388,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-02'
+  - date:   '2023-04-04'
     number: '231'
     kernel: '6.2.10-arch1-1'
     server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
@@ -2399,7 +2399,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-03'
+  - date:   '2023-04-05'
     number: '232'
     kernel: '6.2.10-arch1-1'
     server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
@@ -2410,7 +2410,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-04'
+  - date:   '2023-04-06'
     number: '233'
     kernel: '6.2.10-arch1-1'
     server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
@@ -2421,7 +2421,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-05'
+  - date:   '2023-04-07'
     number: '234'
     kernel: '6.2.11-arch1-1'
     server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
@@ -2432,7 +2432,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-06'
+  - date:   '2023-04-08'
     number: '235'
     kernel: '6.2.11-arch1-1'
     server: 'https://seoul.mirror.pkgbuild.com/$repo/os/$arch'
@@ -2443,7 +2443,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-07'
+  - date:   '2023-04-09'
     number: '236'
     kernel: '6.2.11-arch1-1'
     server: 'https://archlinux.thaller.ws/$repo/os/$arch'
@@ -2473,7 +2473,7 @@ experiment:
       <li>sudo reflector --verbose --protocol https --latest 5 --sort rate --save /etc/pacman.d/mirrorlist</li>
       </ol>
 
-  - date:   '2023-04-08'
+  - date:   '2023-04-10'
     number: '237'
     kernel: '6.2.13-arch1-1'
     server: 'https://archlinux.thaller.ws/$repo/os/$arch'
@@ -2490,7 +2490,7 @@ experiment:
       </ul>
     solution: sudo pacman -Syyu
 
-  - date:   '2023-04-09'
+  - date:   '2023-04-11'
     number: '238'
     kernel: '6.2.13-arch1-1'
     server: 'https://archlinux.thaller.ws/$repo/os/$arch'
@@ -2511,7 +2511,7 @@ experiment:
       <li>sudo pacman -Syyu</li>
       </ol>
 
-  - date:   '2023-04-10'
+  - date:   '2023-04-12'
     number: '239'
     kernel: '6.2.13-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -2522,7 +2522,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-11'
+  - date:   '2023-04-13'
     number: '240'
     kernel: '6.3.1-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -2533,7 +2533,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-12'
+  - date:   '2023-04-14'
     number: '241'
     kernel: '6.3.1-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -2544,7 +2544,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-13'
+  - date:   '2023-04-15'
     number: '242'
     kernel: '6.3.1-arch1-1'
     server: 'https://asia.mirror.pkgbuild.com/$repo/os/$arch'
@@ -2555,7 +2555,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-14'
+  - date:   '2023-04-16'
     number: '243'
     kernel: '6.3.1-arch2-1'
     server: 'https://asia.mirror.pkgbuild.com/$repo/os/$arch'
@@ -2566,7 +2566,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-15'
+  - date:   '2023-04-17'
     number: '244'
     kernel: '6.3.1-arch2-1'
     server: 'https://asia.mirror.pkgbuild.com/$repo/os/$arch'
@@ -2577,7 +2577,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-16'
+  - date:   '2023-04-18'
     number: '245'
     kernel: '6.3.1-arch2-1'
     server: 'https://asia.mirror.pkgbuild.com/$repo/os/$arch'
@@ -2588,7 +2588,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-17'
+  - date:   '2023-04-19'
     number: '246'
     kernel: '6.3.1-arch2-1'
     server: 'https://seoul.mirror.pkgbuild.com/$repo/os/$arch'
@@ -2599,7 +2599,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-18'
+  - date:   '2023-04-20'
     number: '247'
     kernel: '6.3.2-arch1-1'
     server: 'https://seoul.mirror.pkgbuild.com/$repo/os/$arch'
@@ -2610,7 +2610,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-19'
+  - date:   '2023-04-21'
     number: '248'
     kernel: '6.3.2-arch1-1'
     server: 'https://seoul.mirror.pkgbuild.com/$repo/os/$arch'
@@ -2621,7 +2621,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-20'
+  - date:   '2023-04-22'
     number: '249'
     kernel: '6.3.2-arch1-1'
     server: 'https://seoul.mirror.pkgbuild.com/$repo/os/$arch'
@@ -2632,7 +2632,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-21'
+  - date:   '2023-04-23'
     number: '250'
     kernel: '6.3.2-arch1-1'
     server: 'https://seoul.mirror.pkgbuild.com/$repo/os/$arch'
@@ -2643,7 +2643,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-22'
+  - date:   '2023-04-24'
     number: '251'
     kernel: '6.3.2-arch1-1'
     server: 'https://seoul.mirror.pkgbuild.com/$repo/os/$arch'
@@ -2654,7 +2654,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-23'
+  - date:   '2023-04-25'
     number: '252'
     kernel: '6.3.2-arch1-1'
     server: 'https://seoul.mirror.pkgbuild.com/$repo/os/$arch'
@@ -2665,7 +2665,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-24'
+  - date:   '2023-04-26'
     number: '253'
     kernel: '6.3.2-arch1-1'
     server: 'https://seoul.mirror.pkgbuild.com/$repo/os/$arch'
@@ -2676,7 +2676,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-25'
+  - date:   '2023-04-27'
     number: '254'
     kernel: '6.3.2-arch1-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -2687,7 +2687,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-26'
+  - date:   '2023-04-28'
     number: '255'
     kernel: '6.3.3-arch1-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -2698,7 +2698,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-04-27'
+  - date:   '2023-04-29'
     number: '256'
     kernel: '6.3.3-arch1-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -2715,7 +2715,7 @@ experiment:
       </ul>
     solution: sudo pacman -Syyu
 
-  - date:   '2023-04-28'
+  - date:   '2023-04-30'
     number: '257'
     kernel: '6.3.4-arch1-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -2735,7 +2735,7 @@ experiment:
       sudo pacman -Syyu
       </ul>
 
-  - date:   '2023-04-29'
+  - date:   '2023-05-01'
     number: '258'
     kernel: '6.3.5-arch1-1'
     server: 'https://america.mirror.pkgbuild.com/$repo/os/$arch'
@@ -2758,7 +2758,7 @@ experiment:
       sudo pacman -Syyu
       </ul>
 
-  - date:   '2023-04-30'
+  - date:   '2023-05-02'
     number: '259'
     kernel: '6.3.6-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -2769,7 +2769,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-01'
+  - date:   '2023-05-03'
     number: '260'
     kernel: '6.3.6-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -2780,7 +2780,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-02'
+  - date:   '2023-05-04'
     number: '261'
     kernel: '6.3.6-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -2791,7 +2791,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-03'
+  - date:   '2023-05-05'
     number: '262'
     kernel: '6.3.6-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -2802,7 +2802,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-04'
+  - date:   '2023-05-06'
     number: '263'
     kernel: '6.3.7-arch1-1'
     server: 'https://mirror.cyberbits.eu/archlinux/$repo/os/$arch'
@@ -2813,7 +2813,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-05'
+  - date:   '2023-05-07'
     number: '264'
     kernel: '6.3.7-arch1-1'
     server: 'https://mirror.cyberbits.eu/archlinux/$repo/os/$arch'
@@ -2833,7 +2833,7 @@ experiment:
       sudo pacman -Syyu
       </ul>
 
-  - date:   '2023-05-06'
+  - date:   '2023-05-08'
     number: '265'
     kernel: '6.3.7-arch1-1'
     server: 'https://mirror.cyberbits.eu/archlinux/$repo/os/$arch'
@@ -2844,7 +2844,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-07'
+  - date:   '2023-05-09'
     number: '266'
     kernel: '6.3.7-arch1-1'
     server: 'https://mirror.cyberbits.eu/archlinux/$repo/os/$arch'
@@ -2855,7 +2855,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-08'
+  - date:   '2023-05-10'
     number: '267'
     kernel: '6.3.7-arch1-1'
     server: 'https://mirror.cyberbits.eu/archlinux/$repo/os/$arch'
@@ -2873,7 +2873,7 @@ experiment:
       sudo pacman -Syyu
       </ul>
 
-  - date:   '2023-05-09'
+  - date:   '2023-05-11'
     number: '268'
     kernel: '6.3.7-arch1-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -2884,7 +2884,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-10'
+  - date:   '2023-05-12'
     number: '269'
     kernel: '6.3.7-arch1-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -2895,7 +2895,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-11'
+  - date:   '2023-05-13'
     number: '270'
     kernel: '6.3.8-arch1-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -2906,7 +2906,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-12'
+  - date:   '2023-05-14'
     number: '271'
     kernel: '6.3.8-arch1-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -2917,7 +2917,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-13'
+  - date:   '2023-05-15'
     number: '272'
     kernel: '6.3.8-arch1-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -2928,7 +2928,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-14'
+  - date:   '2023-05-16'
     number: '273'
     kernel: '6.3.8-arch1-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -2939,7 +2939,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-15'
+  - date:   '2023-05-17'
     number: '274'
     kernel: '6.3.8-arch1-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -2950,7 +2950,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-16'
+  - date:   '2023-05-18'
     number: '275'
     kernel: '6.3.8-arch1-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -2961,7 +2961,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-17'
+  - date:   '2023-05-19'
     number: '276'
     kernel: '6.3.8-arch1-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -2972,7 +2972,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-18'
+  - date:   '2023-05-20'
     number: '277'
     kernel: '6.3.8-arch1-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -2983,7 +2983,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-19'
+  - date:   '2023-05-21'
     number: '278'
     kernel: '6.3.8-arch1-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -2994,7 +2994,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-20'
+  - date:   '2023-05-22'
     number: '279'
     kernel: '6.3.8-arch1-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -3005,7 +3005,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-21'
+  - date:   '2023-05-23'
     number: '280'
     kernel: '6.3.8-arch1-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -3016,7 +3016,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-22'
+  - date:   '2023-05-24'
     number: '281'
     kernel: '6.3.8-arch1-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -3027,7 +3027,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-23'
+  - date:   '2023-05-25'
     number: '282'
     kernel: '6.3.9-arch1-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -3038,7 +3038,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-24'
+  - date:   '2023-05-26'
     number: '283'
     kernel: '6.3.9-arch1-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -3049,7 +3049,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-25'
+  - date:   '2023-05-27'
     number: '284'
     kernel: '6.3.9-arch1-1'
     server: 'https://mirror.cyberbits.asia/archlinux/$repo/os/$arch'
@@ -3060,7 +3060,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-26'
+  - date:   '2023-05-28'
     number: '285'
     kernel: '6.3.9-arch1-1'
     server: 'https://mirror.cyberbits.asia/archlinux/$repo/os/$arch'
@@ -3071,7 +3071,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-27'
+  - date:   '2023-05-29'
     number: '286'
     kernel: '6.3.9-arch1-1'
     server: 'https://mirror.cyberbits.asia/archlinux/$repo/os/$arch'
@@ -3082,7 +3082,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-28'
+  - date:   '2023-05-30'
     number: '287'
     kernel: '6.3.9-arch1-1'
     server: 'https://mirror.cyberbits.asia/archlinux/$repo/os/$arch'
@@ -3093,7 +3093,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-29'
+  - date:   '2023-05-31'
     number: '288'
     kernel: '6.3.9-arch1-1'
     server: 'https://mirror.cyberbits.asia/archlinux/$repo/os/$arch'
@@ -3104,7 +3104,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-30'
+  - date:   '2023-06-01'
     number: '289'
     kernel: '6.3.9-arch1-1'
     server: 'https://mirror.cyberbits.asia/archlinux/$repo/os/$arch'
@@ -3115,7 +3115,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-05-31'
+  - date:   '2023-06-02'
     number: '290'
     kernel: '6.3.9-arch1-1'
     server: 'https://mirror.cyberbits.asia/archlinux/$repo/os/$arch'
@@ -3130,7 +3130,7 @@ experiment:
       </p>
     solution: 'sudo pacman -R noto-fonts-extra'
 
-  - date:   '2023-06-01'
+  - date:   '2023-06-03'
     number: '291'
     kernel: '6.3.9-arch1-1'
     server: 'https://mirror.telepoint.bg/archlinux/$repo/os/$arch'
@@ -3141,7 +3141,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-02'
+  - date:   '2023-06-04'
     number: '292'
     kernel: '6.4.1-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3152,7 +3152,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-03'
+  - date:   '2023-06-05'
     number: '293'
     kernel: '6.4.1-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3163,7 +3163,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-04'
+  - date:   '2023-06-06'
     number: '294'
     kernel: '6.4.1-arch2-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3174,7 +3174,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-05'
+  - date:   '2023-06-07'
     number: '295'
     kernel: '6.4.1-arch2-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3185,7 +3185,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-06'
+  - date:   '2023-06-08'
     number: '296'
     kernel: '6.4.1-arch2-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3196,7 +3196,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-07'
+  - date:   '2023-06-09'
     number: '297'
     kernel: '6.4.1-arch2-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3207,7 +3207,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-08'
+  - date:   '2023-06-10'
     number: '298'
     kernel: '6.4.2-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3218,7 +3218,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-09'
+  - date:   '2023-06-11'
     number: '299'
     kernel: '6.4.2-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3229,7 +3229,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-10'
+  - date:   '2023-06-12'
     number: '300'
     kernel: '6.4.2-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3240,7 +3240,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-11'
+  - date:   '2023-06-13'
     number: '301'
     kernel: '6.4.2-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3251,7 +3251,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-12'
+  - date:   '2023-06-14'
     number: '302'
     kernel: '6.4.3-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3262,7 +3262,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-13'
+  - date:   '2023-06-15'
     number: '303'
     kernel: '6.4.3-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3273,7 +3273,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-14'
+  - date:   '2023-06-16'
     number: '304'
     kernel: '6.4.3-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3284,7 +3284,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-15'
+  - date:   '2023-06-17'
     number: '305'
     kernel: '6.4.3-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3295,7 +3295,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-16'
+  - date:   '2023-06-18'
     number: '306'
     kernel: '6.4.3-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3306,7 +3306,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-17'
+  - date:   '2023-06-19'
     number: '307'
     kernel: '6.4.3-arch1-1'
     server: 'https://asia.mirror.pkgbuild.com/$repo/os/$arch'
@@ -3317,7 +3317,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-18'
+  - date:   '2023-06-20'
     number: '308'
     kernel: '6.4.3-arch1-2'
     server: 'https://asia.mirror.pkgbuild.com/$repo/os/$arch'
@@ -3328,7 +3328,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-19'
+  - date:   '2023-06-21'
     number: '309'
     kernel: '6.4.3-arch1-2'
     server: 'https://asia.mirror.pkgbuild.com/$repo/os/$arch'
@@ -3339,7 +3339,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-20'
+  - date:   '2023-06-22'
     number: '310'
     kernel: '6.4.3-arch1-2'
     server: 'https://asia.mirror.pkgbuild.com/$repo/os/$arch'
@@ -3350,7 +3350,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-21'
+  - date:   '2023-06-23'
     number: '311'
     kernel: '6.4.3-arch1-2'
     server: 'https://asia.mirror.pkgbuild.com/$repo/os/$arch'
@@ -3361,7 +3361,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-22'
+  - date:   '2023-06-24'
     number: '312'
     kernel: '6.4.4-arch1-1'
     server: 'https://asia.mirror.pkgbuild.com/$repo/os/$arch'
@@ -3372,7 +3372,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-23'
+  - date:   '2023-06-25'
     number: '313'
     kernel: '6.4.4-arch1-1'
     server: 'https://asia.mirror.pkgbuild.com/$repo/os/$arch'
@@ -3383,7 +3383,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-24'
+  - date:   '2023-06-26'
     number: '314'
     kernel: '6.4.4-arch1-1'
     server: 'https://asia.mirror.pkgbuild.com/$repo/os/$arch'
@@ -3394,7 +3394,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-25'
+  - date:   '2023-06-27'
     number: '315'
     kernel: '6.4.4-arch1-1'
     server: 'https://asia.mirror.pkgbuild.com/$repo/os/$arch'
@@ -3405,7 +3405,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-26'
+  - date:   '2023-06-28'
     number: '316'
     kernel: '6.4.4-arch1-1'
     server: 'https://asia.mirror.pkgbuild.com/$repo/os/$arch'
@@ -3416,7 +3416,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-27'
+  - date:   '2023-06-29'
     number: '317'
     kernel: '6.4.4-arch1-1'
     server: 'https://at.arch.mirror.kescher.at/$repo/os/$arch'
@@ -3427,7 +3427,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-28'
+  - date:   '2023-06-30'
     number: '318'
     kernel: '6.4.5-arch1-1'
     server: 'https://at.arch.mirror.kescher.at/$repo/os/$arch'
@@ -3438,7 +3438,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-29'
+  - date:   '2023-07-01'
     number: '319'
     kernel: '6.4.6-arch1-1'
     server: 'https://at.arch.mirror.kescher.at/$repo/os/$arch'
@@ -3449,7 +3449,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-06-30'
+  - date:   '2023-07-02'
     number: '320'
     kernel: '6.4.6-arch1-1'
     server: 'https://at.arch.mirror.kescher.at/$repo/os/$arch'
@@ -3460,7 +3460,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-01'
+  - date:   '2023-07-03'
     number: '321'
     kernel: '6.4.6-arch1-1'
     server: 'https://at.arch.mirror.kescher.at/$repo/os/$arch'
@@ -3471,7 +3471,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-02'
+  - date:   '2023-07-04'
     number: '322'
     kernel: '6.4.6-arch1-1'
     server: 'https://at.arch.mirror.kescher.at/$repo/os/$arch'
@@ -3482,7 +3482,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-03'
+  - date:   '2023-07-05'
     number: '323'
     kernel: '6.4.6-arch1-1'
     server: 'https://at.arch.mirror.kescher.at/$repo/os/$arch'
@@ -3493,7 +3493,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-04'
+  - date:   '2023-07-06'
     number: '324'
     kernel: '6.4.6-arch1-1'
     server: 'https://at.arch.mirror.kescher.at/$repo/os/$arch'
@@ -3504,7 +3504,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-05'
+  - date:   '2023-07-07'
     number: '325'
     kernel: '6.4.7-arch1-1'
     server: 'https://at.arch.mirror.kescher.at/$repo/os/$arch'
@@ -3515,7 +3515,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-06'
+  - date:   '2023-07-08'
     number: '326'
     kernel: '6.4.7-arch1-1'
     server: 'https://at.arch.mirror.kescher.at/$repo/os/$arch'
@@ -3526,7 +3526,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-07'
+  - date:   '2023-07-09'
     number: '327'
     kernel: '6.4.7-arch1-1'
     server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
@@ -3537,7 +3537,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-08'
+  - date:   '2023-07-10'
     number: '328'
     kernel: '6.4.7-arch1-1'
     server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
@@ -3548,7 +3548,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-09'
+  - date:   '2023-07-11'
     number: '329'
     kernel: '6.4.7-arch1-1'
     server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
@@ -3559,7 +3559,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-10'
+  - date:   '2023-07-12'
     number: '330'
     kernel: '6.4.7-arch1-1'
     server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
@@ -3570,7 +3570,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-18'
+  - date:   '2023-07-13'
     number: '331'
     kernel: '6.4.7-arch1-2'
     server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
@@ -3581,7 +3581,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-19'
+  - date:   '2023-07-14'
     number: '332'
     kernel: '6.4.7-arch1-3'
     server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
@@ -3592,7 +3592,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-20'
+  - date:   '2023-07-15'
     number: '333'
     kernel: '6.4.7-arch1-3'
     server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
@@ -3603,7 +3603,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-21'
+  - date:   '2023-07-16'
     number: '334'
     kernel: '6.4.8-arch1-1'
     server: 'https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch'
@@ -3614,7 +3614,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-22'
+  - date:   '2023-07-17'
     number: '335'
     kernel: '6.4.8-arch1-1'
     server: 'https://mirror.ubrco.de/archlinux/$repo/os/$arch'
@@ -3625,7 +3625,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-23'
+  - date:   '2023-07-18'
     number: '336'
     kernel: '6.4.8-arch1-1'
     server: 'https://mirror.ubrco.de/archlinux/$repo/os/$arch'
@@ -3636,7 +3636,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-24'
+  - date:   '2023-07-19'
     number: '337'
     kernel: '6.4.8-arch1-1'
     server: 'https://mirror.ubrco.de/archlinux/$repo/os/$arch'
@@ -3647,7 +3647,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-25'
+  - date:   '2023-07-20'
     number: '338'
     kernel: '6.4.8-arch1-1'
     server: 'https://mirror.ubrco.de/archlinux/$repo/os/$arch'
@@ -3658,7 +3658,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-26'
+  - date:   '2023-07-21'
     number: '339'
     kernel: '6.4.8-arch1-1'
     server: 'https://mirror.ubrco.de/archlinux/$repo/os/$arch'
@@ -3669,7 +3669,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-27'
+  - date:   '2023-07-22'
     number: '340'
     kernel: '6.4.8-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3680,7 +3680,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-28'
+  - date:   '2023-07-23'
     number: '341'
     kernel: '6.4.9-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3691,7 +3691,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-29'
+  - date:   '2023-07-24'
     number: '342'
     kernel: '6.4.9-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3702,7 +3702,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-30'
+  - date:   '2023-07-25'
     number: '343'
     kernel: '6.4.9-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3713,7 +3713,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-07-31'
+  - date:   '2023-07-26'
     number: '344'
     kernel: '6.4.10-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3724,7 +3724,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-08-01'
+  - date:   '2023-07-27'
     number: '345'
     kernel: '6.4.10-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3735,7 +3735,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-08-02'
+  - date:   '2023-07-28'
     number: '346'
     kernel: '6.4.10-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3746,7 +3746,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-08-03'
+  - date:   '2023-07-29'
     number: '347'
     kernel: '6.4.10-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3757,7 +3757,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-08-04'
+  - date:   '2023-07-30'
     number: '348'
     kernel: '6.4.10-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3768,7 +3768,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-08-05'
+  - date:   '2023-07-31'
     number: '349'
     kernel: '6.4.10-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3779,7 +3779,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-08-06'
+  - date:   '2023-08-01'
     number: '350'
     kernel: '6.4.10-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3790,7 +3790,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-08-07'
+  - date:   '2023-08-02'
     number: '351'
     kernel: '6.4.11-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3801,7 +3801,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-08-08'
+  - date:   '2023-08-03'
     number: '352'
     kernel: '6.4.11-arch1-1'
     server: 'https://mirror.f4st.host/archlinux/$repo/os/$arch'
@@ -3812,7 +3812,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-08-09'
+  - date:   '2023-08-04'
     number: '353'
     kernel: '6.4.11-arch2-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -3823,7 +3823,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-08-10'
+  - date:   '2023-08-05'
     number: '354'
     kernel: '6.4.11-arch2-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -3834,7 +3834,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-08-11'
+  - date:   '2023-08-06'
     number: '355'
     kernel: '6.4.11-arch2-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -3845,7 +3845,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-08-12'
+  - date:   '2023-08-07'
     number: '356'
     kernel: '6.4.11-arch2-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -3856,7 +3856,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-08-13'
+  - date:   '2023-08-08'
     number: '357'
     kernel: '6.4.11-arch2-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -3867,7 +3867,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-08-14'
+  - date:   '2023-08-09'
     number: '358'
     kernel: '6.4.12-arch1-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
@@ -3878,7 +3878,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-08-15'
+  - date:   '2023-08-10'
     number: '359'
     kernel: '6.4.12-arch1-1'
     server: 'https://seoul.mirror.pkgbuild.com/$repo/os/$arch'
@@ -3889,7 +3889,7 @@ experiment:
     note:   >-
       -
 
-  - date:   '2023-08-16'
+  - date:   '2023-08-11'
     number: '360'
     kernel: '6.4.12-arch1-1'
     server: 'https://mirror.theo546.fr/archlinux/$repo/os/$arch'
