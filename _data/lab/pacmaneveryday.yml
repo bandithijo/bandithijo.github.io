@@ -3932,3 +3932,14 @@ experiment:
     url:    'https://youtu.be/KyXJijF9U6g'
     note:   >-
       -
+
+  - date:   '2023-08-15'
+    number: '364'
+    kernel: '6.4.12-arch1-1'
+    server: 'https://mirror.funami.tech/arch/$repo/os/$arch'
+    count:  '44'
+    size:   '211.43'
+    status: 'OK'
+    url:    'https://youtu.be/e3a80mvwsx8'
+    note:   >-
+      -
