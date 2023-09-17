@@ -189,7 +189,7 @@ index 392ea6f9d..c936694ba 100644
      {
        # self: admin_path(object),
 ```
-Untuk, kembali ke stash list, dapat menggunakan tombol <kbd><Ctrl</kbd>+<kbd>^</kbd>.
+Untuk, kembali ke stash list, dapat menggunakan tombol <kbd>Ctrl</kbd>+<kbd>^</kbd>.
 
 
 Kekurangannya adalah tidak dapat melihat *untracked files* (file yang baru dibuat). Untuk case ini, dapat menggunakan Git-stash show.
