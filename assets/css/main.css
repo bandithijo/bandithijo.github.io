@@ -2130,6 +2130,10 @@ button.active {
   display: flex !important;
 }
 
+.blockquote-blue ol li {
+  color: var(--BLACK);
+}
+
 .blockquote-blue-title img {
   width: 25px !important;
   margin: 0 10px 0 0 !important;
