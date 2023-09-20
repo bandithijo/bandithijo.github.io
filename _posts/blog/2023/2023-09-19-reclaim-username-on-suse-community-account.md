@@ -148,7 +148,11 @@ tickets #135857: [HELP] Reclaim my old username
 https://progress.opensuse.org/issues/135857#change-673775
 ```
 
-Surprise! Ternyata alamat dan topiknya benar. Email saya mendapat nomor issue tiket **#135857**.
+Surprise! Ternyata alamat balasannya dari `redmine@opensuse.org`.
+
+Kalau tidak salah **redmine** ini adalah free dan opensour web-based project management dan issue tracking yang dibuat dengan Ruby on Rails. Keren! Ternyata masih ada yang pakai.
+
+Email saya mendapat nomor issue tiket **#135857**.
 
 Dari pesan di atas, terlihat kalau **malcolmlewis** memberikan assignment issue ticket ini kepada **@crameleon** dan memberikan informasi singkat untuk mempercepat proses identifikasi problem.
 
