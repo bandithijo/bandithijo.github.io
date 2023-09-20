@@ -19,7 +19,7 @@ description: "Pada catatan ini saya ingin mendokumentasikan proses reclaim usern
 
 {{ page.description }}
 
-# Caveats
+# Disclaimer
 
 
 {% box_perhatian %}
