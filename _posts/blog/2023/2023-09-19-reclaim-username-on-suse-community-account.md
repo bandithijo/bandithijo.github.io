@@ -426,7 +426,7 @@ That's it!
 
 # Pesan Penulis
 
-Itu tadi pengalaman saya melakukan klaim terhadap old username saya di SUSE Community Account yang dibekukan karena tertinggal tidak ikut migrasi pada July 2022.
+Itu tadi pengalaman saya melakukan klaim terhadap old username saya di SUSE Community Account yang dibekukan karena tertinggal tidak ikut migrasi pada July 2020.
 
 Proses re-claim username ini berhasil, karena alamat email yang saya gunakan masih aktif saya pergunakan. Asumsi saya, kalau email nya tidak aktif, atau ingin berganti email pada username yang dibekukan, proses tersebut akan sulit, karena mereka tidak punya data untuk memvalidasi bahwa username tersebut benar milik kita atau bukan.
 
