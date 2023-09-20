@@ -23,7 +23,7 @@ description: "Pada catatan ini saya ingin mendokumentasikan proses reclaim usern
 
 
 {% box_perhatian %}
-<p markdown=1>Keberhasilan dari proses re-claim old username ini (mungkin) karena, **email yang saya daftarkan pada username yang telah dibekukan, masih aktif saya pergunakan.**</p>
+<p markdown=1>Keberhasilan dari proses re-claim old username ini karena, **email yang saya daftarkan pada username yang telah dibekukan, masih aktif saya pergunakan.**</p>
 <p markdown=1>Seperti yang tertulis di FAQ,</p>
 <p markdown=1> ***The account reactivation needs access to the registered e-mail address***</p>
 {% endbox_perhatian %}
