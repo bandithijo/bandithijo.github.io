@@ -23,9 +23,9 @@ description: "Pada catatan ini saya ingin mendokumentasikan proses reclaim usern
 
 
 {% box_perhatian %}
-<p markdown=1>
-Keberhasilan dari proses re-claim old username ini (mungkin) karena, **email yang saya daftarkan pada username yang telah dibekukan, masih aktif saya pergunakan.**
-</p>
+<p markdown=1>Keberhasilan dari proses re-claim old username ini (mungkin) karena, **email yang saya daftarkan pada username yang telah dibekukan, masih aktif saya pergunakan.**</p>
+<p markdown=1>Seperti yang tertulis di FAQ,</p>
+<p markdown=1> ***The account reactivation needs access to the registered e-mail address***</p>
 {% endbox_perhatian %}
 
 # Masalah
@@ -71,6 +71,10 @@ Dari daftar tersebut, saya belum menggunakan SUSE yang sekarang menjadi openSUSE
 September 2023, tepatnya tanggal 17, saya tiba-tiba tertarik lagi dengan openSUSE.
 
 Namun, tentu saja, langkah pertama adalah mencoba meng-claim username `bandithijo` saya.
+
+Karena berdasarkan FAQ di atas, asalakan email yang terdaftar masih aktif, masih bisa dilakukan proses reactivasi akun.
+
+Sayangnya, tidak disebutkan alamat email yang akan digunakan untuk mengajukan issue.
 
 ## Email #1
 
@@ -175,7 +179,7 @@ Tentang perubahan satus tiket ke **(In Progress)**.
 
 ## Email Re: #1 (P3)
 
-Kemudian, **@crameleon** yang dihandle oleh **Georg**, membalas email dan memberikan arahan.
+Kemudian, **@crameleon** atau **Georg**, membalas email dan memberikan arahan.
 
 ```email
 Date: Tue, 19 Sep 2023 13:25:43 +0000
@@ -428,7 +432,7 @@ That's it!
 
 Itu tadi pengalaman saya melakukan klaim terhadap old username saya di SUSE Community Account yang dibekukan karena tertinggal tidak ikut migrasi pada July 2020.
 
-Proses re-claim username ini berhasil, karena alamat email yang saya gunakan masih aktif saya pergunakan. Asumsi saya, kalau email nya tidak aktif, atau ingin berganti email pada username yang dibekukan, proses tersebut akan sulit, karena mereka tidak punya data untuk memvalidasi bahwa username tersebut benar milik kita atau bukan.
+Proses re-claim username ini berhasil, karena alamat email yang saya gunakan masih aktif saya pergunakan. Kalau email nya tidak aktif, atau ingin berganti email pada username yang dibekukan, proses tersebut akan sulit (mungkin mustahil), karena mereka tidak punya data untuk memvalidasi bahwa username tersebut benar milik kita atau bukan.
 
 Mudah-mudahan catatan ini bermanfaat untuk teman-teman.
 
@@ -437,6 +441,8 @@ Terima kasih sudah mampir yaa.
 {% box_info %}
 <p markdown=1>Minggu ini (September 2023), saya akan mulai migrasi ke openSUSE.</p>
 {% endbox_info %}
+
+Terima kasih untuk **malcolmlewis** dan **crameleon (Georg)** karena telah membantu saya memulihkan username `bandithijo`.
 
 
 # Referensi
