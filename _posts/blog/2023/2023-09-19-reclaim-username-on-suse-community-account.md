@@ -154,7 +154,7 @@ Kalau tidak salah **redmine** ini adalah free dan opensour web-based project man
 
 Email saya mendapat nomor issue tiket **#135857**.
 
-Dari pesan di atas, terlihat kalau **malcolmlewis** memberikan assignment issue ticket ini kepada **@crameleon** dan memberikan informasi singkat untuk mempercepat proses identifikasi problem.
+Dari pesan di atas, terlihat kalau **@malcolmlewis** memberikan assignment issue ticket ini kepada **@crameleon** dan memberikan informasi singkat untuk mempercepat proses identifikasi problem.
 
 Kalau sudah mendapat nomor tiket, artinya tinggal menunggu antrian kalau tiket kita akan dikerjakan.
 
@@ -183,7 +183,7 @@ Tentang perubahan satus tiket ke **(In Progress)**.
 
 ## Email Re: #1 (P3)
 
-Kemudian, **@crameleon** atau **Georg**, membalas email dan memberikan arahan.
+Kemudian, **@crameleon**, membalas email dan memberikan arahan.
 
 ```email
 Date: Tue, 19 Sep 2023 13:25:43 +0000
@@ -405,7 +405,7 @@ TZ=Asia/Makassar (GMT +0800)
 
 ## Email Re: #3
 
-**Georg** pun menutup tiket dan membalas.
+**@crameleon** pun menutup tiket dan membalas.
 
 ```email
 Date: Tue, 19 Sep 2023 14:09:35 +0000
@@ -446,7 +446,7 @@ Terima kasih sudah mampir yaa.
 <p markdown=1>Minggu ini (September 2023), saya akan mulai migrasi ke openSUSE.</p>
 {% endbox_info %}
 
-Terima kasih untuk **malcolmlewis** dan **crameleon (Georg)** karena telah membantu saya memulihkan username `bandithijo`.
+Terima kasih untuk **@malcolmlewis** dan **@crameleon** karena telah membantu saya memulihkan username `bandithijo`.
 
 
 # Referensi
