@@ -88,7 +88,39 @@ cursor-size=48
 
 Pada variable `cursor-theme=`, isi dengan cursor theme yang kalian inginkan. Alamatnya harus berada di path global `/usr/share/icons/`.
 
-Pada variable `cursor-size=`, isi dengan size yang tersedia dari cursor theme, umumnya antara: 16, 24, 48. Saya menggunakan 48, karena saya menggunakan layar FHD (1920x1080).
+Pada variable `cursor-size=`, isi dengan size yang tersedia dari cursor theme, umumnya antara: 16, 24, 36, 48. Saya menggunakan 48, karena saya menggunakan layar FHD (1920x1080).
+
+## Gnome Desktop
+
+### Setup cursor size on GNOME for Gtk apps
+
+For check the current cursor size,
+
+{% shell_user %}
+gsettings get org.gnome.desktop.interface cursor-size
+{% endshell_user %}
+
+The default is `24`.
+
+Depending on the theme, sizes are 24, 32, 48, 64.
+
+To change the cursor size,
+
+{% shell_user %}
+gsettings set org.gnome.desktop.interface cursor-size 32
+{% endshell_user %}
+
+### Setup cursor size on GNOME for Qt apps
+
+Just set the env `XCURSOR_SIZE=` before run the Qt apps, or define on local/global env file.
+
+My local env variables are on `~/.profile` (some people keep it on `~/.bashrc` or `~/.bash_profile`).
+
+{% highlight_caption ~/.profile %}
+{% highlight bash linenos %}
+export XCURSOR_SIZE=36
+{% endhighlight %}
+
 
 ## Extensions
 
@@ -123,3 +155,9 @@ Terima kasih sudah mampir yaa.
 
 1. [Disable the default app key (super+num) functionality on Ubuntu 17.10 and later](https://askubuntu.com/a/1425621/777616){:target="_blank"}
 <br>Diakses tanggal: 2023/06/27
+
+1. [wiki.archlinux.org: _Cursor themes_](https://wiki.archlinux.org/title/Cursor_themes#GNOME){:target="_blank"}
+<br>Diakses tanggal: 2023/10/07
+
+1. [github.com/telegramdesktop/tdesktop: _Big cursor in GNOME Wayland #16920_](https://github.com/telegramdesktop/tdesktop/issues/16920#issuecomment-915085406){:target="_blank"}
+<br>Diakses tanggal: 2023/10/07
