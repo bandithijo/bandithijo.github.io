@@ -319,7 +319,7 @@ Dapat dilihat token untuk mereset password sudah didapatkan.
 
 Copy token atau klik link yang diberikan.
 
-![gambar_3]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/rwn3MBMT/gambar-03.png" onerror="imgError(this);"}{:class="myImg"}
+![gambar_3]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/52mSc6Ss/gambar-03.png" onerror="imgError(this);"}{:class="myImg"}
 <p class="img-caption">Gambar 3 - Memperbaharui password dengan token</p>
 
 Kemudian tekan **CHANGE PASSWORD**.
