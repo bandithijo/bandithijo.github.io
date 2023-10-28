@@ -324,7 +324,7 @@ Copy token atau klik link yang diberikan.
 
 Kemudian tekan **CHANGE PASSWORD**.
 
-![gambar_4]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/J47p0pTz/gambar-04.png" onerror="imgError(this);"}{:class="myImg"}
+![gambar_4]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/Ls6Bm2y2/gambar-04.png" onerror="imgError(this);"}{:class="myImg"}
 <p class="img-caption">Gambar 4 - Popup ketika berhasil memperbahrui password</p>
 
 ### 2. Email Validation
