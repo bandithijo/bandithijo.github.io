@@ -2,17 +2,17 @@
 namespace :jekyll do
   desc 'Menjalankan Jekyll pada Environment Development'
   task :server do
-    sh('BUNDLE_GEMFILE=Gemfile bundle exec jekyll s -l -H 0.0.0.0')
+    sh('RUBY_YJIT_ENABLE=1 BUNDLE_GEMFILE=Gemfile bundle exec jekyll s -l -H 0.0.0.0')
   end
 
   namespace :server do
     desc 'Menjalankan Jekyll pada Environment Development dengan --incremental --watch'
     task :inc do
-      sh('BUNDLE_GEMFILE=Gemfile bundle exec jekyll s -l -H 0.0.0.0 --incremental --watch')
+      sh('RUBY_YJIT_ENABLE=1 BUNDLE_GEMFILE=Gemfile bundle exec jekyll s -l -H 0.0.0.0 --incremental --watch')
     end
 
     task :inc_draft do
-      sh('BUNDLE_GEMFILE=Gemfile bundle exec jekyll s -l -H 0.0.0.0 --incremental --watch --drafts')
+      sh('RUBY_YJIT_ENABLE=1 BUNDLE_GEMFILE=Gemfile bundle exec jekyll s -l -H 0.0.0.0 --incremental --watch --drafts')
     end
   end
 
@@ -32,7 +32,7 @@ namespace :jekyll do
   namespace :bundle do
     desc 'Mengupdate gems via bundler'
     task :update do
-      sh('BUNDLE_GEMFILE=Gemfile bundle update')
+      sh('RUBY_YJIT_ENABLE=1 BUNDLE_GEMFILE=Gemfile bundle update')
     end
   end
 end
