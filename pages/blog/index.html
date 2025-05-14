@@ -1,0 +1,28 @@
+---
+layout: 'page_list'
+title: '&lt;blog/&gt;'
+author: 'BanditHijo'
+permalink: '/blog/'
+---
+
+{% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+{% for year in postsByYear %}
+  <div class="mb-4">
+    <ul class="text-base">
+      {% for post in year.items %}
+        <li>
+          <a href="{{ post.url }}" class="text-solarized_base1">
+            <span class="" style="padding-left:0;padding-right:0;">
+              <span class="text-left" style="padding-left:0;padding-right:0;">
+                <span class="font-mono">{{ post.edisi }} {{ post.date | date: '%Y.%m.%d' }}</span>
+              </span>
+              <span class="text-left" style="padding-left:6px;padding-right:0;">
+                <span class="">{{ post.title }}</span>
+              </span>
+            </span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div><!-- clear:both -->
+{% endfor %}

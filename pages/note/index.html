@@ -1,0 +1,28 @@
+---
+layout: 'page_list'
+title: '&lt;note/&gt;'
+author: 'BanditHijo'
+permalink: '/note/'
+---
+
+{% assign posts = site.posts | sort | where_exp:"page", "page.category == 'note'" %}
+{% for post in posts reversed %}
+  <div class="mb-0">
+    <ul class="text-base">
+      {% if post.category == 'note' %}
+        <li>
+          <a href="{{ post.url }}" class="text-solarized_base1">
+            <span class="" style="padding-left:0;padding-right:0;">
+              <span class="text-left" style="padding-left:0;padding-right:0;">
+                <span class="font-mono">{{ post.edisi }} {{ post.date | date: '%Y.%m.%d' }}</span>
+              </span>
+              <span class="text-left" style="padding-left:6px;padding-right:0;">
+                <span class="">{{ post.title }}</span>
+              </span>
+            </span>
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </div><!-- clear:both -->
+{% endfor %}
