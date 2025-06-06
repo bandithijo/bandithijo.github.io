@@ -183,6 +183,10 @@
     @apply text-sm !important;
   }
 
+  .markdown .footnotes {
+    @apply border-t border-gray-300 mt-20 pt-6;
+  }
+
   .markdown .footnotes > hr {
     @apply mt-10 mb-4;
   }
