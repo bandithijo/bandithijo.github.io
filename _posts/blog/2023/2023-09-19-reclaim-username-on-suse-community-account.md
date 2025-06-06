@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Reclaim Old Username di SUSE Community Account (openSUSE)"
-date: 2023-09-19 23:40
+date: '2023-09-19 23:40'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Review', 'openSUSE']
+tags: ['openSUSE']
 pin:
 hot:
 contributors: []
@@ -22,11 +22,10 @@ description: "Pada catatan ini saya ingin mendokumentasikan proses reclaim usern
 # Disclaimer
 
 
-{% box_perhatian %}
-<p markdown=1>Keberhasilan dari proses re-claim old username ini karena, **email yang saya daftarkan pada username yang telah dibekukan, masih aktif saya pergunakan.**</p>
-<p markdown=1>Seperti yang tertulis di FAQ,</p>
-<p markdown=1> ***The account reactivation needs access to the registered e-mail address***</p>
-{% endbox_perhatian %}
+> Keberhasilan dari proses re-claim old username ini karena, **email yang saya daftarkan pada username yang telah dibekukan, masih aktif saya pergunakan.**
+>
+> Seperti yang tertulis di FAQ,
+> ***The account reactivation needs access to the registered e-mail address***
 
 # Masalah
 
@@ -36,8 +35,9 @@ Ternyata, terdapat berita "Community Account Migration" pada portal [^2] yang ma
 
 Saya coba daftarkan username saya `bandithijo`, ternyata sudah terdaftar. Namun, saya **tidak bisa melakukan password reset**, dan mendapatkan pesan error,
 
-![gambar_1]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/SxNH0S0V/gambar-01.png" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 1 - Error saat Password Reset</p>
+![Gambar 1](/assets/images/posts/2023/2023-09-19-01-gambar-01.png)
+
+Gambar 1. Error saat Password Reset
 
 Saya coba baca-baca FAQ yang terdapat di portal [^2], dan mendapatkan bagian FAQ yang ini,
 
@@ -282,8 +282,9 @@ Setelah saya coba lagi langkah 1 (password reset), ternyata berhasil! 🎉
 
 ### 1. Reset Password
 
-![gambar_2]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/kXyLhVHB/gambar-02.png" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 2 - Memilih media untuk menerima token reset password</p>
+![Gambar 2](/assets/images/posts/2023/2023-09-19-01-gambar-02.png)
+
+Gambar 2. Memilih media untuk menerima token reset password
 
 Setelah memasukkan username, dan username kita divalidasi, kita diarahkan untuk memilih media untuk menerima data token. Karena username `bandithijo` ini memang sudah memiliki email, dan email nya masih aktif saya pergunakan, saya memilih pilihan email. Dan memang hanya ada 1 pilihan saja.
 
@@ -319,13 +320,15 @@ Dapat dilihat token untuk mereset password sudah didapatkan.
 
 Copy token atau klik link yang diberikan.
 
-![gambar_3]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/52mSc6Ss/gambar-03.png" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 3 - Memperbaharui password dengan token</p>
+![Gambar 3](/assets/images/posts/2023/2023-09-19-01-gambar-03.png)
+
+Gambar 3. Memperbaharui password dengan token
 
 Kemudian tekan **CHANGE PASSWORD**.
 
-![gambar_4]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/Ls6Bm2y2/gambar-04.png" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 4 - Popup ketika berhasil memperbahrui password</p>
+![Gambar 4](/assets/images/posts/2023/2023-09-19-01-gambar-04.png)
+
+Gambar 4. Popup ketika berhasil memperbahrui password
 
 ### 2. Email Validation
 
@@ -359,8 +362,9 @@ Copy token atau click link yang diberikan.
 
 Jika berhasil, akan mendapatkan popup seperti ini.
 
-![gambar_5]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/VLw3R9Dx/gambar-05.png" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 5 - Berhasil Memvalidasi Email</p>
+![Gambar 5](/assets/images/posts/2023/2023-09-19-01-gambar-05.png)
+
+Gambar 5. Berhasil Memvalidasi Email
 
 Alhamdulillah, dengan ini username `bandithijo` berhasil saya dapatkan kembali di SUSE Community Account.
 
@@ -442,14 +446,11 @@ Mudah-mudahan catatan ini bermanfaat untuk teman-teman.
 
 Terima kasih sudah mampir yaa.
 
-{% box_info %}
-<p markdown=1>Minggu ini (September 2023), saya akan mulai migrasi ke openSUSE.</p>
-{% endbox_info %}
+Minggu ini (September 2023), saya akan mulai migrasi ke openSUSE.
 
 Terima kasih untuk **@malcolmlewis** dan **@crameleon** karena telah membantu saya memulihkan username `bandithijo`.
 
 
-# Referensi
 
 [^1]: [en.opensuse.org: _openSUSE Wiki_](https://en.opensuse.org/Main_Page)
 [^2]: [idp-portal-info.suse.com: _Community Account Migration_](https://idp-portal-info.suse.com/)

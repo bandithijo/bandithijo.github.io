@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Ubuntu: the following signatures were invalid: EXPKEYSIG"
-date: 2023-08-10 01:41
+date: '2023-08-10 01:41'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Ubuntu']
+tags: ['Ubuntu']
 pin:
 hot:
 contributors: []
@@ -33,9 +33,9 @@ Ini berarti di Ubuntu saya, masih memiliki kunci GPG versi lama yang digunakan u
 
 Kita asumsikan package maintainer sudah memperbaharui public key mereka dan menguploadnya di keyserver.ubuntu.com. Jadi, kita tinggal menjalankan perintah di bawah ini.
 
-{% shell_user %}
-sudo apt-key adv --refresh-keys --keyserver keyserver.ubuntu.com
-{% endshell_user %}
+```
+$ sudo apt-key adv --refresh-keys --keyserver keyserver.ubuntu.com
+```
 
 # Pesan Penulis
 

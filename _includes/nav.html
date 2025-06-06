@@ -2,10 +2,10 @@
 <header class="absolute left-0 top-0 md:top-6 z-10 flex w-full items-center bg-transparent-screen select-none">
   <div class="container md:px-20">
     <div class="relative flex items-center justify-between">
-      <div class="px-4 py-6 block font-bold text-4xl">BanditHijo<span class="font-thin text-3xl">.dev</span></div>
+      <div class="px-2 md:px-4 py-6 block font-bold text-3xl md:text-4xl">BanditHijo<span class="font-thin text-2xl md:text-3xl">.dev</span></div>
       <div class="flex items-center px-4">
         <!-- Hambuger Menu Start -->
-        <button id="hamburger" name="hamburger" type="button" class="absolute right-4 block lg:hidden">
+        <button id="hamburger" name="hamburger" type="button" class="absolute right-2 block lg:hidden">
           <span class="hamburger-line origin-top-right transition duration-300 ease-in-out"></span>
           <span class="hamburger-line transition duration-300 ease-in-out"></span>
           <span class="hamburger-line origin-bottom-right transition duration-300 ease-in-out"></span>
@@ -35,3 +35,22 @@
   </div>
 </header>
 <!-- Nav End -->
+
+<script>
+  // hamburger
+  const hamburger = document.querySelector('#hamburger');
+  const navMenu = document.querySelector('#nav-menu');
+
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('hamburger-active');
+    navMenu.classList.toggle('hidden');
+  });
+
+  // close menu outside menu
+  window.addEventListener('click', function(e) {
+    if(e.target != hamburger && e.target != navMenu) {
+      hamburger.classList.remove('hamburger-active');
+      navMenu.classList.add('hidden');
+    }
+  })
+</script>

@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Polybar sebagai Trayicon dengan Fitur Hide/Show Menggunakan polybar-msg"
-date: 2022-12-10 19:52
+date: '2022-12-10 19:52'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Ulasan']
+tags: ['Polybar']
 pin:
 hot:
 contributors: []
@@ -43,8 +43,9 @@ Pada segment atau section bar yang dijadikan sebagai trayicon, tambahkan attribu
 
 Contoh seperti yang saya pergunakan,
 
-{% highlight_caption ~/.config/polybar/config %}
-{% highlight dosini linenos %}
+```dosini
+; ~/.config/polybar/config.ini
+
 [colors]
 foreground = ${xrdb:foreground:}
 background = #001E1E1E
@@ -117,7 +118,7 @@ margin-top = 0
 margin-bottom = 0
 
 ; vim:ft=dosini
-{% endhighlight %}
+```
 
 Perhatikan pada baris ke-42, saya menggunakan attribute `enable-ipc = true` pada section bar yang saya gunakan sebagai trayicon dengan nama section `[bar/traydwm]`.
 
@@ -130,18 +131,20 @@ Setelah memasang attribute `enable-ipc = true` pada bar yang kita ingin dapat me
 Coba dulu jalankan di Terminal emulator,
 
 **Untuk menampilkan bar**
-{% shell_user %}
-polybar-msg cmd show
-{% endshell_user %}
+
+```
+$ polybar-msg cmd show
+```
 
 ```
 Successfully wrote command 'show' to PID 229212
 ```
 
 **Untuk menyembunyikan bar**
-{% shell_user %}
-polybar-msg cmd hide
-{% endshell_user %}
+
+```
+$ polybar-msg cmd hide
+```
 
 ```
 Successfully wrote command 'hide' to PID 229212
@@ -151,9 +154,9 @@ Perhatikan output yang ditampilkan, terdapat keterangan `PID 229212` yang menunj
 
 Cara mengeceknya tinggal gunakan command `pidof`.
 
-{% shell_user %}
-pidof polybar
-{% endshell_user %}
+```
+$ pidof polybar
+```
 
 ```
 229212
@@ -161,20 +164,23 @@ pidof polybar
 
 Nah, kalau sudah berhasil menggunakan command `polybar-msg` untuk hide & show di Terminal, tinggal mengaplikasikannya pada applikasi hotkey yang kalian gunakan. Saya menggunakan **sxhkd**.
 
-{% highlight_caption ~/.config/sxhkd/sxhkdrc %}
-{% highlight conf linenos %}
+```conf
+# ~/.config/sxhkd/sxhkdrc
+
 # polybar tray
 super + shift + ~b
     polybar-msg cmd {show, hide}
-{% endhighlight %}
+```
 
 # Demonstrasi
 
-![gambar_1]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/prp0W01t/gambar-01.gif" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 1 - Notifikasi dari nm-applet masih dapat keluar meskipun Polybar dalam keadaan hidden</p>
+![Gambar 1](/assets/images/posts/2022/2022-12-10-01-gambar-01.gif)
 
-![gambar_2]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/cLQFLtT6/gambar-02.gif" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption" markdown=1>Gambar 2 - Hide & Show Polybar dengan hotkey yang telah dideklarasikan dengan `polybar-msg`</p>
+Gambar 1. Notifikasi dari nm-applet masih dapat keluar meskipun Polybar dalam keadaan hidden
+
+![Gambar 2](/assets/images/posts/2022/2022-12-10-01-gambar-02.gif)
+
+Gambar 2. Hide & Show Polybar dengan hotkey yang telah dideklarasikan dengan `polybar-msg`
 
 
 # Pesan Penulis

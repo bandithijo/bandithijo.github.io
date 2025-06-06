@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "sxiv, Simple X Image Viewer (sxiv) yang Praktis namun Powerfull"
-date: 2022-08-07 15:53
+date: '2022-08-07 15:53'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Ulasan']
+tags: ['sxiv']
 pin:
 hot:
 contributors: []
@@ -49,42 +49,51 @@ Kalau kekurangan dari sxiv (subjektif menurut saya):
 
 # Screenshots
 
-![gambar_1]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/3NZg3CYc/gambar-01.png" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 1 - sxiv with image mode</p>
+![Gambar 1](/assets/images/posts/2022/2022-08-07-01-gambar-01.png)
 
-![gambar_2]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/y6hhhBcy/gambar-02.png" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 2 - sxiv with thumbnail mode</p>
+Gambar 1. sxiv with image mode
+
+![Gambar 2](/assets/images/posts/2022/2022-08-07-01-gambar-02.png)
+
+Gambar 2. sxiv with thumbnail mode
 
 # Demo
 
 ## Rotation
 
-![gambar_3]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/SK0jtYp2/gambar-03.gif" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 3 - sxiv with rotate left & right</p>
+![Gambar 3](/assets/images/posts/2022/2022-08-07-01-gambar-03.gif)
+
+Gambar 3. sxiv with rotate left & right
 
 ## Flipping
 
-![gambar_4]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/5twjc9xP/gambar-04.gif" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 4 - sxiv with flip vertical & horizontal</p>
+![Gambar 4](/assets/images/posts/2022/2022-08-07-01-gambar-04.gif)
+
+Gambar 4. sxiv with flip vertical & horizontal
 
 ## Zooming & Panning
 
-![gambar_5]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/gjrY0GWb/gambar-05.gif" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 5 - sxiv with zoom in & out</p>
+![Gambar 5](/assets/images/posts/2022/2022-08-07-01-gambar-05.gif)
 
-![gambar_6]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/mkqTzKLz/gambar-06.gif" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 6 - sxiv with zoom in movement, zoom level 100%, fit image to window</p>
+Gambar 5. sxiv with zoom in & out
+
+![Gambar 6](/assets/images/posts/2022/2022-08-07-01-gambar-06.gif)
+
+Gambar 6. sxiv with zoom in movement, zoom level 100%, fit image to window
 
 ## Navigation
 
-![gambar_7]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/2Sdfr1ZB/gambar-07.gif" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 7 - sxiv with navibation next & previous</p>
+![Gambar 7](/assets/images/posts/2022/2022-08-07-01-gambar-07.gif)
 
-![gambar_8]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/7Lxr6q3t/gambar-08.gif" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 8 - sxiv with navigation on thumbnails mode</p>
+Gambar 7. sxiv with navibation next & previous
 
-![gambar_9]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/HkBm4FKB/gambar-09.gif" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 9 - sxiv with zoom in/out thumbnails</p>
+![Gambar 8](/assets/images/posts/2022/2022-08-07-01-gambar-08.gif)
+
+Gambar 8. sxiv with navigation on thumbnails mode
+
+![Gambar 9](/assets/images/posts/2022/2022-08-07-01-gambar-09.gif)
+
+Gambar 9. sxiv with zoom in/out thumbnails
 
 # Rekomendasi
 
@@ -96,7 +105,7 @@ Karena **sxiv** sudah tidak lagi dilanjutkan proses maintain and developing nya,
 
 Dari `man nsxiv` pada section **configuration**, ada beberapa color & font properties yang dapat kita gunakan.
 
-{% pre_url %}
+```
 window.background
        Color of the window background
 
@@ -114,13 +123,15 @@ bar.foreground
 
 mark.foreground
        Color of the mark foreground. Defaults to window.foreground
-{% endpre_url %}
+```
 
 Untuk dapat menggunakannya pada Xresources, tambahkan awalan `Nsxiv.` (window class name).
 
 Contoh,
 
 ```
+! ~/.Xresources
+
 Nsxiv.bar.font:          JetBrainsMono Nerd Font Bandit:pixelsize=17
 Nsxiv.bar.background:    #005F87
 Nsxiv.bar.foreground:    #D4D4D4

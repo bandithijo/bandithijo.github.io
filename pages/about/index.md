@@ -5,7 +5,7 @@ permalink: '/about/'
 toc: true
 ---
 
-<img class="post-body-img" src="/pages/about/assets/images/contact.png" alt="banner">
+![Banner](/pages/about/assets/images/contact.png)
 
 **BanditHijo**, tidak seperti yang anda pahami, Bandit (kata ganti orang untuk konotasi yang bersifat negatif) dan Hijo (kata plesetan dari warna hijau).
 
@@ -130,23 +130,28 @@ Catatan tentang bagaimana cara untuk berdonasi, dapat teman-teman baca di sini, 
 
 # Bagimana workflow dalam menggunakan Linux?
 
-![gambar_1](/pages/about/assets/images/gambar-01.png)
-<p class="img-caption">i3 Window Manger + Polybar + Conky + Solarized Dark = My Perfect Desktop</p>
+![Gambar 1](/pages/about/assets/images/gambar-01.png)
 
-![gambar_7](/pages/about/assets/images/gambar-07.png)
-<p class="img-caption">Another Desktop with Wallpaper and Vim</p>
+Gambar 1. i3 Window Manger + Polybar + Conky + Solarized Dark = My Perfect Desktop
 
-![gambar_2](/pages/about/assets/images/gambar-02.png)
-<p class="img-caption">Tools yang saya pergunakan untuk menulis, Vim + Tmux</p>
+![Gambar 7](/pages/about/assets/images/gambar-07.png)
 
-![gambar_3](/pages/about/assets/images/gambar-03.png)
-<p class="img-caption">Tools yang saya pergunakan untuk membuat vector image, Inkscape</p>
+Gambar 7. Another Desktop with Wallpaper and Vim
 
-![gambar_4](/pages/about/assets/images/gambar-04.png)
-<p class="img-caption">Tools yang saya pergunakan untuk membuat banner image, GIMP</p>
+![Gambar 2](/pages/about/assets/images/gambar-02.png)
+Gambar 2. Tools yang saya pergunakan untuk menulis, Vim + Tmux
 
-![gambar_5](/pages/about/assets/images/gambar-05.png)
-<p class="img-caption">Tools yang saya pergunakan untuk image croping, gThumb</p>
+![Gambar 3](/pages/about/assets/images/gambar-03.png)
+
+Gambar 3. Tools yang saya pergunakan untuk membuat vector image, Inkscape
+
+![Gambar 4](/pages/about/assets/images/gambar-04.png)
+
+Gambar 4. Tools yang saya pergunakan untuk membuat banner image, GIMP
+
+![Gambar 5](/pages/about/assets/images/gambar-05.png)
+
+Gambar 5. Tools yang saya pergunakan untuk image croping, gThumb
 
 Tema gelap dapat berganti sesuai kebutuhan saya menjadi tema terang (*light*). Biasanya saya menyesuaikan dengan kondisi pencahayaan dari ruangan/lingkungan.
 

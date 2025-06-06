@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Setup LSP Solargraph untuk Rails di Neovim"
-date: 2023-07-08 20:34
+date: '2023-07-08 20:34'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Rails']
+tags: ['Rails']
 pin:
 hot:
 contributors: []
@@ -23,7 +23,7 @@ description: "Language Server Protocol sangat membantu developer saat proses mem
 
 Dikutip dari halaman *official site* dari solargraph,
 
-*Solargraph is a Ruby language server and suite of static analysis tools. The language server provides intellisense, autocompletion, diagnostics, and other language features for editors and IDEs with language client capabilities. The static analysis tools check code for type safety.*
+> *Solargraph is a Ruby language server and suite of static analysis tools. The language server provides intellisense, autocompletion, diagnostics, and other language features for editors and IDEs with language client capabilities. The static analysis tools check code for type safety.*
 
 Fitur yang ditawarkan, antara lain:
 
@@ -63,15 +63,15 @@ Gem yang diperlukan tentu saja `solargraph` dan juga `solargraph-rails`. Namun, 
 
 Cukup install sendiri di dalam lokal project kita. Karena bisa jadi anggota tim kita tidak menggunakan Solargraph.
 
-{% shell_user %}
-gem install solargraph solargraph-rails
-{% endshell_user %}
+```
+$ gem install solargraph solargraph-rails
+```
 
 Initialize file konfigurasi dengan menjalankan perintah di bawah pada direktori root dari Rails project.
 
-{% shell_user %}
-solargraph config
-{% endshell_user %}
+```
+$ solargraph config
+```
 
 Perintah di atas, akan otomatis membuatkan kita file `.solargraph.yml` di Root Rails project dan sudah memiliki *default template* di dalamnya.
 
@@ -122,15 +122,15 @@ plugins:
 
 Secara default Solargraph menggunakan Rubocop sebagai linter. Pasang juga.
 
-{% shell_user %}
-gem install rubocop
-{% endshell_user %}
+```
+$ gem install rubocop
+```
 
 Kalau mau menginisialisasi file confignya gunakan perintah di bawah ini
 
-{% shell_user %}
-rubocop --auto-gen-config
-{% endshell_user %}
+```
+$ rubocop --auto-gen-config
+```
 
 Perintah di atas akan mengenerate konfigurasi default untuk Rubocop yaitu file `.rubocop.yml` dan `.rubocop_todo.yml` di Root Rails prject kita.
 

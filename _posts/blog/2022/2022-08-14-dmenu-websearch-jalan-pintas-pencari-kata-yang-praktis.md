@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "dmenu-websearch, Jalan Pintas Pencari Kata yang Praktis"
-date: 2022-08-14 08:47
+date: '2022-08-14 08:47'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Script']
+tags: ['dmenu']
 pin:
 hot:
 contributors: []
@@ -22,6 +22,7 @@ dmenu-websearch ini saya buat karena kemalasan saya dalam melakukan pencarian ka
 # Fitur-fitur
 
 dmenu-websearch ini memiliki fitur:
+
 1. mencari kata/frasa dari target website yang sudah didefinisikan di dalam file urlquery
 1. menambahkan target urlquery baru
 1. menghapus target urlquery yang ada (konfirmasi sebelum dihapus)
@@ -32,8 +33,9 @@ dmenu-websearch ini memiliki fitur:
 
 Simpan file `dmenu-websearch` di PATH direktori.
 
-{% highlight_caption ~/.local/bin/dmenu-websearch %}
-{% highlight shell linenos %}
+```shell
+# ~/.local/bin/dmenu-websearch
+
 #!/bin/bash
 
 # Released under MIT License
@@ -125,14 +127,15 @@ main() {
 }
 
 main
-{% endhighlight %}
+```
 
 ## urlquery (plaintext)
 
 Simpan file `.urlquery` di HOME direktori.
 
-{% highlight_caption ~/.urlquery %}
-{% highlight shell linenos %}
+```shell
+# ~/.urlquery
+
 [ "Arch:Manpage", "https://man.archlinux.org/search?q=" ],
 [ "Arch:Wiki", "https://wiki.archlinux.org/index.php?search=" ],
 [ "Arch:Packages", "https://archlinux.org/packages/?q=" ],
@@ -149,7 +152,7 @@ Simpan file `.urlquery` di HOME direktori.
 [ "Youtube:Search", "https://www.youtube.com/results?search_query=" ],
 [ "Twitch:Search", "https://www.twitch.tv/search?term=" ],
 [ "NPM:Search", "https://www.npmjs.com/search?q=" ],
-{% endhighlight %}
+```
 
 # Pesan Penulis
 

@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Mudah Setup Odoo untuk Development dengan Docker"
-date: 2024-06-13 07:52
+date: '2024-06-13 07:52'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Docker', 'Odoo']
+tags: ['Docker', 'Odoo']
 pin:
 hot:
 contributors: []
@@ -52,32 +52,32 @@ Oleh karena itu, saya memilih menggunakan pemasangan Odoo dengan [Docker image](
 1. Open file `docker-compose.yml` with your favorit text edior and fill in with recipe below
 
    ```yaml
-    services:
-        odoo:
-            container_name: odoo
-            image: odoo:17.0
-            env_file: .env
-            volumes:
-                - ./etc/odoo:/etc/odoo
-                - ./extra-addons:/mnt/extra-addons
-                - ./var/lib/odoo:/var/lib/odoo
-            ports:
-                - 8069:8069
-            depends_on:
-                - postgres
-            networks:
-                - odoo-network
-        postgres:
-            container_name: odoo-postgres
-            image: postgres:16.1
-            env_file: .env
-            volumes:
-                - ./var/lib/postgresql/data/pgdata:/var/lib/postgresql/data/pgdata
-            networks:
-                - odoo-network
-    networks:
-        odoo-network:
-            driver: bridge
+   services:
+       odoo:
+           container_name: odoo
+           image: odoo:17.0
+           env_file: .env
+           volumes:
+               - ./etc/odoo:/etc/odoo
+               - ./extra-addons:/mnt/extra-addons
+               - ./var/lib/odoo:/var/lib/odoo
+           ports:
+               - 8069:8069
+           depends_on:
+               - postgres
+           networks:
+               - odoo-network
+       postgres:
+           container_name: odoo-postgres
+           image: postgres:16.1
+           env_file: .env
+           volumes:
+               - ./var/lib/postgresql/data/pgdata:/var/lib/postgresql/data/pgdata
+           networks:
+               - odoo-network
+   networks:
+       odoo-network:
+           driver: bridge
    ```
 
 1. Please provide directories to store the Odoo data and PostgreSQL data

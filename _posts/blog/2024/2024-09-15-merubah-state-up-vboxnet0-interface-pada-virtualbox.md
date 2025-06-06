@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Merubah State UP vboxnet0 Interface pada VirtualBox di Arch Linux"
-date: 2024-09-15 19:05
+date: '2024-09-15 19:05'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'VirtualBox', 'Arch Linux']
+tags: ['VirtualBox']
 pin:
 hot:
 contributors: []

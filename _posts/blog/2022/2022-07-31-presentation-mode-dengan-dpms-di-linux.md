@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Membuat Presentation Mode tanpa XFCE4 Power Manager di GNU/Linux (Bonus! dmenu-presentationmode)"
-date: 2022-07-31 08:38
+date: '2022-07-31 08:38'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips']
+tags: ['dmenu', 'DPMS']
 pin:
 hot:
 contributors: []
@@ -40,41 +40,42 @@ extra/xorg-xset 1.2.4-3 (19.0 KiB 39.8 KiB) [xorg-apps xorg]
 
 Secara *default*, DPMS sudah dalam keadaan aktif. Kita dapat melihat query parameter apa saja yang tersedia dengan perintah:
 
-{% shell_user %}
-xset q
-{% endshell_user %}
+```
+$ xset q
+```
 
-<pre>
+```
 ...
 ...
 
 DPMS (Energy Star):
   Standby: 300    Suspend: 0    Off: 600
-  <mark>DPMS is Enabled</mark>
+  DPMS is Enabled
   Monitor is On
-</pre>
+````
 
 ## Presentation Mode ON atau OFF
 
 **Presentation Mode ON**
 
-{% shell_user %}
-xset -dpms
-{% endshell_user %}
+```
+$ xset -dpms
+```
 
 <br>
 **Presentation Mode OFF**
 
-{% shell_user %}
-xset +dpms
-{% endshell_user %}
+```
+$ xset +dpms
+```
 
 # Bonus!
 
 ## dmenu-presentationmode
 
-{% highlight_caption ~/.local/bin/dmenu-presentationmode %}
-{% highlight sh linenos %}
+```bash
+# ~/.local/bin/dmenu-presentationmode
+
 #!/bin/bash
 
 # Deps:
@@ -119,7 +120,7 @@ main() {
 }
 
 main
-{% endhighlight %}
+```
 
 # Pesan Penulis
 

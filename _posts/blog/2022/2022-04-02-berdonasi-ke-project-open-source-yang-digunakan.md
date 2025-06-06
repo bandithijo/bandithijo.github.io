@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Hanya dengan 100 Ribu Rupiah, Bisa Berdonasi ke 6 Open Source Project!"
-date: 2022-04-02 22:55
+date: '2022-04-02 22:55'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Ulasan']
+tags: ['Donate', 'Open Source']
 pin:
 hot:
 contributors: []
@@ -23,9 +23,7 @@ Catatan kali ini, saya ingin membagikan pengalaman berdonasi ke beberapa project
 
 # Disclaimer
 
-{% box_perhatian %}
-<p markdown=1>Saya tidak berafiliasi dengan PayPal dan Bank Jago.</p>
-{% endbox_perhatian %}
+> Saya tidak berafiliasi dengan PayPal dan Bank Jago.
 
 # Alat Pembayaran
 
@@ -64,10 +62,9 @@ Biasanya untuk memverifikasi akun PayPal, terdapat petunjuk pada halaman [https:
 
 Syarat untuk melakukan verifikasi, hanya dengan menunjukkan/mengirimkan/mengupload foto KTP yang masih berlaku.
 
-{% box_info %}
-<p markdown=1>Untuk membuat dan memverifikasi akun PayPal tidak diperlukan saldo sama sekali.</p>
-![gambar_2]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/vTTnP1qH/gambar-02.png" onerror="imgError(this);"}{:class="myImg"}
-{% endbox_info %}
+> Untuk membuat dan memverifikasi akun PayPal tidak diperlukan saldo sama sekali.
+> 
+> ![Gambar 2](https://i.postimg.cc/vTTnP1qH/gambar-02.png)
 
 ## Buat Akun Bank Jago
 
@@ -75,7 +72,7 @@ Teman-teman juga perlu membuat akun di Bank Jago.
 
 Kita akan memanfaatkan **Virtual Debit Card** yang diberikan oleh Bank Jago untuk didaftarkan pada PayPal dan membuat pengaturan pembayaran utama akan ditarik dari saldo Bank Jago melalui Virtual Debit Card Bank Jago.
 
-![gambar_1]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/7ZspcjZH/gambar-01.jpg" onerror="imgError(this);"}{:class="myImg"}
+![Gambar 1](https://i.postimg.cc/7ZspcjZH/gambar-01.jpg)
 
 Ada biaya tambahan untuk mendaftarkan **Virtual Debit Card** Bank Jago ke PayPal sebesar USD$ 1 yang nantinya juga akan dikembalikan (*refund*) setelah proses pendaftaran kartu berhasil.
 

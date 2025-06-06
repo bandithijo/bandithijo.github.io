@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Mudah! Downgrade Ubuntu 22.04 ke 20.04"
-date: 2023-05-26 20:25
+date: '2023-05-26 20:25'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Ubuntu']
+tags: ['Ubuntu']
 pin:
 hot:
 contributors: []
@@ -19,11 +19,11 @@ description: "Catatan kali ini, saya akan mendokumentasikan proses <i>downgrade<
 
 {{ page.description }}
 
-{% box_perhatian %}
-<p markdown=1>***Downgrade*** merupakan proses yang bisa jadi sangat destruktif dan dapat merusak sistem anda.</p>
-<p markdown=1>Saya sangat merekomendasikan untuk melakukan ***backup*** terlebih dahulu, terhadap file-file yang penting.</p>
-<p markdown=1>Penulis tidak bertanggung jawab, terhadap kerusakan yang terjadi, akibat dari mengikuti catatan ini.</p>
-{% endbox_perhatian %}
+> ***Downgrade*** merupakan proses yang bisa jadi sangat destruktif dan dapat merusak sistem anda.
+> 
+> Saya sangat merekomendasikan untuk melakukan ***backup*** terlebih dahulu, terhadap file-file yang penting.
+> 
+> Penulis tidak bertanggung jawab, terhadap kerusakan yang terjadi, akibat dari mengikuti catatan ini.
 
 # Latar Belakang Masalah
 
@@ -57,9 +57,9 @@ Saat ini, saya berada di sistem dengan sistem operasi Ubuntu 22.04. Berdasarkan 
 
 Saya akan menggunakan *command* di bawah ini untuk mengetahui versi dari Ubuntu.
 
-{% shell_user %}
-cat /etc/os-release
-{% endshell_user %}
+```
+$ cat /etc/os-release
+```
 
 ```
 PRETTY_NAME="Ubuntu 22.04.2 LTS"
@@ -82,9 +82,9 @@ Nantinya, akan saya jalankan lagi, ketika telah berhasil menyelesaikan proses *d
 
 Informasi dari kernel version, sebenarnya tidak begitu bermanfaat, tapi cukup *nice to know*.
 
-{% shell_user %}
-uname -mrs
-{% endshell_user %}
+```
+$ uname -mrs
+```
 
 ```
 Linux 5.15.0-72-generic x86_64
@@ -103,17 +103,13 @@ Ciri-ciri sistem Ubuntu yang telah melakukan proses *distribution upgrade* adala
     ...
 ```
 
-{% box_info %}
-<p markdown=1>
-File `sources.list.distUpgrade` merupakan file `sources.list` pada versi Ubuntu sebelum dilakukannya *distribution upgrade*, dengan kata lain, jika saat ini versi Ubuntu yang terpasang adalah versi 22.04, artinya file `sources.list.distUpgrade` menyimpan data repositori untuk versi Ubuntu 20.04. Sedangkan, file `sources.list` berisi repositori untuk Ubuntu versi 22.04.
-</p>
-{% endbox_info %}
+> File `sources.list.distUpgrade` merupakan file `sources.list` pada versi Ubuntu sebelum dilakukannya *distribution upgrade*, dengan kata lain, jika saat ini versi Ubuntu yang terpasang adalah versi 22.04, artinya file `sources.list.distUpgrade` menyimpan data repositori untuk versi Ubuntu 20.04. Sedangkan, file `sources.list` berisi repositori untuk Ubuntu versi 22.04.
 
 Periksa isi dari file `sources.list`, apakah terdapat kata yang berhubungan dengan *codename* dari Ubuntu 22.04 (Jammy Jellyfish).
 
-{% shell_user %}
-grep -wv "#" /etc/apt/sources.list
-{% endshell_user %}
+```
+$ grep -wv "#" /etc/apt/sources.list
+```
 
 ```
 deb http://id.archive.ubuntu.com/ubuntu/ jammy main restricted
@@ -130,9 +126,9 @@ deb http://security.ubuntu.com/ubuntu jammy-security multiverse
 
 Periksa juga isi dari file `sources.list.distUpgrade`, apakah terdapat kata yang berhubungan dengan *codename* dari Ubuntu 20.04 (Focal Fossa).
 
-{% shell_user %}
-grep -wv "#" /etc/apt/sources.list.distUpgrade
-{% endshell_user %}
+```
+$ grep -wv "#" /etc/apt/sources.list.distUpgrade
+```
 
 ```
 #deb cdrom:[Ubuntu 20.04.6 LTS _Focal Fossa_ - Release amd64 (20230316)]/ focal main restricted
@@ -158,24 +154,25 @@ Saya perlu melakukan *backup* terhadap file repositori milik Ubuntu 22.04.
 
 Masuk ke dalam direktori `/etc/apt/`.
 
-{% shell_user %}
-cd /etc/apt
-{% endshell_user %}
+```
+$ cd /etc/apt
+```
 
 Ganti nama file `sources.list` menjadi `sources.list.jammy`. Saya berikan *suffix* ".jammy" karena *code name* dari Ubuntu 22.04 adalah "Jammy Jellyfish".
 
 Karena file `sources.list` merupakan file dengan **root permission**, maka saya perlu menggunakan hak akses **root** dengan menambahkan *prefix command* `sudo` di bagian awal perintah `mv`.
-{% shell_user %}
-sudo mv sources.list sources.list.jammy
-{% endshell_user %}
+
+```
+$ sudo mv sources.list sources.list.jammy
+```
 
 ### 2.3. Rename file sources.list.distUpgrade
 
 Kemudian, saya menjadikan file `sources.list.distUpgrade` menjadi file `sources.list`.
 
-{% shell_user %}
-sudo mv sources.list.distUpgrade sources.list
-{% endshell_user %}
+```
+$ sudo mv sources.list.distUpgrade sources.list
+```
 
 Dengan begini, file `sources.list` sudah berisi mirror milik Ubuntu 20.04 (Focal Fossa).
 
@@ -185,12 +182,13 @@ Saya perlu menambahkan file `focal` di dalam direktori `/etc/apt/preferences.d/`
 
 Tujuan dari menambahkan file APT preference, adalah untuk mengontrol *package version* yang akan digunakan dalam proses instalasi.
 
-{% shell_user %}
-sudo vi /etc/apt/preferences.d/focal
-{% endshell_user %}
+```
+$ sudo vi /etc/apt/preferences.d/focal
+```
 
-{% highlight_caption /etc/apt/preferences.d/focal %}
-{% highlight shell linenos %}
+```shell
+# /etc/apt/preferences.d/focal
+
 Package: *
 Pin: release n=focal
 Pin-Priority: 1001
@@ -202,15 +200,15 @@ Pin-Priority: 1002
 Package: *
 Pin: release n=focal-security
 Pin-Priority: 1003
-{% endhighlight %}
+```
 
 ## 4. Update mirrorlist
 
 Setelah memodifikasi file `sources.list`, saya perlu melakukan sinkroniasi metadata.
 
-{% shell_user %}
-sudo apt update -y
-{% endshell_user %}
+```
+$ sudo apt update -y
+```
 
 ```
 Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
@@ -240,17 +238,17 @@ Jika ada indikasi *upgrade packages*, abaikan dulu. Karena saat ini sistem masih
 
 Saya memerlukan package `aptitude` karena memiliki option `dist-upgrade` untuk melakukan *distribution upgrade*. Yang akan saya manfaatkan untuk proses *downgrade*. Option ini, sekarang dikenal dengan nama `full-upgrade`.
 
-{% shell_user %}
-sudo apt install aptitude -y
-{% endshell_user %}
+```
+$ sudo apt install aptitude -y
+```
 
 ## 6. Mulai proses downgrade
 
 Proses *distribution update* ini akan memakan waktu yang cukup lama, karena banyaknya paket-paket yang harus diunduh.
 
-{% shell_user %}
-sudo aptitude dist-upgrade -y
-{% endshell_user %}
+```
+$ sudo aptitude dist-upgrade -y
+```
 
 # Pesan Penulis
 

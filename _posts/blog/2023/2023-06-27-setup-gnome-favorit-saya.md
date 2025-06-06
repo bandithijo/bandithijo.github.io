@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "GNOME Desktop dan Setup Favorit Saya"
-date: 2023-06-27 20:32
+date: '2023-06-27 20:32'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'GNOME']
+tags: ['GNOME']
 pin:
 hot:
 contributors: []
@@ -25,9 +25,9 @@ description: "GNOME memang terkenal Desktop Environment yang berat dan membutuhk
 
 Pasang paket `dconf` dan `dconf-editor`
 
-{% shell_user %}
-sudo pacman -S dconf dconf-editor
-{% endshell_user %}
+```
+$ sudo pacman -S dconf dconf-editor
+```
 
 # Tips
 
@@ -39,33 +39,30 @@ GDM di Arch Linux, tidak langsung menampilkan logo distribusi di bagian bawah da
 
 Pindah ke direktori `/etc/dconf/db/`
 
-{% shell_user %}
-cd /etc/dconf/db
-{% endshell_user %}
+```
+$ cd /etc/dconf/db
+```
 
 Buat direktori baru dengan nama `gdm.d/`
 
-{% shell_user %}
-sudo mkdir /etc/dconf/db/gdm.d
-{% endshell_user %}
+```
+$ sudo mkdir /etc/dconf/db/gdm.d
+```
 
 Buat file dengan nama `02-logo`
 
-{% shell_user %}
-sudo touch /etc/dconf/db/gdm.d/02-logo
-{% endshell_user %}
+```
+$ sudo touch /etc/dconf/db/gdm.d/02-logo
+```
 
 Isi dengan konfigurasi di bawah ini
 
-{% highlight_caption /etc/dconf/db/gdm.d/02-logo %}
-{% highlight conf linenos %}
+```conf
 [org/gnome/login-screen]
 logo='/usr/share/pixmaps/archlinux-logo-text-dark.svg'
-{% endhighlight %}
+```
 
-{% box_info %}
-<p markdown=1>`/usr/share/pixmaps/archlinux-logo-text-dark.svg` sudah secara default disediakan oleh Arch Linux, tinggal digunakan saja.</p>
-{% endbox_info %}
+> `/usr/share/pixmaps/archlinux-logo-text-dark.svg` sudah secara default disediakan oleh Arch Linux, tinggal digunakan saja.
 
 ### GDM: Cursor Theme & Size
 
@@ -73,18 +70,17 @@ Untuk mengganti cursor theme dan size pada GDM.
 
 Buat file baru dengan nama `10-cursor-settings`
 
-{% shell_user %}
-sudo touch /etc/dconf/db/gdm.d/10-cursor-settings
-{% endshell_user %}
+```
+$ sudo touch /etc/dconf/db/gdm.d/10-cursor-settings
+```
 
 Isi dengan konfigurasi di bawah ini
 
-{% highlight_caption /etc/dconf/db/gdm.d/10-cursor-settings %}
-{% highlight conf linenos %}
+```conf
 [org/gnome/desktop/interface]
 cursor-theme='ComixCursors-White'
 cursor-size=48
-{% endhighlight %}
+```
 
 Pada variable `cursor-theme=`, isi dengan cursor theme yang kalian inginkan. Alamatnya harus berada di path global `/usr/share/icons/`.
 
@@ -96,17 +92,17 @@ Pada variable `cursor-size=`, isi dengan size yang tersedia dari cursor theme, u
 
 For disable Super+Number function on Dash,
 
-{% shell_user %}
-for i in $(seq 1 9); do gsettings set org.gnome.shell.keybindings switch-to-application-${i} '[]'; done
-{% endshell_user %}
+```
+$ for i in $(seq 1 9); do gsettings set org.gnome.shell.keybindings switch-to-application-${i} '[]'; done
+```
 
 ### Setup cursor size on GNOME for Gtk apps
 
 For check the current cursor size,
 
-{% shell_user %}
-gsettings get org.gnome.desktop.interface cursor-size
-{% endshell_user %}
+```
+$ gsettings get org.gnome.desktop.interface cursor-size
+```
 
 The default is `24`.
 
@@ -114,9 +110,9 @@ Depending on the theme, sizes are 24, 32, 48, 64.
 
 To change the cursor size,
 
-{% shell_user %}
-gsettings set org.gnome.desktop.interface cursor-size 32
-{% endshell_user %}
+```
+$ gsettings set org.gnome.desktop.interface cursor-size 32
+```
 
 ### Setup cursor size on GNOME for Qt apps
 
@@ -124,10 +120,10 @@ Just set the env `XCURSOR_SIZE=` before run the Qt apps, or define on local/glob
 
 My local env variables are on `~/.profile` (some people keep it on `~/.bashrc` or `~/.bash_profile`).
 
-{% highlight_caption ~/.profile %}
-{% highlight bash linenos %}
+```bash
+# ~/.profile
 export XCURSOR_SIZE=36
-{% endhighlight %}
+```
 
 
 ## Extensions
@@ -138,15 +134,15 @@ Secara default, kalau kita menekan <kbd>SUPER</kbd>+<kbd>Number</kbd>, maka app 
 
 Disable `dash-to-dock hot-keys` properties
 
-{% shell_user %}
-gsettings set org.gnome.shell.extensions.dash-to-dock hot-keys false
-{% endshell_user %}
+```
+$ gsettings set org.gnome.shell.extensions.dash-to-dock hot-keys false
+```
 
 Kemudian, disable `keybinding switch-to-application-${index}` properties, kita akan buat nilai array nya menjadi array kosong.
 
-{% shell_user %}
-for i in $(seq 1 9); do gsettings set org.gnome.shell.keybindings switch-to-application-${i} '[]'; done
-{% endshell_user %}
+```
+$ for i in $(seq 1 9); do gsettings set org.gnome.shell.keybindings switch-to-application-${i} '[]'; done
+```
 
 
 # Pesan Penulis

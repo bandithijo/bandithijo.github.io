@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Mudah Mengenkripsi File dan Dokumen dengan GnuPG (GPG)"
-date: 2022-08-20 06:46
+date: '2022-08-20 06:46'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Security']
+tags: ['GPG', 'GnuPG', 'PGP', 'Security']
 pin:
 hot:
 contributors: []
@@ -35,10 +35,9 @@ Penggunaan dari GPG sangat kompleks sekali. Di catatan kali ini, saya hanya akan
 
 Target file bisa apa saja, misal: gambar, video, file dari Miscrosoft Word, archive (zip, tar, dst.), dll.
 
-Sebagai contoh file atau dokumen yang akan saya enkripsi adalah sebuah file bertipe plain text dengan ekstension Markdown.
+Sebagai contoh file atau dokumen yang akan saya enkripsi adalah sebuah file bertipe plain text dengan ekstension Markdown. Misalnya, `tabel_users.md`.
 
-{% highlight_caption tabel_users.md %}
-{% highlight markdown linenos %}
+```markdown
 | id  | email                                | password                           |
 |-----|--------------------------------------|------------------------------------|
 | 1   | kyle_kunde@predovic-gorczany.com     | mjvfPFh9E1WCUMPY2H5uLNRxvw42MdJRSH |
@@ -51,7 +50,7 @@ Sebagai contoh file atau dokumen yang akan saya enkripsi adalah sebuah file bert
 | 8   | minh@lubowitz-walsh.io               | mx8Qort7MR4RrjNfCsY4dnu9meQrSB6ChF |
 | 9   | jonah@reinger.io                     | mjoFeZ7BUrhiwF4PkcrqfUT1CUBJbSonBw |
 | 10  | trey_zemlak@wisozk.info              | mg99BBN2Y6S7YCsVa8wDK6yqZNEKvjwTUq |
-{% endhighlight %}
+```
 
 Setelah menentukan target file, kita lanjut ke tahap enkripsi.
 
@@ -71,9 +70,9 @@ Artinya bentuk enkripsi ini hanya dapat dibuka oleh orang yang memiliki signatur
 
 Cara mengetahuinya.
 
-{% shell_user %}
-gpg --list-secret-keys
-{% endshell_user %}
+```
+$ gpg --list-secret-keys
+```
 
 ```
 sec   rsa4096 2022-08-20 [SC]
@@ -88,15 +87,15 @@ Saya memiliki 1 buah gpg key.
 
 Nah, kita bisa langsung mengenkripsi file dengan menandatanganinya (*sign*) dengan gpg secret key yang kita miliki.
 
-{% shell_user %}
-gpg --sign tabel_users.md
-{% endshell_user %}
+```
+$ gpg --sign tabel_users.md
+```
 
 Outputnya akan berupa file `tabel_users.md.gpg`.
 
-<pre>
-tabel_users.md <mark>tabel_users.md.gpg</mark>
-</pre>
+```
+tabel_users.md tabel_users.md.gpg
+```
 
 ### Enkripsi dengan symmetric key
 
@@ -104,19 +103,21 @@ Ketika membuat gpg key, kita akan membuat 2 kunci, public key & secret key. Inil
 
 Namun, kita tetap bisa mengunci file secara symmetric dengan gpg.
 
-{% shell_user %}
-gpg --symmetric tabel_users.md
-{% endshell_user %}
+```
+$ gpg --symmetric tabel_users.md
+```
 
 Setelah itu, kita akan diminta memasukkan password sebanyak 2x.
 
-![gambar_1]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/0jhyjs0t/gambar-01.png" onerror="imgError(this);"}{:class="myImg"}
+![Gambar 1](/assets/images/posts/2022/2022-08-20-01-gambar-01.png)
+
+Gambar 1. Popup window
 
 Outputnya akan berupa file `tabel_users.md.gpg`.
 
-<pre>
-tabel_users.md <mark>tabel_users.md.gpg</mark>
-</pre>
+```
+tabel_users.md tabel_users.md.gpg
+```
 
 ### Enkripsi dengan gpg public key si penerima
 
@@ -124,9 +125,9 @@ Metode enkripsi ini saya gunakan untuk berkirim file kepada orang yang gpg publi
 
 Misal, saya ingin berkirim file yang terenkripsi kepada om Linus Torvalds. Kebetulan saya punya gpg public key om Linus.
 
-{% shell_user %}
-gpg --list-key torvalds@linux-foundation.org
-{% endshell_user %}
+```
+$ gpg --list-key torvalds@linux-foundation.org
+```
 
 ```
 pub   rsa2048 2011-09-20 [SC]
@@ -138,9 +139,9 @@ sub   rsa2048 2011-09-20 [E]
 
 Oke, tinggal kita enkripsi file nya dengan gpg public key punya om Linus.
 
-{% shell_user %}
-gpg --encrypt --recipient torvalds@linux-foundation.org tabel_users.md
-{% endshell_user %}
+```
+$ gpg --encrypt --recipient torvalds@linux-foundation.org tabel_users.md
+```
 
 ```
 gpg: 88BCE80F012F54CA: There is no assurance this key belongs to the named user
@@ -158,9 +159,9 @@ Use this key anyway? (y/N) y
 
 Outputnya akan menjadi file `tabel_users.md.gpg`.
 
-<pre>
-tabel_users.md  <mark>tabel_users.md.gpg</mark>
-</pre>
+```
+tabel_users.md tabel_users.md.gpg
+```
 
 Nah, sudah jadi. Tinggal dikirim ke om Linus.
 
@@ -173,15 +174,15 @@ Cara untuk mendekrip file atau dokumen yang dienkripsi dengan gpg, biasanya, say
 
 ### Mengintip isi file yang terenkripsi dengan less
 
-{% shell_user %}
-gpg --decrypt tabel_users.md.gpg | less
-{% endshell_user %}
+```
+$ gpg --decrypt tabel_users.md.gpg | less
+```
 
 ### Membuka file yang terenkripsi dalam bentuk file
 
-{% shell_user %}
-gpg --output tabel_users.md --decrypt tabel_users.md.gpg
-{% endshell_user %}
+```
+$ gpg --output tabel_users.md --decrypt tabel_users.md.gpg
+```
 
 # Tips & Trick
 
@@ -189,11 +190,12 @@ gpg --output tabel_users.md --decrypt tabel_users.md.gpg
 
 Tambahkan baris di bawah ini pada salah satu file configurasi ranger `~/.config/ranger/rifle.conf`.
 
-{% highlight_caption ~/.config/ranger/rifle.conf %}
-{% highlight conf linenos %}
+```conf
+# ~/.config/ranger/rifle.conf
+
 # gnupg
 ext gpg, has gpg = gpg --decrypt "$1" | less
-{% endhighlight %}
+```
 
 Arti dari baris di atas:
 
@@ -202,7 +204,6 @@ Arti dari baris di atas:
 1. Execute file terpilih dengan command `gpg --decrypt "$1" | less`
 1. Dimana `$1` adalah file yang terseleksi
 
-<br>
 Saya menggunakan `less` untuk mengintip file terenkripsi tersebut.
 
 
@@ -212,7 +213,6 @@ Penggunaan lebih lanjut saya serahkan pada imajinasi dan kreatifitas teman-teman
 
 Terima kasih sudah mampir yaa.
 
-<br>
 Saya juga pernah menulis terkait GnuPG di catatan sebelumnya.
 
 1. [Memperbaiki GPG: Warning: Unsafe Permissions on Homedir](/blog/memperbaiki-gpg-permissions-on-homedir){:target="_blank"}

@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Merubah Nama Attribute yang Panjang pada Collection of Object di Rails"
-date: 2023-09-17 20:24
+date: '2023-09-17 20:24'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Rails']
+tags: ['Rails']
 pin:
 hot:
 contributors: []

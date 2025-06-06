@@ -3,14 +3,14 @@ layout: baseof
 ---
 
 <section id="content" class="pt-36">
-  <div class="container md:px-20">
+  <div class="container px-0 md:px-20">
     <div class="px-4">
       <h1 class="text-3xl font-bold mb-6">
         {{ page.title }}
       </h1>
 
       <div class="text-base">
-        Created at: <span class="font-mono">{{ page.date | date: '%Y-%m-%d' }}</span> | Author: Rizqi Nur Assyaufi
+        Created at: <span class="font-mono">{{ page.date | date: '%Y-%m-%d' }}</span> | Author: {{ page.author }}
       </div>
 
       <div class="mb-20 markdown">
