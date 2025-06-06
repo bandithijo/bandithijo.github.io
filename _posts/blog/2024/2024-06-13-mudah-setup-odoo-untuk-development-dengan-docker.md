@@ -39,14 +39,14 @@ Oleh karena itu, saya memilih menggunakan pemasangan Odoo dengan [Docker image](
 1. Create directory to keep all ingredients in one place
 
    ```
-   mkdir odoo-docker
+   $ mkdir odoo-docker
    ```
    Go in to those directory.
 
 1. Create file with name `docker-compose.yml`
 
    ```
-   touch docker-compose.yml
+   $ touch docker-compose.yml
    ```
 
 1. Open file `docker-compose.yml` with your favorit text edior and fill in with recipe below
@@ -83,13 +83,13 @@ Oleh karena itu, saya memilih menggunakan pemasangan Odoo dengan [Docker image](
 1. Please provide directories to store the Odoo data and PostgreSQL data
 
    ```
-   mkdir -p ./var/lib/odoo && mkdir -p ./var/lib/postgresql/data/pgdata
+   $ mkdir -p ./var/lib/odoo && mkdir -p ./var/lib/postgresql/data/pgdata
    ```
 
 1. Compose it up, to cook the recipe
 
    ```
-   docker compose up -d
+   $ docker compose up -d
    ```
 
    ```
@@ -103,7 +103,7 @@ Oleh karena itu, saya memilih menggunakan pemasangan Odoo dengan [Docker image](
 1. Check all `odoo` and `odoo-postgres` container status. It must be `Up`
 
    ```
-   docker ps -n 2
+   $ docker ps -n 2
    ```
 
    ```
@@ -115,7 +115,7 @@ Oleh karena itu, saya memilih menggunakan pemasangan Odoo dengan [Docker image](
 1. Fix Odoo data `var/lib/odoo` directory permission *
 
    ```
-   docker exec -u root odoo chown odoo:odoo -R /var/lib/odoo
+   $ docker exec -u root odoo chown odoo:odoo -R /var/lib/odoo
    ```
    \* Above command only run once on the first time. Next compose up, you don't need to run this command again.
 
@@ -131,7 +131,7 @@ Oleh karena itu, saya memilih menggunakan pemasangan Odoo dengan [Docker image](
 If you have done playing with Odoo, just run
 
 ```
-docker compose down
+$ docker compose down
 ```
 
 ```
@@ -148,7 +148,7 @@ to taking down all the Odoo container things.
 And if you want to get Odoo again, just run 
 
 ```
-docker compose up -d
+$ docker compose up -d
 ```
 
 And you get your data back.

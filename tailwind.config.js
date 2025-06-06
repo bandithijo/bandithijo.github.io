@@ -45,9 +45,6 @@ module.exports = {
         sans: ["Open Sans"],
         mono: ["Roboto Mono"]
       },
-      screens: {
-        "2xl": "1320px",
-      }
     }
   },
   plugins: [

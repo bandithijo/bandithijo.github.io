@@ -44,6 +44,8 @@ nav_top:
 nav_bottom:
   - title: Lab
     url: /lab/
+  - title: Dotfriends
+    url: /dotfriens/
   - title: Donate
     url: /donate/
   - title: Stat

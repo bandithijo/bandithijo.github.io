@@ -5,24 +5,88 @@ author: 'BanditHijo'
 permalink: '/blog/'
 ---
 
-{% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
-{% for year in postsByYear %}
-  <div class="mb-4">
-    <ul class="text-base">
-      {% for post in year.items %}
-        <li>
-          <a href="{{ post.url }}" class="text-solarized_base1">
-            <span class="" style="padding-left:0;padding-right:0;">
-              <span class="text-left" style="padding-left:0;padding-right:0;">
-                <span class="font-mono">{{ post.edisi }} {{ post.date | date: '%Y.%m.%d' }}</span>
-              </span>
-              <span class="text-left" style="padding-left:6px;padding-right:0;">
-                <span class="">{{ post.title }}</span>
-              </span>
-            </span>
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div><!-- clear:both -->
-{% endfor %}
+<!-- Loader -->
+<div id="masonry-loader" class="flex items-center justify-center py-20">
+  <div class="flex items-center space-x-2">
+    <div class="w-2 h-2 bg-dark rounded-full animate-pulse"></div>
+    <div class="w-2 h-2 bg-dark rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+    <div class="w-2 h-2 bg-dark rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+  </div>
+</div>
+
+<!-- Masonry Container (initially hidden) -->
+<div id="masonry-container" class="relative opacity-0 transition-opacity duration-300">
+  {% assign blog_posts = site.posts | where_exp: "post", "post.categories contains 'blog'" %}
+  {% for post in blog_posts %}
+    <div class="masonry-item absolute p-4 bg-white shadow rounded-lg border border-gray-300 hover:border-dark" style="width: calc(25% - 12px);">
+      <a href="{{ post.url }}" class="text-dark">
+        <h2 class="text-md font-bold mb-4">{{ post.title }}</h2>
+        <p class="text-base text-gray-600 mb-4">{{ post.description }}</p>
+        <p class="text-sm text-gray-600 font-mono">{{ post.edisi }} {{ post.date | date: '%Y.%m.%d' }}</p>
+      </a>
+    </div>
+  {% endfor %}
+</div>
+
+<script>
+function initMasonry() {
+  const container = document.getElementById('masonry-container');
+  const loader = document.getElementById('masonry-loader');
+  const items = container.querySelectorAll('.masonry-item');
+  const gap = 16;
+  const cols = window.innerWidth >= 1024 ? 4 : (window.innerWidth >= 640 ? 2 : 1);
+  const colWidth = (container.offsetWidth - (gap * (cols - 1))) / cols;
+  const colHeights = new Array(cols).fill(0);
+
+  // Show loader, hide container
+  loader.style.display = 'flex';
+  container.style.opacity = '0';
+
+  // Small delay to ensure DOM is ready
+  setTimeout(() => {
+    items.forEach((item, index) => {
+      const col = index % cols; // This ensures left-to-right ordering
+      const x = col * (colWidth + gap);
+      const y = colHeights[col];
+
+      item.style.left = x + 'px';
+      item.style.top = y + 'px';
+      item.style.width = colWidth + 'px';
+
+      colHeights[col] += item.offsetHeight + gap;
+    });
+
+    container.style.height = Math.max(...colHeights) + 'px';
+
+    // Hide loader, show container with fade-in
+    loader.style.display = 'none';
+    container.style.opacity = '1';
+  }, 50);
+}
+
+// Initialize and handle resize
+window.addEventListener('load', initMasonry);
+window.addEventListener('resize', () => {
+  // For resize, we can skip the loader since it's just a quick recalculation
+  const container = document.getElementById('masonry-container');
+  const items = container.querySelectorAll('.masonry-item');
+  const gap = 16;
+  const cols = window.innerWidth >= 1024 ? 4 : (window.innerWidth >= 640 ? 2 : 1);
+  const colWidth = (container.offsetWidth - (gap * (cols - 1))) / cols;
+  const colHeights = new Array(cols).fill(0);
+
+  items.forEach((item, index) => {
+    const col = index % cols;
+    const x = col * (colWidth + gap);
+    const y = colHeights[col];
+
+    item.style.left = x + 'px';
+    item.style.top = y + 'px';
+    item.style.width = colWidth + 'px';
+
+    colHeights[col] += item.offsetHeight + gap;
+  });
+
+  container.style.height = Math.max(...colHeights) + 'px';
+});
+</script>

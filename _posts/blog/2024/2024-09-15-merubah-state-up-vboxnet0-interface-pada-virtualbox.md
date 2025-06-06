@@ -72,16 +72,15 @@ That's it!
 
 Sekarang, saya dapat melakukan ping ke instance IP address yang saya buat di VirtualBox dan dapat melakukan SSH ke dalamnya.
 
-{% box_info %}
-VirtualBox mungkin sudah memiliki IP network range (CIDR. Classless Inter-Domain Routing) default untuk interface `vboxnet0` yang biasanya bernilai,
 
-```
-IPv4 Address: 192.168.57.1
-IPv4 Network Mask: 255.255.255.0
-```
-
-Ini berarti, IP network rangenya (CIDR) adalah `192.168.57.1/24`.
-{% endbox_info %}
+> VirtualBox mungkin sudah memiliki IP network range (CIDR. Classless Inter-Domain Routing) default untuk interface `vboxnet0` yang biasanya bernilai,
+> 
+> ```
+> IPv4 Address: 192.168.57.1
+> IPv4 Network Mask: 255.255.255.0
+> ```
+> 
+> Ini berarti, IP network rangenya (CIDR) adalah `192.168.57.1/24`.
 
 
 # Pesan Penulis

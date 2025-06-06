@@ -9,7 +9,7 @@
 @layer utilities {
   body {
     font-family: 'Open Sans', sans-serif;
-    @apply bg-solarized_base03 text-solarized_base1;
+    @apply bg-white text-dark;
   }
   .navbar-fixed {
     @apply fixed z-[9999] bg-white bg-opacity-70 backdrop-blur-sm;
@@ -39,7 +39,7 @@
 
   /* For markdown with redcarpet */
   .markdown {
-    @apply text-solarized_base1 leading-normal break-words;
+    @apply text-dark leading-normal break-words;
   }
 
   .markdown > * {
@@ -99,19 +99,37 @@
   }
 
   .markdown blockquote {
-    @apply text-base border-l-4 border-solarized_base1 pl-4 pr-4 py-2 mb-4 text-solarized_base1 bg-solarized_base02;
+    @apply text-base border-l-4 border-dark pl-4 pr-4 py-2 mb-4 text-dark;
+  }
+
+  .markdown blockquote > *:not(:last-child) {
+    @apply mb-4;
   }
 
   .markdown code {
-    @apply font-mono text-sm inline bg-gray-200 rounded px-1 py-5;
+    @apply font-mono text-base inline bg-gray-100 rounded px-1 py-0;
   }
 
   .markdown pre {
-    @apply bg-gray-100 rounded p-4;
+    @apply bg-gray-100 rounded-md p-0 text-base;
   }
 
   .markdown pre code {
-    @apply block bg-transparent p-0 overflow-visible rounded-none;
+    @apply block bg-transparent p-4 overflow-x-auto rounded-none text-base;
+  }
+
+  .markdown pre code > table.rouge-table {
+    @apply border-none border-collapse;
+  }
+
+  .markdown pre code > table.rouge-table td.gutter.gl {
+    @apply select-none pr-3 text-base text-right;
+  }
+
+  .markdown pre code > table.rouge-table td,
+  .markdown pre code > table.rouge-table tr,
+  .markdown pre code > table.rouge-table pre {
+    @apply border-none p-0 text-base;
   }
 
   .markdown ul {
@@ -122,12 +140,16 @@
     @apply text-base pl-8 list-decimal;
   }
 
+  .markdown li > * {
+    @apply mb-4;
+  }
+
   .markdown kbd {
     @apply text-xs inline-block rounded border px-1 py-5 align-middle font-normal font-mono shadow;
   }
 
   .markdown table {
-    @apply text-base border-solarized_base02a;
+    @apply text-base border border-dark;
   }
 
   .markdown th, .markdown td {
@@ -149,5 +171,17 @@
   /* Override pygments style background color. */
   .markdown .highlight pre {
     @apply bg-gray-100 !important;
+  }
+
+  .markdown .line {
+    @apply block whitespace-pre;
+  }
+
+  .markdown .line-number {
+    @apply inline-block w-8 mr-4 text-right text-gray-300 select-none;
+  }
+
+  .markdown .code-line {
+    @apply inline font-mono;
   }
 }

@@ -1,6 +1,6 @@
 <!-- Footer Start -->
-<footer class="text-center pb-10 text-sm text-solarized_base1 select-none">
-  <div class="container">
+<footer class="text-center mt-10 mb-10 text-sm select-none">
+  <div class="container md:px-20">
 
     <!-- Nav Menu Start -->
     <div class="w-full py-0 mb-6">
@@ -8,10 +8,10 @@
         {% for item in site.nav_bottom %}
         {% assign class = nil %}
         {% if page.url contains item.url %}
-        {% assign class = 'text-solarized_green' %}
+        {% assign class = 'underline' %}
         {% endif %}
         <li class="group">
-          <a href="{{ item.url }}" class="mx-4 flex py-2 text-base group-hover:text-solarized_green {{ class }}">{{ item.title }}</a>
+          <a href="{{ item.url }}" class="mx-4 flex py-2 text-base group-hover:underline {{ class }}">{{ item.title }}</a>
         </li>
         {% endfor %}
       </ul>
@@ -19,15 +19,10 @@
     <!-- Nav Menu End -->
 
     <p>
-      This website’s color scheme is inspired by the beautifully crafted
-      <a href="https://ethanschoonover.com/solarized/" target="_blank" rel="noopener noreferrer" class="font-bold">Solarized</a>, created by Ethan Schoonover.<br>
-    </p>
-
-    <p>
     The source code and articles were written using the <span class="font-bold"><a href="https://www.vim.org" target="_blank" rel="noreferrer">Vim</a></span>/<span class="font-bold"><a href="https://neovim.org" target="_blank" rel="noreferrer">Neovim</a></span> text editor.<br>
     All image elements were created using <span class="font-bold"><a href="https://inkscape.org" target="_blank" rel="noreferrer">Inkscape</a></span> dan <span class="font-bold"><a href="https://gimp.org" target="_blank" rel="noreferrer">GIMP</a></span>.<br>
       Uses <a href="https://jekyllrb.com" target="_blank" rel="noreferrer"><span class="font-bold">Jekyll</span></a> as the Static Site Generator.<br>
-      Hosted using  <a href="https://github.com/bandithijo/bandithijo.github.io" target="_blank" rel="noreferrer"><span class="font-bold">GitHub</span></a>.<br>
+      Hosted using  <a href="https://github.com/bandithijo/bandithijo.github.io" target="_blank" rel="noreferrer"><span class="font-bold">GitHub</span></a>.<br><br>
       Last updated: <span class="font-mono font-bold">{{ site.time | date: '%Y/%m/%d' }}</span>
     </p>
   </div>

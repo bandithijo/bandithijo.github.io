@@ -33,9 +33,7 @@ Saya membutuhkan gem (library pada Ruby) yang bernama [Geocoder](https://github.
 
 Gem ini menambahkan command `geocoder` ke dalam command shell kita. Kita dapat mencari *street address*, IP Address, *postal code*, *coordinates (latitude, longitude)*, dan lain-lain.
 
-{% box_perhatian %}
-Geocoder Gem ini secara default menggunakan OpenStreetMap Service.
-{% endbox_perhatian %}
+> Geocoder Gem ini secara default menggunakan OpenStreetMap Service.
 
 ## Prerequisite
 
@@ -45,15 +43,15 @@ Sudah harus terinstall Ruby di sistem
 
 Install gem dengan cara,
 
-{% shell_user %}
-gem install geocoder
-{% endshell_user %}
+```
+$ gem install geocoder
+```
 
 ## Cara penggunaan
 
-{% shell_user %}
-geocode 18.139.194.139
-{% endshell_user %}
+```
+$ geocode 18.139.194.139
+```
 
 ```
 Latitude:         1.2897
@@ -68,9 +66,9 @@ Map:              https://www.openstreetmap.org/?lat=1.2897&lon=103.8501&zoom=15
 
 Atau gunakan option `--json` atau `-j` untuk output dalam bentuk JSON.
 
-{% shell_user %}
-geocode 18.139.194.139 --json
-{% endshell_user %}
+```
+$ geocode 18.139.194.139 --json
+```
 
 ```
 {

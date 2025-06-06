@@ -25,20 +25,21 @@ Saya memiliki method **geofences** yang mengembalikan *colllection of* `hash` da
 
 Model **geofence** memiliki attributes,
 
-```ruby
+```
 :id, :created_at, :updated_at, :name, :description, :coordinates, :incoming_notification, :outgoing_notification
 ```
 
 Saya hanya ingin mengambil attributes: `:id`, `:incoming_notification`, `:outgoing_notification`.
 
-{% highlight_caption app/geofences_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+# app/geofences_controller.rb
+
 def geofences
   {
     geofences: Geofence.all.order(id: :asc).as_json(only: [:id, :incoming_notification, :outgoing_notification])
   }
 end
-{% endhighlight %}
+```
 
 Outputnya,
 
@@ -69,15 +70,16 @@ Outputnya,
 }
 ```
 
-Karena nama attribute `:incoming_notification` dan `:outgoing_notification` terlalu panjang, saya akan ganti menjadi `:in` dan `:out`. [^1]
+Karena nama attribute `:incoming_notification` dan `:outgoing_notification` terlalu panjang, saya akan ganti menjadi `:in` dan `:out`.
 
 # Pemecahan Masalah
 
 **Algoritma Pertama**
 
-{% highlight_caption app/geofences_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
 # First algorithm
+# app/geofences_controller.rb
+
 def geofences
   {
     geofences: Geofence.all.order(id: :asc)
@@ -90,13 +92,14 @@ def geofences
       }
   }
 end
-{% endhighlight %}
+```
 
 **Algoritma Kedua**
 
-{% highlight_caption app/geofences_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
 # Second algorithm
+# app/geofences_controller.rb
+
 def geofences
   geofences = Geofence.all.order(id: :asc)
 
@@ -110,7 +113,7 @@ def geofences
 
   { geofences: transformed_geofences }
 end
-{% endhighlight %}
+```
 
 Saya menulis 2 pendekatan. Namun, saya cenderung memilih algoritma kedua.
 
@@ -162,4 +165,27 @@ Terima kasih sudah mampir yaa.
 
 # Referensi
 
-[^1]: [stackoverflow.com: _Change property name of as_json call_](https://stackoverflow.com/a/33528446/4862516)
+1. [stackoverflow.com: _Change property name of as_json call_](https://stackoverflow.com/a/33528446/4862516)
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("pre code").forEach((block) => {
+    // Check if one of the parent containers has "language-plaintext"
+    const parentWithLanguage = block.closest("[class*='language-']");
+    if (parentWithLanguage?.classList.contains("language-plaintext")) return;
+
+    let lines = block.textContent.split("\n");
+
+    // Remove trailing empty line
+    if (lines.length > 0 && lines[lines.length - 1].trim() === "") {
+      lines.pop();
+    }
+
+    const numberedLines = lines.map((line, idx) => {
+      return `<span class="line"><span class="line-number">${idx + 1}</span><span class="code-line">${line.replace(/ /g, '&nbsp;')}</span></span>`;
+    }).join("");
+    block.innerHTML = numberedLines;
+  });
+});
+</script>
+

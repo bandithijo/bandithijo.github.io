@@ -1,8 +1,8 @@
 <!-- Nav Start -->
 <header class="absolute left-0 top-0 z-10 flex w-full items-center bg-transparent-screen select-none">
-  <div class="container">
+  <div class="container md:px-20">
     <div class="relative flex items-center justify-between">
-      <div class="px-4 py-6 block font-bold text-4xl">Bandit<span class="text-primary bg-solarized_green px-1 rounded">Hijo</span><span class="font-thin text-3xl">.dev</span></div>
+      <div class="px-4 py-6 block font-bold text-4xl">BanditHijo<span class="font-thin text-3xl">.dev</span></div>
       <div class="flex items-center px-4">
         <!-- Hambuger Menu Start -->
         <button id="hamburger" name="hamburger" type="button" class="absolute right-4 block lg:hidden">
@@ -16,15 +16,15 @@
         <nav id="nav-menu" class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none">
           <ul class="block lg:flex">
             <li class="group">
-              <a href="/" class="mx-6 flex py-2 text-base group-hover:text-solarized_green">Home</a>
+              <a href="/" class="mx-6 flex py-2 text-base group-hover:underline">Home</a>
             </li>
             {% for item in site.nav_top %}
             {% assign class = nil %}
             {% if page.url contains item.url %}
-            {% assign class = 'text-solarized_green' %}
+            {% assign class = 'underline' %}
             {% endif %}
             <li class="group">
-              <a href="{{ item.url }}" class="mx-6 flex py-2 text-base group-hover:text-solarized_green {{ class }}">{{ item.title }}</a>
+              <a href="{{ item.url }}" class="mx-6 flex py-2 text-base group-hover:underline {{ class }}">{{ item.title }}</a>
             </li>
             {% endfor %}
           </ul>
