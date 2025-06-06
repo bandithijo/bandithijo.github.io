@@ -170,6 +170,14 @@
   .markdown hr {
     @apply border-t border-solarized_base1 !important;
   }
+  
+  .markdown img {
+    @apply block mx-auto;
+  }
+
+  .markdown p:has(img) + p {
+    @apply text-center;
+  }
 
   .markdown .footnotes > ol > li {
     @apply text-sm !important;
