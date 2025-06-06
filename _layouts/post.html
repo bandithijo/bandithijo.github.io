@@ -9,9 +9,36 @@ layout: baseof
         {{ page.title }}
       </h1>
 
+      <div class="text-base">
+        Created at: <span class="font-mono">{{ page.date | date: '%Y-%m-%d' }}</span> | Author: Rizqi Nur Assyaufi
+      </div>
+
       <div class="mb-20 markdown">
         {{ content }}
       </div>
     </div>
   </div>
 </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("pre code").forEach((block) => {
+    // Check if one of the parent containers has "language-plaintext"
+    const parentWithLanguage = block.closest("[class*='language-']");
+    if (parentWithLanguage?.classList.contains("language-plaintext")) return;
+
+    let lines = block.textContent.split("\n");
+
+    // Remove trailing empty line
+    if (lines.length > 0 && lines[lines.length - 1].trim() === "") {
+      lines.pop();
+    }
+
+    const numberedLines = lines.map((line, idx) => {
+      return `<span class="line"><span class="line-number">${idx + 1}</span><span class="code-line">${line.replace(/ /g, '&nbsp;')}</span></span>`;
+    }).join("");
+    block.innerHTML = numberedLines;
+  });
+});
+</script>
+

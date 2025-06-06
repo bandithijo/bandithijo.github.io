@@ -98,8 +98,19 @@
     @apply leading-tight text-sm font-semibold text-gray-600 mb-2 mt-6;
   }
 
+
+  .markdown h1 a,
+  .markdown h2 a,
+  .markdown h3 a,
+  .markdown h4 a,
+  .markdown h5 a,
+  .markdown h6 a {
+    @apply text-dark;
+  }
+
   .markdown blockquote {
-    @apply text-base border-l-4 border-dark pl-4 pr-4 py-2 mb-4 text-dark;
+    @apply text-base border-l-[6px] border-t border-r border-b pl-4 pr-4 py-2 mb-4 text-dark border-l-gray-500 rounded-lg;
+    border-style: dashed dashed dashed solid; /* top, right, bottom, left */
   }
 
   .markdown blockquote > *:not(:last-child) {
@@ -107,15 +118,15 @@
   }
 
   .markdown code {
-    @apply font-mono text-base inline bg-gray-100 rounded px-1 py-0;
+    @apply font-mono text-[14px] inline bg-gray-100 rounded px-1 py-0;
   }
 
   .markdown pre {
-    @apply bg-gray-100 rounded-md p-0 text-base;
+    @apply bg-gray-100 rounded-md p-0 text-[14px];
   }
 
   .markdown pre code {
-    @apply block bg-transparent p-4 overflow-x-auto rounded-none text-base;
+    @apply block bg-transparent p-4 overflow-x-auto rounded-none text-[14px];
   }
 
   .markdown pre code > table.rouge-table {
@@ -123,13 +134,13 @@
   }
 
   .markdown pre code > table.rouge-table td.gutter.gl {
-    @apply select-none pr-3 text-base text-right;
+    @apply select-none pr-3 text-[14px] text-right;
   }
 
   .markdown pre code > table.rouge-table td,
   .markdown pre code > table.rouge-table tr,
   .markdown pre code > table.rouge-table pre {
-    @apply border-none p-0 text-base;
+    @apply border-none p-0 text-[14px];
   }
 
   .markdown ul {
@@ -145,7 +156,7 @@
   }
 
   .markdown kbd {
-    @apply text-xs inline-block rounded border px-1 py-5 align-middle font-normal font-mono shadow;
+    @apply text-[14px] font-bold font-mono border border-gray-300 px-1 py-1 rounded-md shadow-sm;
   }
 
   .markdown table {

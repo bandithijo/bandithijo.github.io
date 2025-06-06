@@ -20,7 +20,7 @@ module.exports = {
       colors: {
         primary: "#002B36",
         secondary: "#073642",
-        dark: "#04242C",
+        dark: "#000000",
         solarized_base04:  "#04242C",
         solarized_base03:  "#002B36",
         solarized_base02:  "#073642",

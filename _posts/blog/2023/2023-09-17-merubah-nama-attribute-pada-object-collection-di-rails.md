@@ -45,28 +45,28 @@ Outputnya,
 
 ```json
 {
-    "geofences": [
-        {
-            "id": 1,
-            "incoming_notification": true,
-            "outgoing_notification": false
-        },
-        {
-            "id": 2,
-            "incoming_notification": false,
-            "outgoing_notification": true
-        },
-        {
-            "id": 3,
-            "incoming_notification": true,
-            "outgoing_notification": false
-        },
-        {
-            "id": 4,
-            "incoming_notification": false,
-            "outgoing_notification": true
-        }
-    ]
+  "geofences": [
+    {
+      "id": 1,
+      "incoming_notification": true,
+      "outgoing_notification": false
+    },
+    {
+      "id": 2,
+      "incoming_notification": false,
+      "outgoing_notification": true
+    },
+    {
+      "id": 3,
+      "incoming_notification": true,
+      "outgoing_notification": false
+    },
+    {
+      "id": 4,
+      "incoming_notification": false,
+      "outgoing_notification": true
+    }
+  ]
 }
 ```
 
@@ -77,7 +77,6 @@ Karena nama attribute `:incoming_notification` dan `:outgoing_notification` terl
 **Algoritma Pertama**
 
 ```ruby
-# First algorithm
 # app/geofences_controller.rb
 
 def geofences
@@ -97,7 +96,6 @@ end
 **Algoritma Kedua**
 
 ```ruby
-# Second algorithm
 # app/geofences_controller.rb
 
 def geofences
@@ -133,28 +131,28 @@ Hasilnya,
 
 ```json
 {
-    "geofences": [
-        {
-            "id": 1,
-            "in": true,
-            "out": false
-        },
-        {
-            "id": 2,
-            "in": false,
-            "out": true
-        },
-        {
-            "id": 3,
-            "in": true,
-            "out": false
-        },
-        {
-            "id": 4,
-            "in": false,
-            "out": true
-        }
-    ]
+  "geofences": [
+    {
+      "id": 1,
+      "in": true,
+      "out": false
+    },
+    {
+      "id": 2,
+      "in": false,
+      "out": true
+    },
+    {
+      "id": 3,
+      "in": true,
+      "out": false
+    },
+    {
+      "id": 4,
+      "in": false,
+      "out": true
+    }
+  ]
 }
 ```
 
@@ -166,26 +164,3 @@ Terima kasih sudah mampir yaa.
 # Referensi
 
 1. [stackoverflow.com: _Change property name of as_json call_](https://stackoverflow.com/a/33528446/4862516)
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll("pre code").forEach((block) => {
-    // Check if one of the parent containers has "language-plaintext"
-    const parentWithLanguage = block.closest("[class*='language-']");
-    if (parentWithLanguage?.classList.contains("language-plaintext")) return;
-
-    let lines = block.textContent.split("\n");
-
-    // Remove trailing empty line
-    if (lines.length > 0 && lines[lines.length - 1].trim() === "") {
-      lines.pop();
-    }
-
-    const numberedLines = lines.map((line, idx) => {
-      return `<span class="line"><span class="line-number">${idx + 1}</span><span class="code-line">${line.replace(/ /g, '&nbsp;')}</span></span>`;
-    }).join("");
-    block.innerHTML = numberedLines;
-  });
-});
-</script>
-

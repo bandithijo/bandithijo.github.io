@@ -2,11 +2,15 @@
 <html lang="en">
   {% include head.html %}
 
-  <body>
-    {% include nav.html %}
+  <body class="bg-zinc-100 px-2 pt-2 pb-3">
+    <div class="bg-white py-4 border border-gray-200 rounded-lg">
+      {% include nav.html %}
 
-    {{ content }}
+      {{ content }}
 
-    {% include footer.html %}
+      {% include footer.html %}
+    </div>
+
+  {% include scripts.html %}
   </body>
 </html>

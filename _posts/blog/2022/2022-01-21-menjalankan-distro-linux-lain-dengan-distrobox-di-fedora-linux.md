@@ -51,9 +51,9 @@ Beberapa dari aplikasi tersebut, antara lain:
 
 Pada distribusi Fedora Linux, sudah terpasang **Podman**. Kita tinggal memasang **Distrobox**.
 
-{% shell_term $ %}
-sudo dnf in distrobox
-{% endshell_term %}
+```
+$ sudo dnf in distrobox
+```
 
 
 # Penggunaan
@@ -70,15 +70,15 @@ Distrobox menyediakan 6 perintah yang dapat kita gunakan.
 <br>
 Selain menggunakan *single command* seperti di atas, dapat pula menggunakan `distrobox COMMAND`. Misal,
 
-{% shell_term $ %}
-distrobox-list
-{% endshell_term %}
+```
+$ distrobox-list
+```
 
 Akan memberikan hasil yang sama dengan,
 
-{% shell_term $ %}
-distrobox list
-{% endshell_term %}
+```
+$ distrobox list
+```
 
 
 ## Membuat Container
@@ -90,9 +90,9 @@ Untuk membuat container, kita dapat menggunakan perintah `distrobox-create IMAGE
 
 Kalau digunakan tanpa parameter apapun,
 
-{% shell_term $ %}
-distrobox-create
-{% endshell_term %}
+```
+$ distrobox-create
+```
 
 ```
 Image not found.
@@ -107,34 +107,34 @@ Maka, image yang dipilihkan akan menggunakan **fedora-toolbox:35** dari **regist
 
 Apabila ingin menggunakan image lain, pada catatan ini saya menggunakan image Arch Linux Latest dari Docker Hub Registry.
 
-{% shell_term $ %}
-distrobox-create --name arch-distrobox --image archlinux:latest
-{% endshell_term %}
+```
+$ distrobox-create --name arch-distrobox --image archlinux:latest
+```
 
 `--name`, digunakan untuk memberikan nama container. Bebas mau memberikan nama apa saja.
 
 `--image`, digunakan untuk mendefinisikan image yang akan kita gunakan. Kalau image tersebut belum ada di local, maka akan di-download-kan dari registry.
 
-{% box_info %}
-<p markdown=1>Untuk mengecek daftar images yang sudah pernah diunduh, dapat menggunakan perintah,</p>
-{% shell_term $ %}
-podman images
-{% endshell_term %}
-```
-REPOSITORY                                 TAG         IMAGE ID      CREATED      SIZE
-docker.io/library/archlinux                latest      2a4e5b8e6c26  2 weeks ago  397 MB
-registry.fedoraproject.org/fedora-toolbox  35          40b181c70b73  4 weeks ago  573 MB
-```
-{% endbox_info %}
+> Untuk mengecek daftar images yang sudah pernah diunduh, dapat menggunakan perintah,
+>
+> ```
+> $ podman images
+> ```
+>
+> ```
+> REPOSITORY                                 TAG         IMAGE ID      CREATED      SIZE
+> docker.io/library/archlinux                latest      2a4e5b8e6c26  2 weeks ago  397 MB
+> registry.fedoraproject.org/fedora-toolbox  35          40b181c70b73  4 weeks ago  573 MB
+> ```
 
 
 ## Melihat daftar container
 
 Untuk melihat daftar container yang sudah pernah dibuat, gunakan perintah,
 
-{% shell_term $ %}
-distrobox-list
-{% endshell_term %}
+```
+$ distrobox-list
+```
 
 ```
  ID           | NAME                      | STATUS          | IMAGE
@@ -147,17 +147,17 @@ distrobox-list
 
 Untuk masuk ke dalam container, gunakan perintah,
 
-{% pre_url %}
+```
 $ distrobox-enter --name NAMA_IMAGE
-{% endpre_url %}
+```
 
 `NAMA_IMAGE` didapatkan dari perintah `distrobox-list`.
 
 Misal, saya ingin masuk ke dalam container bernama `arch-distrobox` yang sudah saya buat sebelumnya,
 
-{% shell_term $ %}
-distrobox-enter --name arch-distrobox
-{% endshell_term %}
+```
+$ distrobox-enter --name arch-distrobox
+```
 
 ```
 Starting container arch-distrobox
@@ -174,9 +174,9 @@ Artinya, saat ini saya sudah berhasil memasuki container dengan nama **arch-dist
 
 Lakukan pengecekan dengan perintah,
 
-{% shell_term $ %}
-echo $HOSTNAME
-{% endshell_term %}
+```
+$ echo $HOSTNAME
+```
 
 ```
 arch-distrobox.fedora-thinkpad
@@ -193,29 +193,29 @@ Karena saya menggunakan Arch Linux, saya akan merubah beberapa konfigurasi defau
 
 Namun, sebelumnya pasang dulu text editor seperti `vim` atau `nano` untuk memudahkan mengedit file config, karena text editor tidak terpasang secara default di Arch Linux image container.
 
-{% shell_term [bandithijo@arch-distrobox] %}
-sudo pacman -S vim
-{% endshell_term %}
+```
+[bandithijo@arch-distrobox] sudo pacman -S vim
+```
 
-{% box_info %}
-<p markdown=1>Apabila terdapat warning atau pesan error seperti di bawah ini, dapat diabaikan saja.</p>
-```
-Failed to check for chroot() environment: Permission denied
-  Skipped: Current root is not booted.
-```
-<p markdown=1>Karena, sebenarnya paket sudah terpasang.</p>
-{% endbox_info %}
+> Apabila terdapat warning atau pesan error seperti di bawah ini, dapat diabaikan saja.
+>
+> ```
+> Failed to check for chroot() environment: Permission denied
+>   Skipped: Current root is not booted.
+> ```
+>
+> Karena, sebenarnya paket sudah terpasang.
 
 Edit file konfigurasi pacman yang ada pada,
 
-{% shell_term [bandithijo@arch-distrobox] %}
-sudo vim /etc/pacman.conf
-{% endshell_term %}
+```
+[bandithijo@arch-distrobox] sudo vim /etc/pacman.conf
+```
 
-{% highlight_caption /etc/pacman.conf %}
-{% highlight shell linenos %}
+```shell
+# /etc/pacman.conf
+
 # ...
-
 #
 # GENERAL OPTIONS
 #
@@ -232,7 +232,7 @@ VerbosePkgLists
 ParallelDownloads = 5
 
 # ...
-{% endhighlight %}
+```
 
 Saya meng-enable **Color** dan men-disable **NoProgressBar**.
 
@@ -248,9 +248,9 @@ Tujuannya agar tampilan pacman lebih berwarna dan juga terdapat progressbar agar
 
 Saya akan coba pasang `neofetch`. Kebetulan **neofetch** tidak tersedia pada Arch Linux docker image yang kita pasang sebagai container.
 
-{% shell_term [bandithijo@arch-distrobox] %}
-neofetch
-{% endshell_term %}
+```
+[bandithijo@arch-distrobox] neofetch
+```
 
 ```
 bash: neofetch: command not found
@@ -260,9 +260,10 @@ Nah, artinya **neofetch** memang belum tersedia pada container Arch Linux yang k
 
 Karena kita menggunakan Arch Linux, kita bisa melakukan pencarian terlebih dahulu, untuk paket **neofetch** apakah terdapat di official repositori, mungkin ada di **community** repo.
 
-{% shell_term [bandithijo@arch-distrobox] %}
-sudo pacman -Ss neofetch
-{% endshell_term %}
+
+```
+[bandithijo@arch-distrobox] sudo pacman -Ss neofetch
+```
 
 ```
 community/neofetch 7.1.0-2
@@ -273,17 +274,17 @@ Oke, benar.
 
 Tinggal dipasang saja,
 
-{% shell_term [bandithijo@arch-distrobox] %}
-sudo pacman -S neofetch
-{% endshell_term %}
+```
+[bandithijo@arch-distrobox] sudo pacman -S neofetch
+```
 
 Tunggu proses instalasi sampai selesai.
 
 Setelah selesai, kita bisa menjalankan `neofetch`.
 
-{% shell_term [bandithijo@arch-distrobox] %}
-neofetch
-{% endshell_term %}
+```
+[bandithijo@arch-distrobox] neofetch
+```
 
 ```
                    -`
@@ -324,28 +325,28 @@ community/gping 1.2.7-1
 
 Langkah pertama, pasang paket `gping`.
 
-{% shell_term [bandithijo@arch-distrobox] %}
-sudo pacman -S gping
-{% endshell_term %}
+
+```
+[bandithijo@arch-distrobox] sudo pacman -S gping
+```
 
 Setelah dipasang, coba langsung jalankan, seharusnya berhasil.
 
-{% shell_term [bandithijo@arch-distrobox] %}
-gping google.com
-{% endshell_term %}
+```
+[bandithijo@arch-distrobox] gping google.com
+```
 
 Kemudian, tentunya akan sangat merepotkan kalau hanya untuk menjalankan gping, kita perlu masuk dulu ke dalam container.
 
 Maka, kita perlu mengekspor gping ke host system.
 
-{% box_perhatian %}
-<p markdown=1>Pastikan kalau kamu sudah memiliki **PATH** yang berlokasi di `~/.local/bin`.</p>
-<p markdown=1>Kalau belum, coba Googling yaa.</p>
-{% endbox_perhatian %}
+> Pastikan kalau kamu sudah memiliki **PATH** yang berlokasi di `~/.local/bin`.
+>
+> Kalau belum, coba Googling yaa.
 
-{% shell_term [bandithijo@arch-distrobox] %}
-distrobox-export --bin /usr/bin/gping --export-path ~/.local/bin
-{% endshell_term %}
+```
+[bandithijo@arch-distrobox] distrobox-export --bin /usr/bin/gping --export-path ~/.local/bin
+```
 
 Kalau berhasil diekspor, akan menampilkan output seperti di bawah ini.
 
@@ -356,9 +357,9 @@ OK!
 
 Kalau sudah, bisa dicoba jalankan `gping` pada host system.
 
-{% shell_term $ %}
-gping google.com
-{% endshell_term %}
+```
+$ gping google.com
+```
 
 Berikut ini demonstrasinya,
 
@@ -367,8 +368,7 @@ Berikut ini demonstrasinya,
 
 Kalau file `gping` yang ada di `~/.local/bin/gping` kita buka, isiny akan seperti ini,
 
-{% highlight_caption ~/.local/bin/gping %}
-{% highlight bash linenos %}
+```bash
 #!/bin/sh
 # distrobox_binary
 # name: arch-distrobox
@@ -377,7 +377,7 @@ if [ ! -f /run/.containerenv ]; then
 else
     /usr/bin/gping $@
 fi
-{% endhighlight %}
+```
 
 <br>
 #### Case 3: yay
@@ -388,24 +388,24 @@ Untuk mengakses AUR, kita memerlukan AUR helper untuk mempermudah bisnis kita. ð
 
 Saya biasa menggunakan **yay**.
 
-{% shell_term [bandithijo@arch-distrobox] %}
-sudo pacman -S --needed git base-devel
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-{% endshell_term %}
+```
+[bandithijo@arch-distrobox] sudo pacman -S --needed git base-devel
+[bandithijo@arch-distrobox] git clone https://aur.archlinux.org/yay.git
+[bandithijo@arch-distrobox] cd yay
+[bandithijo@arch-distrobox] makepkg -si
+```
 
 Setelah proses instalasinya selesai, kita dapat menjalankannya dari dalam container,
 
-{% shell_term [bandithijo@arch-distrobox] %}
-yay
-{% endshell_term %}
+```
+[bandithijo@arch-distrobox] yay
+```
 
 Atau, tinggal kita export untuk mempermudah menjalankannya dari host system.
 
-{% shell_term [bandithijo@arch-distrobox] %}
-distrobox-export --bin /usr/bin/yay --export-path ~/.local/bin
-{% endshell_term %}
+```
+[bandithijo@arch-distrobox] distrobox-export --bin /usr/bin/yay --export-path ~/.local/bin
+```
 
 ```
 /usr/bin/yay from arch-distrobox exported successfully in /home/bandithijo/.local/bin/.
@@ -414,15 +414,13 @@ OK!
 
 Coba test update Arch Linux dengan `yay` dari host.
 
-{% shell_term $ %}
-yay -Syu
-{% endshell_term %}
+```
+$ yay -Syu
+```
 
 Sip! Sekarang kita dapat memasang paket-paket dari AUR dengan menggunakan `yay` dari host system.
 
-{% box_info %}
-<p markdown=1>Direktori **yay** hasil git clone sebelumnya, dapat kita hapus.</p>
-{% endbox_info %}
+> Direktori **yay** hasil git clone sebelumnya, dapat kita hapus.
 
 
 ### Aplikasi GUI
@@ -440,21 +438,21 @@ aur/spotify 1:1.1.72.439-3 (+2296 31.40)
 
 Tinggal dipasang menggunakan `yay`.
 
-{% shell_term [bandithijo@arch-distrobox] %}
-yay -S spotify
-{% endshell_term %}
+```
+[bandithijo@arch-distrobox] yay -S spotify
+```
 
 Setelah instalasi selesai, kita dapat menjalankan langsung dari dalam container,
 
-{% shell_term [bandithijo@arch-distrobox] %}
-spotify
-{% endshell_term %}
+```
+[bandithijo@arch-distrobox] spotify
+```
 
 Atau, lakukan export agar dapat dipanggil dengan mudah dari host system.
 
-{% shell_term [bandithijo@arch-distrobox] %}
-distrobox-export --app spotify
-{% endshell_term %}
+```
+[bandithijo@arch-distrobox] distrobox-export --app spotify
+```
 
 ```
 Application spotify successfully exported.
@@ -464,8 +462,7 @@ spotify will appear in your applications list in a few seconds.
 
 Perintah tersebut akan membuat file desktop entry spec pada `~/.local/share/applications/spotify.desktop` di host system.
 
-{% highlight_caption ~/.local/share/applications/spotify.desktop %}
-{% highlight shell linenos %}
+```shell
 [Desktop Entry]
 Type=Application
 Name=Spotify
@@ -477,7 +474,7 @@ Terminal=false
 MimeType=x-scheme-handler/spotify;
 Categories=Audio;Music;Player;AudioVideo;
 StartupWMClass=spotify
-{% endhighlight %}
+```
 
 Berikut ini demonstrasinya,
 
@@ -487,23 +484,24 @@ Berikut ini demonstrasinya,
 <br>
 #### Case 2: Beekeeper Studio (AppImage)
 
-{% box_perhatian %}
-<p markdown=1>Paket yang menggunakan AppImage, memerlukan paket `fuse2` untuk dapat dijalankan.</p>
-{% shell_term [bandithijo@arch-distrobox] %}
-yay -S fuse2
-{% endshell_term %}
-<p markdown=1>Kalau belum dipasang, akan mengeluarkan warning error seperti ini,</p>
-```
-dlopen(): error loading libfuse.so.2
-
-AppImages require FUSE to run.
-You might still be able to extract the contents of this AppImage
-if you run it with the --appimage-extract option.
-See https://github.com/AppImage/AppImageKit/wiki/FUSE
-for more information
-```
-<p markdown=1>Pasang terlebih dahulu paket `fuse2` sebelum memasang paket yang menggunakan AppImage.</p>
-{% endbox_perhatian %}
+> Paket yang menggunakan AppImage, memerlukan paket `fuse2` untuk dapat dijalankan.
+> ```
+> [bandithijo@arch-distrobox] yay -S fuse2
+> ```
+> 
+> Kalau belum dipasang, akan mengeluarkan warning error seperti ini,
+> 
+> ```
+> dlopen(): error loading libfuse.so.2
+> 
+> AppImages require FUSE to run.
+> You might still be able to extract the contents of this AppImage
+> if you run it with the --appimage-extract option.
+> See https://github.com/AppImage/AppImageKit/wiki/FUSE
+> for more information
+> ```
+> 
+> Pasang terlebih dahulu paket `fuse2` sebelum memasang paket yang menggunakan AppImage.
 
 Terdapat 2 macam paket `beekeeper-studio` di AUR, namun yang saya ingin pasang adalah yang menggunakan AppImage.
 
@@ -512,21 +510,21 @@ aur/beekeeper-studio-appimage 3.0.9-1 (+1 0.18)
   Cross platform SQL editor and database management app for Windows, Linux, and Mac
 ```
 
-{% shell_term [bandithijo@arch-distrobox] %}
-yay -S beekeeper-studio-appimage
-{% endshell_term %}
+```
+[bandithijo@arch-distrobox] yay -S beekeeper-studio-appimage
+```
 
 Setelah selesai, kita dapat langsung menjalankan dari dalam container,
 
-{% shell_term [bandithijo@arch-distrobox] %}
-beekeeper-studio
-{% endshell_term %}
+```
+[bandithijo@arch-distrobox] beekeeper-studio
+```
 
 Atau, tinggal kita export agar dapat dipanggil lebih mudah dari host system.
 
-{% shell_term [bandithijo@arch-distrobox] %}
-distrobox-export --app beekeeper-studio
-{% endshell_term %}
+```
+[bandithijo@arch-distrobox] distrobox-export --app beekeeper-studio
+```
 
 Berikut ini demonstrasinya,
 
@@ -548,9 +546,9 @@ Misal, mengekspor aplikasi chromium dari container ke host.
 
 Karena chromium merupakan aplikasi GUI, maka kita gunakan option `--app`.
 
-{% shell_term [bandithijo@arch-distrobox] %}
-distrobox-export --app chromium
-{% endshell_term %}
+```
+[bandithijo@arch-distrobox] distrobox-export --app chromium
+```
 
 ```
 Application chromium successfully exported.
@@ -562,9 +560,9 @@ Nah, maka kita langsung dapat memanggil chromium dari application launcher host 
 
 Untuk menghapusnya, tinggal jalankan perintah yang sama, namun dengan penambahan option `--delete`.
 
-{% shell_term [bandithijo@arch-distrobox] %}
-distrobox-export --app chromium --delete
-{% endshell_term %}
+```
+[bandithijo@arch-distrobox] distrobox-export --app chromium --delete
+```
 
 ```
 Application chromium successfully un-exported.
@@ -581,9 +579,9 @@ Misal, mengekspor aplikasi gping dari container ke host.
 
 Karena gping merupakan aplikasi terminal, maka kita gunakan option `--bin` diikuti dengan `--export-path`.
 
-{% shell_term [bandithijo@arch-distrobox] %}
-distrobox-export --bin /usr/bin/gping --export-path ~/.local/bin
-{% endshell_term %}
+```
+[bandithijo@arch-distrobox] distrobox-export --bin /usr/bin/gping --export-path ~/.local/bin
+```
 
 ```
 /usr/bin/gping from arch-distrobox exported successfully in /home/bandithijo/.local/bin/.
@@ -594,9 +592,9 @@ Nah, maka kita langsung dapat memanggil gping dari terminal host system yang kit
 
 Untuk menghapusnya, tinggal jalankan perintah yang sama, namun dengan penambahan option `--delete`.
 
-{% shell_term [bandithijo@arch-distrobox] %}
-distrobox-export --bin /usr/bin/gping --export-path ~/.local/bin --delete
-{% endshell_term %}
+```
+[bandithijo@arch-distrobox] distrobox-export --bin /usr/bin/gping --export-path ~/.local/bin --delete
+```
 
 ```
 /usr/bin/gping from arch-distrobox exported successfully in /home/bandithijo/.local/bin/.
@@ -610,9 +608,9 @@ Maka, gping tidak lagi tersedia di terminal host system kita.
 
 Untuk menghapus container, kita perlu memastikan bahwa container tidak sedang berjalan dengan menggunakan perintah,
 
-{% shell_term $ %}
-distrobox-list
-{% endshell_term %}
+```
+$ distrobox-list
+```
 
 ```
  ID           | NAME                      | STATUS                 | IMAGE
@@ -626,13 +624,13 @@ Namun, container ini masih *running* karena memiliki **STATUS Up 12 hours ago**.
 
 Untuk menghentikan container yang sedang *running*, kita gunakan bantuan **podman** (atau docker).
 
-{% pre_url %}
+```
 $ podman stop CONTAINER_NAME
-{% endpre_url %}
+```
 
-{% shell_term $ %}
-podman stop arch-distrobox
-{% endshell_term %}
+```
+$ podman stop arch-distrobox
+```
 
 Kemudian cek kembali apakah container sudah tidak *running*.
 
@@ -646,13 +644,13 @@ Sip, statusnya sudah **Exited**.
 
 Sekarang container tersebut dapat kita hapus dengan menggunakan perintah,
 
-{% pre_url %}
+```
 $ podman rm CONTAINER_NAME
-{% endpre_url %}
+```
 
-{% shell_term $ %}
-podman rm arch-distrobox
-{% endshell_term %}
+```
+$ podman rm arch-distrobox
+```
 
 Proses menghapus container sudah selesai.
 
@@ -665,9 +663,9 @@ Container yang kita gunakan dibuat dengan menggunakan image.
 
 Kita dapat melihat daftar image container yang kita miliki (yang pernah kita unduh) dengan menggunakan perintah,
 
-{% shell_term $ %}
-podman images
-{% endshell_term %}
+```
+$ podman images
+```
 
 ```
 REPOSITORY                                 TAG         IMAGE ID      CREATED      SIZE
@@ -677,13 +675,13 @@ registry.fedoraproject.org/fedora-toolbox  35          40b181c70b73  4 weeks ago
 
 Dalam kasus ini, saya ingin menghapus image **docker.io/library/archlinux** yang memiliki image ID **9f9b229575b2**.
 
-{% pre_url %}
+```
 $ podman image rm IMAGE_ID
-{% endpre_url %}
+```
 
-{% shell_term $ %}
-podman image rm 9f9b229575b2
-{% endshell_term %}
+```
+$ podman image rm 9f9b229575b2
+```
 
 Kalau mendapati error seperti ini,
 
@@ -695,9 +693,9 @@ Artinya, masih terdapat container yang menggunakan image tersebut, meskipun dala
 
 Kalau memang sudah dipastikan tidak digunakan, dan kita ingin menghapus image beserta container yang menggunakan image tersebut, kita dapat mnambahkan option `-f` atau `--force`.
 
-{% shell_term $ %}
-podman image rm 9f9b229575b2 -f
-{% endshell_term %}
+```
+$ podman image rm 9f9b229575b2 -f
+```
 
 ```
 Untagged: docker.io/library/archlinux:latest
@@ -711,16 +709,15 @@ Panduan lebih lengkapnya dapat dilihat di `$ podman image rm --help`.
 
 ## Menghapus Unused Data
 
-{% box_perhatian %}
-<p markdown=1>Command ini cukup beresiko.</p>
-<p markdown=1>Perhatikan baik-baik instruksi yang ditampilkan oleh command yang dijalankan.</p>
-{% endbox_perhatian %}
+> Command ini cukup beresiko.
+> 
+> Perhatikan baik-baik instruksi yang ditampilkan oleh command yang dijalankan.
 
 Command ini digunakan untuk menghapus data-data baik container maupun image yang sudah tidak lagi digunakan.
 
-{% shell_term $ %}
-podman system prune
-{% endshell_term %}
+```
+$ podman system prune
+```
 
 ```
 WARNING! This command removes:
@@ -734,9 +731,9 @@ Are you sure you want to continue? [y/N] â–ˆ
 
 Atau,
 
-{% shell_term $ %}
-podman system prune --all
-{% endshell_term %}
+```
+$ podman system prune --all
+```
 
 ```
 WARNING! This command removes:

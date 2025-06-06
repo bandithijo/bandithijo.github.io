@@ -31,9 +31,9 @@ Saya tidak tahu apakah problem ini dialami juga oleh distro lain atau tidak kare
 
 Sata perlu melakukan set `vboxnet0` interface permission untuk dapat UP, sebelum saya dapat menggunakan dengan Host-only Network Adapter.
 
-{% shell_user %}
-sudo ip link set vboxnet0 up
-{% endshell_user %}
+```
+$ sudo ip link set vboxnet0 up
+```
 
 ```
 5: vboxnet0: <BROADCAST,MULTICAST,UP> mtu 1500 qdisc noop state DOWN group default qlen 1000
@@ -57,9 +57,9 @@ Jadi, saya punya `10.10.10.1/24` sebagai IP network range.
 
 Kemudian tinggal dimasukkan ke perintah,
 
-{% shell_user %}
-sudo ip addr add 10.10.10.1/24 dev vboxnet0
-{% endshell_user %}
+```
+$ sudo ip addr add 10.10.10.1/24 dev vboxnet0
+```
 
 ```
 5: vboxnet0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
@@ -74,12 +74,12 @@ Sekarang, saya dapat melakukan ping ke instance IP address yang saya buat di Vir
 
 
 > VirtualBox mungkin sudah memiliki IP network range (CIDR. Classless Inter-Domain Routing) default untuk interface `vboxnet0` yang biasanya bernilai,
-> 
+>
 > ```
 > IPv4 Address: 192.168.57.1
 > IPv4 Network Mask: 255.255.255.0
 > ```
-> 
+>
 > Ini berarti, IP network rangenya (CIDR) adalah `192.168.57.1/24`.
 
 
