@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Menyimpan Unfinished Modification dengan Git Stash"
-date: 2023-09-17 11:07
+date: '2023-09-17 11:07'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Git']
+tags: ['Git']
 pin:
 hot:
 contributors: []
@@ -18,6 +18,7 @@ description: "Pada catatan kali ini saya akan mendokumentasikan salah satu featu
 # Pendahuluan
 
 {{ page.description }}
+
 
 # Masalah
 
@@ -31,9 +32,11 @@ Beberapa alasan diantaranya:
 1. Menyimpan perubahan sebagai patch dan akan di-apply pada pull terbaru
 1. Alasan-alasan lain, yang menyebabkan saya harus mengabaikan perubahan yang sedang saya kerjakan saat ini
 
+
 # Pemecahan Masalah
 
 Alasan-alasan tersebut di atas, dapat terselesaikan dengan **Git-stash**. [^1]
+
 
 ## 1. Membuat Stash
 
@@ -41,9 +44,9 @@ Dengan Git-stash, saya bisa menyimpan segelondongan perubahan file yang tidak in
 
 Caranya,
 
-{% shell_user %}
-git stash save 'fix: bug on create product ver.1' -u
-{% endshell_user %}
+```
+$ git stash save 'fix: bug on create product ver.1' -u
+```
 
 `git stash`, adalah prefix git untuk melakukan stash-ing.
 
@@ -53,15 +56,17 @@ git stash save 'fix: bug on create product ver.1' -u
 
 Kita dapat menyimpan lebih dari 1 stash.
 
+
 ## 2. Melihat Daftar Stash
 
 Ada 3 cara untuk melihat daftar stash.
 
+
 ### 2.1 Git-stash list
 
-{% shell_user %}
-git stash list
-{% endshell_user %}
+```
+$ git stash list
+```
 
 ```
 stash@{0}: On feature/xxxxxxxx-xxxxxx: Modularity script ver.1
@@ -73,18 +78,19 @@ stash@{4}: On feature/admin-xxxxxxx-xxxx: Update ver.1
 
 `stash@{Nth}` adalah identitas dari stash, untuk `{Nth}` adalah index dari stash yang dimulai dari 0. Dengan order (urutan), stash dengan index ke 0 adalah stash yang paling terakhir ditambahkan ke dalam stash.
 
-{% box_info %}
-<p markdown=1>**Kekurangan:**</p>
-1. Output list stash, akan tampil dalam bentuk *less like*. Apabila value lebih dari jumlah baris yang dapat ditampilkan di layar, maka, akan ada indikator berupa `-- More --` di pojok kiri bawah
+> INFO
+> 
+> **Kekurangan:**
+> 
+> 1. Output list stash, akan tampil dalam bentuk *less like*. Apabila value lebih dari jumlah baris yang dapat ditampilkan di layar, maka, akan ada indikator berupa `-- More --` di pojok kiri bawah
+> 1. Dengan kekurangan yang ada di nomor 1, artinya tidak ada navigasi untuk melihat detail dari isi stash
 
-1. Dengan kekurangan yang ada di nomor 1, artinya tidak ada navigasi untuk melihat detail dari isi stash
-{% endbox_info %}
 
 ### 2.2 Git-log
 
-{% shell_user %}
-git log -g stash
-{% endshell_user %}
+```
+$ git log -g stash
+```
 
 `-g`, atau `--walk-reflogs`, adalah option yang digunakan untuk mengurutkan reflog yang masuk dari yang paling terbaru (terakhir masuk) sampai yang terlama. [^2]
 
@@ -139,13 +145,14 @@ Date:   Tue Mar 28 17:57:42 2023 +0800
 
 Pada bagian `Reflog:`, adalah identitas stash dengan format `stash@{Nth}`, untuk `{Nth}` adalah index dari stash yang dimulai dari 0. Dengan order (urutan), stash dengan index ke 0 adalah stash yang paling terakhir ditambahkan ke dalam stash.
 
+
 ### 2.3 Git-reflog
 
 Dengan menggunakan Git-reflog show, kita dapat melihat detail dari stash. [^3]
 
-{% shell_user %}
-git reflog show stash
-{% endshell_user %}
+```
+$ git reflog show stash
+```
 
 Akan terbuka window split horizontal baru dengan output,
 
@@ -189,33 +196,34 @@ index 392ea6f9d..c936694ba 100644
      {
        # self: admin_path(object),
 ```
+
 Untuk, kembali ke stash list, dapat menggunakan tombol <kbd>Ctrl</kbd>+<kbd>^</kbd>.
 
-
 Kekurangannya adalah tidak dapat melihat *untracked files* (file yang baru dibuat). Untuk case ini, dapat menggunakan Git-stash show.
+
 
 ## 3. Melihat Detail dari Stash dengan Git-stash show
 
 Untuk melihat detail dari stash dalam bentuk patch diff, gunakan perintah ini, [^1]
 
-{% shell_user %}
-git stash show -p stash@{Nth} -u
-{% endshell_user %}
+```
+$ git stash show -p stash@{Nth} -u
+```
 
 Atau shorthandnya untuk `stash{0}`, hanya tuliskan index nya saja,
 
-{% shell_user %}
-git stash show -p 0 -u
-{% endshell_user %}
+```
+$ git stash show -p 0 -u
+```
 
 `-p` adalah shorthand dari `--patch`.
+
 `-u` adalah shorthand dari `--include-untracked`.
 
-{% box_info %}
-<p markdown=1>
-Jika tanpa `-u` maka file yang baru dibuat, tidak akan ditampilkan.
-</p>
-{% endbox_info %}
+> INFO
+> 
+> Jika tanpa `-u` maka file yang baru dibuat, tidak akan ditampilkan.
+
 
 ## 4. Mengeluarkan Stash
 
@@ -223,83 +231,85 @@ Sekarang cara mengeluarkan dari stash, apabila stash yang telah disimpan, ingin 
 
 Ada 2 cara untuk mengeluarkan stash:
 
+
 ### 4.1 Mengeluarkan tanpa menghapus stash
 
-{% shell_user %}
-git stash apply stash@{Nth}
-{% endshell_user %}
+```
+$ git stash apply stash@{Nth}
+```
 
 `{Nth}` adalah index, yang paling akhir (paling baru) ditambahkan adalah index ke `0`.
 
 Atau langsung dengan indexnya,
 
-{% shell_user %}
-git stash apply 0
-{% endshell_user %}
+```
+$ git stash apply 0
+```
 
 Artinya, kita akan melakukan apply pada stash dengan index ke `0`.
 
-{% box_info %}
-<p markdown=1>
-Perintah `git stash apply` ini tidak akan menghilangkan stash dengan index terpilih dari dalam stash list. Stash tersebut masih akan tetap ada. Untuk mengeluarkan sekaligus melakukan apply terhadap stash terpilih, dapat menggunakan Git-stash pop.
-</p>
-{% endbox_info %}
+> INFO
+> 
+> Perintah `git stash apply` ini tidak akan menghilangkan stash dengan index terpilih dari dalam stash list. Stash tersebut masih akan tetap ada. Untuk mengeluarkan sekaligus melakukan apply terhadap stash terpilih, dapat menggunakan Git-stash pop.
+
 
 ### 4.2 Mengeluarkan sambil menghapus stash
 
 Jika stash terpilih sudah tidak diperlukan lagi, kita bisa menerapkan stash sambil menghapus stash dari daftar list.
 
-{% shell_user %}
-git stash pop stash@{Nth}
-{% endshell_user %}
+```
+$ git stash pop stash@{Nth}
+```
 
 `{Nth}` adalah index dari stash. Index ke 0 adalah stash dengan index paling akhir (paling baru ditambahkan).
 
 Atau bisa langsung dengan index nya saja.
 
-{% shell_user %}
-git stash pop 0
-{% endshell_user %}
+```
+$ git stash pop 0
+```
+
 
 ## 5. Menghapus Stash
+
 
 ### 5.1 Menhapus Selected Stash
 
 Jika stash yang ada dalam daftar stash list sudah tidak digunakan lagi, kita dapat langsung menghapusnya dengan perintah Git-stash drop, [^1]
 
-{% shell_user %}
-git stash drop stash@{Nth}
-{% endshell_user %}
+```
+$ git stash drop stash@{Nth}
+```
 
 `{Nth}` adalah index dari stash terpilih, dengan index 0 adalah stash paling akhir ditambahkan (paling baru).
 
 Atau bisa langsung dengan index nya,
 
-{% shell_user %}
-git stash drop 0
-{% endshell_user %}
+```
+$ git stash drop 0
+```
+
 
 ### 5.2 Menghapus Seluruh Daftar Stash
 
 Untuk menghapus seluruh stash atau mengosongkan seluruh stash dari list, kita dapat menggunakan Git-stash clear. [^1]
 
-{% shell_user %}
-git stash clear
-{% endshell_user %}
+```
+$ git stash clear
+```
 
-{% box_perhatian %}
-<p markdown=1>
-Perintah ini akan menghapus seluruh stash dari daftar list. Dan mungkin akan tidak mungin dapat di-recover.
-</p>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> Perintah ini akan menghapus seluruh stash dari daftar list. Dan mungkin akan tidak mungin dapat di-recover.
 
 
 # Pesan Penulis
 
 Terima kasih sudah mampir yaa.
 
+(^_^)
 
-# Referensi
+
 
 [^1]: [git-scm.com: _git-stash - Stash the changes in a dirty working directory away_](https://www.git-scm.com/docs/git-stash)
 [^2]: [git-scm.com: _git-log - Show commit logs_](https://www.git-scm.com/docs/git-log)
