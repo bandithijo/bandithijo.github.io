@@ -1,0 +1,14 @@
+---
+---
+[
+  {% for post in site.posts %}
+    {% if post.category == 'blog' %}
+      {
+        "title"       : "{{ post.title | escape }}",
+        "description" : "{{ post.description | default: '-' | escape }}",
+        "url"         : "{{ post.url }}",
+        "date"        : "{{ post.date | date: '%Y.%m.%d' }}"
+      } {% unless forloop.last %},{% endunless %}
+    {% endif %}
+  {% endfor %}
+]

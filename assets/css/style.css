@@ -37,6 +37,15 @@
     @apply w-full h-full object-cover bg-cover bg-center group-hover:scale-125 group-hover:rotate-12 transition-all duration-500;
   }
 
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-in {
+    animation: fadeIn 0.3s ease forwards;
+  }
+
   /* For markdown with redcarpet */
   .markdown {
     @apply text-dark leading-normal break-words;

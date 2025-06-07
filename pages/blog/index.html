@@ -5,8 +5,30 @@ author: 'BanditHijo'
 permalink: '/blog/'
 ---
 
-<!-- Loader -->
-<div id="masonry-loader" class="flex items-center justify-center py-20">
+<div class="mb-4">
+  <div id="search-container" class="flex items-center">
+    <div class="font-bold mr-2">grep&gt;</div>&nbsp;
+    <input type="text" id="search-input" placeholder="Search for topic..." autocomplete="off"
+      class="text-left rounded-lg border border-gray-300 outline-none px-3 py-2 w-full placeholder:text-base placeholder:font-thin placeholder:text-zinc-400 focus:outline-none focus:ring-0 focus:ring-dark focus:border-dark select-none">
+  </div>
+
+  <!-- Search Loader -->
+  <div id="search-loader" class="flex items-center justify-center py-8 hidden">
+    <div class="flex items-center space-x-2">
+      <div class="w-2 h-2 bg-dark rounded-full animate-pulse"></div>
+      <div class="w-2 h-2 bg-dark rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+      <div class="w-2 h-2 bg-dark rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+    </div>
+  </div>
+
+  <!-- Search Results -->
+  <div id="results-wrapper" class="relative opacity-0 transition-opacity duration-300 mt-4 hidden">
+    <div id="results-container"></div>
+  </div>
+</div>
+
+<!-- Masonry Loader -->
+<div id="masonry-loader" class="flex items-center justify-center py-4">
   <div class="flex items-center space-x-2">
     <div class="w-2 h-2 bg-dark rounded-full animate-pulse"></div>
     <div class="w-2 h-2 bg-dark rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
@@ -14,65 +36,31 @@ permalink: '/blog/'
   </div>
 </div>
 
-<!-- Masonry Container (initially hidden) -->
+<!-- Masonry Container -->
 <div id="masonry-container" class="relative opacity-0 transition-opacity duration-300">
-  {% assign blog_posts = site.posts | where_exp: "post", "post.categories contains 'blog'" %}
-  {% for post in blog_posts %}
-    <div class="masonry-item absolute p-4 bg-white shadow rounded-lg border border-gray-300 hover:border-dark" style="width: calc(25% - 12px);">
-      <a href="{{ post.url }}" class="text-dark">
-        <h2 class="text-md font-bold mb-4">{{ post.title }}</h2>
-        <p class="text-base text-gray-600 mb-4">{{ post.description }}</p>
-        <p class="text-sm text-gray-600 font-mono">{{ post.edisi }} {{ post.date | date: '%Y.%m.%d' }}</p>
-      </a>
-    </div>
-  {% endfor %}
+  <div id="post-container">
+    {% assign blog_posts = site.posts | where_exp: "post", "post.categories contains 'blog'" %}
+    {% for post in blog_posts %}
+      <div class="masonry-item absolute p-4 bg-white rounded-lg border border-gray-300 hover:border-dark"
+        style="width: calc(25% - 12px);">
+        <a href="{{ post.url }}" class="text-dark">
+          <h2 class="text-md font-bold mb-4">{{ post.title }}</h2>
+          <p class="text-base text-gray-600 mb-4">{{ post.description }}</p>
+          <p class="text-sm text-gray-600 font-mono">{{ post.edisi }} {{ post.date | date: '%Y.%m.%d' }}</p>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
 </div>
 
+<!-- Masonry Layout Script -->
 <script>
-function initMasonry() {
-  const container = document.getElementById('masonry-container');
-  const loader = document.getElementById('masonry-loader');
-  const items = container.querySelectorAll('.masonry-item');
+function layoutMasonry(containerId) {
+  const wrapper = document.getElementById(containerId);
+  const items = wrapper.querySelectorAll('.masonry-item');
   const gap = 16;
   const cols = window.innerWidth >= 1024 ? 4 : (window.innerWidth >= 640 ? 2 : 1);
-  const colWidth = (container.offsetWidth - (gap * (cols - 1))) / cols;
-  const colHeights = new Array(cols).fill(0);
-
-  // Show loader, hide container
-  loader.style.display = 'flex';
-  container.style.opacity = '0';
-
-  // Small delay to ensure DOM is ready
-  setTimeout(() => {
-    items.forEach((item, index) => {
-      const col = index % cols; // This ensures left-to-right ordering
-      const x = col * (colWidth + gap);
-      const y = colHeights[col];
-
-      item.style.left = x + 'px';
-      item.style.top = y + 'px';
-      item.style.width = colWidth + 'px';
-
-      colHeights[col] += item.offsetHeight + gap;
-    });
-
-    container.style.height = Math.max(...colHeights) + 'px';
-
-    // Hide loader, show container with fade-in
-    loader.style.display = 'none';
-    container.style.opacity = '1';
-  }, 50);
-}
-
-// Initialize and handle resize
-window.addEventListener('load', initMasonry);
-window.addEventListener('resize', () => {
-  // For resize, we can skip the loader since it's just a quick recalculation
-  const container = document.getElementById('masonry-container');
-  const items = container.querySelectorAll('.masonry-item');
-  const gap = 16;
-  const cols = window.innerWidth >= 1024 ? 4 : (window.innerWidth >= 640 ? 2 : 1);
-  const colWidth = (container.offsetWidth - (gap * (cols - 1))) / cols;
+  const colWidth = (wrapper.offsetWidth - (gap * (cols - 1))) / cols;
   const colHeights = new Array(cols).fill(0);
 
   items.forEach((item, index) => {
@@ -87,6 +75,74 @@ window.addEventListener('resize', () => {
     colHeights[col] += item.offsetHeight + gap;
   });
 
-  container.style.height = Math.max(...colHeights) + 'px';
+  wrapper.style.height = Math.max(...colHeights) + 'px';
+  wrapper.style.opacity = '1';
+}
+
+function initMasonry() {
+  const loader = document.getElementById('masonry-loader');
+  const container = document.getElementById('masonry-container');
+  loader.style.display = 'flex';
+  container.style.opacity = '0';
+
+  setTimeout(() => {
+    layoutMasonry('masonry-container');
+    loader.style.display = 'none';
+    container.style.opacity = '1';
+  }, 50);
+}
+
+window.addEventListener('load', initMasonry);
+window.addEventListener('resize', () => {
+  layoutMasonry('masonry-container');
+  layoutMasonry('results-wrapper');
+});
+</script>
+
+<!-- Search -->
+<script src="/assets/javascript/search.js" type="text/javascript"></script>
+<script>
+SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  json: '/assets/json/blog_posts.json'
+});
+
+function fadeInResults() {
+  const items = document.querySelectorAll('#results-container .masonry-item');
+  items.forEach((el, index) => {
+    el.classList.remove('opacity-0');
+    el.classList.add('fade-in');
+    el.style.animationDelay = `${index * 50}ms`;
+  });
+}
+
+document.getElementById('search-input').addEventListener('input', function (e) {
+  const value = e.target.value.trim();
+  const postContainer = document.getElementById('post-container');
+  const masonryContainer = document.getElementById('masonry-container');
+  const resultsWrapper = document.getElementById('results-wrapper');
+  const resultsContainer = document.getElementById('results-container');
+  const searchLoader = document.getElementById('search-loader');
+
+  if (value.length > 0) {
+    postContainer.style.display = 'none';
+    masonryContainer.style.display = 'none';
+    resultsWrapper.classList.remove('hidden');
+    searchLoader.classList.remove('hidden');
+    resultsWrapper.style.opacity = '0';
+
+    setTimeout(() => {
+      layoutMasonry('results-wrapper');
+      fadeInResults();
+      searchLoader.classList.add('hidden');
+      resultsWrapper.style.opacity = '1';
+    }, 200); // delay to allow DOM to be filled
+  } else {
+    postContainer.style.display = 'block';
+    masonryContainer.style.display = 'block';
+    resultsWrapper.classList.add('hidden');
+    searchLoader.classList.add('hidden');
+  }
 });
 </script>
