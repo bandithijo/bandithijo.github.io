@@ -26,14 +26,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const parentWithLanguage = block.closest("[class*='language-']");
     if (parentWithLanguage?.classList.contains("language-plaintext")) return;
 
-    let lines = block.textContent.split("\n");
+    // Save original highlighted HTML
+    const originalHtml = block.innerHTML;
 
     // Extract filename from first line if it matches @filename:...
+    let lines = originalHtml.split(/\n/);
     let filenameLabel = null;
-    const filenameMatch = lines[0].match(/^@filename:(.+)$/);
+
+    const plainTextFirstLine = block.textContent.split("\n")[0];
+    const filenameMatch = plainTextFirstLine.match(/^@filename:(.+)$/);
+
     if (filenameMatch) {
       filenameLabel = filenameMatch[1].trim();
-      lines.shift(); // remove the @filename line from code block
+      lines.shift(); // remove filename line from HTML lines too
     }
 
     // Remove trailing empty line
@@ -41,23 +46,17 @@ document.addEventListener("DOMContentLoaded", () => {
       lines.pop();
     }
 
-    // Escape HTML characters and format lines
-    const escapeHTML = (str) =>
-      str.replace(/&/g, "&amp;")
-         .replace(/</g, "&lt;")
-         .replace(/>/g, "&gt;")
-         .replace(/ /g, "&nbsp;");
-
+    // Wrap each line preserving inner HTML
     const numberedLines = lines.map((line, idx) => {
-      return `<span class="line"><span class="line-number">${idx + 1}</span><span class="code-line">${escapeHTML(line)}</span></span>`;
+      return `<div class="line"><span class="line-number">${idx + 1}</span><span class="code-line">${line}</span></div>`;
     }).join("");
 
     block.innerHTML = numberedLines;
 
     if (filenameLabel) {
       const filenameElem = document.createElement("div");
-      filenameElem.textContent = `File: ${filenameLabel}`;
-      filenameElem.className = "mb-1";
+      filenameElem.textContent = filenameLabel;
+      filenameElem.className = "font-bold font-mono mb-2";
       block.parentElement.insertAdjacentElement("beforebegin", filenameElem);
     }
   });

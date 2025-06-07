@@ -1,0 +1,33 @@
+/* Neovim default colorscheme (terminal 16-color) for Rouge syntax highlighting */
+
+.highlight {
+  background-color: none;
+  color: #000000;
+}
+
+.highlight .c   { color: #008000; font-style: italic }  /* Comment */
+.highlight .err { color: #ff0000; background-color: #ffffff } /* Error */
+.highlight .k   { color: #0000ff; font-weight: bold }   /* Keyword */
+.highlight .o   { color: #000000 }                      /* Operator */
+.highlight .cm  { color: #008000; font-style: italic }  /* Comment multiline */
+.highlight .cp  { color: #0000ff }                      /* Preprocessor */
+.highlight .c1  { color: #008000; font-style: italic }  /* Comment single */
+.highlight .cs  { color: #008000; font-style: italic }  /* Comment special */
+
+.highlight .gd  { color: #a00000 } /* Deleted */
+.highlight .gi  { color: #00a000 } /* Inserted */
+
+.highlight .kt  { color: #2b91af }  /* Type */
+.highlight .m   { color: #098658 }  /* Number */
+.highlight .s   { color: #a31515 }  /* String */
+.highlight .na  { color: #2b91af }  /* Attribute */
+.highlight .nb  { color: #000000 }  /* Built-in name */
+.highlight .nc  { color: #2b91af }  /* Class name */
+.highlight .no  { color: #800000 }  /* Constant */
+.highlight .nd  { color: #800000 }  /* Decorator */
+.highlight .nf  { color: #795e26 }  /* Function name */
+.highlight .nl  { color: #000000 }  /* Label */
+
+.highlight .nt  { color: #0000ff }  /* Tag */
+.highlight .nv  { color: #000000 }  /* Variable */
+.highlight .w   { color: #bbbbbb }  /* Whitespace */

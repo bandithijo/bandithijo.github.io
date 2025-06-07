@@ -56,8 +56,6 @@ nav_bottom:
 # Build settings
 markdown: kramdown
 kramdown:
-  input: GFM
-  hard_wrap: false
   syntax_highlighter: rouge
 plugins:
   - jekyll-feed
