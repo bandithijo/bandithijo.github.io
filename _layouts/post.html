@@ -23,11 +23,18 @@ layout: baseof
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("pre code").forEach((block) => {
-    // Check if one of the parent containers has "language-plaintext"
     const parentWithLanguage = block.closest("[class*='language-']");
     if (parentWithLanguage?.classList.contains("language-plaintext")) return;
 
     let lines = block.textContent.split("\n");
+
+    // Extract filename from first line if it matches @filename:...
+    let filenameLabel = null;
+    const filenameMatch = lines[0].match(/^@filename:(.+)$/);
+    if (filenameMatch) {
+      filenameLabel = filenameMatch[1].trim();
+      lines.shift(); // remove the @filename line from code block
+    }
 
     // Remove trailing empty line
     if (lines.length > 0 && lines[lines.length - 1].trim() === "") {
@@ -37,8 +44,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const numberedLines = lines.map((line, idx) => {
       return `<span class="line"><span class="line-number">${idx + 1}</span><span class="code-line">${line.replace(/ /g, '&nbsp;')}</span></span>`;
     }).join("");
+
     block.innerHTML = numberedLines;
+
+    if (filenameLabel) {
+      const filenameElem = document.createElement("div");
+      filenameElem.textContent = `File: ${filenameLabel}`;
+      filenameElem.className = "mb-1";
+      block.parentElement.insertAdjacentElement("beforebegin", filenameElem);
+    }
   });
 });
 </script>
-
