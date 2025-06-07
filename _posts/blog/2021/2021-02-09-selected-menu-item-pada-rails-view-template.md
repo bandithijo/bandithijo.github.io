@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Selected Menu Item pada Rails View Template"
-date: 2021-02-09 18:13
+date: '2021-02-09 18:13'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Rails']
+tags: ['Rails']
 pin:
 hot:
 contributors: []
@@ -17,27 +17,34 @@ description: "Membuat menu item untuk menampilkan menu yang aktif dan yang tidak
 
 # Prerequisite
 
-`ruby 2.7.2` `rails 6.1.1` `bootstrap 4.6.x`
+`Ruby 2.7.2` `Rails 6.1.1` `Bootstrap 4.6.x`
+
 
 # Latar Belakang
 
 Kali ini saya kembali mencatat perihal front-end pada Ruby on Rails untuk membuat menu yang dapat menampilkan indikator aktif (selected) saat berada pada halaman yang dipilih.
 
-{% image https://i.postimg.cc/DyNSMHLs/gambar-01.gif | 01 %}
+![Gambar 1](https://i.postimg.cc/DyNSMHLs/gambar-01.gif)
 
-Pada demonstrasi gambar di atas, saya menggunakan [**Accordion/Collapsibles**](https://www.w3schools.com/howto/howto_js_accordion.asp){:target="_blank"} dengan Bootstrap card yang sudah dimodifikasi.
+Gambar 1. Selected menu item di Rails
+
+Pada demonstrasi Gambar 1 di atas, saya menggunakan [**Accordion/Collapsibles**](https://www.w3schools.com/howto/howto_js_accordion.asp) dengan Bootstrap card yang sudah dimodifikasi.
 
 Cukup banyak cara yang dapat kita gunakan untuk membuat selected menu item.
 
 Saya akan coba meng-cover sebanyak yang saya pernah gunakan.
 
-{% box_info %}
-<p>Style class dan filename, hanya ilustrasi.</p>
-<p>Saya perlu mempersingkat class agar code tidak terlalu panjang.</p>
-<p>Jadi, jangan bingung apabila kode terapan tidak akan mirip dengan contoh di gambar ilustrasi di atas apabila digunakan.</p>
-{% endbox_info %}
+> INFO
+> 
+> Style class dan filename, hanya ilustrasi.
+> 
+> Saya perlu mempersingkat class agar code tidak terlalu panjang.
+> 
+> Jadi, jangan bingung apabila kode terapan tidak akan mirip dengan contoh di Gambar 1 di atas apabila digunakan.
+
 
 # Penerapan
+
 
 ## Menggunakan Controller atau Action Name
 
@@ -75,8 +82,8 @@ Misal seperti ini:
 
 Penerapan ke view templatenya akan seperti ini:
 
-{% highlight_caption app/views/shared/_navbar.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+@filename: app/views/shared/_navbar.html.erb
 <ul class="nav nav-tabs mb-3">
   <li class="nav-item">
     <%= link_to "Beranda", root_path,
@@ -87,9 +94,8 @@ Penerapan ke view templatenya akan seperti ini:
         class: "nav-link #{'active' if controller_name == 'blog'}" %>
   </li>
 </ul>
-{% endhighlight %}
+```
 
-<br>
 **Bagaimana kalau satu menu yang sama, tetapi digunakan untuk menampilkan dua atau lebih halaman yang berbeda?**
 
 Mudah, kita dapat menggunakan bentuk array dengan method **include?**.
@@ -102,7 +108,7 @@ Mudah, kita dapat menggunakan bentuk array dengan method **include?**.
 <div class="collapse <%= 'show' if  ['index', 'new', 'edit'].include? action_name %>"></div>
 ```
 
-<br>
+
 ## Menggunakan Routing Prefix dengan Request Path
 
 ```eruby
@@ -123,8 +129,8 @@ Nah, penerapan ke view templatenya akan seperti ini:
 
 Dapat dilihat pada bari 4, 11, 14.
 
-{% highlight_caption app/views/shared/_sidebar.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+@filename: app/views/shared/_sidebar.html.erb
 <div class="card">
   <div class="card-header" id="headingOne">
     <h2 class="mb-0">
@@ -160,17 +166,17 @@ Dapat dilihat pada bari 4, 11, 14.
     </div>
   </div>
 </div>
-{% endhighlight %}
+```
 
-<br>
+
 ## Menggunakan ActionView Helper
 
 Kita dapat membuat method sendiri yang dapat kita gunakan di view template.
 
 Saya akan meletakkan di **app/helpers/application_helper.rb**.
 
-{% highlight_caption app/helpers/application_helper.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: app/helpers/application_helper.rb
 module ApplicationHelper
   ACTIVE_CLASS = 'is-active'.freeze
 
@@ -186,7 +192,7 @@ module ApplicationHelper
     end
   end
 end
-{% endhighlight %}
+```
 
 Dan, penerapan pada view templatenya akan seperti ini:
 
@@ -195,8 +201,8 @@ Terdapat 2 cara yang dapat digunakan:
 1. Menggunakan routing path
 2. Menggunakan controller atau action name
 
-{% highlight_caption app/views/shared/_navbat.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+@filename: app/views/shared/_navbat.html.erb
 <div id="navbar" class="navbar-collapse collapse">
   <ul class="nav navbar-nav navbar-right">
     <li class='<%= active_for(path: "/users/#{current_user.id}") %>'>
@@ -210,17 +216,9 @@ Terdapat 2 cara yang dapat digunakan:
     </li>
   </ul>
 </div>
-{% endhighlight %}
-
-Sumber: [**pelted/application_helper.rb**](https://gist.github.com/pelted/5dac756f690a61f698145dc9495a9633){:target="_blank"}.
+```
 
 
-
-
-
-
-
-<br>
 # Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
@@ -234,12 +232,13 @@ Terima kasih.
 (^_^)
 
 
-
-
 # Referensi
 
-1. [How TO - Collapsibles/Accordion](https://www.w3schools.com/howto/howto_js_accordion.asp){:target="_blank"}
+1. [How TO - Collapsibles/Accordion](https://www.w3schools.com/howto/howto_js_accordion.asp)
 <br>Diakses tanggal: 2021/02/09
 
-2. [gist.github.com/pelted/5dac756f690a61f698145dc9495a9633](https://gist.github.com/pelted/5dac756f690a61f698145dc9495a9633){:target="_blank"}
+2. [gist.github.com/pelted/5dac756f690a61f698145dc9495a9633](https://gist.github.com/pelted/5dac756f690a61f698145dc9495a9633)
+<br>Diakses tanggal: 2021/02/09
+
+3. [**pelted/application_helper.rb**](https://gist.github.com/pelted/5dac756f690a61f698145dc9495a9633).
 <br>Diakses tanggal: 2021/02/09

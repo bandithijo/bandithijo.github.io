@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Devise Registration Tanpa Password, Set Password Setelah Confirmation"
-date: 2021-03-13 14:00
+date: '2021-03-13 14:00'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Rails']
+tags: ['Rails']
 pin:
 hot:
 contributors: []
@@ -19,78 +19,78 @@ description: "Catatan kali ini tentang pemanfaatan Devise gem untuk registration
 
 `Ruby 3.0.0` `Rails 6.1.3` `PostgreSQL 12.5` `RSpec 4.0.0`
 
+
 # Latar Belakang Masalah
 
 Catatan kali ini tentang pemanfaatan Devise gem untuk registration tanpa menginputkan password, password akan diminta setelah user membuka link konfirmasi yang dikirimkan via email.
 
+
 # Pemecahan Masalah
+
 
 ## Gemfile
 
-1. [**Devise**](https://github.com/heartcombo/devise){:target="_blank"}, untuk authentication
-2. [**Simple Form**](https://github.com/heartcombo/simple_form){:target="_blank"}, untuk menghandle form agar lebih praktis*
+1. [**Devise**](https://github.com/heartcombo/devise), untuk authentication
+2. [**Simple Form**](https://github.com/heartcombo/simple_form), untuk menghandle form agar lebih praktis*
 
 \* Optional
 
-{% highlight_caption Gemfile %}
-{% highlight ruby linenos %}
+```ruby
+@filename: Gemfile
 gem 'devise',      '~> 4.7', '>= 4.7.3'
 gem 'simple_form', '~> 5.1'
-{% endhighlight %}
+```
 
 Jalankan bundle install,
 
-{% shell_term $ %}
-bundle install
-{% endshell_term %}
+```
+$ bundle install
+```
 
 Kemudian install kedua gem tersebut ke dalam web aplikasi.
 
 Dahulukan **simple_form**, dengan begitu form-form yang akan digenerate oleh **Devise** akan otomatis menggunakan form dari simple_form.
 
-{% shell_term $ %}
-rails g simple_form:install
-{% endshell_term %}
+```
+$ rails g simple_form:install
+```
 
 Setelah itu, **devise**.
 
-{% shell_term $ %}
-rails g devise:install
-{% endshell_term %}
+```
+$ rails g devise:install
+```
 
 ## ActionMailer
 
 Selanjutnya konfigurasi ActionMailer untuk environment development.
 
-{% highlight_caption config/environments/development.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: config/environments/development.rb
 Rails.application.configure do
   # ...
 
   config.action_mailer.raise_delivery_errors = false
-
   config.action_mailer.perform_caching = false
-
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-
   config.action_mailer.delivery_method = :smtp
-
   config.action_mailer.smtp_settings = { address: '127.0.0.1', port: 1025 }
 
   # ...
 end
-{% endhighlight %}
+```
 
-Baris 10 dan 12, adalah configurasi untuk MailCatcher.
+Baris 7 dan 8, adalah configurasi untuk MailCatcher.
 
-Untuk yang belum tahu MailCatcher, dapat dibaca di sini, [**Konfigurasi Ruby on Rails ActionMailer pada Local Environment dengan MailCatcher**](/blog/ruby-on-rails-actionmailer-local-mailcatcher){:target="_blank"}.
+Untuk yang belum tahu MailCatcher, dapat dibaca di sini, [**Konfigurasi Ruby on Rails ActionMailer pada Local Environment dengan MailCatcher**](/blog/ruby-on-rails-actionmailer-local-mailcatcher).
+
 
 ## Devise Initializer
 
 Kita perlu merubah beberapa konfigurasi pada Devise initializer.
 
-{% highlight_caption config/initializer/devise.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: config/initializer/devise.rb
 Devise.setup do |config|
   # ...
 
@@ -108,24 +108,25 @@ Devise.setup do |config|
 
   # ...
 end
-{% endhighlight %}
+```
 
 Ganti `config.mailer_sender =` sesuai alamat yang teman-teman inginkan.
 
 Ganti `config.reconfirmable =` menjadi **false**.
 
+
 ## Devise User Model
 
 Kita akan membuat User model dengan devise.
 
-{% shell_term $ %}
-rails g devise User
-{% endshell_term %}
+```
+$ rails g devise User
+```
 
 Buka migrationsnya, dan enablekan `:confirmation_token`, `:confirmed_at`, `:confirmation_sent_at` pada bagian **Confirmable**.
 
-{% highlight_caption db/migrate/20210312144943_devise_create_users.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: db/migrate/20210312144943_devise_create_users.rb
 # frozen_string_literal: true
 
 class DeviseCreateUsers < ActiveRecord::Migration[5.2]
@@ -142,36 +143,36 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       # ...
     end
 
-      # ...
+    # ...
   end
 end
-{% endhighlight %}
+```
 
 Saya akan menambahkan filed **name**.
 
-{% shell_term $ %}
-rails g migration add_name_to_users name:string
-{% endshell_term %}
+```
+$ rails g migration add_name_to_users name:string
+```
 
-{% highlight_caption db/migration/20210312145059_add_name_to_users.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: db/migration/20210312145059_add_name_to_users.rb
 class AddNameToUsers < ActiveRecord::Migration[5.2]
   def change
     add_column :users, :name, :string
   end
 end
-{% endhighlight %}
+```
 
 Sip, jalankan migration.
 
-{% shell_term $ %}
-rails db:migrate
-{% endshell_term %}
+```
+$ rails db:migrate
+```
 
 Aktifkan module `:confirmable` pada **user.rb** model.
 
-{% highlight_caption app/models/user.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: app/models/user.rb
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -179,12 +180,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :confirmable
 end
-{% endhighlight %}
+```
 
 Sekalian, tambahkan logic untuk menghandle registration tanpa password di bawah module-module Devise tersebut.
 
-{% highlight_caption app/modles/user.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: app/modles/user.rb
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -228,7 +229,8 @@ class User < ApplicationRecord
     end
   end
 end
-{% endhighlight %}
+```
+
 
 ## Controller
 
@@ -237,8 +239,8 @@ Kita akan membuat 2 custom controller yang merupakan turunan dari Devise control
 1. RegistrationsController < Devise::RegistrationsController
 2. ConfirmationsController < Devise::ConfirmationsController
 
-{% highlight_caption app/controllers/registrations_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: app/controllers/registrations_controller.rb
 class RegistrationsController < Devise::RegistrationsController
   private
 
@@ -250,11 +252,10 @@ class RegistrationsController < Devise::RegistrationsController
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :current_password)
   end
 end
+```
 
-{% endhighlight %}
-
-{% highlight_caption app/controllers/confirmations_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: app/controllers/confirmations_controller.rb
 class ConfirmationsController < Devise::ConfirmationsController
   # Remove the first skip_before_filter (:require_no_authentication) if you
   # don't want to enable logged users to access the confirmation page.
@@ -321,22 +322,21 @@ class ConfirmationsController < Devise::ConfirmationsController
     sign_in_and_redirect(resource_name, @confirmable)
   end
 end
-{% endhighlight %}
+```
 
 Baris baris ke 58, kita akan membuat sendiri custom view template tersebut.
 
-<br>
 Pada catatan ini, saya membuat homepage, untuk tempat bernaung setelah melakukan registrasi dan juga sebagai **root_path**.
 
-{% shell_term $ %}
-rails g controller Home index
-{% endshell_term %}
+```
+$ rails g controller Home index
+```
 
 
 ## Routes
 
-{% highlight_caption config/routes.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: config/routes.rb
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'home#index'
@@ -350,27 +350,29 @@ Rails.application.routes.draw do
     put '/users/confirmation' => 'confirmations#update', via: :patch, as: :update_user_confirmation
   end
 end
-{% endhighlight %}
+```
 
 
 ## Devise Views
 
 Kita akan mengenerate Devise views.
 
-{% shell_term $ %}
-rails g devise:views
-{% endshell_term %}
+```
+$ rails g devise:views
+```
 
 Yang perlu dimodifikasi adalah:
 
-1. mengedit registrations/new, menambahkan field name, menghilangkan field password & password_confirmation
-2. membuat confirmations/show, meletakkan field password & password_confirmation
+1. mengedit registrations/new
+1. menambahkan field name
+1. menghilangkan field password & password_confirmation
+1. membuat confirmations/show
+1. meletakkan field password & password_confirmation
 
-<br>
 Modifikasi view template **registrations/new**.
 
-{% highlight_caption app/views/devise/registrations/new.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+@filename: app/views/devise/registrations/new.html.erb
 <h2>Sign up</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -394,18 +396,18 @@ Modifikasi view template **registrations/new**.
 <% end %>
 
 <%= render "devise/shared/links" %>
-{% endhighlight %}
+```
 
-{% image https://i.postimg.cc/DzyQ71qR/gambar-02.png | 02 %}
+![Gambar 1](https://i.postimg.cc/DzyQ71qR/gambar-02.png)
+
+Gambar 1. Sign up form or Registration form
 
 Dapat dilihat, pada form registrasi ini, hanya menampilkan input field berupa **name** dan **email**.
 
-Saya memindahkan field password dan password_confirmation ke halaman yang lain,
+Saya memindahkan field `password` dan `password_confirmation` ke halaman yang lain, yaitu halaman **views/devise/confirmations/show.html.erb**.
 
-yaitu halaman **views/devise/confirmations/show.html.erb**.
-
-{% highlight_caption app/views/devise/confirmations/show.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+@filename: app/views/devise/confirmations/show.html.erb
 <h2>Account Activation<% if resource.try(:user_name) %> for <%= resource.user_name %><% end %></h2>
 
 <%= simple_form_for(resource, as: resource_name, url: update_user_confirmation_path, html: { method: :put }) do |f| %>
@@ -430,13 +432,14 @@ yaitu halaman **views/devise/confirmations/show.html.erb**.
     <%= f.button :submit, "Activate" %>
   </div>
 <% end %>
-{% endhighlight %}
+```
 
-{% image https://i.postimg.cc/5t7Byjgy/gambar-03.png | 03 %}
+![Gambar 2](https://i.postimg.cc/5t7Byjgy/gambar-03.png)
 
-<br>
-{% highlight_caption app/views/devise/confirmations/new.html.erb %}
-{% highlight eruby linenos %}
+Gambar 2. Account Activation form
+
+```eruby
+@filename: app/views/devise/confirmations/new.html.erb
 <h2>Resend confirmation instructions</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
@@ -461,14 +464,12 @@ yaitu halaman **views/devise/confirmations/show.html.erb**.
 <% unless user_signed_in? %>
   <%= render "devise/shared/links" %>
 <% end %>
-{% endhighlight %}
-
-<br>
+```
 
 Pasang nav untuk menempatkan link indikator apabila user telah login atau belum.
 
-{% highlight_caption app/layouts/application.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+@filename: app/layouts/application.html.erb
 <!DOCTYPE html>
 <html>
   <head>
@@ -497,24 +498,21 @@ Pasang nav untuk menempatkan link indikator apabila user telah login atau belum.
     <%= yield %>
   </body>
 </html>
-{% endhighlight %}
+```
 
 
-<br>
 # Demonstrasi
 
-{% image https://i.postimg.cc/ZqNC6RFV/gambar-01.gif | 01 %}
+![Gambar 3](https://i.postimg.cc/ZqNC6RFV/gambar-01.gif)
+
+Gambar 3. Demonstrasi register and activation
 
 
-<br>
 # Repositori
 
-[**github.com/bandithijo/demo_devise_confirmable**](https://github.com/bandithijo/demo_devise_confirmable){:target="_blank"}
+[**github.com/bandithijo/demo_devise_confirmable**](https://github.com/bandithijo/demo_devise_confirmable)
 
 
-
-
-<br>
 # Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
@@ -528,12 +526,10 @@ Terima kasih.
 (^_^)
 
 
-
-
 # Referensi
 
-1. [mailcatcher.me](https://mailcatcher.me/){:target="_blank"}
+1. [mailcatcher.me](https://mailcatcher.me/)
 <br>Diakses tanggal: 2021/03/13
 
-2. [Let's Build: With Ruby on Rails - Project Management App - Part 2](https://youtu.be/RpyzUdxZolY){:target="_blank"}
+2. [Let's Build: With Ruby on Rails - Project Management App - Part 2](https://youtu.be/RpyzUdxZolY)
 <br>Diakses tanggal: 2021/03/13

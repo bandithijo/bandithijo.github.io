@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Mengakses VirtualBox Instance dengan SSH via NAT"
-date: 2021-02-28 06:17
+date: '2021-02-28 06:17'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips']
+tags: ['VirtualBox']
 pin:
 hot:
 contributors: []
@@ -27,22 +27,26 @@ Selain itu, saya merasa kurang praktis untuk berpindah-pindah antara Guest dan H
 
 Nah, biasanya karena ingin praktis, saya menggunakan konfigurasi NAT agar Guest mendapatkan akses internet dari Host. Karena itu, saya tidak dapat melakukan SSH dengan cara biasa.
 
+
 # Peyelesaian Masalah
 
 Karena saya menggunakan NAT untuk memberikan akses internet Guest dengan Host, saya perlu mengkonfigurasi **Port Forwarding** agar saya dapat mengakses Guest dengan SSH dari Host.
 
-{% image https://i.postimg.cc/zf5bnjHP/gambar-01.png | 01 %}
+![Gambar 1](https://i.postimg.cc/zf5bnjHP/gambar-01.png)
 
-<br>
+Gambar 1. Button "Port Forwarding" di dalam menu Network
+
 Saya sudah mengaktifkan service SSH di Guest, jadi tinggal saya akses saja via SSH.
 
-{% image https://i.postimg.cc/QCBHXYvV/gambar-02.png | 02 %}
+![Gambar 2](https://i.postimg.cc/QCBHXYvV/gambar-02.png)
+
+Gambar 2. Buat rule baru dengan Guest IP
 
 Bagian **Guest IP** adalah IP address dari Guest yang bisa didapatkan dengan,
 
-{% shell_term $ %}
-ip a s eth0
-{% endshell_term %}
+```
+$ ip a s eth0
+```
 
 **eth0** adalah ethernet interface.
 
@@ -50,27 +54,26 @@ Sesuaikan dengan nama ethernet interface yang digunakan oleh Guest.
 
 Berbeda distro, bisa berbeda nama (new namspace atau old namespace).
 
-<br>
 Selajutnya, tinggal kita akses dari Host menggunakan Terminal Emulator favorit.
 
-{% shell_term $ %}
-ssh -p 2222 &lt;username>@127.0.0.1
-{% endshell_term %}
+```
+$ ssh -p 2222 &lt;username>@127.0.0.1
+```
 
-<pre>
+```
 The authenticity of host '[127.0.0.1]:2222 ([127.0.0.1]:2222)' can't be established.
 ECDSA key fingerprint is SHA256:DR5yuwPzVQNpAaM6n9VT/fGESGGSJFVhJAY/LKoCpFA.
 Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
 
 Warning: Permanently added '[127.0.0.1]:2222' (ECDSA) to the list of known hosts.
-&lt;userame>@127.0.0.1's password: _
-</pre>
+<userame>@127.0.0.1's password: _
+```
 
 Masukkan password **&lt;username>** dari Guest.
 
 Kalau berhasil, kita akan langsung masuk ke dalam Guest.
 
-<pre>
+```
 Last login: Sun Feb 28 06:15:13 2021 from 10.0.2.2
 OpenBSD 6.8 (GENERIC) #97: Sun Oct  4 18:00:46 MDT 2020
 
@@ -83,22 +86,15 @@ enough information to reproduce the problem is enclosed, and if a
 known fix for it exists, include that as well.
 
 openbsd$ _
-</pre>
+```
 
 Mantap!
 
-{% box_info %}
-<p markdown=1>Pengaturan **Port Forwarding** ini, dapat dilakukan meski instance sedang berjalan.</p>
-{% endbox_info %}
+> INFO
+> 
+> Pengaturan **Port Forwarding** ini, dapat dilakukan meski instance sedang berjalan.
 
 
-
-
-
-
-
-
-<br>
 # Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
@@ -112,9 +108,7 @@ Terima kasih.
 (^_^)
 
 
-
-
 # Referensi
 
-1. [https://bobcares.com/blog/virtualbox-ssh-nat](https://bobcares.com/blog/virtualbox-ssh-nat){:target="_blank"}
+1. [https://bobcares.com/blog/virtualbox-ssh-nat](https://bobcares.com/blog/virtualbox-ssh-nat)
 <br>Diakses tanggal: 2021/02/28

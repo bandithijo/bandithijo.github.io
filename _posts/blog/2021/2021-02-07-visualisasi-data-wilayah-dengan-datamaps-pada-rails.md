@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Visualisasi Data Wilayah dengan Datamaps pada Rails"
-date: 2021-02-07 23:48
+date: '2021-02-07 23:48'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Javascript', 'Rails']
+tags: ['JavaScript', 'Rails']
 pin:
 hot:
 contributors: []
@@ -18,6 +18,7 @@ description: "Mungkin teman-teman pernah melihat interaktif peta yang memvisuali
 # Prerequisite
 
 `ruby 2.7.2` `rails 6.1.1` `datamaps 0.5.9`
+
 
 # Latar Belakang
 
@@ -37,14 +38,11 @@ Saya ingin membuat sebuah visualisasi data peta Indonesia yang terbagi-bagi berd
 
 Kira-kira ilustrasinya seperti ini:
 
-
 <div style="overflow:auto;">
 <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/datamaps/0.5.9/datamaps.idn.min.js'></script>
-
 <div id="container1" style="position: relative; width: 890px; height: 400px; margin: 0 auto;"></div>
-
 <script type="text/javascript">
 //basic map config with custom fills, mercator projection
 var map = new Datamap({
@@ -122,16 +120,18 @@ Visualisasi peta di atas menggunakan bantuan **datamaps** yang menggunakan **D3.
 
 > *Datamaps is intended to provide some data visualizations based on geographical data. It's **SVG-based**, can scale to any screen size, and includes everything inside of 1 script file. It heavily relies on the amazing **D3.js** library*.
 
+
 # Permasalahan
 
-Bagaimana caranya menghubungkan data yang ada di database Rails, dengan datamaps.
+Bagaimana caranya menghubungkan data yang ada di database Rails, dengan datamaps?
+
 
 # Pemecahan Masalah
 
 Kalau kita lihat pada bagian `data: {...}`,
 
-{% highlight_caption app/views/data_peta/index.html.erb %}
-{% highlight javascript linenos %}
+```javascript
+@filename: app/views/data_peta/index.html.erb
 // ...
 
     fills: {
@@ -149,11 +149,12 @@ Kalau kita lihat pada bagian `data: {...}`,
       'ID.BE': {fillKey: 'DDD', totalCases: '12.345'},
       // ...
     },
-{% endhighlight %}
+```
 
 Data contohnya seperti di atas.
 
 Kita akan mengganti data statis tersebut dengan data yang ada di database yang kita miliki.
+
 
 ## ActionController
 
@@ -165,15 +166,15 @@ Kalau melihat format data di atas pada baris 12-15, `data: {...}` tersebut memil
 
 Nah, artinya kita bisa membuat format seperti ini pada controller.
 
-{% highlight_caption app/controllers/data_peta_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: app/controllers/data_peta_controller.rb
 @last_updated     = Province.last.fetched_at
 @cumulative_cases = Province.select(:name, :total_cases)
   .where(fetched_at: @last_updated)
   .map { |n|
     "'#{n.name}': {fillKey: 'AAA', totalCases: 'n.total_cases'},\n"
   }.join
-{% endhighlight %}
+```
 
 Pada baris 1, saya mengambil tanggal dari data terakhir.
 
@@ -183,17 +184,17 @@ Baris 3, saya hanya mengambil data pada tanggal paling baru di database yang say
 
 Baris 4-5 saya melakukan mapping untuk agar value yang dikembalikan dalam bentuk array.
 
-```ruby
+```
 => ["'DKI Jakarta': {fillKey: 'AAA', totalCases: '293825'},\n", "'Jawa Barat': {fillKey: 'AAA', totalCases: '167707'},\n", "'Jawa Tengah': {fillKey: 'AAA', totalCas...
 ```
 
 Baris 6, saya menggunakan method `.join` untuk membuat array mejadi string yang nantinya, pada view template, akan menggunakan method `raw()` untuk melakukan escaping string.
 
-```ruby
+```
 => "'DKI Jakarta': {fillKey: 'AAA', totalCases: '293825'},\n'Jawa Barat': {fillKey: 'AAA', totalCases: '167707'},\n'Jawa Tengah': {fillKey: 'AAA', totalCases: '1355...
 ```
 
-<br>
+
 ### Mengkonversi Nama Provinsi ke Kode Provinsi
 
 Kalau teman-teman perhatikan, bagian nama provinsi dan `fillKey:` masih belum sesuai dengan format yang diperlukan.
@@ -210,8 +211,8 @@ Caranya mudah, saya tinggal buatkan sebuah method baru yang saya beri nama,
 
 Agar controller saya tetap bersih, saya akan menggunakan controller concern saja.
 
-{% highlight_caption app/controllers/concerns/convert_name_to_province_code.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: app/controllers/concerns/convert_name_to_province_code.rb
 module ConvertProvNameToProvCode
   def convert_name_to_province_code(province_name)
     provinces = {
@@ -254,12 +255,12 @@ module ConvertProvNameToProvCode
     provinces[province_name] if provinces.include? province_name
   end
 end
-{% endhighlight %}
+```
 
 Oke, setelah jadi, tinggal di-include-kan ke data_peta_controller.rb.
 
-{% highlight_caption app/controllers/data_peta_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: app/controllers/data_peta_controller.rb
 class DataPetaController < ApplicationController
   include ConvertProvNameToProvCode
 
@@ -267,14 +268,14 @@ class DataPetaController < ApplicationController
     # ...
   end
 end
-{% endhighlight %}
+```
 
-<br>
+
 ### Mengklasifikasi total_cases Berdasaran Warna
 
 Selanjutnya kita perlu mengklasifikasi jumlah dari `total_cases` ke dalam format warna yang tersedia.
 
-{% pre_whiteboard %}
+```
 'AAA': '#DB1836'
 'BBB': '#F15A23'
 'CCC': '#F89A1C'
@@ -283,16 +284,14 @@ Selanjutnya kita perlu mengklasifikasi jumlah dari `total_cases` ke dalam format
 'FFF': '#44B549'
 'GGG': '#0EB049'
 'HHH': '#016533'
-{% endpre_whiteboard %}
+```
 
 Anggaplah 'AAA' adalah yang paling banyak dan 'HHH' yang paling sedikit.
 
-Saya akan menggunakan controller concern lagi yang saya beri nama,
+Saya akan menggunakan controller concern lagi yang saya beri nama, `convert_total_cases_to_code(total_cases)`.
 
-`convert_total_cases_to_code(total_cases)`
-
-{% highlight_caption app/controllers/concerns/convert_total_cases_to_code.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: app/controllers/concerns/convert_total_cases_to_code.rb
 module ConvertTotalCasesToCode
   def convert_total_cases_to_code(total_cases)
     case total_cases
@@ -315,12 +314,12 @@ module ConvertTotalCasesToCode
     end
   end
 end
-{% endhighlight %}
+```
 
 Oke, setelah jadi, tinggal di-include-kan ke data_peta_controller.rb.
 
-{% highlight_caption app/controllers/data_peta_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: app/controllers/data_peta_controller.rb
 class DataPetaController < ApplicationController
   include ConvertProvNameToProvCode
   include ConvertTotalCasesToCode
@@ -329,25 +328,25 @@ class DataPetaController < ApplicationController
     # ...
   end
 end
-{% endhighlight %}
+```
 
-<br>
+
 ### Memberikan Delimiter , untuk Ribuan
 
 Data **total_cases** tidak memiliki format string berupa delimiter koma (,) untuk memberikan kemudahan dalam membaca satuan ribuan dalam nominal angka.
 
 Rails sudah menyediakan helper method untuk menghandle ini namun adanya di view template yang disediakan oleh ActionView yang bernama `number_with_delimiter(number, options = {})`.
 
-Apakah bisa digunakan di Controller?
+**Apakah bisa digunakan di Controller?**
 
-Kalau tidak ada, apakah kita perlu membuat sendiri?
+**Kalau tidak ada, apakah kita perlu membuat sendiri?**
 
-Apakah di ActionController ada juga method helper yang sama?
+**Apakah di ActionController ada juga method helper yang sama?**
 
 Mudahnya tinggal kita include saja `ActionView::Helpers::NumberHelper`.
 
-{% highlight_caption app/controllers/data_peta_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: app/controllers/data_peta_controller.rb
 class DataPetaController < ApplicationController
   include ConvertProvNameToProvCode
   include ConvertTotalCasesToCode
@@ -357,12 +356,12 @@ class DataPetaController < ApplicationController
     # ...
   end
 end
-{% endhighlight %}
+```
 
 Selanjutnya tinggal kita gunakan pada object query yang sudah kita racik sebelumnya.
 
-{% highlight_caption app/controllers/data_peta_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: app/controllers/data_peta_controller.rb
 class DataPetaController < ApplicationController
   include ConvertProvNameToProvCode
   include ConvertTotalCasesToCode
@@ -377,9 +376,10 @@ class DataPetaController < ApplicationController
       }.join
   end
 end
-{% endhighlight %}
+```
 
 Instance variable `@cumulative_cases` inilah yang akan kita gunakan pada view template.
+
 
 ## ActionView
 
@@ -387,44 +387,43 @@ Setelah selesai membuat object query di controller, selanjutnya tinggal kita gun
 
 Tapi sebelumnya, kita perlu untuk menyiapkan beberapa Javascript library yang akan diperlukan oleh datamaps.
 
-1. [**d3.min.js**](https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js){:target="_blank"}
-
-2. [**topojson.min.js**](https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js){:target="_blank"}
-
-3. [**datamaps.idn.min.js**](https://cdnjs.cloudflare.com/ajax/libs/datamaps/0.5.9/datamaps.idn.min.js){:target="_blank"}, saya menggunakan datamaps wilayah Indonesia.
+1. [**d3.min.js**](https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js)
+2. [**topojson.min.js**](https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js)
+3. [**datamaps.idn.min.js**](https://cdnjs.cloudflare.com/ajax/libs/datamaps/0.5.9/datamaps.idn.min.js), saya menggunakan datamaps wilayah Indonesia.
 
 Kita akan letakkan pada direktori **vendor/assets/javascripts/** saja.
 
-<pre>
+```
 .
-├─ app/
-├─ bin/
-├─ config/
-├─ db/
-├─ lib/
-├─ log/
-├─ node_modules/
-├─ public/
-├─ spec/
-├─ storage/
-├─ tmp/
-├─ vendor/
-│   └─ assets/
-│      └─ javascripts/
-│         ├─ <mark>d3.min.js</mark>
-│         ├─ <mark>topojson.min.js</mark>
-│         └─ <mark>datamaps.idn.min.js</mark>
+├─ 📁 app/
+├─ 📁 bin/
+├─ 📁 config/
+├─ 📁 db/
+├─ 📁 lib/
+├─ 📁 log/
+├─ 📁 node_modules/
+├─ 📁 public/
+├─ 📁 spec/
+├─ 📁 storage/
+├─ 📁 tmp/
+├─ 📂 vendor/
+│   └─ 📂 assets/
+│      └─ 📂 javascripts/
+│         ├─ 📄 d3.min.js 👈️
+│         ├─ 📄 topojson.min.js 👈️
+│         └─ 📄 datamaps.idn.min.js 👈️
 │
-├─ Gemfile
+├─ 📄 Gemfile
 ...
-</pre>
+...
+```
 
 Buatkan struktur seperti di atas.
 
 Kemudian, kita akan masukkan kepada daftar assets precompile, di **config/initializers/assets.rb**.
 
-{% highlight_caption config/initializers/assets.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: config/initializers/assets.rb
 # Be sure to restart your server when you modify this file.
 
 # ...
@@ -435,7 +434,7 @@ Kemudian, kita akan masukkan kepada daftar assets precompile, di **config/initia
 Rails.application.config.assets.precompile += %w(
   d3.min.js topojson.min.js datamaps.idn.min.js
 )
-{% endhighlight %}
+```
 
 Tambahkan seperti pada baris 8, 9, 10.
 
@@ -443,8 +442,8 @@ Mantap!
 
 Sekarang kita lanjut ke view template.
 
-{% highlight_caption app/views/data_peta/index.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+@filename: app/views/data_peta/index.html.erb
 <div class="container px-0 pt-2 pb-5 mt-5" style="overflow-y: auto">
   <%= javascript_include_tag 'd3.min' %>
   <%= javascript_include_tag 'topojson.min' %>
@@ -491,7 +490,7 @@ Sekarang kita lanjut ke view template.
     });
   </script>
 </div>
-{% endhighlight %}
+```
 
 Baris 2, 3, 4, adalah cara memanggil Javascript library yang kita masukkan ke dalam direktori vendor sebelumnya.
 
@@ -502,15 +501,6 @@ Selesai!
 Hanya seperti itu saja.
 
 Apabila dirasa ada yan kurang pas, teman-teman bisa memodifikiasi dan memperbaiki sesuai keinginan.
-
-
-
-
-
-
-
-
-
 
 
 # Pesan Penulis
@@ -524,18 +514,16 @@ Terima kasih.
 (^_^)
 
 
-
-
 # Referensi
 
-1. [github.com/markmarkoh/datamaps](https://github.com/markmarkoh/datamaps){:target="_blank"}
+1. [github.com/markmarkoh/datamaps](https://github.com/markmarkoh/datamaps)
 <br>Diakses tanggal: 2021/02/07
 
-2. [http://datamaps.github.io/](http://datamaps.github.io/){:target="_blank"}
+2. [http://datamaps.github.io/](http://datamaps.github.io/)
 <br>Diakses tanggal: 2021/02/07
 
-3. [github.com/d3/d3](https://github.com/d3/d3){:target="_blank"}
+3. [github.com/d3/d3](https://github.com/d3/d3)
 <br>Diakses tanggal: 2021/02/07
 
-4. [api.rubyonrails.org/classes/ActionView/Helpers/NumberHelper.html#method-i-number_with_delimiter](https://api.rubyonrails.org/classes/ActionView/Helpers/NumberHelper.html#method-i-number_with_delimiter){:target="_blank"}
+4. [api.rubyonrails.org/classes/ActionView/Helpers/NumberHelper.html#method-i-number_with_delimiter](https://api.rubyonrails.org/classes/ActionView/Helpers/NumberHelper.html#method-i-number_with_delimiter)
 <br>Diakses tanggal: 2021/02/07

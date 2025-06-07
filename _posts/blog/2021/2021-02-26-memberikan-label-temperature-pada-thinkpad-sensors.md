@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Memberikan Label Temperature pada ThinkPad Sensors"
-date: 2021-02-26 07:19
+date: '2021-02-26 07:19'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'ThinkPad']
+tags: ['ThinkPad']
 pin:
 hot:
 contributors: []
@@ -19,13 +19,13 @@ description: "Kalau kita mengecek temperature ThinkPad laptop dengan menggunakan
 
 Apakah kalian pernah mengecek temperatur pada ThinkPad dengan menggunakan perintah?
 
-{% shell_term $ %}
-sensors
-{% endshell_term %}
+```
+$ sensors
+```
 
 Hasilnya akan sepertin ini,
 
-<pre>
+```
 coretemp-isa-0000
 Adapter: ISA adapter
 Core 0:       +55.0°C  (high = +100.0°C, crit = +100.0°C)
@@ -60,7 +60,7 @@ acpitz-acpi-0
 Adapter: ACPI interface
 temp1:        +56.0°C  (crit = +127.0°C)
 temp2:        +57.0°C  (crit = +100.0°C)
-</pre>
+```
 
 Apakah kalian dapat mengerti arti dari **temp1**, **temp2**, **temp3**, dan seterusnya?
 
@@ -70,11 +70,12 @@ Untuk mendapatkan temperature CPU, saya mereferensikan dengan value dari **coret
 
 Sekarang, saatnya saya mencari tahu sensor prop apa saja yang dimiliki oleh ThinkPad saya (X61) dan apa makna dibalik **temp1** dan kawan-kawanya.
 
+
 # Pemecahan Masalah
 
 Sebenarnya sudah ada page pada ThinkPad Wiki yang menjelaskan perihal **sensors** ini.
 
-Teman-teman dapat melihatnya di sini, [**Thermal Sensors**](http://www.thinkwiki.org/wiki/Thermal_Sensors){:target="_blank"}.
+Teman-teman dapat melihatnya di sini, [**Thermal Sensors**](http://www.thinkwiki.org/wiki/Thermal_Sensors).
 
 Sayangnya, untuk ThinkPad X61 saya, belum ada keterangan yang jelas mengenai indikator apa-apa saja.
 
@@ -89,15 +90,14 @@ Yang baru terkonfirmasi adalah **temp1**, **temp2**, **temp5**, dan **temp7**.
 | **temp7** | BAT      |
 |-----------|----------|
 
-<br>
 Setelah saya perhatikan, sepertinya, tidak terlalu jauh berbeda dengan milik ThinkPad T60.
 
 Maka, saya pun mencoba mengambil saya file konfigurasinya. Agar sewaktu-waktu untuk seri X61 sudah ada keterangan props yang lebih jelas, tinggal saya ganti.
 
 Kita perlu membuat sebuah file konfigurasi **/etc/sensors.d/tpsensors** agar dapat dibaca oleh **sensors**.
 
-{% highlight_caption /etc/sensors.d/tpsensors %}
-{% highlight lang linenos %}
+```shell
+@filename: /etc/sensors.d/tpsensors
 chip "acpitz-acpi-0"
   label temp1  "CPU_0"
   label temp2  "CPU_1"
@@ -119,12 +119,11 @@ chip "thinkpad-isa-0000"
   label temp14 "temp14"
   label temp15 "temp15"
   label temp16 "temp16"
-{% endhighlight %}
+```
 
-<br>
 Maka, ketika kita menjalakan **sensors**, sekarang **temp1** dan kawan-kawannya telah memiliki label.
 
-<pre>
+```
 coretemp-isa-0000
 Adapter: ISA adapter
 Core 0:       +55.0°C  (high = +100.0°C, crit = +100.0°C)
@@ -159,32 +158,28 @@ acpitz-acpi-0
 Adapter: ACPI interface
 CPU_0:        +56.0°C  (crit = +127.0°C)
 CPU_1:        +56.0°C  (crit = +100.0°C)
-</pre>
+```
 
-<br>
 Selesai!
 
 
 # Tips
 
-{% box_info %}
-<p markdown=1>Ketika menjalankan command **sensors**, maka output akanlangsung ditampilkan sekali.<br>
-Apabila kita ingin output terus diupdate secara periodik, kita dapat menggunakan **watch**</p>
-{% shell_term $ %}
-watch sensors
-{% endshell_term %}
-<p markdown=1>Maka, output akan diupdate setiap 2 detik.</p>
-<p markdown=1>Untuk keluar, dapat menekan kombinasi keyboard <kbd>Ctrl</kbd>+<kbd>C</kbd></p>
-
-{% endbox_info %}
-
-
-
-
-
+> INFO
+> 
+> Ketika menjalankan command **sensors**, maka output akanlangsung ditampilkan sekali.
+> 
+> Apabila kita ingin output terus diupdate secara periodik, kita dapat menggunakan **watch**.
+> 
+> ```
+> $ watch sensors
+> ```
+> 
+> Maka, output akan diupdate setiap 2 detik.
+> 
+> Untuk keluar, dapat menekan kombinasi keyboard <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 
-<br>
 # Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
@@ -198,9 +193,7 @@ Terima kasih.
 (^_^)
 
 
-
-
 # Referensi
 
-1. [http://www.thinkwiki.org/wiki/Thermal_Sensors](http://www.thinkwiki.org/wiki/Thermal_Sensors){:target="_blank"}
+1. [http://www.thinkwiki.org/wiki/Thermal_Sensors](http://www.thinkwiki.org/wiki/Thermal_Sensors)
 <br>Diakses tanggal: 2021/02/26

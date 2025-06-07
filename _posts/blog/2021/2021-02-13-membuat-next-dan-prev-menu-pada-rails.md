@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Membuat Go To Next dan Previous Post Menu pada Blog Post yang Dibangun dengan Rails"
-date: 2021-02-13 18:07
+date: '2021-02-13 18:07'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Rails']
+tags: ['Rails']
 pin:
 hot:
 contributors: []
@@ -25,9 +25,12 @@ Catatan kali ini, saya akan membahas Ruby on Rails dari sisi front-end.
 
 Apabila kita memiliki sebuah fitur blog pada web aplikasi yang kita bangun menggunakan Ruby on Rails, mungkin akan cukup praktis kalau kita dapat menavigasikan halaman blog post dengan go to next & previous post pada halaman di mana saat ini kita berada.
 
-{% image https://i.postimg.cc/yYhJHBtq/gambar-01.gif | 01 %}
+![Gambar 1](https://i.postimg.cc/yYhJHBtq/gambar-01.gif)
+
+Gambar 1. Fitur Go to Next-Prev di post/article
 
 Contohnya seperti gambar di atas, bagian yang saya beri kotak merah.
+
 
 # Pemecahan Masalah
 
@@ -35,14 +38,15 @@ Untuk mengimplementasikan fitur go to next & previous post di atas, sangat mudah
 
 Kita hanya perlu bermain di Model dan juga View template.
 
+
 ## ActiveRecord
 
 Misal, saya memiliki sebuah model bernama **article**.
 
 Saya akan membuat business logic pada **article** model, seperti di bawah ini.
 
-{% highlight_caption app/models/article.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: app/models/article.rb
 class Article < ApplicationRecord
   belongs_to :user
 
@@ -55,7 +59,7 @@ class Article < ApplicationRecord
     self.class.where('id < ?', id).order(id: :desc).limit(1).first
   end
 end
-{% endhighlight %}
+```
 
 Nah, method tersebut tinggal kita gunakan saja.
 
@@ -66,8 +70,8 @@ Anggaplah controllernya bernama **articles_controller**.
 
 Pada Blog post untuk menampilkan halaman dari artikel biasanya terdapat pada action **show**.
 
-{% highlight_caption app/controllers/articles_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: app/controllers/articles_controller.rb
 class ArticlesController < ApplicationController
 
   # ...
@@ -79,30 +83,30 @@ class ArticlesController < ApplicationController
   # ...
 
 end
-{% endhighlight %}
+```
 
 Sekarang tinggal menggunakannya pada view template.
+
 
 ## ActionView
 
 Mengikuti dari **articles_controller** dengan action **show**, artinya kita akan memiliki susunan dari halaman template seperti ini.
 
-<pre>
+```
 .
-├─ app/
+├─ 📂 app/
 │  ├─ ...
-│  └─ views/
-│     ├─ articles/
+│  └─ 📂 views/
+│     ├─ 📂 articles/
 │     │  ├─ ...
-│     │  └─ <mark>show.html.erb</mark>
+│     │  └─ 📄 show.html.erb 👈️
 ...   ...
-</pre>
+```
 
 Nah, tinggal kita gunakan instance variable dari **@article** yang telah kita definisikan di **articles_controller**.
 
-{% highlight_caption app/views/articles/show.html.erb %}
-{% highlight eruby linenos %}
-
+```eruby
+@filename: app/views/articles/show.html.erb
 <!-- ... -->
 
 <!-- For go to next & prev feature -->
@@ -116,17 +120,16 @@ Nah, tinggal kita gunakan instance variable dari **@article** yang telah kita de
     </div>
   </div>
 </div>
-{% endhighlight %}
+```
 
-\*Abaikan nama class **d-flex** dan **justify-content-between**, saya menggunakan Bootstrap 4.
+\* Abaikan nama class **d-flex** dan **justify-content-between**, saya menggunakan Bootstrap 4.
 
 Method **.next** dan **.prev** adalah method yang kita definisikan pada **article** model.
 
 Kalau ingin menggunakan tooltip, dapat menggunakan cara seperti ini.
 
-{% highlight_caption app/views/articles/show.html.erb %}
-{% highlight ruby linenos %}
-
+```eruby
+@filename: app/views/articles/show.html.erb
 <!-- ... -->
 
 <!-- For go to next & prev feature -->
@@ -148,14 +151,11 @@ Kalau ingin menggunakan tooltip, dapat menggunakan cara seperti ini.
     </div>
   </div>
 </div>
-{% endhighlight %}
+```
 
 Selesai!
 
 
-
-
-<br>
 # Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
@@ -169,12 +169,10 @@ Terima kasih.
 (^_^)
 
 
-
-
 # Referensi
 
-1. [stackoverflow.com/questions/1275963/rails-next-post-and-previous-post-links-in-my-show-view-how-to](https://stackoverflow.com/questions/1275963/rails-next-post-and-previous-post-links-in-my-show-view-how-to){:target="_blank"}
+1. [stackoverflow.com/questions/1275963/rails-next-post-and-previous-post-links-in-my-show-view-how-to](https://stackoverflow.com/questions/1275963/rails-next-post-and-previous-post-links-in-my-show-view-how-to)
 <br>Diakses tanggal: 2021/02/13
 
-2. [gorails.com/forum/setting-up-next-post-and-previous-post](https://gorails.com/forum/setting-up-next-post-and-previous-post){:target="_blank"}
+2. [gorails.com/forum/setting-up-next-post-and-previous-post](https://gorails.com/forum/setting-up-next-post-and-previous-post)
 <br>Diakses tanggal: 2021/02/13
