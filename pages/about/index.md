@@ -7,6 +7,8 @@ toc: true
 
 ![Banner](/pages/about/assets/images/contact.png)
 
+<p></p>
+
 **BanditHijo**, tidak seperti yang anda pahami, Bandit (kata ganti orang untuk konotasi yang bersifat negatif) dan Hijo (kata plesetan dari warna hijau).
 
 >**BanditHijo adalah sebuah frase yang tidak memiliki arti selain "nama" itu sendiri.**
