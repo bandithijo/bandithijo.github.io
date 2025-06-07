@@ -51,10 +51,16 @@ nav_bottom:
   - title: Stat
     url: /stat/
 
+
+
 # Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
 plugins:
   - jekyll-feed
-
 tailwindcss:
   config: "./tailwind.config.js"
   css_path: ./_tailwind.css
