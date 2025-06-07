@@ -98,17 +98,16 @@
   }
 
   .markdown h4 {
-    @apply leading-none text-base font-semibold mb-2 mt-6;
+    @apply leading-none text-base font-semibold mb-2 mt-6 pb-2;
   }
 
   .markdown h5 {
-    @apply leading-tight text-sm font-semibold mb-2 mt-6;
+    @apply leading-tight text-base font-semibold mb-2 mt-6 pb-2;
   }
 
   .markdown h6 {
-    @apply leading-tight text-sm font-semibold text-gray-600 mb-2 mt-6;
+    @apply leading-tight text-base font-semibold mb-2 mt-6 pb-2;
   }
-
 
   .markdown h1 a,
   .markdown h2 a,
@@ -213,10 +212,10 @@
   }
 
   .markdown .line-number {
-    @apply inline-block min-w-6 mr-4 text-right text-gray-400 select-none;
+    @apply inline-block min-w-4 mr-4 text-right text-gray-400 select-none;
   }
 
   .markdown .code-line {
-    @apply inline font-mono;
+    @apply inline font-mono pr-4;
   }
 }
