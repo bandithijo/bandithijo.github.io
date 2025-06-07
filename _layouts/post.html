@@ -41,8 +41,15 @@ document.addEventListener("DOMContentLoaded", () => {
       lines.pop();
     }
 
+    // Escape HTML characters and format lines
+    const escapeHTML = (str) =>
+      str.replace(/&/g, "&amp;")
+         .replace(/</g, "&lt;")
+         .replace(/>/g, "&gt;")
+         .replace(/ /g, "&nbsp;");
+
     const numberedLines = lines.map((line, idx) => {
-      return `<span class="line"><span class="line-number">${idx + 1}</span><span class="code-line">${line.replace(/ /g, '&nbsp;')}</span></span>`;
+      return `<span class="line"><span class="line-number">${idx + 1}</span><span class="code-line">${escapeHTML(line)}</span></span>`;
     }).join("");
 
     block.innerHTML = numberedLines;
