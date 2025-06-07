@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Date Time Picker dengan Tempus Dominus Bootstrap 4 dan simple_form di Ruby on Rails 6"
-date: 2022-01-20 05:54
+date: '2022-01-20 05:54'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Rails', 'Javascript']
+tags: ['Rails', 'JavaScript']
 pin:
 hot:
 contributors: []
@@ -25,11 +25,13 @@ Ketidakseragaman style dari date time picker pada browser.
 
 > *Unsupporting browsers gracefully degrade to a text input, but this creates problems in **consistency of user interface** (the presented controls are different) and data handling.* [1]
 
-![gambar_1]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/XqVyw4DD/gambar-01.gif" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 1 - Default Date picker pada Google Chrome (Kiri) dan Firefox (Kanan) yang memiliki style yang berbeda</p>
+![Gambar 1](https://i.postimg.cc/XqVyw4DD/gambar-01.gif)
 
-![gambar_2]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/L821WhrX/gambar-03.png" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 2 - Default Date Picker dari Google Chrome (Kiri) & Firefox (Kanan)</p>
+Gambar 1. Default Date picker pada Google Chrome (Kiri) dan Firefox (Kanan) yang memiliki style yang berbeda
+
+![Gambar 2](https://i.postimg.cc/L821WhrX/gambar-03.png)
+
+Gambar 2. Default Date Picker dari Google Chrome (Kiri) & Firefox (Kanan)
 
 Gambar 1 & 2 di atas menggunakan `date_field`.
 
@@ -40,8 +42,8 @@ Apabila menggunakan `datetime_field`, Chrome juga dapat memberikan time selectio
 
 Menyeragamkan date time picker pada input `date_field`.
 
-{% highlight_caption app/views/tasks/_form.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+@filename: app/views/tasks/_form.html.erb
 <%= form_with(model: task) do |form| %>
   <!-- ... -->
 
@@ -52,12 +54,12 @@ Menyeragamkan date time picker pada input `date_field`.
 
   <!-- ... -->
 <% end %>
-{% endhighlight %}
+```
 
 Kalau ingin mengikutkan time, dapat menggunakan `datetime_field`.
 
-{% highlight_caption app/views/tasks/_form.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+@filename: app/views/tasks/_form.html.erb
 <%= form_with(model: task) do |form| %>
   <!-- ... -->
 
@@ -68,7 +70,7 @@ Kalau ingin mengikutkan time, dapat menggunakan `datetime_field`.
 
   <!-- ... -->
 <% end %>
-{% endhighlight %}
+```
 
 
 # Instalasi
@@ -79,13 +81,13 @@ Pada web dokumentasi dari Tempus Dominus - Bootstrap 4, terdapat beberapa cara u
 
 Namun, terlebih dahulu Rails project yang digunakan sebaiknya perlu dipasang Bootstrap 4.
 
-Kalau belum, dapat melihat caranya di sini, [**Memasang Bootstrap 4 pada Rails 6 dengan Yarn**](/blog/memasang-bootstrap-pada-rails-menggunakan-yarn){:target="_blank"}.
+Kalau belum, dapat melihat caranya di sini, [**Memasang Bootstrap 4 pada Rails 6 dengan Yarn**](/blog/memasang-bootstrap-pada-rails-menggunakan-yarn)
 
 Setelah Bootstrap 4 selesai dipasang & disetting pada project dengan Rails 6, kemudian baru pasang **tempusdominus-bootstrap4** & **moment.js** library.
 
-{% shell_term $ %}
-yarn add tempusdominus-bootstrap-4 moment
-{% endshell_term %}
+```
+$ yarn add tempusdominus-bootstrap-4 moment
+```
 
 Tunggu proses instalasi selesai.
 
@@ -104,8 +106,8 @@ Done in 5.79s.
 
 Kalau sudah selesai, kedua package tersebut akan ditambahkan ke dalam file `package.json` yang ada di root project direktori.
 
-{% highlight_caption package.json %}
-{% highlight json linenos %}
+```json
+@filename: package.json
 {
   "name": "datetimepicker-with-tempusdominus-bootstrap-4",
   "private": true,
@@ -128,29 +130,29 @@ Kalau sudah selesai, kedua package tersebut akan ditambahkan ke dalam file `pack
     "webpack-dev-server": "^3"
   }
 }
-{% endhighlight %}
+```
 
 
 ## 2. simple_form gem
 
-Pasang simple_form, lihat versi terbaru dari halaman [rubygems:simple_form](https://rubygems.org/gems/simple_form){:target="_blank"}.
+Pasang simple_form, lihat versi terbaru dari halaman [rubygems:simple_form](https://rubygems.org/gems/simple_form).
 
-{% highlight_caption Gemfile %}
-{% highlight ruby linenos %}
+```ruby
+@filename: Gemfile
 gem 'simple_form', '~> 5.1'
-{% endhighlight %}
+```
 
 Install dengan,
 
-{% shell_term $ %}
-bundle install
-{% endshell_term %}
+```
+$ bundle install
+```
 
 Jalankan generator untuk memasang beberapa file pendukung.
 
-{% shell_term $ %}
-rails generate simple_form:install --bootstrap
-{% endshell_term %}
+```
+$ rails generate simple_form:install --bootstrap
+```
 
 `--bootstrap`, karena saya menggunakan Bootstrap.
 
@@ -181,8 +183,8 @@ For usage examples and documentation, see:
 
 Definisikan `moment` pada webpacker environment agar dapat dikenali oleh aplikasi.
 
-{% highlight_caption config/webpack/environment.js %}
-{% highlight javascript linenos %}
+```javascript
+@filename: config/webpack/environment.js
 const { environment } = require('@rails/webpacker')
 
 const webpack = require("webpack")
@@ -195,7 +197,7 @@ environment.plugins.append("Provide", new webpack.ProvidePlugin({
 }))
 
 module.exports = environment
-{% endhighlight %}
+```
 
 Baris **9**, adalah pendefinisian `moment` yang perlu dilakukan.
 
@@ -204,8 +206,8 @@ Baris **9**, adalah pendefinisian `moment` yang perlu dilakukan.
 
 Kita perlu melakukan **import** terhadapat **tempusdominus-bootstrap-4** dan **moment** ke dalam aplikasi.
 
-{% highlight_caption app/javascript/packs/application.js %}
-{% highlight javascript linenos %}
+```javascript
+@filename: app/javascript/packs/application.js
 // This file is automatically compiled by Webpack, along with any other files
 // present in this directory. You're encouraged to place your actual application logic in
 // a relevant structure within app/javascript and only use these pack files to reference
@@ -232,7 +234,7 @@ document.addEventListener('turbolinks:load', () => {
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
-{% endhighlight %}
+```
 
 Baris **14**-**15** dan **17**-**22**, adalah bagian yang perlu ditambahkan.
 
@@ -245,20 +247,21 @@ Baris **14**-**15** dan **17**-**22**, adalah bagian yang perlu ditambahkan.
 
 ## 3. Konfigurasi Stylesheet
 
-Kalau menggunakan cara pemasangan Bootstrap 4 seperti yang saya gunakan, [Memasang Bootstrap 4 pada Rails 6 dengan Yarn](http://localhost:4000/blog/memasang-bootstrap-pada-rails-menggunakan-yarn#3-konfigurasi-stylesheet){:target="_blank"}, maka kita perlu mengimport stylesheet untuk tempusdominus-bootstrap-4 ke dalam file **custom.scss**.
+Kalau menggunakan cara pemasangan Bootstrap 4 seperti yang saya gunakan, [Memasang Bootstrap 4 pada Rails 6 dengan Yarn](http://localhost:4000/blog/memasang-bootstrap-pada-rails-menggunakan-yarn#3-konfigurasi-stylesheet), maka kita perlu mengimport stylesheet untuk tempusdominus-bootstrap-4 ke dalam file **custom.scss**.
 
-{% highlight_caption app/assets/stylesheets/custom.scss %}
-{% highlight css linenos %}
+```css
+@filename: app/assets/stylesheets/custom.scss
 @import 'bootstrap/scss/bootstrap';
 @import 'tempusdominus-bootstrap-4/src/sass/tempusdominus-bootstrap-4';
-{% endhighlight %}
+```
 
 Baris **2**, adalah bagian yang perlu ditambahkan.
 
-{% box_pertanyaan %}
-<p markdown=1><b>Darimana saya mengetahui lokasi stylesheet dari Javascript library yang dipasang?</b></p>
-<p markdown=1>Telusuri file stylesheet dari Javascript library yang digunakan, di dalam direktori **node_modules** (dalam root project direktori).</p>
-{% endbox_pertanyaan %}
+> PERTANYAAN?
+> 
+> **Darimana saya mengetahui lokasi stylesheet dari Javascript library yang dipasang?**
+> 
+> Telusuri file stylesheet dari Javascript library yang digunakan, di dalam direktori **node_modules** (dalam root project direktori).
 
 
 # Implementasi
@@ -267,8 +270,9 @@ Kalau menggunakan **simple_form**,
 
 Langsung saja ke bagian view template, dalam kasus ini, saya memodifikasi inputan date pada file `_form.html.erb`.
 
-{% highlight_caption app/views/tasks/_form.html.erb %}
-{% highlight eruby linenos %}
+{% raw %}
+```eruby
+@filename: app/views/tasks/_form.html.erb
 <div class="row">
   <div class="col px-3">
 
@@ -304,7 +308,8 @@ Langsung saja ke bagian view template, dalam kasus ini, saya memodifikasi inputa
 
   </div>
 </div>
-{% endhighlight %}
+```
+{% endraw %}
 
 Baris **12**-**29**, adalah input tanggal yang dibuat dari **tempusdominus-bootstrap-4**.
 
@@ -318,20 +323,22 @@ Baris **6**-**10**, adalah input tanggal yang tampilannya akan mengikuti browser
 
 `wrapper: false`, secara default, `.input` sudah dibungkus dengan `<div>`. Set *false* untuk mendisablenya. Apabila tidak, terkadang dapat menyebabkan permasalahan pada tampilan input field yang berubah dari bentuk aslinya.
 
-{% box_perhatian %}
-<p markdown=1>**Perhatikan!** Gunakan `text_field` dan bukan `date_field`.</p>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> **Perhatikan!** Gunakan `text_field` dan bukan `date_field`.
 
 Selesai!
 
 
 # Hasil
 
-![gambar_3]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/85R7P4SS/gambar-02.gif" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 3 - Date picker yang sudah menggunakan tempusdominus-bootstrap-4</p>
+![Gambar 3](https://i.postimg.cc/85R7P4SS/gambar-02.gif)
 
-![gambar_4]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/VkgCPm8F/gambar-04.png" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 4 - Date picker yang sudah menggunakan tempusdominus-bootstrap-4 </p>
+Gambar 3. Date picker yang sudah menggunakan tempusdominus-bootstrap-4
+
+![Gambar 4](https://i.postimg.cc/VkgCPm8F/gambar-04.png)
+
+Gambar 4. Date picker yang sudah menggunakan tempusdominus-bootstrap-4
 
 Dapat dilihat, baik pada Google Chrome (Kiri) dan Firefox (Kanan), date input field diantara keduanya memiliki tampilan yang serupa.
 
@@ -340,7 +347,7 @@ Selain itu, date format yang ditampilkan juga memiliki format **YYYY-MM-DD**.
 
 # Demo Project
 
-[github:demo_datetimepicker_with_tempusdominus-bootstrap-4_simple_form](https://github.com/bandithijo/demo_datetimepicker_with_tempusdominus-bootstrap-4_simple_form){:target="_blank"}
+[github:demo_datetimepicker_with_tempusdominus-bootstrap-4_simple_form](https://github.com/bandithijo/demo_datetimepicker_with_tempusdominus-bootstrap-4_simple_form)
 
 
 # Pesan Penulis
@@ -356,14 +363,14 @@ Terima kasih.
 
 # Referensi
 
-1. [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date){:target="_blank"}
+1. [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date)
 <br>Diakses tanggal: 2022/01/20
 
-1. [https://blog.nightly.mozilla.org/2017/06/12/datetime-inputs-enabled-on-nightly/](https://blog.nightly.mozilla.org/2017/06/12/datetime-inputs-enabled-on-nightly/){:target="_blank"}
+1. [https://blog.nightly.mozilla.org/2017/06/12/datetime-inputs-enabled-on-nightly/](https://blog.nightly.mozilla.org/2017/06/12/datetime-inputs-enabled-on-nightly/)
 <br>Diakses tanggal: 2022/01/20
 
-1. [https://getdatepicker.com/5-4/Usage/](https://getdatepicker.com/5-4/Usage/){:target="_blank"}
+1. [https://getdatepicker.com/5-4/Usage/](https://getdatepicker.com/5-4/Usage/)
 <br>Diakses tanggal: 2022/01/20
 
-1. [https://github.com/heartcombo/simple_form](https://github.com/heartcombo/simple_form){:target="_blank"}
+1. [https://github.com/heartcombo/simple_form](https://github.com/heartcombo/simple_form)
 <br>Diakses tanggal: 2022/01/20

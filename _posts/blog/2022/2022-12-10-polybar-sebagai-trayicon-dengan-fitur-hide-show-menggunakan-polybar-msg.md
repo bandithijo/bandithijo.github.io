@@ -21,7 +21,7 @@ description: "Tidak dipungkiri, beberapa aplikasi masih memerlukan trayicon. Bah
 
 # Latar Belakang Masalah
 
-Saya sudah pernah menggunakan metode konvensional untuk melakukan hide/show pada Polybar sebagai trayicon di artikel ini, [**Polybar, Bar yang Mudah Dikonfig, Praktis, dan Mudah Dikustomisasi**](/blog/polybar-mudah-dikonfig-dan-praktis#showhide-bar-untuk-trayicon-konvensional){:target="_blank"}
+Saya sudah pernah menggunakan metode konvensional untuk melakukan hide/show pada Polybar sebagai trayicon di artikel ini, [**Polybar, Bar yang Mudah Dikonfig, Praktis, dan Mudah Dikustomisasi**](/blog/polybar-mudah-dikonfig-dan-praktis#showhide-bar-untuk-trayicon-konvensional)
 
 Terdapat banyak sekali kelemahan dari menggunakan pendekatan tersebut.
 
@@ -44,8 +44,7 @@ Pada segment atau section bar yang dijadikan sebagai trayicon, tambahkan attribu
 Contoh seperti yang saya pergunakan,
 
 ```dosini
-; ~/.config/polybar/config.ini
-
+@filename: ~/.config/polybar/config.ini
 [colors]
 foreground = ${xrdb:foreground:}
 background = #001E1E1E
@@ -165,8 +164,7 @@ $ pidof polybar
 Nah, kalau sudah berhasil menggunakan command `polybar-msg` untuk hide & show di Terminal, tinggal mengaplikasikannya pada applikasi hotkey yang kalian gunakan. Saya menggunakan **sxhkd**.
 
 ```conf
-# ~/.config/sxhkd/sxhkdrc
-
+@filename: ~/.config/sxhkd/sxhkdrc
 # polybar tray
 super + shift + ~b
     polybar-msg cmd {show, hide}
@@ -194,8 +192,8 @@ Terima kasih sudah mampir yaa.
 
 # Referensi
 
-1. [https://www.reddit.com/r/Polybar/comments/ak246w/polybar_hide_show_on_key_press_release_bspwmsxhkd/](https://www.reddit.com/r/Polybar/comments/ak246w/polybar_hide_show_on_key_press_release_bspwmsxhkd/){:target="_blank"}
+1. [https://www.reddit.com/r/Polybar/comments/ak246w/polybar_hide_show_on_key_press_release_bspwmsxhkd/](https://www.reddit.com/r/Polybar/comments/ak246w/polybar_hide_show_on_key_press_release_bspwmsxhkd/)
 <br>Diakses tanggal: 2022/12/10
 
-1. [https://github.com/polybar/polybar/wiki#launching-the-bar-in-your-wms-bootstrap-routine](https://github.com/polybar/polybar/wiki#launching-the-bar-in-your-wms-bootstrap-routine){:target="_blank"}
+1. [https://github.com/polybar/polybar/wiki#launching-the-bar-in-your-wms-bootstrap-routine](https://github.com/polybar/polybar/wiki#launching-the-bar-in-your-wms-bootstrap-routine)
 <br>Diakses tanggal: 2022/12/10

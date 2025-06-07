@@ -35,9 +35,10 @@ Penggunaan dari GPG sangat kompleks sekali. Di catatan kali ini, saya hanya akan
 
 Target file bisa apa saja, misal: gambar, video, file dari Miscrosoft Word, archive (zip, tar, dst.), dll.
 
-Sebagai contoh file atau dokumen yang akan saya enkripsi adalah sebuah file bertipe plain text dengan ekstension Markdown. Misalnya, `tabel_users.md`.
+Sebagai contoh file atau dokumen yang akan saya enkripsi adalah sebuah file bertipe plain text dengan ekstension Markdown.
 
 ```markdown
+@filename: tabel_users.md
 | id  | email                                | password                           |
 |-----|--------------------------------------|------------------------------------|
 | 1   | kyle_kunde@predovic-gorczany.com     | mjvfPFh9E1WCUMPY2H5uLNRxvw42MdJRSH |
@@ -191,8 +192,7 @@ $ gpg --output tabel_users.md --decrypt tabel_users.md.gpg
 Tambahkan baris di bawah ini pada salah satu file configurasi ranger `~/.config/ranger/rifle.conf`.
 
 ```conf
-# ~/.config/ranger/rifle.conf
-
+@filename: ~/.config/ranger/rifle.conf
 # gnupg
 ext gpg, has gpg = gpg --decrypt "$1" | less
 ```
@@ -215,14 +215,14 @@ Terima kasih sudah mampir yaa.
 
 Saya juga pernah menulis terkait GnuPG di catatan sebelumnya.
 
-1. [Memperbaiki GPG: Warning: Unsafe Permissions on Homedir](/blog/memperbaiki-gpg-permissions-on-homedir){:target="_blank"}
-1. [Generate Private dan Public GPG Key Sendiri](/blog/generate-gpg-key){:target="_blank"}
-1. [Menambahkan Email Kedua ke dalam GPG Key](/blog/menambahkan-email-lain-kedalam-gpgkey){:target="_blank"}
+1. [Memperbaiki GPG: Warning: Unsafe Permissions on Homedir](/blog/memperbaiki-gpg-permissions-on-homedir)
+1. [Generate Private dan Public GPG Key Sendiri](/blog/generate-gpg-key)
+1. [Menambahkan Email Kedua ke dalam GPG Key](/blog/menambahkan-email-lain-kedalam-gpgkey)
 
 # Referensi
 
-1. [https://www.gnupg.org/](https://www.gnupg.org/){:target="_blank"}
+1. [https://www.gnupg.org/](https://www.gnupg.org/)
 <br>Diakses tanggal: 2022/08/20
 
-1. [https://www.gnupg.org/gph/en/manual/x110.html](https://www.gnupg.org/gph/en/manual/x110.html){:target="_blank"}
+1. [https://www.gnupg.org/gph/en/manual/x110.html](https://www.gnupg.org/gph/en/manual/x110.html)
 <br>Diakses tanggal: 2022/08/20

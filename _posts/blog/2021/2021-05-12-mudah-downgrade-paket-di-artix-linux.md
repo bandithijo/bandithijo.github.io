@@ -1,25 +1,27 @@
 ---
 layout: 'post'
 title: "Mudah Downgrade Paket di Artix Linux"
-date: 2021-05-12 22:13
+date: '2021-05-12 22:13'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Artix Linux']
+tags: ['Artix Linux']
 pin:
 hot:
 contributors: []
 description: "Menggunakan distribusi yang menggunakan metode rilis 'rolling' mungkin merupakan kekhawatiran bagi sebagian besar GNU/Linux user. Mereka sering menyebut distro yang memiliki paket-paket yang tidak stabil. Apakah benar? Saya senyumin aja. Apakah saya pernah memiliki masalah dengan paket terbaru? Tentu. Bagaimana cara saya mengatasinya? Downgrade. Catatan ini adalah tips menggunakan tool yang bernama 'downgrade' yang defaultnya untuk Arch Linux pada Artix Linux."
 ---
 
-{% box_perhatian %}
-<p markdown=1>Saya, sebagai penulis, **tidak bertanggung jawab** atas segala bentuk kejadian buruk yang menimpa sistem kalian.</p>
-<p markdown=1>Apabila kalian mengikuti catatan ini, berarti kalian **telah menyetujui** bahwa **segala bentuk risiko atas masalah** yang terjadi karena mengikuti catatan ini, adalah **tanggung jawab kalian sepenuhnya**.</p>
-<p markdown=1>Happy Hacking!</p>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> Saya, sebagai penulis, **tidak bertanggung jawab** atas segala bentuk kejadian buruk yang menimpa sistem kalian.
+> 
+> Apabila kalian mengikuti catatan ini, berarti kalian **telah menyetujui** bahwa **segala bentuk risiko atas masalah** yang terjadi karena mengikuti catatan ini, adalah **tanggung jawab kalian sepenuhnya**.
+> 
+> Happy Hacking!
 
 # Latar Belakang Masalah
 
@@ -39,15 +41,15 @@ Catatan ini adalah tips menggunakan tool yang bernama 'downgrade' yang defaultny
 
 Terdapat setidaknya 2 tools yang dapat kita gunakan, yaitu:
 
-1. [**downgrader-git**](https://aur.archlinux.org/packages/downgrader-git/){:target="_blank"}<sup>AUR</sup>
+1. [**downgrader-git**](https://aur.archlinux.org/packages/downgrader-git/)<sup>AUR</sup>
 
-2. [**downgrade**](https://aur.archlinux.org/packages/downgrade/){:target="_blank"}<sup>AUR</sup>
+2. [**downgrade**](https://aur.archlinux.org/packages/downgrade/)<sup>AUR</sup>
 
 Perbedaan antar keduanya, kurang begitu jelas buat saya. Teman-teman dapat mencari tahu sendiri dan dapat memilih antara keduanya. Namun, yang saya pergunakan pada catatan ini adalah tool yang kedua, yaitu **downgrade**.
 
-{% shell_term $ %}
-yay -S downgrade
-{% endshell_term %}
+```
+$ yay -S downgrade
+```
 
 
 ## Cara Penggunaan
@@ -60,9 +62,9 @@ Saya anggap, teman-teman sudah familiar dengan aturan berkaitan degan paket (lib
 >
 > **That is why partial upgrades are not supported**. Do not use `pacman -Sy package` or any equivalent such as `pacman -Sy` followed by `pacman -S package`. Note that `pacman -Syuw` does imply the same risks like `pacman -Sy`, as it will update the pacman sync database without installing the newer packages. Always upgrade (with `pacman -Syu`) before installing a package. Note that if `pacman -Syu` does not perform the upgrade because of an error, the end result is the same as running `pacman -Sy`. Therefore, the error must be resolved and the upgrade operation completed as soon as possible. Be very careful when using `IgnorePkg` and `IgnoreGroup` for the same reason. If the system has locally built packages (such as AUR packages), users will need to rebuild them when their dependencies receive a soname bump.
 >
-> Sumber: [wiki.archlinux.org/title/System_maintenance#Partial_upgrades_are_unsupported](https://wiki.archlinux.org/title/System_maintenance#Partial_upgrades_are_unsupported){:target="_blank"}
+> Sumber: [wiki.archlinux.org/title/System_maintenance#Partial_upgrades_are_unsupported](https://wiki.archlinux.org/title/System_maintenance#Partial_upgrades_are_unsupported)
 
-Jadi... teliti, cermat dan pintar-pintar lah dalam proses downgrade.
+Jadi... teliti, cermat, dan pintar-pintar lah dalam proses downgrade.
 
 Proses downgrade bukan hal yang mustahil ataupun sulit dilakukan, namun memerlukan ketelitian dan kecermatan paket-paket mana saja yang terkait dengan versi tertentu.
 
@@ -74,27 +76,27 @@ Okelah, balik ke topik Artix Linux karena catatan ini bukan membahas secara mend
 
 Ya berbeda.
 
-Pada Arch Linux, proses downgrade mengambil package dari repositori arsip yang berada di [**Arch Linux Archive**](https://archive.archlinux.org/){:target="_blank"}. Yang mana alamat ini sudah menjadi default dari option `--ala-url`, sehingga tanpa perlu menggunakan option ini, sudah otomatis diarahkan ke alamat tersebut.
+Pada Arch Linux, proses downgrade mengambil package dari repositori arsip yang berada di [**Arch Linux Archive**](https://archive.archlinux.org/). Yang mana alamat ini sudah menjadi default dari option `--ala-url`, sehingga tanpa perlu menggunakan option ini, sudah otomatis diarahkan ke alamat tersebut.
 
-Namun, pada Artix Linux, tentu saja kita harus mengarahkan alamat arsip tersebut ke alamat arsip untuk Artix Linux, yang beralamat di [**Artix Linux Archive**](https://archive.artixlinux.org/){:target="_blank"}.
+Namun, pada Artix Linux, tentu saja kita harus mengarahkan alamat arsip tersebut ke alamat arsip untuk Artix Linux, yang beralamat di [**Artix Linux Archive**](https://archive.artixlinux.org/).
 
 Seperti ini,
 
 **Single package**
 
-{% shell_term $ %}
-sudo downgrade --ala-url "https://archive.artixlinux.org" &lt;package&gt;
-{% endshell_term %}
+```
+$ sudo downgrade --ala-url "https://archive.artixlinux.org" <package>
+```
 
 **Multiple packages**
 
-{% shell_term $ %}
-sudo downgrade --ala-url "https://archive.artixlinux.org" &lt;package1&gt; &lt;package2&gt; &lt;package3&gt;
-{% endshell_term %}
+```
+$ sudo downgrade --ala-url "https://archive.artixlinux.org" <package1> <package2> <package3>
+```
 
 ## Kapan Harus Menggunakan ala-url ?
 
-{% text_latin Sedang dalam proses riset... %}
+_Sedang dalam proses riset..._
 
 ## Contoh Penggunaan
 
@@ -103,9 +105,9 @@ Misal, kita mau downgrade kernel **linux**. Saya mencontohkan package **linux** 
 <br>
 **Downgrade linux di Arch Linux**
 
-{% shell_term $ %}
-sudo downgrade linux
-{% endshell_term %}
+```
+$ sudo downgrade linux
+```
 
 <pre>
 Available packages:
@@ -126,9 +128,9 @@ select a package by number:
 <br>
 **Downgrade linux di Artix Linux**
 
-{% shell_term $ %}
-sudo downgrade --ala-url "https://archive.artixlinux.org" linux
-{% endshell_term %}
+```
+$ sudo downgrade --ala-url "https://archive.artixlinux.org" linux
+```
 
 <pre>
 Available packages:
@@ -149,11 +151,9 @@ select a package by number:
 
 Cara penggunaan **downgrade** lebih lengkapnya, dapat teman-teman baca di:
 
-{% shell_term $ %}
-man downgrade
-{% endshell_term %}
-
-
+```
+$ man downgrade
+```
 
 
 # Pesan Penulis
@@ -171,11 +171,11 @@ Terima kasih.
 
 # Referensi
 
-1. [wiki.archlinux.org/title/Downgrading_packages](https://wiki.archlinux.org/title/Downgrading_packages){:target="_blank"}
+1. [wiki.archlinux.org/title/Downgrading_packages](https://wiki.archlinux.org/title/Downgrading_packages)
 <br>Diakses tanggal: 2021/05/12
 
-2. [wiki.archlinux.org/title/Downgrading_packages](https://wiki.archlinux.org/title/Downgrading_packages){:target="_blank"}
+2. [wiki.archlinux.org/title/Downgrading_packages](https://wiki.archlinux.org/title/Downgrading_packages)
 <br>Diakses tanggal: 2021/05/12
 
-3. [archive.artixlinux.org/](https://archive.artixlinux.org/){:target="_blank"}
+3. [archive.artixlinux.org/](https://archive.artixlinux.org/)
 <br>Diakses tanggal: 2021/05/12

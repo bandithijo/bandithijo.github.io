@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Menjalankan Distro Linux yang Lain dengan Distrobox di Fedora Linux"
-date: 2022-01-21 17:41
+date: '2022-01-21 17:41'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Container']
+tags: ['Distrobox', 'Container']
 pin:
 hot:
 contributors: []
@@ -26,7 +26,7 @@ Distrobox adalah tool yang akan menjembatani kita masuk ke dalam distribusi lain
 
 ## Sekilas tentang Distrobox
 
-Project Distrobox digaungi oleh [**Lucas Di Maio (89luca89)**](https://github.com/89luca89/){:target="_blank"} seorang Computer Scientist yang tertarik dengan unix sistem, devops, machine learning dan cyber security dari Universitas of Rome, La Sapienza. [1]
+Project Distrobox digaungi oleh [**Lucas Di Maio (89luca89)**](https://github.com/89luca89/) seorang Computer Scientist yang tertarik dengan unix sistem, devops, machine learning dan cyber security dari Universitas of Rome, La Sapienza. [1]
 
 Distrobox menggunakan **podman** atau **docker** untuk membantu kita dalam mempermudah proses membuat container menggunakan image container dari distribusi yang tersedia. Container yang dibuat bukan sembarang container. Namun, container yang dibuat dengan Distrobox akan memiliki integrasi yang baik dengan host sistem (distribusi yang kita gunakan). Seperti: sharing HOME direktori, external storage, external USB devices, and graphical apps (X11/Wayland), dan juga audio. [2]
 
@@ -41,10 +41,10 @@ Maka, untuk menyelesaikan objektif dari catatan ini, saya memilih menggunakan co
 
 Beberapa dari aplikasi tersebut, antara lain:
 
-1. [**Spotify**](https://aur.archlinux.org/packages/spotify/){:target="_blank"}, A proprietary music streaming service
-1. [**Beekeeper Studio**](https://aur.archlinux.org/packages/beekeeper-studio-bin/){:target="_blank"}, Modern and easy to use SQL client for MySQL, Postgres, SQLite, SQL Server, and more
-1. [**Figma Linux**](https://aur.archlinux.org/packages/figma-linux/){:target="_blank"}, The collaborative interface design tool. Unofficial Figma desktop client for Linux
-1. [**WhatsApp Nativevier**](https://aur.archlinux.org/packages/whatsapp-nativefier/){:target="_blank"}, WhatsApp desktop built with nativefier (electron)
+1. [**Spotify**](https://aur.archlinux.org/packages/spotify/), A proprietary music streaming service
+1. [**Beekeeper Studio**](https://aur.archlinux.org/packages/beekeeper-studio-bin/), Modern and easy to use SQL client for MySQL, Postgres, SQLite, SQL Server, and more
+1. [**Figma Linux**](https://aur.archlinux.org/packages/figma-linux/), The collaborative interface design tool. Unofficial Figma desktop client for Linux
+1. [**WhatsApp Nativevier**](https://aur.archlinux.org/packages/whatsapp-nativefier/), WhatsApp desktop built with nativefier (electron)
 
 
 # Instalasi
@@ -137,9 +137,9 @@ $ distrobox-list
 ```
 
 ```
- ID           | NAME                      | STATUS          | IMAGE
- ba3ee7918d87 | arch-distrobox            | Created         | docker.io/library/archlinux:latest
- 59b59d5dcabc | fedora-toolbox-35         | Created         | registry.fedoraproject.org/fedora-toolbox:35
+ID           | NAME                      | STATUS          | IMAGE
+ba3ee7918d87 | arch-distrobox            | Created         | docker.io/library/archlinux:latest
+59b59d5dcabc | fedora-toolbox-35         | Created         | registry.fedoraproject.org/fedora-toolbox:35
 ```
 
 
@@ -310,8 +310,9 @@ Setelah selesai, kita bisa menjalankan `neofetch`.
 [bandithijo@arch-distrobox ~]$ █
 ```
 
-![gambar_1]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/d1b3L9P6/gambar-01.png" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 1 - Shell default host system (kiri) & Shell pada arch-distrobox container (kanan)</p>
+![Gambar 1](/assets/images/posts/2022/2022-01-21-01-gambar-01.png)
+
+Gambar 1. Shell default host system (kiri) & Shell pada arch-distrobox container (kanan)
 
 <br>
 #### Case 2: gping
@@ -363,8 +364,9 @@ $ gping google.com
 
 Berikut ini demonstrasinya,
 
-![gambar_2]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/9X8fsVnV/gambar-02.gif" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 2 - Demonstrasi menjalankan gping hasil export dari distrobox-export</p>
+![Gambar 2](/assets/images/posts/2022/2022-01-21-01-gambar-02.gif)
+
+Gambar 2. Demonstrasi menjalankan gping hasil export dari distrobox-export
 
 Kalau file `gping` yang ada di `~/.local/bin/gping` kita buka, isiny akan seperti ini,
 
@@ -478,8 +480,9 @@ StartupWMClass=spotify
 
 Berikut ini demonstrasinya,
 
-![gambar_3]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/dtG884Bz/gambar-03.gif" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 3 - Demonstrasi pemasangan Spotify menggunakan yay dengan Distrobox</p>
+![Gambar 3](/assets/images/posts/2022/2022-01-21-01-gambar-03.gif)
+
+Gambar 3. Demonstrasi pemasangan Spotify menggunakan yay dengan Distrobox
 
 <br>
 #### Case 2: Beekeeper Studio (AppImage)
@@ -528,8 +531,9 @@ Atau, tinggal kita export agar dapat dipanggil lebih mudah dari host system.
 
 Berikut ini demonstrasinya,
 
-![gambar_4]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/WzWxSsT1/gambar-04.gif" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 4 - Demonstrasi pemasangan Beekeeper Studio menggunakan yay pada Distrobox</p>
+![Gambar 4](/assets/images/posts/2022/2022-01-21-01-gambar-04.gif)
+
+Gambar 4. Demonstrasi pemasangan Beekeeper Studio menggunakan yay pada Distrobox
 
 
 ## Ekspor Aplikasi dari Container ke Host
@@ -752,9 +756,9 @@ Panduan lebih lengkapnya dapat dilihat di `$ podman system prune --help`.
 
 Tentu saja, catatan ini tidak dapat mengcover semua dari dokumentasi Distrobox:
 
-1. untuk melihat tips-tips yang lain dapat mengunjungi halaman [**github:distrobox:useful tips**](https://github.com/89luca89/distrobox/blob/main/docs/useful_tips.md){:target="_blank"}
+1. untuk melihat tips-tips yang lain dapat mengunjungi halaman [**github:distrobox:useful tips**](https://github.com/89luca89/distrobox/blob/main/docs/useful_tips.md)
 
-1. untuk melihat beberapa contoh penggunaan yang lain dapat mengunjungi halaman [**github:distrobox:usage**](https://github.com/89luca89/distrobox/blob/main/docs/usage/usage.md){:target="_blank"}
+1. untuk melihat beberapa contoh penggunaan yang lain dapat mengunjungi halaman [**github:distrobox:usage**](https://github.com/89luca89/distrobox/blob/main/docs/usage/usage.md)
 
 
 # Pesan Penulis
@@ -770,11 +774,11 @@ Terima kasih.
 
 # Referensi
 
-1. [https://twitter.com/LucaDiMaio11](https://twitter.com/LucaDiMaio11){:target="_blank"}
+1. [https://twitter.com/LucaDiMaio11](https://twitter.com/LucaDiMaio11)
 <br>Diakses tanggal: 2022/01/22
 
-1. [https://github.com/89luca89/distrobox](https://github.com/89luca89/distrobox){:target="_blank"}
+1. [https://github.com/89luca89/distrobox](https://github.com/89luca89/distrobox)
 <br>Diakses tanggal: 2022/01/22
 
-1. [https://fedoramagazine.org/run-distrobox-on-fedora-linux/](https://fedoramagazine.org/run-distrobox-on-fedora-linux/){:target="_blank"}
+1. [https://fedoramagazine.org/run-distrobox-on-fedora-linux/](https://fedoramagazine.org/run-distrobox-on-fedora-linux/)
 <br>Diakses tanggal: 2022/01/22

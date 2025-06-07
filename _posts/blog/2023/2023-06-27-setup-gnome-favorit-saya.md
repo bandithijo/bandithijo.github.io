@@ -58,6 +58,7 @@ $ sudo touch /etc/dconf/db/gdm.d/02-logo
 Isi dengan konfigurasi di bawah ini
 
 ```conf
+@filename: /etc/dconf/db/gdm.d/02-logo
 [org/gnome/login-screen]
 logo='/usr/share/pixmaps/archlinux-logo-text-dark.svg'
 ```
@@ -77,6 +78,7 @@ $ sudo touch /etc/dconf/db/gdm.d/10-cursor-settings
 Isi dengan konfigurasi di bawah ini
 
 ```conf
+@filename: /etc/dconf/db/gdm.d/10-cursor-settings
 [org/gnome/desktop/interface]
 cursor-theme='ComixCursors-White'
 cursor-size=48
@@ -121,7 +123,7 @@ Just set the env `XCURSOR_SIZE=` before run the Qt apps, or define on local/glob
 My local env variables are on `~/.profile` (some people keep it on `~/.bashrc` or `~/.bash_profile`).
 
 ```bash
-# ~/.profile
+@filename: ~/.profile
 export XCURSOR_SIZE=36
 ```
 
@@ -151,17 +153,17 @@ Terima kasih sudah mampir yaa.
 
 # Referensi
 
-1. [Arch Wiki: GDM > Login Screen Logo](https://wiki.archlinux.org/title/GDM#Login_screen_logo){:target="_blank"}
+1. [Arch Wiki: GDM > Login Screen Logo](https://wiki.archlinux.org/title/GDM#Login_screen_logo)
 <br>Diakses tanggal: 2023/06/27
 
-1. [Arch Wiki: GDM > Change Cursor Theme](https://wiki.archlinux.org/title/GDM#Changing_the_cursor_theme){:target="_blank"}
+1. [Arch Wiki: GDM > Change Cursor Theme](https://wiki.archlinux.org/title/GDM#Changing_the_cursor_theme)
 <br>Diakses tanggal: 2023/06/27
 
-1. [Disable the default app key (super+num) functionality on Ubuntu 17.10 and later](https://askubuntu.com/a/1425621/777616){:target="_blank"}
+1. [Disable the default app key (super+num) functionality on Ubuntu 17.10 and later](https://askubuntu.com/a/1425621/777616)
 <br>Diakses tanggal: 2023/06/27
 
-1. [wiki.archlinux.org: _Cursor themes_](https://wiki.archlinux.org/title/Cursor_themes#GNOME){:target="_blank"}
+1. [wiki.archlinux.org: _Cursor themes_](https://wiki.archlinux.org/title/Cursor_themes#GNOME)
 <br>Diakses tanggal: 2023/10/07
 
-1. [github.com/telegramdesktop/tdesktop: _Big cursor in GNOME Wayland #16920_](https://github.com/telegramdesktop/tdesktop/issues/16920#issuecomment-915085406){:target="_blank"}
+1. [github.com/telegramdesktop/tdesktop: _Big cursor in GNOME Wayland #16920_](https://github.com/telegramdesktop/tdesktop/issues/16920#issuecomment-915085406)
 <br>Diakses tanggal: 2023/10/07

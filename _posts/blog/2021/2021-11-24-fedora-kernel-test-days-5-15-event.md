@@ -1,27 +1,31 @@
 ---
 layout: 'post'
 title: "Berkontribusi di Fedora Kernel Test Days 5.15"
-date: 2021-11-24 06:07
+date: '2021-11-24 06:07'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Fedora', 'Event']
+tags: ['Fedora']
 pin:
 hot:
 contributors: []
 description: "Serunya menggunakan distribusi sistem operasi GNU/Linux, kita dapat kesempatan untuk dapat berkontribusi. Terdapat cukup banyak ruang untuk berkontribusi. Fedora adalah salah satu distribusi yang memberikan ruang yang cukup banyak untuk berkontribusi serta dipandu dengan dokumentasi yang sangat baik. Salah satu bentuk kontribusi yang dapat kamu berikan adalah mengikuti Kernel Test Days event. Berikut ini adalah catatan saya dalam mengukuti kegiatan ini."
 ---
 
-{% box_perhatian %}
-<p markdown=1>Saya, sebagai penulis, **tidak bertanggung jawab** atas segala bentuk kejadian buruk yang menimpa sistem kalian.</p>
-<p markdown=1>Apabila kalian mengikuti catatan ini, berarti kalian **telah menyetujui** bahwa **segala bentuk risiko atas masalah** yang terjadi karena mengikuti catatan ini, adalah **tanggung jawab kalian sepenuhnya**.</p>
-<p markdown=1>Happy Testing!</p>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> Saya, sebagai penulis, **tidak bertanggung jawab** atas segala bentuk kejadian buruk yang menimpa sistem kalian.
+> 
+> Apabila kalian mengikuti catatan ini, berarti kalian **telah menyetujui** bahwa **segala bentuk risiko atas masalah** yang terjadi karena mengikuti catatan ini, adalah **tanggung jawab kalian sepenuhnya**.
+> 
+> Happy Testing!
 
 # Latar Belakang
+
+{{ page.description }}
 
 ## Apa itu Kernel Test Days?
 
@@ -29,22 +33,25 @@ Kernel Test Days adalah kegiatan di mana siapa pun dapat membantu memastikan per
 
 Apabila kamu berhasil mengikuti *event* ini, kamu akan diberikan *reward* berupa *badge* seperti ini,
 
-![gambar_1]({{ site.lazyload.logo_blank }}){:data-echo="https://badges.fedoraproject.org/pngs/kernel-tester.png" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 1 - Science (Kernel Tester I): You completed a run of the kernel regression test suite</p>
+![Gambar 1](https://badges.fedoraproject.org/pngs/kernel-tester.png)
+
+Gambar 1. Science (Kernel Tester I): You completed a run of the kernel regression test suite
 
 Di dalam *badge* ini terdapat angkat, artinya *badge* ini bersifat *continue*. Setiap kelipatan 5 kali test, kamu akan mendapatkan *badge* ini dengan angka yang bertambah.
 
-![gambar_2]({{ site.lazyload.logo_blank }}){:data-echo="https://badges.fedoraproject.org/pngs/kernel_tester_5.png" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 2 - Science (Kernel Tester II): You completed 5 runs of the kernel regression test suite</p>
+![Gambar 2](https://badges.fedoraproject.org/pngs/kernel_tester_5.png)
 
-![gambar_3]({{ site.lazyload.logo_blank }}){:data-echo="https://badges.fedoraproject.org/pngs/kernel_tester_10.png" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 3 - Science (Kernel Tester III): You completed 10 runs of the kernel regression test suite</p>
+Gambar 2. Science (Kernel Tester II): You completed 5 runs of the kernel regression test suite
+
+![Gambar 3](https://badges.fedoraproject.org/pngs/kernel_tester_10.png)
+
+Gambar 3. Science (Kernel Tester III): You completed 10 runs of the kernel regression test suite
 
 Dan begitu seterusnya.
 
 # Dari mana saya dapat informasi tentang Kernel Test Days?
 
-Fedora Community memiliki beberapa portal informasi yang dapat kamu ikuti. Salah satu yang sering saya kunjungi adalah [Fedora Magazine](https://fedoramagazine.org){:target="_blank"}. Biasanya, apabila ada informasi terkait *event*, akan diberitakan di Fedora Magazine. Biar tidak ketinggalan *event* atau artikel terbaru, kamu juga bisa berlangganan via email.
+Fedora Community memiliki beberapa portal informasi yang dapat kamu ikuti. Salah satu yang sering saya kunjungi adalah [Fedora Magazine](https://fedoramagazine.org). Biasanya, apabila ada informasi terkait *event*, akan diberitakan di Fedora Magazine. Biar tidak ketinggalan *event* atau artikel terbaru, kamu juga bisa berlangganan via email.
 
 Biasanya, pemberitahuan terkait Kernel Test Days akan diberitakan 2-4 hari sebelum *event* diselenggarakan.
 
@@ -57,7 +64,7 @@ Sangat mudah. Untuk berkontribusi dalam *event* ini, kita hanya perlu melakukan 
 
 Setiap Kernel Test Days, biasanya memiliki panduan yang didokumentasikan pada halaman wiki yang spesifik untuk kegiatan ini.
 
-Contohnya, untuk kegiatan Kernel Test Days 5.15 kali ini, [**Test Day:2021-11-14 Kernel 5.15 Test Week**](https://fedoraproject.org/wiki/Test_Day:2021-11-14_Kernel_5.15_Test_Week){:target="_blank"}.
+Contohnya, untuk kegiatan Kernel Test Days 5.15 kali ini, [**Test Day:2021-11-14 Kernel 5.15 Test Week**](https://fedoraproject.org/wiki/Test_Day:2021-11-14_Kernel_5.15_Test_Week).
 
 Jadi, pastikan bahwa kamu mengikuti panduan wiki yang sesuai.
 
@@ -65,8 +72,8 @@ Jadi, pastikan bahwa kamu mengikuti panduan wiki yang sesuai.
 
 Terdapat beberapa media yang dapat kamu pilih untuk melakukan Kernel test. Pilih yang sesuai dan tidak beresiko untuk sistem kamu.
 
-1. [F35 test day image](https://jforbes.fedorapeople.org/testweek/){:target="_blank"} atau Fedora 34/35 Workstation/Server installation, yang akan dipasangkan pada bare metal atau VM, pastikan tidak terdapat data-data penting
-2. Sistem dengan Kernel 5.15, yang dapat dipasang dari [F35 Koji](https://koji.fedoraproject.org/koji/buildinfo?buildID=1855177){:target="_blank"} atau [Kernel-Stabilization Copr](https://copr.fedorainfracloud.org/coprs/jforbes/kernel-stabilization/){:target="_blank"}
+1. [F35 test day image](https://jforbes.fedorapeople.org/testweek/) atau Fedora 34/35 Workstation/Server installation, yang akan dipasangkan pada bare metal atau VM, pastikan tidak terdapat data-data penting
+2. Sistem dengan Kernel 5.15, yang dapat dipasang dari [F35 Koji](https://koji.fedoraproject.org/koji/buildinfo?buildID=1855177) atau [Kernel-Stabilization Copr](https://copr.fedorainfracloud.org/coprs/jforbes/kernel-stabilization/)
 3. Fedora Silverblue dan Kinoite dapat melakukan test menggunakan Koji Kernel (cara nomor 2)
 
 Dari ketiga pilihan tersebut, untuk catatan kali ini, saya memberanikan diri untuk mengambil pilihan kedua, yaitu langsung memasang Kernel 5.15 pada sistem yang sudah terpadang Fedora 35. Saya akan ambil Kernel 5.15 dari Koji.
@@ -79,17 +86,17 @@ Dari ketiga pilihan tersebut, untuk catatan kali ini, saya memberanikan diri unt
 
 Karena saya memilih menggunakan Kernel 5.15 dari Koji, terlebih dahulu harus memasang paket Koji.
 
-{% shell_term $ %}
-sudo dnf install koji
-{% endshell_term %}
+```
+$ sudo dnf install koji
+```
 
 ## Melihat daftar Kernel builds yang tersedia
 
 Untuk melihat daftar dari Kernel builds yang tersedia. Gunakan flag `--after=`, lalu isi dengan format tanggal YYYY-MM-DD.
 
-{% shell_term $ %}
-koji list-builds --package=kernel --after="2021-11-12" | grep "5.15"
-{% endshell_term %}
+```
+$ koji list-builds --package=kernel --after="2021-11-12" | grep "5.15"
+```
 
 ```
 kernel-5.15.2-200.fc35                                   jforbes           COMPLETE
@@ -100,13 +107,13 @@ kernel-5.15.3-200.fc35                                   jforbes           COMPL
 
 Saya pilih yang paling bawah dari daftar Kernel 5.15 yang tersedia untuk di download.
 
-{% shell_term $ %}
-koji download-build --arch=x86_64 kernel-5.15.3-200.fc35
-{% endshell_term %}
+```
+$ koji download-build --arch=x86_64 kernel-5.15.3-200.fc35
+```
 
-{% box_perhatian %}
-<p markdown=1>Perhatikan pada bagian *release version* `.fc35`, pastikan kamu memilih *release version* yang sesuai dengan versi Fedora yang sedang digunakan. Biasanya juga terdapat versi Fedora sebelumnya `.fc34`.</p>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> Perhatikan pada bagian *release version* `.fc35`, pastikan kamu memilih *release version* yang sesuai dengan versi Fedora yang sedang digunakan. Biasanya juga terdapat versi Fedora sebelumnya `.fc34`.
 
 Perintah di atas akan mendownload semua paket terkait `kernel-5.15.3-200.fc35`,
 
@@ -132,13 +139,13 @@ SIZE PACKAGES
 
 Setelah proses download selesai, saatnya mengupdate kernel.
 
-{% shell_term $ %}
-sudo dnf update kernel-*.rpm
-{% endshell_term %}
+```
+$ sudo dnf update kernel-*.rpm
+```
 
-{% box_perhatian %}
-<p markdown=1>Pastikan! kita menjalankan perintah di atas pada direktori tempat paket-paket kernel tersebut berada.</p>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> Pastikan! kita menjalankan perintah di atas pada direktori tempat paket-paket kernel tersebut berada.
 
 ```
 ===============================================================================================
@@ -205,55 +212,55 @@ Setelah kernel berhasil dipasang, saatnya **reboot**.
 
 Pastikan paket `gcc`, `git`, dan `python3-fedora` sudah terpasang.
 
-{% shell_term $ %}
-sudo dnf install gcc git python3-fedora
-{% endshell_term %}
+```
+$ sudo dnf install gcc git python3-fedora
+```
 
 Paket `python3-fedora` diperlukan untuk mengirimkan hasil pengujian.
 
 Kita juga memerlukan paket-paket di bawah ini untuk menjalankan test.
 
-{% shell_term $ %}
-sudo dnf install make libtirpc libtirpc-devel policycoreutils-python-utils
-{% endshell_term %}
+```
+$ sudo dnf install make libtirpc libtirpc-devel policycoreutils-python-utils
+```
 
 ## Clone kernel-tests tools dari repositori
 
-{% shell_term $ %}
-git clone https://pagure.io/kernel-tests.git
-{% endshell_term %}
+```
+$ git clone https://pagure.io/kernel-tests.git
+```
 
 Masuk ke dalam direktori `kernel-tests`.
 
-{% shell_term $ %}
-cd kernel-tests
-{% endshell_term %}
+```
+$ cd kernel-tests
+```
 
 ```
- kernel-tests/
-│  default/
-│  destructive/
-│  include/
-│  minimal/
-│  performance/
-│  secureboot/
-│  stress/
-│  thirdparty/
-│  utils/
-│  config.example
-│  documentation.txt
-│  fedora_submit.py
-│  LICENSE
-└  runtests.sh
+📂 kernel-tests/
+│ 📁 default/
+│ 📁 destructive/
+│ 📁 include/
+│ 📁 minimal/
+│ 📁 performance/
+│ 📁 secureboot/
+│ 📁 stress/
+│ 📁 thirdparty/
+│ 📁 utils/
+│ 📄 config.example
+│ 📄 documentation.txt
+│ 📄 fedora_submit.py
+│ 📄 LICENSE
+└ 📄 runtests.sh
 ```
 
 ## Allow SELinux permission untuk heap execution
 
 Before running tests, we need to allow the testsuite to make their heap memory executable with this command,
 
-{% shell_term $ %}
-sudo semanage boolean -m --on selinuxuser_execheap
-{% endshell_term %}
+```
+$ sudo semanage boolean -m --on selinuxuser_execheap
+```
 
 \* Setelah proses pengujian selesai, kita akan me-nonaktifkan-nya kembali.
 
@@ -261,9 +268,9 @@ sudo semanage boolean -m --on selinuxuser_execheap
 
 Salin contoh konfigurasi default, karena kita akan membuat konfigurasi kita sendiri.
 
-{% shell_term $ %}
-cp config.example .config
-{% endshell_term %}
+```
+$ cp config.example .config
+```
 
 \* **Perhatikan!** terdapat tanda titik di depan nama `.config`.
 
@@ -273,8 +280,8 @@ Kita akan mengedif file `.config` untuk memasukkan beberapa nilai-nilai credenti
 
 Ubah isi dari beberapa bagian, seperti yang saya contohkan di bawah.
 
-{% highlight_caption .config %}
-{% highlight shell linenos %}
+```shell
+@filename: .config
 # ...
 
 # submit=none
@@ -282,14 +289,14 @@ Ubah isi dari beberapa bagian, seperti yang saya contohkan di bawah.
 submit=authenticated
 
 # ...
-{% endhighlight %}
+```
 
 Kita akan menggunakan metode submit authenticated.
 
 Isi juga username dan password pada bagian di bawahnya.
 
-{% highlight_caption .config %}
-{% highlight shell linenos %}
+```shell
+@filename: .config
 # ...
 
 # FAS User credentials.
@@ -300,16 +307,17 @@ username='your-username-FAS'
 password='your-password-FAS'
 
 # ...
-{% endhighlight %}
+```
 
-{% box_perhatian %}
-<p markdown=1>File `.config` ini sudah masuk ke dalam `.gitignore`.</p>
-<p markdown=1>Setelah pengujian selesai, jangan lupa untuk membersihkan/mengoosongkan/menghapus file `.config` untuk tujuan keamanan data *credential*.</p>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> File `.config` ini sudah masuk ke dalam `.gitignore`.
+> 
+> Setelah pengujian selesai, jangan lupa untuk membersihkan/mengoosongkan/menghapus file `.config` untuk tujuan keamanan data *credential*.
 
-{% box_info %}
-<p markdown=1>Optionally, if you use the proprietary Nvidia driver, look for the line "thirdparty=y" and uncomment it.</p>
-{% endbox_info %}
+> INFO!
+> 
+> Optionally, if you use the proprietary Nvidia driver, look for the line "thirdparty=y" and uncomment it.
 
 # Pengujian
 
@@ -317,13 +325,13 @@ Di dalam file `runtests.sh` terdapat fungsi yang menunjukkan beberapa macam jeni
 
 Yang benar-benar dibutuhkan hanya menjalankan default test.
 
-Namun, sesuai dokumentasi yang ditulis [QA:Testcase kernel regression](https://fedoraproject.org/wiki/QA:Testcase_kernel_regression){:target="_blank"}, dicontohkan melakukan 2 test. 1 default test dan 1 optional test, dalam wiki tersebut disebutkan performance test.
+Namun, sesuai dokumentasi yang ditulis [QA:Testcase kernel regression](https://fedoraproject.org/wiki/QA:Testcase_kernel_regression), dicontohkan melakukan 2 test. 1 default test dan 1 optional test, dalam wiki tersebut disebutkan performance test.
 
 ## Default test
 
-{% shell_term $ %}
-sudo ./runtests.sh
-{% endshell_term %}
+```
+$ sudo ./runtests.sh
+```
 
 <details markdown="1" style="width:100%;">
   <summary style="cursor:pointer;">Default test result</summary>
@@ -414,9 +422,9 @@ Starting test ./default/sysfs-perms
 
 ## Performance test (optional)
 
-{% shell_term $ %}
-sudo ./runtests.sh -t performance
-{% endshell_term %}
+```
+$ sudo ./runtests.sh -t performance
+```
 
 <details markdown="1" style="width:100%;">
   <summary style="cursor:pointer;">Performance test result</summary>
@@ -713,43 +721,51 @@ fedora-th Linux 5.15.3- 2925 5304 1707 4933.3  11.8K 6614.1 4496.1 10.K 6313.
 
 # Submission Test Result
 
-Kalau kita sudah mengkonfigurasi FAS akun pada file `.config`, setiap selesai melakukan *test*, hasil akan otomatis di submit ke [Fedora Kernel Test Results](https://apps.fedoraproject.org/kerneltest/){:target="_blank"}.
+Kalau kita sudah mengkonfigurasi FAS akun pada file `.config`, setiap selesai melakukan *test*, hasil akan otomatis di submit ke [Fedora Kernel Test Results](https://apps.fedoraproject.org/kerneltest/).
 
-![gambar_1]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/XvhXwZpF/gambar-01.png" onerror="imgError(this);"}{:class="myImg"}
+![Gambar 1](https://i.postimg.cc/XvhXwZpF/gambar-01.png)
+
+<p></p>
 
 Untuk melihat hasil pengujian kita, pilih nama kernel yang sesuai dengan yang kita test.
 
 Hasil pengujian kita akan berada di dalam daftar (gambar di bawah). Coba buka saja satu persatu. Salah satunya pasti milik kalian. Yang paling baru, berada di paling atas.
 
-![gambar_2]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/1tqXM9qd/gambar-02.png" onerror="imgError(this);"}{:class="myImg"}
+![Gambar 2](https://i.postimg.cc/1tqXM9qd/gambar-02.png)
+
+<p></p>
 
 # Turn SELinux boolean selinuxuser_execheap back to default state
 
-{% shell_term $ %}
-sudo semanage boolean -m --off selinuxuser_execheap
-{% endshell_term %}
+```
+$ sudo semanage boolean -m --off selinuxuser_execheap
+```
 
 # Upload Hasil Kernel Regression Test
 
 Setiap Kernel Test Days event, akan ada thread tersendiri untuk melakukan submit test result.
 
-Kita bisa lihat daftar event tersebut pada halaman [Fedora Testdays: Upcoming & Current Events](https://testdays.fedoraproject.org/events){:target="_blank"}
+Kita bisa lihat daftar event tersebut pada halaman [Fedora Testdays: Upcoming & Current Events](https://testdays.fedoraproject.org/events)
 
 Kita akan melihat event paling baru, yaitu berkenaan dengan Kernel Test Week.
 
 Kalau kita buka, akan ketemu halaman seperti ini.
 
-![gambar_3]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/CMbdqxYB/gambar-03.png" onerror="imgError(this);"}{:class="myImg"}
+![Gambar 3](https://i.postimg.cc/CMbdqxYB/gambar-03.png)
+
+<p></p>
 
 Contoh submission datanya seperti di bawah ini.
 
-![gambar_4]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/ZnLTD0Kw/gambar-04.png" onerror="imgError(this);"}{:class="myImg"}
+![Gambar 4](https://i.postimg.cc/ZnLTD0Kw/gambar-04.png)
+
+<p></p>
 
 Dengan ini proses Kernel Regression Test sudah selesai.
 
 Kamu akan mendapatkan email pemberitahuan, bahwa kamu telah menyelesaikan Kernel Test Regression.
 
-```
+```email
 Date: Tue, 16 Nov 2021 11:49:04 +0000 (GMT)
 From: notifications@fedoraproject.org
 To: bandithijo@gmail.com
@@ -763,7 +779,7 @@ bandithijo ran a test of 5.15.3-200.fc35.x86_64 (PASS)
 
 Kamu juga akan mendapatkan email pemberitahuan, bahwa kamu telah mendapatkan Badge.
 
-```
+```email
 Date: Tue, 16 Nov 2021 11:49:05 +0000 (GMT)
 From: notifications@fedoraproject.org
 To: bandithijo@gmail.com
@@ -788,14 +804,14 @@ Terima kasih.
 
 # Referensi
 
-1. [https://fedoramagazine.org/contribute-at-the-fedora-linux-36-test-week-for-kernel-5-15/](https://fedoramagazine.org/contribute-at-the-fedora-linux-36-test-week-for-kernel-5-15/){:target="_blank"}
+1. [https://fedoramagazine.org/contribute-at-the-fedora-linux-36-test-week-for-kernel-5-15/](https://fedoramagazine.org/contribute-at-the-fedora-linux-36-test-week-for-kernel-5-15/)
 <br>Diakses tanggal: 2021/11/24
 
-2. [https://fedoraproject.org/wiki/Test_Day:2021-11-14_Kernel_5.15_Test_Week](https://fedoraproject.org/wiki/Test_Day:2021-11-14_Kernel_5.15_Test_Week){:target="_blank"}
+2. [https://fedoraproject.org/wiki/Test_Day:2021-11-14_Kernel_5.15_Test_Week](https://fedoraproject.org/wiki/Test_Day:2021-11-14_Kernel_5.15_Test_Week)
 <br>Diakses tanggal: 2021/11/24
 
-3. [https://fedoraproject.org/wiki/QA:Testcase_kernel_regression](https://fedoraproject.org/wiki/QA:Testcase_kernel_regression){:target="_blank"}
+3. [https://fedoraproject.org/wiki/QA:Testcase_kernel_regression](https://fedoraproject.org/wiki/QA:Testcase_kernel_regression)
 <br>Diakses tanggal: 2021/11/24
 
-4. [https://docs.fedoraproject.org/en-US/quick-docs/kernel/howto-kernel-testday/](https://docs.fedoraproject.org/en-US/quick-docs/kernel/howto-kernel-testday/){:target="_blank"}
+4. [https://docs.fedoraproject.org/en-US/quick-docs/kernel/howto-kernel-testday/](https://docs.fedoraproject.org/en-US/quick-docs/kernel/howto-kernel-testday/)
 <br>Diakses tanggal: 2021/11/24

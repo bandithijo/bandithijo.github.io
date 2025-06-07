@@ -129,9 +129,8 @@ Untuk dapat menggunakannya pada Xresources, tambahkan awalan `Nsxiv.` (window cl
 
 Contoh,
 
-```
-! ~/.Xresources
-
+```conf
+@filename: ~/.Xresources
 Nsxiv.bar.font:          JetBrainsMono Nerd Font Bandit:pixelsize=17
 Nsxiv.bar.background:    #005F87
 Nsxiv.bar.foreground:    #D4D4D4
@@ -149,14 +148,14 @@ Terima kasih sudah mampir yaa.
 
 # Referensi
 
-1. [https://github.com/muennich/sxiv](https://github.com/muennich/sxiv){:target="_blank"}
+1. [https://github.com/muennich/sxiv](https://github.com/muennich/sxiv)
 <br>Diakses tanggal: 2022/08/07
 
-1. [https://github.com/nsxiv/nsxiv](https://github.com/nsxiv/nsxiv){:target="_blank"}
+1. [https://github.com/nsxiv/nsxiv](https://github.com/nsxiv/nsxiv)
 <br>Diakses tanggal: 2022/08/07
 
-1. [https://codeberg.org/nsxiv/nsxiv](https://codeberg.org/nsxiv/nsxiv){:target="_blank"}
+1. [https://codeberg.org/nsxiv/nsxiv](https://codeberg.org/nsxiv/nsxiv)
 <br>Diakses tanggal: 2022/08/07
 
-1. [https://wiki.archlinux.org/title/Sxiv](https://wiki.archlinux.org/title/Sxiv){:target="_blank"}
+1. [https://wiki.archlinux.org/title/Sxiv](https://wiki.archlinux.org/title/Sxiv)
 <br>Diakses tanggal: 2022/08/07

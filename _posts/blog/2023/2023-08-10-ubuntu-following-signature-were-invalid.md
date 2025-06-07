@@ -43,5 +43,5 @@ Terima kasih sudah mampir yaa.
 
 # Referensi
 
-1. [https://github.com/yarnpkg/yarn/issues/7866](https://github.com/yarnpkg/yarn/issues/7866){:target="_blank"}
+1. [https://github.com/yarnpkg/yarn/issues/7866](https://github.com/yarnpkg/yarn/issues/7866)
 <br>Diakses tanggal: 2023/08/10

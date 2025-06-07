@@ -46,7 +46,7 @@ Saya coba baca-baca FAQ yang terdapat di portal [^2], dan mendapatkan bagian FAQ
 > However the migration phase has ended in July 2020. \
 > If you no longer have access to the registered e-mail address or it is invalid or longer existing there is no way to prove your ownership of the account and thus can not be regained.
 
-Cerita di atas juga sudah pernah saya share di group telegram openSUSE Indonesia [di sini](https://t.me/openSUSE_ID/59679){:target="_blank"}.
+Cerita di atas juga sudah pernah saya share di group telegram openSUSE Indonesia [di sini](https://t.me/openSUSE_ID/59679).
 
 Saat itu saya berfikir, akun `bandithijo` sudah tidak lagi dapat dipulihkan karena tertinggal jadwal migrasi.
 
@@ -214,8 +214,8 @@ https://progress.opensuse.org/issues/135857#change-674912
 
 Dari arahan tersebut, saya diarahkan untuk melakukan 2 hal:
 
-1. **reset password** di alamat [ini](https://idp-portal.suse.com/univention/self-service/#page=passwordreset){:target="_blank"}
-1. setelah password berhasil direset, lakukan **email validation** di alamat [ini](https://idp-portal.suse.com/univention/self-service/#page=verifyaccount){:target="_blank"}
+1. **reset password** di alamat [ini](https://idp-portal.suse.com/univention/self-service/#page=passwordreset)
+1. setelah password berhasil direset, lakukan **email validation** di alamat [ini](https://idp-portal.suse.com/univention/self-service/#page=verifyaccount)
 
 ## Email #2
 
@@ -332,7 +332,7 @@ Gambar 4. Popup ketika berhasil memperbahrui password
 
 ### 2. Email Validation
 
-Selanjutnya, lakukan email validation melalui link yang diberikan [di sini](https://idp-portal.suse.com/univention/self-service/#page=verifyaccount){:target="_blank"}.
+Selanjutnya, lakukan email validation melalui link yang diberikan [di sini](https://idp-portal.suse.com/univention/self-service/#page=verifyaccount).
 
 Isi form yang meminta kita memasukkan username. Nanti akan mendapatkan email seperti ini,
 

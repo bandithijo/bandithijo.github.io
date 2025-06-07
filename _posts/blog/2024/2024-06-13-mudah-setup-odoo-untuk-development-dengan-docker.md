@@ -52,6 +52,7 @@ Oleh karena itu, saya memilih menggunakan pemasangan Odoo dengan [Docker image](
 1. Open file `docker-compose.yml` with your favorit text edior and fill in with recipe below
 
    ```yaml
+   @filename: docker-compose.yml
    services:
        odoo:
            container_name: odoo

@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Authorization dengan Pundit untuk Nested Controller dan User Turunan pada Rails"
-date: 2021-04-09 05:40
+date: '2021-04-09 05:40'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Rails']
+tags: ['Rails', 'Pundit', 'Authorization']
 pin:
 hot:
 contributors: []
@@ -39,8 +39,8 @@ Hanya Author pemilik Article yang dapat mengedit/menghapus Article yang ia milik
 
 Pasang **Pundit** pada Gemfile.
 
-{% highlight_caption Gemfile %}
-{% highlight ruby linenos %}
+```ruby
+@filename: Gemfile
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -49,54 +49,55 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'pundit', '~> 2.1'
 
 # ...
-{% endhighlight %}
+```
 
 Install.
 
-{% shell_term $ %}
-bundle install
-{% endshell_term %}
+```
+$ bundle install
+```
 
 ## Generate pundit:install
 
 Jalankan generator untuk membuat konfigurasi awal.
 
-{% shell_term $ %}
-rails g pundit:install
-{% endshell_term %}
+```
+$ rails g pundit:install
+```
 
 Generator ini akan membuatkan direktori **app/policies** dan juga file bernama **application_policy.rb**.
 
-{% pre_whiteboard %}
- app
-│  assets
-│  channels
-│  controllers
-│  helpers
-│  javascript
-│  jobs
-│  mailers
-│  models
-│  <mark>policies</mark>
-│ └  <mark>application_policy.rb</mark>
-└  views
- bin
- config
- db
- lib
+```
+📂 app/
+│ 📁 assets/
+│ 📁 channels/
+│ 📁 controllers/
+│ 📁 helpers/
+│ 📁 javascript/
+│ 📁 jobs/
+│ 📁 mailers/
+│ 📁 models/
+│ 📂 policies/ 👈️
+│ └ 📄 application_policy.rb 👈️
+└ 📁 views
+📁 bin
+📁 config
+📁 db
+📁 lib
 ...
-{% endpre_whiteboard %}
+...
+```
 
 ## Include Pundit
 
 Saya akan mengincludekan Pundit pada **application_controller** agar setiap controller turunan dapat menggunakan Pundit.
 
-{% highlight_caption app/controllers/application_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: app/controllers/application_controller.rb
 class ApplicationController < ActionController::Base
   include Pundit
 end
-{% endhighlight %}
+```
 
 ## Define pundit_user
 
@@ -108,44 +109,45 @@ Kita letakkan pada controller.
 
 Saya memiliki **authors_controller** yang merupakan induk dari semua controller yang ada di bawahnya.
 
-{% pre_whiteboard %}
- app
-│  assets
-│  channels
-│  controllers
-│ │  admins
-│ │  authors
-│ │ │  articles_controller.rb
-│ │ │  confirmations_controller.rb
-│ │ │  dashboard_controller.rb
-│ │ │  omniauth_callbacks_controller.rb
-│ │ │  passwords_controller.rb
-│ │ │  registrations_controller.rb
-│ │ │  sessions_controller.rb
-│ │ └  unlocks_controller.rb
-│ │  concerns
-│ │  public
-│ │  admins_controller.rb
-│ │  application_controller.rb
-│ │  articles_controller.rb
-│ └  <mark>authors_controller.rb</mark>
-│  helpers
-│  javascript
-│  jobs
-│  mailers
-│  models
-│  policies
-│ └  application_policy.rb
-└  views
- bin
- config
- db
- lib
+```
+📂 app/
+│ 📁 assets/
+│ 📁 channels/
+│ 📂 controllers/
+│ │ 📁 admins/
+│ │ 📂 authors/
+│ │ │ 📄 articles_controller.rb
+│ │ │ 📄 confirmations_controller.rb
+│ │ │ 📄 dashboard_controller.rb
+│ │ │ 📄 omniauth_callbacks_controller.rb
+│ │ │ 📄 passwords_controller.rb
+│ │ │ 📄 registrations_controller.rb
+│ │ │ 📄 sessions_controller.rb
+│ │ └ 📄 unlocks_controller.rb
+│ │ 📁 concerns/
+│ │ 📁 public/
+│ │ 📄 admins_controller.rb
+│ │ 📄 application_controller.rb
+│ │ 📄 articles_controller.rb
+│ └ 📄 authors_controller.rb 👈️
+│ 📁 helpers/
+│ 📁 javascript/
+│ 📁 jobs/
+│ 📁 mailers/
+│ 📁 models/
+│ 📂 policies/
+│ └ 📄 application_policy.rb
+└ 📁 views/
+📁 bin/
+📁 config/
+📁 db/
+📁 lib/
 ...
-{% endpre_whiteboard %}
+...
+```
 
-{% highlight_caption /app/controller/authors_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: /app/controller/authors_controller.rb
 class AuthorsController < ApplicationController
   protect_from_forgery prepend: true, with: :exception
   before_action :authenticate_author!
@@ -161,9 +163,10 @@ class AuthorsController < ApplicationController
     authors_root_path
   end
 end
-{% endhighlight %}
+```
 
 Baris ke 6-8, saya mendefinisikan **pundit_user** sebagai **current_author**.
+
 
 ## Buat policy untuk Article
 
@@ -171,61 +174,62 @@ Karena yang ingin kita batasi adalah Article agar hanya Author si pemilik Articl
 
 Struktur direktori dan file dari policy ini mengikuti dari controller namun menggunakan singular.
 
-{% pre_whiteboard %}
- app
-│  assets
-│  channels
-│  controllers
-│  helpers
-│  javascript
-│  jobs
-│  mailers
-│  models
-│  policies
-│ │  <mark>author_policy</mark>
-│ │ └  <mark>article_policy.rb</mark>
+```
+📂 app/
+│ 📁 assets/
+│ 📁 channels/
+│ 📁 controllers/
+│ 📁 helpers/
+│ 📁 javascript/
+│ 📁 jobs/
+│ 📁 mailers/
+│ 📁 models/
+│ 📂 policies/
+│ │ 📂 author_policy/ 👈️
+│ │ └  article_policy.rb 👈️
 │ │  application_policy.rb
-│ └  <mark>author_policy.rb</mark>
-└  views
- bin
- config
- db
- lib
+│ └  author_policy.rb 👈️
+└ 📁 views/
+📁 bin/
+📁 config/
+📁 db/
+📁 lib/
 ...
-{% endpre_whiteboard %}
+...
+```
 
-{% highlight_caption app/policies/author_policy.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: app/policies/author_policy.rb
 class AuthorPolicy < ApplicationPolicy
 end
-{% endhighlight %}
+```
 
-{% highlight_caption app/policies/author/article_policy.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: app/policies/author/article_policy.rb
 class Author::ArticlePolicy < AuthorPolicy
   def edit?
     record.user_id == user.id
   end
 end
-{% endhighlight %}
+```
 
 Dapat pula seperti ini.
 
-{% highlight_caption app/policies/author/article_policy.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: app/policies/author/article_policy.rb
 class Author::ArticlePolicy < AuthorPolicy
   def edit?
     user.present? && user == record.author
   end
 end
-{% endhighlight %}
+```
 
 Misalkan, kita akan membatasi action **edit**, maka kita definisikan method **edit?** dengan isinya, apabila user_id dari record sama dengan id dari user yang sedang mengakses, maka diberikan ijin untuk mengedit.
 
 **record** dapat pula kita buat menjadi method berisi **record**.
 
-{% highlight_caption app/policies/author/article_policy.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: app/policies/author/article_policy.rb
 class Author::ArticlePolicy < AuthorPolicy
   def edit?
     user.present? && user == article.author
@@ -237,14 +241,14 @@ class Author::ArticlePolicy < AuthorPolicy
     record
   end
 end
-{% endhighlight %}
+```
 
 Letakkan di dalam **private** agar penamaan **article** hanya dapat diakses oleh class **Author::ArticlePolicy**.
 
 Karena edit, sangat erat dengan update, maka saya akan buat seperti ini.
 
-{% highlight_caption app/policies/author/article_policy.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: app/policies/author/article_policy.rb
 class Author::ArticlePolicy < AuthorPolicy
   def update?
     user.present? && user == article.author
@@ -262,15 +266,15 @@ class Author::ArticlePolicy < AuthorPolicy
     record
   end
 end
-{% endhighlight %}
+```
 
 
 ## Authroize controller
 
 Nah, kita telah mengatur policy untuk action edit, maka kita perlu memberikan authorization pada action edit di **articles_controller**.
 
-{% highlight_caption app/controllers/authors/articles_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+@filename: app/controllers/authors/articles_controller.rb
 class Authors::ArticlesController < AuthorsController
   # ...
 
@@ -281,13 +285,14 @@ class Authors::ArticlesController < AuthorsController
 
   # ...
 end
-{% endhighlight %}
+```
 
 Baris ke-6 adalah pemberian authorization pada action edit.
 
 Parameter **policy_class** ini sebenarnya adalah cara manual untuk mengarahkan file policy.
 
 Saya menggunakannya hanya sebagai contoh siapa tahu kita mendapatkan kasus-kasus khusus, seperti nama Object dengan nama Controller atau Policy tidak sama.
+
 
 ## Views Template
 
@@ -297,23 +302,23 @@ Misalnya, button atau link untuk Edit atau Delete.
 
 Sebelum menggunakan Pundit Policy, saya biasa menggunakan cara seperti ini (baris ke-1),
 
-{% highlight_caption app/views/authors/articles/show.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+@filename: app/views/authors/articles/show.html.erb
 <% if @article.user_id == current_author.id %>
   <%= link_to 'Edit', edit_authors_article_path(@news), class: 'btn btn-info' %>
   <%= link_to 'Delete', authors_article_path(@article), method: :delete, data: {confirm: "Are you sure, you want to delete the article?"}, class: 'btn btn-danger' %>
 <% end %>
-{% endhighlight %}
+```
 
 Setelah menggunakan Pundit, kita dapat memanfaatkan policy yang ada.
 
-{% highlight_caption app/views/authors/articles/show.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+@filename: app/views/authors/articles/show.html.erb
 <% if policy([Authors, @article]).edit? %>
   <%= link_to 'Edit', edit_authors_article_path(@news), class: 'btn btn-info' %>
   <%= link_to 'Delete', authors_article_path(@article), method: :delete, data: {confirm: "Are you sure, you want to delete the article?"}, class: 'btn btn-danger' %>
 <% end %>
-{% endhighlight %}
+```
 
 Saya menggunakan **[Authors, @article]**, karena **articles_controller** merupakan controller bertingkat (*nested controller*) dari Authors.
 
@@ -330,14 +335,6 @@ policy(Article).edit?
 Selesai.
 
 
-
-
-
-
-
-
-
-
 # Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
@@ -351,9 +348,7 @@ Terima kasih.
 (^_^)
 
 
-
-
 # Referensi
 
-1. [github.com/varvet/pundit](https://github.com/varvet/pundit){:target="_blank"}
+1. [github.com/varvet/pundit](https://github.com/varvet/pundit)
 <br>Diakses tanggal: 2021/04/09

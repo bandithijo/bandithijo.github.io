@@ -33,9 +33,8 @@ dmenu-websearch ini memiliki fitur:
 
 Simpan file `dmenu-websearch` di PATH direktori.
 
-```shell
-# ~/.local/bin/dmenu-websearch
-
+```bash
+@filename: ~/.local/bin/dmenu-websearch
 #!/bin/bash
 
 # Released under MIT License
@@ -133,9 +132,8 @@ main
 
 Simpan file `.urlquery` di HOME direktori.
 
-```shell
-# ~/.urlquery
-
+```bash
+@filename: ~/.urlquery
 [ "Arch:Manpage", "https://man.archlinux.org/search?q=" ],
 [ "Arch:Wiki", "https://wiki.archlinux.org/index.php?search=" ],
 [ "Arch:Packages", "https://archlinux.org/packages/?q=" ],
@@ -162,8 +160,8 @@ Terima kasih sudah mampir yaa.
 
 # Referensi
 
-1. [http://kb.mozillazine.org/Using_keyword_searches](http://kb.mozillazine.org/Using_keyword_searches){:target="_blank"}
+1. [http://kb.mozillazine.org/Using_keyword_searches](http://kb.mozillazine.org/Using_keyword_searches)
 <br>Diakses tanggal: 2022/08/14
 
-1. [https://github.com/bandithijo/dmenu-websearch](https://github.com/bandithijo/dmenu-websearch){:target="_blank"}
+1. [https://github.com/bandithijo/dmenu-websearch](https://github.com/bandithijo/dmenu-websearch)
 <br>Diakses tanggal: 2022/08/14

@@ -187,8 +187,7 @@ $ sudo vi /etc/apt/preferences.d/focal
 ```
 
 ```shell
-# /etc/apt/preferences.d/focal
-
+@filename: /etc/apt/preferences.d/focal
 Package: *
 Pin: release n=focal
 Pin-Priority: 1001
@@ -256,8 +255,8 @@ Terima kasih sudah mampir yaa.
 
 # Referensi
 
-1. [OMER CAKMAK, Downgrade Ubuntu to previous version? (100% Working)](https://www.golinuxcloud.com/downgrade-ubuntu/){:target="_blank"}
+1. [OMER CAKMAK, Downgrade Ubuntu to previous version? (100% Working)](https://www.golinuxcloud.com/downgrade-ubuntu/)
 <br>Diakses tanggal: 2023/05/26
 
-1. [Wikipedia, Everything is a file](https://en.wikipedia.org/wiki/Everything_is_a_file){:target="_blank"}
+1. [Wikipedia, Everything is a file](https://en.wikipedia.org/wiki/Everything_is_a_file)
 <br>Diakses tanggal: 2023/05/26

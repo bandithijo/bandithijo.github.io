@@ -1,7 +1,7 @@
 ---
 layout: 'post'
 title: "Mudah Banget! Pasang PostgreSQL dengan Podman untuk Development"
-date: 2021-11-21 15:06
+date: '2021-11-21 15:06'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
@@ -38,19 +38,19 @@ Dengan menggunakan container, kita akan mendapatkan kemudahan-kemudahan, diantar
 
 Untuk teman-teman yang menggunakan Fedora (saat tulisan ini dibuat, Fedora 35) sudah tersedia Podman secara default.
 
-Untuk yang belum memasang Podman, silahkan merujuk pada [dokumentasi pemasangan Podman](https://podman.io/getting-started/installation){:target="_blank"}.
+Untuk yang belum memasang Podman, silahkan merujuk pada [dokumentasi pemasangan Podman](https://podman.io/getting-started/installation).
 
 ~~Jalankan service Podman.~~
 
-{% shell_term $ %}
-<del>sudo systemctl start podman.service</del>
-{% endshell_term %}
+<pre>
+<del>$ sudo systemctl start podman.service</del>
+</pre>
 
 ~~Cek status apakah sudah berhasil running atau belum.~~
 
-{% shell_term $ %}
-<del>sudo systemctl status podman.service</del>
-{% endshell_term %}
+<pre>
+<del>$ sudo systemctl status podman.service</del>
+</pre>
 
 <pre><del>● podman.service - Podman API Service
      Loaded: loaded (/usr/lib/systemd/system/podman.service; disabled; vendor preset: disabled)
@@ -70,11 +70,11 @@ TriggeredBy: ● podman.socket
 
 Sebelum mebuat PostgreSQL container, kita perlu mengunduh PostgreSQL image terlebih dahulu.
 
-Kali ini saya akan menggunakan Official Image dari PostgreSQL 13 yang berada di dari [Docker Hub](https://hub.docker.com/_/postgres){:target="_blank"}.
+Kali ini saya akan menggunakan Official Image dari PostgreSQL 13 yang berada di dari [Docker Hub](https://hub.docker.com/_/postgres).
 
-{% shell_term $ %}
-podman pull postgres:13
-{% endshell_term %}
+```
+$ podman pull postgres:13
+```
 
 Podman akan memberikan beberapa pilihan registry atau repository tempat kita akan mendownload image PostgreSQL.
 
@@ -115,28 +115,28 @@ Storing signatures
 
 Kalau sudah selesai, kita bisa melakukan pengecekan dengan,
 
-{% shell_term $ %}
-podman images
-{% endshell_term %}
+```
+$ podman images
+```
 
 ```
 REPOSITORY                  TAG         IMAGE ID      CREATED      SIZE
 docker.io/library/postgres  13        113197da0347  3 weeks ago  379 MB
 ```
 
-{% box_info %}
-<p markdown=1>Kalau ingin menghapus image,</p>
-
-{% pre_url %}
-$ podman image rm &lt;nama_image/image_ID&gt;
-{% endpre_url %}
-
-{% shell_term $ %}
-podman image rm postgres:13
-{% endshell_term %}
-
-<p markdown=1>\* Pastikan sudah tidak ada container yang menggunakan image yang ingin dihapus. Karena proses image remove akan gagal apabila masih ada container yang menggunakan image tersebut.</p>
-{% endbox_info %}
+> INFO
+> 
+> Kalau ingin menghapus image,
+> 
+> ```
+> $ podman image rm <nama_image/image_ID>
+> ```
+> 
+> ```
+> $ podman image rm postgres:13
+> ```
+> 
+> Pastikan sudah tidak ada container yang menggunakan image yang ingin dihapus. Karena proses image remove akan gagal apabila masih ada container yang menggunakan image tersebut.
 
 ## Persiapkan Direktori untuk Mounted Volume
 
@@ -145,19 +145,19 @@ Saya ingin membuat data yang ada di dalam container dapat terus digunakan. Maka,
 Saya akan simpan pada direktori `$HOME/Podman/postgresql/data/`.
 
 ```
- $HOME/
-   Podman/
-  └  postgresql/
-    └  data/
+📂 $HOME/
+└ 📂 Podman/
+  └ 📂 postgresql/
+    └ 📁 data/
 ```
 
 ## Buat PostgreSQL Container
 
 Untuk membuat PostgreSQL container dengan praktis, saya menggunakan perintah,
 
-{% shell_term $ %}
-podman run --name postgres --net host -e POSTGRES_PASSWORD=postgres -v ~/Podman/postgresql/data:/var/lib/postgresql/data:Z -d library/postgres:13
-{% endshell_term %}
+```
+$ podman run --name postgres --net host -e POSTGRES_PASSWORD=postgres -v ~/Podman/postgresql/data:/var/lib/postgresql/data:Z -d library/postgres:13
+```
 
 `--name postgres`, container ini saya beri nama **postgres**.
 
@@ -181,9 +181,9 @@ Dan bukan pesan error, berarti container berhasil dibuat.
 
 Sekarang kita periksa, apakah continer berhasill *running* atau tidak.
 
-{% shell_term $ %}
-podman ps -a
-{% endshell_term %}
+```
+$ podman ps -a
+```
 
 ```
 CONTAINER ID  IMAGE                          COMMAND     CREATED        STATUS            PORTS       NAMES
@@ -200,9 +200,9 @@ Biasanya, untuk mengakses PostgreSQL shell, kita memerlukan tools yang bernama `
 
 Untuk mengakses PostgreSQL shell yang berada di dalam container dari host, kita dapat menggunakan,
 
-{% shell_term $ %}
-podman exec -ti postgres psql -U postgres
-{% endshell_term %}
+```
+$ podman exec -ti postgres psql -U postgres
+```
 
 `podman exec`, digunakna untuk execute the specified command inside a running container.
 
@@ -227,70 +227,70 @@ postgres=# █
 
 Tujuannya membuat PostgreSQL user dengan nama yang sama dengan username yang kita gunakan pada host adalah agar kita tidak perlu melakukan authentikasi untuk mengakses PostgreSQL shell.
 
-{% box_perhatian %}
-<p markdown=1>Saya menggunakan nama user **bandithijo**, silahkan sesuaikan dengan milik teman-teman, samakan dengan username dari host yang digunakan.</p>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> Saya menggunakan nama user **bandithijo**, silahkan sesuaikan dengan milik teman-teman, samakan dengan username dari host yang digunakan.
 
-{% shell_term postgres=# %}
-CREATE USER bandithijo SUPERUSER CREATEDB;
-{% endshell_term %}
+```
+postgres=# CREATE USER bandithijo SUPERUSER CREATEDB;
+```
 
 Perintah di atas berarti, saya membuat user **bandithijo** dengan role berupa **SUPERUSER** dan **CREATEDB**.
 
-{% box_info %}
-<p markdown=1>Untuk mengecek daftar user pada PostgreSQL,</p>
-
-{% shell_term postgres=# %}
-\du
-{% endshell_term %}
-
-```
-                                    List of roles
- Role name  |                         Attributes                         | Member of
-------------+------------------------------------------------------------+-----------
- bandithijo | Superuser, Create DB                                       | {}
- postgres   | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
-```
-{% endbox_info %}
+> INFO
+> 
+> Untuk mengecek daftar user pada PostgreSQL,
+> 
+> ```
+> postgres=# \du
+> ```
+> 
+> ```
+>                                     List of roles
+>  Role name  |                         Attributes                         | Member of
+> ------------+------------------------------------------------------------+-----------
+>  bandithijo | Superuser, Create DB                                       | {}
+>  postgres   | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
+> ```
 
 Kita juga perlu membuat database dengan nama yang sama dengan nama user.
 
-{% shell_term postgres=# %}
-CREATE DATABASE bandithijo OWNER bandithijo;
-{% endshell_term %}
-
-{% box_info %}
-<p markdown=1>Untuk mengecek apakah database telah berhasil dibuat,</p>
-
-{% shell_term postgres=# %}
-\l
-{% endshell_term %}
-
 ```
-                                             List of databases
-        Name       |   Owner    | Encoding |  Collate   |   Ctype    |   Access privileges
--------------------+------------+----------+------------+------------+-----------------------
- bandithijo        | bandithijo | UTF8     | en_US.utf8 | en_US.utf8 |
- postgres          | postgres   | UTF8     | en_US.utf8 | en_US.utf8 |
- template0         | postgres   | UTF8     | en_US.utf8 | en_US.utf8 | =c/postgres          +
-                   |            |          |            |            | postgres=CTc/postgres
- template1         | postgres   | UTF8     | en_US.utf8 | en_US.utf8 | =c/postgres          +
-                   |            |          |            |            | postgres=CTc/postgres
-(8 rows)
+postgres=# CREATE DATABASE bandithijo OWNER bandithijo;
 ```
-{% endbox_info %}
+
+> INFO
+> 
+> Untuk mengecek apakah database telah berhasil dibuat,
+> 
+> ```
+> postgres=# \l
+> ```
+> 
+> ```
+>                                              List of databases
+>         Name       |   Owner    | Encoding |  Collate   |   Ctype    |   Access privileges
+> -------------------+------------+----------+------------+------------+-----------------------
+>  bandithijo        | bandithijo | UTF8     | en_US.utf8 | en_US.utf8 |
+>  postgres          | postgres   | UTF8     | en_US.utf8 | en_US.utf8 |
+>  template0         | postgres   | UTF8     | en_US.utf8 | en_US.utf8 | =c/postgres          +
+>                    |            |          |            |            | postgres=CTc/postgres
+>  template1         | postgres   | UTF8     | en_US.utf8 | en_US.utf8 | =c/postgres          +
+>                    |            |          |            |            | postgres=CTc/postgres
+> (8 rows)
+> ```
 
 Exit dengan,
 
-{% shell_term postgres=# %}
-\q
-{% endshell_term %}
+```
+postgres=# \q
+```
 
 Sekarang, coba masuk ke PostgreSQL shell dengan user yang baru saja kita buat.
 
-{% shell_term $ %}
-podman exec -it postgres psql -U bandithijo
-{% endshell_term %}
+```
+$ podman exec -it postgres psql -U bandithijo
+```
 
 Kalau berhasil, maka prompt nya akan menunjukkan nama user **bandithijo**.
 
@@ -307,39 +307,39 @@ bandithijo=# █
 
 Ketika menjalankan perintah,
 
-{% shell_term $ %}
-podman exec -ti postgres psql -U bandithijo
-{% endshell_term %}
+```
+$ podman exec -ti postgres psql -U bandithijo
+```
 
 
 Kalau teman-teman mendapatkan error seperti ini,
 
-<pre>
+```
 could not connect to server: No such file or directory
         Is the server running locally and accepting
         connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
-</pre>
+```
 
 Coba test jalankan,
 
-{% shell_term $ %}
-podman exec -ti postgres psql -h localhost -p 5432 -U bandithijo
-{% endshell_term %}
+```
+$ podman exec -ti postgres psql -h localhost -p 5432 -U bandithijo
+```
 
 \* Ganti user **bandithijo** dengan user kalian.
 
-Kalau bisa masuk ke PostgreSQL shell, berarti tinggal mendefinisikan **PGHOST** sebagai **localhost**. Ke dalam file shell rc (`.zshrc`, `.bash_profile`, atau yang lain).
+Kalau bisa masuk ke PostgreSQL shell, berarti tinggal mendefinisikan **PGHOST** sebagai **localhost** ke dalam file shell rc (`.zshrc`, `.bashrc`, `.bash_profile`, atau yang lain).
 
-{% highlight_caption $HOME/.zshrc %}
-{% highlight shelllinenos %}
+```bash
+@filename: $HOME/.zshrc
 export PGHOST=localhost
-{% endhighlight %}
+```
 
 Kemudian restart shell,
 
-{% shell_term $ %}
-exec $SHELL
-{% endshell_term %}
+```
+$ exec $SHELL
+```
 
 # Pesan Penulis
 
@@ -355,11 +355,11 @@ Terima kasih.
 
 # Referensi
 
-1. [Memasang PostgreSQL dengan Docker untuk Local Development](https://bandithijo.github.io/blog/postgresql-dengan-docker-untuk-local-development){:target="_blank"}
+1. [Memasang PostgreSQL dengan Docker untuk Local Development](https://bandithijo.github.io/blog/postgresql-dengan-docker-untuk-local-development)
 <br>Diakses tanggal: 2021/11/21
 
-2. [https://docs.podman.io/en/latest/Introduction.html](https://docs.podman.io/en/latest/Introduction.html){:target="_blank"}
+2. [https://docs.podman.io/en/latest/Introduction.html](https://docs.podman.io/en/latest/Introduction.html)
 <br>Diakses tanggal: 2021/11/21
 
-3. [Mencoba Bermain Container dengan Podman di Fedora (Bitnami/Postgresql)](https://bandithijo.github.io/v2/blog/mencoba-bermain-container-dengan-podman-di-fedora-bitnami-postgresql){:target="_blank"}
+3. [Mencoba Bermain Container dengan Podman di Fedora (Bitnami/Postgresql)](https://bandithijo.github.io/v2/blog/mencoba-bermain-container-dengan-podman-di-fedora-bitnami-postgresql)
 <br>Diakses tanggal: 2021/11/21

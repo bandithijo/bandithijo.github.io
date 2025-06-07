@@ -32,8 +32,7 @@ Model **geofence** memiliki attributes,
 Saya hanya ingin mengambil attributes: `:id`, `:incoming_notification`, `:outgoing_notification`.
 
 ```ruby
-# app/geofences_controller.rb
-
+@filename: app/geofences_controller.rb
 def geofences
   {
     geofences: Geofence.all.order(id: :asc).as_json(only: [:id, :incoming_notification, :outgoing_notification])
@@ -77,8 +76,7 @@ Karena nama attribute `:incoming_notification` dan `:outgoing_notification` terl
 **Algoritma Pertama**
 
 ```ruby
-# app/geofences_controller.rb
-
+@filename: app/geofences_controller.rb
 def geofences
   {
     geofences: Geofence.all.order(id: :asc)
@@ -96,8 +94,7 @@ end
 **Algoritma Kedua**
 
 ```ruby
-# app/geofences_controller.rb
-
+@filename: app/geofences_controller.rb
 def geofences
   geofences = Geofence.all.order(id: :asc)
 

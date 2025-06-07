@@ -1,6 +1,6 @@
 ---
 layout: 'post'
-title: "Restart Pipewire Tanpa Perlu Logout"
+title: "Restart PipeWire Tanpa Perlu Logout"
 date: '2023-06-17 03:51'
 permalink: '/blog/:title'
 author: 'BanditHijo'
@@ -41,5 +41,5 @@ $ systemctl restart --user wireplumber.service
 
 # Referensi
 
-1. [Arch Wiki - PipeWire](https://wiki.archlinux.org/title/PipeWire){:target="_blank"}
+1. [Arch Wiki - PipeWire](https://wiki.archlinux.org/title/PipeWire)
 <br>Diakses tanggal: 2023/06/17

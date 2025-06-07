@@ -23,7 +23,7 @@ Pada catatan kali ini, kita akan meniru Presentation Mode tersebut tanpa menggun
 
 > *DPMS (Display Power Management Signaling) enables power saving behaviour of monitors when the computer is not in use.*
 >
-> [Arch Wiki - Display Power Management Signal](https://wiki.archlinux.org/title/Display_Power_Management_Signaling){:target="_blank"}
+> [Arch Wiki - Display Power Management Signal](https://wiki.archlinux.org/title/Display_Power_Management_Signaling)
 
 # Paket yang Diperlukan
 
@@ -74,8 +74,7 @@ $ xset +dpms
 ## dmenu-presentationmode
 
 ```bash
-# ~/.local/bin/dmenu-presentationmode
-
+@filename: ~/.local/bin/dmenu-presentationmode
 #!/bin/bash
 
 # Deps:
@@ -130,5 +129,5 @@ Terima kasih sudah mampir yaa.
 
 # Referensi
 
-1. [https://wiki.archlinux.org/title/Display_Power_Management_Signaling](https://wiki.archlinux.org/title/Display_Power_Management_Signaling){:target="_blank"}
+1. [https://wiki.archlinux.org/title/Display_Power_Management_Signaling](https://wiki.archlinux.org/title/Display_Power_Management_Signaling)
 <br>Diakses tanggal: 2022/07/31

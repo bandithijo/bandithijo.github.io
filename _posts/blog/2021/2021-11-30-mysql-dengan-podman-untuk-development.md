@@ -1,7 +1,7 @@
 ---
 layout: 'post'
 title: "Mudah Banget! Pasang MySQL dengan Podman untuk Development"
-date: 2021-11-30 14:22
+date: '2021-11-30 14:22'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
@@ -17,7 +17,7 @@ description: "Memasang service database seperti MySQL merupakan sebuah tantangan
 
 # Latar Belakang Masalah
 
-Kalau kemarin kita sudah membahas [**Mudah Banget! Pasang PostgreSQL dengan Podman untuk Development**](/blog/postgresql-dengan-podman-untuk-development){:target="_blank"}, kali ini kita akan bahasa untuk MySQL.
+Kalau kemarin kita sudah membahas [**Mudah Banget! Pasang PostgreSQL dengan Podman untuk Development**](/blog/postgresql-dengan-podman-untuk-development), kali ini kita akan bahasa untuk MySQL.
 
 Memasang service database seperti MySQL merupakan sebuah tantangan tersendiri di setiap distribusi sistem operasi GNU/Linux. Karena, setiap distribusi memiliki cara yang berbeda-beda untuk menjalankan MySQL service karena pilihan stack yang digunakan pada masing-masing distribusi biasanya berbeda. Yang merepotkan adalah apabila cara yang sebelumnya kita lakukan berhasil, namun tidak berhasil pada versi distribusi yang terbaru.
 
@@ -40,19 +40,19 @@ Dengan menggunakan container, kita akan mendapatkan kemudahan-kemudahan, diantar
 
 Untuk teman-teman yang menggunakan Fedora (saat tulisan ini dibuat, Fedora 35) sudah tersedia Podman secara default.
 
-Untuk yang belum memasang Podman, silahkan merujuk pada [dokumentasi pemasangan Podman](https://podman.io/getting-started/installation){:target="_blank"}.
+Untuk yang belum memasang Podman, silahkan merujuk pada [dokumentasi pemasangan Podman](https://podman.io/getting-started/installation).
 
 ~~Jalankan service Podman.~~
 
-{% shell_term $ %}
-<del>sudo systemctl start podman.service</del>
-{% endshell_term %}
+<pre>
+<del>$ sudo systemctl start podman.service</del>
+</pre>
 
 ~~Cek status apakah sudah berhasil running atau belum.~~
 
-{% shell_term $ %}
-<del>sudo systemctl status podman.service</del>
-{% endshell_term %}
+<pre>
+<del>$ sudo systemctl status podman.service</del>
+</pre>
 
 <pre><del>● podman.service - Podman API Service
      Loaded: loaded (/usr/lib/systemd/system/podman.service; disabled; vendor preset: disabled)
@@ -72,11 +72,11 @@ TriggeredBy: ● podman.socket
 
 Sebelum mebuat MySQL container, kita perlu mengunduh MySQL image terlebih dahulu.
 
-Kali ini saya akan menggunakan Official Image dari MySQL 8 yang berada di dari [Docker Hub](https://hub.docker.com/_/mysql){:target="_blank"}.
+Kali ini saya akan menggunakan Official Image dari MySQL 8 yang berada di dari [Docker Hub](https://hub.docker.com/_/mysql).
 
-{% shell_term $ %}
-podman pull mysql:8
-{% endshell_term %}
+```
+$ podman pull mysql:8
+```
 
 Podman akan memberikan beberapa pilihan registry atau repository tempat kita akan mendownload image MySQL.
 
@@ -117,28 +117,28 @@ Storing signatures
 
 Kalau sudah selesai, kita bisa melakukan pengecekan dengan,
 
-{% shell_term $ %}
-podman images
-{% endshell_term %}
+```
+$ podman images
+```
 
 ```
 REPOSITORY                  TAG         IMAGE ID      CREATED      SIZE
 docker.io/library/mysql     8           b05128b000dd  12 days ago  521 MB
 ```
 
-{% box_info %}
-<p markdown=1>Kalau ingin menghapus image,</p>
-
-{% pre_url %}
-$ podman image rm &lt;nama_image/image_ID&gt;
-{% endpre_url %}
-
-{% shell_term $ %}
-podman image rm mysql:8
-{% endshell_term %}
-
-<p markdown=1>\* Pastikan sudah tidak ada container yang menggunakan image yang ingin dihapus. Karena proses image remove akan gagal apabila masih ada container yang menggunakan image tersebut.</p>
-{% endbox_info %}
+> INFO
+> 
+> Kalau ingin menghapus image,
+> 
+> ```
+> $ podman image rm <nama_image/image_ID>
+> ```
+> 
+> ```
+> $ podman image rm mysql:8
+> ```
+> 
+> Pastikan sudah tidak ada container yang menggunakan image yang ingin dihapus. Karena proses image remove akan gagal apabila masih ada container yang menggunakan image tersebut.
 
 ## Persiapkan Direktori untuk Mounted Volume
 
@@ -147,19 +147,19 @@ Saya ingin membuat data yang ada di dalam container dapat terus digunakan. Maka,
 Saya akan simpan pada direktori `$HOME/Podman/mysql/data/`.
 
 ```
- $HOME/
-   Podman/
-  └  mysql/
-    └  data/
+📁 $HOME/
+└ 📁 Podman/
+  └ 📁 mysql/
+    └ 📁 data/
 ```
 
 ## Buat MySQL Container
 
 Untuk membuat MySQL container dengan praktis, saya menggunakan perintah,
 
-{% shell_term $ %}
-podman run --name mysql --net host -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -v ~/Podman/mysql/data:/var/lib/mysql:Z -d library/mysql:8
-{% endshell_term %}
+```
+$ podman run --name mysql --net host -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -v ~/Podman/mysql/data:/var/lib/mysql:Z -d library/mysql:8
+```
 
 `--name mysql`, container ini saya beri nama **mysql**.
 
@@ -183,9 +183,9 @@ Dan bukan pesan error, berarti container berhasil dibuat.
 
 Sekarang kita periksa, apakah continer berhasill *running* atau tidak.
 
-{% shell_term $ %}
-podman ps -a
-{% endshell_term %}
+```
+$ podman ps -a
+```
 
 ```
 CONTAINER ID  IMAGE                          COMMAND     CREATED        STATUS            PORTS       NAMES
@@ -202,9 +202,9 @@ Biasanya, untuk mengakses MySQL shell, kita memerlukan tools yang bernama `mysql
 
 Untuk mengakses MySQL shell yang berada di dalam container dari host, kita dapat menggunakan,
 
-{% shell_term $ %}
-podman exec -it mysql mysql -u root
-{% endshell_term %}
+```
+$ podman exec -it mysql mysql -u root
+```
 
 `podman exec`, digunakna untuk execute the specified command inside a running container.
 
@@ -243,8 +243,8 @@ Biasanya pada **development environment**, MySQL account yang digunakan adalah *
 
 Sebagai contoh, contoh konfigurasi file `config/database.yml` untuk Rails app yang baru digenerate, akan seperti ini.
 
-{% highlight_caption config/database.yml %}
-{% highlight yaml linenos %}
+```yaml
+@filename: config/database.yml
 # MySQL. Versions 5.5.8 and up are supported.
 #
 # Install the MySQL driver
@@ -269,7 +269,7 @@ development:
   database: blog_devika_development
 
 # ...
-{% endhighlight %}
+```
 
 Perhatikan pada baris ke 16, **username** secara default digenerate menggunakan **root**.
 
@@ -306,5 +306,5 @@ Terima kasih.
 
 # Referensi
 
-1. [https://hub.docker.com/\_/mysql](https://hub.docker.com/_/mysql){:target="_blank"}
+1. [https://hub.docker.com/\_/mysql](https://hub.docker.com/_/mysql)
 <br>Diakses tanggal: 2021/11/30
