@@ -9,8 +9,9 @@ layout: baseof
         {{ page.title }}
       </h1>
 
-      <div class="text-base mb-6">
-        Created at: <span class="font-mono">{{ page.date | date: '%Y-%m-%d' }}</span> | Author: {{ page.author }}
+      <div class="flex flex-col md:flex-row gap-1 text-base mb-6">
+        <div class="w-full md:w-[190px]">Created at: <span class="font-mono">{{ page.date | date: '%Y-%m-%d' }}</span></div>
+        <div class="w-full md:w-3/4">Author: {{ page.author }}</div>
       </div>
 
       <div class="mb-20 markdown">
