@@ -132,7 +132,7 @@
   }
 
   .markdown pre {
-    @apply bg-gray-100 rounded-md p-0 text-[14px];
+    @apply bg-gray-100 rounded-md p-0 text-[14px] mb-5;
   }
 
   .markdown pre code {

@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const numberedLines = lines.map((line, idx) => {
       // Apply Liquid escaping only if needed, while preserving syntax highlighting
       const processedLine = isLiquid ? fixLiquidInHtml(line) : line;
-      
+
       return `<div class="line"><span class="line-number">${idx + 1}</span><span class="code-line">${processedLine}</span></div>`;
     }).join("");
 
