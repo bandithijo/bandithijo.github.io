@@ -170,7 +170,7 @@
   }
 
   .markdown table {
-    @apply w-full text-base block overflow-x-auto sm:overflow-x-visible;
+    @apply w-full text-base block overflow-x-auto sm:overflow-x-auto;
     white-space: nowrap;
   }
 
