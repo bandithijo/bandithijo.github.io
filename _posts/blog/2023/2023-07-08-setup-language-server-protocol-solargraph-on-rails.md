@@ -78,7 +78,7 @@ Perintah di atas, akan otomatis membuatkan kita file `.solargraph.yml` di Root R
 Modifikasi isinya seperti di bawah ini
 
 ```yaml
-@filename: .solargraph.yml
+!filename: .solargraph.yml
 ---
 include:
 - "**/*.rb"
@@ -108,7 +108,7 @@ max_files: 5000
 Yang saya tambahkan adalah bagian,
 
 ```yaml
-@filename: .solargraph.yml
+!filename: .solargraph.yml
 require:
 - rails
 ```
@@ -116,7 +116,7 @@ require:
 dan
 
 ```yaml
-@filename: .solargraph.yml
+!filename: .solargraph.yml
 plugins:
 - solargraph-rails
 ```
@@ -153,7 +153,7 @@ Konfigurasi sudah selesai, dengan begini kita sudah dapat memanfaatkan kemampuan
 Agar tidak mengganggu isi dari direktori Root Rails project, kita perlu mendaftarkan file-file konfigurasi yaml yang telah dibuat ke dalam file `.gitignore`.
 
 ```conf
-@filename: .gitignore
+!filename: .gitignore
 /.rubocop*.yml
 /.solargraph.yml
 ```

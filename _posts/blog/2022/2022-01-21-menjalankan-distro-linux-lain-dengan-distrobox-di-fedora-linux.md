@@ -212,7 +212,7 @@ Edit file konfigurasi pacman yang ada pada,
 [bandithijo@arch-distrobox] sudo vim /etc/pacman.conf
 ```
 
-```shell
+```bash
 # /etc/pacman.conf
 
 # ...
@@ -464,7 +464,7 @@ spotify will appear in your applications list in a few seconds.
 
 Perintah tersebut akan membuat file desktop entry spec pada `~/.local/share/applications/spotify.desktop` di host system.
 
-```shell
+```bash
 [Desktop Entry]
 Type=Application
 Name=Spotify

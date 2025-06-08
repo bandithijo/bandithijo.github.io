@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Mengganti Zona Waktu pada Heroku"
-date: 2021-02-06 00:15
+date: '2021-02-06 00:15'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Heroku']
+tags: ['Heroku']
 pin:
 hot:
 contributors: []
@@ -20,12 +20,13 @@ description: "Kamu punya web aplikasi yang dideploy di Heroku? Dan tarnyata zona
 
 Saya memiliki web aplikasi yang saya bangun dengan Rails menggunakan referensi waktu dengan cara seperti ini,
 
-{% highlight_caption app/helpers/application_helper.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/helpers/application_helper.rb
 current_time = DateTime.now.strftime('%Y-%m-%d')
-{% endhighlight %}
+```
 
 Variable `current_time` tersebut yang akan saya jadikan referensi.
+
 
 # Permasalahan
 
@@ -45,46 +46,47 @@ Jadi kita cukup mendefinisikan zona waktu yang akan kita pakai. Maka web aplikas
 
 Semudah itu.
 
+
 # Caranya
 
 Pada catatan ini, saya menggunakan zona waktu **Asia/Makassar**.
 
+> INFO
+> 
+> Saya berasumsi bahwa teman-tema sudah memasang paket **heroku-cli**.
+> 
+> Tools ini akan kita gunakan untuk berinteraksi dengan Heroku melalui Terminal. Benar-benar sangat memudahkan sekali.
 
-
-{% box_info %}
-<p markdown=1>Saya berasumsi bahwa teman-tema sudah memasang paket **heroku-cli**.</p>
-<p>Tools ini akan kita gunakan untuk berinteraksi dengan Heroku melalui Terminal. Benar-benar sangat memudahkan sekali.</p>
-{% endbox_info %}
 
 ## Set TimeZone
 
 Buka Terminal emulator kalian dan jalankan,
 
-{% shell_term $ %}
-heroku config:set TZ="Asia/Makassar"
-{% endshell_term %}
+```
+$ heroku config:set TZ="Asia/Makassar"
+```
 
 Tunggu prosesnya hingga selesai.
 
-<pre>
+```
 Setting TZ and restarting ⬢ siaga-covid19... done, v13
 TZ: Asia/Makassar
-</pre>
+```
 
 Nah, berhasil.
 
 
 ## Cek TimeZone
 
-{% shell_term $ %}
-heroku config:get TZ
-{% endshell_term %}
+```
+$ heroku config:get TZ
+```
 
 Hasilnya,
 
-<pre>
+```
 Asia/Makassar
-</pre>
+```
 
 Nah, kalau sudah sesuai dengan yang kita definisikan, artinya kita telah berhasil.
 
@@ -92,20 +94,13 @@ Kalau mau dipastikan lagi kalian dapat membuka Heroku Dashboard, pergi ke web ap
 
 Seharusnya sudah ada variable **TZ** dengan value TimeZone yang kita definisikan.
 
-{% image https://i.postimg.cc/wBRt8NC0/gambar-01.png | 01 %}
+![Gambar 1](https://i.postimg.cc/wBRt8NC0/gambar-01.png)
+
+Gambar 1. Config environment variable TZ di Heroku
 
 Mantap!
 
 Seharusnya, saat ini web aplikasi kita sudah menggunakan TimeZone yang kita definisikan.
-
-
-
-
-
-
-
-
-
 
 
 # Pesan Penulis
@@ -119,9 +114,7 @@ Terima kasih.
 (^_^)
 
 
-
-
 # Referensi
 
-1. [dev.to/paulasantamaria/change-the-timezone-on-a-heroku-app-2b4](https://dev.to/paulasantamaria/change-the-timezone-on-a-heroku-app-2b4){:target="_blank"}
+1. [dev.to/paulasantamaria/change-the-timezone-on-a-heroku-app-2b4](https://dev.to/paulasantamaria/change-the-timezone-on-a-heroku-app-2b4)
 <br>Diakses tanggal: 2021/02/06

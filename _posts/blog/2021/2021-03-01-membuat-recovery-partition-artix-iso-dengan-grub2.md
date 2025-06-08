@@ -78,7 +78,7 @@ Kemudian, tinggal masukkan Artix Linux ISO ke dalam direktori **iso/** ini.
 Selanjutnya, kita perlu membuat menuentry pada GRUB2, untuk mengarahkan boot ke dalam partisi recovery yang di dalamnya sudah berisi Artix Linux ISO.
 
 ```bash
-@filename: /etc/grub.d/40_custom
+!filename: /etc/grub.d/40_custom
 #!/bin/sh
 
 exec tail -n +3 $0
@@ -163,7 +163,7 @@ Buat file udev rule dengan text editor favorit teman-teman, dengan root permissi
 Tambahkan seperti rule di bawah.
 
 ```bash
-@filename: /etc/udev/rules.d/99-hide-partitions.rules
+!filename: /etc/udev/rules.d/99-hide-partitions.rules
 KERNEL=="sda2",ENV{UDISKS_IGNORE}="1"
 ```
 

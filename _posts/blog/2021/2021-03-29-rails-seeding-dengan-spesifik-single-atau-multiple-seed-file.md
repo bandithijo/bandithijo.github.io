@@ -17,7 +17,7 @@ description: "Catatan kali ini, saya akan mencatatat tentang bagaimana mendifere
 
 # Prerequisite
 
-`Ruby 3.0.0` `Rails 6.1.3.1`
+`ruby 3.0.0` `rails 6.1.3.1`
 
 
 # Latar Belakang Masalah
@@ -87,7 +87,7 @@ Tidak ada aturan (convention) baku untuk hal ini.
 Untuk membaca semua file-file yang berakhiran **\*.seeds.rb** yang ada di dalam direktori **db/seeds/**, saya menggunakan cara seperti ini di dalam file **db/seeds.rb**.
 
 ```ruby
-@filename: db/seeds.rb
+!filename: db/seeds.rb
 Dir[File.join(Rails.root, "db", "seeds", "*.seeds.rb")].sort.each { |seed| load seed }
 ```
 
@@ -127,7 +127,7 @@ Kita perlu membuat file tasks untuk mengcover hal tersebut.
 ```
 
 ```ruby
-@filename: lib/tasks/db_seed_single.rake
+!filename: lib/tasks/db_seed_single.rake
 namespace :db do
   namespace :seed do
     desc "Loads the single selected file seed data from directory db/seeds/"
@@ -183,7 +183,7 @@ Sebelumnya, kita perlu membuat fle rake task lagi. Saya akan beri nama **db_seed
 ```
 
 ```ruby
-@filename: lib/tasks/db_seed_multiple.rake
+!filename: lib/tasks/db_seed_multiple.rake
 namespace :db do
   namespace :seed do
     desc "Loads the single or multiple selected file seed data from directory db/seeds/ (SEEDS=seed_1,seed_2,seed_3)"

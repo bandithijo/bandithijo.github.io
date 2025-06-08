@@ -17,7 +17,7 @@ description: "Konsistensi UI di setiap browser yang digunakan oleh user untuk me
 
 # Prerequisite
 
-`Ruby 3.0.3` `Rails 6.1.4` `Bootstrap 4` `Tempusdominus-Bootstrap-4 5.39` `jQuery 3.6` `Moment.js 2.29`
+`ruby 3.0.3` `rails 6.1.4` `bootstrap 4` `tempusdominus-bootstrap-4 5.39` `jquery 3.6` `moment.js 2.29`
 
 # Problem
 
@@ -43,7 +43,7 @@ Apabila menggunakan `datetime_field`, Chrome juga dapat memberikan time selectio
 Menyeragamkan date time picker pada input `date_field`.
 
 ```eruby
-@filename: app/views/tasks/_form.html.erb
+!filename: app/views/tasks/_form.html.erb
 <%= form_with(model: task) do |form| %>
   <!-- ... -->
 
@@ -59,7 +59,7 @@ Menyeragamkan date time picker pada input `date_field`.
 Kalau ingin mengikutkan time, dapat menggunakan `datetime_field`.
 
 ```eruby
-@filename: app/views/tasks/_form.html.erb
+!filename: app/views/tasks/_form.html.erb
 <%= form_with(model: task) do |form| %>
   <!-- ... -->
 
@@ -104,7 +104,7 @@ Done in 5.79s.
 Kalau sudah selesai, kedua package tersebut akan ditambahkan ke dalam file `package.json` yang ada di root project direktori.
 
 ```json
-@filename: package.json
+!filename: package.json
 {
   "name": "datetimepicker-with-tempusdominus-bootstrap-4",
   "private": true,
@@ -137,7 +137,7 @@ Kalau sudah selesai, kedua package tersebut akan ditambahkan ke dalam file `pack
 Definisikan `moment` pada webpacker environment agar dapat dikenali oleh aplikasi.
 
 ```javascript
-@filename: config/webpack/environment.js
+!filename: config/webpack/environment.js
 const { environment } = require('@rails/webpacker')
 
 const webpack = require("webpack")
@@ -160,7 +160,7 @@ Baris **9**, adalah pendefinisian `moment` yang perlu dilakukan.
 Kita perlu melakukan **import** terhadapat **tempusdominus-bootstrap-4** dan **moment** ke dalam aplikasi.
 
 ```javascript
-@filename: app/javascript/packs/application.js
+!filename: app/javascript/packs/application.js
 // This file is automatically compiled by Webpack, along with any other files
 // present in this directory. You're encouraged to place your actual application logic in
 // a relevant structure within app/javascript and only use these pack files to reference
@@ -203,7 +203,7 @@ Baris **14**-**15** dan **17**-**22**, adalah bagian yang perlu ditambahkan.
 Kalau menggunakan cara pemasangan Bootstrap 4 seperti yang saya gunakan, [Memasang Bootstrap 4 pada Rails 6 dengan Yarn](http://localhost:4000/blog/memasang-bootstrap-pada-rails-menggunakan-yarn#3-konfigurasi-stylesheet), maka kita perlu mengimport stylesheet untuk tempusdominus-bootstrap-4 ke dalam file **custom.scss**.
 
 ```css
-@filename: app/assets/stylesheets/custom.scss
+!filename: app/assets/stylesheets/custom.scss
 @import 'bootstrap/scss/bootstrap';
 @import 'tempusdominus-bootstrap-4/src/sass/tempusdominus-bootstrap-4';
 ```
@@ -222,7 +222,7 @@ Baris **2**, adalah bagian yang perlu ditambahkan.
 Langsung saja ke bagian view template, dalam kasus ini, saya memodifikasi inputan date pada file `_form.html.erb`.
 
 ```eruby
-@filename: app/views/tasks/_form.html.erb
+!filename: app/views/tasks/_form.html.erb
 <div class="row">
   <div class="col">
 

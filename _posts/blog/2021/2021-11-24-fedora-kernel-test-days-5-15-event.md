@@ -280,8 +280,8 @@ Kita akan mengedif file `.config` untuk memasukkan beberapa nilai-nilai credenti
 
 Ubah isi dari beberapa bagian, seperti yang saya contohkan di bawah.
 
-```shell
-@filename: .config
+```bash
+!filename: .config
 # ...
 
 # submit=none
@@ -295,8 +295,8 @@ Kita akan menggunakan metode submit authenticated.
 
 Isi juga username dan password pada bagian di bawahnya.
 
-```shell
-@filename: .config
+```bash
+!filename: .config
 # ...
 
 # FAS User credentials.

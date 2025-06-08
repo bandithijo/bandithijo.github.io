@@ -38,7 +38,7 @@ Target file bisa apa saja, misal: gambar, video, file dari Miscrosoft Word, arch
 Sebagai contoh file atau dokumen yang akan saya enkripsi adalah sebuah file bertipe plain text dengan ekstension Markdown.
 
 ```markdown
-@filename: tabel_users.md
+!filename: tabel_users.md
 | id  | email                                | password                           |
 |-----|--------------------------------------|------------------------------------|
 | 1   | kyle_kunde@predovic-gorczany.com     | mjvfPFh9E1WCUMPY2H5uLNRxvw42MdJRSH |
@@ -192,7 +192,7 @@ $ gpg --output tabel_users.md --decrypt tabel_users.md.gpg
 Tambahkan baris di bawah ini pada salah satu file configurasi ranger `~/.config/ranger/rifle.conf`.
 
 ```conf
-@filename: ~/.config/ranger/rifle.conf
+!filename: ~/.config/ranger/rifle.conf
 # gnupg
 ext gpg, has gpg = gpg --decrypt "$1" | less
 ```

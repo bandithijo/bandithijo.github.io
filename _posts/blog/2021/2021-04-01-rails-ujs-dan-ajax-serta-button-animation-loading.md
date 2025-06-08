@@ -17,7 +17,7 @@ description: "Catatan kali ini tentang bagaimana membuat sebuah fitur update val
 
 # Prerequisite
 
-`Ruby 3.0.0` `Rails 6.1.3.1`
+`ruby 3.0.0` `rails 6.1.3.1`
 
 
 # Target
@@ -42,7 +42,7 @@ Sejauh yang saya tahu, untuk memasang UJS pada Rails, kita menggunakan gem yang 
 Kemudian tinggal di importkan saja.
 
 ```javascript
-@filename: app/assets/javascript/application.js
+!filename: app/assets/javascript/application.js
 //= require jquery
 //= require jquery_ujs
 ```
@@ -50,7 +50,7 @@ Kemudian tinggal di importkan saja.
 Pada Rails 6, sudah di include-kan secara default.
 
 ```javascript
-@filename: app/javascript/packs/application.js
+!filename: app/javascript/packs/application.js
 require("@rails/ujs").start()
 ```
 
@@ -105,7 +105,7 @@ Inputkan buku baru. Masukkan data asal saja.
 Buka **app/views/books/show.html.erb**.
 
 ```eruby
-@filename: app/views/books/show.html.erb
+!filename: app/views/books/show.html.erb
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -136,7 +136,7 @@ Nantinya, apabila kita meng-klik link **Publish**, value dari **published_at** a
 ## Buat routes untuk publish
 
 ```ruby
-@filename: config/routes.rb
+!filename: config/routes.rb
 Rails.application.routes.draw do
   resources :books do
     member do
@@ -158,7 +158,7 @@ Secara default, link_to memiliki method **:get**, sedangkan yang kita inginkan a
 Modifikasi lagi link_to publish tersebut.
 
 ```eruby
-@filename: app/views/books/show.html.erb
+!filename: app/views/books/show.html.erb
 <!-- ... -->
 
 <%= link_to 'Publish', publish_book_path(@book), method: :patch %> |
@@ -178,7 +178,7 @@ Kalau kita klik link publish lagi, maka akan muncul pesan,
 Error in imuncul karena belum tersedia action **publish** pada **books_controller.rb**.
 
 ```ruby
-@filename: app/controllers/books_controller.rb
+!filename: app/controllers/books_controller.rb
 class BooksController < ApplicationController
   before_action :set_book, only: %i[ show edit update destroy publish ]
 
@@ -228,7 +228,7 @@ Tidak ada template untuk menampilkan hasilnya.
 Buka lagi **app/views/books/show.html.erb** dan modifikasi pada bagian output value dari published_at.
 
 ```eruby
-@filename: app/views/books/show.html.erb
+!filename: app/views/books/show.html.erb
 <!-- ... -->
 <p>
   <strong>Published at:</strong>
@@ -256,7 +256,7 @@ Penamaan file ini sesuai dengan nama action yang kita buat pada **books_controll
 Kita akan isi dengan `alert();`.
 
 ```javascript
-@filename: app/views/books/publish.js.erb
+!filename: app/views/books/publish.js.erb
 alert("Hello Ruby on Rails!");
 ```
 
@@ -265,7 +265,7 @@ Klik link "Publish", dan akan muncul pop up alert.
 Sekarang kita ganti dengan yang benar.
 
 ```javascript
-@filename: app/views/books/publish.js.erb
+!filename: app/views/books/publish.js.erb
 document.querySelector("#published-at").innerHTML = "<%= @book.published_at %>";
 ```
 
@@ -285,7 +285,7 @@ Kita tambahkan animasi text untuk memberikan user experience yang lebih baik.
 Seperti text bertuliskan "Publishing..." ketika link "Publish" di-klik.
 
 ```eruby
-@filename: app/views/books/show.html.erb
+!filename: app/views/books/show.html.erb
 <!-- ... -->
 
 <%= link_to 'Publish', publish_book_path(@book), method: :patch, remote: true, data: { disable_with: "Publishing..." } %> |
@@ -298,7 +298,7 @@ Tambahkan atribute **data: { disable_with: "..." }** ke **link_to "Publish"**, s
 Kemudian, berikan jeda waktu dengan **sleep** pada action **publish** di **books_controller**.
 
 ```ruby
-@filename: app/controllers/books_controller.rb
+!filename: app/controllers/books_controller.rb
 class BooksController < ApplicationController
   before_action :set_book, only: %i[ show edit update destroy publish ]
 

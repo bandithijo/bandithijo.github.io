@@ -130,7 +130,7 @@ Untuk dapat menggunakannya pada Xresources, tambahkan awalan `Nsxiv.` (window cl
 Contoh,
 
 ```conf
-@filename: ~/.Xresources
+!filename: ~/.Xresources
 Nsxiv.bar.font:          JetBrainsMono Nerd Font Bandit:pixelsize=17
 Nsxiv.bar.background:    #005F87
 Nsxiv.bar.foreground:    #D4D4D4

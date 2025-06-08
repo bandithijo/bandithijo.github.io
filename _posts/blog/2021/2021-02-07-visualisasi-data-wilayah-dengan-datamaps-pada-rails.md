@@ -131,7 +131,7 @@ Bagaimana caranya menghubungkan data yang ada di database Rails, dengan datamaps
 Kalau kita lihat pada bagian `data: {...}`,
 
 ```javascript
-@filename: app/views/data_peta/index.html.erb
+!filename: app/views/data_peta/index.html.erb
 // ...
 
     fills: {
@@ -167,7 +167,7 @@ Kalau melihat format data di atas pada baris 12-15, `data: {...}` tersebut memil
 Nah, artinya kita bisa membuat format seperti ini pada controller.
 
 ```ruby
-@filename: app/controllers/data_peta_controller.rb
+!filename: app/controllers/data_peta_controller.rb
 @last_updated     = Province.last.fetched_at
 @cumulative_cases = Province.select(:name, :total_cases)
   .where(fetched_at: @last_updated)
@@ -212,7 +212,7 @@ Caranya mudah, saya tinggal buatkan sebuah method baru yang saya beri nama,
 Agar controller saya tetap bersih, saya akan menggunakan controller concern saja.
 
 ```ruby
-@filename: app/controllers/concerns/convert_name_to_province_code.rb
+!filename: app/controllers/concerns/convert_name_to_province_code.rb
 module ConvertProvNameToProvCode
   def convert_name_to_province_code(province_name)
     provinces = {
@@ -260,7 +260,7 @@ end
 Oke, setelah jadi, tinggal di-include-kan ke data_peta_controller.rb.
 
 ```ruby
-@filename: app/controllers/data_peta_controller.rb
+!filename: app/controllers/data_peta_controller.rb
 class DataPetaController < ApplicationController
   include ConvertProvNameToProvCode
 
@@ -291,7 +291,7 @@ Anggaplah 'AAA' adalah yang paling banyak dan 'HHH' yang paling sedikit.
 Saya akan menggunakan controller concern lagi yang saya beri nama, `convert_total_cases_to_code(total_cases)`.
 
 ```ruby
-@filename: app/controllers/concerns/convert_total_cases_to_code.rb
+!filename: app/controllers/concerns/convert_total_cases_to_code.rb
 module ConvertTotalCasesToCode
   def convert_total_cases_to_code(total_cases)
     case total_cases
@@ -319,7 +319,7 @@ end
 Oke, setelah jadi, tinggal di-include-kan ke data_peta_controller.rb.
 
 ```ruby
-@filename: app/controllers/data_peta_controller.rb
+!filename: app/controllers/data_peta_controller.rb
 class DataPetaController < ApplicationController
   include ConvertProvNameToProvCode
   include ConvertTotalCasesToCode
@@ -346,7 +346,7 @@ Rails sudah menyediakan helper method untuk menghandle ini namun adanya di view 
 Mudahnya tinggal kita include saja `ActionView::Helpers::NumberHelper`.
 
 ```ruby
-@filename: app/controllers/data_peta_controller.rb
+!filename: app/controllers/data_peta_controller.rb
 class DataPetaController < ApplicationController
   include ConvertProvNameToProvCode
   include ConvertTotalCasesToCode
@@ -361,7 +361,7 @@ end
 Selanjutnya tinggal kita gunakan pada object query yang sudah kita racik sebelumnya.
 
 ```ruby
-@filename: app/controllers/data_peta_controller.rb
+!filename: app/controllers/data_peta_controller.rb
 class DataPetaController < ApplicationController
   include ConvertProvNameToProvCode
   include ConvertTotalCasesToCode
@@ -423,7 +423,7 @@ Buatkan struktur seperti di atas.
 Kemudian, kita akan masukkan kepada daftar assets precompile, di **config/initializers/assets.rb**.
 
 ```ruby
-@filename: config/initializers/assets.rb
+!filename: config/initializers/assets.rb
 # Be sure to restart your server when you modify this file.
 
 # ...
@@ -443,7 +443,7 @@ Mantap!
 Sekarang kita lanjut ke view template.
 
 ```eruby
-@filename: app/views/data_peta/index.html.erb
+!filename: app/views/data_peta/index.html.erb
 <div class="container px-0 pt-2 pb-5 mt-5" style="overflow-y: auto">
   <%= javascript_include_tag 'd3.min' %>
   <%= javascript_include_tag 'topojson.min' %>

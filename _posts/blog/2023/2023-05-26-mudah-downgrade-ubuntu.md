@@ -186,8 +186,8 @@ Tujuan dari menambahkan file APT preference, adalah untuk mengontrol *package ve
 $ sudo vi /etc/apt/preferences.d/focal
 ```
 
-```shell
-@filename: /etc/apt/preferences.d/focal
+```bash
+!filename: /etc/apt/preferences.d/focal
 Package: *
 Pin: release n=focal
 Pin-Priority: 1001

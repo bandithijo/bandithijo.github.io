@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Mudah Manajemen Service dengan OpenRC"
-date: 2021-01-06 06:45
+date: '2021-01-06 06:45'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Artix Linux']
+tags: ['Artix Linux', 'OpenRC']
 pin:
 hot:
 contributors: []
@@ -19,30 +19,31 @@ description: "Sedikit catatan-catatan kecil dalam memanajemen service dengan Ope
 
 Akhir Desember 2020, saya memigrasikan Arch Linux yang sudah saya pakai sejak April 2020 -- karena Maret 2020, saya bermigrasi ke FreeBSD -- ke Artix Linux OpenRC.
 
-Teman-teman dapat membaca catatan migrasi saya di sini, [**Memigrasikan Arch Linux ke Artix Linux (OpenRC)**](/blog/memigrasikan-arch-ke-artix-openrc){:target="_blank"}.
+Teman-teman dapat membaca catatan migrasi saya di sini, [**Memigrasikan Arch Linux ke Artix Linux (OpenRC)**](/blog/memigrasikan-arch-ke-artix-openrc).
 
 Menggunakan init system, selain **systemd** merupakan hal yang baru bagi saya. Karena sejak Desember 2014 -- awal migrasi saya menggunakan GNU/Linux dengan distribusi sistem operasi **Fedora Linux**, sudah menggunakan **systemd**.
 
 Catatan kali ini saya ingin menyimpan bagaimana cara menggunakan OpenRC dalam memanajemen service.
 
-{% box_perhatian %}
-<p>Catatan ini bukan merupakan panduan atau tutorial.</p>
-{% endbox_perhatian %}
 
 # Cara Penggunaan
 
-{% box_info %}
-<p markdown=1>Selama proses catatan ini, saya akan menggunakan **sshd** sebagai contoh service.</p>
-<p markdown=1>Di Artix Linux, paket **openssh** harus dipasang sesuai init yang digunakan.</p>
-<p markdown=1>Misal, saya menggunakan OpenRC.</p>
-{% shell_user %}
-sudo pacman -S openssh openssh-openrc
-{% endshell_user %}
-{% endbox_info %}
+> INFO
+> 
+>Selama proses catatan ini, saya akan menggunakan **sshd** sebagai contoh service.
+> 
+>Di Artix Linux, paket **openssh** harus dipasang sesuai init yang digunakan.
+> 
+>Misal, saya menggunakan OpenRC.
+> 
+> ```
+> $ sudo pacman -S openssh openssh-openrc
+> ```
+
 
 ## 1. Melihat Daftar Service yang Tersedia; RC-SERVICE(8)
 
-<pre class="whiteboard">
+```
 NAME
      rc-service — locate and run an OpenRC service with the given arguments
 
@@ -55,21 +56,21 @@ DESCRIPTION
 
      If given the -l, --list argument then rc-service will list all available
      services.
-</pre>
+```
 
 Untuk melihat daftar service apa saja yang tersedia, kita dapat menggunakan perintah,
 
-{% shell_user %}
-rc-service -l
-{% endshell_user %}
+```
+$ rc-service -l
+```
 
 Atau,
 
-{% shell_user %}
-rc-service --list
-{% endshell_user %}
+```
+$ rc-service --list
+```
 
-<pre>
+```
 acpid
 agetty
 agetty.tty1
@@ -87,23 +88,24 @@ virtlockd
 virtlogd
 wpa_supplicant
 xinetd
-</pre>
+```
 
 Atau kombinasikan dengan **grep**.
 
 Misal, ingin mencari **wpa_supplicant** service.
 
-{% shell_user %}
-rc-service --list | grep wpa_supplicant
-{% endshell_user %}
+```
+$ rc-service --list | grep wpa_supplicant
+```
 
-<pre>
-<span style="color:red;">wpa_supplicant</span>
-</pre>
+```
+wpa_supplicant
+```
+
 
 ## 2. Menambahkan Service ke runlevel; RC-UPDATE(8)
 
-<pre class="whiteboard">
+```
 NAME
      rc-update — add and remove services to and from a runlevel
 
@@ -124,7 +126,7 @@ DESCRIPTION
      show                    Show all enabled services and the runlevels they be‐
                              long to.  If you specify runlevels to show, then
                              only those will be included in the output.
-</pre>
+```
 
 **runlevel** adalah level dimana service akan dijalankan.
 
@@ -132,14 +134,12 @@ DESCRIPTION
 
 Terdapat 3 internal runlevel dan 4 user defined runlevel.
 
-<br>
 **Internal runlevel**:
 
 1. **sysinit**
 2. **shutdown**
 3. **reboot**
 
-<br>
 **User Defined runlevel**:
 
 1. **boot**, Starts all system-necessary services for other runlevels
@@ -147,38 +147,37 @@ Terdapat 3 internal runlevel dan 4 user defined runlevel.
 3. **nonetwork**, Used when no network connectivity is required
 4. **single**, Single-user mode
 
-<br>
 Contoh:
 
-<pre>
+```
 Runlevel: shutdown
- killprocs                                                            [  <span class="is-danger">stopped</span>  ]
+ killprocs                                                            [  stopped  ]
  ...
  ...
 Runlevel: default
- agetty.tty1                                     [  <span class="is-success">started 2 day(s) 06:11:21 (0)</span> ]
- agetty.tty2                                     [  <span class="is-success">started 2 day(s) 06:11:21 (0)</span> ]
+ agetty.tty1                                     [  started 2 day(s) 06:11:21 (0) ]
+ agetty.tty2                                     [  started 2 day(s) 06:11:21 (0) ]
  ...
  ...
 Runlevel: nonetwork
- local                                                                [  <span class="is-success">started</span>  ]
+ local                                                                [  started  ]
 Runlevel: sysinit
- dmesg                                                                [  <span class="is-success">started</span>  ]
+ dmesg                                                                [  started  ]
  ...
  ...
 Runlevel: boot
- root                                                                 [  <span class="is-success">started</span>  ]
+ root                                                                 [  started  ]
  ...
  ...
-</pre>
+```
 
 Biasanya, service-service yang kita tambahkan, apabila tidak diberikan argument spesifik runlevel apa yang akan digunakan, akan diletakkan di runlevel **default**.
 
 Proses menambahkan service ke runlevel ini, mirip dengan proses pada systemd yang menggunakan option **enable**.
 
-<pre class="url">
-sudo rc-service add &lt;nama_service>
-</pre>
+```
+$ sudo rc-service add <nama_service>
+```
 
 Misal, saya ingin menjalankan service SSH.
 
@@ -186,22 +185,23 @@ Service SSH memiliki service name bernama **sshd**.
 
 Cara menambahkan ke runlevel,
 
-{% shell_user %}
-sudo rc-update add sshd
-{% endshell_user %}
+```
+$ sudo rc-update add sshd
+```
 
-<pre>
-<span class="is-success">*</span> service sshd added to runlevel default
-</pre>
+```
+* service sshd added to runlevel default
+```
 
 Service **sshd** telah berhasil ditambahka ke runlevel **default**.
 
-<pre>
+```
 Runlevel: default
- sshd                                                                 [  <span class="is-danger">stopped</span>  ]
-</pre>
+ sshd                                                                 [  stopped  ]
+```
 
 Tapi, statusnya masih **stopped**, kita akan jalankan di section selanjutnya.
+
 
 ## 3. Menjalankan, Menghentikan, Merestart Service; RC-SERVICE(8)
 
@@ -211,77 +211,75 @@ Yak, benar! Selain kita gunakan untuk melihat daftar service, kita juga dapat gu
 
 Kalau pada systemd, proses ini mirip dengan **start**, **stop**, **reload**, **status**.
 
-<br>
 **Start Service**
 
-<pre class="url">
-sudo rc-service &lt;nama_service> start
-</pre>
+```
+$ sudo rc-service &lt;nama_service> start
+```
 
-{% shell_user %}
-sudo rc-service sshd start
-{% endshell_user %}
+```
+$ sudo rc-service sshd start
+```
 
-<pre>
-sshd              | * Starting sshd ...                                       [ <span class="is-success">ok</span> ]
-</pre>
+```
+sshd              | * Starting sshd ...                                       [ ok ]
+```
 
-{% box_info %}
-<p>Kita dapat menjalankan service tanpa perlu menambahkan ke dalam runlevel.</p>
-<p markdown=1>Kalau kita jalankan tanpa terlebih dulu memasukkannya ke dalam runlevel **default**, maka akan dimasukkan ke runlevel **manual**.</p>
-{% endbox_info %}
+> INFO
+> 
+> Kita dapat menjalankan service tanpa perlu menambahkan ke dalam runlevel.
+> 
+> Kalau kita jalankan tanpa terlebih dulu memasukkannya ke dalam runlevel **default**, maka akan dimasukkan ke runlevel **manual**.
 
-<br>
 **Stop Service**
 
-<pre class="url">
-sudo rc-service &lt;nama_service> stop
-</pre>
+```
+$ sudo rc-service <nama_service> stop
+```
 
-{% shell_user %}
-sudo rc-service sshd stop
-{% endshell_user %}
+```
+$ sudo rc-service sshd stop
+```
 
-<pre>
-sshd              | * Stopping sshd ...                                       [ <span class="is-success">ok</span> ]
-</pre>
+```
+sshd              | * Stopping sshd ...                                       [ ok ]
+```
 
-<br>
 **Restart Service**
 
-<pre class="url">
-sudo rc-service &lt;nama_service> restart
-</pre>
+```
+$ sudo rc-service <nama_service> restart
+```
 
-{% shell_user %}
-sudo rc-service sshd restart
-{% endshell_user %}
+```
+$ sudo rc-service sshd restart
+```
 
-<pre>
-sshd              | * Stopping sshd ...                                       [ <span class="is-success">ok</span> ]
-sshd              | * Starting sshd ...                                       [ <span class="is-success">ok</span> ]
-</pre>
+```
+sshd              | * Stopping sshd ...                                       [ ok ]
+sshd              | * Starting sshd ...                                       [ ok ]
+```
 
-<br>
 **Status Service**
 
-<pre class="url">
-sudo rc-service &lt;nama_service> status
-</pre>
+```
+$ sudo rc-service &lt;nama_service> status
+```
 
-{% shell_user %}
-sudo rc-service sshd status
-{% endshell_user %}
+```
+$ sudo rc-service sshd status
+```
 
-<pre>
-<span class="is-success">*</span> status: started
-</pre>
+```
+* status: started
+```
 
 atau,
 
-<pre>
-<span class="is-success">*</span> status: stopped
-</pre>
+```
+* status: stopped
+```
+
 
 ## 4. Menghapus Service dari runlevel; RC-UPDATE(8)
 
@@ -293,28 +291,28 @@ Misalnya, saya tidak memerlukan service SSH untuk berjalan terus menerus. Maka s
 
 Pada systemd, proses ini mirip seperti **disable** service.
 
-<pre class="url">
-rc-update del &lt;nama_service>
-</pre>
+```
+$ rc-update del <nama_service>
+```
 
-{% shell_user %}
-sudo rc-update del sshd
-{% endshell_user %}
+```
+$ sudo rc-update del sshd
+```
 
-<pre>
-<span clas="is-success">*</span> service sshd removed from runlevel default
-</pre>
+```
+* service sshd removed from runlevel default
+```
 
 
 ## 5. Melihat Service pada runlevel; RC-UPDATE(8)
 
 Kita dapat gunakan perintah ini untuk melihat service tertentu ada pada runlevel apa saja.
 
-{% shell_user %}
-rc-update show
-{% endshell_user %}
+```
+$ rc-update show
+```
 
-<pre>
+```
           agetty.tty1 |      default
           agetty.tty2 |      default
               cgroups |                                 sysinit
@@ -337,16 +335,15 @@ rc-update show
          udev-trigger |                                 sysinit
               urandom | boot
        wpa_supplicant |      default
-</pre>
+```
 
-<br>
 Kita juga dapat menggunakan untuk melihat service yang ada pada runlevel tertentu, misal runlevel **default**.
 
-{% shell_user %}
-rc-update show default
-{% endshell_user %}
+```
+$ rc-update show default
+```
 
-<pre>
+```
           agetty.tty1 | default
           agetty.tty2 | default
             alsasound | default
@@ -359,11 +356,12 @@ rc-update show default
                  sshd | default
                   tlp | default
        wpa_supplicant | default
-</pre>
+```
+
 
 ## 6. Melihat Service Status; RC-STATUS(8)
 
-<pre class="whiteboard">
+```
 NAME
      rc-status — show status info about runlevels
 
@@ -376,11 +374,11 @@ DESCRIPTION
      If an active service is being supervised by supervise-daemon(8,) the amount
      of time the daemon has been active along with the number of times it has
      been respawned in the current respawn period will be displayed.
-</pre>
+```
 
 Option yang tersedia:
 
-<pre class="whiteboard">
+```
      The options are as follows:
 
      -a, --all             Show all runlevels and their services.
@@ -406,17 +404,17 @@ Option yang tersedia:
      -C, --nocolor         Disable color output.
 
      runlevel              Show information only for the named runlevel.
-</pre>
+```
 
 Sudah sangat jelas yaa, **rc-status** kita gunakan untuk melihat service status.
 
 Kalau kita hanya menjalankan tanpa option, akan ditampilkan runlevel default, manual, hotplugged, needed/wanted.
 
-{% shell_user %}
-rc-status
-{% endshell_user %}
+```
+$ rc-status
+```
 
-<pre>
+```
 Runlevel: default
  local                                                                 [  started  ]
  agetty.tty1                                      [  started 2 day(s) 10:15:05 (0) ]
@@ -428,10 +426,10 @@ Dynamic Runlevel: needed/wanted
  virtlogd                                                              [  started  ]
 Dynamic Runlevel: manual
  libvirtd                                                              [  started  ]
-</pre>
+```
 
-<br>
 Kalau ingin melihat service status dari semua runlevel, gunakan option `--all`.
+
 
 ## 7. Direktori Config
 
@@ -441,23 +439,24 @@ Misal,
 
 Untuk konfigurasi dari **dnscrypt-proxy**.
 
-{% highlight_caption /etc/conf.d/dnscrypt-proxy %}
-{% highlight sh linenos %}
+```bash
+!filename: /etc/conf.d/dnscrypt-proxy
 #rc_use="tor"
 #DNSCRYPT_PROXY_OPTS="-config /etc/dnscrypt-proxy/dnscrypt-proxy.toml"
 #DNSCRYPT_PROXY_USER="dnscrypt"
 #DNSCRYPT_PROXY_GROUP="dnscrypt"
 DNSCRYPT_PROXY_USER="root"
 DNSCRYPT_PROXY_GROUP="root"
-{% endhighlight %}
+```
 
 Selayaknya file config, isinya berupa variabel-variabel yang akan digunakan di init script.
 
 Kita akan lihat init script dari **dnscrypt-proxy**.
 
-{% highlight_caption /etc/init.d/dnscrypt-proxy %}
-{% highlight sh linenos %}
+```bash
+!filename: /etc/init.d/dnscrypt-proxy
 #!/usr/bin/openrc-run
+
 # Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
@@ -477,7 +476,7 @@ depend() {
 # 	checkpath -q -d -m 0775 -o "${command_user}" /var/cache/"${RC_SVCNAME}"
 # 	checkpath -q -d -m 0775 -o "${command_user}" /var/log/"${RC_SVCNAME}"
 # }
-{% endhighlight %}
+```
 
 Nah, teman-teman dapat melihat variabel-variabel pada file config tersebut digunakan pada init script.
 
@@ -493,7 +492,7 @@ Nah, teman-teman dapat melihat variabel-variabel pada file config tersebut digun
 | <code>systemctl (enable, disable) daemon.service</code> | <code>rc-update (add, del) daemon</code> | Turn service on or off. |
 | <code>systemctl daemon-reload</code> | - | Create or modify configuration. |
 
-Sumber: [Arch Wiki: OpenRC - Usage](https://wiki.archlinux.org/index.php/OpenRC#Usage){:target="_blank"}
+Sumber: [Arch Wiki: OpenRC - Usage](https://wiki.archlinux.org/index.php/OpenRC#Usage)
 
 
 # Pesan Penulis
@@ -511,14 +510,14 @@ Terima kasih.
 
 # Referensi
 
-1. [Gentoo Wiki: OpenRC](https://wiki.gentoo.org/wiki/OpenRC){:target="_blank"}
+1. [Gentoo Wiki: OpenRC](https://wiki.gentoo.org/wiki/OpenRC)
 <br>Diakses tanggal: 2021/01/06
 
-2. [Artix Wiki: OpenRC](https://wiki.artixlinux.org/Main/OpenRC){:target="_blank"}
+2. [Artix Wiki: OpenRC](https://wiki.artixlinux.org/Main/OpenRC)
 <br>Diakses tanggal: 2021/01/06
 
-3. [Arch Wiki: OpenRC](https://wiki.archlinux.org/index.php/OpenRC){:target="_blank"}
+3. [Arch Wiki: OpenRC](https://wiki.archlinux.org/index.php/OpenRC)
 <br>Diakses tanggal: 2021/01/06
 
-4. [GitHub/OpenRC/openrc: OpenRC Users Guide](https://github.com/OpenRC/openrc/blob/master/user-guide.md){:target="_blank"}
+4. [GitHub/OpenRC/openrc: OpenRC Users Guide](https://github.com/OpenRC/openrc/blob/master/user-guide.md)
 <br>Diakses tanggal: 2021/01/06

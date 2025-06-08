@@ -44,7 +44,7 @@ Pada segment atau section bar yang dijadikan sebagai trayicon, tambahkan attribu
 Contoh seperti yang saya pergunakan,
 
 ```dosini
-@filename: ~/.config/polybar/config.ini
+!filename: ~/.config/polybar/config.ini
 [colors]
 foreground = ${xrdb:foreground:}
 background = #001E1E1E
@@ -164,7 +164,7 @@ $ pidof polybar
 Nah, kalau sudah berhasil menggunakan command `polybar-msg` untuk hide & show di Terminal, tinggal mengaplikasikannya pada applikasi hotkey yang kalian gunakan. Saya menggunakan **sxhkd**.
 
 ```conf
-@filename: ~/.config/sxhkd/sxhkdrc
+!filename: ~/.config/sxhkd/sxhkdrc
 # polybar tray
 super + shift + ~b
     polybar-msg cmd {show, hide}

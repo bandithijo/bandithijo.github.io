@@ -17,7 +17,7 @@ description: "Mungkin teman-teman pernah melihat sebuah blog yang memiliki fitur
 
 # Prerequisite
 
-`Ruby 2.7.2` `Rails 6.1.2` `PostgreSQL 12.5` `RSpec 4.0.0`
+`ruby 2.7.2` `rails 6.1.2` `postgresql 12.5` `rspec 4.0.0`
 
 # Latar Belakang Masalah
 
@@ -46,7 +46,7 @@ Misal, saya memiliki sebuah model bernama **article**.
 Saya akan membuat business logic pada **article** model, seperti di bawah ini.
 
 ```ruby
-@filename: app/models/article.rb
+!filename: app/models/article.rb
 class Article < ApplicationRecord
   belongs_to :user
 
@@ -71,7 +71,7 @@ Anggaplah controllernya bernama **articles_controller**.
 Pada Blog post untuk menampilkan halaman dari artikel biasanya terdapat pada action **show**.
 
 ```ruby
-@filename: app/controllers/articles_controller.rb
+!filename: app/controllers/articles_controller.rb
 class ArticlesController < ApplicationController
 
   # ...
@@ -106,7 +106,7 @@ Mengikuti dari **articles_controller** dengan action **show**, artinya kita akan
 Nah, tinggal kita gunakan instance variable dari **@article** yang telah kita definisikan di **articles_controller**.
 
 ```eruby
-@filename: app/views/articles/show.html.erb
+!filename: app/views/articles/show.html.erb
 <!-- ... -->
 
 <!-- For go to next & prev feature -->
@@ -129,7 +129,7 @@ Method **.next** dan **.prev** adalah method yang kita definisikan pada **articl
 Kalau ingin menggunakan tooltip, dapat menggunakan cara seperti ini.
 
 ```eruby
-@filename: app/views/articles/show.html.erb
+!filename: app/views/articles/show.html.erb
 <!-- ... -->
 
 <!-- For go to next & prev feature -->

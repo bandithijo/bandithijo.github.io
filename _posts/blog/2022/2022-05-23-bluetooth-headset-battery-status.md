@@ -57,7 +57,7 @@ $ sudo cp /usr/lib/systemd/system/bluetooth.service /etc/systemd/system/
 Secara default, bluetoothd sevice yang dijalankan pada file bluetooth.service tidak menggunakan flag apapun.
 
 ```bash
-@filename: /etc/systemd/system/bluetooth.service
+!filename: /etc/systemd/system/bluetooth.service
 [Service]
 ...
 ...
@@ -77,7 +77,7 @@ $ sudo sed -i -r 's/ExecStart=.+/& -E/' /etc/systemd/system/bluetooth.service
 Perintah `sed` di atas akan menambahkan flag `-E` pada pemanggilan library bluetoothd.
 
 ```bash
-@filename: /etc/systemd/system/bluetooth.service
+!filename: /etc/systemd/system/bluetooth.service
 [Service]
 ...
 ...

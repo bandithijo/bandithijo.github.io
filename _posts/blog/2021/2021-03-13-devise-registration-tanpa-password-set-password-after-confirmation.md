@@ -17,7 +17,7 @@ description: "Catatan kali ini tentang pemanfaatan Devise gem untuk registration
 
 # Prerequisite
 
-`Ruby 3.0.0` `Rails 6.1.3` `PostgreSQL 12.5` `RSpec 4.0.0`
+`ruby 3.0.0` `rails 6.1.3` `postgresql 12.5` `rspec 4.0.0`
 
 
 # Latar Belakang Masalah
@@ -36,7 +36,7 @@ Catatan kali ini tentang pemanfaatan Devise gem untuk registration tanpa menginp
 \* Optional
 
 ```ruby
-@filename: Gemfile
+!filename: Gemfile
 gem 'devise',      '~> 4.7', '>= 4.7.3'
 gem 'simple_form', '~> 5.1'
 ```
@@ -66,7 +66,7 @@ $ rails g devise:install
 Selanjutnya konfigurasi ActionMailer untuk environment development.
 
 ```ruby
-@filename: config/environments/development.rb
+!filename: config/environments/development.rb
 Rails.application.configure do
   # ...
 
@@ -90,7 +90,7 @@ Untuk yang belum tahu MailCatcher, dapat dibaca di sini, [**Konfigurasi Ruby on 
 Kita perlu merubah beberapa konfigurasi pada Devise initializer.
 
 ```ruby
-@filename: config/initializer/devise.rb
+!filename: config/initializer/devise.rb
 Devise.setup do |config|
   # ...
 
@@ -126,7 +126,7 @@ $ rails g devise User
 Buka migrationsnya, dan enablekan `:confirmation_token`, `:confirmed_at`, `:confirmation_sent_at` pada bagian **Confirmable**.
 
 ```ruby
-@filename: db/migrate/20210312144943_devise_create_users.rb
+!filename: db/migrate/20210312144943_devise_create_users.rb
 # frozen_string_literal: true
 
 class DeviseCreateUsers < ActiveRecord::Migration[5.2]
@@ -155,7 +155,7 @@ $ rails g migration add_name_to_users name:string
 ```
 
 ```ruby
-@filename: db/migration/20210312145059_add_name_to_users.rb
+!filename: db/migration/20210312145059_add_name_to_users.rb
 class AddNameToUsers < ActiveRecord::Migration[5.2]
   def change
     add_column :users, :name, :string
@@ -172,7 +172,7 @@ $ rails db:migrate
 Aktifkan module `:confirmable` pada **user.rb** model.
 
 ```ruby
-@filename: app/models/user.rb
+!filename: app/models/user.rb
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -185,7 +185,7 @@ end
 Sekalian, tambahkan logic untuk menghandle registration tanpa password di bawah module-module Devise tersebut.
 
 ```ruby
-@filename: app/modles/user.rb
+!filename: app/modles/user.rb
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -240,7 +240,7 @@ Kita akan membuat 2 custom controller yang merupakan turunan dari Devise control
 2. ConfirmationsController < Devise::ConfirmationsController
 
 ```ruby
-@filename: app/controllers/registrations_controller.rb
+!filename: app/controllers/registrations_controller.rb
 class RegistrationsController < Devise::RegistrationsController
   private
 
@@ -255,7 +255,7 @@ end
 ```
 
 ```ruby
-@filename: app/controllers/confirmations_controller.rb
+!filename: app/controllers/confirmations_controller.rb
 class ConfirmationsController < Devise::ConfirmationsController
   # Remove the first skip_before_filter (:require_no_authentication) if you
   # don't want to enable logged users to access the confirmation page.
@@ -336,7 +336,7 @@ $ rails g controller Home index
 ## Routes
 
 ```ruby
-@filename: config/routes.rb
+!filename: config/routes.rb
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'home#index'
@@ -372,7 +372,7 @@ Yang perlu dimodifikasi adalah:
 Modifikasi view template **registrations/new**.
 
 ```eruby
-@filename: app/views/devise/registrations/new.html.erb
+!filename: app/views/devise/registrations/new.html.erb
 <h2>Sign up</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -407,7 +407,7 @@ Dapat dilihat, pada form registrasi ini, hanya menampilkan input field berupa **
 Saya memindahkan field `password` dan `password_confirmation` ke halaman yang lain, yaitu halaman **views/devise/confirmations/show.html.erb**.
 
 ```eruby
-@filename: app/views/devise/confirmations/show.html.erb
+!filename: app/views/devise/confirmations/show.html.erb
 <h2>Account Activation<% if resource.try(:user_name) %> for <%= resource.user_name %><% end %></h2>
 
 <%= simple_form_for(resource, as: resource_name, url: update_user_confirmation_path, html: { method: :put }) do |f| %>
@@ -439,7 +439,7 @@ Saya memindahkan field `password` dan `password_confirmation` ke halaman yang la
 Gambar 2. Account Activation form
 
 ```eruby
-@filename: app/views/devise/confirmations/new.html.erb
+!filename: app/views/devise/confirmations/new.html.erb
 <h2>Resend confirmation instructions</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
@@ -469,7 +469,7 @@ Gambar 2. Account Activation form
 Pasang nav untuk menempatkan link indikator apabila user telah login atau belum.
 
 ```eruby
-@filename: app/layouts/application.html.erb
+!filename: app/layouts/application.html.erb
 <!DOCTYPE html>
 <html>
   <head>

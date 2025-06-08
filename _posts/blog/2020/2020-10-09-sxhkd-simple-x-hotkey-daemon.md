@@ -121,7 +121,7 @@ super + shift + x
 
 **Different Statement**
 
-```shell
+```bash
 {F1, F2, Fx}
     {statement A, statement B, statement x}
 ```
@@ -137,7 +137,7 @@ Dan seterusnya.
 <br>
 **Same Statement with Different Options**
 
-```shell
+```bash
 {F1, F2, Fx}
     statement {--option A, --option B, --option x}
 ```
@@ -162,7 +162,7 @@ Dan seterusnya.
 
 ## 4. Combination Sequence Key with Parenthesis
 
-```shell
+```bash
 super + {_+shift} + F1
     statement {--option A, --option B}
 ```
@@ -177,7 +177,7 @@ Arti dari keybind di atas adalah:
 
 ## 5. Toggling On/Off
 
-```shell
+```bash
 ~F11
     {statement on, statement off}
 ```
@@ -204,7 +204,7 @@ super + ~F11
 
 ## 6. Multiline for Long Statement
 
-```shell
+```bash
 super + F1
     notify-send \
     "Header Title" \

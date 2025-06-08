@@ -74,7 +74,7 @@ $ xset +dpms
 ## dmenu-presentationmode
 
 ```bash
-@filename: ~/.local/bin/dmenu-presentationmode
+!filename: ~/.local/bin/dmenu-presentationmode
 #!/bin/bash
 
 # Deps:

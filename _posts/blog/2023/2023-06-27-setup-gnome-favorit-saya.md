@@ -58,7 +58,7 @@ $ sudo touch /etc/dconf/db/gdm.d/02-logo
 Isi dengan konfigurasi di bawah ini
 
 ```conf
-@filename: /etc/dconf/db/gdm.d/02-logo
+!filename: /etc/dconf/db/gdm.d/02-logo
 [org/gnome/login-screen]
 logo='/usr/share/pixmaps/archlinux-logo-text-dark.svg'
 ```
@@ -78,7 +78,7 @@ $ sudo touch /etc/dconf/db/gdm.d/10-cursor-settings
 Isi dengan konfigurasi di bawah ini
 
 ```conf
-@filename: /etc/dconf/db/gdm.d/10-cursor-settings
+!filename: /etc/dconf/db/gdm.d/10-cursor-settings
 [org/gnome/desktop/interface]
 cursor-theme='ComixCursors-White'
 cursor-size=48
@@ -123,7 +123,7 @@ Just set the env `XCURSOR_SIZE=` before run the Qt apps, or define on local/glob
 My local env variables are on `~/.profile` (some people keep it on `~/.bashrc` or `~/.bash_profile`).
 
 ```bash
-@filename: ~/.profile
+!filename: ~/.profile
 export XCURSOR_SIZE=36
 ```
 

@@ -17,7 +17,7 @@ description: "Membuat menu item untuk menampilkan menu yang aktif dan yang tidak
 
 # Prerequisite
 
-`Ruby 2.7.2` `Rails 6.1.1` `Bootstrap 4.6.x`
+`ruby 2.7.2` `rails 6.1.1` `bootstrap 4.6.x`
 
 
 # Latar Belakang
@@ -83,7 +83,7 @@ Misal seperti ini:
 Penerapan ke view templatenya akan seperti ini:
 
 ```eruby
-@filename: app/views/shared/_navbar.html.erb
+!filename: app/views/shared/_navbar.html.erb
 <ul class="nav nav-tabs mb-3">
   <li class="nav-item">
     <%= link_to "Beranda", root_path,
@@ -130,7 +130,7 @@ Nah, penerapan ke view templatenya akan seperti ini:
 Dapat dilihat pada bari 4, 11, 14.
 
 ```eruby
-@filename: app/views/shared/_sidebar.html.erb
+!filename: app/views/shared/_sidebar.html.erb
 <div class="card">
   <div class="card-header" id="headingOne">
     <h2 class="mb-0">
@@ -176,7 +176,7 @@ Kita dapat membuat method sendiri yang dapat kita gunakan di view template.
 Saya akan meletakkan di **app/helpers/application_helper.rb**.
 
 ```ruby
-@filename: app/helpers/application_helper.rb
+!filename: app/helpers/application_helper.rb
 module ApplicationHelper
   ACTIVE_CLASS = 'is-active'.freeze
 
@@ -202,7 +202,7 @@ Terdapat 2 cara yang dapat digunakan:
 2. Menggunakan controller atau action name
 
 ```eruby
-@filename: app/views/shared/_navbat.html.erb
+!filename: app/views/shared/_navbat.html.erb
 <div id="navbar" class="navbar-collapse collapse">
   <ul class="nav navbar-nav navbar-right">
     <li class='<%= active_for(path: "/users/#{current_user.id}") %>'>

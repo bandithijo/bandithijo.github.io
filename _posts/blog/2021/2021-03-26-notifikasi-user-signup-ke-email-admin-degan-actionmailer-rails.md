@@ -17,7 +17,7 @@ description: "Catatan kali ini, saya akan mencatatat tentang bagaimana membuat e
 
 # Prerequisite
 
-`Ruby 3.0.0` `Rails 6.1.3`
+`ruby 3.0.0` `rails 6.1.3`
 
 
 # Latar Belakang Masalah
@@ -72,7 +72,7 @@ default from: 'from@example.com'
 sesuai yang kita inginkan.
 
 ```ruby
-@filename: app/mailers/application_mailer.rb
+!filename: app/mailers/application_mailer.rb
 class ApplicationMailer < ActionMailer::Base
   default from: "no-reply@siaga-covid19.herokuapp.com"
   layout "mailer"
@@ -84,7 +84,7 @@ Selanjutnya, modifikasi file **admin_mailer.rb**, yang sudah kita generate sebel
 Kita akan mendefinisikan alamat email admin **default to:** dan juga mendefinisikan fungsi untuk **new_user(user)**.
 
 ```ruby
-@filename: app/mailers/admin_mailer.rb
+!filename: app/mailers/admin_mailer.rb
 class AdminMailer < ApplicationMailer
   default to: "admin@siaga-covid19.herokuapp.com"
 
@@ -107,7 +107,7 @@ Seperti halnya controller, method tersebut juga merupakan action yang akan mengh
 Jadi kita akan membuat file bernama **app/views/admin_mailer/new_user.html.erb**.
 
 ```eruby
-@filename: app/views/admin_mailer/new_user.html.erb
+!filename: app/views/admin_mailer/new_user.html.erb
 <h1>New User!</h1>
 <p>There is new user joined SiagaCOVID19:</p>
 <h3><%= @user.email %></h3>
@@ -123,7 +123,7 @@ Yang saya catat di atas, hanya contoh sederhana saja.
 Karena kita akan memberikan notifikasi email apabila terdapat user baru yang mendaftar, maka logika bisnis untuk mengirimkan notifikasi akan kita letakkan pada **user** model.
 
 ```ruby
-@filename: app/models/user.rb
+!filename: app/models/user.rb
 class User < ApplicationRecord
   after_create :send_notification
 

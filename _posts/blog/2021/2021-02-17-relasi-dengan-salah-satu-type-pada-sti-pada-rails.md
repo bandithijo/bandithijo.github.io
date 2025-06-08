@@ -17,7 +17,7 @@ description: "Menyambung catatan tentang Single Table Inheritance, namun kali in
 
 # Prerequisite
 
-`Ruby 3.0.0` `Rails 6.1.2` `PostgreSQL 12.5` `RSpec 4.0.0`
+`ruby 3.0.0` `rails 6.1.2` `postgresql 12.5` `rspec 4.0.0`
 
 
 # Latar Belakang Masalah
@@ -52,13 +52,13 @@ Sudah dapat ditebak yaa, tabel news tentu memiliki relasi one to many dengan tab
 Karena saya menggunakan STI pada tabel Users, maka saya juga perlu membuat model untuk masing-masing type user (developer dan copywriter).
 
 ```ruby
-@filename: app/models/developer.rb
+!filename: app/models/developer.rb
 class Developer < User
 end
 ```
 
 ```ruby
-@filename: app/models/copywriter.rb
+!filename: app/models/copywriter.rb
 class Copywriter < User
 end
 ```
@@ -66,14 +66,14 @@ end
 Kita akan mencoba meletakkan method association-nya pada model **User** dan juga model **News**.
 
 ```ruby
-@filename: app/models/user.rb
+!filename: app/models/user.rb
 class User < ApplicationRecord
   has_many :news, dependent: :destroy
 end
 ```
 
 ```ruby
-@filename: app/models/news.rb
+!filename: app/models/news.rb
 class News < ApplicationRecord
   belongs_to :user
 end
@@ -109,7 +109,7 @@ Sudah dapat ditebak yaa, seharusnya kita meletakkan associationnya pada model **
 Maka, kita perlu menghapus association yang ada pada model **User** dan memindahkannya ke model **Copywriter**.
 
 ```ruby
-@filename: app/models/copywriter.rb
+!filename: app/models/copywriter.rb
 class Copywriter < User
   has_many :news, dependent: :destroy, foreign_key: :user_id
 end
@@ -118,7 +118,7 @@ end
 Sedangkan association pada model **News** kita akan ganti objectnya ke model **Copywriter**.
 
 ```ruby
-@filename: app/models/news.rb
+!filename: app/models/news.rb
 class News < ApplicationRecord
   belongs_to :copywriter, foreign_key: :user_id
 end
@@ -131,7 +131,7 @@ Sangat perlu untuk didefinisikan, karena model News sebenarnya tidak mengetahui 
 Hal ini karena secara skematik, pada tabel News, kita merelasikan dengan tabel Users. Sedangkan Copywriter tidak memiliki tabel.
 
 ```ruby
-@filename: db/schema.rb
+!filename: db/schema.rb
 # ...
 
   create_table "news", force: :cascade do |t|

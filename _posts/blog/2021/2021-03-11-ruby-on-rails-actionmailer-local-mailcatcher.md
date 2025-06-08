@@ -17,7 +17,7 @@ description: "Sebelumnya, saya sudah pernah mencatat tentang konfigurasi ActionM
 
 # Prerequisite
 
-`Ruby 3.0.0` `Rails 6.1.3` `PostgreSQL 12.5` `RSpec 4.0.0`
+`ruby 3.0.0` `rails 6.1.3` `postgresql 12.5` `rspec 4.0.0`
 
 
 # Latar Belakang Masalah
@@ -80,7 +80,7 @@ http://127.0.0.1:1080
 # Rails Config
 
 ```ruby
-@filename: config/environments/development.rb
+!filename: config/environments/development.rb
 config.action_mailer.raise_delivery_errors = false
 config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = { address: "127.0.0.1", port: 1025 }
@@ -95,7 +95,7 @@ config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
 Jadinya akan seperti ini
 
 ```ruby
-@filename: config/environments/development.rb
+!filename: config/environments/development.rb
 config.action_mailer.raise_delivery_errors = false
 config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = { address: "127.0.0.1", port: 1025 }
@@ -111,7 +111,7 @@ Karena **action_mailer.delivery_method** di atas menggunakan protokol `:smtp`, k
 Apabila terdapat configurasi untuk ActionMailer pada file **config/environment.rb**, tinggal tambahkan kondisi untuk environment production.
 
 ```ruby
-@filename: config/environment.rb
+!filename: config/environment.rb
 # ...
 
 # ActionMailer with Gmail

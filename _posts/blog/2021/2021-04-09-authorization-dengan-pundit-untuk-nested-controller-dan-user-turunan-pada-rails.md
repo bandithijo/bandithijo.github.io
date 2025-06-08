@@ -17,7 +17,7 @@ description: "Catatan ini mengenai bagaimana cara membuat authorization dengan b
 
 # Prerequisite
 
-`Ruby 3.0.1` `Rails 6.1.3.1`
+`ruby 3.0.1` `rails 6.1.3.1`
 
 # Target
 
@@ -40,7 +40,7 @@ Hanya Author pemilik Article yang dapat mengedit/menghapus Article yang ia milik
 Pasang **Pundit** pada Gemfile.
 
 ```ruby
-@filename: Gemfile
+!filename: Gemfile
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -93,7 +93,7 @@ Generator ini akan membuatkan direktori **app/policies** dan juga file bernama *
 Saya akan mengincludekan Pundit pada **application_controller** agar setiap controller turunan dapat menggunakan Pundit.
 
 ```ruby
-@filename: app/controllers/application_controller.rb
+!filename: app/controllers/application_controller.rb
 class ApplicationController < ActionController::Base
   include Pundit
 end
@@ -147,7 +147,7 @@ Saya memiliki **authors_controller** yang merupakan induk dari semua controller 
 ```
 
 ```ruby
-@filename: /app/controller/authors_controller.rb
+!filename: /app/controller/authors_controller.rb
 class AuthorsController < ApplicationController
   protect_from_forgery prepend: true, with: :exception
   before_action :authenticate_author!
@@ -199,13 +199,13 @@ Struktur direktori dan file dari policy ini mengikuti dari controller namun meng
 ```
 
 ```ruby
-@filename: app/policies/author_policy.rb
+!filename: app/policies/author_policy.rb
 class AuthorPolicy < ApplicationPolicy
 end
 ```
 
 ```ruby
-@filename: app/policies/author/article_policy.rb
+!filename: app/policies/author/article_policy.rb
 class Author::ArticlePolicy < AuthorPolicy
   def edit?
     record.user_id == user.id
@@ -216,7 +216,7 @@ end
 Dapat pula seperti ini.
 
 ```ruby
-@filename: app/policies/author/article_policy.rb
+!filename: app/policies/author/article_policy.rb
 class Author::ArticlePolicy < AuthorPolicy
   def edit?
     user.present? && user == record.author
@@ -229,7 +229,7 @@ Misalkan, kita akan membatasi action **edit**, maka kita definisikan method **ed
 **record** dapat pula kita buat menjadi method berisi **record**.
 
 ```ruby
-@filename: app/policies/author/article_policy.rb
+!filename: app/policies/author/article_policy.rb
 class Author::ArticlePolicy < AuthorPolicy
   def edit?
     user.present? && user == article.author
@@ -248,7 +248,7 @@ Letakkan di dalam **private** agar penamaan **article** hanya dapat diakses oleh
 Karena edit, sangat erat dengan update, maka saya akan buat seperti ini.
 
 ```ruby
-@filename: app/policies/author/article_policy.rb
+!filename: app/policies/author/article_policy.rb
 class Author::ArticlePolicy < AuthorPolicy
   def update?
     user.present? && user == article.author
@@ -274,7 +274,7 @@ end
 Nah, kita telah mengatur policy untuk action edit, maka kita perlu memberikan authorization pada action edit di **articles_controller**.
 
 ```ruby
-@filename: app/controllers/authors/articles_controller.rb
+!filename: app/controllers/authors/articles_controller.rb
 class Authors::ArticlesController < AuthorsController
   # ...
 
@@ -303,7 +303,7 @@ Misalnya, button atau link untuk Edit atau Delete.
 Sebelum menggunakan Pundit Policy, saya biasa menggunakan cara seperti ini (baris ke-1),
 
 ```eruby
-@filename: app/views/authors/articles/show.html.erb
+!filename: app/views/authors/articles/show.html.erb
 <% if @article.user_id == current_author.id %>
   <%= link_to 'Edit', edit_authors_article_path(@news), class: 'btn btn-info' %>
   <%= link_to 'Delete', authors_article_path(@article), method: :delete, data: {confirm: "Are you sure, you want to delete the article?"}, class: 'btn btn-danger' %>
@@ -313,7 +313,7 @@ Sebelum menggunakan Pundit Policy, saya biasa menggunakan cara seperti ini (bari
 Setelah menggunakan Pundit, kita dapat memanfaatkan policy yang ada.
 
 ```eruby
-@filename: app/views/authors/articles/show.html.erb
+!filename: app/views/authors/articles/show.html.erb
 <% if policy([Authors, @article]).edit? %>
   <%= link_to 'Edit', edit_authors_article_path(@news), class: 'btn btn-info' %>
   <%= link_to 'Delete', authors_article_path(@article), method: :delete, data: {confirm: "Are you sure, you want to delete the article?"}, class: 'btn btn-danger' %>

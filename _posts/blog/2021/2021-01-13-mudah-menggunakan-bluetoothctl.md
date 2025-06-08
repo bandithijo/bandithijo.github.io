@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Mudah Menggunakan Bluetoothctl"
-date: 2021-01-13 15:28
+date: '2021-01-13 15:28'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips']
+tags: ['Bluetooth', 'Bluetoothctl']
 pin:
 hot:
 contributors: []
@@ -37,23 +37,24 @@ Kita samakan persepsi dulu yaa, agar teman-teman mudah memahami istilah-istilah 
 
 Bluetoothctl adalah tools yang dapat kita pergunakan untuk melakukan pairing a device from the shell.
 
+
 # Cara Penggunaan
+
 
 ## Nyalakan bluetoothd service
 
 **systemd**
 
-{% shell_term $ %}
-sudo systemctl start bluetoothd.service
-{% endshell_term %}
+```
+$ sudo systemctl start bluetoothd.service
+```
 
 **OpenRC**
 
-{% shell_term $ %}
-sudo rc-service bluetoothd start
-{% endshell_term %}
+```
+$ sudo rc-service bluetoothd start
+```
 
-<br>
 Pastikan **bluetoothd** service sudah dalam status aktif.
 
 
@@ -63,11 +64,11 @@ Biasanya, kalau kita memiliki satu buah bluetooth controller, maka akan bernama 
 
 Periksa dengan peritah,
 
-{% shell_term $ %}
-hciconfig -a
-{% endshell_term %}
+```
+$ hciconfig -a
+```
 
-<pre>
+```
 hci0:   Type: Primary  Bus: USB
         BD Address: 00:1C:26:D8:E0:18  ACL MTU: 1017:8  SCO MTU: 64:8
         DOWN
@@ -77,7 +78,7 @@ hci0:   Type: Primary  Bus: USB
         Packet type: DM1 DM3 DM5 DH1 DH3 DH5 HV1 HV2 HV3
         Link policy: RSWITCH HOLD SNIFF PARK
         Link mode: SLAVE ACCEPT
-</pre>
+```
 
 Dapat terlihat, di laptop saya, terdapat Bluetooth Controller.
 
@@ -86,29 +87,27 @@ Namun, statusnya masih DOWN (bukan OFF).
 Untuk dapat menggunakannya, kita perlu menjalankan langkah-langkah di bawah.
 
 
-
 ## Masuk bluetoothctl shell
 
 Untuk mengakses bluetoothctl shell, cukup jalankan perintah di Termial:
 
-{% shell_term $ %}
-bluetoothctl
-{% endshell_term %}
+```
+$ bluetoothctl
+```
 
 Kita akan dibawa ke dalam bluetoothctl shell, ditandai dengan prompt seperti ini:
 
-{% shell_term [bluetooth]# %}
-_
-{% endshell_term %}
+```
+[bluetooth]# _
+```
 
-<br>
 Gunakan perintah **help** untuk melihat perintah apa saja yang tersedia.
 
-{% shell_term [bluetooth]# %}
-help
-{% endshell_term %}
+```
+[bluetooth]# help
+```
 
-<pre>
+```
 Menu main:
 Available commands:
 -------------------
@@ -147,39 +146,41 @@ quit                                              Quit program
 exit                                              Quit program
 help                                              Display help about this program
 export                                            Print environment variables
-</pre>
+```
+
 
 ## Pilih Controller
 
 Untuk melihat daftar bluetooth controller yang tersedia:
 
-{% shell_term [bluetooth]# %}
-list
-{% endshell_term %}
+```
+[bluetooth]# list
+```
 
 Hasilnya, kira-kira seperti ini.
 
-<pre>
+```
 Controller 00:1C:26:D8:E0:18 BlueZ 5.55 [default]
-</pre>
+```
 
 Saya hanya memiliki satu buat bluetooth controller yang terpasang secara built-in di laptop saya.
 
 Apabila terdapat lebih dari satu bluetooth controller, kalian harus memilih salah satu yang akan digunakan untuk menghubungkan dengan perangkat lain.
 
-{% shell_term [bluetooth]# %}
-select 00:1C:26:D8:E0:18
-{% endshell_term %}
+```
+[bluetooth]# select 00:1C:26:D8:E0:18
+```
+
 
 ## Melihat Detail dari Controller
 
 Untuk melihat detail dari controller yang dipilih, gunakan perintah:
 
-{% shell_term [bluetooth]# %}
-show 00:1C:26:D8:E0:18
-{% endshell_term %}
+```
+[bluetooth]# show 00:1C:26:D8:E0:18
+```
 
-<pre>
+```
 Controller 00:1C:26:D8:E0:18 (public)
         Name: BlueZ 5.55
         Alias: BlueZ 5.55
@@ -204,67 +205,70 @@ Controller 00:1C:26:D8:E0:18 (public)
         UUID: Headset                   (00001108-0000-1000-8000-00805f9b34fb)
         Modalias: usb:v1D6Bp0246d0537
         Discovering: no
-</pre>
+```
 
 Kalau, status **Powered: no**, bisa kita nyalakan dulu.
 
-{% shell_term [bluetooth]# %}
-power on
-{% endshell_term %}
+```
+[bluetooth]# power on
+```
 
 Perintah di atas akan menyalakan controller yang kita set sebagai default dengan perintah **select**.
 
-
-{% box_info %}
-<p>Pada tahap ini, kalau teman-teman buka Terminal lain dan mejalankan,</p>
-{% shell_term $ %}
-hciconfig -a
-{% endshell_term %}
-<p markdown=1>Maka, status yang tadinya **DOWN**, sudah berubah menjadi UP **RUNNING PSCAN**.</p>
-<pre>
-hci0:   Type: Primary  Bus: USB
-        BD Address: 00:1C:26:D8:E0:18  ACL MTU: 1017:8  SCO MTU: 64:8
-        UP RUNNING PSCAN
-        RX bytes:1277 acl:0 sco:0 events:47 errors:0
-        TX bytes:438 acl:0 sco:0 commands:47 errors:0
-        Features: 0xff 0xff 0x8f 0xfe 0x9b 0xf9 0x00 0x80
-        Packet type: DM1 DM3 DM5 DH1 DH3 DH5 HV1 HV2 HV3
-        Link policy: RSWITCH HOLD SNIFF PARK
-        Link mode: SLAVE ACCEPT
-        Name: 'BlueZ 5.55'
-        Class: 0x2c010c
-        Service Classes: Rendering, Capturing, Audio
-        Device Class: Computer, Laptop
-        HCI Version: 2.0 (0x3)  Revision: 0x212b
-        LMP Version: 2.0 (0x3)  Subversion: 0x41d3
-        Manufacturer: Broadcom Corporation (15)
-</pre>
-<p markdown=1>\*Perintah di atas, dijalankan di luar dari bluetoothctl.</p>
-{% endbox_info %}
+> INFO
+> 
+> Pada tahap ini, kalau teman-teman buka Terminal lain dan mejalankan,
+> 
+> ```
+> $ hciconfig -a
+> ```
+> 
+> Maka, status yang tadinya **DOWN**, sudah berubah menjadi UP **RUNNING PSCAN**.
+> 
+> ```
+> hci0:   Type: Primary  Bus: USB
+>         BD Address: 00:1C:26:D8:E0:18  ACL MTU: 1017:8  SCO MTU: 64:8
+>         UP RUNNING PSCAN
+>         RX bytes:1277 acl:0 sco:0 events:47 errors:0
+>         TX bytes:438 acl:0 sco:0 commands:47 errors:0
+>         Features: 0xff 0xff 0x8f 0xfe 0x9b 0xf9 0x00 0x80
+>         Packet type: DM1 DM3 DM5 DH1 DH3 DH5 HV1 HV2 HV3
+>         Link policy: RSWITCH HOLD SNIFF PARK
+>         Link mode: SLAVE ACCEPT
+>         Name: 'BlueZ 5.55'
+>         Class: 0x2c010c
+>         Service Classes: Rendering, Capturing, Audio
+>         Device Class: Computer, Laptop
+>         HCI Version: 2.0 (0x3)  Revision: 0x212b
+>         LMP Version: 2.0 (0x3)  Subversion: 0x41d3
+>         Manufacturer: Broadcom Corporation (15)
+> ```
+> 
+> Perintah di atas, dijalankan di luar dari bluetoothctl.
 
 
 ## Scanning Perangkat Bluetooth yang Lain
 
 Untuk melakukan scanning terhadap perangkat bluetooth yang lain,
 
-{% shell_term [bluetooth]# %}
-scan on
-{% endshell_term %}
+```
+[bluetooth]# scan on
+```
 
-<pre>
+```
 Discovery started
 [CHG] Controller 00:1C:26:D8:E0:18 Discovering: yes
-</pre>
+```
 
 Nah, kalau outptunya seperti di atas, artinya bluetooth controller kita sedang mencari ~~jodoh~~ perangkat bluetooth yang lain.
 
 Kalau ketemu, nanti akan seperti ini outputnya.
 
-<pre>
+```
 Discovery started
 [CHG] Controller 00:1C:26:D8:E0:18 Discovering: yes
 [NEW] Device 44:D4:E0:EF:94:DD MBH20
-</pre>
+```
 
 Dapat dilihat, bahwa ada perangkat bluetooth bernama **MBH20** yang terdeteksi oleh bluetooth controller kita.
 
@@ -273,11 +277,11 @@ Dapat dilihat, bahwa ada perangkat bluetooth bernama **MBH20** yang terdeteksi o
 
 Kalau sudah terdeteksi, tinggal kita pairing saja.
 
-{% shell_term [bluetooth]# %}
-pair 44:D4:E0:EF:94:DD
-{% endshell_term %}
+```
+[bluetooth]# pair 44:D4:E0:EF:94:DD
+```
 
-<pre>
+```
 Attempting to pair with 44:D4:E0:EF:94:DD
 [CHG] Device 44:D4:E0:EF:94:DD Connected: yes
 [CHG] Device 44:D4:E0:EF:94:DD UUIDs: 00001108-0000-1000-8000-00805f9b34fb
@@ -290,43 +294,43 @@ Attempting to pair with 44:D4:E0:EF:94:DD
 Pairing successful
 [CHG] Device 44:D4:E0:EF:94:DD ServicesResolved: no
 [CHG] Device 44:D4:E0:EF:94:DD Connected: no
-</pre>
+```
 
 Nah, pairing successfull.
 
 Status **Paired: yes**, namun **Connected: no**.
 
+
 ## Connect dengan Paired Device
 
 Kalau sudah dipairing, sekarang kita bisa hubungkan.
 
-{% shell_term [bluetooth]# %}
-connect 44:D4:E0:EF:94:DD
-{% endshell_term %}
+```
+[bluetooth]# connect 44:D4:E0:EF:94:DD
+```
 
-<pre>
+```
 Attempting to connect to 44:D4:E0:EF:94:DD
 [CHG] Device 44:D4:E0:EF:94:DD Connected: yes
 Connection successful
 [CHG] Device 44:D4:E0:EF:94:DD ServicesResolved: yes
-</pre>
+```
 
 Nah, sudah berhasil terhubung.
 
 Ciri-cirinya adalah prompt akan berubah mengikuti nama device.
 
-{% shell_term [MBH20]# %}
-_
-{% endshell_term %}
+```
+[MBH20]# _
+```
 
-<br>
 Kita bisa lihat keterangan tentang device ini.
 
-{% shell_term [MBH20]# %}
-info
-{% endshell_term %}
+```
+[MBH20]# info
+```
 
-<pre>
+```
 Device 44:D4:E0:EF:94:DD (public)
         Name: MBH20
         Alias: MBH20
@@ -343,53 +347,53 @@ Device 44:D4:E0:EF:94:DD (public)
         UUID: A/V Remote Control        (0000110e-0000-1000-8000-00805f9b34fb)
         UUID: Handsfree                 (0000111e-0000-1000-8000-00805f9b34fb)
         RSSI: -38
-</pre>
+```
 
 Kalau ingin ditrust, tinggal jalankan perintah trust saja.
 
-{% shell_term [bluetooth]# %}
-trust 44:D4:E0:EF:94:DD
-{% endshell_term %}
+```
+[bluetooth]# trust 44:D4:E0:EF:94:DD
+```
 
-<pre>
+```
 [CHG] Device 44:D4:E0:EF:94:DD Trusted: yes
 Changing 44:D4:E0:EF:94:DD trust succeeded
-</pre>
+```
 
 
 ## Disconnect
 
 Untuk memutuskan hubungan dengan device yang terhubung,
 
-{% shell_term [bluetooth]# %}
-disconnect 44:D4:E0:EF:94:DD
-{% endshell_term %}
+```
+[bluetooth]# disconnect 44:D4:E0:EF:94:DD
+```
 
-<pre>
+```
 Attempting to disconnect from 44:D4:E0:EF:94:DD
 [CHG] Device 44:D4:E0:EF:94:DD ServicesResolved: no
 Successful disconnected
 [CHG] Device 44:D4:E0:EF:94:DD Connected: no
-</pre>
+```
 
 Prompt akan kembali ke semula
 
-{% shell_term [bluetooth]# %}
-_
-{% endshell_term %}
+```
+[bluetooth]# _
+```
 
 
 ## Melihat Daftar Paired Devices
 
 Untuk melihat daftar device yang sudah kita pair.
 
-{% shell_term [bluetooth]# %}
-paired-devices
-{% endshell_term %}
+```
+[bluetooth]# paired-devices
+```
 
-<pre>
+```
 Device 44:D4:E0:EF:94:DD MBH20
-</pre>
+```
 
 Kebetulan saya hanya memiliki satu device saja.
 
@@ -398,25 +402,19 @@ Kebetulan saya hanya memiliki satu device saja.
 
 Untuk menghapus device yang sudah pernah kita pair,
 
-{% shell_term [bluetooth]# %}
-remove 44:D4:E0:EF:94:DD
-{% endshell_term %}
+```
+[bluetooth]# remove 44:D4:E0:EF:94:DD
+```
 
-<pre>
+```
 [<span class="is-danger">DEL</span>] Device 44:D4:E0:EF:94:DD MBH20
 Device has been removed
-</pre>
+```
 
 
 # Demonstrasi
 
 {% youtube Bxc3e6lnEUg %}
-
-
-
-
-
-
 
 
 # Pesan Penulis
@@ -432,9 +430,7 @@ Terima kasih.
 (^_^)
 
 
-
-
 # Referensi
 
-1. [wiki.archlinux.org/index.php/Bluetooth](https://wiki.archlinux.org/index.php/Bluetooth){:target="_blank"}
+1. [wiki.archlinux.org/index.php/Bluetooth](https://wiki.archlinux.org/index.php/Bluetooth)
 <br>Diakses tanggal: 2021/01/13

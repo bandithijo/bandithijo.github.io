@@ -96,8 +96,8 @@ Maka, saya pun mencoba mengambil saya file konfigurasinya. Agar sewaktu-waktu un
 
 Kita perlu membuat sebuah file konfigurasi **/etc/sensors.d/tpsensors** agar dapat dibaca oleh **sensors**.
 
-```shell
-@filename: /etc/sensors.d/tpsensors
+```bash
+!filename: /etc/sensors.d/tpsensors
 chip "acpitz-acpi-0"
   label temp1  "CPU_0"
   label temp2  "CPU_1"

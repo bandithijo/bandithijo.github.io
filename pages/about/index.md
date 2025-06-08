@@ -1,6 +1,7 @@
 ---
 layout: 'page'
 title: 'Tentang Blog dan Penulis'
+author: 'BanditHijo'
 permalink: '/about/'
 toc: true
 ---

@@ -331,7 +331,7 @@ $ podman exec -ti postgres psql -h localhost -p 5432 -U bandithijo
 Kalau bisa masuk ke PostgreSQL shell, berarti tinggal mendefinisikan **PGHOST** sebagai **localhost** ke dalam file shell rc (`.zshrc`, `.bashrc`, `.bash_profile`, atau yang lain).
 
 ```bash
-@filename: $HOME/.zshrc
+!filename: $HOME/.zshrc
 export PGHOST=localhost
 ```
 

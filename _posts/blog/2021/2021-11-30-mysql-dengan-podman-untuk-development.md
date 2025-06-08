@@ -244,7 +244,7 @@ Biasanya pada **development environment**, MySQL account yang digunakan adalah *
 Sebagai contoh, contoh konfigurasi file `config/database.yml` untuk Rails app yang baru digenerate, akan seperti ini.
 
 ```yaml
-@filename: config/database.yml
+!filename: config/database.yml
 # MySQL. Versions 5.5.8 and up are supported.
 #
 # Install the MySQL driver
