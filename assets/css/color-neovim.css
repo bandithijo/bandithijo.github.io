@@ -6,7 +6,7 @@
 }
 
 .highlight .c   { color: #008000; font-style: italic }  /* Comment */
-.highlight .err { color: #ff0000; background-color: #ffffff } /* Error */
+.highlight .err { color: #ff0000; } /* Error */
 .highlight .k   { color: #0000ff; font-weight: bold }   /* Keyword */
 .highlight .o   { color: #000000 }                      /* Operator */
 .highlight .cm  { color: #008000; font-style: italic }  /* Comment multiline */
