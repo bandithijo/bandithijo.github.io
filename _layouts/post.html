@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Extract filename from first line using textContent for plain text matching
     const plainTextFirstLine = block.textContent.split("\n")[0];
-    const filenameMatch = plainTextFirstLine.match(/^@filename:(.+)$/);
+    const filenameMatch = plainTextFirstLine.match(/^!filename:(.+)$/);
 
     if (filenameMatch) {
       filenameLabel = filenameMatch[1].trim();
