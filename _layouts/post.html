@@ -27,13 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const parentWithLanguage = block.closest("[class*='language-']");
     if (parentWithLanguage?.classList.contains("language-plaintext")) return;
 
-    // Save original highlighted HTML
+    // Get the original highlighted HTML
     const originalHtml = block.innerHTML;
-
-    // Extract filename from first line if it matches @filename:...
     let lines = originalHtml.split(/\n/);
     let filenameLabel = null;
 
+    // Extract filename from first line using textContent for plain text matching
     const plainTextFirstLine = block.textContent.split("\n")[0];
     const filenameMatch = plainTextFirstLine.match(/^@filename:(.+)$/);
 
@@ -47,13 +46,28 @@ document.addEventListener("DOMContentLoaded", () => {
       lines.pop();
     }
 
-    // Wrap each line preserving inner HTML
+    // Function to escape problematic characters in HTML content
+    function fixLiquidInHtml(htmlLine) {
+      // This function now just preserves what's already there
+      // since we need to escape in the source Markdown, not in JavaScript
+      return htmlLine;
+    }
+
+    // Check if this is a Liquid template block
+    const isLiquid = parentWithLanguage?.classList.contains("language-liquid") || 
+                     parentWithLanguage?.classList.contains("language-jekyll");
+
+    // Wrap each line preserving the original highlighted HTML
     const numberedLines = lines.map((line, idx) => {
-      return `<div class="line"><span class="line-number">${idx + 1}</span><span class="code-line">${line}</span></div>`;
+      // Apply Liquid escaping only if needed, while preserving syntax highlighting
+      const processedLine = isLiquid ? fixLiquidInHtml(line) : line;
+      
+      return `<div class="line"><span class="line-number">${idx + 1}</span><span class="code-line">${processedLine}</span></div>`;
     }).join("");
 
     block.innerHTML = numberedLines;
 
+    // Add filename label if present
     if (filenameLabel) {
       const filenameElem = document.createElement("div");
       filenameElem.textContent = filenameLabel;
