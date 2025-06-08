@@ -1,13 +1,13 @@
 ---
 layout: 'page_list'
-title: 'Note'
-permalink: '/note/'
+title: 'Dotfriends'
+permalink: '/dotfriends/'
 ---
 
 <div class="mb-4">
   <div id="search-container" class="flex items-center">
     <span class=""></span>
-    <input type="text" id="search-input" placeholder="Search for topic..." autocomplete="off"
+    <input type="text" id="search-input" placeholder="Search for name..." autocomplete="off"
       class="text-left rounded-lg border border-gray-300 outline-none px-3 py-2 w-full placeholder:text-base placeholder:font-thin placeholder:text-zinc-400 focus:outline-none focus:ring-0 focus:ring-dark focus:border-dark select-none">
   </div>
 
@@ -38,16 +38,19 @@ permalink: '/note/'
 <!-- Masonry Container -->
 <div id="masonry-container" class="relative opacity-0 transition-opacity duration-300">
   <div id="post-container">
-    {% assign note_posts = site.posts | where_exp: "post", "post.categories contains 'note'" %}
-    {% for post in note_posts %}
+    {% for friend in site.data.dotfriends.friends %}
+    {% unless friend.name contains 'Rizqi Nur Assyaufi' %}
       <div class="masonry-item absolute p-4 bg-white rounded-lg border border-gray-300 hover:border-dark"
         style="width: calc(25% - 12px);">
-        <a href="{{ post.url }}" class="text-dark">
-          <h2 class="text-md font-bold mb-4">{{ post.title }}</h2>
-          <p class="text-base text-gray-600 mb-4">{{ post.description }}</p>
-          <p class="text-sm text-gray-600 font-mono">{{ post.date | date: '%Y.%m.%d' }}</p>
-        </a>
+        <div class="flex items-center space-x-4 mb-4">
+          <img src="{{ friend.photo }}" alt="{{ friend.github_username }}" class="w-16 rounded-full">
+          <h2 class="text-md font-bold">{{ friend.name }}</h2>
+        </div>
+        <p class="text-base text-gray-600 mb-4">{{ friend.detail }}</p>
+        <p class="text-sm text-gray-600 font-mono truncate"><a href="{{ friend.url1 }}" target="_blank">{{ friend.url1 }}</a></p>
+        <p class="text-sm text-gray-600 font-mono truncate"><a href="{{ friend.url2 }}" target="_blank">{{ friend.url2 }}</a></p>
       </div>
+    {% endunless %}
     {% endfor %}
   </div>
 </div>
@@ -99,12 +102,12 @@ window.addEventListener('resize', () => {
 </script>
 
 <!-- Search -->
-<script src="/assets/javascript/search_posts.js" type="text/javascript"></script>
+<script src="/assets/javascript/search_dotfriends.js" type="text/javascript"></script>
 <script>
 SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
-  json: '/note/index.json'
+  json: '/dotfriends/index.json'
 });
 
 function fadeInResults() {

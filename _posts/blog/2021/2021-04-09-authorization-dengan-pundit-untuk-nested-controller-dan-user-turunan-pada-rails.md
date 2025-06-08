@@ -186,9 +186,9 @@ Struktur direktori dan file dari policy ini mengikuti dari controller namun meng
 │ 📁 models/
 │ 📂 policies/
 │ │ 📂 author_policy/ 👈️
-│ │ └  article_policy.rb 👈️
-│ │  application_policy.rb
-│ └  author_policy.rb 👈️
+│ │ └ 📄 article_policy.rb 👈️
+│ │ 📄 application_policy.rb
+│ └ 📄 author_policy.rb 👈️
 └ 📁 views/
 📁 bin/
 📁 config/

@@ -97,9 +97,9 @@ Linux 5.15.0-72-generic x86_64
 Ciri-ciri sistem Ubuntu yang telah melakukan proses *distribution upgrade* adalah, terdapat file bernama `sources.list.distUpgrade` di dalam direktori `/etc/apt/`.
 
 ```
-/etc/apt/
-    ├─ sources.list
-    ├─ sources.list.distUpgrade
+📂 /etc/apt/
+    ├─ 📄 sources.list
+    ├─ 📄 sources.list.distUpgrade
     ...
 ```
 

@@ -142,6 +142,7 @@ Gambar 1. i3 Window Manger + Polybar + Conky + Solarized Dark = My Perfect Deskt
 Gambar 7. Another Desktop with Wallpaper and Vim
 
 ![Gambar 2](/pages/about/assets/images/gambar-02.png)
+
 Gambar 2. Tools yang saya pergunakan untuk menulis, Vim + Tmux
 
 ![Gambar 3](/pages/about/assets/images/gambar-03.png)

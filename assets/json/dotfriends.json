@@ -1,0 +1,17 @@
+---
+layout: none
+permalink: /dotfriends/index.json
+---
+[
+  {% assign friends = site.data.dotfriends.friends %}
+  {% for friend in friends %}
+    {
+      "name": "{{ friend.name }}",
+      "github_username": "{{ friend.github_username }}",
+      "photo": "{{ friend.photo }}",
+      "detail": "{{ friend.detail }}",
+      "url1": "{{ friend.url1 }}",
+      "url2": "{{ friend.url2 }}"
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
