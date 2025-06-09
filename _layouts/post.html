@@ -17,6 +17,60 @@ layout: baseof
       <div class="markdown">
         {{ content }}
       </div>
+
+      {% assign blog_posts = site.categories.blog %}
+      {% assign index = nil %}
+
+      {% for post in blog_posts %}
+        {% if post.url == page.url %}
+          {% assign index = forloop.index0 %}
+        {% endif %}
+      {% endfor %}
+
+      {% assign prev_post = nil %}
+      {% assign next_post = nil %}
+
+      {% if index != nil %}
+        {% assign post_count = blog_posts | size %}
+        {% assign last_index = post_count | minus: 1 %}
+
+        {% if index > 0 %}
+          {% assign prev_index = index | minus: 1 %}
+          {% assign prev_post = blog_posts[prev_index] %}
+        {% endif %}
+
+        {% if index < last_index %}
+          {% assign next_index = index | plus: 1 %}
+          {% assign next_post = blog_posts[next_index] %}
+        {% endif %}
+      {% endif %}
+
+      <div class="mt-20 flex flex-col md:flex-row justify-between gap-4 md:gap-8">
+        {% if prev_post %}
+          <div class="w-full md:w-1/2 px-3 py-2 border border-dashed border-zinc-400 rounded-lg">
+            <a href="{{ prev_post.url }}">
+              <div class="flex items-center justify-start">
+                <div class="mr-3">&larr;</div> <div class="text-left">{{ prev_post.title }}</div>
+              </div>
+            </a>
+          </div>
+        {% else %}
+          <div class="w-1/2"></div>
+        {% endif %}
+
+        {% if next_post %}
+          <div class="w-full md:w-1/2 px-3 py-2 border border-dashed border-zinc-400 rounded-lg">
+            <a href="{{ next_post.url }}">
+              <div class="flex items-center justify-end">
+                <div class="text-right">{{ next_post.title }}</div> <div class="ml-3">&rarr;</div>
+              </div>
+            </a>
+          </div>
+        {% else %}
+          <div class="w-1/2"></div>
+        {% endif %}
+      </div>
+
     </div>
   </div>
 </section>
