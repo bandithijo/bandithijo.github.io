@@ -48,6 +48,25 @@
     animation: fadeIn 0.3s ease forwards;
   }
 
+  /* Loading state styling */
+  .lazy-loaded {
+    opacity: 1 !important;
+  }
+
+  .lazy-loading {
+    opacity: 0.7;
+  }
+
+  .img-error {
+    opacity: 0.5;
+    filter: grayscale(100%);
+  }
+
+  @keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
   /* For markdown with redcarpet */
   .markdown {
     @apply text-dark leading-normal break-words;
