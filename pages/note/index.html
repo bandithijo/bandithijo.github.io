@@ -99,12 +99,13 @@ window.addEventListener('resize', () => {
 </script>
 
 <!-- Search -->
-<script src="/assets/javascript/search_posts.js" type="text/javascript"></script>
+<script src="/assets/javascript/search.js" type="text/javascript"></script>
 <script>
 SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
-  json: '/note/index.json'
+  json: '/note/index.json',
+  templateType: 'posts'  // This tells the script to use the posts template
 });
 
 function fadeInResults() {

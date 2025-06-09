@@ -1,5 +1,5 @@
 /*!
-  * Simple-Jekyll-Search
+  * Simple-Jekyll-Search (with template definitions)
   * Copyright 2015-2020, Christian Fei
   * Licensed under the MIT License.
   */
@@ -153,21 +153,38 @@
         }
       },
     };
+
+  // Template definitions
+  const TEMPLATES = {
+    posts: `
+      <div class="masonry-item absolute p-4 opacity-0 bg-white rounded-lg border border-gray-300 hover:border-dark">
+        <a href="{url}" class="text-dark">
+          <h2 class="text-md font-bold mb-4">{title}</h2>
+          <p class="text-base text-gray-600 mb-4">{description}</p>
+          <p class="text-sm text-gray-600 font-mono">{date}</p>
+        </a>
+      </div>
+    `,
+    dotfriends: `
+      <div class="masonry-item absolute p-4 opacity-0 bg-white rounded-lg border border-gray-300 hover:border-dark">
+        <div class="flex items-center space-x-4 mb-4">
+          <img src="{photo}" alt="{github_username}" class="w-16 rounded-full">
+          <h2 class="text-md font-bold">{name}</h2>
+        </div>
+        <p class="text-base text-gray-600 mb-4">{detail}</p>
+        <p class="text-sm text-gray-600 font-mono truncate"><a href="{url1}" target="_blank">{url1}</a></p>
+        <p class="text-sm text-gray-600 font-mono truncate"><a href="{url2}" target="_blank">{url2}</a></p>
+      </div>
+    `
+  };
+
   !(function (t) {
     let i = {
         searchInput: null,
         resultsContainer: null,
         json: [],
         success: Function.prototype,
-        searchResultTemplate:`
-          <div class="masonry-item absolute p-4 opacity-0 bg-white rounded-lg border border-gray-300 hover:border-dark">
-            <a href="{url}" class="text-dark">
-              <h2 class="text-md font-bold mb-4">{title}</h2>
-              <p class="text-base text-gray-600 mb-4">{description}</p>
-              <p class="text-sm text-gray-600 font-mono">{date}</p>
-            </a>
-          </div>
-        `,
+        searchResultTemplate: '', // Will be set based on template type
         templateMiddleware: Function.prototype,
         sortMiddleware: function () {
           return 0;
@@ -177,6 +194,7 @@
         fuzzy: !1,
         debounceTime: null,
         exclude: [],
+        templateType: 'posts' // Default template type
       },
       n;
     const e = function (t, e) {
@@ -216,8 +234,14 @@
     }
     t.SimpleJekyllSearch = function (t) {
       var n;
-      0 < o.validate(t).length && a("You must specify the following required options: " + r),
-        (i = w.merge(i, t)),
+      0 < o.validate(t).length && a("You must specify the following required options: " + r);
+      
+      // Set template based on templateType
+      if (t.templateType && TEMPLATES[t.templateType]) {
+        t.searchResultTemplate = TEMPLATES[t.templateType];
+      }
+      
+      (i = w.merge(i, t)),
         f.setOptions({ template: i.searchResultTemplate, middleware: i.templateMiddleware }),
         d.setOptions({ fuzzy: i.fuzzy, limit: i.limit, sort: i.sortMiddleware, exclude: i.exclude }),
         w.isJSON(i.json)

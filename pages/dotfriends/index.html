@@ -102,12 +102,13 @@ window.addEventListener('resize', () => {
 </script>
 
 <!-- Search -->
-<script src="/assets/javascript/search_dotfriends.js" type="text/javascript"></script>
+<script src="/assets/javascript/search.js" type="text/javascript"></script>
 <script>
 SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
-  json: '/dotfriends/index.json'
+  json: '/dotfriends/index.json',
+  templateType: 'dotfriends'  // This tells the script to use the dotfriends template
 });
 
 function fadeInResults() {
