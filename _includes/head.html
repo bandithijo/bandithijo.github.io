@@ -15,4 +15,11 @@
   <link rel="stylesheet" href="/assets/css/style.css">
 
   <link rel="icon" href="/assets/images/favicon/favicon.png" type="image/png">
+
+  {% if jekyll.environment == 'production' %}
+    {% seo title=false %}
+    {% include opengraph.html %}
+    {% include analytics.html %}
+    <meta name="google-site-verification" content="{{ site.google_verify }}">
+  {% endif %}
 </head>

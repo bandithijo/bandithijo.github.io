@@ -26,8 +26,25 @@ url: https://bandithijo.dev # the base hostname & protocol for your site, e.g. h
 author: Rizqi Nur Assyaufi
 keywords: bandithijo, rizqi nur assyaufi, arch linux, vim, neovim, i3wm, dwm, suckless, jekyll, thinkpad, ruby, rails, ruby on rails
 
+
 # Missing timezone in metadata date can lead to wrong date in url
 timezone: Asia/Makassar
+
+
+# Google Analytics
+google_analytics: UA-116004889-1
+google_tag: G-688BWZGJ84
+
+
+# Google Site Verification (Webmaster)
+google_verify: qXp9Kgb5hIHVp5T9vFOa_motqUmNuF5STbkJKF70wLc
+
+
+# Opengraph
+lang: id
+logo_author: /assets/images/logo_author.png
+image: /assets/images/banner/about_bandithijo.png
+
 
 # Navigations
 nav_top:
@@ -63,6 +80,16 @@ tailwindcss:
   config: "./tailwind.config.js"
   css_path: ./_tailwind.css
 
+
+# Sitemap Generator
+sitemap:
+  filename: "/sitemap.xml"
+  exclude:
+    - "/feed.xml"
+  include_posts:
+    - "/index.html"
+
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
@@ -71,14 +98,15 @@ tailwindcss:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - Procfile.dev
