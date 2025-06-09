@@ -40,31 +40,6 @@ Untuk teman-teman yang menggunakan Fedora (saat tulisan ini dibuat, Fedora 35) s
 
 Untuk yang belum memasang Podman, silahkan merujuk pada [dokumentasi pemasangan Podman](https://podman.io/getting-started/installation).
 
-~~Jalankan service Podman.~~
-
-<pre>
-<del>$ sudo systemctl start podman.service</del>
-</pre>
-
-~~Cek status apakah sudah berhasil running atau belum.~~
-
-<pre>
-<del>$ sudo systemctl status podman.service</del>
-</pre>
-
-<pre><del>● podman.service - Podman API Service
-     Loaded: loaded (/usr/lib/systemd/system/podman.service; disabled; vendor preset: disabled)
-     Active: active (running) since Sun 2021-11-21 19:13:59 WITA; 2s ago
-TriggeredBy: ● podman.socket
-       Docs: man:podman-system-service(1)
-   Main PID: 250724 (podman)
-      Tasks: 10 (limit: 9306)
-     Memory: 40.0M
-     CGroup: /system.slice/podman.service
-             └─250724 /usr/bin/podman --log-level=info system service
-</del></pre>
-
-~~Kalau sudah `active (running)` , artinya Podman sudah siap digunakan.~~
 
 ## Persiapkan PostgreSQL Image
 
@@ -220,7 +195,7 @@ Kalau berhasil, kita akan masuk ke dalam PostgreSQL shell,
 psql (13 (Debian 13-4.pgdg110+1))
 Type "help" for help.
 
-postgres=# █
+postgres=# _
 ```
 
 ## Buat PostgreSQL user untuk host username
