@@ -1,7 +1,7 @@
 ---
 layout: 'post'
 title: "Membuat Web Scraper dengan Ruby (Output: HTML) Level 2"
-date: 2020-08-20 21:24
+date: '2020-08-20 21:24'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
@@ -15,14 +15,16 @@ contributors: []
 description: "Catatan ini adalah modifikasi untuk tulisan sebelumnya, dimana script sebelumnya sudah tidak dapat digunakan kembali, karea web target belajar merubah layout dari web mereka."
 ---
 
-{% box_perhatian %}
-<p>Data yang penulis gunakan adalah data yang bersifat <b><i>free public data</i></b>. Sehingga, siapa saja dapat mengakses dan melihat tanpa perlu melalui layer authentikasi.</p>
-<p>Penyalahgunaan data, bukan merupakan tanggung jawab dari penulis seutuhnya.</p>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> Data yang penulis gunakan adalah data yang bersifat ***free public data***. Sehingga, siapa saja dapat mengakses dan melihat tanpa perlu melalui layer authentikasi.
+> 
+> Penyalahgunaan data, bukan merupakan tanggung jawab dari penulis seutuhnya.
+
 
 # Sekenario Masalah
 
-Blog post ini adalah modifikasi dari post sebelumnya yang berjudul, ["Membuat Web Scraper dengan Ruby (Output: HTML)"](/blog/membuat-web-scraper-dengan-ruby-output-html){:target="_blank"}.
+Blog post ini adalah modifikasi dari post sebelumnya yang berjudul, ["Membuat Web Scraper dengan Ruby (Output: HTML)"](/blog/membuat-web-scraper-dengan-ruby-output-html).
 
 Permasalahan dengan script sebelumnya adalah tidak dapat mendapatkan hasil.
 
@@ -32,11 +34,12 @@ Ternyata, setelah saya cek website dari target belajar, desain dari website suda
 
 Sekarang menjadi seperti ini.
 
-{% image https://i.postimg.cc/yYZzBw7k/gambar-01.png | 1 %}
+![Gambar 1](https://i.postimg.cc/yYZzBw7k/gambar-01.png)
 
 Tampilan yang sekarang, tentunya tidak dapat difetch menggunakan CSS selector yang sebelumnya. Karena markup dari HTML sudah berubah.
 
 Lantas saya pun mencoba untuk memodifikasi script tersebut.
+
 
 # Pemecahan Masalah
 
@@ -50,15 +53,15 @@ Langkah pertama adalah, saya me-rename file `scraper.rb` menjadi `main.rb`.
 
 Kemudian membuat 2 file baru yaitu `scaper.rb` dan `template.rb`.
 
-<pre>
-ruby-web-scraper-dosen/
-├── daftar_dosen.html
-├── Gemfile
-├── Gemfile.lock
-├── <mark>main.rb</mark>
-├── <mark>scraper.rb</mark>
-└── <mark>template.rb</mark>
-</pre>
+```
+📂 ruby-web-scraper-dosen/
+├─ 📄 daftar_dosen.html
+├─ 📄 Gemfile
+├─ 📄 Gemfile.lock
+├─ 📄 main.rb 👈️
+├─ 📄 scraper.rb 👈️
+└─ 📄 template.rb 👈️
+```
 
 `main.rb` adalah aktor utama yang akan kita running.
 
@@ -68,37 +71,40 @@ ruby-web-scraper-dosen/
 
 Oke, selanjutnya adalah isi dari ketiga file tersebut.
 
+
 # Ngoding Session
 
 Meskipun sebelumnya sudah pernah dilakukan, saya akan coba menulis kembali dari awal. Agar teman-teman yang baru mengikuti dari blog post ini tidak begitu kebingungan.
+
 
 ## Initialisasi Gemfile
 
 Buat file dengan nama `Gemfile`. dan kita akan memasang gem yang diperlukan di dalam file ini.
 
-{% highlight_caption Gemfile %}
-{% highlight ruby linenos %}
+```ruby
+!filename: Gemfile
 source 'https://rubygems.org'
 
 gem 'httparty',     '~> 0.18.1'
 gem 'nokogiri',     '~> 1.10', '>= 1.10.9'
 gem 'byebug',       '~> 11.1', '>= 11.1.3'
-{% endhighlight %}
+```
 
 Setelah memasang gem pada Gemfile, kita perlu melakukan instalasi gem-gem tersebut.
 
-{% shell_user %}
-bundle install
-{% endshell_user %}
+```
+$ bundle install
+```
 
 Proses bundle install di atas akan membuat sebuah file baru bernama `Gemfile.lock` yang berisi daftar dependensi dari gem yang kita butuhkan --daftar requirements--.
+
 
 ## main.rb
 
 Selanjutnya adalah si tokoh utama.
 
-{% highlight_caption main.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: main.rb
 require 'httparty'
 require 'nokogiri'
 require 'byebug'
@@ -139,12 +145,13 @@ main
 
 # Create index.html from daftar_dosen.html for rendering on netlify & vercel
 %x(cp -f daftar_dosen.html index.html)
-{% endhighlight %}
+```
+
 
 ## scraper.rb
 
-{% highlight_caption scrapper.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: scrapper.rb
 class Scraper
 
   attr_reader :parsed_page, :gender
@@ -195,12 +202,13 @@ class Scraper
   end
 
 end
-{% endhighlight %}
+```
+
 
 ## template.rb
 
-{% highlight_caption template.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: template.rb
 class Template
 
   require 'date'
@@ -412,23 +420,27 @@ class Template
   end
 
 end
-{% endhighlight %}
+```
+
 
 # Hasilnya
 
-{% image https://i.postimg.cc/qR48MVf0/gambar-02.gif | 2 %}
+![Gambar 2](https://i.postimg.cc/qR48MVf0/gambar-02.gif)
+
 
 # Demo
 
 Untuk demonstrasi, teman-teman dapat mengunjungi alamat di bawah ini.
 
-[https://daftar-dosen-umb.vercel.app](https://daftar-dosen-umb.vercel.app){:target="_blank"}
+[https://daftar-dosen-umb.vercel.app](https://daftar-dosen-umb.vercel.app)
+
 
 # Source
 
 Bagi yang memerlukan source codenya, dapat mengunjungin alamat di bawah ini.
 
-[https://github.com/bandithijo/ruby-web-scraper-dosen](https://github.com/bandithijo/ruby-web-scraper-dosen){:target="_blank"}
+[https://github.com/bandithijo/ruby-web-scraper-dosen](https://github.com/bandithijo/ruby-web-scraper-dosen)
+
 
 # Pesan Penulis
 
@@ -443,11 +455,10 @@ Terima kasih sudah mampir.
 (^_^)
 
 
-
 # Referensi
 
-1. [It's Time To HTTParty!](https://blog.teamtreehouse.com/its-time-to-httparty){:target="_blank"}
+1. [It's Time To HTTParty!](https://blog.teamtreehouse.com/its-time-to-httparty)
 <br>Diakses tanggal: 2020/08/20
 
-2. [nokogiri.org](https://nokogiri.org/){:target="_blank"}
+2. [nokogiri.org](https://nokogiri.org/)
 <br>Diakses tanggal: 2020/08/20

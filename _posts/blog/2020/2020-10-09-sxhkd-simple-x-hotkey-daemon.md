@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "SXHKD, Simple X Hotkey Daemon"
-date: 2020-10-09 21:37
+date: '2020-10-09 21:37'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Ulasan', 'Tips']
+tags: ['SXHKD', 'Tool']
 pin:
 hot:
 contributors: []
@@ -29,17 +29,18 @@ Window Manager pertama yang saya gunakan untuk beraktifitas adalah i3WM. Pada i3
 
 Berbeda dengan BSPWM, yang menggunakan SXHKD sebagai alat bantu untuk menghandle keyboard shortcut.
 
+
 # Keuntungan Menggunakan SXHKD
 
 Terdapat beberapa keuntungan yang akan kita dapatkan apabila kita memanfaatkan SXHKD sebagai alat bantu untuk menghandle keyboard shortcut, diantaranya:
 
-1. **Modularity**<br>
+1. **Modularity** \
     Kita akan mendapatkan konfigurasi keyboard shortcut yang terpisah dari config yang lain. Ibarat mengklasifikasikan dan memisahkan bagian khusus (tertentu) untuk keyboard shortcut. Dengan begini, diharapkan kita akan mendapatkan keuntungan dalam hal "easy to mantain" apabila konfigurasi yang kita gunakan semakin banyak.
 
-2. **Flexibility**<br>
+2. **Flexibility** \
     Kita dapat menulis dan berkespresi dengan lebih bebas dalam mendifinisikan keyboard shortcut serta statement yang akan dipanggil juga menjadi lebih luwes.
 
-3. **Independent**<br>
+3. **Independent** \
     SXHKD tidak hanya untuk BSPWM, tetapi dapat digunakan untuk Window Manager atau Desktop Environment yang lain pula.
 
 # Cara Penggunaan
@@ -48,15 +49,16 @@ Untuk memanggil config sxhkd, saya lebih senang menggunakan option `-c`.
 
 Karena saya memiliki beberapa file config untuk masing-masing WM.
 
-{% shell_user %}
-sxhkd -c $HOME/.config/sxhkd/sxhkdrc-dwm
-{% endshell_user %}
+```
+$ sxhkd -c $HOME/.config/sxhkd/sxhkdrc-dwm
+```
 
 Langkah selanjutnya, tinggal dipasang pada konfigurasi autostart yang teman-teman miliki.
 
 Misal, contohnya seperti yang saya pergunakan di bawah ini.
 
-{% image https://i.postimg.cc/RVts5LyC/gambar-01.png | 1 %}
+![Gambar 1](https://i.postimg.cc/RVts5LyC/gambar-01.png)
+
 
 # Contoh Penggunaan
 
@@ -64,12 +66,13 @@ Berikut ini beberapa contoh isi dari konfigurasi SXHKD yang saya pergunakan.
 
 Saya akan ambil beberapa contoh yang simple dan berbeda dengan yang lain.
 
+
 ## 1. Single Key
 
 Ini adalah contoh yang menggnunakan single key.
 
-{% highlight_caption $HOME/.config/sxhkd/sxhkdrc %}
-{% highlight sh %}
+```bash
+!filename: $HOME/.config/sxhkd/sxhkdrc
 # screenshot
 Print
     /usr/bin/scrot-full
@@ -77,9 +80,10 @@ Print
 # pulseaudio controls mute speaker on/off
 XF86AudioMute
     pamixer --toggle-mute
-{% endhighlight %}
+```
 
 Dalam contoh di atas, saya menggunakan tombol <kbd>PrtScr</kbd> untuk memanggil script yang bernama `scrot-full`.
+
 
 ## 2. Simple Combination Sequence Key
 
@@ -87,35 +91,35 @@ Kita dapat menggunakan 2 atau lebih kombinasi tombol yang kita gunakan dengan ca
 
 <kbd>Key1</kbd> + <kbd>Key2</kbd> + <kbd>KeyX</kbd>
 
-<br>
 **Contoh**:
 
 Ini adalah contoh 2 kombinasi untuk menggunakan command terminal.
 
-{% highlight_caption $HOME/.config/sxhkd/sxhkdrc %}
-{% highlight sh %}
+```bash
+!filename: $HOME/.config/sxhkd/sxhkdrc
 # make sxhkd reload its configuration files
 super + Escape
     pkill -USR1 -x sxhkd
-{% endhighlight %}
+```
 
 Ini adalah contoh 2 kombinasi untuk memanggil script dmenu (custom) launcher.
 
-{% highlight_caption $HOME/.config/sxhkd/sxhkdrc %}
-{% highlight sh %}
+```bash
+!filename: $HOME/.config/sxhkd/sxhkdrc
 # application launcher
 super + d
     /usr/bin/dmenu-apps
-{% endhighlight %}
+```
 
 Ini adalah contoh 3 kombinasi untuk memanggil program slock.
 
-{% highlight_caption $HOME/.config/sxhkd/sxhkdrc %}
-{% highlight sh %}
+```bash
+!filename: $HOME/.config/sxhkd/sxhkdrc
 # lock screen
 super + shift + x
     /usr/local/bin/slock
-{% endhighlight %}
+```
+
 
 ## 3. Simple Parenthesis
 
@@ -134,7 +138,6 @@ Arti dari keybind di atas adalah:
 
 Dan seterusnya.
 
-<br>
 **Same Statement with Different Options**
 
 ```bash
@@ -150,15 +153,15 @@ Arti dari keybind di atas adalah:
 
 Dan seterusnya.
 
-<br>
 **Contoh**:
 
-{% highlight_caption $HOME/.config/sxhkd/sxhkdrc %}
-{% highlight sh %}
+```bash
+!filename: $HOME/.config/sxhkd/sxhkdrc
 # pulseaudio controls speaker volume up & down
 {XF86AudioRaiseVolume, XF86AudioLowerVolume}
     pamixer {--increase 2, --decrease 2}
-{% endhighlight %}
+```
+
 
 ## 4. Combination Sequence Key with Parenthesis
 
@@ -175,12 +178,14 @@ Arti dari keybind di atas adalah:
 
 <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>F1</kbd>, untuk menjalankan `statement --option B`.
 
+
 ## 5. Toggling On/Off
 
 ```bash
 ~F11
     {statement on, statement off}
 ```
+
 Ini adalah contoh dari penggunaan toggling function. Cirinya adalah penggunaan tanda tilda `~`.
 
 Toggling artinya kita bisa berganti on/off dengan menggunakan keybind yang sama.
@@ -195,12 +200,13 @@ Misal, statement A, adalah statement untuk memanggil, sedangkan statement B, ada
 
 **Contoh**:
 
-{% highlight_caption $HOME/.config/sxhkd/sxhkdrc %}
-{% highlight sh %}
+```bash
+!filename: $HOME/.config/sxhkd/sxhkdrc
 # key-mon
 super + ~F11
     {/usr/bin/key-mon, killall key-mon}
-{% endhighlight %}
+```
+
 
 ## 6. Multiline for Long Statement
 
@@ -213,30 +219,34 @@ super + F1
 
 Kita dapat menggunakan `\` backslash untuk memisahkan satu statement panjang menjadi beberapa baris. Dengan begini, command yang kita tulis akan lebih mudah untuk dibaca.
 
+
 ## 7. Multistatement
 
-{% highlight_caption $HOME/.config/sxhkd/sxhkdrc %}
-{% highlight sh %}
+```bash
+!filename: $HOME/.config/sxhkd/sxhkdrc
 super + F1
     pamixer --increase 10; notify-send "Volume +"
-{% endhighlight %}
+```
 
 Kita dapat menggunakan tanda `;` untuk memisahkan antar statement. Maka statement ini akan dijalankan berurutan dimulai dari yang paling depan.
 
+
 ## 8. Multiline for Multistatement
 
-{% highlight_caption $HOME/.config/sxhkd/sxhkdrc %}
-{% highlight sh %}
+```bash
+!filename: $HOME/.config/sxhkd/sxhkdrc
 super + F1
     pamixer --increase 10; \
     notify-send "Volume +"
-{% endhighlight %}
+```
 
 Ini adalah kombinasi dari point ke 6 & 7. Tujuannya agar statement yang kita definisikan menjadi lebih readable.
+
 
 ## 9. Etc.
 
 Silahkan lihat pada `man sxhkd` untuk fungsi-fungsi yang lain.
+
 
 # Contoh
 
@@ -244,8 +254,8 @@ Saya akan mencontohkan penggunaan yang terlihat ribet.
 
 Tujuannya untuk menjelaskan dari keuntungan menggunakan SXHKD sesuai pada point ke-2, yaitu "Fleksibilitas".
 
-{% highlight_caption $HOME/.config/sxhkd/sxhkdrc %}
-{% highlight sh %}
+```bash
+!filename: $HOME/.config/sxhkd/sxhkdrc
 # pulseaudio controls speaker volume up & down
 {XF86AudioRaiseVolume, XF86AudioLowerVolume}
     pamixer {-i 2, -d 2}; \
@@ -300,15 +310,16 @@ alt + XF86AudioMute
     get_brightness=$(xbacklight -get | cut -f 1 -d '.'); \
     dunstify "  Brightness: "$get_brightness -t 1000 -r 1
 
-{% endhighlight %}
+```
 
 Penggunaan seperti ini tidak saya rekomendasikan. Saya lebih merekomendasikan dimasukkan saja ke dalam file script.
+
 
 # Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
-Untuk repositori SXHKD milik saya, dapat teman-teman lihat [di sini](https://github.com/bandithijo/dotfiles/tree/master/.config/sxhkd){:target="_blank"}.
+Untuk repositori SXHKD milik saya, dapat teman-teman lihat [di sini](https://github.com/bandithijo/dotfiles/tree/master/.config/sxhkd).
 
 Mudah-mudahan dapat bermanfaat.
 
@@ -316,7 +327,8 @@ Terima kasih.
 
 (^_^)
 
+
 # Referensi
 
-1. [baskerville/sxhkd](https://github.com/baskerville/sxhkd){:target="_blank"}
+1. [baskerville/sxhkd](https://github.com/baskerville/sxhkd)
 <br>Diakses tanggal: 2020/10/12
