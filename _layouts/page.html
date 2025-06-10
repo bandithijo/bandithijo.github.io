@@ -15,3 +15,14 @@ layout: baseof
     </div>
   </div>
 </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Center paragraphs that start with "Gambar"
+  document.querySelectorAll('.markdown p').forEach((p) => {
+    if (p.textContent.trim().startsWith('Gambar')) {
+      p.classList.add('text-center');
+    }
+  });
+});
+</script>

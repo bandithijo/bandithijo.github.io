@@ -205,10 +205,6 @@
     @apply block mx-auto;
   }
 
-  .markdown p:has(img) + p {
-    @apply text-center;
-  }
-
   .markdown .footnotes > ol > li {
     @apply text-sm !important;
   }

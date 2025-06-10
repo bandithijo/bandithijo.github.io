@@ -77,6 +77,14 @@ layout: baseof
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+  // Center paragraphs that start with "Gambar"
+  document.querySelectorAll('.markdown p').forEach((p) => {
+    if (p.textContent.trim().startsWith('Gambar')) {
+      p.classList.add('text-center');
+    }
+  });
+
+  // Power up the pre code block
   document.querySelectorAll("pre code").forEach((block) => {
     const parentWithLanguage = block.closest("[class*='language-']");
     if (parentWithLanguage?.classList.contains("language-plaintext")) return;
