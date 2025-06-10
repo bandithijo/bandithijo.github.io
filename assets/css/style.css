@@ -223,14 +223,14 @@
   }
 
   .markdown .line {
-    @apply block whitespace-pre;
+    @apply flex whitespace-pre;
   }
 
   .markdown .line-number {
-    @apply inline-block min-w-4 mr-4 text-right text-gray-400 select-none;
+    @apply inline-block min-w-8 mr-3 text-right text-gray-400 select-none font-mono text-[14px] leading-relaxed;
   }
 
   .markdown .code-line {
-    @apply inline font-mono pr-4;
+    @apply flex-1 font-mono leading-relaxed;
   }
 }

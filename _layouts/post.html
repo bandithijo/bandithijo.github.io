@@ -89,45 +89,86 @@ document.addEventListener("DOMContentLoaded", () => {
     const parentWithLanguage = block.closest("[class*='language-']");
     if (parentWithLanguage?.classList.contains("language-plaintext")) return;
 
-    // Get the original highlighted HTML
-    const originalHtml = block.innerHTML;
-    let lines = originalHtml.split(/\n/);
+    // Check if already processed
+    if (block.querySelector('.line')) return;
+
     let filenameLabel = null;
 
-    // Extract filename from first line using textContent for plain text matching
-    const plainTextFirstLine = block.textContent.split("\n")[0];
-    const filenameMatch = plainTextFirstLine.match(/^!filename:(.+)$/);
+    // Extract filename from first line using textContent
+    const plainTextContent = block.textContent;
+    const plainTextLines = plainTextContent.split('\n');
+    const filenameMatch = plainTextLines[0]?.match(/^!filename:(.+)$/);
 
     if (filenameMatch) {
       filenameLabel = filenameMatch[1].trim();
-      lines.shift(); // remove filename line from HTML lines too
     }
 
-    // Remove trailing empty line
-    if (lines.length > 0 && lines[lines.length - 1].trim() === "") {
-      lines.pop();
+    // Get the original HTML and preserve it
+    const originalHTML = block.innerHTML;
+    
+    // Use a different approach: wrap the entire content and use CSS to add line numbers
+    const lines = plainTextLines;
+    
+    // Remove filename line if present
+    let startLine = filenameMatch ? 1 : 0;
+    let actualLines = lines.slice(startLine);
+    
+    // Remove trailing empty lines
+    while (actualLines.length > 0 && actualLines[actualLines.length - 1].trim() === '') {
+      actualLines.pop();
     }
 
-    // Function to escape problematic characters in HTML content
-    function fixLiquidInHtml(htmlLine) {
-      // This function now just preserves what's already there
-      // since we need to escape in the source Markdown, not in JavaScript
-      return htmlLine;
+    // Instead of trying to split the HTML, let's use a CSS-based approach
+    // Wrap the content and let CSS handle the line numbers
+    const wrapper = document.createElement('div');
+    wrapper.className = 'code-with-lines';
+    wrapper.style.counterReset = 'line-number';
+    
+    // Split content by looking for actual newline characters in the DOM
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = originalHTML;
+    
+    // Convert HTML back to clean structure
+    let htmlContent = tempDiv.innerHTML;
+    
+    // Remove the filename line from HTML if it exists
+    if (filenameMatch) {
+      const firstNewlineIndex = htmlContent.indexOf('\n');
+      if (firstNewlineIndex !== -1) {
+        htmlContent = htmlContent.substring(firstNewlineIndex + 1);
+      }
     }
+    
+    // Split by newlines but keep the HTML structure intact
+    const htmlLines = htmlContent.split('\n');
+    
+    // Remove trailing empty lines from HTML
+    while (htmlLines.length > 0 && htmlLines[htmlLines.length - 1].trim() === '') {
+      htmlLines.pop();
+    }
+    
+    // Create each line with proper structure
+    const linesContainer = document.createElement('div');
+    htmlLines.forEach((lineHTML, index) => {
+      const lineDiv = document.createElement('div');
+      lineDiv.className = 'line';
+      
+      const lineNumberSpan = document.createElement('span');
+      lineNumberSpan.className = 'line-number';
+      lineNumberSpan.textContent = (index + 1).toString();
+      
+      const codeLineSpan = document.createElement('span');
+      codeLineSpan.className = 'code-line';
+      codeLineSpan.innerHTML = lineHTML;
+      
+      lineDiv.appendChild(lineNumberSpan);
+      lineDiv.appendChild(codeLineSpan);
+      linesContainer.appendChild(lineDiv);
+    });
 
-    // Check if this is a Liquid template block
-    const isLiquid = parentWithLanguage?.classList.contains("language-liquid") || 
-                     parentWithLanguage?.classList.contains("language-jekyll");
-
-    // Wrap each line preserving the original highlighted HTML
-    const numberedLines = lines.map((line, idx) => {
-      // Apply Liquid escaping only if needed, while preserving syntax highlighting
-      const processedLine = isLiquid ? fixLiquidInHtml(line) : line;
-
-      return `<div class="line"><span class="line-number">${idx + 1}</span><span class="code-line">${processedLine}</span></div>`;
-    }).join("");
-
-    block.innerHTML = numberedLines;
+    // Replace the block content
+    block.innerHTML = '';
+    block.appendChild(linesContainer);
 
     // Add filename label if present
     if (filenameLabel) {
