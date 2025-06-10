@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Membuat Form's Output dengan AJAX"
-date: 2020-12-01 20:43
+date: '2020-12-01 20:43'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Rails']
+tags: ['Rails', 'AJAX']
 pin:
 hot:
 contributors: []
@@ -19,12 +19,14 @@ description: "Membuat output hasil akan ditampilkan tanpa perlu merefresh halama
 
 Tujuannya menggunakan AJAX untuk menampilkan hasil tanpa perlu mereload tempate berulang kali. Cukup sekali panggil dan yang berubah adalah pada bagian hasilnya saja.
 
-{% image https://i.postimg.cc/5tQfnNtN/gambar-01.png | 1 | Kotak merah adalah satu-satunya bagian yang berubah, sedangkan bagian lain tidak %}
+![Gambar 1](https://i.postimg.cc/5tQfnNtN/gambar-01.png)
+
+Gambar 1. Kotak merah adalah satu-satunya bagian yang berubah, sedangkan bagian lain tidak
 
 Cara yang umum, untuk menampilkan output seperti di atas, adalah seperti ini.
 
-{% highlight_caption app/controllers/stocks_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/stocks_controller.rb
 class StocksController < ApplicationController
   def index
     @tracked_stocks = current_user.stocks
@@ -45,10 +47,10 @@ class StocksController < ApplicationController
     end
   end
 end
-{% endhighlight %}
+```
 
-{% highlight_caption config/routes.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: config/routes.rb
 Rails.application.routes.draw do
   root 'welcome#index'
   devise_for :users
@@ -56,10 +58,10 @@ Rails.application.routes.draw do
   get 'my_portfolio', to: 'stocks#index'
   get 'search_stock', to: 'stocks#search'
 end
-{% endhighlight %}
+```
 
-{% highlight_caption app/views/stocks/index.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/stocks/index.html.erb
 <h3>Search Stocks</h3>
 <%= form_tag search_stock_path, method: :get do %>
   <div class="input-group">
@@ -115,19 +117,19 @@ end
     </tbody>
   </table>
 <% end %>
-{% endhighlight %}
+```
 
 Setelah form diinputkan, dan hasil ditampilkan, akan mendapatkan URL seperti ini.
 
-{% pre_url %}
+```
 http://localhost:3000/search_stock?stock=AMZN&button=
-{% endpre_url %}
+```
 
 Apabila kita menginputkan nilai yang lain, maka template akan ikut dirender untuk menampilkan hasil pencarian yang baru.
 
-{% pre_url %}
+```
 http://localhost:3000/search_stock?stock=GOOG&button=
-{% endpre_url %}
+```
 
 Nah, pada catatan kali ini, saya akan membuat template dirender sekali saja dan hanya pada bagian yang menampilkan hasil pencarian yang dirender berkali-kali.
 
@@ -136,8 +138,8 @@ Nah, pada catatan kali ini, saya akan membuat template dirender sekali saja dan 
 
 Pertama-tama, saya akan merubah output di stocks_controller pada action search menjadi format Javascript.
 
-{% highlight_caption app/controllers/stocks_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/stocks_controller.rb
 class StocksController < ApplicationController
   def index
     @tracked_stocks = current_user.stocks
@@ -164,13 +166,12 @@ class StocksController < ApplicationController
     end
   end
 end
-{% endhighlight %}
+```
 
-<br>
 Kemudian, pada bagian view, pisahkan bagian result, menjadi render partial, saya beri nama `_result.html.erb`.
 
-{% highlight_caption app/views/stocks/_result.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/stocks/_result.html.erb
 <% if stock %>
   <div class="alert alert-success">
     <div class="row d-flex justify-content-between">
@@ -187,34 +188,31 @@ Kemudian, pada bagian view, pisahkan bagian result, menjadi render partial, saya
     </div>
   </div>
 <% end %>
-{% endhighlight %}
+```
 
-<br>
 Pada bagian yang kita pindahkan (kode di atas) di view **stocks/index.html.erb**, kita ganti dengan `<div id=results>`.
 
-{% highlight_caption app/views/stocks/index.html.erb %}
-{% highlight html linenos %}
+```html
+!filename: app/views/stocks/index.html.erb
 ...
 ...
 
 <div id="results"></div>
-{% endhighlight %}
+```
 
-<br>
 Kita akan meletakkan hasil yang diberikan oleh controller pada div denga id=result tersebut.
 
 Kita akan atur di dalam file javascript, buat file **_result.js.erb**.
 
-{% highlight_caption app/views/stocks/_result.js.erb %}
-{% highlight javascript linenos %}
+```javascript
+!filename: app/views/stocks/_result.js.erb
 document.querySelector('#results').innerHTML = "<%= escape_javascript(render 'users/result.html', stock: @stock) %>"
-{% endhighlight %}
+```
 
-<br>
 Terakhir, tinggal menambahkan asynchronous form pada form pencarian dengan `remote: true`.
 
-{% highlight_caption app/views/stocks/index.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/stocks/index.html.erb
 <h3>Search Stocks</h3>
 <%= form_tag search_stock_path, remote:true, method: :get do %>
   <div class="input-group">
@@ -233,16 +231,15 @@ Terakhir, tinggal menambahkan asynchronous form pada form pencarian dengan `remo
 
 ...
 ...
+```
 
-{% endhighlight %}
-
-<br>
 Hasilnya,
 
-{% image https://i.postimg.cc/fyMDNjBL/gambar-02.gif | 2 %}
+![Gambar 2](https://i.postimg.cc/fyMDNjBL/gambar-02.gif)
+
+Gambar 2. Hasil jadinya
 
 Kalau diperhatikan pada bagian address bar, alamat tidak berubah. Karena kita tidak merender template lagi untuk menampilkan hasil, namun hanya merubah bagian yang memiliki `<div id=results></div>`.
-
 
 
 # Pesan Penulis

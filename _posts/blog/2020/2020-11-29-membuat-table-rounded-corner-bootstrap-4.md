@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Membuat Table dengan Rounded Corner pada Bootstrap 4"
-date: 2020-11-29 10:38
+date: '2020-11-29 10:38'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips']
+tags: ['Bootstrap', 'CSS', 'HTML']
 pin:
 hot:
 contributors: []
@@ -17,9 +17,11 @@ description: "Hal yang masih menjadi misteri buat saya saat menggunakan Bootstra
 
 # Latar Belakang
 
-Kalau teman-teman menggunakan Bootstrap sebagai CSS Framework --terkhusus Bootstrap 4-- pasti akan mendapatkan table dengan bagian corner yang bersiku.
+Kalau teman-teman menggunakan Bootstrap sebagai CSS Framework--terkhusus Bootstrap 4--pasti akan mendapatkan table dengan bagian corner yang bersiku.
 
-{% image https://i.postimg.cc/c1TKPGPS/gambar-01.png | 1 %}
+![Gambar 1](https://i.postimg.cc/c1TKPGPS/gambar-01.png)
+
+<p></p>
 
 ```html
 <table class="table table-bordered table-hover my-3">
@@ -42,6 +44,7 @@ Kalau teman-teman menggunakan Bootstrap sebagai CSS Framework --terkhusus Bootst
 </table>
 ```
 
+
 # Masalah
 
 Saya ingin memodifikasi agar tampilan dari masing-masing corner dari tabel memiliki tampilan yang rounded.
@@ -57,31 +60,31 @@ Kita akan mengoverride class table bawaan Bootstrap.
 
 Tabel harus memiliki struktur seperti di bawah ini.
 
-{% pre_whiteboard %}
-&lt;table>
+```
+<table>
 
-  &lt;thead>
-    &lt;tr>
-      &lt;th></th>
-      &lt;th></th>
-    &lt;/tr>
-  &lt;/thead>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
 
-  &lt;tbody>
-    &lt;tr>
-      &lt;td></td>
-      &lt;td></td>
-    &lt;/tr>
-  &lt;/tbody>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
 
-&lt;/table>
-{% endpre_whiteboard %}
+</table>
+```
 
 Oke, langsung ke penerapan.
 
 Pada table, gunakan class `table-borderless` agar border bawaan bootstrap tidak mengoverride tabel border yang akan kita custom.
 
-{% highlight html linenos %}
+```html
 <table class="table table-borderless">
   <thead>
     <tr>
@@ -100,11 +103,11 @@ Pada table, gunakan class `table-borderless` agar border bawaan bootstrap tidak 
     </tr>
   </tbody>
 </table>
-{% endhighlight %}
+```
 
 Selanjutnya, tambahkan custom CSS untuk mengoverride class table dari Bootstrap.
 
-{% highlight css linenos %}
+```css
 table {
   border-collapse: separate !important;
   border-spacing: 0 !important;
@@ -141,7 +144,7 @@ table tr:last-child td:first-child {
 table tr:last-child td:last-child {
   border-bottom-right-radius: 0.25rem !important;
 }
-{% endhighlight %}
+```
 
 Besar dari radius `0.25rem` saya samakan dengan besar radius dari input box.
 
@@ -151,10 +154,9 @@ Tujuannya agar terlihat menyatu dan seragam --tidak terlihat seperti custom abal
 
 Dan beginilah hasilnya setelah modifikasi di atas kita lakukan.
 
-{% image https://i.postimg.cc/NFWvZMcD/gambar-02.png | 2 %}
+![Gambar 2](https://i.postimg.cc/NFWvZMcD/gambar-02.png)
 
-
-
+<p></p>
 
 
 # Pesan Penulis
@@ -172,8 +174,7 @@ Terima kasih.
 (^_^)
 
 
-
 # Referensi
 
-1. [codepen.io/mlms13/pen/CGgLF](https://codepen.io/mlms13/pen/CGgLF){:target="_blank"}
+1. [codepen.io/mlms13/pen/CGgLF](https://codepen.io/mlms13/pen/CGgLF)
 <br>Diakses tanggal: 2020/11/29

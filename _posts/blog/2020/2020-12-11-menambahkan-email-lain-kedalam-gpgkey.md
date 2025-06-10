@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Menambahkan Email Kedua ke dalam GPG Key"
-date: 2020-12-11 10:43
+date: '2020-12-11 10:43'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips']
+tags: ['GPG', 'GnuPG']
 pin:
 hot:
 contributors: []
@@ -19,7 +19,7 @@ description: "Memiliki email yang banyak tidak berarti juga memiliki GPG key yan
 
 Maksud dari judul catatan ini adalah, menambahkan Email lain --email milik kita yang berbeda alamat, bisa lebih dari satu email-- ke dalam satu GPG key yang sama --GPG key yang sudah pernah kita buat sebelumnya.
 
-Mungkin teman-teman, belum mengetahui apa itu GPG key? Bisa terlebih dahulu melihat catatan kecil yang pernah saya tulis di sini, ["**Generate Private dan Public GPG Key Sendiri**"](blog/generate-gpg-key){:target="_blank"}.
+Mungkin teman-teman, belum mengetahui apa itu GPG key? Bisa terlebih dahulu melihat catatan kecil yang pernah saya tulis di sini, ["**Generate Private dan Public GPG Key Sendiri**"](blog/generate-gpg-key).
 
 Baru-baru ini saya memiliki kasus harus mengirim email dengan alamat email yang lain --alamat email yang saya gunakan untuk bekerja.
 
@@ -39,7 +39,8 @@ Apakah seperti pada surat, kita menuliskan nama pembuat surat dan memasukkan gam
 
 Mungkin bisa. Tapi bukan signature seperti ini yang saya maksudkan.
 
-Namun, signature yang saya maksudkan adalah signature digital berupa GPG key. Signature yang yang juga digunakan dalam pemaketan aplikasi --yang pakai AUR pasti paham.
+Namun, signature yang saya maksudkan adalah signature digital berupa GPG key. Signature yang yang juga digunakan dalam pemaketan aplikasi--yang pakai AUR pasti paham.
+
 
 # Permasalahan
 
@@ -55,9 +56,9 @@ Alias, dalam hal ini adalah alamat-alamat email kita yang lain.
 
 Saya akan berikan ilustrasi agar lebih mudah dipahami.
 
-{% shell_user %}
-gpg --list-public-keys
-{% endshell_user %}
+```
+$ gpg --list-public-keys
+```
 
 ```
 pub   rsa4096 2014-10-22 [SC] [expires: 2021-10-29]
@@ -108,12 +109,12 @@ Perhatikan, terdapat 5 fingerprint yang saya tampilkan di atas.
 4. Levente Polyak<br>E240B57E2C4630BA768E2F26FC1B547C8D8172C8
 5. Santiago Torres<br>903BAB73640EB6D65533EFF3468F122CE8162295
 
-<br>
 4 diantaranya, memiliki lebih dari 1 email dalam 1 GPG key.
 
 Nah, gimana? Sudah kebayang kan?
 
 > Dengan begini, kita **tidak perlu membuat banyak GPG key untuk masing-masing email yang kita memiliki**.
+
 
 ## Pemecahan Masalah
 
@@ -122,6 +123,7 @@ Nah, gimana? Sudah kebayang kan?
 Sangat mudah.
 
 Ikuti langkah-langkahnya sebagai berikut ini.
+
 
 ## 1. Identifikasi GPG Secret Key yang Kita Miliki
 
@@ -135,9 +137,9 @@ Private key ini lah yang kita gunakan untuk membuka paket --apa saja yang dienkr
 
 Untuk mengecek daftar GPG private key, atau ada juga yang menyebut dengan istilah **secret key**, kita gunakan perintah,
 
-{% shell_user %}
-gpg --list-secret-keys
-{% endshell_user %}
+```
+$ gpg --list-secret-keys
+```
 
 Nanti akan keluar GPG key yang merupakan secret key (private key).
 
@@ -174,12 +176,12 @@ Selain menggunakan fingerprit seperti di atas, kita juga dapat menggunakan key i
 
 Terdapat beberapa keterangan tentang key id.
 
-{% pre_whiteboard %}
+```
 sec => 'SECret key'
 ssb => 'Secret SuBkey'
 pub => 'PUBlic key'
 sub => 'public SUBkey'
-{% endpre_whiteboard %}
+```
 
 Untuk melihat key id yang kita miliki, kita dapat melihat dengan setidaknya 4 format.
 
@@ -188,12 +190,11 @@ Untuk melihat key id yang kita miliki, kita dapat melihat dengan setidaknya 4 fo
 3. 0xlong
 4. long
 
-<br>
-{% shell_term $ %}
-gpg --keyid-format 0xshort -K
-{% endshell_term %}
+```
+$ gpg --keyid-format 0xshort -K
+```
 
-<pre>
+```
 /home/bandithijo/.gnupg/pubring.kbx
 -----------------------------------
 sec   rsa4096/<mark>0x66666666</mark> 2018-08-11 [SC] [expires: 2021-12-30]
@@ -201,7 +202,7 @@ sec   rsa4096/<mark>0x66666666</mark> 2018-08-11 [SC] [expires: 2021-12-30]
 uid           [ultimate] Rizqi Nur Assyaufi <bandithijo@gmail.com>
 ssb   rsa4096/<mark>0x99999999</mark> 2018-08-11 [E] [expires: 2021-12-30]
 
-</pre>
+```
 
 **0x66666666** adalah bentuk dari SECret key id.
 
@@ -214,13 +215,13 @@ Tinggal disesuaikan saja format yang diperlukan, apakah **0xshort**, **short**, 
 
 Untuk menampilkan fingerprint, kita dapat menambahkan option `--fingerprint`, baik untuk melihat public key ataupu private key.
 
-Misal, untuk melihat key id kita sendiri dengan format `0xshort` dan `--fingerprint`
+Misal, untuk melihat key id kita sendiri dengan format `0xshort` dan `--fingerprint`.
 
-{% shell_term $ %}
-gpg --keyid-format 0xshort -K --fingerprint
-{% endshell_term %}
+```
+$ gpg --keyid-format 0xshort -K --fingerprint
+```
 
-<pre>
+```
 /home/bandithijo/.gnupg/pubring.kbx
 -----------------------------------
 sec   rsa4096/<mark>0x66666666</mark> 2018-08-11 [SC] [expires: 2021-12-30]
@@ -228,29 +229,28 @@ sec   rsa4096/<mark>0x66666666</mark> 2018-08-11 [SC] [expires: 2021-12-30]
 uid           [ultimate] Rizqi Nur Assyaufi <bandithijo@gmail.com>
 ssb   rsa4096/<mark>0x99999999</mark> 2018-08-11 [E] [expires: 2021-12-30]
 
-</pre>
-
+```
 
 
 ## 2. Edit GPG Key untuk Menambahkan Email Lain
 
 Untuk menambahkan email lain, kita gunakan option, `--edit-key` diikuti dengan keyID.
 
-{% pre_url %}
-gpg --edit-key &lt;key_id&gt;
-{% endpre_url %}
+```
+$ gpg --edit-key &lt;key_id&gt;
+```
 
 Misal,
 
-{% shell_user %}
-gpg --edit-key AE706A616B252A6822635041560691E942A02F91
-{% endshell_user %}
+```
+$ gpg --edit-key AE706A616B252A6822635041560691E942A02F91
+```
 
 Nanti, kita akan dibawa masuk ke GPG shell. Ditandai dengan tampilnya GPG shell prompt seperti di bawah.
 
-<pre>
-gpg> <b>_</b>
-</pre>
+```
+gpg> _
+```
 
 Dan teman-teman dapat memperhatikan, dibagian atasnya terdapat semacam MOTD (*message of the day*), yang berisi informasi tertentu, seperti ini.
 
@@ -273,13 +273,13 @@ gpg> _
 
 Kemudian, masukkan perintah `adduid`.
 
-<pre>
-<span class="cmd">gpg> </span><b>adduid</b>
-</pre>
+```
+gpg> adduid
+```
 
 Ikuti pertanyaan-pertanyaan yang diajukan,
 
-<pre>
+```
 Real name: <span style="font-weight:bold;color:#FFCC00;">Rizqi Nur Assyaufi</span>
 Email address: <span style="font-weight:bold;color:#FFCC00;">rizqiassyaufi@gmail.com</span>
 Comment:
@@ -287,11 +287,11 @@ You selected this USER-ID:
 "Rizqi Nur Assyaufi <rizqilassyaufi@gmail.com>"
 
 Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? <span class="is-warning">o</span>
-</pre>
+```
 
 Kalau berhasil nanti email yang baru ditambahkan, akan masuk ke dalam list.
 
-<pre>
+```
 sec  rsa4096/6666666666666666
      created: 2018-08-11  expires: 2021-11-30  usage: SC
      trust: ultimate      validity: ultimate
@@ -301,22 +301,21 @@ ssb  rsa4096/9999999999999999
 [ unknown] (2). Rizqi Nur Assyaufi <rizqiassyaufi@gmail.com>
 
 gpg> _
-</pre>
+```
 
 Lalu, masukkan `save` untuk save dan quit.
 
-<pre>
-<span class="cmd">gpg> </span><b>save</b>
-</pre>
+```
+gpg> save
+```
 
-<br>
 Kemudian, lakukan verifikasi, untuk melihat apakah sudah berhasil atau belum.
 
-{% shell_user %}
-gpg --list-secret-keys
-{% endshell_user %}
+```
+$ gpg --list-secret-keys
+```
 
-<pre>
+```
 /home/bandithijo/.gnupg/pubring.kbx
 -----------------------------------
 sec   rsa4096 2018-08-11 [SC] [expires: 2021-12-30]
@@ -324,27 +323,34 @@ sec   rsa4096 2018-08-11 [SC] [expires: 2021-12-30]
 uid           [ultimate] Rizqi Nur Assyaufi <rizqinurassyaufi@gmail.com>
 uid           [ultimate] Rizqi Nur Assyaufi <bandithijo@gmail.com>
 ssb   rsa4096 2018-08-11 [E] [expires: 2021-12-30]
-</pre>
+```
 
 Mantap!
 
+
 # Tambahan
+
 
 ## GPG shell, Help!
 
 Untuk meminta bantuan pada GPG shell, gunaka perintah,
 
 <pre>
-<span class="cmd">gpg> </span><b>help</b>
 </pre>
+```
+gpg> help
+```
+
 
 ## Menghapus uid
 
 Bagaimana cara menghapus email (uid) yang sudah tidak kita gunakan lagi?
 
-<pre>
-<span class="cmd">gpg> </span><b>list</b>
+```
+gpg> list
+```
 
+```
 sec  rsa4096/6666666666666666
      created: 2018-08-11  expires: 2021-12-30  usage: SC
      trust: ultimate      validity: ultimate
@@ -352,15 +358,15 @@ ssb  rsa4096/9999999999999999
      created: 2018-08-11  expires: 2021-12-30  usage: E
 [ultimate] (1). Rizqi Nur Assyaufi <bandithijo@gmail.com>
 [ultimate] (2)  Rizqi Nur Assyaufi <rizqiassyaufi@gmail.com>
-</pre>
+```
 
 Misal, saya ingin menghapus uid ke-2, dengam alamat email rizqiassyaufi@gmail.com.
 
 Gunakan perintah `uid <id>` untuk memilih uid yang dimakdudkan.
 
-<pre>
-<span class="cmd">gpg> </span><b>uid 2</b>
-</pre>
+```
+gpg> uid 2
+```
 
 Nanti, akan ada tanda bintang `*` pada uid yang telah terpilih.
 
@@ -378,12 +384,16 @@ Perhatikan, pada uid 2, terdapat tanda `*`, artinya uid 2 telah kita tandai.
 
 Kemudian, gunakan perintah `deluid` untuk menghapus uid terpilih.
 
-<pre>
-<span class="cmd">gpg> </span><b>deluid</b>
-Really remove this user ID? (y/N) <span style="font-weight:bold;color:#FFCC00;">y</span>
-</pre>
+```
+gpg> deluid
+```
+
+```
+Really remove this user ID? (y/N) y
+```
 
 Masukkan `y`, dan uid terpilih akan dihapus dari list.
+
 
 ## Memilih Primary uid
 
@@ -393,9 +403,11 @@ Hal ini dapat dengan mudah kita lakukan menggunakan perintah `primary`.
 
 Misal,
 
-<pre>
-<span class="cmd">gpg> </span><b>list</b>
+```
+gpg> list
+```
 
+```
 sec  rsa4096/6666666666666666
      created: 2018-08-11  expires: 2021-12-30  usage: SC
      trust: ultimate      validity: ultimate
@@ -403,15 +415,15 @@ ssb  rsa4096/9999999999999999
      created: 2018-08-11  expires: 2021-12-30  usage: E
 [ultimate] (1). Rizqi Nur Assyaufi <bandithijo@gmail.com>
 [ultimate] (2)  Rizqi Nur Assyaufi <rizqiassyaufi@gmail.com>
-</pre>
+```
 
 Terlihat, uid 1 adalah primary dari tanda `.` yang ada disebelah uid (1).
 
 Untuk mengubah uid 2 menjadi primary, sebelumnya, marking dulu uid yang ingin dijadikan primary.
 
-<pre>
-<span class="cmd">gpg> </span><b>uid 2</b>
-</pre>
+```
+gpg> uid 2
+```
 
 ```
 sec  rsa4096/6666666666666666
@@ -427,9 +439,9 @@ Nanti, uid 2 akan memiliki marking `*`.
 
 Selanjutnya, jalankan perintah,
 
-<pre>
-<span class="cmd">gpg> </span><b>primary</b>
-</pre>
+```
+gpg> primary
+```
 
 ```
 sec  rsa4096/6666666666666666
@@ -445,15 +457,15 @@ Nanti, tanda `.` pada uid 1 menghilang. Artinya primary sudah berpindah.
 
 Lalu jalankan `save` untuk save dan quit.
 
-<pre>
-<span class="cmd">gpg> </span><b>save</b>
-</pre>
+```
+gpg> save
+```
 
 Lakukan verifikasi,
 
-{% shell_user %}
-gpg --list-secret-keys
-{% endshell_user %}
+```
+$ gpg --list-secret-keys
+```
 
 ```
 sec  rsa4096/6666666666666666
@@ -465,11 +477,9 @@ ssb  rsa4096/9999999999999999
 [ultimate] (2)  Rizqi Nur Assyaufi <bandithijo@gmail.com>
 ```
 
-Nah, sekarang email rizqiassyaufi@gmail.com sudah menjadi primary.
+Nah, sekarang email `rizqiassyaufi@gmail.com` sudah menjadi primary.
 
 Posisi primary akan selalu berada di uid 1.
-
-
 
 
 # Pesan Penulis
@@ -485,5 +495,5 @@ Terima kasih.
 
 # Referensi
 
-1. [Redmine - Adding Secondary Email Addresses to GPG Keys](https://redmine.dicelab.net/projects/instructibels/wiki/Adding_Secondary_Email_Addresses_to_GPG_Keys){:target="_blank"}
+1. [Redmine - Adding Secondary Email Addresses to GPG Keys](https://redmine.dicelab.net/projects/instructibels/wiki/Adding_Secondary_Email_Addresses_to_GPG_Keys)
 <br>Diakses tanggal: 2020/12/11

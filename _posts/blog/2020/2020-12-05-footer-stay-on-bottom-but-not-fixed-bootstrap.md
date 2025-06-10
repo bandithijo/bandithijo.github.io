@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Membuat Footer Stay on Bottom but Not Fixed pada Bootstrap"
-date: 2020-12-05 14:41
+date: '2020-12-05 14:41'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips']
+tags: ['Bootstrap', 'CSS', 'HTML']
 pin:
 hot:
 contributors: []
@@ -21,28 +21,32 @@ Kalian pasti pernah melihat Footer yang manja di sebuah website.
 
 Kira-kira seperti ini contohnya.
 
-{% image https://i.postimg.cc/RFGxYSgJ/gambar-01.png | 1 %}
+![Gambar 1](https://i.postimg.cc/RFGxYSgJ/gambar-01.png)
+
+Gambar 1. Footer yang menempel pada bagian bawah body
 
 Perhatikan kotak berwarna merah.
 
 Footer ini sangat manja karena menempel pada post body.
 
-<br>
 Saya ingin membuat Footer yang mandiri. Yang akan selalu berada di bagian bawah layar, meskipun body post tidak sebanyak tinggi layar.
 
 Namun, saya juga tidak ingin membuat Footer ini terlalu keras kepala (Fixed), sehingga tetap berada di bawah layar meskipun post content sudah banyak.
 
 Idealnya, Footer yang saya inginkan seperti ini.
 
-{% image https://i.postimg.cc/pdHNXh7n/gambar-02.png | 2 %}
+![Gambar 2](https://i.postimg.cc/pdHNXh7n/gambar-02.png)
+
+Gambar 2. Footer yang menempel manja pada bagian bawah halaman
 
 Meskipun post content hanya sedikit, Footer tetap berada di bagian bawah layar. Dan apabila post content sudah banyak, Footer akan terdorong menghilang bersama post content yang paling bawah.
+
 
 # Implementasi
 
 Markup HTML nya seperti ini polanya.
 
-{% highlight html linenos %}
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -63,12 +67,11 @@ Markup HTML nya seperti ini polanya.
 
   </body>
 </html>
-{% endhighlight %}
+```
 
-<br>
 Style nya seperti ini.
 
-{% highlight css linenos %}
+```css
 html,
 body {
   height: 100%;
@@ -81,10 +84,7 @@ body {
 #footer {
   flex-shrink: none;
 }
-{% endhighlight %}
-
-
-
+```
 
 
 # Pesan Penulis

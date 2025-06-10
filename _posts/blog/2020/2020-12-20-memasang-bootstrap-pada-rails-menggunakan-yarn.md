@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Memasang Bootstrap 4 pada Rails 6 dengan Yarn"
-date: 2020-12-20 07:52
+date: '2020-12-20 07:52'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Rails']
+tags: ['Rails', 'Bootstrap']
 pin:
 hot:
 contributors: []
@@ -29,21 +29,22 @@ Jadi, kalau teman-teman belum memiliki yarn, boleh dipasang terlebih dahulu.
 
 Oke langsung saja.
 
+
 # Instalasi
 
 Untuk memsang Bootstrap 4 dengan yarn, pastikan kita sudah berada di root direktori project yang akan dipasang Bootstrap.
 
 Lalu jalankan,
 
-{% shell_user %}
-yarn add bootstrap@4 jquery popper.js
-{% endshell_user %}
+```
+$ yarn add bootstrap@4 jquery popper.js
+```
 
-\*Karena Bootstrap sangat tergantung dengan JQuery dan Popper.js, maka kita juga perlu menyertakan dalam proses instalasi.
+\* Karena Bootstrap sangat tergantung dengan JQuery dan Popper.js, maka kita juga perlu menyertakan dalam proses instalasi.
 
 Tunggu saja prosesnya hingga selesai.
 
-<pre>
+```
 success Saved lockfile.
 success Saved 3 new dependencies.
 info Direct dependencies
@@ -55,12 +56,12 @@ info All dependencies
 ├─ jquery@3.5.1
 └─ popper.js@1.16.1
 Done in 9.33s.
-</pre>
+```
 
 Kalau sudah selesai, Coba teman-teman buka file `package.json` yang ada di root project direktori.
 
-{% highlight_caption package.json %}
-{% highlight json linenos %}
+```json
+!filename: package.json
 {
   "name": "photo_app",
   "private": true,
@@ -79,16 +80,18 @@ Kalau sudah selesai, Coba teman-teman buka file `package.json` yang ada di root 
     "webpack-dev-server": "^3.11.0"
   }
 }
-{% endhighlight %}
+```
 
-Perhatikan pada baris 9 - 11 adalah paket yang baru saja kita pasang menggunakan yarn.
+Perhatikan pada baris 9-11 adalah paket yang baru saja kita pasang menggunakan yarn.
+
 
 # Konfigurasi
 
+
 ## 1. Konfigurasi Webpack
 
-{% highlight_caption config/webpack/environment.js %}
-{% highlight javascript linenos %}
+```javascript
+!filename: config/webpack/environment.js
 const { environment } = require('@rails/webpacker')
 
 const webpack = require("webpack")
@@ -100,9 +103,10 @@ environment.plugins.append("Provide", new webpack.ProvidePlugin({
 }))
 
 module.exports = environment
-{% endhighlight %}
+```
 
 Tambahkan pada baris 3-9 di antara baris 1-11.
+
 
 ## 2. Konfigurasi Javascript
 
@@ -110,8 +114,8 @@ Pada Rails 6, struktur direktori untuk Javascript bukan lagi berada di dalam `ap
 
 Kita perlu mengimport Bootstrap ke dalamnya.
 
-{% highlight_caption app/javascript/packs/application.js %}
-{% highlight javascript linenos %}
+```javascript
+!filename: app/javascript/packs/application.js
 // This file is automatically compiled by Webpack, along with any other files
 // present in this directory. You're encouraged to place your actual application logic in
 // a relevant structure within app/javascript and only use these pack files to reference
@@ -130,29 +134,27 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 import "bootstrap"
-{% endhighlight %}
+```
 
 Baris ke 18 adalah baris yang perlu ditambahkan.
+
 
 ## 3. Konfigurasi StyleSheet
 
 Selanjutnya, buat file scss baru pada direktori yang sama dengan nama **custom.scss**.
 
-{% highlight_caption app/assets/stylesheets/custom.scss %}
-{% highlight scss linenos %}
+```scss
+!filename: app/assets/stylesheets/custom.scss
 @import 'bootstrap/scss/bootstrap';
-{% endhighlight %}
+```
 
 Selesai!
 
-{% box_pertanyaan %}
-<p markdown=1><b>Darimana saya mengetahui path stylesheet dari sebuah javascript library?</b></p>
-<p markdown=1>Telusuri file stylesheet dari Javascript library yang digunakan, di dalam direktori **node_modules** (dalam root project direktori).</p>
-{% endbox_pertanyaan %}
-
-
-
-
+> PERTANYAAN?
+> 
+> **Darimana saya mengetahui path stylesheet dari sebuah javascript library?**
+> 
+> Telusuri file stylesheet dari Javascript library yang digunakan, di dalam direktori **node_modules** (dalam root project direktori).
 
 
 # Pesan Penulis
@@ -168,8 +170,8 @@ Terima kasih.
 
 # Referensi
 
-1. [mashrurhossain.com/blog/rails6bootstrap4](https://www.mashrurhossain.com/blog/rails6bootstrap4){:target="_blank"}
+1. [mashrurhossain.com/blog/rails6bootstrap4](https://www.mashrurhossain.com/blog/rails6bootstrap4)
 <br>Diakses tanggal: 2020/12/20
 
-2. [dev.to/somnathpaul/add-bootstrap-4-to-your-ruby-on-rails-6-application-ole](https://dev.to/somnathpaul/add-bootstrap-4-to-your-ruby-on-rails-6-application-ole){:target="_blank"}
+2. [dev.to/somnathpaul/add-bootstrap-4-to-your-ruby-on-rails-6-application-ole](https://dev.to/somnathpaul/add-bootstrap-4-to-your-ruby-on-rails-6-application-ole)
 <br>Diakses tanggal: 2020/12/20
