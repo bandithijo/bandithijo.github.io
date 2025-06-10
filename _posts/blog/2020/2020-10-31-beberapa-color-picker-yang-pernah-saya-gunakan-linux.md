@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Beberapa Color Picker yang Pernah Saya Gunakan di GNU/Linux"
-date: 2020-10-31 17:28
+date: '2020-10-31 17:28'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Ulasan']
+tags: ['Color Picker', 'Tool']
 pin:
 hot:
 contributors: []
@@ -25,17 +25,19 @@ Maka dari itu, aplikasi color picker adalah salah satu tools yang penting bagi s
 
 Catatan kali ini adalah mengenai beberapa aplikasi yang sudah saya kenal, sejak aktif menggunakan GNU/Linux dan menemani saya dalam menyelesaikan project-project yang saya kerjakan di lingkungan GNU/Linux.
 
+
 # Daftar Color Picker
+
 
 ## Gpick
 
-{% image https://i.postimg.cc/V6v81DpV/gambar-01.png | 1 %}
+![Gambar 1](https://i.postimg.cc/V6v81DpV/gambar-01.png)
 
 **Gpick**.
 
-[http://www.gpick.org](http://www.gpick.org){:target="_blank"}
+[http://www.gpick.org](http://www.gpick.org)
 
-[https://github.com/thezbyg/gpick](https://github.com/thezbyg/gpick){:target="_blank"}
+[https://github.com/thezbyg/gpick](https://github.com/thezbyg/gpick)
 
 > Gpick is an advanced color picker and palette editing tool.
 
@@ -46,11 +48,11 @@ Saya pribadi, awal-awal mengenal Gpick, sangat menyukainya. Namun, karena kebutu
 
 ## Gcolor2
 
-{% image https://i.postimg.cc/PJ8nvNtb/gambar-02.png | 2 %}
+![Gambar 2](https://i.postimg.cc/PJ8nvNtb/gambar-02.png)
 
 **Gcolor2**
 
-[http://gcolor2.sourceforge.net](http://gcolor2.sourceforge.net){:target="_blank"}
+[http://gcolor2.sourceforge.net](http://gcolor2.sourceforge.net)
 
 > gcolor2 is a simple color selector that was originally based on gcolor, ported to use GTK+2, and now has a completely new UI.
 
@@ -65,13 +67,13 @@ Saya pribadi, sempat memakai Gcolor2 dalam waktu yang cukup lama.
 
 ## Gcolor3
 
-{% image https://i.postimg.cc/SjFF6qsB/gambar-03.png | 3 %}
+![Gambar 3](https://i.postimg.cc/SjFF6qsB/gambar-03.png)
 
 **Gcolor3**
 
-[https://www.hjdskes.nl/projects/gcolor3](https://www.hjdskes.nl/projects/gcolor3/){:target="_blank"}
+[https://www.hjdskes.nl/projects/gcolor3](https://www.hjdskes.nl/projects/gcolor3/)
 
-[https://gitlab.gnome.org/World/gcolor3](https://gitlab.gnome.org/World/gcolor3){:target="_blank"}
+[https://gitlab.gnome.org/World/gcolor3](https://gitlab.gnome.org/World/gcolor3)
 
 > A simple color chooser written in GTK3 (like gcolor2)
 
@@ -82,11 +84,11 @@ Alasan saya menggunakan Gcolor3, ketimbang Gcolor2, karena mengikuti trend saja.
 
 ## ColorGrab
 
-{% image https://i.postimg.cc/ydGzN0zY/gambar-04.png | 4 %}
+![Gambar 4](https://i.postimg.cc/ydGzN0zY/gambar-04.png)
 
 **ColorGrab**
 
-[https://github.com/nielssp/colorgrab](https://github.com/nielssp/colorgrab){:target="_blank"}
+[https://github.com/nielssp/colorgrab](https://github.com/nielssp/colorgrab)
 
 > A cross-platform color picker. wxWidgets color picker (C++)
 
@@ -101,12 +103,8 @@ Tahun ini, saya akan mulai mencoba menggunakan ColorGrab.
 Alasannya:
 
 1. Dimensi UI nya lebih kecil. Sehingga cocok untuk layar laptop saya yang juga mungil. Tidak akan menghalangi object yang sedang saya kerjakan.
-
 2. UI utamanya sederhana. Menampilkan nilai Hex dan RGB yang memang sering saya gunakan.
-
 3. Fitur-fitur yang tidak sering digunakan, tersembunyi di dalam menu. Cocok sekali untuk digunakan apabila diperlukan.
-
-
 
 
 # Pesan Penulis

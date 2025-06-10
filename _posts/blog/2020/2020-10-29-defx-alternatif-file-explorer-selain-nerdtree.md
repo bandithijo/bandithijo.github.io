@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Defx, Alternatif Vim File Explorer selain NERDTree"
-date: 2020-10-27 05:41
+date: '2020-10-27 05:41'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Ulasan', 'Vim']
+tags: ['Vim', 'Defx']
 pin:
 hot:
 contributors: []
@@ -27,18 +27,20 @@ Catatan kali ini tentang, proses migrasi saya dari NERDTree ke Defx.nvim.
 
 Menurut yang tertulis di halaman GitHub README dari Defx, plugin ini diciptakan untuk menggantikan vimfiler yang sudah deprecated.
 
-Penjelasan mengenai konsep dari Defx, dapat teman-teman baca [di sini](https://github.com/Shougo/defx.nvim/blob/master/README.md){:target="_blank"}.
+Penjelasan mengenai konsep dari Defx, dapat teman-teman baca [di sini](https://github.com/Shougo/defx.nvim/blob/master/README.md).
+
 
 # Requirement
 
-`Neovim 0.4.0+` atau `Vim8.2+` dengan `Python3.6.1+`.
+`neovim 0.4.x` atau `vim 8.2.x` dengan `python 3.6.x`.
+
 
 # Instalasi
 
 Saya menggunakan **vim-plug** sebagai plugin manager.
 
-{% highlight_caption $HOME/.config/nvim/init.vim %}
-{% highlight viml %}
+```viml
+!filename: $HOME/.config/nvim/init.vim
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -46,15 +48,16 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
-{% endhighlight %}
+```
 
 Saya juga menambahkan 2 plugin tambahan untuk icon dan git status.
 
-{% highlight_caption $HOME/.config/nvim/init.vim %}
-{% highlight viml %}
+```viml
+!filename: $HOME/.config/nvim/init.vim
 Plug 'kristijanhusak/defx-icons'
 Plug 'kristijanhusak/defx-git'
-{% endhighlight %}
+```
+
 
 # Konfigurasi Defx
 
@@ -62,14 +65,14 @@ Jangan kaget, kalau di halaman GitHub README tidak tersedia contoh-contoh konfig
 
 Teman-teman dapat melihat contoh konfigurasi pada:
 
-<pre>
-<span class="cmd">:</span><b>help defx-examples</b>
-</pre>
+```
+:help defx-examples
+```
 
 Namun, pada catatan kali ini, saya akan langsung memberikan konfigurasi yang saya pergunakan.
 
-{% highlight_caption $HOME/.config/nvim/init.vim %}
-{% highlight vimscript linenos %}
+```viml
+!filename: $HOME/.config/nvim/init.vim
 if exists('g:plugs["defx.nvim"]')
   autocmd FileType     defx call s:defx_my_settings()
   autocmd BufWritePost *    call defx#redraw()
@@ -176,32 +179,30 @@ if exists('g:plugs["defx.nvim"]')
   endfunction
 
 endif
-{% endhighlight %}
+```
+
 
 # Penjelasan
 
-```vimscript
+```viml
 autocmd FileType defx call s:defx_my_settings()
 ```
 
 Baris di atas bertujuan untuk memanggil fungsi `s:defx_my_settings` apabila file type dari buffer yang dibuka bernilai `defx`.
 
-<br>
-```vimscript
+```viml
 autocmd BufWritePost * call defx#redraw()
 ```
 
 Baris di atas bertujuan untuk memanggil fungsi `defx#redraw()` apabila seluruh buffer sudah di-write ke file --mungkin maksudnya di-save.
 
-<br>
-```vimscript
+```viml
 autocmd BufEnter * call s:open_defx_if_directory()
 ```
 
 Baris di atas bertujuan untuk memanggil fungsi `s:open_defx_if_directory()` ketika vim dipanggil dengan atribut bernilai direktori misal: `$ vim .config/nvim`.
 
-<br>
-```vimscript
+```viml
 call defx#custom#option('_', {
   \ 'winwidth'           : 40,
   \ 'split'              : 'vertical',
@@ -229,8 +230,7 @@ Saya akan menjelaskan bagian-bagian yang sekiranya tidak dipahami,
 
 `auto_cd`, untuk mengaktifkan fungsi berganti direktori (*change directory*) ketika menafigasikan Defx untuk masuk atau keluar dari direktori. Catatan: hanya berfungsi apabila menggunakan fungsi `defx#do_action('drop')`.
 
-<br>
-```vimscript
+```viml
 call defx#custom#column('icon', {
   \ 'directory_icon' : ' ',
   \ 'opened_icon'    : ' ',
@@ -239,8 +239,7 @@ call defx#custom#column('icon', {
 
 Baris di atas berfungsi untuk menghilangkan tanda panah yang secara default disertakan oleh Defx. Hal ini saya lakukan karena saya menggunakan plugin defx-icons yang akan memberikan icon-icon pada setiap direktori dan file.
 
-<br>
-```vimscript
+```viml
 call defx#custom#column('filename', {
   \ 'min_width': 40,
   \ 'max_width': 1000,
@@ -248,12 +247,12 @@ call defx#custom#column('filename', {
 ```
 
 Baris di atas bertujuan untuk menghandle minimal & maximal lebar dari window pane agar filename tidak terpotong (*truncated*).
-<pre class="url">
-ini adalah judul yang sangat...panjang sekali.md
-</pre>
 
-<br>
-```vimscript
+```
+ini adalah judul yang sangat...panjang sekali.md
+```
+
+```viml
 function! s:open_defx_if_directory()
   try
     let l:full_path = expand(expand('%:p'))
@@ -271,8 +270,7 @@ Baris di atas bertujuan untuk mendefisikan fungsi `s:open_defx_if_directory()`. 
 
 Catatan: masih terdapat banyak kekurangan pada fungsi ini.
 
-<br>
-```vimscript
+```viml
 function! s:defx_my_settings() abort
   ...
 endfunction
@@ -282,10 +280,11 @@ Baris di atas bertujuan untuk mendefinisikan keyboard mapping yang digunakan.
 
 Kita dapat merubah-rubah sesuai preferensi pribadi masing-masing.
 
+
 # Konfigurasi Defx-icons
 
-{% highlight_caption $HOME/.config/nvim/init.vim %}
-{% highlight vimscript linenos %}
+```viml
+!filename: $HOME/.config/nvim/init.vim
 " defx-icons
 
 let g:defx_icons_enable_syntax_highlight = 1
@@ -314,12 +313,13 @@ hi default link DefxIconsSymlinkDirectory Directory
 hi default link DefxIconsOpenedTreeIcon   Directory
 hi default link DefxIconsNestedTreeIcon   Directory
 hi default link DefxIconsClosedTreeIcon   Directory
-{% endhighlight %}
+```
+
 
 # Konfigurasi defx-git
 
-{% highlight_caption $HOME/.config/nvim/init.vim %}
-{% highlight vimscript linenos %}
+```viml
+!filename: $HOME/.config/nvim/init.vim
 " defx-git
 
 if exists('g:plugs["defx-git"]')
@@ -347,29 +347,30 @@ if exists('g:plugs["defx-git"]')
   hi Defx_git_Deleted   ctermfg=214 ctermbg=NONE
   hi Defx_git_Staged    ctermfg=214 ctermbg=NONE
 endif
-{% endhighlight %}
+```
 
 
 # Hasilnya
 
-{% image https://i.postimg.cc/bJnLsY3b/gambar-01.png | 1 %}
+![Gambar 1](https://i.postimg.cc/bJnLsY3b/gambar-01.png)
 
-{% image https://i.postimg.cc/BQStvYvQ/gambar-02.gif | 2 %}
+![Gambar 2](https://i.postimg.cc/BQStvYvQ/gambar-02.gif)
 
 Kalau diperhatikan, kenapa status bar saya dapat berbeda ketika berada di buffer Defx?
 
 Jawabannya ada di post setelah ini.
 
+
 # Credit
 
-Terima kasih kepada [Elianiva](https://elianiva.github.io/post/defx-nvim/){:target="_blank"} dan [teh Tsara Fatma](https://tsarafatma.com/neovim/2020/02/08/defx-file-explorer-for-neovim){:target="_blank"}, untuk catatan di blognya.
+Terima kasih kepada [Elianiva](https://elianiva.github.io/post/defx-nvim/) dan [teh Tsara Fatma](https://tsarafatma.com/neovim/2020/02/08/defx-file-explorer-for-neovim), untuk catatan di blognya.
 
 
 # Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
-Untuk konfigurasi Defx milik saya yang lebih terbaru, dapat teman-teman kunjungi [di sini](https://github.com/bandithijo/nvimrc/blob/master/plugin-config/defx.nvim.vim){:target="_blank"}.
+Untuk konfigurasi Defx milik saya yang lebih terbaru, dapat teman-teman kunjungi [di sini](https://github.com/bandithijo/nvimrc/blob/master/plugin-config/defx.nvim.vim).
 
 Mudah-mudahan dapat bermanfaat.
 
@@ -377,7 +378,8 @@ Terima kasih.
 
 (^_^)
 
+
 # Referensi
 
-1. [github.com/crow-translate/crow-translate](https://github.com/crow-translate/crow-translate){:target="_blank"}
+1. [github.com/crow-translate/crow-translate](https://github.com/crow-translate/crow-translate)
 <br>Diakses tanggal: 2020/10/27

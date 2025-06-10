@@ -21,8 +21,6 @@ Kalau teman-teman menggunakan Bootstrap sebagai CSS Framework--terkhusus Bootstr
 
 ![Gambar 1](https://i.postimg.cc/c1TKPGPS/gambar-01.png)
 
-<p></p>
-
 ```html
 <table class="table table-bordered table-hover my-3">
   <thead>
@@ -155,8 +153,6 @@ Tujuannya agar terlihat menyatu dan seragam --tidak terlihat seperti custom abal
 Dan beginilah hasilnya setelah modifikasi di atas kita lakukan.
 
 ![Gambar 2](https://i.postimg.cc/NFWvZMcD/gambar-02.png)
-
-<p></p>
 
 
 # Pesan Penulis

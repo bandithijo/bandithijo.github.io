@@ -725,15 +725,11 @@ Kalau kita sudah mengkonfigurasi FAS akun pada file `.config`, setiap selesai me
 
 ![Gambar 1](https://i.postimg.cc/XvhXwZpF/gambar-01.png)
 
-<p></p>
-
 Untuk melihat hasil pengujian kita, pilih nama kernel yang sesuai dengan yang kita test.
 
 Hasil pengujian kita akan berada di dalam daftar (gambar di bawah). Coba buka saja satu persatu. Salah satunya pasti milik kalian. Yang paling baru, berada di paling atas.
 
 ![Gambar 2](https://i.postimg.cc/1tqXM9qd/gambar-02.png)
-
-<p></p>
 
 # Turn SELinux boolean selinuxuser_execheap back to default state
 
@@ -753,13 +749,9 @@ Kalau kita buka, akan ketemu halaman seperti ini.
 
 ![Gambar 3](https://i.postimg.cc/CMbdqxYB/gambar-03.png)
 
-<p></p>
-
 Contoh submission datanya seperti di bawah ini.
 
 ![Gambar 4](https://i.postimg.cc/ZnLTD0Kw/gambar-04.png)
-
-<p></p>
 
 Dengan ini proses Kernel Regression Test sudah selesai.
 

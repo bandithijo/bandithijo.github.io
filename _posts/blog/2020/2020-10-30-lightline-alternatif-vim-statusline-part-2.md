@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Lightline, Alternatif Vim Statusline Bagian 2 (feat. Defx, Tagbar)"
-date: 2020-10-30 09:26
+date: '2020-10-30 09:26'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Ulasan', 'Vim']
+tags: ['Vim', 'Lightline']
 pin:
 hot:
 contributors: []
@@ -20,7 +20,7 @@ description: "Pembaharuan konfig dari catatan sebelumnya. Kali ini dengan peruba
 # Latar Belakang
 
 Post ini saya tulis sebagai update catatan bagian pertama yang berjudul: <br>
-[**Lightline, Alternatif Vim Statusline**](/blog/lightline-alternatif-vim-statusline){:target="_blank"}.
+[**Lightline, Alternatif Vim Statusline**](/blog/lightline-alternatif-vim-statusline).
 
 Saya memutuskan untuk membuat bagian kedua, karena sudah cukup banyak perubahan yang saya tambahkan dari bagian pertama. Terutama pada bagian pengecualian statusline pada Defx buffer.
 
@@ -32,14 +32,15 @@ Agak lucu rasanya, kalau pada Defx, statusline ditampilkan Git branch, line & co
 
 Maka, pada buffer Defx, Lightline statusline **tidak diperlukan untuk menampilkan status secara lengkap**.
 
+
 # Instalasi
 
 Saya menggunakan **vim-plug**.
 
-{% highlight_caption $HOME/.config/nvim/init.vim %}
-{% highlight viml %}
+```viml
+!filename: $HOME/.config/nvim/init.vim
 Plug 'itchyny/lightline.vim'
-{% endhighlight %}
+```
 
 
 # Konfigurasi
@@ -48,8 +49,8 @@ Contoh-contoh konfigurasi dapat teman-teman lihat pada halaman GitHub dari Light
 
 Saya akan langsung menunjukkan konfigurasi yang saya lakukan pada bagian kedua ini.
 
-{% highlight_caption $HOME/.config/nvim/init.vim %}
-{% highlight vimscript linenos %}
+```viml
+!filename: $HOME/.config/nvim/init.vim
 " LightLine
 
 let g:lightline = {
@@ -239,7 +240,8 @@ endfunction
 
 set showtabline=2  " Show tabline, 2 show, 1 hide
 set guioptions-=e  " Don't use GUI tabline
-{% endhighlight %}
+```
+
 
 # Penjelasan
 
@@ -249,68 +251,17 @@ Saya membuat function agar lebih leluasa untuk memodifikasi isi dari statusline 
 
 Function-function modifikasi ini nantinya ditempatkan pada `'component_function': {..}`.
 
-<!--
-## Function Readonly
-
-```vimscript
-function! LightlineReadonly()
-  return &readonly ? '' : ''
-endfunction
-```
-
-Blok kode di atas sudah cukup menjelaskan. Menggunakan operator pengkondisian ternary.
-
-Apakah file **&readonly** ? jika benar tampilkan string `''` (locked symbol), jika salah tampilkan string `''` (string kosong).
-
-Kemudian saya tempatkan di status aktif bagian kiri, dengan posisi di tengah. Diantara mode & filename.
-
-```vimscript
-\   'active': {
-\    'left' : [[ 'mode', 'paste' ],
-\              [ 'gitbranch', <mark>'readonly'</mark> ],
-\              [ 'filename' ]],
-```
-
-## Function Git Branch
-
-```vimscript
-function! LightlineFugitive()
-  if &filetype !=? 'defx'
-    if exists('*fugitive#head')
-        let branch = fugitive#head()
-        return branch !=# '' ? ' '.branch : ''
-    endif
-    return fugitive#head()
-  else
-    return ''
-  endif
-endfunction
-```
-
-Blok kode di atas, adalah function yang saya pergunakan untuk menampilkan git branch.
-
-Kemudian saya tempatkan di status aktif bagian kiri, dengan posisi di tengah. Diantara mode & filename.
-
-```vimscript
-\   'active': {
-\    'left' : [[ 'mode', 'paste' ],
-\              [ <mark>'gitbranch'</mark>, 'readonly' ],
-\              [ 'filename' ]],
-```
-
--->
-
 
 # Credit
 
-Terima kasih kepada mas [Yeri](https://yeripratama.com/blog/customizing-vim-lightline/){:target="_blank"}, untuk catatan di blognya.
+Terima kasih kepada mas [Yeri](https://yeripratama.com/blog/customizing-vim-lightline/), untuk catatan di blognya.
 
 
 # Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
-Untuk konfigurasi Lightline milik saya yang lebih terbaru, dapat teman-teman kunjungi [di sini](https://github.com/bandithijo/nvimrc/blob/master/plugin-config/lightline.vim){:target="_blank"}.
+Untuk konfigurasi Lightline milik saya yang lebih terbaru, dapat teman-teman kunjungi [di sini](https://github.com/bandithijo/nvimrc/blob/master/plugin-config/lightline.vim).
 
 Mudah-mudahan dapat bermanfaat.
 
@@ -320,8 +271,8 @@ Terima kasih.
 
 # Referensi
 
-1. [github.com/itchyny/lightline.vim](https://github.com/itchyny/lightline.vim){:target="_blank"}
+1. [github.com/itchyny/lightline.vim](https://github.com/itchyny/lightline.vim)
 <br>Diakses tanggal: 2020/10/30
 
-2. [hagen.dev/kristoffer/dotfiles - [nvim] Lightline config](https://hagen.dev/kristoffer/dotfiles/commit/c833b54013c7a3522315da362b548595be098a6b){:target="_blank"}
+2. [hagen.dev/kristoffer/dotfiles - [nvim] Lightline config](https://hagen.dev/kristoffer/dotfiles/commit/c833b54013c7a3522315da362b548595be098a6b)
 <br>Diakses tanggal: 2020/10/30

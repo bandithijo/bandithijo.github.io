@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Tremc, Terminal Torrent Client yang Praktis dan Mudah Digunakan"
-date: 2020-11-02 19:00
+date: '2020-11-02 19:00'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Ulasan']
+tags: ['Torrent', 'TUI', 'Tool']
 pin:
 hot:
 contributors: []
@@ -34,50 +34,53 @@ Karena Tremc ini hanya TUI interface, tentunya kita perlu memasang program utama
 
 Untuk Arch Linux, pasang paket **extra/transmission-cli**.
 
-<pre>
-$ <b>sudo pacman -S transmission-cli</b>
-</pre>
+```
+$ sudo pacman -S transmission-cli
+```
 
 Kemudian, pasang paket **aur/tremc-git**.
 
-<pre>
-$ <b>yay -S tremc-git</b>
-</pre>
+```
+$ yay -S tremc-git
+```
+
 
 # Eksekusi
 
 **NOTE!** Sebelum dapat membuka **tremc**, kita harus menjalankan **transmission-daemon** terlebih dahulu.
 
-<pre>
-$ <b>transmission-daemon</b>
-</pre>
+```
+$ transmission-daemon
+```
 
 Secara otomatis, akan berjalan di background process.
 
 Kalau tidak, tremc akan gagal dibuka, atau tidak akan berjalan sebagaimana mestinya.
 
+
 # Konfigurasi
+
 
 ## tremc config
 
 Tremc sudah menyediakan command untuk mengenerate file config.
 
-<pre>
-$ <b>tremc --create-config</b>
-</pre>
+```
+$ tremc --create-config
+```
 
 Maka, file config akan tergenerate dan berada di lokasi.
 
-<pre class="url">
+```
 $HOME/.config/tremc/settings.cfg
-</pre>
+```
 
 Berikut ini adalah file **settings.cfg** milik saya.
 
 Tidak banyak yang perlu diubah, hanya blok [Colors] saja yang saya modifikasi sesuai preferensi saya.
 
-{% highlight_caption $HOME/.config/tremc/settings.cfg %}
-{% highlight conf linenos %}
+```conf
+!filename: $HOME/.config/tremc/settings.cfg
 [Connection]
 host                       = localhost
 port                       = 9091
@@ -116,9 +119,12 @@ file_prio_high             = fg:red,bg:default
 file_prio_normal           = fg:default,bg:default
 file_prio_low              = fg:yellow,bg:default
 file_prio_off              = fg:blue,bg:default
-{% endhighlight %}
+```
 
-{% image https://i.postimg.cc/3xrDRmTm/gambar-01.png | 1 %}
+![Gambar 1](https://i.postimg.cc/3xrDRmTm/gambar-01.png)
+
+Gambar 1. Tampilan tremc
+
 
 ## transmission-daemon settings.json
 
@@ -128,12 +134,12 @@ Hal ini diatur oleh **transmission-daemon** bukan dari **tremc**.
 
 Maka dari itu, kita perlu merubah lokasi hasil unduhannya ke direktori yang ada di Home user.
 
-{% shell_term $ %}
-sudo vim /var/lib/transmission/.config/transmission-daemon/settings.json
-{% endshell_term %}
+```
+$ sudo vim /var/lib/transmission/.config/transmission-daemon/settings.json
+```
 
-{% highlight_caption settings.json %}
-{% highlight json linenos %}
+```json
+!filename: /var/lib/transmission/.config/transmission-daemon/settings.json
 {
     ...,
     "download-dir": "~/dwn/Torrent",
@@ -141,50 +147,53 @@ sudo vim /var/lib/transmission/.config/transmission-daemon/settings.json
     "incomplete-dir": "~/dwn/Torrent",
     ...,
 }
-{% endhighlight %}
+```
 
 `"download-dir":` dan `"incomplete-dir":`, adalah direktori file unduhan, rubah sesuai keingian kalian. Saya meletakkannya pada direktori **~/Downloads/Torrent/**.
+
 
 # Keyboard Mapping
 
 Tremc, sudah membundle keybind help info yang sangat mudah dipahami dan mudah diakses.
 
+
 ## Keymap Help
 
 Tekan <kbd>F1</kbd> atau <kbd>?</kbd>.
 
-{% image https://i.postimg.cc/XvmZQPyk/gambar-02.png | 2 %}
+![Gambar 2](https://i.postimg.cc/XvmZQPyk/gambar-02.png)
 
 Apabila terdapat keterangan **More...**, kita dapat scroll ke bawah dengan <kbd>Page Down</kbd>.
 
 Untuk melihat detail dari torrent, tekan <kbd>Enter</kbd>.
 
-{% image https://i.postimg.cc/6Qy2VKTQ/gambar-03.png | 4 %}
+![Gambar 3](https://i.postimg.cc/6Qy2VKTQ/gambar-03.png)
 
 Kemudian, pindah ke tab selanjutnya dengan <kbd>Tab</kbd> atau <kbd>-></kbd>.
 
-{% image https://i.postimg.cc/nzmX514b/gambar-04.png | 4 %}
+![Gambar 4](https://i.postimg.cc/nzmX514b/gambar-04.png)
 
-{% image https://i.postimg.cc/t4rnVJqf/gambar-05.png | 5 %}
+![Gambar 5](https://i.postimg.cc/t4rnVJqf/gambar-05.png)
+
 
 ## Add Torrent
 
 Kita dapat menambahkan torrent dengan menekan tombol <kbd>a</kbd>.
 
-{% image https://i.postimg.cc/7hxqV1XN/gambar-06.png | 6 %}
+![Gambar 6](https://i.postimg.cc/7hxqV1XN/gambar-06.png)
 
 Saya lebih sering memasukkan alamat Magnet Link, seperti ini contohnya.
 
-{% pre_url %}
+```
 magnet:?xt=urn:btih:ba7a8d78a535a9bf22dbb4482b9174ea8fd70891&dn=archlinux-2020.11.01-x86_64.iso
-{% endpre_url %}
+```
+
 
 ## Move Torrent File
 
 Secara default, file torrent akan diletakkan di direktori Downloads.
 
 Kita dapat memindahkan ke direktori yang kita mau, dengan menekan tombol <kbd>m</kbd>, kemudian arahkan manual path direktori. Kita dapat menggunakan tombol <kbd>Tab</kbd> untuk auto complete.
-
 
 
 # Pesan Penulis
@@ -202,5 +211,5 @@ Terima kasih.
 
 # Referensi
 
-1. [github.com/tremc/tremc](https://github.com/tremc/tremc){:target="_blank"}
+1. [github.com/tremc/tremc](https://github.com/tremc/tremc)
 <br>Diakses tanggal: 2020/11/02

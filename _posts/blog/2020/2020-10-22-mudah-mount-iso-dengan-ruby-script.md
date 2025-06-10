@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Mudah Mount & Unmount File ISO Image dengan Ruby Script (feat. udisksctl)"
-date: 2020-10-22 06:52
+date: '2020-10-22 06:52'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Ruby', 'Tips', 'Ulasan']
+tags: ['Ruby', 'udisksctl']
 pin:
 hot:
 contributors: []
@@ -17,7 +17,8 @@ description: "Mount file ISO mungkin merupakan hal yang sangat mudah kalau kita 
 
 # Latar Belakang
 
-Sejak 2018 hingga saat ini (2020), saya sudah jarang sekali memanfaatkan file manager GUI, seperti Thunar, PCMANFM, ataupun Nautlius untuk mengurusi pekerjaan manajemen file. Hal-hal seperti explorasi file dokumen, file gambar, video, audio, semuanya dapat saya lakukan di **ranger** --[baca tentang ranger](/blog/ranger-file-manager){:target="_blank"}.
+Sejak 2018 hingga saat ini (2020), saya sudah jarang sekali memanfaatkan file manager GUI, seperti Thunar, PCMANFM, ataupun Nautlius untuk mengurusi pekerjaan manajemen file. Hal-hal seperti explorasi file dokumen, file gambar, video, audio, semuanya dapat saya lakukan di **ranger** --[baca tentang ranger](/blog/ranger-file-manager).
+
 
 # Masalah
 
@@ -25,9 +26,11 @@ Namun, ada beberapa hal yang salah satunya masih saya kerjakan menggunakan file 
 
 Kadang saya perlu untuk melakukan inspeksi terhadap file ISO yang akan saya jalankan di Virt-Manager. Untuk melihat apakah terdapat hal-hal yang janggal atau tidak.
 
+
 # Pemecahan Masalah
 
 Pada catatan ini, saya akan menunjukkan 2 cara.
+
 
 ## 1. Manual dengan mount & umount command
 
@@ -37,33 +40,39 @@ Kita perlu mengetahui bagaimana cara menggunakan command `mount` & `umount`.
 
 **Mount ISO image**
 
-{% pre_url %}
-<span class="cmd">$ </span>sudo mount -l -o loop /source/path/iso /target/path
-{% endpre_url %}
+```
+$ sudo mount -l -o loop /source/path/iso /target/path
+```
 
-{% shell_user %}
-sudo mount -l -o loop archlinux.iso /run/media/bandithijo
-{% endshell_user %}
+```
+$ sudo mount -l -o loop archlinux.iso /run/media/bandithijo
+```
 
-<pre>
+```
 $ lsblk
+```
+
+```
 NAME   FSTYPE    SIZE TYPE LABEL       MOUNTPOINT
-<mark>loop0  iso9660   681M loop ARCH_202010 /run/media/bandithijo</mark>
+loop0  iso9660   681M loop ARCH_202010 /run/media/bandithijo
 sda            447.1G disk
 └─sda1 ext4    447.1G part             /
-</pre>
+```
 
 Maka, isi dari direktori `/run/media/bandithijo/` adalah
 
-<pre>
+```
 $ ls -l /run/media/bandithijo
+```
+
+```
 total 697396
 -rw-r--r-- 1 bandithijo users 714080256 Oct 20 02:11 archlinux-2020.10.01-x86_64.iso
 drwxr-xr-x 2 bandithijo users      4096 May  3 08:54 Backup
 -rw-r--r-- 1 bandithijo users        66 Feb 14  2019 cek_md5
 -rwxr-xr-x 1 bandithijo users       246 Oct  9 18:57 lazymigrate.rb
 drwxr-xr-x 3 bandithijo users     12288 May  3 08:54 Manual
-</pre>
+```
 
 Keterangan perintah:
 
@@ -71,27 +80,28 @@ Keterangan perintah:
 
 `-o loop`, untuk option menggunakan **loopback** device.
 
-<br>
 **Unmount ISO image**
 
-{% pre_url %}
-<span class="cmd">$ </span>sudo umount /target/path
-{% endpre_url %}
+```
+$ sudo umount /target/path
+```
 
-{% shell_user %}
-sudo umount /run/media/bandithijo
-{% endshell_user %}
+```
+$ sudo umount /run/media/bandithijo
+```
 
 Atau, bisa juga menggunakan ISO image yang dimount sebelumnya.
 
-{% shell_user %}
-sudo umount archlinux.iso
-{% endshell_user %}
+```
+$ sudo umount archlinux.iso
+```
 
-{% box_perhatian %}
-<p markdown="1">Perlu diperhatikan, perintah yang digunakan untuk melakukan proses *unmount*.</p>
-<p markdown="1">Bukan `unmount` tapi `umount`.</p>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> Perlu diperhatikan, perintah yang digunakan untuk melakukan proses *unmount*.
+> 
+> Bukan `unmount` tapi `umount`.
+
 
 ## 2. Otomatis dengan Ruby script
 
@@ -99,9 +109,9 @@ Kalau teman-teman perhatikan, proses mount & unmount menggunakan file manager GU
 
 Misal, file archlinux.iso sebelumnya, maka nama pathnya akan menjadi seperti ini.
 
-{% pre_url %}
+```
 /run/media/bandithijo/ARCH_202010/
-{% endpre_url %}
+```
 
 Cantik bukan.
 
@@ -109,8 +119,8 @@ Sedangkan kalau kita mount manual, kita perlu membuat direktori dengan nama labe
 
 Maka dari itu, agar proses tersebut dapat saya tiru, tanpa perlu repot, saya buat Ruby script saja.
 
-{% highlight_caption $HOME/.local/bin/isomounter.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: $HOME/.local/bin/isomounter.rb
 #!/usr/bin/env ruby
 
 target_image = ARGV[0].strip
@@ -187,11 +197,11 @@ rescue Interrupt
   puts "\b" * 2 + 'Exit...'
   exit
 end
-{% endhighlight %}
+```
 
 Output
 
-<pre>
+```
 $ isomounter archlinux.iso
 
 Options:
@@ -201,9 +211,9 @@ Options:
 
 => m
 => MOUNTED on /run/media/bandithijo/ARCH_202010
-</pre>
+```
 
-<pre>
+```
 $ isomounter archlinux.iso
 
 Options:
@@ -213,7 +223,8 @@ Options:
 
 => u
 => UNMOUNTED
-</pre>
+```
+
 
 # Kekurangan
 
@@ -221,22 +232,25 @@ Kekurangan terbesar dari Ruby wrapper script ini adalah proses dari script ini m
 
 Karena terdapat perintah `mkdir` untuk membuat direktori di alamat `/run/media/<username>/`, serta `mount` ke alamat tersebut juga memerlukan hak akses root sehingga mau tidak mau, kita harus menggunakan sudo.
 
+
 # Alternatif (Recommended)
+
 
 ## 1. Memanfaatkan Udisks2
 
-Kalau proses mount memerlukan hak akses root, kita dapat memanfaatkan **udisks2** (**udisksctl**) --[baca tentang **udisks**](https://bandithijo.github.io/blog/menggunakan-udiskctl){:target="_blank"}.
+Kalau proses mount memerlukan hak akses root, kita dapat memanfaatkan **udisks2** (**udisksctl**) --[baca tentang **udisks**](https://bandithijo.github.io/blog/menggunakan-udiskctl).
 
 Selain untuk Disk/Drive, Udisks juga dapat kita gunakan untuk melakukan mount & unmount file ISO.
 
 Sebelumnya, kita samakan persepsi dulu yaa.
 
-{% pre_whiteboard %}
+```
 NAME
 loop0        &lt;== disebut, <strong>block_devices</strong>
 ├─loop0p1    &lt;== disebut, <strong>block_partition</strong>
 └─loop0p2    &lt;== disebut, <strong>block_partition</strong>
-{% endpre_whiteboard %}
+```
+
 
 ### Mount file ISO
 
@@ -245,23 +259,27 @@ Sekenario untuk proses mount dengan udiskctl, adalah:
 1. Setup loop block device dengan `loop-setup -p`
 2. Mounting block partition dengan `mount -p`
 
+
 #### 1. Setup loop block device dengan loop-setup
 
-{% pre_url %}
-<span class="cmd">$ </span><b>udisksctl loop-setup -f file_image.iso</b>
-{% endpre_url %}
+```
+$ udisksctl loop-setup -f file_image.iso
+```
 
-{% shell_user %}
-udisksctl loop-setup -f archlinux.iso
-{% endshell_user %}
+```
+$ udisksctl loop-setup -f archlinux.iso
+```
 
-<pre>
+```
 $ lsblk
+```
+
+```
 NAME      FSTYPE    SIZE TYPE LABEL       MOUNTPOINT
 loop0     iso9660   681M loop ARCH_202010
 ├─loop0p1 iso9660   681M part ARCH_202010
 └─loop0p2 vfat       56M part ARCHISO_EFI
-</pre>
+```
 
 Terlihat bahwa hasil yang diberikan berbeda dengan perintah mount biasa.
 
@@ -271,27 +289,32 @@ Proses ini mirip saat kita melakukan, klik kanan pada ISO image dan memilih menu
 
 Bisa langsung diklik untuk mount.
 
+
 #### 2. Mounting block partition dengan mount
 
 Atau, kalau kita tidak ingin membuka file manager, atau tidak memiliki aplikasi file manager GUI, kita juga dapat menggunakan udisksctl saja untuk melakukan proses mounting.
 
-{% pre_url %}
-<span class="cmd">$ </span><b>udisksctl mount -p block_devices/block_partition</b>
-{% endpre_url %}
+```
+$ udisksctl mount -p block_devices/block_partition
+```
 
-{% shell_user %}
-udisksctl mount -p block_devices/loop0p1
-{% endshell_user %}
+```
+$ udisksctl mount -p block_devices/loop0p1
+```
 
-<pre>
+```
 $ lsblk
+```
+
+```
 NAME      FSTYPE    SIZE TYPE LABEL       MOUNTPOINT
 loop0     iso9660   681M loop ARCH_202010
-<mark>├─loop0p1 iso9660   681M part ARCH_202010 /run/media/bandithijo/ARCH_202010</mark>
+├─loop0p1 iso9660   681M part ARCH_202010 /run/media/bandithijo/ARCH_202010
 └─loop0p2 vfat       56M part ARCHISO_EFI
-</pre>
+```
 
 Maka, udisks secara otomatis membuat mount point ke path tersebut.
+
 
 ### Unmount File ISO
 
@@ -300,25 +323,29 @@ Sekenario yang sama berlaku untuk proses unount, namun kebalikan dari proses mou
 1. Unmounting block partition dengan `unmount -p`
 2. Delete loop block device dengan `loop-delete -b`
 
+
 #### 1. Unmounting block partition dengan unmount
 
-{% pre_url %}
-<span class="cmd">$ </span><b>udisksctl unmount -p block_devices/block_partition</b>
-{% endpre_url %}
+```
+$ udisksctl unmount -p block_devices/block_partition
+```
 
-{% shell_user %}
-udisksctl unmount -p block_devices/loop0p1
-{% endshell_user %}
+```
+$ udisksctl unmount -p block_devices/loop0p1
+```
 
 Pilih block partition yang memiliki mount point.
 
-<pre>
+```
 $ lsblk
+```
+
+```
 NAME      FSTYPE    SIZE TYPE LABEL       MOUNTPOINT
 loop0     iso9660   681M loop ARCH_202010
 ├─loop0p1 iso9660   681M part ARCH_202010
 └─loop0p2 vfat       56M part ARCHISO_EFI
-</pre>
+```
 
 Terlihat bahwa `loop0p1` sudah tidak lagi memiliki mount point.
 
@@ -329,13 +356,14 @@ Sekarang tinggal melepaskan block device `loop0`.
 
 Dengan cara.
 
-{% pre_url %}
-<span class="cmd">$ </span><b>udisksctl loop-delete -b block_devices/block_device</b>
-{% endpre_url %}
+```
+$ udisksctl loop-delete -b block_devices/block_device
+```
 
-{% shell_user %}
-udisksctl loop-delete -b block_devices/loop0
-{% endshell_user %}
+```
+$ udisksctl loop-delete -b block_devices/loop0
+```
+
 
 ## 2. Memanfaatkan Udiskie
 
@@ -345,13 +373,14 @@ Tujuan dari dibuatnya udiskie adalah untuk mengautomatisasi proses mount **remov
 
 Saat ini, udiskie belum dapat digunakan untuk memounting file ISO.
 
-Link repo: [**coldfix/udiskie**](https://github.com/coldfix/udiskie){:target="_blank"}.
+Link repo: [**coldfix/udiskie**](https://github.com/coldfix/udiskie).
+
 
 ## 3. Memanfaatkan udiskie-dmenu
 
 **Udiskie-dmenu** adalah front-end dari udiskie yang menggunakan dmenu sebagai interfacenya.
 
-Link repo: [**fogine/udiskie-dmenu**](https://github.com/fogine/udiskie-dmenu){:target="_blank"}.
+Link repo: [**fogine/udiskie-dmenu**](https://github.com/fogine/udiskie-dmenu).
 
 
 # Pesan Penulis
@@ -364,7 +393,8 @@ Terima kasih.
 
 (^_^)
 
+
 # Referensi
 
-1. [linuxize.com/post/how-to-mount-iso-file-on-linux/](https://linuxize.com/post/how-to-mount-iso-file-on-linux/){:target="_blank"}
+1. [linuxize.com/post/how-to-mount-iso-file-on-linux/](https://linuxize.com/post/how-to-mount-iso-file-on-linux/)
 <br>Diakses tanggal: 2020/10/22
