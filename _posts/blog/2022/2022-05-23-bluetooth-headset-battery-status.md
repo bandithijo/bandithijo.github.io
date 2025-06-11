@@ -36,11 +36,14 @@ Pada hasil di atas, kita dapat melihat, hanya terdapat battery laptop, line powe
 
 Pada catatan kali ini, kita akan meng-enable-kan fitur experimental agar Bluez memberikan Battery Power API.
 
+
 # Disclaimer
 
 > Catatan ini saya kerjakan pada distribusi Arch Linux. Mungkin akan sedikit berbeda dengan distribusi yang lain.
 
+
 # Tahapan
+
 
 ## Copy file bluetooth.service dari /usr/lib/systemd/ ke /etc/systemd/
 
@@ -51,6 +54,7 @@ Kita akan pindahkan ke dalam direktori **/etc/systemd/**.
 ```
 $ sudo cp /usr/lib/systemd/system/bluetooth.service /etc/systemd/system/
 ```
+
 
 ## Tambahkan flag -E pada pemanggilan bluetoothd service
 
@@ -86,6 +90,7 @@ ExecStart=/usr/lib/bluetooth/bluetoothd -E
 ...
 ```
 
+
 ## Lakukan Daemon Reload
 
 Prosedur standar yang dilakukan setiap mengubah file service, adalah dengan melakukan daemon reload.
@@ -94,6 +99,7 @@ Prosedur standar yang dilakukan setiap mengubah file service, adalah dengan mela
 $ sudo systemctl daemon-reload
 ```
 
+
 ## Restart bluetooth.service
 
 Setelah itu, restart bluetooth.service.
@@ -101,6 +107,7 @@ Setelah itu, restart bluetooth.service.
 ```
 $ sudo systemctl restart bluetooth
 ```
+
 
 # Hasilnya
 
@@ -142,11 +149,13 @@ Nah! Sekarang, device bluetooth headset yang kita gunakan sudah terbaca di UPowe
 
 Dapat dilihat terdapat Battery persentase dari Bluetooth Headset yang saya gunakan.
 
+
 # Pesan Penulis
 
 Penggunaan lebih lanjut saya serahkan pada imajinasi dan kreatifitas teman-teman.
 
 Terima kasih sudah mampir yaa.
+
 
 # Referensi
 

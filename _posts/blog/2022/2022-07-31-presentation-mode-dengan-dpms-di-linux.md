@@ -25,6 +25,7 @@ Pada catatan kali ini, kita akan meniru Presentation Mode tersebut tanpa menggun
 >
 > [Arch Wiki - Display Power Management Signal](https://wiki.archlinux.org/title/Display_Power_Management_Signaling)
 
+
 # Paket yang Diperlukan
 
 Pastikan paket **xorg-xset** sudah terpasang.
@@ -34,7 +35,9 @@ extra/xorg-xset 1.2.4-3 (19.0 KiB 39.8 KiB) [xorg-apps xorg]
   User preference utility for X
 ```
 
+
 # Cara Penggunaan
+
 
 ## Melihat value dari DPMS
 
@@ -54,6 +57,7 @@ DPMS (Energy Star):
   Monitor is On
 ````
 
+
 ## Presentation Mode ON atau OFF
 
 **Presentation Mode ON**
@@ -62,14 +66,15 @@ DPMS (Energy Star):
 $ xset -dpms
 ```
 
-<br>
 **Presentation Mode OFF**
 
 ```
 $ xset +dpms
 ```
 
+
 # Bonus!
+
 
 ## dmenu-presentationmode
 
@@ -121,11 +126,13 @@ main() {
 main
 ```
 
+
 # Pesan Penulis
 
 Penggunaan lebih lanjut saya serahkan pada imajinasi dan kreatifitas teman-teman.
 
 Terima kasih sudah mampir yaa.
+
 
 # Referensi
 

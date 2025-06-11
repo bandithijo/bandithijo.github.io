@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Memodifikasi Hasil ScreenShot dari Flameshot dengan ImageMagick"
-date: 2020-08-16 10:13
+date: '2020-08-16 10:13'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Ruby']
+tags: ['Ruby', 'ImageMagick']
 pin:
 hot: true
 contributors: []
@@ -19,9 +19,10 @@ description: "Ide untuk mempercantik hasil screenshot dari Flameshot ini terinsp
 
 `imagemagick 7.x` `flameshot 0.8.x` `xclip 0.13` `ruby 2.7.x`
 
+
 # Sekenario Masalah
 
-Beberapa waktu yang lalu, saya menulis tentang ["Membuat Hasil ScreenShot pada GNU/Linux seperti Milik macOS"](/blog/membuat-hasil-screenshot-linux-seperti-pada-macos){:target="_blank"}.
+Beberapa waktu yang lalu, saya menulis tentang ["Membuat Hasil ScreenShot pada GNU/Linux seperti Milik macOS"](/blog/membuat-hasil-screenshot-linux-seperti-pada-macos).
 
 Pada artikel tersebut, script dijalankan setelah gambar hasil screenshot jadi.
 
@@ -29,11 +30,12 @@ Pada artikel tersebut, script dijalankan setelah gambar hasil screenshot jadi.
 
 Kalau membuat sequence command seperti ini,
 
-{% shell_user %}
-flameshot gui; imagemagick-script
-{% endshell_user %}
+```
+$ flameshot gui; imagemagick-script
+```
 
 Permasalahannya adalah, apabila kita tidak jadi melakukan screenshot dengan flameshot, maka script `imagemagick-script` akan tetap dijalankan, dan akan memodifikasi gambar terakhir pada direktori screenshot.
+
 
 # Pemecahan Masalah
 
@@ -43,8 +45,8 @@ Nantinya, yang kita panggil bukan lagi flameshot, melainkan script kita --untuk 
 
 Saya beri nama `flameshot-imgck`.
 
-{% highlight_caption $HOME/.local/bin/flameshot-imgck %}
-{% highlight ruby linenos %}
+```ruby
+!filename: $HOME/.local/bin/flameshot-imgck
 #!/usr/bin/env ruby
 
 require 'date'
@@ -105,33 +107,36 @@ if size == '0' || size <= '20'
   `rm -rf #{last_file}`
   `notify-send "Flameshot" "Process Aborted!" -t 1000`
 end
-{% endhighlight %}
+```
 
 Kalau kita menjalankan script di atas, akan menghasilkan dua buah file.
 
-<pre>
+```
 Screenshot_2020-08-16_11-32-45.png    <- Original
 Screenshot_2020-08-16_11-32-45X.png   <- Modifikasi
-</pre>
+```
 
-{% box_perhatian %}
-<p markdown="1">Alamat `screenshot_dir` dengan alamat yang ada di Flameshot, **harus sama**.</p>
-<p markdown="1">Kalau tidak, maka script tidak berjalan sebagaimana mestinya.</p>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> Alamat `screenshot_dir` dengan alamat yang ada di Flameshot, **harus sama**.
+> 
+> Kalau tidak, maka script tidak berjalan sebagaimana mestinya.
 
 File Original tidak dimodifikasi, tujuannya sebagai backup. Karena saya menyadari bahwa pengambilan screenshot adalah hal yang sangat *crucial* dan terkadang tidak dapat diulang dua kali.
 
 File Modifikasi adalah hasil pengolahan dengan imagemagick, kalau dibuka akan seperti ini hasilnya.
 
-{% image https://i.postimg.cc/C1jrwMbJ/gambar-01.png | 1 %}
+![Gambar 1](https://i.postimg.cc/C1jrwMbJ/gambar-01.png)
 
 Nah, dengan seperti ini, kita tetap dapat memanfaatkan fitur annotate milik flameshot.
 
 Mulai dari sekarang, hasil flameshot kita akan berbeda dari screenshot-screenshot sebelumnya.
 
+
 # Modifikasi Script
 
 Beberapa modifikasi yang sering saya lakukan adalah:
+
 
 ## Menghilangkan Border
 
@@ -139,10 +144,11 @@ Baris ke-11, adalah variabel untuk mendefinisikan border dari hasil screenshot.
 
 Ubah nilainya ke `0` apabila tidak ingin menggunakan border.
 
-{% highlight_caption $HOME/.local/bin/flameshot-imgck %}
-{% highlight ruby %}
+```ruby
+!filename: $HOME/.local/bin/flameshot-imgck
 border_size = '0'
-{% endhighlight %}
+```
+
 
 ## Mengganti Author (ScreenShoter)
 
@@ -150,10 +156,11 @@ Baris ke-20, adalah variabel untuk mendifinisikan author dari pengambil screensh
 
 Ubah nilainya sesuai dengan preferensi teman-teman.
 
-{% highlight_caption $HOME/.local/bin/flameshot-imgck %}
-{% highlight ruby %}
+```ruby
+!filename: $HOME/.local/bin/flameshot-imgck
 author = 'Shooter: @' + `echo $USER`.strip
-{% endhighlight %}
+```
+
 
 ## Disable Author
 
@@ -161,8 +168,8 @@ Baris ke 35-38, adalah proses pemberian author.
 
 Kalau ingin dihilangkan, cukup dengan memberikan tanda `#` di setiap awal baris ke-34 sampai baris ke-37.
 
-{% highlight_caption $HOME/.local/bin/flameshot-imgck %}
-{% highlight ruby %}
+```ruby
+!filename: $HOME/.local/bin/flameshot-imgck
 %x(
 flameshot gui --raw > #{original_file}
 
@@ -177,7 +184,8 @@ flameshot gui --raw > #{original_file}
 ...
 ...
 )
-{% endhighlight %}
+```
+
 
 ## Mengganti Author Font
 
@@ -185,36 +193,44 @@ Baris ke-15, adalah variable untuk mendifinisikan font.
 
 Ganti nilainya sesuai dengan preferensi teman-teman.
 
-{% highlight_caption $HOME/.local/bin/flameshot-imgck %}
-{% highlight ruby %}
+```ruby
+!filename: $HOME/.local/bin/flameshot-imgck
 font = 'JetBrains-Mono-Regular-Nerd-Font-Complete'
-{% endhighlight %}
+```
 
-{% box_info %}
-<p>Cara untuk mendapatkan nama font, gunakan perintah di bawah.</p>
-{% shell_user %}
-convert -list font
-{% endshell_user %}
-<p>Untuk mendapatkan hasil yang lebih spesifik, gunakan grep dengan mengambil awal kata dari nama font.</p>
-{% shell_user %}
-convert -list font | grep -i 'fura'
-{% endshell_user %}
-Hasilnya akan seperti ini.
-<pre>
-...
-...
-Font: Fura-Code-Regular-Nerd-Font-Complete
-  family: FuraCode Nerd Font
-  glyphs: /usr/share/fonts/TTF/Fura Code Regular Nerd Font Complete.ttf
-Font: Fura-Code-Regular-Nerd-Font-Complete-Mono
-  family: FuraCode Nerd Font Mono
-  glyphs: /usr/share/fonts/TTF/Fura Code Regular Nerd Font Complete Mono.ttf
-...
-...
-</pre>
-<p>Tinggal pilih font yang sesuai dengan preferensi teman-teman.</p>
-<p>Ambil value yang ada di dalam <code>Font:</code></p>
-{% endbox_info %}
+> INFO
+> 
+> Cara untuk mendapatkan nama font, gunakan perintah di bawah.
+> 
+> ```
+> $ convert -list font
+> ```
+> 
+> Untuk mendapatkan hasil yang lebih spesifik, gunakan grep dengan mengambil awal kata dari nama font.
+> 
+> ```
+> $ convert -list font | grep -i 'fura'
+> ```
+> 
+> Hasilnya akan seperti ini.
+> 
+> ```
+> ...
+> ...
+> Font: Fura-Code-Regular-Nerd-Font-Complete
+>   family: FuraCode Nerd Font
+>   glyphs: /usr/share/fonts/TTF/Fura Code Regular Nerd Font Complete.ttf
+> Font: Fura-Code-Regular-Nerd-Font-Complete-Mono
+>   family: FuraCode Nerd Font Mono
+>   glyphs: /usr/share/fonts/TTF/Fura Code Regular Nerd Font Complete Mono.ttf
+> ...
+> ...
+> ```
+> 
+> Tinggal pilih font yang sesuai dengan preferensi teman-teman.
+> 
+> Ambil value yang ada di dalam `Font:`
+
 
 ## Mengganti Author Font Size
 
@@ -222,10 +238,11 @@ Baris ke-16, adalah variable yang mendifinisikan ukuran font.
 
 Ganti sesuai preferensi teman-teman dalan satuan ukuran **pt** (point).
 
-{% highlight_caption $HOME/.local/bin/flameshot-imgck %}
-{% highlight ruby %}
+```ruby
+!filename: $HOME/.local/bin/flameshot-imgck
 font_size = '11'
-{% endhighlight %}
+```
+
 
 ## Mengganti Author Position
 
@@ -239,24 +256,25 @@ NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast
 
 Sebagai acuan untuk memposisikan object dengan singkat.
 
-{% highlight_caption $HOME/.local/bin/flameshot-imgck %}
-{% highlight ruby %}
+```ruby
+!filename: $HOME/.local/bin/flameshot-imgck
 author_position = ['South', '...']
-{% endhighlight %}
+```
 
 Index ke-1 berisi, jarak +X+Y
 
-{% highlight_caption $HOME/.local/bin/flameshot-imgck %}
-{% highlight ruby %}
+```ruby
+!filename: $HOME/.local/bin/flameshot-imgck
 author_position = ['...', '+10+10']
-{% endhighlight %}
+```
 
 Hasilnya,
 
-{% highlight_caption $HOME/.local/bin/flameshot-imgck %}
-{% highlight ruby %}
+```ruby
+!filename: $HOME/.local/bin/flameshot-imgck
 author_position = ['South', '+10+10']
-{% endhighlight %}
+```
+
 
 ## Background Transparent
 
@@ -264,17 +282,17 @@ Baris ke-12, adalah variable untuk mendifinisikan border color yang digunakan un
 
 Ubah nilainya menjadi `none` untuk transparent.
 
-{% highlight_caption $HOME/.local/bin/flameshot-imgck %}
-{% highlight ruby %}
+```ruby
+!filename: $HOME/.local/bin/flameshot-imgck
 background_color  = "none"
-{% endhighlight %}
+```
 
 Kalau ingin menggunakan warna,
 
-{% highlight_caption $HOME/.local/bin/flameshot-imgck %}
-{% highlight ruby %}
+```ruby
+!filename: $HOME/.local/bin/flameshot-imgck
 background_color  = "'#002b36'"
-{% endhighlight %}
+```
 
 
 ## Background Padding
@@ -285,10 +303,11 @@ Ganti sesuai preferensi teman-teman.
 
 Sesuaikan dengan besar dari shadow yang digunakan, agar shadow tidak terpotong.
 
-{% highlight_caption $HOME/.local/bin/flameshot-imgck %}
-{% highlight ruby %}
+```ruby
+!filename: $HOME/.local/bin/flameshot-imgck
 background_size   = "20"
-{% endhighlight %}
+```
+
 
 ## Shadow
 
@@ -296,17 +315,18 @@ Baris ke-14, adalah variable untuk mendifinisikan shadow yang ada di bawah scree
 
 Ganti sesuai preferensi teman-teman.
 
-{% highlight_caption $HOME/.local/bin/flameshot-imgck %}
-{% highlight ruby %}
+```ruby
+!filename: $HOME/.local/bin/flameshot-imgck
 shadow_size = '50x10+0+10'
-{% endhighlight %}
+```
+
 
 ## Color Profile
 
 Menambahkan color profile ini penting untuk Telegram. Kalau tidak menambahkan color profile, gambar kita akan terlihat "over bright" di Telegram Android meskipun tidak terlihat di Telegram Desktop.
 
-{% highlight_caption $HOME/.local/bin/flameshot-imgck %}
-{% highlight ruby %}
+```ruby
+!filename: $HOME/.local/bin/flameshot-imgck
 # ...
 # ...
 color_profile = '/usr/share/color/icc/colord/sRGB.icc'
@@ -324,14 +344,15 @@ convert #{target_file} -profile #{color_profile} #{target_file}
 ...
 ...
 )
-{% endhighlight %}
+```
+
 
 ## Save to Clipboard!
 
 Jangan lupa modifikasi pendefinisikan shortcut untuk **COPY** yang defaultnya menggunakan <kbd>Ctrl</kbd>+<kbd>C</kbd>, menjadi <kbd>Enter</kbd> pada file **~/.config/flameshot/flameshot.ini**.
 
-{% highlight_caption $HOME/.config/flameshot/flameshot.ini %}
-{% highlight shell linenos %}
+```conf
+!filename: $HOME/.config/flameshot/flameshot.ini
 
 # ...
 
@@ -339,21 +360,21 @@ Jangan lupa modifikasi pendefinisikan shortcut untuk **COPY** yang defaultnya me
 # ...
 TYPE_COPY=Return
 # ...
-{% endhighlight %}
+```
 
 Apabila telah selesai melakukan screenshot, kita dapat menyimpan dengan menekan tombol <kbd>ENTER</kbd>.
 
 Maka, hasil screenshot kita akan disimpan ke clipboard.
 
-{% highlight_caption $HOME/.local/bin/flameshot-imgck %}
-{% highlight ruby %}
+```ruby
+!filename: $HOME/.local/bin/flameshot-imgck
 list_file = `ls -p | grep -v /`
 last_file = list_file.split(' ').last
 if last_file.include? 'X'
   `notify-send "ImageMagick" "Improving success!" -t 3000`
   `xclip -selection clipboard -i #{target_file} -t image/png`
 end
-{% endhighlight %}
+```
 
 Tinggal kita paste di Telegram.
 
@@ -361,13 +382,14 @@ Namun, dengan Ruby script ini, hasil screenshot tetap berada pada direktori scre
 
 Jangan lupa untuk mendisable tombol save pada configurasi interface di Flameshot.
 
-{% shell_term $ %}
-flameshot config
-{% endshell_term %}
+```
+$ flameshot config
+```
 
-{% image https://i.postimg.cc/7LTNWWGB/gambar-02.png | 2 %}
+![Gambar 2](https://i.postimg.cc/7LTNWWGB/gambar-02.png)
 
 Tujuannya agar kita tidak latah lalu menekan tombol save. Agar hanya ada satu pilihan untuk menyimpan, yaitu menekan tombol <kbd>ENTER</kbd>.
+
 
 ## Menghandle Escape
 
@@ -375,16 +397,14 @@ Apabila kita tidak jadi melakukan screenshot dan menekan tombol <kbd>ESC</kbd>, 
 
 Untuk menghandle hal tersebut, saya memilih mendeteksi size dari file tersebut dan menghapusnya.
 
-{% highlight_caption $HOME/.local/bin/flameshot-imgck %}
-{% highlight ruby %}
+```ruby
+!filename: $HOME/.local/bin/flameshot-imgck
 size = `find #{last_file} -printf %s`
 if size == '0' || size <= '20'
   `rm -rf #{last_file}`
   `notify-send "Flameshot" "Process Aborted!" -t 1000`
 end
-{% endhighlight %}
-
-
+```
 
 
 # Pesan Penulis
@@ -400,7 +420,6 @@ Terima kasih.
 (^_^)
 
 
-
 # BONUS
 
 ## Alternatif Project
@@ -413,7 +432,7 @@ Versi Bash ini dapat menjadi alternatif yang sangat praktis untuk teman-teman.
 
 Terima kasih kepada bro Berrabe telah mem-porting ke Bash.
 
-Teman-teman dapat menikmati source nya di sini yaa, [**Bash version oleh Berrabe**](https://github.com/berrabe/awesome-flameshot){:target="_blank"}.
+Teman-teman dapat menikmati source nya di sini yaa, [**Bash version oleh Berrabe**](https://github.com/berrabe/awesome-flameshot).
 
 {% image https://github.com/berrabe/awesome-flameshot/raw/master/docs/logo.png | 3 %}
 
@@ -422,14 +441,14 @@ Teman-teman dapat menikmati source nya di sini yaa, [**Bash version oleh Berrabe
 
 ## Versi Python
 
-{% box_perhatian %}
-<p>Versi Python sudah tidak saya maintain lagi.</p>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> Versi Python sudah tidak saya maintain lagi.
 
 Saya beri nama `flameshot-imgck-python`.
 
-{% highlight_caption $HOME/.local/bin/flameshot-imgck-pyhton %}
-{% highlight python linenos %}
+```python
+!filename: $HOME/.local/bin/flameshot-imgck-pyhton
 #!/usr/bin/env python
 
 import os
@@ -492,14 +511,10 @@ size = os.popen(f"find {last_file} -printf %s").read()
 if size == '0' or size <= '20':
     os.system(f"rm -rf {last_file}")
     os.system("notify-send 'Flameshot' 'Process Aborted!' -t 1000")
-{% endhighlight %}
-
-
-
-
+```
 
 
 # Referensi
 
-1. [Membuat Hasil ScreenShot pada GNU/Linux seperti Milik macOS](/blog/membuat-hasil-screenshot-linux-seperti-pada-macos){:target="_blank"}
+1. [Membuat Hasil ScreenShot pada GNU/Linux seperti Milik macOS](/blog/membuat-hasil-screenshot-linux-seperti-pada-macos)
 <br>Diakses tanggal: 2020/08/16

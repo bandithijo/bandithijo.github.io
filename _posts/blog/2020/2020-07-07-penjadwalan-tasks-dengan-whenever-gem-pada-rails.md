@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Penjadwalan Tasks dengan Cron Menggunakan Whenever Gem pada Ruby/Rails"
-date: 2020-07-07 14:47
+date: '2020-07-07 14:47'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Ruby', 'Rails']
+tags: ['Ruby', 'Rails']
 pin:
 hot:
 contributors: []
@@ -25,37 +25,38 @@ Nah, karena saya menggunakan GNU/Linux, saya sudah cukup familiar dengan Cron. K
 
 Pertama-tama, periksa dulu Cron service udah aktif atau belum.
 
-{% shell_user %}
-sudo systemctl status cronie.service
-{% endshell_user %}
+```
+$ sudo systemctl status cronie.service
+```
 
-<pre>
+```
 ● cronie.service - Periodic Command Scheduler
      Loaded: loaded (/usr/lib/systemd/system/cronie.service; enabled; vendor preset: disabled)
-     Active: <b>active (running)</b> since Sun 2020-07-05 07:46:19 WITA; 2 days ago
+     Active: active (running) since Sun 2020-07-05 07:46:19 WITA; 2 days ago
    Main PID: 298 (crond)
       Tasks: 1 (limit: 4610)
      Memory: 19.8M
      CGroup: /system.slice/cronie.service
              └─298 /usr/bin/crond -n
-</pre>
+```
 
 Pastikan statusnya sudah aktif.
 
 Kemudian periksa apakah ada cronjob yang sudah aktif.
 
-{% shell_user %}
-crontab -l
-{% endshell_user %}
+```
+$ crontab -l
+```
 
 Nanti, kita akan menggunakan perintah di atas untuk melihat apakah cronjob yang kita inisiasi dengan whenever sudah berhasil didaftarkan atau tidak.
+
 
 # Instalasi Whenever Gem
 
 Pasang pada `Gemfile`.
 
-{% highlight_caption Gemfile %}
-{% highlight ruby linenos %}
+```ruby
+!filename: Gemfile
 # Gemfile
 
 source 'https://rubygems.org'
@@ -66,39 +67,40 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'whenever', '~> 1.0', require: false
 
-{% endhighlight %}
+```
 
 Kemudian install dengan menjalankan perintah,
 
-{% shell_user %}
-bundle install
-{% endshell_user %}
+```
+$ bundle install
+```
+
 
 # Inisialisasi Config File
 
 Setelah memasang Whenever gem, kita perlu menjalankan perintah untuk mengenerate file konfigurasi yang bernama `config/schedule.rb`.
 
-{% shell_user %}
-wheneverize .
-{% endshell_user %}
+```
+$ wheneverize .
+```
 
-<pre>
-project_dir/
-├── app/
-├── bin/
-├── config/
+```
+📂 project_dir/
+├── 📁 app/
+├── 📁 bin/
+├── 📂 config/
 ... ...
-│   └── <mark>schedule.rb</mark>
+│   └── 📄 schedule.rb 👈️
 ...
 ...
-</pre>
+```
 
 Perintah di atas akan membuat file `config/schedule.rb`.
 
 Sekarang coba buka file tersebut. Di dalamnya sudah terdapat beberapa contoh sintaks untuk membuat jadwal.
 
-{% highlight_caption config/schedule.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: config/schedule.rb
 # Use this file to easily define all of your cron jobs.
 #
 # It's helpful, but not entirely necessary to understand cron before proceeding.
@@ -119,7 +121,7 @@ Sekarang coba buka file tersebut. Di dalamnya sudah terdapat beberapa contoh sin
 # end
 
 # Learn more: http://github.com/javan/whenever
-{% endhighlight %}
+```
 
 Perhatikan baris kode 11, 12, 13. Masing-masing baris tersebut adalah contoh bagaimana kita dapat menjalankan atau memanggil perintah (*command*) yang kita jalankan di dalam penjadwalan.
 
@@ -127,14 +129,14 @@ Perhatikan baris kode 11, 12, 13. Masing-masing baris tersebut adalah contoh bag
 
 Misal,
 
-{% highlight_caption config/schedule.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: config/schedule.rb
 every 2.hours do
   rake "db:create"   # untuk membuat database
   rake "db:migrate"  # untuk menjalankan migrasi, seperti membuat tabel
   rake "db:seed"     # untuk mengisi tabel dengan data buatan
 end
-{% endhighlight %}
+```
 
 Ketiga perintah `rake` tersebut, akan dijalankan secara bersamaan. **Hal ini dapat menyebabkan terjadinya error** dikarenakan seharusnya perintah tersebut dijalankan secara berurutan.
 
@@ -142,8 +144,8 @@ Lantas, bagaimana cara membuat ketiga tasks tersebut berjalan secara berurutan? 
 
 Dengan menggunakan `command`, kita selayaknya menjalankan perintah di atas Terminal, dengan memisahkan masing-masing perintah dengan tanda titik koma (;).
 
-{% highlight_caption config/schedule.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: config/schedule.rb
 project_dir = `echo $PWD`.strip
 every 2.hours do
   command "cd #{project_dir}; \
@@ -151,18 +153,19 @@ every 2.hours do
            rake db:migrate; \
            rake db:seed"
 end
-{% endhighlight %}
+```
 
 Perintah di atas, sudah dapat dibaca dengan mudah kan yaa?
 
 Saya masuk ke dalam direktori project yang sudah lebih dahulu saya definisikan variabel `project_dir=` secara dinamis menggunakan <code>`echo $PWD`.strip</code> untuk mendapatkan lokasi project direktori, kemudian baru menjalankan ketiga tasks secara berurutan.
 
+
 # Mengeset Waktu
 
 Kelebihan dari Whenever gem adalah kita dapat mendifinisikan waktu seperti kita menulis bahasa Inggris.
 
-{% highlight_caption config/schedule.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: config/schedule.rb
 every 3.hours do # 1.minute 1.day 1.week 1.month 1.year is also supported
   # task
 end
@@ -186,60 +189,65 @@ end
 every '0 0 27-31 * *' do
   # task
 end
-{% endhighlight %}
+```
+
 
 # Mengeset Output Log
 
 Kita dapat menyimpan output tasks yang dijalankan ke dalam file log.
 
-{% highlight_caption config/schedule.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: config/schedule.rb
 set :output, 'log/rake.log'
 every 2.hours do
   # task
 end
-{% endhighlight %}
+```
 
 Apabila, cronjob kita berhasil dijalankan, maka outputnya akan tersimpan di file `log/rake.log`
 
-<pre>
-project_dir/
-├── app/
-├── bin/
-├── config/
-├── db/
-├── lib/
-├── log/
-│   ├── development.log
-│   ├── production.log
-│   └── <mark>rake.log</mark>
+```
+📂 project_dir/
+├── 📁 app/
+├── 📁 bin/
+├── 📁 config/
+├── 📁 db/
+├── 📁 lib/
+├── 📂 log/
+│   ├── 📄 development.log
+│   ├── 📄 production.log
+│   └── 📄 rake.log 👈️
 ...
 ...
-</pre>
+```
+
 
 # Tentukan Environment Path
 
 Tidak kalah penting adalah, kita perlu mendefinisikan environment path.
 
+
 ## Ruby on Rails Project
 
-{% highlight_caption config/schedule.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: config/schedule.rb
 env :PATH, ENV['PATH']
 every 2.hours do
   # task
 end
-{% endhighlight %}
+```
+
 
 ## Ruby Project
 
-{% highlight_caption config/schedule.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: config/schedule.rb
 ENV.each { |k, v| env(k, v) }
 every 2.hours do
   # task
 end
-{% endhighlight %}
+```
+
 
 # Mendaftarkan Schedule ke Cronjob
 
@@ -247,36 +255,37 @@ Apabila kita sudah selesai menulis schedule. Langkah selanjutnya adalah mendafta
 
 **Penting:** secara *default*, environment akan bernilai `production`. Apabila kita ingin melakukan ujicoba pada sistem lokal, kita dapat menjalankan dengan perintah.
 
-{% shell_user %}
-whenever --update-crontab --set environment=development
-{% endshell_user %}
+```
+$ whenever --update-crontab --set environment=development
+```
 
 Apabila kita berada di production server, maka cukup menjalankan perintah.
 
-{% shell_user %}
-whenever --update-crontab
-{% endshell_user %}
+```
+$ whenever --update-crontab
+```
 
 Setelah itu periksa, apakah jadwal yang kita daftarkan sudah berada pada daftar Cronjob atau tidak.
 
-{% shell_user %}
-crontab -l
-{% endshell_user %}
+```
+$ crontab -l
+```
 
 Tampilannya akan seperti ini untuk Ruby on Rails.
 
-<pre>
+```
 # Begin Whenever generated tasks for: /home/bandithijo/doc/Belajar/belajar-rails/covid19-indo-harian/config/schedule.rb at: 2020-07-07 17:10:11 +0800
 PATH=/home/bandithijo/.rbenv/versions/2.6.6/bin:/home/bandithijo/.rbenv/libexec:/home/bandithijo/.rbenv/plugins/ruby-build/bin:/home/bandithijo/.rbenv/shims:/home/bandithijo/bin:/usr/local/bin:/home/bandithijo/.rbenv/shims:/home/bandithijo/bin:/usr/local/bin:/home/bandithijo/.local/bin:/home/bandithijo/.rbenv/plugins/ruby-build/bin:/home/bandithijo/.rbenv/shims:/home/bandithijo/.rbenv/bin
 
-<mark>0 */2 * * * /bin/bash -l -c 'cd /home/bandithijo/dex/belajar-rails/covid19-indo-harian; rake db:create; rake db:migrate; rake db:seed >> log/rake.log 2>&1'</mark>
+0 */2 * * * /bin/bash -l -c 'cd /home/bandithijo/dex/belajar-rails/covid19-indo-harian; rake db:create; rake db:migrate; rake db:seed >> log/rake.log 2>&1'
 
 # End Whenever generated tasks for: /home/bandithijo/doc/Belajar/belajar-rails/covid19-indo-harian/config/schedule.rb at: 2020-07-07 17:10:11 +0800
-</pre>
+```
 
 Perintah `rake db:create`, `rake db:migrate`, `rake db:seed` di atas, hanya perumpamaan, dan bukan perintah yang sebenarnya untuk kita jalankan di dalam Whenever schedule.
 
 Selesai!
+
 
 # Pesan Penulis
 
@@ -289,16 +298,13 @@ Terima kasih.
 (^_^)
 
 
-
-
 # Referensi
 
-1. [Scheduling tasks in Rails with Cron and using the Whenever Gem](https://medium.com/@pawlkris/scheduling-tasks-in-rails-with-cron-and-using-the-whenever-gem-34aa68b992e3){:target="_blank"}
+1. [Scheduling tasks in Rails with Cron and using the Whenever Gem](https://medium.com/@pawlkris/scheduling-tasks-in-rails-with-cron-and-using-the-whenever-gem-34aa68b992e3)
 <br>Diakses tanggal: 2020/07/07
 
-2. [How to Schedule Cron Jobs in Ruby With the Whenever Gem](https://www.rubyguides.com/2019/04/ruby-whenever-gem/){:target="_blank"}
+2. [How to Schedule Cron Jobs in Ruby With the Whenever Gem](https://www.rubyguides.com/2019/04/ruby-whenever-gem/)
 <br>Diakses tanggal: 2020/07/07
 
-3. [github.com/javan/whenever](https://github.com/javan/whenever){:target="_blank"}
+3. [github.com/javan/whenever](https://github.com/javan/whenever)
 <br>Diakses tanggal: 2020/07/07
-

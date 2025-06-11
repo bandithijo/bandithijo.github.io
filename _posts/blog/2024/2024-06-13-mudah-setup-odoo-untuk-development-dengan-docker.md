@@ -19,20 +19,24 @@ description: "Catatan kali ini saya mendemonstrasikan proses pemasangan Odoo den
 
 {{ page.description }}
 
+
 # Latar Belakang Masalah
 
 Memasang paket Odoo dari source code cukup membuat khawatir karena banyaknya paket dependensi yang mesti dipasang. Belum lagi kalau proses nya gagal dengan sebab yang bermacam-macam.
 
 Developer experience memasang Odoo dari source code kurang begitu menyenangkan untuk saya.
 
+
 # Pemecahan Masalah
 
 Oleh karena itu, saya memilih menggunakan pemasangan Odoo dengan [Docker image](https://hub.docker.com/_/odoo).
+
 
 # Rules for My Development Tools
 
 1. Odoo data and PostgreSQL data should lay down on the host, not in the Docker volume. This ensures that I don't need to worry about the data.
 1. It should be possible to doing Docker compose up and down in a robust and flexible manner.
+
 
 # Cooking
 
@@ -162,6 +166,7 @@ That's it!
 Saya sudah membuatkan GitHub repository untuk mendokumentasikan Odoo docker-compose recipe racikan saya, yang bisa kamu akses di sini, [BanditHijio's Odoo Docker Compose](https://github.com/bandithijo/odoo-docker-compose).
 
 Terima kasih sudah mampir yaa.
+
 
 # Referensi
 

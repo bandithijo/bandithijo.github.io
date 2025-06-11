@@ -19,6 +19,7 @@ description: "GnuPG adalah implementasi dari OpenPGP Standard (PGP) yang juga di
 
 {{ page.description }}
 
+
 # Tujuan
 
 Kenapa kita perlu mengenkripsi file atau dokumen?
@@ -27,9 +28,11 @@ Kenapa kita perlu mengenkripsi file atau dokumen?
 1. Mengamankan file atau dokumen yang akan didistribusikan ke orang lain. Misal: via email, flashdrive atu WA/Telegram
 1. dst.
 
+
 # Penggunaan
 
 Penggunaan dari GPG sangat kompleks sekali. Di catatan kali ini, saya hanya akan menunjukkan beberapa perintah-perintah yang sering saya pergunakan.
+
 
 ## Tentukan target file yang akan dienkripsi
 
@@ -55,6 +58,7 @@ Sebagai contoh file atau dokumen yang akan saya enkripsi adalah sebuah file bert
 
 Setelah menentukan target file, kita lanjut ke tahap enkripsi.
 
+
 ## Enkripsi
 
 Ada banyak sekali cara metode enkripsi yang dapat kita lakukan dengan gpg.
@@ -62,6 +66,7 @@ Ada banyak sekali cara metode enkripsi yang dapat kita lakukan dengan gpg.
 Di catatan ini saya membatasi hanya menulis cara yang sering saya gunakan saja.
 
 Untuk metode-metode lain, teman-teman dapat membaca sendiri di `man gpg`.
+
 
 ### Enkripsi dengan default secret GPG key
 
@@ -98,6 +103,7 @@ Outputnya akan berupa file `tabel_users.md.gpg`.
 tabel_users.md tabel_users.md.gpg
 ```
 
+
 ### Enkripsi dengan symmetric key
 
 Ketika membuat gpg key, kita akan membuat 2 kunci, public key & secret key. Inilah yang disebut assymmetric key, karena key yang digunakan untuk menguncinya tidak sama dengan kunci yang digunakan untuk membuka.
@@ -119,6 +125,7 @@ Outputnya akan berupa file `tabel_users.md.gpg`.
 ```
 tabel_users.md tabel_users.md.gpg
 ```
+
 
 ### Enkripsi dengan gpg public key si penerima
 
@@ -173,11 +180,13 @@ Hanya om Linus yang dapat membuka file terenkripsi tersebut dengan gpg secret ke
 
 Cara untuk mendekrip file atau dokumen yang dienkripsi dengan gpg, biasanya, saya menggunakan 2 flow.
 
+
 ### Mengintip isi file yang terenkripsi dengan less
 
 ```
 $ gpg --decrypt tabel_users.md.gpg | less
 ```
+
 
 ### Membuka file yang terenkripsi dalam bentuk file
 
@@ -185,7 +194,9 @@ $ gpg --decrypt tabel_users.md.gpg | less
 $ gpg --output tabel_users.md --decrypt tabel_users.md.gpg
 ```
 
+
 # Tips & Trick
+
 
 ## Mudah mengintip file terenkripsi dari Ranger
 
@@ -218,6 +229,7 @@ Saya juga pernah menulis terkait GnuPG di catatan sebelumnya.
 1. [Memperbaiki GPG: Warning: Unsafe Permissions on Homedir](/blog/memperbaiki-gpg-permissions-on-homedir)
 1. [Generate Private dan Public GPG Key Sendiri](/blog/generate-gpg-key)
 1. [Menambahkan Email Kedua ke dalam GPG Key](/blog/menambahkan-email-lain-kedalam-gpgkey)
+
 
 # Referensi
 

@@ -23,9 +23,11 @@ description: "Sebelum menggunakan Geocoder Gem, saya menggunakan infosniper.net 
 
 Gambar 1. Tampilan Website infosniper.net
 
+
 # Problem
 
 Mengakses web service infosniper.net hanya untuk mengetahui location dan provider dari sebuah IP address, sangat tidak praktis.
+
 
 # Solusi
 
@@ -37,9 +39,11 @@ Gem ini menambahkan command `geocoder` ke dalam command shell kita. Kita dapat m
 
 > Geocoder Gem ini secara default menggunakan OpenStreetMap Service.
 
+
 ## Prerequisite
 
 Sudah harus terinstall Ruby di sistem
+
 
 ## Install Gem
 
@@ -48,6 +52,7 @@ Install gem dengan cara,
 ```
 $ gem install geocoder
 ```
+
 
 ## Cara penggunaan
 

@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Mendeploy Jekyll ke GitHub Pages dengan Travis CI"
-date: 2020-07-10 11:00
+date: '2020-07-10 11:00'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Jekyll']
+tags: ['Jekyll', 'GitHub Pages', 'Travis CI']
 pin:
 hot:
 contributors: []
@@ -16,13 +16,16 @@ description: "Terdapat whitelist plugin yang dapat digunakan apabila kita hanya 
 ---
 
 <!-- BANNER OF THE POST -->
-<img class="post-body-img" src="{{ site.lazyload.logo_blank_banner }}" data-echo="https://i.postimg.cc/9MKp2vsR/banner-2020-07-10-deploy-gh-page-dengan-travis-ci.png" onerror="imgError(this);" alt="banner">
+![Gambar 1](https://i.postimg.cc/9MKp2vsR/banner-2020-07-10-deploy-gh-page-dengan-travis-ci.png)
 
-{% box_perhatian %}
-<p>Saya yakin, terdapat banyak sekali cara untuk mencapai kota Roma (kiasan), namun tidak mungkin hanya dalam sekali waktu, kita dapat secara bersamaan menjalani semuanya. Pasti kita akan mulai dengan mencoba satu-persatu. Dan cara yang saya lakukan ini adalah hanya salah satu jalan untuk menuju kota Roma.</p>
-<p>Bisa jadi ini jalan yang panjang dan berliku, bisa jadi ini jalan tercepat dan tanpa rintangan.</p>
-<p>Ini adalah jalan yang saya pilih untuk memulai. Silahkan teman-teman untuk menentukan pilihan.</p>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> Saya yakin, terdapat banyak sekali cara untuk mencapai kota Roma (kiasan), namun tidak mungkin hanya dalam sekali waktu, kita dapat secara bersamaan menjalani semuanya. Pasti kita akan mulai dengan mencoba satu-persatu. Dan cara yang saya lakukan ini adalah hanya salah satu jalan untuk menuju kota Roma.
+> 
+> Bisa jadi ini jalan yang panjang dan berliku, bisa jadi ini jalan tercepat dan tanpa rintangan.
+> 
+> Ini adalah jalan yang saya pilih untuk memulai. Silahkan teman-teman untuk menentukan pilihan.
+
 
 # Sekenario Masalah
 
@@ -32,9 +35,11 @@ Benar. Namun, kita tidak fleksibel karena akan terbatasi oleh environment yang s
 
 Batasan-batasan tersebut diantaranya:
 
-1. **Belum menggunakan versi Jekyll paling Baru**. Saat tulisan ini dibuat, GitHub Pages masih di versi 3.8.7. Sedangkan Saat ini Jekyll sudah mencapai versi 4.1.1. Tentunya, GitHub Pages memiliki pertimbangan tersendiri mengapa masih menetap pada Jekyll versi 3.8.x. Meskipun demikian, kita jadi tidak dapat menikmati fitur-fitur dan perbaikan yang dibawa oleh Jekyll versi terbaru.
+1. **Belum menggunakan versi Jekyll paling Baru**. \
+  Saat tulisan ini dibuat, GitHub Pages masih di versi 3.8.7. Sedangkan Saat ini Jekyll sudah mencapai versi 4.1.1. Tentunya, GitHub Pages memiliki pertimbangan tersendiri mengapa masih menetap pada Jekyll versi 3.8.x. Meskipun demikian, kita jadi tidak dapat menikmati fitur-fitur dan perbaikan yang dibawa oleh Jekyll versi terbaru.
 
-2. **Terdapat Whitelist Plugins**. Hanya plugin-plugin yang sudah masuk ke dalam GitHub Organization Repository yang dapat digunakan pada GitHub Pages. Hal ini menyebabkan kita tidak dapat menggunakan plugin selain yang ada pada daftar putih dari GitHub Pages.
+2. **Terdapat Whitelist Plugins**. \
+  Hanya plugin-plugin yang sudah masuk ke dalam GitHub Organization Repository yang dapat digunakan pada GitHub Pages. Hal ini menyebabkan kita tidak dapat menggunakan plugin selain yang ada pada daftar putih dari GitHub Pages.
 
 Secara default, Jekyll sudah mengaktifkan --tidak dapat di-non-aktifkan-- plugin-plugin berikut ini:
 
@@ -65,7 +70,8 @@ Dan, plugin-plugin yang termasuk dalam daftar putih, namun belum terpasang secar
 
 Di blog ini saja (sejak tulisan ini dibuat), saya baru mencoba 4 plugin teratas (*).
 
-Sumber: [Configuring Jekyll plugins](https://docs.github.com/en/enterprise/2.14/user/articles/configuring-jekyll-plugins){:target="_blank"}
+Sumber: [Configuring Jekyll plugins](https://docs.github.com/en/enterprise/2.14/user/articles/configuring-jekyll-plugins)
+
 
 # Pemecahan Masalah
 
@@ -86,6 +92,7 @@ Setelah proses build selesai dan berhasil, hasilnya berupa static site (public f
 
 Ini adalah proses yang mudah, namun akan menjadi sangat membosankan apabila kita melakukannya berulang-ulang setiap kali kita membuat post baru. Maka dari itu, kita buat proses ini berjalan otomatis dengan memanfaatkan Travis CI.
 
+
 ## Membagi Branch
 
 Seperti yang saya jelaskan pada ilustrasi di atas, saya akan membagi project repository menjadi 2.
@@ -97,19 +104,21 @@ Jadi, mulai sekarang, kita tidak lagi menulis (bekerja) di dalam branch **master
 
 Untuk membuat branch **source**, jalankan perintah di bawah.
 
-<pre>
+```
 (master)
-<span class="cmd">$ </span><b>git checkout -b source</b>
-</pre>
+$ git checkout -b source
+```
 
-<pre>
+```
 (source)
-<span class="cmd">$ </span><b>_</b>
-</pre>
+$ _
+```
+
 
 ## Konfigurasi Branch: Source
 
 Setelah kita berada pada branch source, kita akan melakukan beberapa pemasangan gem dan konfigurasi untuk terhubung dengan Travis CI.
+
 
 ### Memasang Gem yang Dibutuhkan
 
@@ -117,8 +126,8 @@ Buka `Gemfile` dan pasang gem-gem yang teman-teman perlukan.
 
 **Penting!** Untuk Travis CI, gem yang diperlukan untuk proses build adalah `rake` gem.
 
-{% highlight_caption Gemfile %}
-{% highlight ruby linenos %}
+```ruby
+!filename: Gemfile
 source 'https://rubygems.org'
 
 gem 'jekyll',                                  '~> 4.1.1'
@@ -132,9 +141,10 @@ group :jekyll_plugins do
   gem 'jekyll-seo-tag',                        '~> 2.6.1'
   gem 'jekyll-redirect-from',                  '~> 0.16.0'
 end
-{% endhighlight %}
+```
 
 Sesuaikan versi gem dengan yang teman-teman perlukan.
+
 
 ### Pendefinisian Plugin & Exclude File/Direktori
 
@@ -144,8 +154,8 @@ Di file `_config.yml`, kita juga akan mendefinisikan beberapa file yang akan kit
 
 Buka file `_config.yml`.
 
-{% highlight_caption _config.yml %}
-{% highlight yaml linenos %}
+```yaml
+!filename: _config.yml
 
 # ...
 # ...
@@ -169,18 +179,20 @@ exclude:
   - LICENSE
   - README.md
   - Rakefile
-{% endhighlight %}
+```
+
 
 ### Gitignore _site/ Direktori
 
 Karena kita menggunakan branch **master** untuk menampung file-file static site yang sudah di-generate, kita akan membuat pengecualian terhadap direktori `_site/` --yang ada di branch **source**-- ke dalam file `.gitignore` agar tidak masuk ke dalam git tracking.
 
-<pre>
+```bash
+!filename: .gitignore
 .jekyll-metadata
 .jekyll-cache
 .sass-cache
-<mark>_site</mark>
-</pre>
+_site
+```
 
 
 ### Konfigurasi travis.yml
@@ -189,8 +201,8 @@ Kita perlu membuat file bernama `.tavis.yml` di root project direktori kita.
 
 Travis CI akan menjalankan proses build berdasarkan konfigurasi yang kita tulis pada file ini.
 
-{% highlight_caption .travis.yml %}
-{% highlight yml linenos %}
+```yaml
+!filename: .travis.yml
 language: ruby
 os: linux
 dist: xenial
@@ -209,29 +221,30 @@ deploy:
   target_branch: master
   on:
     branch: source
-{% endhighlight %}
+```
 
 **Penjelasannya**,
 
-<code><b>language: ruby</b></code>, Jekyll adalah Static Site Generator yang dibagun dengan bahasa Ruby, kita akan memberitahukan kepada Travis CI bahwa kita akan membuat Ruby environment.
+`language: ruby`, Jekyll adalah Static Site Generator yang dibagun dengan bahasa Ruby, kita akan memberitahukan kepada Travis CI bahwa kita akan membuat Ruby environment.
 
-<code><b>rvm: </b></code>, **saya tidak mendifinisikan**, karena pada root project direktori saya, sudah terdapat file `.ruby-version` yang berisi versi dari Ruby yang digunakan. Travis CI secara pintar akan menjalankan `rvm use $(< .ruby-version)` saat proses deploy berlangsung.
+`rvm: `, **saya tidak mendifinisikan**, karena pada root project direktori saya, sudah terdapat file `.ruby-version` yang berisi versi dari Ruby yang digunakan. Travis CI secara pintar akan menjalankan `rvm use $(< .ruby-version)` saat proses deploy berlangsung.
 
-<code><b>install: - bundle install</b></code>, Kita memerintahkan Travis CI untuk menjalankan perintah `$ bundle install` agar gem yang kita pasang pada Gemfile dapat diinstal di lingkungan deploy.
+`install: - bundle install`, Kita memerintahkan Travis CI untuk menjalankan perintah `$ bundle install` agar gem yang kita pasang pada Gemfile dapat diinstal di lingkungan deploy.
 
-<code><b>provider: pages</b></code>, Travis CI sudah menyediakan GitHub Pages provider.
+`provider: pages`, Travis CI sudah menyediakan GitHub Pages provider.
 
-<code><b>github_token: $GITHUB_TOKEN</b></code>, _personal access token_ yang akan kita dapatkan pada pengaturan GitHub. Kita juga akan mendifinisikan `GITHUB_TOKEN` ini pada environment variable di pengaturan Travis CI untuk repo kita.
+`github_token: $GITHUB_TOKEN`, _personal access token_ yang akan kita dapatkan pada pengaturan GitHub. Kita juga akan mendifinisikan `GITHUB_TOKEN` ini pada environment variable di pengaturan Travis CI untuk repo kita.
 
-<code><b>skip_cleanup: true</b></code>, pastikan kalau nilainya **true**, karena kita ingin menyimpan file-file yang telah di-generate selama proses build. Karena pada akhir proses build, kita akan mendeploy file-file static site tersebut ke branch **master**.
+`skip_cleanup: true`, pastikan kalau nilainya **true**, karena kita ingin menyimpan file-file yang telah di-generate selama proses build. Karena pada akhir proses build, kita akan mendeploy file-file static site tersebut ke branch **master**.
 
-<code><b>local_dir: _site</b></code>, Travis CI akan mendeploy semua file yang ada di dalam direktori ini ke brnach **master**.
+`local_dir: _site`, Travis CI akan mendeploy semua file yang ada di dalam direktori ini ke brnach **master**.
 
-<code><b>target_branch: master</b></code>, setelah proses build selesai, Travis CI akan mendeploy dengan tujuan branch **master**.
+`target_branch: master`, setelah proses build selesai, Travis CI akan mendeploy dengan tujuan branch **master**.
 
-<code><b>on: branch: source</b></code>, Travis CI hanya akan dijalankan pada branch **source**.
+`on: branch: source`, Travis CI hanya akan dijalankan pada branch **source**.
 
-Sumber: [GitHub Pages Deployment](https://docs.travis-ci.com/user/deployment/pages/){:target="_blank"}
+Sumber: [GitHub Pages Deployment](https://docs.travis-ci.com/user/deployment/pages/)
+
 
 ### Membuat Build Task di Rakefile
 
@@ -241,8 +254,8 @@ Agar perintah `$ bundle exec rake` dapat digunakan, kita perlu mendefinisikan ta
 
 Untuk itu, kita perlu membuat file `Rakefile` di root project direktori.
 
-{% highlight_caption Rakefile %}
-{% highlight ruby linenos %}
+```ruby
+!filename: Rakefile
 task :default do
   puts "Running CI tasks..."
 
@@ -252,11 +265,12 @@ task :default do
   sh("JEKYLL_ENV=production bundle exec jekyll build")
   puts "Jekyll successfully built!"
 end
-{% endhighlight %}
+```
 
 File `Rakefile` tersebut akan dijalankan setiap build.
 
 Proses konfigurasi di branch **source** telah selesai.
+
 
 ## Konfigurasi GitHub PAT (Personal Access Token)
 
@@ -264,15 +278,15 @@ Kita memerlukan GitHub PAT (*Personal Access Token*) yang akan kita letakkan pad
 
 Untuk mendapatkanya, teman-teman perlu membuka **GitHub Settings > Developer Settings > Personal Access Tokens** (sidebar kiri, di bawah).
 
-Atau klik link ini [Settings/Developer settings](https://github.com/settings/tokens){:target="_blank"}.
+Atau klik link ini [Settings/Developer settings](https://github.com/settings/tokens).
 
 Setelah itu, klik tombol <kbd>Generate new tokens</kbd>.
 
-{% image https://i.postimg.cc/4y4yz80x/gambar-02.png | 2 %}
+![Gambar 2](https://i.postimg.cc/4y4yz80x/gambar-02.png)
 
 Berikan nama yang mudah untuk dikenali.
 
-{% image https://i.postimg.cc/66zy9X72/gambar-03.png | 3 %}
+![Gambar 3](https://i.postimg.cc/66zy9X72/gambar-03.png)
 
 Checklist semua *permission* yang ada pada scope **repo**.
 
@@ -280,27 +294,28 @@ Sip mantap!
 
 Jangan lupa disimpan dengan menekan tombol <kbd>Generate token</kbd>.
 
-{% image https://i.postimg.cc/qMRgq5nm/gambar-04.png | 4 %}
+![Gambar 4](https://i.postimg.cc/qMRgq5nm/gambar-04.png)
 
 Kita akan mendapatkan token. Copy dan simpan dulu di tempat yang aman.
 
 Token tersebut akan kita daftarkan ke environment variable GITHUB_TOKEN di Travis CI.
 
-{% image https://i.postimg.cc/rFKFMtX3/gambar-05.png | 5 %}
+![Gambar 5](https://i.postimg.cc/rFKFMtX3/gambar-05.png)
 
 Dengan begini, konfigurasi pada GitHub sudah selesai.
 
+
 ## Konfigurasi Travis CI
 
-Buka situs [Travis-CI.Org](https://travis-ci.org/){:target="_blank"} dan login dan nanti akan muncul repositori yang akan kita gunakan. Pilih repository dari Jekyll blog yang teman-teman miliki.
+Buka situs [Travis-CI.Org](https://travis-ci.org/) dan login dan nanti akan muncul repositori yang akan kita gunakan. Pilih repository dari Jekyll blog yang teman-teman miliki.
 
-Atau, bisa ke halaman [travis-ci.org/account/repositories](https://travis-ci.org/account/repositories){:target="_blank"}.
+Atau, bisa ke halaman [travis-ci.org/account/repositories](https://travis-ci.org/account/repositories).
 
-{% image https://i.postimg.cc/brMsRYP6/gambar-01.png | 1 %}
+![Gambar 6](https://i.postimg.cc/brMsRYP6/gambar-01.png)
 
 Setelah di **enable**, klik tombol <kbd>Settings</kbd>, untuk pergi ke pengaturan.
 
-{% image https://i.postimg.cc/KzpSHJzz/gambar-06.png | 6 %}
+![Gambar 7](https://i.postimg.cc/KzpSHJzz/gambar-06.png)
 
 Isikan environment variable seperti contoh di atas.
 
@@ -310,57 +325,49 @@ Isikan environment variable seperti contoh di atas.
 
 **Display value in build log**: `OFF`
 
-{% box_perhatian %}
-<p>Jangan meng-<b>ON</b>-kan "<b>Display value in build log</b>", karena akan ditampilkan pada verbose proses build.</p>
-<p>Apabila kita set <b>OFF</b>, maka akan ditampilkan seperti ini</p>
-<pre>$ export GITHUB_TOKEN=[secure]</pre>
-<p>Tentunya hal ini lebih <i>secure</i>.</p>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> Jangan meng-**ON**-kan "**Display value in build log**", karena akan ditampilkan pada verbose proses build.
+> 
+> Apabila kita set **OFF**, maka akan ditampilkan seperti ini
+> 
+> ```
+> $ export GITHUB_TOKEN=[secure]
+> ```
+> 
+> Tentunya hal ini lebih *secure*.
 
 Setelah itu, tekan tombol <kbd>Add</kbd>.
 
-{% image https://i.postimg.cc/QNBdrTrP/gambar-07.png | 7 %}
+![Gambar 8](https://i.postimg.cc/QNBdrTrP/gambar-07.png)
 
 Nah, kalau tampilannya seperti di atas, artinya kita sudah berhasil mengeset environment variable GITHUB_TOKEN.
 
 Sekedar info, saya tidak mengutak atik pengaturan **General** & **Auto Cancellation**.
 
-{% image https://i.postimg.cc/nrf55gxn/gambar-08.png | 8 %}
+![Gambar 9](https://i.postimg.cc/nrf55gxn/gambar-08.png)
 
 Mantap! Konfigurasi pada Travis CI sudah selesai.
 
-<br>
 Sekarang, kalau teman-teman membuat commit baru dan melakukan push ke branch **source**,
 
-{% shell_user %}
-git push -u origin source
-{% endshell_user %}
+```
+$ git push -u origin source
+```
 
 Kita akan melihat Travis CI akan menjalankan proses build.
 
 Kalau berhasil akan sepeti ini tampilannya.
 
-{% image https://i.postimg.cc/sxfPv49p/gambar-09.png | 9 %}
+![Gambar 10](https://i.postimg.cc/sxfPv49p/gambar-09.png)
 
-{% image https://i.postimg.cc/9f3GGhYX/gambar-10.png | 10 %}
+![Gambar 11](https://i.postimg.cc/9f3GGhYX/gambar-10.png)
 
 Perhatikan pada baris ke-320, kita dapat melihat pada akhir proses build, akan mendeploy hasil generate static site `_site/` di branch **master** ke GitHub Pages.
 
 Selesai!
 
 Selamat nge-Jekyll!!!
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # Pesan Penulis
@@ -378,29 +385,22 @@ Terima kasih.
 (^_^)
 
 
-
-
-
-
-
-
 # Referensi
 
-
-1. [joshfrankel.me/blog/deploying-a-jekyll-blog-to-github-pages-with-custom-plugins-and-travisci](http://joshfrankel.me/blog/deploying-a-jekyll-blog-to-github-pages-with-custom-plugins-and-travisci/){:target="_blank"}
+1. [joshfrankel.me/blog/deploying-a-jekyll-blog-to-github-pages-with-custom-plugins-and-travisci](http://joshfrankel.me/blog/deploying-a-jekyll-blog-to-github-pages-with-custom-plugins-and-travisci/)
 <br>Diakses tanggal: 2020/07/10
 
-2. [docs.github.com/en/enterprise/2.14/user/articles/configuring-jekyll-plugins](https://docs.github.com/en/enterprise/2.14/user/articles/configuring-jekyll-plugins){:target="_blank"}
+2. [docs.github.com/en/enterprise/2.14/user/articles/configuring-jekyll-plugins](https://docs.github.com/en/enterprise/2.14/user/articles/configuring-jekyll-plugins)
 <br>Diakses tanggal: 2020/07/10
 
-3. [Travis CI - GitHub Pages Deployment](https://docs.travis-ci.com/user/deployment/pages/){:target="_blank"}
+3. [Travis CI - GitHub Pages Deployment](https://docs.travis-ci.com/user/deployment/pages/)
 <br>Diakses tanggal: 2020/07/10
 
-4. [Travis CI - Building a Ruby Project](https://docs.travis-ci.com/user/languages/ruby/){:target="_blank"}
+4. [Travis CI - Building a Ruby Project](https://docs.travis-ci.com/user/languages/ruby/)
 <br>Diakses tanggal: 2020/07/10
 
-5. [pages.github.com](https://pages.github.com/){:target="_blank"}
+5. [pages.github.com](https://pages.github.com/)
 <br>Diakses tanggal: 2020/07/10
 
-6. [jekyllrb.com](https://jekyllrb.com/){:target="_blank"}
+6. [jekyllrb.com](https://jekyllrb.com/)
 <br>Diakses tanggal: 2020/07/10

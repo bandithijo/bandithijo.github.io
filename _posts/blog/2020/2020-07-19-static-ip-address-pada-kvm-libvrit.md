@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Membuat IP Address Static pada KVM libvirt (virt-manager)"
-date: 2020-07-19 13:04
+date: '2020-07-19 13:04'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Network']
+tags: ['Virt Manager', 'libvirt', 'Network']
 pin:
 hot:
 contributors: []
@@ -25,41 +25,43 @@ Beberapa kali saya dapati, kalau IP address yang diset melalui DHCP selalu berub
 
 Hal ini mempengaruhi konfigurasi yang ada pada web aplikasi, karena saya harus mengubah IP server yang ada pada konfigurasi deploy `config/deploy/production.rb`.
 
+
 # Pemecahan Masalah
 
 Agar IP address dari guest instance tidak berubah-ubah, kita perlu mendefinisikannya pada virtual router yang mengatur DHCP.
 
 Saya akan tulis langkah-langkahnya di bawah ini.
 
-{% box_perhatian %}
-<p>Sebelumnya, guest instance <b>harus dalam keadaan mati</b>.</p>
-<p>Pastikan <b>libvirtd.service</b> berstatus <b>active (running)</b>.</p>
-<pre>
-● libvirtd.service - Virtualization daemon
-     Loaded: loaded (/usr/lib/systemd/system/libvirtd.service; disabled; vendor preset: disabled)
-     Active: <b>active (running)</b> since Sun 2020-07-19 16:14:49 WITA; 2s ago
-TriggeredBy: ● libvirtd-admin.socket
-             ● libvirtd-ro.socket
-             ● libvirtd.socket
-       Docs: man:libvirtd(8)
-             https://libvirt.org
-   Main PID: 345535 (libvirtd)
-      Tasks: 19 (limit: 32768)
-     Memory: 22.8M
-     CGroup: /system.slice/libvirtd.service
-             ├─107869 /usr/bin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/default.conf --leasefile-ro --dhcp-script=/usr/lib/libvirt/libvirt_leaseshelper
-             ├─107870 /usr/bin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/default.conf --leasefile-ro --dhcp-script=/usr/lib/libvirt/libvirt_leaseshelper
-             └─345535 /usr/bin/libvirtd --timeout 120
-</pre>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> Sebelumnya, guest instance **harus dalam keadaan mati**.
+> 
+> Pastikan `libvirtd.service` berstatus `active (running)`.
+> ```
+> ● libvirtd.service - Virtualization daemon
+>      Loaded: loaded (/usr/lib/systemd/system/libvirtd.service; disabled; vendor preset: disabled)
+>      Active: <b>active (running)</b> since Sun 2020-07-19 16:14:49 WITA; 2s ago
+> TriggeredBy: ● libvirtd-admin.socket
+>              ● libvirtd-ro.socket
+>              ● libvirtd.socket
+>        Docs: man:libvirtd(8)
+>              https://libvirt.org
+>    Main PID: 345535 (libvirtd)
+>       Tasks: 19 (limit: 32768)
+>      Memory: 22.8M
+>      CGroup: /system.slice/libvirtd.service
+>              ├─107869 /usr/bin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/default.conf --leasefile-ro --dhcp-script=/usr/lib/libvirt/libvirt_leaseshelper
+>              ├─107870 /usr/bin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/default.conf --leasefile-ro --dhcp-script=/usr/lib/libvirt/libvirt_leaseshelper
+>              └─345535 /usr/bin/libvirtd --timeout 120
+> ```
 
 ## 1. Mengecek Daftar Virtual Network
 
 Kita perlu mengetahui nama dari virtual network yang ada dan yang kita gunakakan.
 
-{% shell_user %}
-sudo virsh net-list
-{% endshell_user %}
+```
+$ sudo virsh net-list
+```
 
 ```
  Name      State    Autostart   Persistent
@@ -74,15 +76,17 @@ Sudah dapat dipastikan, kalau network yang digunakan oleh guest instance yang ki
 
 Untuk memastikan lagi kita perlu melihat range Ip address yang ada ada virtual network **default**.
 
-{% shell_user %}
-sudo virsh net-dumpxml default | grep -i '<range'
-{% endshell_user %}
+```
+$ sudo virsh net-dumpxml default | grep -i '<range'
+```
 
-<pre>
-      &lt;range start='<b>192.168.122.2</b>' end='<b>192.168.122.254</b>'/&gt;
-</pre>
+```
+      <range start='192.168.122.2' end='192.168.122.254'/>
+```
+
 
 Nah, kalau IP yang ada pada guest instance kita berada pada range IP tersebut di atas, berarti benar, guest instance yang kita gunakan menggunakan network **default** tersebut.
+
 
 ## 2. Mengetahui MAC Address yang Digunakan Guest Instance
 
@@ -90,9 +94,9 @@ Karena kita ingin mengeset IP address static pada guest instance yang kita perlu
 
 Kita memerlukan nama dari guest instance.
 
-{% shell_user %}
-sudo virsh list --all
-{% endshell_user %}
+```
+$ sudo virsh list --all
+```
 
 ```
  Id   Name                State
@@ -110,23 +114,24 @@ Maka, kita perlu mengambil dan mencata kedua MAC address dari kedua guest instan
 
 Cara untuk mendapatkan MAC address dari guest instance,
 
-{% shell_user %}
-sudo virsh dumpxml <mark>ubuntu18.04</mark> | grep -i '<mac'
-{% endshell_user %}
+```
+$ sudo virsh dumpxml ubuntu18.04 | grep -i '<mac'
+```
 
-<pre>
-      &lt;mac address='<b>52:54:00:c0:95:43</b>'/&gt;
-</pre>
+```
+      <mac address='52:54:00:c0:95:43'/>
+```
 
-{% shell_user %}
-sudo virsh dumpxml <mark>ubuntu18.04-clone</mark> | grep -i '<mac'
-{% endshell_user %}
+```
+$ sudo virsh dumpxml ubuntu18.04-clone | grep -i '<mac'
+```
 
-<pre>
-      &lt;mac address='<b>52:54:00:ef:b7:15</b>'/&gt;
-</pre>
+```
+      <mac address='52:54:00:ef:b7:15'/>
+```
 
 Catat dan simpan kedua MAC address dari kedua guest instance tersebut.
+
 
 ## 3. Edit Virtual Network XML
 
@@ -134,12 +139,11 @@ Nah, pada tahap ini, kita akan melakukan pendefinisian IP address static kepada 
 
 Kalau ingin melihat konfigurasi dari network **default** ini, kita dapat menggunakan perintah berikut.
 
-{% shell_user %}
-sudo virsh net-edit default
-{% endshell_user %}
+```
+$ sudo virsh net-edit default
+```
 
-{% highlight_caption %}
-{% highlight xml linenos %}
+```xml
 <network>
   <name>default</name>
   <uuid>6115b620-438d-44ad-9215-ce3ca396a890</uuid>
@@ -158,7 +162,7 @@ sudo virsh net-edit default
     </dhcp>
   </ip>
 </network>
-{% endhighlight %}
+```
 
 Pada baris ke 14 & 15, saya menambahkan konfigurasi IP address static untuk kedua guest instance di dalam tag `<dhcp>...</dhcp>`. tepat di bawah tag `<range>`.
 
@@ -167,27 +171,29 @@ Pada baris ke 14 & 15, saya menambahkan konfigurasi IP address static untuk kedu
 <host mac='52:54:00:ef:b7:15' name='ubuntu18.04-clone' ip='192.168.122.102'/>
 ```
 
-{% box_info %}
-<p>Perintah <code>net-edit</code> akan secara otomatis menggunakan <b>vi</b> text editor.</p>
-<p>Apabila teman-teman tidak memiliki <b>vi</b>, teman-teman dapat menggunakan <b>nano</b> atau <b>vim</b>.</p>
-<pre>
-$ <b>sudo EDITOR=nano virsh net-edit default</b>
-</pre>
-<pre>
-$ <b>sudo EDITOR=vim virsh net-edit default</b>
-</pre>
-{% endbox_info %}
+> INFO
+> 
+> Perintah `net-edit` akan secara otomatis menggunakan `vi` text editor.
+> 
+> Apabila teman-teman tidak memiliki **vi**, teman-teman dapat menggunakan **nano** atau **vim**.
+> 
+> ```
+> $ sudo EDITOR=nano virsh net-edit default
+> ```
+> 
+> ```
+> $ sudo EDITOR=vim virsh net-edit default
+> ```
 
 Kemudian simpan.
 
 Untuk melihat hasilnya, kita dapat menggunakan perintah di bawah.
 
-{% shell_user %}
-sudo virsh net-dumpxml default
-{% endshell_user %}
+```
+$ sudo virsh net-dumpxml default
+```
 
-{% highlight_caption %}
-{% highlight xml linenos %}
+```xml
 <network>
   <name>default</name>
   <uuid>6115b620-438d-44ad-9215-ce3ca396a890</uuid>
@@ -206,41 +212,42 @@ sudo virsh net-dumpxml default
     </dhcp>
   </ip>
 </network>
-{% endhighlight %}
+```
 
 Apabila sudah terdapat konfigurasi yang kita tambahkan tadi, artinya kita sudah berhasil.
+
 
 ## 4. Restart DHCP Service
 
 Karena konfigurasi IP address di virtual network ini dihandle oleh DHCP server, kita perlu me-reset ulang untuk mengaktifkan konfigurasi yang baru saja kita tambahkan.
 
-{% shell_user %}
-sudo virsh net-destroy default
-{% endshell_user %}
+```
+$ sudo virsh net-destroy default
+```
 
 ```
 Network default destroyed
-
 ```
 
 Kemudian, jalankan kembali virtual network nya.
 
-{% shell_user %}
-sudo virsh net-start default
-{% endshell_user %}
+```
+$ sudo virsh net-start default
+```
 
 ```
 Network default started
-
 ```
+
 
 ## 5. Restart libvirtd.service
 
-Restart <b>libvirtd.service</b>.
+Restart **libvirtd.service**.
 
-{% shell_user %}
-sudo systemctl restart libvirtd.service
-{% endshell_user %}
+```
+$ sudo systemctl restart libvirtd.service
+```
+
 
 ## 6. ReOpen The Stage
 
@@ -248,36 +255,35 @@ Kalau teman-teman menggunakan Virtual Machine Manager, harus exit dan buka kemba
 
 Kalau teman-teman yang tidak menggunakan Virtual Machine Manager, tinggal langsung jalakan saja.
 
-{% shell_user %}
-sudo virsh start ubuntu18.04-clone
-{% endshell_user %}
+```
+$ sudo virsh start ubuntu18.04-clone
+```
 
 ```
 Domain ubuntu18.04-clone started
-
 ```
 
 Kemudian check statusnya.
 
-{% shell_user %}
-sudo virsh list --all
-{% endshell_user %}
+```
+$ sudo virsh list --all
+```
 
-<pre>
+```
  Id   Name                State
 ------------------------------------
-<b> 1    ubuntu18.04-clone   running</b>
+ 1    ubuntu18.04-clone   running 👈️ 
  -    ubuntu18.04         shut off
 
-</pre>
+```
 
 Nah, sudah running.
 
 Coba ping dulu IP address dari guest instance,
 
-{% shell_user %}
-ping -c 3 192.168.122.102
-{% endshell_user %}
+```
+$ ping -c 3 192.168.122.102
+```
 
 ```
 PING 192.168.122.102 (192.168.122.102) 56(84) bytes of data.
@@ -292,11 +298,11 @@ rtt min/avg/max/mdev = 0.258/0.293/0.332/0.030 ms
 
 Selanjutnya, tinggal ssh session ke guest instance tersebut.
 
-{% shell_user %}
-ssh deploy@192.168.122.102
-{% endshell_user %}
+```
+$ ssh deploy@192.168.122.102
+```
 
-<pre>
+```
 Welcome to Ubuntu 18.04.4 LTS (GNU/Linux 4.15.0-111-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com
@@ -311,23 +317,18 @@ Welcome to Ubuntu 18.04.4 LTS (GNU/Linux 4.15.0-111-generic x86_64)
 
 
 Last login: Sun Jul 19 02:46:17 2020 from 192.168.122.1
-<b>deploy@ubuntu:~$</b> _
-</pre>
+deploy@ubuntu:~$ _
+```
 
 Kalau mau matikan tinggal jalanin.
 
-{% shell_user %}
-sudo virsh shutdown ubuntu18.04-clone
-{% endshell_user %}
+```
+$ sudo virsh shutdown ubuntu18.04-clone
+```
 
 ```
 Domain ubuntu18.04-clone is being shutdown
-
 ```
-
-
-
-
 
 Selesai!!!
 
@@ -340,23 +341,16 @@ Terima kasih.
 (^_^)
 
 
-
-
-
-
-
-
 # Referensi
 
-
-1. [KVM libvirt assign static guest IP addresses using DHCP on the virtual machine](https://www.cyberciti.biz/faq/linux-kvm-libvirt-dnsmasq-dhcp-static-ip-address-configuration-for-guest-os/){:target="_blank"}
+1. [KVM libvirt assign static guest IP addresses using DHCP on the virtual machine](https://www.cyberciti.biz/faq/linux-kvm-libvirt-dnsmasq-dhcp-static-ip-address-configuration-for-guest-os/)
 <br>Diakses tanggal: 2020/07/19
 
-2. [20.36. Displaying Per-guest Virtual Machine Information](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/virtualization_deployment_and_administration_guide/sect-managing_guest_virtual_machines_with_virsh-displaying_per_guest_virtual_machine_information){:target="_blank"}
+2. [20.36. Displaying Per-guest Virtual Machine Information](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/virtualization_deployment_and_administration_guide/sect-managing_guest_virtual_machines_with_virsh-displaying_per_guest_virtual_machine_information)
 <br>Diakses tanggal: 2020/07/19
 
-3. [14.22.6. Editing a Virtual Network's XML Configuration File](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/virtualization_administration_guide/sub-sect-virtual_networking_commands-eding_a_virtual_networks_xml_configuration_file){:target="_blank"}
+3. [14.22.6. Editing a Virtual Network's XML Configuration File](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/virtualization_administration_guide/sub-sect-virtual_networking_commands-eding_a_virtual_networks_xml_configuration_file)
 <br>Diakses tanggal: 2020/07/19
 
-4. [libvirt - 2.61. net-edit](https://libvirt.org/sources/virshcmdref/html/sect-net-edit.html){:target="_blank"}
+4. [libvirt - 2.61. net-edit](https://libvirt.org/sources/virshcmdref/html/sect-net-edit.html)
 <br>Diakses tanggal: 2020/07/19

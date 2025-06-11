@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Menambahkan Frame pada Hasil ScreenShot dengan ImageMagick"
-date: 2020-07-25 11:45
+date: '2020-07-25 11:45'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Ruby']
+tags: ['Ruby', 'ImageMagick']
 pin:
 hot:
 contributors: []
@@ -17,11 +17,13 @@ description: "Ide untuk memberikan framing ini muncul saat saya ingin membuat th
 
 # Sekenario Masalah
 
-Saya baru-baru saja menyeragamkan semua produksi video yang saya jadikan [vlog di YouTube]({{ site.url }}/youtube/){:target="_blank"}.
+Saya baru-baru saja menyeragamkan semua produksi video yang saya jadikan [vlog di YouTube]({{ site.url }}/youtube/).
 
 Dalam video tersebut, saya menggunakan frame seperti ini:
 
-{% image https://i.postimg.cc/kg4MKtmK/obs-frame.png | obs-frame %}
+![Gambar 1](https://i.postimg.cc/kg4MKtmK/obs-frame.png)
+
+Gambar 1. obs-frame
 
 Nah, permasalahannya adalah:
 
@@ -29,13 +31,18 @@ Nah, permasalahannya adalah:
 
 Saat ini, hasil screenshot yang diambil langsung dari laptop ThinkPad X61 saya, seperti ini:
 
-{% image https://i.postimg.cc/9FXcHqzK/thinkpad-x61-1024x768.png | thinkpad-x61-1024x768 %}
+![Gambar 2](https://i.postimg.cc/9FXcHqzK/thinkpad-x61-1024x768.png)
+
+Gambar 2. thinkpad-x61-1024x768
 
 Nah, hasil screenshot di atas memiliki resolusi 1024x768.
 
 Saya ingin menggabungkan hasil screenshot dengan frame.
 
-{% image https://i.postimg.cc/rmLLnDvh/mockup-imagemagick.png | mockup-imagemagick %}
+![Gambar 3](https://i.postimg.cc/rmLLnDvh/mockup-imagemagick.png)
+
+Gambar 3. mockup-imagemagick
+
 
 # Pemecahan Masalah
 
@@ -47,9 +54,9 @@ Kita akan menggunakan Image Sequence Operator yang bernama `-composite`.
 
 Bentuk commandnya seperti ini
 
-{% pre_url %}
+```
 convert frame.png target.png -geometry WxH^ -composite hasil.png
-{% endpre_url %}
+```
 
 **frame.png** adalah gambar yang akan dijadikan frame.
 
@@ -63,9 +70,9 @@ Dalam hal ini, saya menggunakan **scrot**.
 
 Maka seperti inilah yang saya gunakan.
 
-{% shell_user %}
-scrot "Screenshot_%Y-%m-%d_%H-%M-%S.png" -e "convert ~/pic/ScreenShots/obs-frame.png *.png -geometry 1024x768^ -composite *.png; mv *.png ~/pic/ScreenShots/"
-{% endshell_user %}
+```
+$ scrot "Screenshot_%Y-%m-%d_%H-%M-%S.png" -e "convert ~/pic/ScreenShots/obs-frame.png *.png -geometry 1024x768^ -composite *.png; mv *.png ~/pic/ScreenShots/"
+```
 
 Dibagian akhir dari proses tersebut, saya memindahkan hasil screenshot ke direktori `~/pic/ScreenShots/` menggunakan command `mv`. Teman-teman dapat menyesuaikan dengan direktori screenshot yang teman-teman miliki.
 
@@ -73,8 +80,8 @@ Kalau mau ditambahkan di keybind Window Manager juga bisa. Tinggal tambahkan di 
 
 Misal, seperti saya, sedang menggunakan BSPWM.
 
-{% highlight_caption $HOME/.config/sxhkd/sxhkdrc %}
-{% highlight bash linenos %}
+```bash
+!filename: $HOME/.config/sxhkd/sxhkdrc
 # ...
 # ...
 
@@ -84,18 +91,21 @@ super + Print
     -e "convert ~/pic/ScreenShots/obs-frame.png *.png -geometry 1024x768^ \
     -composite *.png; mv *.png ~/pic/ScreenShots/" \
     ; notify-send "Scrot" "Screen has been captured!"
-{% endhighlight %}
+```
 
 Hasilnya seperti ini.
 
-{% image https://i.postimg.cc/yNGTs9VP/hasil-screenshot-frame-imagemagick.png | hasil-screenshot-frame-imagemagick %}
+![Gambar 4](https://i.postimg.cc/yNGTs9VP/hasil-screenshot-frame-imagemagick.png)
+
+Gambar 4. hasil-screenshot-frame-imagemagick
+
 
 # Tambahan
 
 Terkadang saya tidak ingin setiap hasil screenshot langsung diframing. Namun, saya malas menulis command ImageMagick yang panjang. Maka sayapun membuat Ruby script untuk menghandle hal tersebut.
 
-{% highlight_caption $HOME/.local/bin/scrot-imgck %}
-{% highlight ruby linenos %}
+```ruby
+!filename: $HOME/.local/bin/scrot-imgck
 #!/usr/bin/env ruby
 
 # Please write your screenshot dir with full path. Later, I'll improve this.
@@ -114,7 +124,7 @@ puts "SS_DIR: #{ss_dir}"
 puts "SOURCE: #{target_file}
 TARGET: #{target_file_mod}
 FRAMING SUCCESS!"
-{% endhighlight %}
+```
 
 Mantap!!!
 
@@ -127,17 +137,10 @@ Terima kasih.
 (^_^)
 
 
-
-
-
-
-
-
 # Referensi
 
-
-1. [imagemagick.org/script/command-line-processing.php#geometry](https://imagemagick.org/script/command-line-processing.php#geometry){:target="_blank"}
+1. [imagemagick.org/script/command-line-processing.php#geometry](https://imagemagick.org/script/command-line-processing.php#geometry)
 <br>Diakses tanggal: 2020/07/25
 
-2. [PNG image becomes too bright](https://www.imagemagick.org/discourse-server/viewtopic.php?t=27131){:target="_blank"}
+2. [PNG image becomes too bright](https://www.imagemagick.org/discourse-server/viewtopic.php?t=27131)
 <br>Diakses tanggal: 2020/08/03

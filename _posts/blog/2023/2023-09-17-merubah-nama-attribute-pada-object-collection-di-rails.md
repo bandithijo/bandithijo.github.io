@@ -19,6 +19,7 @@ description: "Pada catatan kali ini saya ingin memodifikasi output dari nama att
 
 {{ page.description }}
 
+
 # Masalah
 
 Saya memiliki method **geofences** yang mengembalikan *colllection of* `hash` data dari model **geofeonce**.
@@ -70,6 +71,7 @@ Outputnya,
 ```
 
 Karena nama attribute `:incoming_notification` dan `:outgoing_notification` terlalu panjang, saya akan ganti menjadi `:in` dan `:out`.
+
 
 # Pemecahan Masalah
 
@@ -152,6 +154,7 @@ Hasilnya,
   ]
 }
 ```
+
 
 # Pesan Penulis
 

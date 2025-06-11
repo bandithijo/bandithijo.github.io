@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Membuat Hasil ScreenShot pada GNU/Linux seperti Milik macOS"
-date: 2020-07-28 18:57
+date: '2020-07-28 18:57'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Ruby']
+tags: ['Ruby', 'ImageMagick']
 pin:
 hot:
 contributors: []
@@ -23,15 +23,14 @@ Kebetulan sejak 2009 sampai 2014 akhir, saya menggunakan macOS (dulu namanya OSX
 
 Saya juga beberapa menulis konten blog menggunakan macOS dan cukup sering mengambil gambar screenshot. Seperti yang ada di blog post yang ini:
 
-1. [Aplikasi Download Alternatif untuk OSX dengan JDownloader](/blog/download-client-osx-with-jdownloader){:target="_blank"}
-
-2. [Memperbaiki Trash OSX](/blog/memperbaiki-trash-osx){:target="_blank"}
-
-3. [Memory Cleaner untuk OSX](/blog/memory-cleaner-osx){:target="_blank"}
+1. [Aplikasi Download Alternatif untuk OSX dengan JDownloader](/blog/download-client-osx-with-jdownloader)
+2. [Memperbaiki Trash OSX](/blog/memperbaiki-trash-osx)
+3. [Memory Cleaner untuk OSX](/blog/memory-cleaner-osx)
 
 Kira-kira seperti ini hasil screenshot window aplikasi pada macOS.
 
-{% image https://i.postimg.cc/sXwSKwyj/ss-macos.png | s %}
+![Gambar 1](https://i.postimg.cc/sXwSKwyj/ss-macos.png)
+
 
 # Pemecahan Masalah
 
@@ -39,23 +38,27 @@ Pastinya tools yang diperlukan adalah **ImageMagick**.
 
 Kira-kira begini command formula nya.
 
-<pre>
-<span class="cmd">$ </span><b>convert gambar.png \( +clone -background black -shadow 50x10+0+10 \) \
+```
+$ convert gambar.png \( +clone -background black -shadow 50x10+0+10 \) \
 +swap -background none -layers merge +repage gambar.png; \
-convert gambar.png -bordercolor none -border 30 gambar.png</b>
-</pre>
+convert gambar.png -bordercolor none -border 30 gambar.png
+```
 
 Misal, saya punya gambar hasil screenshot seperti ini:
 
-{% image https://i.postimg.cc/XJzqph4C/gambar-01.png | 1 %}
+![Gambar 2](image https://i.postimg.cc/XJzqph4C/gambar-01.png)
 
 Kemudian, saya jalankan command dari ImageMagick di atas.
 
 Hasilnya akan seperti ini:
 
-{% image https://i.postimg.cc/rz6p9rdy/gambar-02.png | 2 | Menggunakan -shadow 50x10+0+10 %}
+![Gambar 3](https://i.postimg.cc/rz6p9rdy/gambar-02.png)
 
-{% image https://i.postimg.cc/tJnTP54m/gambar-03.png | 3 | Menggunakan -shadow 50x20+0+20 %}
+Gambar 3. Menggunakan -shadow 50x10+0+10
+
+![Gambar 4](https://i.postimg.cc/tJnTP54m/gambar-03.png)
+
+Gambar 4. Menggunakan -shadow 50x20+0+20
 
 Tinggal teman-teman sesuaikan dengan preferensi untuk attribute `-shadow` nya.
 
@@ -72,8 +75,8 @@ Karena setiap sehabis membuat screenshot, gambar akan berada pada paling akhir d
 
 File inilah yang akan ditangkap oleh Ruby script dan dipermak.
 
-{% highlight_caption $HOME/.local/bin/scrot-imgck %}
-{% highlight ruby linenos %}
+```ruby
+!filename: $HOME/.local/bin/scrot-imgck
 #!/usr/bin/env ruby
 
 # Please wite your dir with ~/ first
@@ -94,7 +97,7 @@ puts "SS_DIR: #{ss_dir}"
 puts "SOURCE: #{target_file}
 TARGET: #{target_file_mod}
 FRAMING SUCCESS!"
-{% endhighlight %}
+```
 
 Perhatikan pada baris ke 13, attribute `-shadow` inilah yang teman-teman perlu ubah, apabila ingin menyesuaikan bentuk dari shadow.
 
@@ -109,9 +112,6 @@ FRAMING SUCCESS!
 
 Ruby script tersebut akan membuat file baru dengan akhiran `X` yang ada dibelakang nama dari file screenshot target.
 
-
-
-<br>
 Mantap!!!
 
 Saya rasa hanya ini yang dapat saya tuliskan saat ini.
@@ -122,18 +122,20 @@ Terima kasih.
 
 (^_^)
 
+
 # Bonus
 
 Biasanya untuk modifikasi yang dapat kita lakukan, kita akan menambahkan ciri khas kita sendiri.
 
 Maka dari itu, pada modifikasi ini, saya menambahkan ciri khas untuk memberikan author.
 
-{% image https://i.postimg.cc/C1jrwMbJ/gambar-01.png | 1 %}
+![Gambar 5](https://i.postimg.cc/C1jrwMbJ/gambar-01.png)
+
 
 ## Versi Ruby
 
-{% highlight_caption $HOME/.local/bin/scrot-imgck %}
-{% highlight ruby linenos %}
+```ruby
+!filename: $HOME/.local/bin/scrot-imgck
 #!/usr/bin/env ruby
 
 # How this script work?
@@ -184,12 +186,13 @@ puts "SS_DIR: #{ss_dir}
 SOURCE: #{original_file}
 TARGET: #{target_file}
 FRAMING SUCCESS!"
-{% endhighlight %}
+```
+
 
 ## Versi Python
 
-{% highlight_caption $HOME/.local/bin/scrot-imgck-python %}
-{% highlight ruby linenos %}
+```python
+!filename: $HOME/.local/bin/scrot-imgck-python
 #!/usr/bin/env python
 
 import os
@@ -251,22 +254,16 @@ print(f"""SS_DIR: {ss_dir}
 SOURCE: {original_file}
 TARGET: {target_file}
 FRAMING SUCCESS!""")
-{% endhighlight %}
-
-
-
-
-
+```
 
 
 # Referensi
 
-
-1. [Create MacOS style screenshots with drop shadow using Imagemagick](https://apple.stackexchange.com/questions/384323/create-macos-style-screenshots-with-drop-shadow-using-imagemagick){:target="_blank"}
+1. [Create MacOS style screenshots with drop shadow using Imagemagick](https://apple.stackexchange.com/questions/384323/create-macos-style-screenshots-with-drop-shadow-using-imagemagick)
 <br>Diakses tanggal: 2020/07/28
 
-2. [imagemagick.org/script/command-line-options.php#shadow](https://imagemagick.org/script/command-line-options.php#shadow){:target="_blank"}
+2. [imagemagick.org/script/command-line-options.php#shadow](https://imagemagick.org/script/command-line-options.php#shadow)
 <br>Diakses tanggal: 2020/07/28
 
-3. [PNG image becomes too bright](https://www.imagemagick.org/discourse-server/viewtopic.php?t=27131){:target="_blank"}
+3. [PNG image becomes too bright](https://www.imagemagick.org/discourse-server/viewtopic.php?t=27131)
 <br>Diakses tanggal: 2020/08/03

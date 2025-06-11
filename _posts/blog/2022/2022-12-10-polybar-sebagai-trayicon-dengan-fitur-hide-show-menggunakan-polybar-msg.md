@@ -19,6 +19,7 @@ description: "Tidak dipungkiri, beberapa aplikasi masih memerlukan trayicon. Bah
 
 {{ page.description }}
 
+
 # Latar Belakang Masalah
 
 Saya sudah pernah menggunakan metode konvensional untuk melakukan hide/show pada Polybar sebagai trayicon di artikel ini, [**Polybar, Bar yang Mudah Dikonfig, Praktis, dan Mudah Dikustomisasi**](/blog/polybar-mudah-dikonfig-dan-praktis#showhide-bar-untuk-trayicon-konvensional)
@@ -29,13 +30,16 @@ Namun, yang paling mengganggu saya adalah: Fungsi aplikasi yang sangat tergantun
 
 Contohnya seperti **nm-applet** yang apabila tidak disimpan di trayicon dan hanya berjalan sebagai background process, tidak akan memberikan notifikasi status network.
 
+
 # Pemecahan Masalah
 
 Maka dari itu, saya lebih merekomendasikan untuk menggunakan pendekatan menggunakan IPC.
 
 Cara ini memanfaatkan IPC (*Interprocess Communication*) agar kita dapat mengirimkan message process ke Polybar dengan menggunakan perintah `polybar-msg` pada segment bar yang menggunakan attribute `enable-ipc = true`.
 
+
 # Langkah-langkah
+
 
 ## 1. Tambahkan attribute enable-ipc = true
 
@@ -43,7 +47,7 @@ Pada segment atau section bar yang dijadikan sebagai trayicon, tambahkan attribu
 
 Contoh seperti yang saya pergunakan,
 
-```dosini
+```conf
 !filename: ~/.config/polybar/config.ini
 [colors]
 foreground = ${xrdb:foreground:}
@@ -123,6 +127,7 @@ Perhatikan pada baris ke-42, saya menggunakan attribute `enable-ipc = true` pada
 
 Sip, untuk langkah di Polybar config hanya seperti ini saja.
 
+
 ## 2. Mengirimkan signal hide & show dengan polybar-msg
 
 Setelah memasang attribute `enable-ipc = true` pada bar yang kita ingin dapat melakukan hide & show, selanjutnya cara memanggil dan menyembunyikannya dengan menggunakan command `polybar-msg`.
@@ -169,6 +174,7 @@ Nah, kalau sudah berhasil menggunakan command `polybar-msg` untuk hide & show di
 super + shift + ~b
     polybar-msg cmd {show, hide}
 ```
+
 
 # Demonstrasi
 

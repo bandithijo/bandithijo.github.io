@@ -19,6 +19,7 @@ description: "Catatan kali ini, saya akan mendokumentasikan proses troubleshooti
 
 {{ page.description }}
 
+
 # Masalah
 
 Saat menjalankan perintah `$ sudo apt update`, keluar pesan erorr seperti ini,
@@ -29,6 +30,7 @@ The following signatures were invalid: EXPKEYSIG 23E7166788B63E1E Yarn Packaging
 
 Ini berarti di Ubuntu saya, masih memiliki kunci GPG versi lama yang digunakan untuk menandatangani package Yarn.
 
+
 # Pemecahan Masalah
 
 Kita asumsikan package maintainer sudah memperbaharui public key mereka dan menguploadnya di keyserver.ubuntu.com. Jadi, kita tinggal menjalankan perintah di bawah ini.
@@ -37,9 +39,11 @@ Kita asumsikan package maintainer sudah memperbaharui public key mereka dan meng
 $ sudo apt-key adv --refresh-keys --keyserver keyserver.ubuntu.com
 ```
 
+
 # Pesan Penulis
 
 Terima kasih sudah mampir yaa.
+
 
 # Referensi
 

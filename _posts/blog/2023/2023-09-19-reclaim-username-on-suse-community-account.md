@@ -19,13 +19,14 @@ description: "Pada catatan ini saya ingin mendokumentasikan proses reclaim usern
 
 {{ page.description }}
 
-# Disclaimer
 
+# Disclaimer
 
 > Keberhasilan dari proses re-claim old username ini karena, **email yang saya daftarkan pada username yang telah dibekukan, masih aktif saya pergunakan.**
 >
 > Seperti yang tertulis di FAQ,
 > ***The account reactivation needs access to the registered e-mail address***
+
 
 # Masalah
 
@@ -66,6 +67,7 @@ Urutan tidak berdasarkan waktu pemakaian, karena yang paling lama saya pergunaka
 
 Dari daftar tersebut, saya belum menggunakan SUSE yang sekarang menjadi openSUSE.
 
+
 # Pemecahan Masalah
 
 September 2023, tepatnya tanggal 17, saya tiba-tiba tertarik lagi dengan openSUSE.
@@ -75,6 +77,7 @@ Namun, tentu saja, langkah pertama adalah mencoba meng-claim username `bandithij
 Karena berdasarkan FAQ di atas, asalakan email yang terdaftar masih aktif, masih bisa dilakukan proses reactivasi akun.
 
 Sayangnya, tidak disebutkan alamat email yang akan digunakan untuk mengajukan issue.
+
 
 ## Email #1
 
@@ -124,6 +127,7 @@ TZ=Asia/Makassar (GMT +0800)
 
 Saya tidak terlalu berharap banyak karena alamat dari email tersebut juga saya dapatkan dari hasil menebak-nebak saja. Saya berasumsi bahwa, mungkin ada orang yang menghandle email `admin@opensuse.org`. Kalau nanti salah topik, mudah-mudahan diarahkan ke alamat yang benar.
 
+
 ## Email Re: #1 (P1)
 
 Ternyata ada balasan.
@@ -158,6 +162,7 @@ Dari pesan di atas, terlihat kalau **@malcolmlewis** memberikan assignment issue
 
 Kalau sudah mendapat nomor tiket, artinya tinggal menunggu antrian kalau tiket kita akan dikerjakan.
 
+
 ## Email Re: #1 (P2)
 
 Kali ini, email dibalas oleh **@crameleon**.
@@ -180,6 +185,7 @@ https://progress.opensuse.org/issues/135857#change-674906
 ```
 
 Tentang perubahan satus tiket ke **(In Progress)**.
+
 
 ## Email Re: #1 (P3)
 
@@ -216,6 +222,7 @@ Dari arahan tersebut, saya diarahkan untuk melakukan 2 hal:
 
 1. **reset password** di alamat [ini](https://idp-portal.suse.com/univention/self-service/#page=passwordreset)
 1. setelah password berhasil direset, lakukan **email validation** di alamat [ini](https://idp-portal.suse.com/univention/self-service/#page=verifyaccount)
+
 
 ## Email #2
 
@@ -256,6 +263,7 @@ TZ=Asia/Makassar (GMT +0800)
 
 **"No contact information is stored for this user."**
 
+
 ## Email Re: #2
 
 ```email
@@ -279,6 +287,7 @@ https://progress.opensuse.org/issues/135857#change-674981
 Screenshot yang saya berikan, diapresiasi oleh. Dan dari email balasan ini, saya disuruh mencoba kembali.
 
 Setelah saya coba lagi langkah 1 (password reset), ternyata berhasil! 🎉
+
 
 ### 1. Reset Password
 
@@ -330,6 +339,7 @@ Kemudian tekan **CHANGE PASSWORD**.
 
 Gambar 4. Popup ketika berhasil memperbahrui password
 
+
 ### 2. Email Validation
 
 Selanjutnya, lakukan email validation melalui link yang diberikan [di sini](https://idp-portal.suse.com/univention/self-service/#page=verifyaccount).
@@ -367,6 +377,7 @@ Jika berhasil, akan mendapatkan popup seperti ini.
 Gambar 5. Berhasil Memvalidasi Email
 
 Alhamdulillah, dengan ini username `bandithijo` berhasil saya dapatkan kembali di SUSE Community Account.
+
 
 ## Email #3
 
@@ -406,6 +417,7 @@ TZ=Asia/Makassar (GMT +0800)
 ```
 
 `[image: Screenshot_2023-09-19_22-01-20.png]` adalah attachment dari Gambar 5.
+
 
 ## Email Re: #3
 

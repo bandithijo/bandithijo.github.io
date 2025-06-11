@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Rails Server Dapat Diakses oleh Perangkat dalam Satu LAN"
-date: 2020-07-10 01:03
+date: '2020-07-10 01:03'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Rails']
+tags: ['Rails']
 pin:
 hot:
 contributors: []
@@ -23,6 +23,7 @@ Selain mendesain untuk tampilan desktop, saya juga perlu mendesain untuk tampila
 
 Agar saya dapat merasakan secara langsung, seperti apa layout yang saya sedang kerjakan, lebih baik kalau saya dapat langsung membukanya secara langsung di *smartphone*.
 
+
 # Pemecahan Masalah
 
 Rails sudah menyediakan fitur untuk menjalankan server dengan mengganti Host yang kita definisikan.
@@ -35,14 +36,14 @@ Maka, kita perlu mengganti ip address tersebut menjadi ip address untuk *broadca
 
 Caranya sangat mudah.
 
-## Definisikan Host
 
+## Definisikan Host
 
 Cukup tambahkan option `-b` atau `--binding=` diikuti dengan *broadcast ip address*.
 
-{% shell_user %}
-bundle exec rails s -b 0.0.0.0
-{% endshell_user %}
+```
+$ bundle exec rails s -b 0.0.0.0
+```
 
 Nah dengan begini, kita dapat mengakses dari semua perangkat dalam satu jaringan yang sama dengan sistem localhost kita.
 
@@ -52,12 +53,12 @@ Maka, kita akses dari smartphone dengan tujuan `192.168.1.5:3000`.
 
 Voila!
 
-{% image https://i.postimg.cc/KzvdYqxr/gambar-01.png | 1 | Tampilan Desktop dan Mobile %}
+![Gambar 1](https://i.postimg.cc/KzvdYqxr/gambar-01.png)
+Gambar 1. Tampilan Desktop dan Mobile
 
 Tampilan mobile dari web yang sedang kita kerjakan, dapat kita ekplorasi secara langsung dari smartphone.
 
 Enak banget kan!
-
 
 
 # Pesan Penulis
@@ -75,16 +76,10 @@ Terima kasih.
 (^_^)
 
 
-
-
-
-
-
-
 # Referensi
 
-1. [guides.rubyonrails.org/command_line.html](https://guides.rubyonrails.org/command_line.html){:target="_blank"}
+1. [guides.rubyonrails.org/command_line.html](https://guides.rubyonrails.org/command_line.html)
 <br>Diakses tanggal: 2020/07/10
 
-2. [github.com/thoughtbot - Binding to 0.0.0.0 in Rails](https://github.com/thoughtbot/til/blob/master/docker/binding-to-0-0-0-0-in-rails.md){:target="_blank"}
+2. [github.com/thoughtbot - Binding to 0.0.0.0 in Rails](https://github.com/thoughtbot/til/blob/master/docker/binding-to-0-0-0-0-in-rails.md)
 <br>Diakses tanggal: 2020/07/10

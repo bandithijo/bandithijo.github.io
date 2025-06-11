@@ -19,9 +19,11 @@ description: "Simple or Small or Suckless, X Image Viewer (sxiv), adalah aplikas
 
 Simple or Small or Suckless, X Image Viewer (sxiv), adalah aplikasi image preview yang sudah saya pergunakan sejak sekitar Maret 2019. Catatan ini adalah tentang review singkat dari sxiv dan kenapa saya memutuskan untuk migrasi ke nsxiv.
 
+
 # Sedikit tentang sxiv
 
 sxiv adalah abreviasi dari Simple X Image Viewer. Penampil gambar yang dibangun dengan bahasa C. Ringan dan mudah untuk menambahkan fitur dengan menggunakan bahasa scripting seperti: bash.
+
 
 ## Fitur-fitur
 
@@ -34,6 +36,7 @@ Fitur-fitur yang dimiliki oleh sxiv, antara lain:
 1. Play GIF animations
 1. Menampilkan image information di statusbar
 
+
 ## Kelebihan
 
 Kalau kelebihan dari sxiv (subjektif menurut saya):
@@ -42,10 +45,12 @@ Kalau kelebihan dari sxiv (subjektif menurut saya):
 1. Kecepatan saat dipanggil (*startup*) yang "fantastis"
 1. Kecepatan saat menampilkan gambar-gambar di mode thumbnails yang "bombastis"
 
+
 ## Kekurangan
 
 Kalau kekurangan dari sxiv (subjektif menurut saya):
 1. Kurang yang menggunakan, jadi belum terkenal di kalangan umum. Hihihi 😋
+
 
 # Screenshots
 
@@ -57,7 +62,9 @@ Gambar 1. sxiv with image mode
 
 Gambar 2. sxiv with thumbnail mode
 
+
 # Demo
+
 
 ## Rotation
 
@@ -65,11 +72,13 @@ Gambar 2. sxiv with thumbnail mode
 
 Gambar 3. sxiv with rotate left & right
 
+
 ## Flipping
 
 ![Gambar 4](/assets/images/posts/2022/2022-08-07-01-gambar-04.gif)
 
 Gambar 4. sxiv with flip vertical & horizontal
+
 
 ## Zooming & Panning
 
@@ -80,6 +89,7 @@ Gambar 5. sxiv with zoom in & out
 ![Gambar 6](/assets/images/posts/2022/2022-08-07-01-gambar-06.gif)
 
 Gambar 6. sxiv with zoom in movement, zoom level 100%, fit image to window
+
 
 ## Navigation
 
@@ -95,11 +105,14 @@ Gambar 8. sxiv with navigation on thumbnails mode
 
 Gambar 9. sxiv with zoom in/out thumbnails
 
+
 # Rekomendasi
 
 Karena **sxiv** sudah tidak lagi dilanjutkan proses maintain and developing nya, maka saya rekomendasikan teman-teman untuk bermigrasi ke **nsxiv** yang merupakan fork project dari sxiv.
 
+
 # Tips & Tricks
+
 
 ## 1. Modifikasi color & font dengan X resources
 
@@ -136,15 +149,18 @@ Nsxiv.bar.background:    #005F87
 Nsxiv.bar.foreground:    #D4D4D4
 ```
 
+
 ## 2. Open all images inside directory on Ranger
 
 *Sedang dalam proses penulisan...*
+
 
 # Pesan Penulis
 
 Penggunaan lebih lanjut saya serahkan pada imajinasi dan kreatifitas teman-teman.
 
 Terima kasih sudah mampir yaa.
+
 
 # Referensi
 

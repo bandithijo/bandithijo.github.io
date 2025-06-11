@@ -19,6 +19,7 @@ description: "dmenu-websearch ini saya buat karena kemalasan saya dalam melakuka
 
 dmenu-websearch ini saya buat karena kemalasan saya dalam melakukan pencarian kata/frasa tertentu namun harus membuka website terkait. Tidak praktis. Saya ingin kata/frasa tersebut cukup saya inputkan dari menu di desktop kemudian browser akan menuntun saya ke halaman hasil pencarian di website terkait.
 
+
 # Fitur-fitur
 
 dmenu-websearch ini memiliki fitur:
@@ -27,7 +28,9 @@ dmenu-websearch ini memiliki fitur:
 1. menambahkan target urlquery baru
 1. menghapus target urlquery yang ada (konfirmasi sebelum dihapus)
 
+
 # Snippet Code
+
 
 ## dmenu-websearch script (Bash)
 
@@ -128,6 +131,7 @@ main() {
 main
 ```
 
+
 ## urlquery (plaintext)
 
 Simpan file `.urlquery` di HOME direktori.
@@ -152,11 +156,13 @@ Simpan file `.urlquery` di HOME direktori.
 [ "NPM:Search", "https://www.npmjs.com/search?q=" ],
 ```
 
+
 # Pesan Penulis
 
 Penggunaan lebih lanjut saya serahkan pada imajinasi dan kreatifitas teman-teman.
 
 Terima kasih sudah mampir yaa.
+
 
 # Referensi
 

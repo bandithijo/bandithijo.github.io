@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Export Data ke XLSX (SpreadSheet) pada Rails"
-date: 2020-07-09 00:56
+date: '2020-07-09 00:56'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Rails']
+tags: ['Rails']
 pin:
 hot:
 contributors: []
@@ -17,24 +17,27 @@ description: "Saya memeiliki sejumlah data yang ingin saya eksport ke dalam bent
 
 # Prerequisite
 
-`Ruby 2.6.6` `Rails 5.2.4` `PostgreSQL 12.3`
+`ruby 2.6.6` `rails 5.2.4` `postgresql 12.3`
+
 
 # Sekenario Masalah
 
 Saya punya data yang ingin di-*eksport* ke dalam bentuk *spreadsheet* dengan format **.xlsx**.
 
+
 # Pemecahan Masalah
 
-Kita dapat menggunakan bantuan gem [**axlsx**](https://github.com/randym/axlsx){:target="_blank"} & [**axlsx_rails**](https://github.com/caxlsx/caxlsx_rails){:target="_blank"}. Namun, gem ini sudah tidak dimaintain lagi.
+Kita dapat menggunakan bantuan gem [**axlsx**](https://github.com/randym/axlsx) & [**axlsx_rails**](https://github.com/caxlsx/caxlsx_rails). Namun, gem ini sudah tidak dimaintain lagi.
 
-Nah, kita akan menggunakan versi yang dimaintain oleh komunitas bernama [**cxlsx**](https://github.com/caxlsx/caxlsx){:target="_blank"} & [**cxlsx_rails**](https://github.com/caxlsx/caxlsx_rails){:target="_blank"}.
+Nah, kita akan menggunakan versi yang dimaintain oleh komunitas bernama [**cxlsx**](https://github.com/caxlsx/caxlsx) & [**cxlsx_rails**](https://github.com/caxlsx/caxlsx_rails).
+
 
 # Instalasi
 
 Pasang gem yang dibutuhkan di `Gemfile`.
 
-{% highlight_caption Gemfile %}
-{% highlight ruby linenos %}
+```ruby
+!filename: Gemfile
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -42,24 +45,26 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ...
 gem 'caxlsx',                             '~> 3.0', '>= 3.0.1'
 gem 'caxlsx_rails',                       '~> 0.6.2'
-{% endhighlight %}
+```
 
 Kemudian install.
 
-{% shell_user %}
-bundle install
-{% endshell_user %}
+```
+$ bundle install
+```
+
 
 # Implementasi
 
 Kita akan membuat tombol pada view template dan akan di-respon oleh controller.
 
+
 ## Controller
 
 Saya akan mengawali dengan membuat response ke controller apabila tombol pada view template di tekan.
 
-{% highlight_caption app/controllers/cases_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/cases_controller.rb
 class CasesController < ApplicationController
 
   def index
@@ -75,23 +80,24 @@ class CasesController < ApplicationController
     end
   end
 end
-{% endhighlight %}
+```
 
 Apabila ingin merubah nama file, dapat merubah pada bagian `filename=...` di baris ke-13 tersebut.
+
 
 ## View Template
 
 Selanjutnya, kita buat link atau button yang akan di respon oleh controller.
 
-{% highlight_caption app/views/cases/index.html.erb %}
-{% highlight erb linenos %}
+```eruby
+!filename: app/views/cases/index.html.erb
 <%= link_to cases_path(format: "xlsx"), class: "button is-fullwidth-mobile" do %>
   <span class="icon">
     <%= image_tag 'file-download-solid.svg', width: '12' %>
   </span>
   <span class="has-text-weight-normal">Export as SpreadSheet</span>
 <% end %>
-{% endhighlight %}
+```
 
 Bagian yang harus diperhatikan adalah baris ke-3, `..._path(format: "xlsx")`.
 
@@ -99,8 +105,8 @@ Selanjutnya, kita akan buat view template untuk file **.xlsx** yang akan di down
 
 Buat file view template `app/views/cases/index.xlsx.axlsx`.
 
-{% highlight_caption app/views/cases/index.xlsx.axlsx %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/views/cases/index.xlsx.axlsx
 wb = xlsx_package.workbook
 
 wb.add_worksheet(name: "Cases") do |sheet|
@@ -116,7 +122,7 @@ wb.add_worksheet(name: "Cases") do |sheet|
                    kasus.jumlah_pdp]
   end
 end
-{% endhighlight %}
+```
 
 Perhatikan pada baris ke-7 dan ke-12, basicnya `.add_row()` ini menampung value berupa Array.
 
@@ -124,13 +130,14 @@ Pada baris ke-7, adalah salah satu bentuk lain cara pemanggilan Array di Ruby.
 
 Selesai!
 
+
 # Pesan Penulis
 
 Catatan ini bukan merupakan tutorial, saya hanya ingin memberikan gambaran betapa mudahnya mengeksport data ke dalam format **.xlsx** dari Rails menggunakan **cxlsx** dan **cxlsx_rails**.
 
 Maka dari itu, apabila teman-teman ingin mendapatkan penjelasan yang lebih baik, silahkan mengunjungin dokumentasi dari cxlsx_rails. Tentunya akan lebih *up to date* dari yang saya tulis di sini.
 
-Saya juga memanfaatkan gem ini untuk mengeksport data ke spreadsheet seperti yang saya lakukan di [bandithijo.github.io/covid19](https://bandithijo.github.io/covid19){:target="_blank"}
+Saya juga memanfaatkan gem ini untuk mengeksport data ke spreadsheet seperti yang saya lakukan di [bandithijo.github.io/covid19](https://bandithijo.github.io/covid19)
 
 Saya rasa hanya ini yang dapat saya tuliskan saat ini.
 
@@ -141,25 +148,19 @@ Terima kasih.
 (^_^)
 
 
-
-
-
-
-
-
 # Referensi
 
-1. [github.com/randym/axlsx](https://github.com/randym/axlsx){:target="_blank"}
+1. [github.com/randym/axlsx](https://github.com/randym/axlsx)
 <br>Diakses tanggal: 2020/07/09
 
-2. [github.com/caxlsx/caxlsx_rails](https://github.com/caxlsx/caxlsx_rails){:target="_blank"}
+2. [github.com/caxlsx/caxlsx_rails](https://github.com/caxlsx/caxlsx_rails)
 <br>Diakses tanggal: 2020/07/09
 
-3. [github.com/caxlsx/caxlsx](https://github.com/caxlsx/caxlsx){:target="_blank"}
+3. [github.com/caxlsx/caxlsx](https://github.com/caxlsx/caxlsx)
 <br>Diakses tanggal: 2020/07/09
 
-4. [github.com/caxlsx/caxlsx_rails](https://github.com/caxlsx/caxlsx_rails){:target="_blank"}
+4. [github.com/caxlsx/caxlsx_rails](https://github.com/caxlsx/caxlsx_rails)
 <br>Diakses tanggal: 2020/07/09
 
-5. [%Q, %q, %W, %w, %x, %r, %s](https://simpleror.wordpress.com/2009/03/15/q-q-w-w-x-r-s/){:target="_blank"}
+5. [%Q, %q, %W, %w, %x, %r, %s](https://simpleror.wordpress.com/2009/03/15/q-q-w-w-x-r-s/)
 <br>Diakses tanggal: 2020/07/09

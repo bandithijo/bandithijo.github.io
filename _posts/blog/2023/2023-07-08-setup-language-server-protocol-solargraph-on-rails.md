@@ -19,6 +19,7 @@ description: "Language Server Protocol sangat membantu developer saat proses mem
 
 {{ page.description }}
 
+
 # Sekilas tentang Solargraph
 
 Dikutip dari halaman *official site* dari solargraph,
@@ -35,7 +36,9 @@ Fitur yang ditawarkan, antara lain:
 
 Ruby programmer atau Rails developer pasti sudah familiar dengan gem ini.
 
+
 # Setup
+
 
 ## Setup Solargraph di Neovim (Lua)
 
@@ -55,7 +58,9 @@ require("lspconfig").solargraph.setup({
 
 Solargraph belum akan berjalan karena kita perlu memasang Solargraph gem terlebih dahulu.
 
+
 ## Setup Solargraph di Rails project
+
 
 ### Install solargraph & solargraph-rails
 
@@ -121,6 +126,7 @@ plugins:
 - solargraph-rails
 ```
 
+
 ### Rubocop sebagai Linter
 
 Secara default Solargraph menggunakan Rubocop sebagai linter. Pasang juga.
@@ -148,6 +154,7 @@ Konfigurasi sudah selesai, dengan begini kita sudah dapat memanfaatkan kemampuan
 | <kbd>g</kbd>+<kbd>r</kbd>	| Open quickfix with all references to method |
 | <kbd>r</kbd>+<kbd>n</kbd>	| Rename method and update references |
 
+
 ### Daftarkan .solargraph.yml, .rubocop.yml, dan .rubocop_todo.yml ke .gitignore
 
 Agar tidak mengganggu isi dari direktori Root Rails project, kita perlu mendaftarkan file-file konfigurasi yaml yang telah dibuat ke dalam file `.gitignore`.
@@ -158,9 +165,11 @@ Agar tidak mengganggu isi dari direktori Root Rails project, kita perlu mendafta
 /.solargraph.yml
 ```
 
+
 # Pesan Penulis
 
 Terima kasih sudah mampir yaa.
+
 
 # Referensi
 

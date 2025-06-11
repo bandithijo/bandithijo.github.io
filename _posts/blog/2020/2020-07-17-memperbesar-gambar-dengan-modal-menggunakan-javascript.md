@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Memperbesar Gambar dengan Modal Menggunakan JavaScript (Tanpa JQuery)"
-date: 2020-07-17 21:42
+date: '2020-07-17 21:42'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Javascript']
+tags: ['JavaScript']
 pin:
 hot:
 contributors: []
@@ -27,7 +27,9 @@ Bukan anti JQuery, hanya saja, saya merasa sayang kalau harus menggunakan JQuery
 
 Nah, tepat hari ini, saya sudah berhasil memigrasikan fitur ini dari menggunakan JQuery menjadi hanya menggunakan vanilla JavaScript.
 
+
 # Pemecahan Masalah
+
 
 ## Contoh Menggunakan JQuery
 
@@ -35,24 +37,21 @@ Saya akan mulai dengan contoh yang menggunakan JQuery.
 
 Saya akan tuliskan dalam satu file html.
 
-{% highlight_caption %}
-{% highlight html linenos %}
+```html
 <!-- Kumpulan beberapa gambar -->
 <img class="myImg" src="http://bandithijo.github.io/assets/img/logo/logo_bandithijo.png"/>
 <img class="myImg" src="http://bandithijo.github.io/assets/img/logo/logo_bandithijo.png"/>
 <img class="myImg" src="http://bandithijo.github.io/assets/img/logo/logo_bandithijo.png"/>
-{% endhighlight %}
+```
 
-{% highlight_caption %}
-{% highlight html linenos %}
+```html
 <!-- Modal yang akan digunakan bergantian oleh gambar-gambar di atas -->
 <div id="myModal" class="modal">
   <img class="modal-content" id="modal-img">
 </div>
-{% endhighlight %}
+```
 
-{% highlight_caption %}
-{% highlight html linenos %}
+```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
 // Get the modal
@@ -75,12 +74,11 @@ close.onclick = function() {
   modal.style.display = "none";
 }
 </script>
-{% endhighlight %}
+```
 
 Pada baris 9-13 di atas, adalah contoh baris kode dari JQuery.
 
-{% highlight_caption %}
-{% highlight html linenos %}
+```html
 <style>
 /* Style the Image Used to Trigger the Modal */
 .myImg {
@@ -122,32 +120,31 @@ img.modal-content {
   }
 }
 </style>
-{% endhighlight %}
+```
+
 
 ## Contoh Menggunakan JavaScript
+
 
 ### Versi W3Schools
 
 Kalau teman-teman mengikuti tutorial yang ada di W3Schools, akan seperti ini.
 
-{% highlight_caption %}
-{% highlight html linenos %}
+```html
 <!-- Gambar -->
 <img id="myImg" src="img_snow.jpg" alt="Snow" style="width:100%;max-width:300px">
-{% endhighlight %}
+```
 
-{% highlight_caption %}
-{% highlight html linenos %}
+```html
 <!-- Modal yang akan digunakan oleh gambar di atas -->
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
   <img class="modal-content" id="img01">
   <div id="caption"></div>
 </div>
-{% endhighlight %}
+```
 
-{% highlight_caption %}
-{% highlight html linenos %}
+```html
 <script>
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -170,10 +167,9 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 </script>
-{% endhighlight %}
+```
 
-{% highlight_caption %}
-{% highlight html linenos %}
+```html
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 
@@ -263,7 +259,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   }
 }
 </style>
-{% endhighlight %}
+```
 
 Memang benar, script di atas dapat menampilkan gambar pada Modal, namun...**tidak bisa berfungsi apabila lebih dari satu gambar**.
 
@@ -272,26 +268,23 @@ Memang benar, script di atas dapat menampilkan gambar pada Modal, namun...**tida
 
 Solusinya, kita perlu memodifikasi tag image yang menggunakan id menjadi class.
 
-{% highlight_caption %}
-{% highlight html linenos %}
+```html
 <!-- Gambar-gambar -->
 <img class="myImg" src="http://bandithijo.github.io/assets/img/logo/logo_bandithijo.png"/>
 <img class="myImg" src="http://bandithijo.github.io/assets/img/logo/logo_bandithijo.png"/>
 <img class="myImg" src="http://bandithijo.github.io/assets/img/logo/logo_bandithijo.png"/>
-{% endhighlight %}
+```
 
 Menyederhanakan modal, hanya menggunakan class.
 
-{% highlight_caption %}
-{% highlight html linenos %}
+```html
 <!-- Modal yang akan digunakan oleh gambar di atas -->
 <div class="modal">
   <img class="modal-content">
 </div>
-{% endhighlight %}
+```
 
-{% highlight_caption %}
-{% highlight html linenos %}
+```html
 <script>
 // Get the modal
 var modal = document.querySelector(".modal");
@@ -308,7 +301,7 @@ document.querySelector(".modal").addEventListener("click", () => {
   modal.style.display = "none";
 });
 </script>
-{% endhighlight %}
+```
 
 Baris 5-10 di atas, adalah blok kode JavaScript yang melakukan looping terhadap semua class `myImg`.
 
@@ -316,8 +309,7 @@ Inilah yang membuat setiap gambar yang ada pada blog post kita, dapat menjalanka
 
 Saya juga memodifikasi style di bawah, agar membuat gambar berada persis di tengah dari screen.
 
-{% highlight_caption %}
-{% highlight html linenos %}
+```html
 <style>
 /* Style the Image Used to Trigger the Modal */
 .myImg {
@@ -359,7 +351,7 @@ img.modal-content {
   }
 }
 </style>
-{% endhighlight %}
+```
 
 Selesai!!!
 
@@ -372,17 +364,10 @@ Terima kasih.
 (^_^)
 
 
-
-
-
-
-
-
 # Referensi
 
-
-1. [How to create a modal image gallery with CSS and JavaScript?](https://www.tutorialspoint.com/how-to-create-a-modal-image-gallery-with-css-and-javascript){:target="_blank"}
+1. [How to create a modal image gallery with CSS and JavaScript?](https://www.tutorialspoint.com/how-to-create-a-modal-image-gallery-with-css-and-javascript)
 <br>Diakses tanggal: 2020/07/17
 
-2. [w3schools - How TO - Modal Images](https://www.w3schools.com/howto/howto_css_modal_images.asp){:target="_blank"}
+2. [w3schools - How TO - Modal Images](https://www.w3schools.com/howto/howto_css_modal_images.asp)
 <br>Diakses tanggal: 2020/07/17

@@ -21,6 +21,7 @@ Terkadang, setelah sistem kita mengalami masalah audio server, terkhusus untuk y
 
 Kondisi ini terbilang cukup jarang terjadi, tapi kalau sedang terjadi, cukup dapat membuat kepala pening, kalau belum tahu cara menghandle-nya.
 
+
 # Penyelesaian Masalah
 
 Buka Terminal dan jalankan perintah di bawah,
