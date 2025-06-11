@@ -231,6 +231,6 @@
   }
 
   .markdown .code-line {
-    @apply flex-1 font-mono leading-relaxed;
+    @apply flex-1 font-mono leading-relaxed pr-6;
   }
 }
