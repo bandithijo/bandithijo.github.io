@@ -1,28 +1,26 @@
 ---
 layout: 'post'
 title: "Membuat Module Sederhana untuk Status Bar GNU/Linux dan FreeBSD"
-date: 2020-05-11 23:47
+date: '2020-05-11 23:47'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Script']
+tags: ['FreeBSD', 'Linux', 'Bash']
 pin:
 hot:
 contributors: []
 description: "Module-module bash script ini dapat digunakan untuk status bar. Saya menggunakannya untuk dwm status saya. Bukan yang terbaik tapi cukup untuk memenuhi kebutuhan saya akan status indikator."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
-
 # Pendahuluan
 
-Bagi teman-teman yang menggunakan Window Manager pasti sudah sangat familiar dengan status bar. Ada bermacam-macam nama status bar yang dapat digunakan. Salah satu yang saya gunakan terakhir kali adalah Polybar. Saya sudah pernah membahas tentang Polybar [di sini: Polybar, Bar yang Mudah Dikonfig, Praktis, dan Mudah Dikustomisasi](/blog/polybar-mudah-dikonfig-dan-praktis){:target="_blank"}.
+Bagi teman-teman yang menggunakan Window Manager pasti sudah sangat familiar dengan status bar. Ada bermacam-macam nama status bar yang dapat digunakan. Salah satu yang saya gunakan terakhir kali adalah Polybar. Saya sudah pernah membahas tentang Polybar [di sini: Polybar, Bar yang Mudah Dikonfig, Praktis, dan Mudah Dikustomisasi](/blog/polybar-mudah-dikonfig-dan-praktis)
 
 Catatan kali ini, saya ingin membahas tentang status bar yang kita racik sendiri, dan tidak tergantung dengan status-status bar yang sudah ada.
+
 
 # Permasalahan
 
@@ -32,31 +30,35 @@ Kalau hal tersebut terjadi, maka saya yang repot. Karena harus meluangkan waktu 
 
 Selain itu, apabila saya menggunakan dwm, saya lebih baik meracik status bar saya sendiri.
 
+
 # Pemecahan Masalah
 
 Saya sudah membuatkan beberapa module yang dapat digunakan untuk membangun status bar sendiri atau digunakan oleh Polybar
 
-{% box_perhatian %}
-<p>Saya tidak banyak pengalaman dalam menulis Bash Script. Apabila ada logika yang kurang baik, boleh sekali loh dikasih saran dan dibenerin. Saya sangat terbuka dan senang sekali. Terima kasih (^_^)</p>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> Saya tidak banyak pengalaman dalam menulis Bash Script. Apabila ada logika yang kurang baik, boleh sekali loh dikasih saran dan dibenerin. Saya sangat terbuka dan senang sekali. Terima kasih (^_^).
+
 
 # Module
 
+
 ## CPU Temperature
 
-{% highlight_caption cpu_temp %}
-{% highlight bash linenos %}
+```bash
+!filename: cpu_temp
 #!/bin/sh
 
 get_temp_cpu0=$(cat /sys/class/thermal/thermal_zone0/temp)
 temp_cpu0=$(($get_temp_cpu0/1000))
 echo "" $temp_cpu0"°C"
-{% endhighlight %}
+```
+
 
 ## Memory
 
-{% highlight_caption memory %}
-{% highlight bash linenos %}
+```bash
+!filename: memory
 #!/bin/sh
 
 mem_total=$(free -m | awk 'NR%2==0 {print $2}')
@@ -64,22 +66,24 @@ mem_avail=$(free -m | awk 'NR%2==0 {print $7}')
 mem_used=$(( $mem_total - $mem_avail))
 mem_usage=$(( $mem_used * 100 / $mem_total ))
 echo " "$mem_usage"%"
-{% endhighlight %}
+```
+
 
 ## File System
 
-{% highlight_caption filesystem %}
-{% highlight bash linenos %}
+```bash
+!filename: filesystem
 #!/bin/sh
 
 cap_percentage=$(df -h --output=pcent / | awk 'NR%2==0 {print $0}')
 echo ""$cap_percentage
-{% endhighlight %}
+```
+
 
 ## Volume
 
-{% highlight_caption volume %}
-{% highlight bash linenos %}
+```bash
+!filename: volume
 #!/bin/sh
 
 ou_mute=$(pamixer --get-mute)
@@ -109,30 +113,32 @@ elif [ $ou_mute = "false" ] && [ $in_mute = "false" ]; then
 else
     echo " ERROR"
 fi
-{% endhighlight %}
+```
 
-{% highlight_caption $HOME/.local/bin/has_headphone %}
-{% highlight bash linenos %}
+```bash
+!filename: $HOME/.local/bin/has_headphone
 #!/bin/sh
 
 # PulseAudio
 pacmd list-sinks | grep 'Headphones' | awk '{print $10}' | tr -d ')'
-{% endhighlight %}
+```
+
 
 ## Backlight
 
-{% highlight_caption backlight %}
-{% highlight bash linenos %}
+```bash
+!filename: backlight
 #!/bin/sh
 
 backlight=$(xbacklight -get | cut -d "." -f1)
 echo "" $backlight"%"
-{% endhighlight %}
+```
+
 
 ## Network Traffic (Wifi)
 
-{% highlight_caption network_traf_wlan %}
-{% highlight bash linenos %}
+```bash
+!filename: network_traf_wlan
 #!/bin/bash
 
 wlan_card='wlan0'
@@ -163,12 +169,13 @@ elif [ $wlan_offline ];then
 else
     printf " NOADPTR"
 fi
-{% endhighlight %}
+```
+
 
 ## Battery Capacity
 
-{% highlight_caption batt_capacity %}
-{% highlight bash linenos %}
+```bash
+!filename: batt_capacity
 #!/bin/sh
 
 cap=$(cat /sys/devices/platform/smapi/BAT0/remaining_percent)
@@ -195,12 +202,13 @@ elif [ $cap -ge 91 ] && [ $cap -le 100 ]; then
 else
     echo " UNKNWN"
 fi
-{% endhighlight %}
+```
+
 
 ## Battery Status
 
-{% highlight_caption batt_state %}
-{% highlight bash linenos %}
+```bash
+!filename: batt_state
 #!/bin/sh
 
 state=$(cat /sys/devices/platform/smapi/BAT0/state)
@@ -213,7 +221,7 @@ elif [ $state = "idle"        ]; then
 else
     echo " " # unknown
 fi
-{% endhighlight %}
+```
 
 Selesai!
 
@@ -224,4 +232,3 @@ Mudah-mudahan dapat bermanfaat untuk teman-teman yang memerlukan.
 Terima kasih.
 
 (^_^)
-

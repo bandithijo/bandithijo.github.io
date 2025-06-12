@@ -1,22 +1,19 @@
 ---
 layout: 'post'
 title: "Membuat Pagination pada Jekyll"
-date: 2020-04-19 07:39
+date: '2020-04-19 07:39'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Jekyll']
+tags: ['Jekyll']
 pin:
 hot:
 contributors: []
 description: "Kalau kita memiliki banyak sekali posting, rasanya kurang pas secara user experience jika menampilkan semua posting dalam satu halaman. Apabila ada ribuan posting akan sangat panjang sekali halamannya. Solusinya adalah membatasi jumlah post dalam satu halaman dengan pagination."
 ---
-
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
 
 # Pendahuluan
 
@@ -28,33 +25,34 @@ Namun, seperti yang teman-teman ketahui, di blog ini saya tidak memasang *pagina
 
 Nah, sekedar mencatat dan *sharing*, saya akan berbagi catatan mengenai "Bagaimana memasang *pagination* pada Jekyll".
 
+
 # Penerapan
 
 *Pagination* biasanya akan dipasangkan pada halaman yang menampilkan sebuah *collection*. *Collection* dalam hal ini adalah *posts*.
 
-Dengan jumlah *posts* yang banyak, tentu saja apabila kita melakukan pengulangan *for* (*for loop*), maka akan menghasilkan daftar *posts* yang banyak sekali seperti yang teman-teman bis alihat pada blog ini di halaman [/blog](/blog){:target="_blank"} dan halaman [/vlog](/vlog){:target="_blank"}.
+Dengan jumlah *posts* yang banyak, tentu saja apabila kita melakukan pengulangan *for* (*for loop*), maka akan menghasilkan daftar *posts* yang banyak sekali seperti yang teman-teman bis alihat pada blog ini di halaman [/blog](/blog) dan halaman [/vlog](/vlog).
 
 Langkah pertama, pasang gem `jekyll-paginate` pada `Gemfile`.
 
-{% highlight_caption Gemfile %}
-{% highlight ruby linenos %}
+```ruby
+!filename: Gemfile
 group :jekyll_plugins do
   # ...
   # ...
   gem "jekyll-paginate", "~> 1.1"
 end
-{% endhighlight %}
+```
 
 Install gems.
 
-{% shell_user %}
-bundle install
-{% endshell_user %}
+```
+$ bundle install
+```
 
 Kemudian, enablekan pada `_config.yml`.
 
-{% highlight_caption _config.yml %}
-{% highlight yaml linenos %}
+```yaml
+!filename: _config.yml
 # ...
 # ...
 
@@ -63,7 +61,7 @@ plugins:
   - ...
   - jekyll-paginate
 
-{% endhighlight %}
+```
 
 Misalnya, pada kasus ini, saya akan memasangkan *pagination* pada halaman blog.
 
@@ -71,10 +69,9 @@ Namun, sebelumnya, kita buat terlebih dahulu logic dari *pagination*-nya. Saya a
 
 Saya akan buat file bernama `pagination.html` di direktori `_includes`.
 
-{% highlight_caption _includes/pagination.html %}
-{% highlight liquid linenos %}
-{% raw %}
-<!-- Pagination -->
+```liquid
+!filename: _includes/pagination.html
+{% raw %}<!-- Pagination -->
 {% if paginator.total_pages > 1 %}
 <nav aria-label="Page navigation example">
   <small>
@@ -118,9 +115,8 @@ Saya akan buat file bernama `pagination.html` di direktori `_includes`.
   </small>
 </nav>
 {% endif %}
-<!-- END Pagination -->
-{% endraw %}
-{% endhighlight %}
+<!-- END Pagination -->{% endraw %}
+```
 
 Class di atas, saya menggunakan Bootstrap CSS Framework agar lebih mudah.
 
@@ -132,10 +128,9 @@ Kita perlu memodifikasi *for loop* yang digunakan untuk menampilkaan daftar *pos
 
 Kalau secara normal seperti ini.
 
-{% highlight_caption pages/blog.html %}
-{% highlight liquid linenos %}
-{% raw %}
----
+```liquid
+!filename: pages/blog.html
+{% raw %}---
 layout: page
 title: Blog
 permalink: /blog/
@@ -145,18 +140,16 @@ permalink: /blog/
 {% for post in site.posts %}
   <li><a href="{{ post.url }}">{{ post.date | date: '%y/%m/%d' }} : {{ post.title }}</a></li>
 {% endfor %}
-</ul>
-{% endraw %}
-{% endhighlight %}
+</ul>{% endraw %}
+```
 
 Nah, karena sekarang, kita akan menggunakan *pagination*.
 
 Maka, kita akan mengambil daftar *post* yang ada di **paginator.posts** bukan di **site.posts**.
 
-{% highlight_caption page/blog.html %}
-{% highlight liquid linenos %}
-{% raw %}
----
+```liquid
+!filename: page/blog.html
+{% raw %}---
 layout: page
 title: Blog
 permalink: /blog/
@@ -166,14 +159,13 @@ permalink: /blog/
 {% for post in paginator.posts %}
   <li><a href="{{ post.url }}">{{ post.date | date: '%y/%m/%d' }} : {{ post.title }}</a></li>
 {% endfor %}
-</ul>
-{% endraw %}
-{% endhighlight %}
+</ul>{% endraw %}
+```
 
 Untuk mengatur jumlah post yang ditampilkan dalam satu halaman, kita perlu mendefinisikannya pada `_config.yml`.
 
-{% highlight_caption _config.yml %}
-{% highlight yaml linenos %}
+```yaml
+!filename: _config.yml
 # ...
 # ...
 
@@ -184,34 +176,32 @@ plugins:
 
 paginate: 10
 paginate_path: /page:num/
-{% endhighlight %}
+```
 
 Bentuk *URL path* dari *pagination* di atas akan berupa.
 
-{% pre_url %}
+```
 http://localhost:4000/blog/page2/
-{% endpre_url %}
+```
 
 Kita dapat memodifikasi sesuai keinginan.
 
 Bentuk lain, bisa seperti ini,
 
-{% highlight_caption _config.yml %}
-{% highlight yaml linenos %}
+```yaml
+!filename: _config.yml
 # ...
 # ...
 paginate_path: /page/:num/
-{% endhighlight %}
+```
 
-{% pre_url %}
+```
 http://localhost:4000/blog/page/2/
-{% endpre_url %}
+```
 
-{% box_perhatian %}
-<p>
-Untuk membuat <i>pagination</i> kita harus memiliki <code>index.html</code> bukan <code>index.md</code>. Karena <i>pagination</i> hanya dapat bekerja pada file bertipe <code>.html</code>.
-</p>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> Untuk membuat *pagination* kita harus memiliki `index.html` bukan `index.md`. Karena *pagination* hanya dapat bekerja pada file bertipe `.html`.
 
 Kelar!
 
@@ -224,14 +214,10 @@ Terima kasih.
 (^_^)
 
 
-
-
-
-
 # Referensi
 
-1. [jekyllrb.com/docs/pagination/](https://jekyllrb.com/docs/pagination/){:target="_blank"}
+1. [jekyllrb.com/docs/pagination/](https://jekyllrb.com/docs/pagination/)
 <br>Diakses tanggal: 2020/04/19
 
-2. [blog.webjeda.com/jekyll-pagination/](https://blog.webjeda.com/jekyll-pagination/){:target="_blank"}
+2. [blog.webjeda.com/jekyll-pagination/](https://blog.webjeda.com/jekyll-pagination/)
 <br>Diakses tanggal: 2020/04/19

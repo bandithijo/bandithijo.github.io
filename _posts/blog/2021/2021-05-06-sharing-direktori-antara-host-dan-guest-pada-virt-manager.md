@@ -29,6 +29,7 @@ Bisa dilihat di **My Computer**, pada kategori **Network Location** seperti yang
 
 Kalau kita buka, isinya adalah Home direktori dari Host OS.
 
+
 # Pemecahan Masalah
 
 Untu memecahkan masalah di atas, teradapat beberapa prasyarat yang harus terpenuhi, diantaranya:
@@ -38,6 +39,7 @@ Untu memecahkan masalah di atas, teradapat beberapa prasyarat yang harus terpenu
 3. Menambahkan "Network Location" pada Guest OS yang dialamatkan pada IP address Host OS
 
 Oke, saya akan jabarkan langkah-langkah di atas.
+
 
 ## Pasang Samba
 
@@ -52,6 +54,7 @@ Kalau di Artix Linux, ikutkan dengan paket initnya, misal untuk OpenRC.
 ```
 $ sudo pacman -S samba samba-openrc
 ```
+
 
 ## Jalankan Samba Service
 
@@ -68,6 +71,7 @@ $ sudo systemctl start smb
 ```
 $ sudo rc-service smb start
 ```
+
 
 ## Buat Samba User
 
@@ -105,6 +109,7 @@ Retype new SMB password:
 > ```
 > $ smbpasswd -x bandithijo
 > ```
+
 
 ## Membuat Virtual Network
 
@@ -152,6 +157,7 @@ Gambar 3. Detail dari Virtual Network
 Dapat dilihat pada Gambar 3 di atas, kita mendapatkan network 192.168.1.96/28, dengan alokasi IP address yang dapat kita gunakan pada rentang 192.168.1.104 - 192.168.1.110
 
 Jadi, nanti ketika kita membuat Vitual Machine, IP address yang akan diambil dari rentang tersebut apabila kita gunakan Virtual Network **network-bridge**.
+
 
 ## Attach VM dengan Virtual Network
 
@@ -220,6 +226,7 @@ Approximate round trip times in milli-seconds:
 ```
 
 Oke, kita sudah punya network yang sesuai dengan prasyarat yang ditentukan.
+
 
 ## Buat Network Location di Guest OS
 

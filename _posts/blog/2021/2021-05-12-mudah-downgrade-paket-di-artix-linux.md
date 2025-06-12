@@ -23,6 +23,7 @@ description: "Menggunakan distribusi yang menggunakan metode rilis 'rolling' mun
 > 
 > Happy Hacking!
 
+
 # Latar Belakang Masalah
 
 Menggunakan distribusi yang menggunakan metode rilis "rolling" mungkin merupakan kekhawatiran bagi sebagian besar GNU/Linux user. Mereka sering menyebut distro yang memiliki paket-paket yang tidak stabil.
@@ -35,14 +36,15 @@ Menggunakan distribusi yang menggunakan metode rilis "rolling" mungkin merupakan
 
 Catatan ini adalah tips menggunakan tool yang bernama 'downgrade' yang defaultnya untuk Arch Linux pada Artix Linux.
 
+
 # Mengatasi Masalah
+
 
 ## Pasang Perkakas
 
 Terdapat setidaknya 2 tools yang dapat kita gunakan, yaitu:
 
 1. [**downgrader-git**](https://aur.archlinux.org/packages/downgrader-git/)<sup>AUR</sup>
-
 2. [**downgrade**](https://aur.archlinux.org/packages/downgrade/)<sup>AUR</sup>
 
 Perbedaan antar keduanya, kurang begitu jelas buat saya. Teman-teman dapat mencari tahu sendiri dan dapat memilih antara keduanya. Namun, yang saya pergunakan pada catatan ini adalah tool yang kedua, yaitu **downgrade**.
@@ -94,22 +96,23 @@ $ sudo downgrade --ala-url "https://archive.artixlinux.org" <package>
 $ sudo downgrade --ala-url "https://archive.artixlinux.org" <package1> <package2> <package3>
 ```
 
+
 ## Kapan Harus Menggunakan ala-url ?
 
 _Sedang dalam proses riset..._
+
 
 ## Contoh Penggunaan
 
 Misal, kita mau downgrade kernel **linux**. Saya mencontohkan package **linux** karena perbedaannya terlihat di nama packagenya **-arch** dan **-artix**.
 
-<br>
 **Downgrade linux di Arch Linux**
 
 ```
 $ sudo downgrade linux
 ```
 
-<pre>
+```
 Available packages:
 
      1)  linux    4.20.1.arch1    1  x86_64  (remote)
@@ -123,16 +126,15 @@ Available packages:
    224)  linux    5.12.2.arch1    1  x86_64  (remote)
 
 select a package by number:
-</pre>
+```
 
-<br>
 **Downgrade linux di Artix Linux**
 
 ```
 $ sudo downgrade --ala-url "https://archive.artixlinux.org" linux
 ```
 
-<pre>
+```
 Available packages:
 
     1)  linux    5.7.2.artix1    1  x86_64  (remote)
@@ -146,8 +148,7 @@ Available packages:
    40)  linux    5.12.2.artix1   1  x86_64  (remote)
 
 select a package by number:
-</pre>
-
+```
 
 Cara penggunaan **downgrade** lebih lengkapnya, dapat teman-teman baca di:
 

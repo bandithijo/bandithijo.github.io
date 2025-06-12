@@ -1,38 +1,43 @@
 ---
 layout: 'post'
 title: "Membuat Web Scraper dengan Ruby (Output: POSTGRESQL: ACTIVERECORD)"
-date: 2020-06-18 11:06
+date: '2020-06-18 11:06'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Ruby']
+tags: ['Ruby', 'PostgreSQL', 'Active Record']
 pin:
 hot:
 contributors: []
 description: "Web scraping adalah teknik mengambil atau mengekstrak sebagian data dari suatu website secara spesifik secara otomatis."
 ---
 
-{% box_perhatian %}
-<p>Data yang penulis gunakan adalah data yang bersifat <b><i>free public data</i></b>. Sehingga, siapa saja dapat mengakses dan melihat tanpa perlu melalui layer authentikasi.</p>
-<p>Penyalahgunaan data, bukan merupakan tanggung jawab dari penulis seutuhnya.</p>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> Data yang penulis gunakan adalah data yang bersifat ***free public data***. Sehingga, siapa saja dapat mengakses dan melihat tanpa perlu melalui layer authentikasi.
+> 
+> Penyalahgunaan data, bukan merupakan tanggung jawab dari penulis seutuhnya.
+
 
 # Prerequisite
 
-`Ruby 2.6.6` `Rails 5.2.4` `PostgreSQL 12.3`
+`ruby 2.6.6` `rails 5.2.4` `postgresql 12.3`
+
 
 # Pendahuluan
 
 *Web scraping* adalah teknik mengambil atau mengekstrak sebagian data dari suatu website secara spesifik, spesifik dalam arti hanya data tertentu saja yang diambil. Script atau program untuk melakukan hal tersebut, disebut dengan *web scraper*.
 
+
 # Objektif
 
-Catatan kali ini saya akan mendokumentasikan proses dalam membuat *web scraper* dengan tujuan untuk mengambil data nama-nama dosen yang ada pada website resmi Biro Akademik Universitas Mulia Balikpapan yang ada pada halaman [ini](http://baak.universitasmulia.ac.id/dosen/){:target="_blank"}.
+Catatan kali ini saya akan mendokumentasikan proses dalam membuat *web scraper* dengan tujuan untuk mengambil data nama-nama dosen yang ada pada website resmi Biro Akademik Universitas Mulia Balikpapan yang ada pada halaman [ini](http://baak.universitasmulia.ac.id/dosen/).
 
 Hasil yang akan di dapatkan dari script yang akan kita buat adalah daftar nama-nama dosen beserta nidn dalam bentuk tabel di dalam database PostgreSQL. Kita akan memasukkan data menggunakan Active Record yang merupakan salah satu komponen dari Ruby on Rails yang digunakan untuk menghandle model.
+
 
 # Penerapan
 
@@ -42,20 +47,20 @@ Saya akan beri nama `ruby-web-scraper-dosen`.
 
 Biasakan untuk memberi nama proyek tidak menggunakan karakter **spasi**.
 
-{% shell_user %}
-mkdir ruby-web-scraper-dosen
-{% endshell_user %}
+```
+$ mkdir ruby-web-scraper-dosen
+```
 
 Kemudian masuk ke dalam direktori proyek.
 
-{% shell_user %}
-cd ruby-web-scraper-dosen
-{% endshell_user %}
+```
+$ cd ruby-web-scraper-dosen
+```
 
 Buat file dengan nama `Gemfile`. dan kita akan memasang gem yang diperlukan di dalam file ini.
 
-{% highlight_caption Gemfile %}
-{% highlight ruby linenos %}
+```ruby
+!filename: Gemfile
 source 'https://rubygems.org'
 
 gem 'httparty',              '~> 0.18.1'
@@ -64,21 +69,21 @@ gem 'byebug',                '~> 11.1', '>= 11.1.3'
 gem 'activerecord',          '~> 6.0', '>= 6.0.3.2'
 gem 'standalone_migrations', '~> 6.0'
 gem 'pg',                    '~> 1.2', '>= 1.2.3'
-{% endhighlight %}
+```
 
 Setelah memasang gem pada Gemfile, kita perlu melakukan instalasi gem-gem tersebut.
 
-{% shell_user %}
-bundle install
-{% endshell_user %}
+```
+$ bundle install
+```
 
 Proses bundle install di atas akan membuat sebuah file baru bernama `Gemfile.lock` yang berisi daftar dependensi dari gem yang kita butuhkan --daftar requirements--.
 
 Pastikan kalau service dari PostgreSQL sudah berjalan.
 
-{% shell_user %}
-sudo systemctl status postgresql.service
-{% endshell_user %}
+```
+$ sudo systemctl status postgresql.service
+```
 
 ```
 ● postgresql.service - PostgreSQL database server
@@ -102,9 +107,9 @@ Selanjutnya, untuk melihat database dan table, teman-tema dapat mengguakan **Pos
 
 Jalankan **pgcli**,
 
-{% shell_user %}
-pgcli
-{% endshell_user %}
+```
+$ pgcli
+```
 
 ```
 Server: PostgreSQL 12.3
@@ -113,40 +118,41 @@ Chat: https://gitter.im/dbcli/pgcli
 Home: http://pgcli.com
 bandithijo>
 ```
+
 Pada tahap ini, kita **tidak perlu membuat database secara manual**, kita akan membuat database dengan bantuan **rake**.
 
 Langkah pertama adalah membuat `Rakefile` di root direktori kita.
 
-<pre>
-ruby-web-scraper-dosen/
-├── Gemfile
-├── Gemfile.lock
-└── <mark>Rakefile</mark>
-</pre>
+```
+📂 ruby-web-scraper-dosen/
+├── 📄 Gemfile
+├── 📄 Gemfile.lock
+└── 📄 Rakefile 👈️
+```
 
 Isi `Rakefile` seperti di bawah ini.
 
-{% highlight_caption Rakefile %}
-{% highlight ruby linenos %}
+```ruby
+!filename: Rakefile
 require 'standalone_migrations'
 StandaloneMigrations::Tasks.load_tasks
-{% endhighlight %}
+```
 
 Selanjutnya kita perlu membuat database konfiguration `config.yml` pada direktori `db/`.
 
-<pre>
-ruby-web-scraper-dosen/
-├── db/
-│   └── <mark>config.yml</mark>
-├── Gemfile
-├── Gemfile.lock
-└── Rakefile
-</pre>
+```
+📂 ruby-web-scraper-dosen/
+├── 📂 db/
+│   └── 📄 config.yml 👈️
+├── 📄 Gemfile
+├── 📄 Gemfile.lock
+└── 📄 Rakefile
+```
 
 Lalu isikan `config.yml` seperti di bawah.
 
-{% highlight_caption db/config.yml %}
-{% highlight yaml linenos %}
+```yaml
+!filename: db/config.yml
 development:
   adapter: postgresql
   database: web_scraper_development
@@ -154,15 +160,15 @@ development:
   timeout: 5000
   host: localhost
   encoding: unicode
-{% endhighlight %}
+```
 
 `web_scraper_development` adalah nama database yang akan kita gunakan.
 
 Kalau sudah, sekarang kita akan membuat database dengan cara, buka Terminal dan jalankan perintah,
 
-{% shell_user %}
-rake db:create
-{% endshell_user %}
+```
+$ rake db:create
+```
 
 ```
 Created database 'web_scraper_development'
@@ -170,15 +176,17 @@ Created database 'web_scraper_development'
 
 Perintah di atas akan menjalankan **rake** untuk membuat database dengan nama `web_scraper_development` seperti yang sudah kita definisikan pada file `config.yml`.
 
-{% box_info %}
-<p>Untuk menghapus database, gunakan perintah:</p>
-<pre>
-$ <b>rake db:drop</b>
-</pre>
-<pre>
-Dropped database 'web_scraper_development'
-</pre>
-{% endbox_info %}
+> INFO
+> 
+> Untuk menghapus database, gunakan perintah:
+> 
+> ```
+> $ rake db:drop
+> ```
+> 
+> ```
+> Dropped database 'web_scraper_development'
+> ```
 
 Setelah database dibuat, kita perlu membuat tabel untuk menyimpan data-data yang sudah kita parsing dari wbesite target.
 
@@ -189,33 +197,33 @@ Buat migration dengan cara seperti di bawah, dan berikan nama, seperti:
 1. `CreateDaftarDosens` (CamelCase), atau
 2. `create_daftar_dosens` (snake_case)
 
-{% shell_user %}
-rake db:new_migration name=CreateDaftarDosens
-{% endshell_user %}
+```
+$ rake db:new_migration name=CreateDaftarDosens
+```
 
 **atau**,
 
-{% shell_user %}
-rake db:new_migration name=create_daftar_dosens
-{% endshell_user %}
+```
+$ rake db:new_migration name=create_daftar_dosens
+```
 
 Perintah migrasi di atas akan membuat sebuah file migrasi.
 
-<pre>
+```
 created db/migration/20200618031037_create_daftar_dosens.rb
-</pre>
+```
 
-<pre>
-ruby-web-scraper-dosen/
-├── db/
-│   ├── config.yml
-│   └── migrate/
-│       └── <mark>20200618031037_create_daftar_dosens.rb</mark>
+```
+📂 ruby-web-scraper-dosen/
+├── 📂 db/
+│   ├── 📄 config.yml
+│   └── 📂 migrate/
+│       └── 📄 20200618031037_create_daftar_dosens.rb 👈️
 │
-├── Gemfile
-├── Gemfile.lock
-└── Rakefile
-</pre>
+├── 📄 Gemfile
+├── 📄 Gemfile.lock
+└── 📄 Rakefile
+```
 
 Apabila kita membuat migrasi lagi, maka file-file migrasi akan terdapat pada direktori `db/migrate/`.
 
@@ -223,22 +231,22 @@ Migrasi yang kita buat di atas, dari namanya tentu sudah terbayang fungsinya ada
 
 Pemberian awalan `Create` atau `create_` pada awal migrasi memiliki maksud tertentu, yaitu untuk membuat tabel/schema. Dengan menambahkan awalan tersebut maka, isi dari file migrasi akan otomatis berbentuk seperti di bawah ini.
 
-{% highlight_caption db/migrate/20200618031037_create_daftar_dosens.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: db/migrate/20200618031037_create_daftar_dosens.rb
 class CreateDaftarDosens < ActiveRecord::Migration[6.0]
   def change
     create_table :daftar_dosens do |t|
     end
   end
 end
-{% endhighlight %}
+```
 
 Bari ke 3 & 4 adalah baris yang secara pintar dibuatkan apabila kita menambahkan awalan `Create` atau `create_` pada nama migrasi. Enak banget yaa (^_^)
 
 Selanjutnya, kita perlu menyempurnakan file migrasi. Kita perlu menambahkan nama kolom yang kita perlukan, yaitu kolom **nama_dosen** dan **nidn_dosen**.
 
-{% highlight_caption db/migrate/20200618031037_create_daftar_dosens.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: db/migrate/20200618031037_create_daftar_dosens.rb
 class CreateDaftarDosens < ActiveRecord::Migration[6.0]
   def change
     create_table :daftar_dosens do |t|
@@ -247,13 +255,13 @@ class CreateDaftarDosens < ActiveRecord::Migration[6.0]
     end
   end
 end
-{% endhighlight %}
+```
 
 Setelah kita memodifikasi file migrasi `..._create_daftar_dosens.rb`, selanjutnya adalah menjalankan migrasi tersebut.
 
-{% shell_user %}
-rake db:migrate
-{% endshell_user %}
+```
+$ rake db:migrate
+```
 
 ```
 == 20200618031037 CreateDaftarDosens: migrating ===============================
@@ -265,9 +273,9 @@ Kalau migrasi berhasil, outputnya akan seperti di atas.
 
 Untuk mengecek status migrasi, gunakan perintah di bawah.
 
-{% shell_user %}
-rake db:migrate:status
-{% endshell_user %}
+```
+$ rake db:migrate:status
+```
 
 ```
 database: web_scraper_development
@@ -282,29 +290,29 @@ Terlihat, bahwa status migrasi dari "Create daftar dosens" sudah **up**. Artinya
 
 Untuk mengeceknya, buka **pgcli** dan jalankan perintah di bawah.
 
-<pre>
-<span class="cmd">web_scraper> </span><b>\dt</b>
-</pre>
+```
+web_scraper> \dt
+```
 
-<pre>
+```
 +----------+----------------------+--------+------------+
 | Schema   | Name                 | Type   | Owner      |
 |----------+----------------------+--------+------------|
 | public   | ar_internal_metadata | table  | bandithijo |
-<mark>| public   | daftar_dosens        | table  | bandithijo |</mark>
+| public   | daftar_dosens 👈️     | table  | bandithijo |
 | public   | schema_migrations    | table  | bandithijo |
 +----------+----------------------+--------+------------+
 SELECT 3
 Time: 0.014s
-</pre>
+```
 
 Untuk melihat detail dari tabel, gunakan perintah di bawah.
 
-<pre>
-<span class="cmd">web_scraper> </span><b>\d daftar_dosens;</b>
-</pre>
+```
+web_scraper> \d daftar_dosens;
+```
 
-<pre>
+```
 +------------+-------------------+-------------------------------------------------------------+
 | Column     | Type              | Modifiers                                                   |
 |------------+-------------------+-------------------------------------------------------------|
@@ -316,7 +324,7 @@ Indexes:
     "daftar_dosens_pkey" PRIMARY KEY, btree (id)
 
 Time: 0.026s
-</pre>
+```
 
 Tentu saja tabel tersebut belum ada isinya.
 
@@ -324,42 +332,41 @@ Langkah selanjutnya adalah membuat model.
 
 Sambil mdembuat model, saya akan merapikan struktur direktori saya dan mengganti nama dari aktor utama dari `scrapper.rb` menjadi `main.rb`.
 
-<pre>
-ruby-web-scraper-dosen/
-├── app
-│   ├── <mark>main.rb</mark>
-│   └── models
-│       └── <mark>daftar_dosen.rb</mark>
-├── db
-│   ├── config.yml
-│   ├── migrate
-│   │   └── 20200618031037_create_daftar_dosens.rb
-│   └── schema.rb
-├── Gemfile
-├── Gemfile.lock
-└── Rakefile
-</pre>
+```
+📂 ruby-web-scraper-dosen/
+├── 📂 app/
+│   ├── 📄 main.rb 👈️
+│   └── 📂 models/
+│       └── 📄 daftar_dosen.rb 👈️
+├── 📂 db/
+│   ├── 📄 config.yml
+│   ├── 📂 migrate/
+│   │   └── 📄 20200618031037_create_daftar_dosens.rb
+│   └── 📄 schema.rb
+├── 📄 Gemfile
+├── 📄 Gemfile.lock
+└── 📄 Rakefile
+```
 
 Penamaan dari model `daftar_dosen.rb` menggunakan penamaan tunggal karena convention dari Ruby on Rails mengharuskan kita membuat model dengan penamaan singular.
 
 Buka file `app/models/daftar_dosen.rb` dan isi seperti di bawah ini.
 
-{% highlight_caption app/models/daftar_dosen.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/models/daftar_dosen.rb
 class DaftarDosen < ActiveRecord::Base
   validates :nama_dosen, presence: true
 end
-{% endhighlight %}
+```
 
-Saya menambahkan validasi `presence` ke kolom nama_dosen. Teman-teman dapat mempelajari tentang validasi [di sini](https://guides.rubyonrails.org/active_record_validations.html){:target="_blank"}
+Saya menambahkan validasi `presence` ke kolom nama_dosen. Teman-teman dapat mempelajari tentang validasi [di sini](https://guides.rubyonrails.org/active_record_validations.html).
 
 Setelah membuat model, sekarang kita akan membuat aktor utamanya.
 
 Buka file `app/main.rb`.
 
-
-{% highlight_caption app/main.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/main.rb
 # daftar gem yang diperlukan
 require 'httparty'
 require 'nokogiri'
@@ -431,13 +438,13 @@ def scraper
 end
 
 scraper
-{% endhighlight %}
+```
 
 Setelah itu, jalankan dengan perintah,
 
-{% shell_user %}
-ruby app/main.rb
-{% endshell_user %}
+```
+$ ruby app/main.rb
+```
 
 Apabila berhasil, akan keluar output di Terminal seperti ini.
 
@@ -470,9 +477,9 @@ Sekarang coba cek ke database.
 
 Masuk terlebih dahulu ke databse `web_scraper`.
 
-<pre>
-<span class="cmd">bandithijo> </span><b>\c web_scraper;</b>
-</pre>
+```
+bandithijo> \c web_scraper;
+```
 
 ```
 You are now connected to database "web_scraper" as user "bandithijo"
@@ -482,9 +489,9 @@ web_scraper>
 
 Setelah kita berada di dalam database `web_scraper` kita dapat melihat hasil dari data-data yang sudah diinputkan dengan cara.
 
-<pre>
-<span class="cmd">web_scraper> </span><b>SELECT * FROM daftar_dosens</b>
-</pre>
+```
+web_scraper> SELECT * FROM daftar_dosens;
+```
 
 ```
 +------+------------------------------------------------+--------------+
@@ -518,29 +525,28 @@ TOTAL DOSEN: 138 dosen
 
 Selesai!
 
+
 # Demonstrasi Video
 
 {% youtube 2zYDrEaj9EQ %}
 
 
-
-
 # Referensi
 
-1. [It's Time To HTTParty!](https://blog.teamtreehouse.com/its-time-to-httparty){:target="_blank"}
+1. [It's Time To HTTParty!](https://blog.teamtreehouse.com/its-time-to-httparty)
 <br>Diakses tanggal: 2020/06/18
 
-2. [nokogiri.org](https://nokogiri.org/){:target="_blank"}
+2. [nokogiri.org](https://nokogiri.org/)
 <br>Diakses tanggal: 2020/06/18
 
-3. [pgcli](https://www.pgcli.com/){:target="_blank"}
+3. [pgcli](https://www.pgcli.com/)
 <br>Diakses tanggal: 2020/06/18
 
-4. [Active Record Basics](https://guides.rubyonrails.org/active_record_basics.html){:target="_blank"}
+4. [Active Record Basics](https://guides.rubyonrails.org/active_record_basics.html)
 <br>Diakses tanggal: 2020/06/18
 
-5. [Active Record Validations](https://guides.rubyonrails.org/active_record_validations.html){:target="_blank"}
+5. [Active Record Validations](https://guides.rubyonrails.org/active_record_validations.html)
 <br>Diakses tanggal: 2020/06/18
 
-6. [thuss/standalone-migrations](https://github.com/thuss/standalone-migrations/){:target="_blank"}
+6. [thuss/standalone-migrations](https://github.com/thuss/standalone-migrations/)
 <br>Diakses tanggal: 2020/06/18

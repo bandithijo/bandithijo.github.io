@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Restart PulseAudio Dummy Output Tanpa Perlu Logout"
-date: 2020-06-21 12:27
+date: '2020-06-21 12:27'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips']
+tags: ['PulseAudio']
 pin:
 hot:
 contributors: []
@@ -25,28 +25,25 @@ Kondisi ini sangat jarang, bahkan saya baru pertama kalinya mengalami hal ini be
 
 Namun, saya perlu mencatat agar dikemudian hari mengalami hal ini lagi, saya tidak perlu jauh-jauh mencari.
 
+
 # Penyelesaian Masalah
 
 Buka Terminal dan jalankan perintah di bawah, satu-persatu.
 
-{% shell_user %}
-pulseaudio --check
-pulseaudio --kill
-pulseaudio --start
-{% endshell_user %}
+```
+$ pulseaudio --check
+$ pulseaudio --kill
+$ pulseaudio --start
+```
 
 Atau, langsung jalankan bentuk satu baris, lebih praktis.
 
-{% shell_user %}
-pulseaudio --check; pulseaudio --kill; pulseaudio --start
-{% endshell_user %}
-
-
-
-
+```
+$ pulseaudio --check; pulseaudio --kill; pulseaudio --start
+```
 
 
 # Referensi
 
-1. [How can I restart pulseaudio without having to logout?](https://askubuntu.com/questions/15223/how-can-i-restart-pulseaudio-without-having-to-logout/15224#15224){:target="_blank"}
+1. [How can I restart pulseaudio without having to logout?](https://askubuntu.com/questions/15223/how-can-i-restart-pulseaudio-without-having-to-logout/15224#15224)
 <br>Diakses tanggal: 2020/06/21

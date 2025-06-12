@@ -1,38 +1,43 @@
 ---
 layout: 'post'
 title: "Membuat Web Scraper dengan Ruby (Output: POSTGRESQL: INSERT INTO)"
-date: 2020-06-15 18:49
+date: '2020-06-15 18:49'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Ruby']
+tags: ['Ruby', 'PostgreSQL']
 pin:
 hot:
 contributors: []
 description: "Web scraping adalah teknik mengambil atau mengekstrak sebagian data dari suatu website secara spesifik secara otomatis."
 ---
 
-{% box_perhatian %}
-<p>Data yang penulis gunakan adalah data yang bersifat <b><i>free public data</i></b>. Sehingga, siapa saja dapat mengakses dan melihat tanpa perlu melalui layer authentikasi.</p>
-<p>Penyalahgunaan data, bukan merupakan tanggung jawab dari penulis seutuhnya.</p>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> Data yang penulis gunakan adalah data yang bersifat ***free public data***. Sehingga, siapa saja dapat mengakses dan melihat tanpa perlu melalui layer authentikasi.
+> 
+> Penyalahgunaan data, bukan merupakan tanggung jawab dari penulis seutuhnya.</p>
+
 
 # Prerequisite
 
-`Ruby 2.6.6` `Rails 5.2.4` `PostgreSQL 12.3`
+`ruby 2.6.6` `rails 5.2.4` `postgresql 12.3`
+
 
 # Pendahuluan
 
 *Web scraping* adalah teknik mengambil atau mengekstrak sebagian data dari suatu website secara spesifik, spesifik dalam arti hanya data tertentu saja yang diambil. Script atau program untuk melakukan hal tersebut, disebut dengan *web scraper*.
 
+
 # Objektif
 
-Catatan kali ini saya akan mendokumentasikan proses dalam membuat *web scraper* dengan tujuan untuk mengambil data nama-nama dosen yang ada pada website resmi Biro Akademik Universitas Mulia Balikpapan yang ada pada halaman [ini](http://baak.universitasmulia.ac.id/dosen/){:target="_blank"}.
+Catatan kali ini saya akan mendokumentasikan proses dalam membuat *web scraper* dengan tujuan untuk mengambil data nama-nama dosen yang ada pada website resmi Biro Akademik Universitas Mulia Balikpapan yang ada pada halaman [ini](http://baak.universitasmulia.ac.id/dosen/).
 
 Hasil yang akan di dapatkan dari script yang akan kita buat adalah daftar nama-nama dosen beserta nidn dalam bentuk tabel di dalam database PostgreSQL.
+
 
 # Penerapan
 
@@ -42,41 +47,41 @@ Saya akan beri nama `ruby-web-scraper-dosen`.
 
 Biasakan untuk memberi nama proyek tidak menggunakan karakter **spasi**.
 
-{% shell_user %}
-mkdir ruby-web-scraper-dosen
-{% endshell_user %}
+```
+$ mkdir ruby-web-scraper-dosen
+```
 
 Kemudian masuk ke dalam direktori proyek.
 
-{% shell_user %}
-cd ruby-web-scraper-dosen
-{% endshell_user %}
+```
+$ cd ruby-web-scraper-dosen
+```
 
 Buat file dengan nama `Gemfile`. dan kita akan memasang gem yang diperlukan di dalam file ini.
 
-{% highlight_caption Gemfile %}
-{% highlight ruby linenos %}
+```ruby
+!filename: Gemfile
 source 'https://rubygems.org'
 
 gem 'httparty',     '~> 0.18.1'
 gem 'nokogiri',     '~> 1.10', '>= 1.10.9'
 gem 'byebug',       '~> 11.1', '>= 11.1.3'
 gem 'pg',           '~> 1.2', '>= 1.2.3'
-{% endhighlight %}
+```
 
 Setelah memasang gem pada Gemfile, kita perlu melakukan instalasi gem-gem tersebut.
 
-{% shell_user %}
-bundle install
-{% endshell_user %}
+```
+$ bundle install
+```
 
 Proses bundle install di atas akan membuat sebuah file baru bernama `Gemfile.lock` yang berisi daftar dependensi dari gem yang kita butuhkan --daftar requirements--.
 
 Pastikan kalau service dari PostgreSQL sudah berjalan.
 
-{% shell_user %}
-sudo systemctl status postgresql.service
-{% endshell_user %}
+```
+$ sudo systemctl status postgresql.service
+```
 
 ```
 ● postgresql.service - PostgreSQL database server
@@ -100,22 +105,22 @@ Selanjutnya, kita harus membuat database. Teman-tema dapat mengguakan **PostBird
 
 Jalankan **pgcli**,
 
-{% shell_user %}
-pgcli
-{% endshell_user %}
+```
+$ pgcli
+```
 
 ```
 Server: PostgreSQL 12.3
 Version: 3.0.0
 Chat: https://gitter.im/dbcli/pgcli
 Home: http://pgcli.com
-bandithijo>
+bandithijo> _
 ```
 Dan buat database dengan nama `web_scraper`.
 
-<pre>
-<span class="cmd">bandithijo> </span><b>CREATE DATABASE web_scraper;</b>
-</pre>
+```
+bandithijo> CREATE DATABASE web_scraper;
+```
 
 ```
 CREATE DATABASE
@@ -126,8 +131,8 @@ Setelah database sudah dibuat, sekarang kita akan membuat aktor utamanya.
 
 Beri nama `scraper.rb`.
 
-{% highlight_caption scraper.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: scraper.rb
 # daftar gem yang diperlukan
 require 'httparty'
 require 'nokogiri'
@@ -182,13 +187,13 @@ def scraper
 end
 
 scraper
-{% endhighlight %}
+```
 
 Kemudian, jalankan dengan perintah,
 
-{% shell_user %}
-ruby scraper.rb
-{% endshell_user %}
+```
+$ ruby scraper.rb
+```
 
 Apabila berhasil, akan keluar output di terminal seperti ini.
 
@@ -209,9 +214,9 @@ Sekarang coba cek ke database.
 
 Masuk terlebih dahulu ke databse `web_scraper`.
 
-<pre>
-<span class="cmd">bandithijo> </span><b>\c web_scraper;</b>
-</pre>
+```
+bandithijo> \c web_scraper;
+```
 
 ```
 You are now connected to database "web_scraper" as user "bandithijo"
@@ -221,9 +226,9 @@ web_scraper>
 
 Setelah kita berada di dalam database `web_scraper` kita dapat melihat hasil dari data-data yang sudah diinputkan dengan cara.
 
-<pre>
-<span class="cmd">web_scraper> </span><b>SELECT * FROM daftar_dosens</b>
-</pre>
+```
+web_scraper> SELECT * FROM daftar_dosens;
+```
 
 ```
 +------+------------------------------------------------+--------------+
@@ -256,18 +261,16 @@ Selesai!
 {% youtube SlX4wfzvKjU %}
 
 
-
-
 # Referensi
 
-1. [It's Time To HTTParty!](https://blog.teamtreehouse.com/its-time-to-httparty){:target="_blank"}
+1. [It's Time To HTTParty!](https://blog.teamtreehouse.com/its-time-to-httparty)
 <br>Diakses tanggal: 2020/06/16
 
-2. [nokogiri.org](https://nokogiri.org/){:target="_blank"}
+2. [nokogiri.org](https://nokogiri.org/)
 <br>Diakses tanggal: 2020/06/16
 
-3. [pg documentation](https://deveiate.org/code/pg/){:target="_blank"}
+3. [pg documentation](https://deveiate.org/code/pg/)
 <br>Diakses tanggal: 2020/06/16
 
-4. [pgcli](https://www.pgcli.com/){:target="_blank"}
+4. [pgcli](https://www.pgcli.com/)
 <br>Diakses tanggal: 2020/06/16

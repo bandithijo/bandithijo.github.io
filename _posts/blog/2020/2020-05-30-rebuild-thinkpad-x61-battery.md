@@ -1,22 +1,19 @@
 ---
 layout: 'post'
 title: "Rebuild ThinkPad X61 Battery"
-date: 2020-05-30 17:49
+date: '2020-05-30 17:49'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'ThinkPad']
+tags: ['ThinkPad', 'Battery']
 pin:
 hot:
 contributors: []
 description: "Dalam project ini, saya iseng merakit battery untuk ThinkPad X61. Tujuannya agar saya dapat terbebas dari cekikan vendor jualan ThinkPad Battery. Dengan begini, saya tetap dapat menggunakan ThinkPad X61 dalam waktu yang lama tanpa khawatir tercekik dengan biaya battery replacement."
 ---
-
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
 
 # Pendahuluan
 
@@ -24,35 +21,47 @@ Sejak memutuskan untuk membeli ThinkPad X61, saya sudah berencana untuk merakit 
 
 Mungkin kali ini belum bisa dikatakn merakit, meskipun memang prosesnya merakit. Namun, untuk saat ini saya sebut dengan *rebuild* atau membangun ulang, karena cell battery yang saya dapatkan adalah cell battery dari bekas battery ThinkPad X260 yang berisi 6 cell yang sudah tidak dapat digunakan (persentase tidak mau naik, hanya 0%).
 
+
 # Proses Perakitan
+
 
 ## Menggambar Skema Ala-ala
 
 Saya mulai dengan menggambar skema wiring ala-ala, agar tidak kehilangan arah saat merakit kembali. Meskipun rangkaian battery ini meruapakan rangkaian paralel sederhana, namun karena saya tidak terbiasa dengan hal-hal seperti ini, lebih baik saya catat. Hehe.
 
-{% image https://i.postimg.cc/Gmb27184/gambar-01.jpg | 1 | Gambar skema wiring battery ala-ala %}
+![Gambar 1](https://i.postimg.cc/Gmb27184/gambar-01.jpg)
+
+Gambar 1. Gambar skema wiring battery ala-ala
 
 Battery dengan cell berwarna biru ini adalah isi dari battery ThinkPad X61 yang sudah saya buka. Battery ini bukan battery original. Jujur saja saya penasaran seperti apa isi dari battery ThinkPad Original.
 
 Battery yang saya buka ini, sudah tidak dapat bertahan lama, paling hanya 5-10 menitan kalau digunakan. Ternyata setelah dibuka dan saya periksa voltase masing-masing cell, benar saja. Hanya 1 cell yang masih 3,6V sedangkan 2 diantaranya 1,5V dan tersisa 1 yang tidak menunjukkan nilai voltase sama sekali.
 
-{% image https://i.postimg.cc/13MzbYwJ/gambar-02.jpg | 2 | Cell yang ditunjuk adalah cell yang rusak (bocor) %}
+![Gambar 2](https://i.postimg.cc/13MzbYwJ/gambar-02.jpg)
+
+Gambar 2. Cell yang ditunjuk adalah cell yang rusak (bocor)
 
 Cell ini mengeluarkan cairan, meski tidak terlihat basah namun terasa basah di tangan dan mengeluarkan bau khas bahan battery Li-ion.
+
 
 ## Membongkar Rangkaian Battery
 
 Setelah cukup yakin bahwa saya mencatat semua yang saya perlukan untuk nantinya dapat saya rangkai kembali, saya mulai membongkar rangkaian. Saya mulai dari melepas kabel-kabel yang terhubung dengan battery.
 
-{% image https://i.postimg.cc/CLTd88wH/gambar-04.jpg | 4 | Rangkaian battery yang sudah saya lepas perkabelannya %}
+![Gambar 3](https://i.postimg.cc/CLTd88wH/gambar-04.jpg)
+
+Gambar 3. Rangkaian battery yang sudah saya lepas perkabelannya
 
 Pada Gambar 3, terlihat bahwa masing-masing battery terhubung dengan plat tipis. Plat ini yang saya baru paham, ditempel ke kutub-kutub battery dengan menggunakan sebuah teknik yang bernama "*Spot Welding*". Pantas saja ketika saya coba panaskan dengan solder, tidak bergeming sama sekali. Mungkin dilain kesempatan saya akan coba membuat alat *spot welder* saya sendiri. Agar memudahkan untuk perakitan battery. Sayang sekali saya tidak memiliki gambar dari battery yang dipasang plat dengan *spot welding*. Mungkin teman-teman dapat mencari saja di internet, bentuknya seperti titik-titik di kepala Kurilin. Hehe.
 
 Selanjutnya, saya sudah menyiapkan battery ThinkPad X260 68+ (6 cell) yang benar-benar sudah tidak dapat digunakan.
 
-{% image https://i.postimg.cc/RFJV6S8D/gambar-03.jpg | 3 | Cell dari battery ThinkPad X260 68+ %}
+![Gambar 4](https://i.postimg.cc/RFJV6S8D/gambar-03.jpg)
+
+Gambar 4. Cell dari battery ThinkPad X260 68+
 
 Dari Gambar 4, terlihat bahwa dari 6 cell, ternyata ada 2 cell yang rusak. Padahal battery case nya masih bagus dan tidak ada menggembung atau terlihat rusak --meskipun akhirnya battery casenya rusak karena saya buka paksa. Pantas saja battery ini sudah tidak dapat digunakan. Ke empat cell yang masing bagus tersebut masih memiliki voltase sebesar 3,6V.
+
 
 ## Merakit Battery
 
@@ -64,7 +73,9 @@ Sejujurnya saya sudah mencoba merapikan sobekan-sobekan plat tersebut, namun say
 
 Karena tidak memiliki alat bantu untuk memegang battery, saya mengakali dengan memanfaatkan kunci inggris dan tang. Hehe
 
-{% image https://i.postimg.cc/WbGzw43R/gambar-05.jpg | 5 | Kunci inggris dan tang yang diberikaret gelang sebagai battery holder %}
+![Gambar 5](https://i.postimg.cc/WbGzw43R/gambar-05.jpg)
+
+Gambar 5. Kunci inggris dan tang yang diberikaret gelang sebagai battery holder
 
 Seharusnya jaraknya antara battery masih bisa lebih dekat lagi, namun saya memutuskan untuk memberi jarak terlebih dahulu. Kebetulan juga battery case ThinkPad X61 masih cukup lega, dan maih terdapat cukup ruang untuk perkabelan yang semrawut. Hehe.
 
@@ -77,9 +88,12 @@ Sambil dirakit, setiap blok pararelnya, jangan lupa sambil dilakukan pengukuran 
 
 Setelah battery selesai dirakit, saatnya pengukuran voltase bagian akhir. pabila setiap battery bervoltase 3,6V dikalikan 4 cell, berarti seharusnya akan memiliki total 14,4V.
 
+
 ### Pengukuran Battery Bawaan
 
-{% image https://i.postimg.cc/rpPww0h4/gambar-06.jpg | 6 | Battery yang saya beli (abal) %}
+![Gambar 6](https://i.postimg.cc/rpPww0h4/gambar-06.jpg)
+
+Gambar 6. Battery yang saya beli (abal)
 
 Loh, nilai voltase pada battery di Gambar 6 kok lebih dari 14,4V? Nah, saya juga kurang paham. Battery ini yang saya pakai, dan masih dapat bertahan sekitar 30 menitan.
 
@@ -87,13 +101,15 @@ Battery ini adalah battery yang disertakan saat saya membeli ThinkPad X61.
 
 Kalau saya ukur berapa lama battery ini dapat digunakan dengan GNome Power Statistics.
 
-{% image https://i.postimg.cc/wTdV1BMy/gambar-10.png | 10 | Pengukuran dengan Gnome Power Statistics Battery Bawaan %}
+![Gambar 7](https://i.postimg.cc/wTdV1BMy/gambar-10.png)
+
+Gambar 7. Pengukuran dengan Gnome Power Statistics Battery Bawaan
 
 Presentase sangat tidak akurat, lebih dari 40 menit berada pada presentase 99-98% kemudian drop ke 10%.
 
 Kalau saya cek statusnya dengan TLP, sedari awal memang sudah aneh. Hehe.
 
-<pre>
+```
 /sys/devices/platform/smapi/BAT0/manufacturer               = PSPSP
 /sys/devices/platform/smapi/BAT0/model                      = COMPATIBLE
 /sys/devices/platform/smapi/BAT0/manufacture_date           = 2010-04-28
@@ -101,11 +117,11 @@ Kalau saya cek statusnya dengan TLP, sedari awal memang sudah aneh. Hehe.
 /sys/devices/platform/smapi/BAT0/cycle_count                =     60
 /sys/devices/platform/smapi/BAT0/temperature                =     30 [°C]
 /sys/devices/platform/smapi/BAT0/design_capacity            =  31680 [mWh]
-/sys/devices/platform/smapi/BAT0/last_full_capacity         = <mark>654360</mark> [mWh]
+/sys/devices/platform/smapi/BAT0/last_full_capacity         = 654360 [mWh] 👈️
 /sys/devices/platform/smapi/BAT0/remaining_capacity         =  63690 [mWh]
 /sys/devices/platform/smapi/BAT0/remaining_percent          =     10 [%]
 /sys/devices/platform/smapi/BAT0/remaining_running_time_now = not_discharging [min]
-/sys/devices/platform/smapi/BAT0/remaining_charging_time    =   <mark>2880</mark> [min]
+/sys/devices/platform/smapi/BAT0/remaining_charging_time    =   2880 [min] 👈️
 /sys/devices/platform/smapi/BAT0/power_now                  =  26267 [mW]
 /sys/devices/platform/smapi/BAT0/power_avg                  =  23128 [mW]
 /sys/devices/platform/smapi/BAT0/state                      = charging
@@ -115,15 +131,19 @@ Kalau saya cek statusnya dengan TLP, sedari awal memang sudah aneh. Hehe.
 /sys/devices/platform/smapi/BAT0/force_discharge            =      0
 
 Charge                                                      =    9.7 [%]
-Capacity                                                    = <mark>2065.5</mark> [%]
-</pre>
+Capacity                                                    = 2065.5 [%] 👈️
+```
 
 Bisa dilihat, pada bagian yang saya marking, menunjukkan value yang aneh.
 
+
 ### Pengukuran Battery Rebuild
+
 Kemudian, saya mengukur battery yang saya rakit (*rebuild*).
 
-{% image https://i.postimg.cc/vmBmyLvM/gambar-07.jpg | 7 | Battery hasil rebuild %}
+![Gambar 8](https://i.postimg.cc/vmBmyLvM/gambar-07.jpg)
+
+Gambar 8. Battery hasil rebuild
 
 Nah, hasil pengukuran voltasenya sebesar 14,26V. Mendekai lah yaa dengan nilai normal.
 
@@ -133,9 +153,9 @@ Selanjutnya adalah proses kalibrasi dengan tlp.
 
 Saya menjalankan perintah:
 
-{% shell_user %}
-sudo tlp recalibrate
-{% endshell_user %}
+```
+$ sudo tlp recalibrate
+```
 
 ```
 Currently discharging battery BAT0:
@@ -153,13 +173,15 @@ Perintah di atas akan menjalankan kalibrasi battery dimana proses bermula dari p
 
 Berikut ini adalah grafik hasil kalibrasi battery rebuild.
 
-{% image https://i.postimg.cc/htnkVDJ5/gambar-08.png | 8 | Hasil pengukuran dengan Gnome Power Statistics %}
+![Gambar 9](https://i.postimg.cc/htnkVDJ5/gambar-08.png)
+
+Gambar 9. Hasil pengukuran dengan Gnome Power Statistics
 
 Untuk meliahat informasi dari battery, saya juga menggunakan perintah:
 
-{% shell_user %}
-sudo tlp-stat -b
-{% endshell_user %}
+```
+$ sudo tlp-stat -b
+```
 
 ```
 --- TLP 1.3.1 --------------------------------------------
@@ -200,16 +222,17 @@ Perhatikan grafik discharge (biru) dan charge (merah), terdapat *drop* pada saat
 
 Saya kurang paham, ini perilaku dari Cell atau module controller dari battery ini yang kurang bagus. Saya akan coba dengan cell yang lain bila cell yang sekarang telah rusak. Mungkin saya akan mencoba merek yang lebih baik dengan mAh yang sedikit lebih besar. Hehe.
 
-<br>
 **Update: 2020-05-31**
 
-{% image https://i.postimg.cc/zfwwdDHb/gambar-09.png | 9 | Hasil discharge setelah kalibrasi kedua %}
+![Gambar 10](https://i.postimg.cc/zfwwdDHb/gambar-09.png)
+
+Gambar 10. Hasil discharge setelah kalibrasi kedua
 
 Pada Gambar 9, ini adalah grafik discharging yang saya laukan setelah rekalibrasi yang kedua. Saya tidak menyangka, tidak drop pada 40% namun pada 19%. Oh yaa, discharging ini juga dilakukan sambil menjalankan perintah:
 
-{% shell_user %}
-sudo powertop --calibrate
-{% endshell_user %}
+```
+$ sudo powertop --calibrate
+```
 
 Saya juga sedikit terkejut karena setelah dikalibrasi dengan powertop, dapat menambah efisiensi penggunaan power menjadi 30 menit lebih lama, yang awalnya hanya bertahan 30 menitan, sekarang dapat mencapai 1 jam. Padahal saya melakukan pengetesan sambil menonton YouTube.
 
@@ -218,11 +241,10 @@ Saya juga sedikit terkejut karena setelah dikalibrasi dengan powertop, dapat men
 
 {% youtube GGiT3v6GM9w %}
 
-<br>
-
 {% youtube xLnRxfz0d7I %}
 
 Dari video di atas, terlihat saya sedang menguji coba penggunaan battery yang sudah di rebuild ke laptop. Saya ingin melihat apakah ada indikasi *whitelisting* oleh BIOS atau tidak.
+
 
 # Pesan Penulis
 
@@ -235,17 +257,17 @@ Saya menyertakan beberapa referensi yang belum sempat saya baca-baca. Mungkin te
 
 # Referensi
 
-1. [IBM Thinkpad Battery Re-Celling Battery Rebuild Tutorial](https://forum.thinkpads.com/viewtopic.php?t=121516){:target="_blank"}
+1. [IBM Thinkpad Battery Re-Celling Battery Rebuild Tutorial](https://forum.thinkpads.com/viewtopic.php?t=121516)
 <br>Diakses tanggal: 2020/05/30
 
-2. [Rebuilding batteries](https://www.reddit.com/r/thinkpad/comments/79q22o/rebuilding_batteries/){:target="_blank"}
+2. [Rebuilding batteries](https://www.reddit.com/r/thinkpad/comments/79q22o/rebuilding_batteries/)
 <br>Diakses tanggal: 2020/05/30
 
-3. [Replacing Lenovo laptop lithium batteries](https://hackaday.io/page/247-replacing-lenovo-laptop-lithium-batteries){:target="_blank"}
+3. [Replacing Lenovo laptop lithium batteries](https://hackaday.io/page/247-replacing-lenovo-laptop-lithium-batteries)
 <br>Diakses tanggal: 2020/05/30
 
-4. [SMBusb - Hacking smart batteries](http://www.karosium.com/2016/08/smbusb-hacking-smart-batteries.html){:target="_blank"}
+4. [SMBusb - Hacking smart batteries](http://www.karosium.com/2016/08/smbusb-hacking-smart-batteries.html)
 <br>Diakses tanggal: 2020/05/30
 
-5. [Will China's 18650 Battery Beat LG, Samsung, Sony & Panasonic? Let's find out!](https://www.youtube.com/watch?v=qMZuHMlRw_0){:target="_blank"}
+5. [Will China's 18650 Battery Beat LG, Samsung, Sony & Panasonic? Let's find out!](https://www.youtube.com/watch?v=qMZuHMlRw_0)
 <br>Diakses tanggal: 2020/05/30

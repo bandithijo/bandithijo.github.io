@@ -1,22 +1,19 @@
 ---
 layout: 'post'
 title: "DWM, Window Manager yang Gak Pake Ribet"
-date: 2020-04-24 14:23
+date: '2020-04-24 14:23'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Ulasan']
+tags: ['dwm']
 pin:
 hot: true
 contributors: []
 description: "Saya memulai perjalanan ke dunia Window Manager mulai dari i3WM. Namun, sebenarnya Window Manager yang pertama kali membuat saya semakin gregetan ingin menggunakan Window Manager adalah DWM. Memang bukan yang paling fancy."
 ---
-
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
 
 # Pendahuluan
 
@@ -34,41 +31,43 @@ Untuk mencapai tahap "gak ribet" ini, kita perlu ribet-ribet dulu di awal, mas B
 
 Seperti pepatah lama, "Berakit-rakit ke hulu, bersenang-senang kemudian."
 
-{% box_info %}
-<p>Menurut pendapat saya,</p>
-<p>"Gak pake ribet" di sini juga saya maksudkan kepada perilaku dari tilling layout yang menganut prinsip "Master & Stack" tadi. Karena apabila dibandingkan berdasarkan kemampuan untuk mengelola window, i3WM dan BSPWM "jauh" lebih mumpuni.</p>
-{% endbox_info %}
+> INFO
+> 
+> Menurut pendapat saya,
+> 
+> "Gak pake ribet" di sini juga saya maksudkan kepada perilaku dari tilling layout yang menganut prinsip "Master & Stack" tadi.
+> 
+> Karena apabila dibandingkan berdasarkan kemampuan untuk mengelola window, i3WM dan BSPWM "jauh" lebih mumpuni.
+
 
 # Salah Satu Filosofi dari DWM
 
-DWM merupakan salah satu dari project yang dikembangkan oleh [**suckkless.org**](https://suckless.org/){:target="_blank"}. Project-project yang mereka kembangkan ingin lebih berfokus pada **advanced** dan **experienced** computer user. Biasanya propietary software dan kebanyakan project-project open source yang mainstream, lebih berfokus pada pengguna dengan tingkat kemahiran **average** atau **non-technical**. Mereka (suckless) berpikir **experienced** user kebanyakan lebih sering diabaikan.
+DWM merupakan salah satu dari project yang dikembangkan oleh [**suckkless.org**](https://suckless.org/). Project-project yang mereka kembangkan ingin lebih berfokus pada **advanced** dan **experienced** computer user. Biasanya propietary software dan kebanyakan project-project open source yang mainstream, lebih berfokus pada pengguna dengan tingkat kemahiran **average** atau **non-technical**. Mereka (suckless) berpikir **experienced** user kebanyakan lebih sering diabaikan.
 
-{% box_info %}
-<p markdown=1>Saya hanya mengambil salah satu paragraf dari filosofi DWM, lebih lengkapnya teman-teman dapat menbacanya sendiri [**di sini**](https://suckless.org/philosophy/){:target="_blank"}.</p>
-{% endbox_info %}
+> INFO
+> 
+> Saya hanya mengambil salah satu paragraf dari filosofi DWM, lebih lengkapnya teman-teman dapat menbacanya sendiri [**di sini**](https://suckless.org/philosophy/).
 
+> PERHATIAN!
+> 
+> Maka dari itu, kalau teman-teman tidak memantaskan diri sebagai **advanced** dan **experienced** computer user, sebaiknya tidak menggunakan DWM atau tools-tools buatan suckless dulu yaa.
 
-
-
-{% box_perhatian %}
-<p markdown=1>Maka dari itu, kalau teman-teman tidak memantaskan diri sebagai **advanced** dan **experienced** computer user, sebaiknya tidak menggunakan DWM atau tools-tools buatan suckless dulu yaa.</p>
-{% endbox_perhatian %}
 
 # Alasan Migrasi ke DWM
 
 **Lah, kalau i3WM dan BPSWM jauh lebih mumpuni untuk mengelola window, kenapa pindah, mas Bro?**
 
-Sama halnya seperti saat menggunakan i3WM, seiring berjalannya waktu, perilaku saya dalam mengelola window pun berubah. Tidak lagi banyak memerlukan layout yang *complicated* seperti pada saat saya mengerjakan soal-soal CCNA (lihat videonya di sini, ["Bagaimana i3wm Menghandle Banyak Window"](https://www.youtube.com/watch?v=Iw2t_k1QqJ8){:target="_blank"}).
+Sama halnya seperti saat menggunakan i3WM, seiring berjalannya waktu, perilaku saya dalam mengelola window pun berubah. Tidak lagi banyak memerlukan layout yang *complicated* seperti pada saat saya mengerjakan soal-soal CCNA (lihat videonya di sini, ["Bagaimana i3wm Menghandle Banyak Window"](https://www.youtube.com/watch?v=Iw2t_k1QqJ8)).
 
 Saat berpindah dari i3WM ke BSPWM, saya lebih banyak menggunakan susunan tilling seperti ini.
 
-{% pre_whiteboard %}
+```
 +-----+-----+ +----------+ +-----+-----+ +-----+-----+
 |     |     | |    1     | |     |  2  | |  1  |  2  |
 |  1  |  2  | +----------+ +  1  +-----+ |-----+-----+
 |     |     | |    2     | |     |  3  | |  4  |  3  |
 +-----+-----+ +----------+ +-----+-----+ +-----+-----+
-{% endpre_whiteboard %}
+```
 
 Nah, karena itu, saya berpikir, kenapa tidak coba untuk bermigrasi menggunakan window manager yang lebih sederhana dalam perilaku membuat layout? Maka saya pun melakukan riset kecil-kecilan, dan pilihan jatuh pada BSPWM.
 
@@ -76,19 +75,20 @@ Awalnya saya sempat mencoba DWM lebih dahulu, namun ternyata kebutuhan saya masi
 
 Kemudian, sampai pada tahap perubahan perilaku saya dalam menyusun Window. Saya lebih banyak menggunakan tilling layout seperti ini.
 
-{% pre_whiteboard %}
+```
 +-----+-----+ +-----+-----+
 |     |     | |     |  2  |
 |  1  |  2  | +  1  +-----+
 |     |     | |     |  3  |
 +-----+-----+ +-----+-----+
-{% endpre_whiteboard %}
+```
 
 Karena kebutuhan yang lebih sederhana, maka saya pun merasa cukup untuk menggunakan DWM tanpa perlu melakukan banyak *patching*. Karena saya sendiri masih kesulitan apabila memasang terlalu banyak *patching*.
 
 Saya lebih banyak menggunakan model tilling layout yang mana window ke-1 lebih sering digunakan. Maka ini sangat cocok dengan filosofi "Master & Stack" milik DWM.
 
 Eits! Namun, bukan berarti DWM hanya sesederhana itu. Buat yang menggemari kompleksitas dalam menggunakan Tilling Window Manager, kalian masih dapat meracik DWM sesuai keinginan yang kalian perlukan dengan menambah *patch*.
+
 
 # Patching
 
@@ -97,59 +97,58 @@ Ada banyak sekali daftar *patch* yang tersedia.
 Namun, jujur saja, saya tidak sanggup mengujicobanya satu persatu saat ini. Dari sekian banyak *patch* yang tesedia, saya memilah-milah, kira-kira *patch* mana saja yang saya benar-benar perlukan. Kenapa saya memilah-milah? Ada beberapa alasan, diantaranya:
 
 1. Dengan banyaknya *patch* yang tersedia, saya tidak ingin dibingungkan dengan fungsi yang sama namun saling tumpang tindih.
-2. Mengelola banyak *patch* sangat melelahkan. Mungkin dikarenakan saya belum memahami, bagaimana *best practice* dalam mengelola dan mengaplikasikan *patch.
-3. Saya tidak ingin menambahkan *patch* yang saya tidak benar-benar perlukan.
+1. Mengelola banyak *patch* sangat melelahkan. Mungkin dikarenakan saya belum memahami, bagaimana *best practice* dalam mengelola dan mengaplikasikan *patch.
+1. Saya tidak ingin menambahkan *patch* yang saya tidak benar-benar perlukan.
 
-<br>
 Dengan beberapa alasan tersebut, selama tulisan ini dibuat saya ~~hanya~~ menggunakan 24 patches.
 
 Tulisan ini saya update 3 Januari 2021, saya sudah memasang 31 pathces.
 
 1. actualfullscreen
-2. aspectresize
-3. autostart
-4. center
-5. cfacts
-6. cfacts-dragcfact
-7. fixborders
-8. focusmaster
-9. focusonclick
-10. focusonnetactive
-11. moveresize
-12. movestack
-13. movethrow
-14. nmaster-sym
-15. noborder
-16. pertag
-17. resetlayout
-18. resizecorners
-19. ru-bottomstack
-20. ru-centeredmaster
-21. ru-fibonacci
-22. ru-gaps
-23. savefloats
-24. scratchpad
-25. status2d
-26. statusallmons
-27. sticky
-28. warp
-29. wasfocus
-30. xrdb
-31. zoomswap
+1. aspectresize
+1. autostart
+1. center
+1. cfacts
+1. cfacts-dragcfact
+1. fixborders
+1. focusmaster
+1. focusonclick
+1. focusonnetactive
+1. moveresize
+1. movestack
+1. movethrow
+1. nmaster-sym
+1. noborder
+1. pertag
+1. resetlayout
+1. resizecorners
+1. ru-bottomstack
+1. ru-centeredmaster
+1. ru-fibonacci
+1. ru-gaps
+1. savefloats
+1. scratchpad
+1. status2d
+1. statusallmons
+1. sticky
+1. warp
+1. wasfocus
+1. xrdb
+1. zoomswap
 
-<br>
 Saya meracik semua *patches* tersebut menjadi Git branches. Masing-masing *patch*, memiliki satu branch. Setelah itu, untuk mengcompila mejadi dwm yang utuh, saya menggunakan bantuan beberapa script. Script ini bertugas mengautomatisasi proses yang berulang-ulang. Tujuannya jelas untuk mempermudah saya agar tidak kelelahan berlama-lama depan laptop.
+
 
 ## Bagaimana Cara Patching?
 
-Seperti yang dijelaskan pada website [suckless.org/hacking](https://suckless.org/hacking/){:target="_blank"}. Terdapat 2-3 cara.
+Seperti yang dijelaskan pada website [suckless.org/hacking](https://suckless.org/hacking/). Terdapat 2-3 cara.
 Namun, karena saya menggunakan git, maka, saya akan memanfaatkan cara *patching* menggunakan git.
 
 **Menggunakan Git Apply**
 
-{% shell_user %}
-git apply path/to/patch.diff
-{% endshell_user %}
+```
+$ git apply path/to/patch.diff
+```
 
 Nah, kalau cara pertama tidak berhasil, lakukan cara manual.
 
@@ -158,7 +157,6 @@ Nah, kalau cara pertama tidak berhasil, lakukan cara manual.
 Biasanya manual patching dilakukan apabila patching tersebut tidak dibuat dengan versi master yang sama dengan master yang kita miliki.
 
 Manula patching adalah melakukan patching dengan meng-copy-kan baris demi baris yang ada di dalam *patch* ke dalam file-file yang berkaitan di dalam direktori dwm kita.
-
 
 
 ## Bagaimana Cara Compiling?
@@ -174,27 +172,28 @@ Nah! untuk mempermudah proses *merging* dan *compiling*, saya menggunakan bantua
 Berikut ini daftar script yang saya gunakan.
 
 1. **suckclean** : untuk mereset master
-2. **suckdiff** : untuk membuat backup branch dalam bentuk *patch* yang tersimpan di `~/.config/suckless/`
-3. **suckmerge2** : untuk me-*merge*-kan branch-branch terpilih ke master branch, sekaligus mengcompilenya
+1. **suckdiff** : untuk membuat backup branch dalam bentuk *patch* yang tersimpan di `~/.config/suckless/`
+1. **suckmerge2** : untuk me-*merge*-kan branch-branch terpilih ke master branch, sekaligus mengcompilenya
 
 Nah, berikut ini adalah isi dari script-script tersebut.
+
 
 # Suckless Script
 
 Created by: HexDSL
 
-{% highlight_caption suckclean %}
-{% highlight bash linenos %}
+```bash
+!filename: suckclean
 #!/usr/bin/env bash
 
 make clean &&
 rm -f config.h && git reset --hard origin/master
-{% endhighlight %}
+```
 
 Created by: HexDSL
 
-{% highlight_caption suckdiff %}
-{% highlight bash linenos %}
+```bash
+!filename: suckdiff
 #!/usr/bin/env bash
 
 git checkout master &&
@@ -212,12 +211,12 @@ for branch in $(git for-each-ref --format='%(refname)' refs/heads/ | cut -d'/' -
 		git diff master..$branch > "${diffdir}${project}_${branch}.diff"
 	fi
 done
-{% endhighlight %}
+```
 
-Created by: BanditHijo, versi terbaru [di sini](https://github.com/bandithijo/sucklessthing/blob/master/suckmerge2){:target="_blank"}
+Created by: BanditHijo, versi terbaru [di sini](https://github.com/bandithijo/sucklessthing/blob/master/suckmerge2)
 
-{% highlight_caption suckmerge2 %}
-{% highlight ruby linenos %}
+```bash
+!filename: suckmerge2
 #!/usr/bin/env ruby
 
 # Suckmerge2 was inspired by suckmerge by HexDSL. This script has functionality
@@ -408,21 +407,20 @@ if dir_name == 'dwm' && (option == '-i' || second_option == 'i')
   +----------------------------------------------------------------------+
   "
 end
-{% endhighlight %}
+```
 
 Cara penggunannya gampang. Saya akan tuliskan dalam bentuk runutan.
 
 1. Setelah selesai meracik *patch* di dalam masing-masing branch, kembali ke master branch.
-2. Jalankan [`suckmerge2`](https://github.com/bandithijo/sucklessthing/){:target="_blank"}*
-3. Apabila berhasil, restart dwm.
-4. Saat ini master branch dalam keadaan "kotor", jalankan [`suckclean`](https://github.com/bandithijo/sucklessthing/){:target="_blank"}* untuk mereset dan membersihkannya.
-5. Untuk mengedit *patch* branch dengan cara `git checkout <nama_branch>`, wajib menjalankan `suckclean` terlebih dahulu.
+1. Jalankan [`suckmerge2`](https://github.com/bandithijo/sucklessthing/)*
+1. Apabila berhasil, restart dwm.
+1. Saat ini master branch dalam keadaan "kotor", jalankan [`suckclean`](https://github.com/bandithijo/sucklessthing/)* untuk mereset dan membersihkannya.
+1. Untuk mengedit *patch* branch dengan cara `git checkout <nama_branch>`, wajib menjalankan `suckclean` terlebih dahulu.
 
-\*Klik untuk download
+\* Klik untuk download
 
 Apabila terdapat perubahan di dalam branch *patch*, ulangi lagi dari langkah pertama. Mudah bukan?
 
-<br>
 **Apakah akan terdapat conflict?**
 
 Jelas! Pasti akan ada kalau kita menggunakan banyak *patch*.
@@ -433,32 +431,37 @@ Bisa dilihat, beberapa *patch* branch yang berkonflik pada script **suckmerge2**
 
 Nah, berikut ini adalah tangkapan layar dari DWM yang saat ini saya pergunakan.
 
-{% image https://i.postimg.cc/8kyg5LVJ/gambar-01.png | 1 | RicingShow: DeWayEm Project 2020-05 %}
+![Gambar 1](https://i.postimg.cc/8kyg5LVJ/gambar-01.png)
 
-Repositorinya dapat dilihat [di sini](https://github.com/bandithijo/dwm){:target="_blank"}.
+Gambar 1. RicingShow: DeWayEm Project 2020-05
+
+Repositorinya dapat dilihat [di sini](https://github.com/bandithijo/dwm).
+
 
 # Tambahan
+
 
 ## Patch from User
 
 **sracthpad by Gaspar Vardanyan**
 
-Sejauh yang saya ingat, ada satu *patch* yang saya gunakan namun bukan dari halaman website suckless. Yaitu [**GasparVardanyan/dwm-scratchpad**](https://github.com/GasparVardanyan/dwm-scratchpad){:target="_blank"}.
+Sejauh yang saya ingat, ada satu *patch* yang saya gunakan namun bukan dari halaman website suckless. Yaitu [**GasparVardanyan/dwm-scratchpad**](https://github.com/GasparVardanyan/dwm-scratchpad).
 
 *Patch* scratchpad ini berbeda dengan scratchpad yang ada pada website suckless. Perilaku dari scratphad ini mirip dengan yang ada di i3WM. Dimana, window yang dijadikan scratphad akan memiliki kemampuan untuk menghilang dan muncul kembali, layaknya seorang ninja -- apasih wkwk.
 
-<br>
 **centerkeybinding by fake_larry**
 
 Patch ini memungkinkan kita untuk memindahkan floating window ke posisi tengah dari screen.
 
-Saya mendapatkan patch ini dari post Reddit yang berjudul ["dwm center floating window with multiple monitors"](https://www.reddit.com/r/suckless/comments/cphe3h/dwm_center_floating_window_with_multiple_monitors/){:target="_blank"}.
+Saya mendapatkan patch ini dari post Reddit yang berjudul ["dwm center floating window with multiple monitors"](https://www.reddit.com/r/suckless/comments/cphe3h/dwm_center_floating_window_with_multiple_monitors/).
 
 Di dalam post tersebut, terdapat balasan dari user yang bernama **fake_larry**, dan memberikan jawaban berupa blok kode dari sebuah patch.
 
-Kalian dapat menyalin patch tersebut atau dapat mendownload versi yang sudah saya jadikan file [di sini](https://github.com/bandithijo/sucklessthing/blob/master/patches/dwm/dwm-centerkeybinding-20190813-4adc917.diff){:target="_blank"}.
+Kalian dapat menyalin patch tersebut atau dapat mendownload versi yang sudah saya jadikan file [di sini](https://github.com/bandithijo/sucklessthing/blob/master/patches/dwm/dwm-centerkeybinding-20190813-4adc917.diff).
+
 
 ## Personal Branch
+
 
 ### config branch
 Saya membuat branch yang isinya kurang lebih seperti personal konfigurasi untuk menampung beberapa pengaturan seperti font, border, gap, window rules, dan keybind.
@@ -467,26 +470,26 @@ Jadi, saya menambahkan 1 branch yang bukan termasuk dwm *patch*, yaitu:
 
 Branch ini berisi konfigurasi global, seperti font, border, gaps, warn, dll yang sebagian besar berada pada file **config.def.h** atau **dwm.c**.
 
-{% box_info %}
-<p markdown=1>Hanya sekedar saran. Apabila di dalam <i>patch</i> terdapat patch yang mengarahkan ke file **config.def.h**, sebaiknya tidak perlu diikutkan dan langsung dipindahkan ke **branch config** pada file **config.def.h**.</p>
-{% endbox_info %}
+> INFO
+> 
+> Hanya sekedar saran. Apabila di dalam *patch* terdapat patch yang mengarahkan ke file **config.def.h**, sebaiknya tidak perlu diikutkan dan langsung dipindahkan ke **branch config** pada file **config.def.h**.
 
 Berikut ini adalah ilustrasi isi dari branch **config**.
 
 File **config.mk**.
 
-{% highlight_caption config.mk %}
-{% highlight c linenos %}
+```c
+!filename: config.mk
 // ...
 // ...
 X11INC = /usr/local/include
 X11LIB = /usr/local/lib
-{% endhighlight %}
+```
 
 File **config.def.h**.
 
-{% highlight_caption config.def.h %}
-{% highlight c linenos %}
+```c
+!filename: config.def.h
 // ...
 // ...
 static const unsigned int snap      = 5;        /* snap pixel */
@@ -593,15 +596,19 @@ static Key keys[] = {
     { 0,                            0x1008ff11,                spawn,          SHCMD("pamixer --decrease 5") },
     { 0,                            0x1008ff12,                spawn,          SHCMD("pamixer --toggle-mute") },
 };
-{% endhighlight %}
+```
 
-{% box_info %}
-<p markdown="1">Saat ini (2020/09/17), saya sudah tidak lagi mendefinisikan **Custom Keys** di config.def.h yang ada di branch config.</p>
-<p markdown="1">Saya memindahkan, semua *custom keys* tersebut ke **SXHKD**.</p>
-<p markdown="1">Tujuannya, agar saat ingin dimodifikasi, tidak perlu mengcompile ulang dwm.</p>
-<p markdown="1">Selain itu, juga lebih mudah untuk pengaturan fungsi toggling.</p>
-<p markdown=1>Catatan saya dalam menggunakan SXHKD, [**SXHKD, Simple X Hotkey Daemon**](https://bandithijo.github.io/blog/sxhkd-simple-x-hotkey-daemon){:target="_blank"}</p>
-{% endbox_info %}
+> INFO
+> 
+> Saat ini (2020/09/17), saya sudah tidak lagi mendefinisikan **Custom Keys** di config.def.h yang ada di branch config.
+> 
+> Saya memindahkan, semua *custom keys* tersebut ke **SXHKD**.
+> 
+> Tujuannya, agar saat ingin dimodifikasi, tidak perlu mengcompile ulang dwm.
+> 
+> Selain itu, juga lebih mudah untuk pengaturan fungsi toggling.
+> 
+> Catatan saya dalam menggunakan SXHKD, [**SXHKD, Simple X Hotkey Daemon**](https://bandithijo.github.io/blog/sxhkd-simple-x-hotkey-daemon)
 
 
 ## Status Bar
@@ -612,12 +619,14 @@ Saya juga hanya menggunakan top bar saja, yang sebelumnya saya menggunakan top d
 
 Nah, seperti ini tampilan bar yang saya pergunakan sekarang.
 
-{% image https://i.postimg.cc/4NNsVpvT/gambar-02.png | 2 | dwmsatus (custom made) %}
+![Gambar 2](https://i.postimg.cc/4NNsVpvT/gambar-02.png)
+
+Gambar 2. dwmsatus (custom made)
 
 Saya membuat file bernama `~/.local/bin/dwmstatus`. Dan tambahkan *execute permission* `$ chmod +x dwmstatus`.
 
-{% highlight_caption $HOME/.local/bin/dwmstatus %}
-{% highlight bash linenos %}
+```bash
+!filename: $HOME/.local/bin/dwmstatus
 #!/usr/bin/env bash
 
 # For dwmstatus
@@ -625,19 +634,18 @@ while true; do
     xsetroot -name " $($HOME/bin/network-wlan-tfc.sh) $($HOME/bin/cpu-temp.sh) $($HOME/bin/memory.sh) $($HOME/bin/filesystem.sh) $($HOME/bin/volume.sh) $(date +" 0%u%y%m%d%H%M") $($HOME/bin/bat-state.sh) $($HOME/bin/bat-capacity.sh)  BANDITHIJO "
     sleep 1
 done
-{% endhighlight %}
+```
 
 Seperti yang teman-teman lihat, isinya adalah pemanggilan terhadap script lain atau saya sebut saja sebagai module. Saya akan jabarkan di sini masing-masing module tersebut.
 
-{% box_perhatian %}
-<p>Kode-kode di bawah ini, karena keterbatasan dari Blog, sehingga tidak dapat menampilkan simbol-simbol seperti yang ada pada screenshot Gambar 2.</p>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> Kode-kode di bawah ini, karena keterbatasan dari Blog, sehingga tidak dapat menampilkan simbol-simbol seperti yang ada pada screenshot Gambar 2.
 
-<br>
 **network-wlan-tfc.sh** - Created by: BanditHijo
 
-{% highlight_caption network-wlan-tfc.sh %}
-{% highlight bash linenos %}
+```bash
+!filename: network-wlan-tfc.sh
 #!/bin/sh
 
 wlan_card='wlan0'
@@ -668,15 +676,14 @@ elif [ $wlan_offline ];then
 else
     printf " NOADPTR"
 fi
-{% endhighlight %}
+```
 
-Saya menggunakan [**aur/ifstat**](https://aur.archlinux.org/packages/ifstat/){:target="_blank"}.
+Saya menggunakan [**aur/ifstat**](https://aur.archlinux.org/packages/ifstat/).
 
-<br>
 **cpu-temp.sh** - Created by: BanditHijo
 
-{% highlight_caption cpu-temp.sh %}
-{% highlight bash linenos %}
+```bash
+!filename: cpu-temp.sh
 #!/bin/sh
 
 icon=""
@@ -687,13 +694,12 @@ if [ $temp_cpu0 -ge 90 ]; then
 else
     printf "$icon $temp_cpu0°C"
 fi
-{% endhighlight %}
+```
 
-<br>
 **memory.sh** - Created by: BanditHijo
 
-{% highlight_caption memory.sh%}
-{% highlight bash linenos %}
+```bash
+!filename: memory.sh
 #!/bin/sh
 
 icon=""
@@ -706,25 +712,23 @@ if [ $mem_usage -ge 80 ]; then
 else
     printf "$icon ${mem_usage//%}"
 fi
-{% endhighlight %}
+```
 
-<br>
 **filesystem.sh** - Created by: BanditHijo
 
-{% highlight_caption filesystem.sh %}
-{% highlight bash linenos %}
+```bash
+!filename: filesystem.sh
 #!/bin/sh
 
 icon=""
 cap_percentage=$(df -h --output=pcent / | awk 'NR%2==0 {print $0}'  | cut -f 1 -d '%'  | xargs)
 printf "$icon $cap_percentage"
-{% endhighlight %}
+```
 
-<br>
 **volume.sh** - Created by: BanditHijo
 
-{% highlight_caption volume.sh %}
-{% highlight bash linenos %}
+```bash
+!filename: volume.sh
 #!/bin/sh
 
 # PulseAudio
@@ -755,21 +759,20 @@ elif ([ $ou_mute = "false" ] || [ $ou_mute = "on"  ]) && ([ $in_mute = "false" ]
 else
     printf "$icon_ou_off ERROR"
 fi
-{% endhighlight %}
+```
 
-{% highlight_caption $HOME/.local/bin/has_headphone %}
-{% highlight bash linenos %}
+```bash
+!filename: $HOME/.local/bin/has_headphone
 #!/bin/sh
 
 # PulseAudio
 pacmd list-sinks | grep 'Headphones' | awk '{print $10}' | tr -d ')'
-{% endhighlight %}
+```
 
-<br>
 **bat-state.sh** - Created by: BanditHijo
 
-{% highlight_caption bat-state.sh%}
-{% highlight bash linenos %}
+```bash
+!filename: bat-state.sh
 #!/bin/sh
 
 state=$(cat /sys/devices/platform/smapi/BAT0/state)
@@ -782,13 +785,12 @@ elif [ $state = "idle" ]; then
 else
     echo " " # unknown
 fi
-{% endhighlight %}
+```
 
-<br>
 **bat-capacity.sh** - Created by: BanditHijo
 
-{% highlight_caption bat-capacity.sh %}
-{% highlight bash linenos %}
+```bash
+!filename: bat-capacity.sh
 #!/bin/sh
 
 cap=$(cat /sys/devices/platform/smapi/BAT0/remaining_percent)
@@ -805,21 +807,23 @@ elif [ $cap -ge 91 ] && [ $cap -le 100 ]; then
 else
     echo "UNKNWN"
 fi
-{% endhighlight %}
+```
+
 
 ## Autorun
 
-{% box_info %}
-<p markdown="1">**2020/09/20**, menggunakan autostart patch 20200610-cb3f58a.diff.</p>
-<p>Dan juga menggunakan .xinitrc untuk menjalankan beberapa program yang saya perlukan saat startup.</p>
-{% endbox_info %}
+> INFO
+> 
+> **2020/09/20**, menggunakan autostart patch 20200610-cb3f58a.diff.
+> 
+> Dan juga menggunakan .xinitrc untuk menjalankan beberapa program yang saya perlukan saat startup.
 
 Saya menggunakan *patch* autostart untuk menghandle program-program autorun yang dinamis. Yang saya maksudkan sebagai dinamis adalah konfigurasi program mungkin akan mengalami modifikasi sehingga memungkinkan untuk direload ulang ditengah-tengah session.
 
 Kalau hanya menggunakan .xinitrc, tentunya perlu restart session (logout). Namun, dengan patch autostart, kita hanya perlu reload dwm saja.
 
-{% highlight_caption dwm.c %}
-{% highlight c linenos %}
+```c
+!filename: dwm.c
 
 // ...
 // ...
@@ -834,20 +838,20 @@ static char stext[256];
 static int screen;
 // ...
 // ...
-{% endhighlight %}
+```
 
 Perhatikan baris 8 dan 9, disanalah tempat kita akan meletakkan file **autostart.sh** dan **autostart_blocking.sh**.
 
-{% shell_user %}
-mkdir -p ~/.local/share/dwm
-touch ~/.local/share/dwm/autostart_blocking.sh
-touch ~/.local/share/dwm/autostart.sh
-{% endshell_user %}
+```
+$ mkdir -p ~/.local/share/dwm
+$ touch ~/.local/share/dwm/autostart_blocking.sh
+$ touch ~/.local/share/dwm/autostart.sh
+```
 
 Dan ini adalah isi dari file `autostart.sh` yang saya pergunakan.
 
-{% highlight_caption $HOME/.local/share/dwm/autostart.sh %}
-{% highlight bash linenos %}
+```bash
+!filename: $HOME/.local/share/dwm/autostart.sh
 #!/bin/sh
 
 pkill -f "slstatus"; slstatus &
@@ -859,14 +863,14 @@ pkill -f "bash /usr/bin/clipmenud"; pkill -f "clipnotify"; clipmenud &
 pkill -f "flameshot"; flameshot &
 pkill -f "xcompmgr"; xcompmgr &
 pkill -f "lxpolkit"; lxpolkit &
-{% endhighlight %}
+```
 
 **autostart_blocking.sh** saya kosongin.
 
 Kemudian, ini adalah isi dari **xinitrc** yang berhubungan dengan dwm.
 
-{% highlight_caption $HOME/.xinitrc %}
-{% highlight bash linenos %}
+```bash
+!filename: $HOME/.xinitrc
 #!/bin/sh
 
 ## Start GNOME Keyring
@@ -896,29 +900,29 @@ while true; do
    # Log stderror to a file
    /usr/local/bin/dwm 2> ~/.dwm.log
 done
-{% endhighlight %}
+```
 
 
 # Instalasi
 
 Saya menyimpan konfigurasi yang sudah saya buat dalam bentuk branch kemudian saya simpan di GitHub.
 
-Bisa teman-teman lihat [di sini](https://github.com/bandithijo/dwm){:target="_blank"}.
+Bisa teman-teman lihat [di sini](https://github.com/bandithijo/dwm).
 
 Cara pasangnya sangat mudah.
 
 Saya meletakkan source code dari dwm ke direktori **~/.local/src/**.
 
-{% shell_user %}
-git clone https://github.com/bandithijo/dwm.git $HOME/.local/src/dwm
-cd $HOME/.local/src/dwm
-{% endshell_user %}
+```
+$ git clone https://github.com/bandithijo/dwm.git $HOME/.local/src/dwm
+$ cd $HOME/.local/src/dwm
+```
 
 Kalau kita menjalankan,
 
-{% shell_user %}
-git branch
-{% endshell_user %}
+```
+$ git branch
+```
 
 Maka yang ada hanya branch Master.
 
@@ -926,10 +930,10 @@ Kita perlu melakukan `git checkout` ke setiap branch. Karena saya adalah orang y
 
 Saya beri nama **suckchkout**.
 
-Versi terbaru dari **suckchkout** dapat teman-teman temukan [di sini](https://github.com/bandithijo/sucklessthing/blob/master/suckchkout){:target="_blank"}
+Versi terbaru dari **suckchkout** dapat teman-teman temukan [di sini](https://github.com/bandithijo/sucklessthing/blob/master/suckchkout)
 
-{% highlight_caption suckchkout %}
-{% highlight ruby linenos %}
+```ruby
+!filename: suckchkout
 #!/usr/bin/env ruby
 
 branch_list = `git branch -a`
@@ -944,13 +948,13 @@ branches.each do |branch|
 end
 %x(`git checkout master > /dev/null 2>&1`)
 puts '=> All Checkout COMPLETE!'
-{% endhighlight %}
+```
 
 Jangan lupa buat menjadi executeable.
 
-{% shell_user %}
-chmod +x suckchkout
-{% endshell_user %}
+```
+$ chmod +x suckchkout
+```
 
 Lalu jalankan.
 
@@ -1047,33 +1051,24 @@ Pasti tulisan ini akan kadaluarsa dan ketinggalan update terabru dari yang saya 
 
 Untuk mendapatkan versi update terbaru, kalian dapat langsung mengunjungi beberapa GitHub repo yang saya pergunakan.
 
-1. [**dwm**](https://github.com/bandithijo/dwm){:target="_blank"}
-
+1. [**dwm**](https://github.com/bandithijo/dwm) \
     Repo ini adalah repo master dari dwm namun berisi branch-branch yang sudah dipatch. Gunakan **suckmerge2** untuk melakukan compile agar proses membangun dwm menjadi lebih mudah.
 
-2. [**sucklessthing**](https://github.com/bandithijo/sucklessthing/){:target="_blank"}
-
+2. [**sucklessthing**](https://github.com/bandithijo/sucklessthing/) \
     Repo ini berisi script-script yang saya pergunakan untuk membangun/membuild/mengcompile suckless tools seperti dwm, dmenu, slstatus, dll.
-
     Repo ini juga berisi daftar patch yang saya pergunakan.
 
-3. [**dmenu**](https://github.com/bandithijo/dmenu){:target="_blank"}
-
+3. [**dmenu**](https://github.com/bandithijo/dmenu) \
     Repo ini berisi master dmenu dengan branch config yang sudah saya modifikasi.
 
-4. [**slstatus**](https://github.com/bandithijo/slstatus){:target="_blank"}
-
+4. [**slstatus**](https://github.com/bandithijo/slstatus) \
     Repo ini berisi master slstatus dengan branch config yang sudah saya modifikasi.
-
-
-
-
 
 
 # Referensi
 
-1. [suckless.org/](http://suckless.org/){:target="_blank"}
+1. [suckless.org/](http://suckless.org/)
 <br>Diakses tanggal: 2020/04/24
 
-2. [dwm.suckless.org/](https://dwm.suckless.org/){:target="_blank"}
+2. [dwm.suckless.org/](https://dwm.suckless.org/)
 <br>Diakses tanggal: 2020/04/24

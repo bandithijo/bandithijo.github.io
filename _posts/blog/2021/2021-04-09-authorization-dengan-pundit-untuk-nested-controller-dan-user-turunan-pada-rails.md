@@ -19,11 +19,13 @@ description: "Catatan ini mengenai bagaimana cara membuat authorization dengan b
 
 `ruby 3.0.1` `rails 6.1.3.1`
 
+
 # Target
 
 Membatasi antar Author untuk mengedit dan menghapus Article yang bukan miliknya.
 
 Untuk feature authorization tersebut, kita akan gunakan **Pundit** gem.
+
 
 # Sekenario
 
@@ -33,7 +35,9 @@ Kita ingin membuat feature administrasi untuk Author yang menampilkan semua daft
 
 Hanya Author pemilik Article yang dapat mengedit/menghapus Article yang ia miliki.
 
+
 # Eksekusi
+
 
 ## Pasang Pundit Gem
 
@@ -56,6 +60,7 @@ Install.
 ```
 $ bundle install
 ```
+
 
 ## Generate pundit:install
 
@@ -88,6 +93,7 @@ Generator ini akan membuatkan direktori **app/policies** dan juga file bernama *
 ...
 ```
 
+
 ## Include Pundit
 
 Saya akan mengincludekan Pundit pada **application_controller** agar setiap controller turunan dapat menggunakan Pundit.
@@ -98,6 +104,7 @@ class ApplicationController < ActionController::Base
   include Pundit
 end
 ```
+
 
 ## Define pundit_user
 

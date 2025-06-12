@@ -1,22 +1,19 @@
 ---
 layout: 'post'
 title: "Membuat Navigasi Post (Next Prev) pada Jekyll"
-date: 2020-04-18 13:20
+date: '2020-04-18 13:20'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Jekyll']
+tags: ['Jekyll']
 pin:
 hot:
 contributors: []
 description: "Navigasi next & previouse dalam sebuah post mungkin diperlukan untuk memudahkan pengunjung menelusuri blog."
 ---
-
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
 
 # Pendahuluan
 
@@ -26,6 +23,7 @@ Kebetulan sedang iseng mendevelop blog untuk sebuah buletin yang terbit tiap har
 
 Karena blog tersebut adalah blog kedua yang saya buat dengan Jekyll. Maka saya akan mencoba memulai dengna tertib dan lebih rapi. Tidak seperti saat membuat blog ini yang lebih ke "asal jadi dulu". Ahahaha.
 
+
 # Permasalahan
 
 Post pada sebuah blog, pasti akan runut berdasarkan waktu dibuatnya.
@@ -34,16 +32,16 @@ Kalau berdasarkan *user experience*, setelah pembaca membaca artikel pada sebuah
 
 Maka dari itu, kita perlu untuk memasang, setidaknya menu navigasi untuk ke post sebelumnya atau ke post selanjutnya.
 
+
 # Penyelesaian Masalah
 
 Saya akan membuat sebuah file bernama `page-navigation.html` di dalam direktori `_includes`.
 
 Tujuannya agar lebih modular. Maksudnya, kita dapat memasang page navigation di mana saja yang kita perlukan, tinggal dipanggil menggunakan `include`.
 
-{% highlight_caption _includes/page-navigation.html %}
-{% highlight liquid linenos %}
-{% raw %}
-<div class="page-navigation mt-5">
+```liquid
+!filename: _includes/page-navigation.html
+{% raw %}<div class="page-navigation mt-5">
   <div class="row d-flex justify-content-between">
     <div class="col-6 text-left">
       {% if page.previous.url %}
@@ -58,7 +56,7 @@ Tujuannya agar lebih modular. Maksudnya, kita dapat memasang page navigation di 
   </div>
 </div>
 {% endraw %}
-{% endhighlight %}
+```
 
 Oh yaa, untuk class dari stylesheet di atas, saya menggunakan Bootstrap CSS Framework.
 
@@ -68,19 +66,16 @@ Selanjutnya tinggal memangilnya.
 
 Karena saya akan menggunakannya pada halaman/layout post, maka akan saya pasangkan di `_layouts/post.html`.
 
-{% highlight_caption /_layouts/post.html %}
-{% highlight liquid linenos %}
-{% raw %}
-
-...
+```liquid
+!filename: _layouts/post.html
+{% raw %}...
 ...
 
 {% include page-navigation.html %}
 
 ...
 {% endraw %}
-{% endhighlight %}
-
+```
 
 Kelar!
 
@@ -95,13 +90,10 @@ Terima kasih.
 (^_^)
 
 
-
-
-
 # Referensi
 
-1. [blog.webjeda.com/related-post-jekyll/](https://blog.webjeda.com/related-post-jekyll/){:target="_blank"}
+1. [blog.webjeda.com/related-post-jekyll/](https://blog.webjeda.com/related-post-jekyll/)
 <br>Diakses tanggal: 2020/04/18
 
-2. [talk.jekyllrb.com/t/how-to-link-to-next-and-previous-posts-for-same-blog-category/629](https://talk.jekyllrb.com/t/how-to-link-to-next-and-previous-posts-for-same-blog-category/629){:target="_blank"}
+2. [talk.jekyllrb.com/t/how-to-link-to-next-and-previous-posts-for-same-blog-category/629](https://talk.jekyllrb.com/t/how-to-link-to-next-and-previous-posts-for-same-blog-category/629)
 <br>Diakses tanggal: 2020/04/18
