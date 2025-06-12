@@ -1,26 +1,24 @@
 ---
 layout: 'post'
 title: "Membuat Seed Data dari Hash pada Rails"
-date: 2020-01-02 07:46
+date: '2020-01-02 07:46'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Rails']
+tags: ['Rails']
 pin:
 hot:
 contributors: []
 description: "Catatan kali ini tentang cara membuat seed data dari data yang berbentuk hash pada Ruby on Rails."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
-
 # Prerequisite
 
-`Ruby 2.6.3` `Rails 5.2.3` `PostgreSQL 11.5`
+`ruby 2.6.3` `rails 5.2.3` `postgresql 11.5`
+
 
 # Prakata
 
@@ -63,14 +61,15 @@ places = {
 }
 ```
 
+
 # Pemecahan Masalah
 
 Pertama-tama generate dulu fake data untuk experiences.
 
 Saya akan mengenerate sebanyak 100 data.
 
-{% highlight_caption db/seeds.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: db/seeds.rb
 puts "Creating Fake Experiences"
 100.times do
   Experience.create(
@@ -79,12 +78,12 @@ puts "Creating Fake Experiences"
     # ...
   )
 end
-{% endhighlight %}
+```
 
 Setelah jadi, saya akan mengupdate data2 pada experience untuk menambahkan data location dan meeting_point.
 
-{% highlight_caption db/seeds.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: db/seeds.rb
 puts "Creating Fake Experiences"
 # ...
 #   ...
@@ -117,7 +116,7 @@ places = {
     meeting_point: places[places.keys.sample]
   )
 end
-{% endhighlight %}
+```
 
 Nah, tinggal jalankan <code>$ <b>rails db:seed</b></code> dan field location dan meeting_point akan terisi oleh data dari variable hash places tersebut.
 
@@ -158,11 +157,10 @@ Terima kasih.
 (^_^)
 
 
-
 # Referensi
 
-1. [docs.ruby-lang.org/en/2.0.0/Hash.html](https://docs.ruby-lang.org/en/2.0.0/Hash.html){:target="_blank"}
+1. [docs.ruby-lang.org/en/2.0.0/Hash.html](https://docs.ruby-lang.org/en/2.0.0/Hash.html)
 <br>Diakses tanggal: 2020/01/02
 
-2. [launchschool.com/books/ruby/read/hashes](https://launchschool.com/books/ruby/read/hashes){:target="_blank"}
+2. [launchschool.com/books/ruby/read/hashes](https://launchschool.com/books/ruby/read/hashes)
 <br>Diakses tanggal: 2020/01/02

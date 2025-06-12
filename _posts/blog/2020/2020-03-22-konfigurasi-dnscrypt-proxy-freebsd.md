@@ -1,36 +1,36 @@
 ---
 layout: 'post'
 title: "Konfigurasi DNSCrypt-proxy di FreeBSD"
-date: 2020-03-22 20:29
+date: '2020-03-22 20:29'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'FreeBSD']
+tags: ['FreeBSD']
 pin:
 hot:
 contributors: []
 description: "Kali ini adalah catatan mengenai konfigurasi dnscrypt-proxy pada lingkungan FreeBSD."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
-
 # Pendahuluan
 
-Kalau sebelumnya, saya sudah pernah menuliskan mengenai ["Konfigurasi DNSCrypt di Arch Linux"](/blog/konfigurasi-dnscrypt-proxy){:target="_blank"}, maka kali ini masih mengenai konfigurasi DNSCrypt juga namun pada sistem operasi FreeBSD. Woho!
+Kalau sebelumnya, saya sudah pernah menuliskan mengenai ["Konfigurasi DNSCrypt di Arch Linux"](/blog/konfigurasi-dnscrypt-proxy), maka kali ini masih mengenai konfigurasi DNSCrypt juga namun pada sistem operasi FreeBSD. Woho!
 
 Kira-kira awal Maret 2020, saya sudah resmi bermigrasi menggunakan FreeBSD. Sebenarnya beberapa hari setelahnya saya sudah mengkonfigurasi DNSCrypt-proxy agar dapat berjalan di FreeBSD. Namun, gagal. Ahaha.
 
 Konfigurasi DNSCrypt-proxy pada FreeBSD pasti akan berbeda dengan Arch Linux, karena service dijalankan dengan cara yang berbeda. Arch Linux menggunakan systemd sedangkan FreeBSD menggunakan BSD init.
 
-{% box_perhatian %}
-<p>Sebenarnya saya tidak tahu, bagaimana cara yang benar dalam mengkonfigurasi DNSCypt-proxy di FreeBSD. Yang saya lakukan berikut ini adalah hasil buah pemikiran sendiri.</p>
-<p>Maka dari itu, apabila cara yang saya lakukan ternyata tidak tepat, <b>mohon kesediannya untuk memberikan rekomendasi cara yang benar</b>.</p>
-<p>Terima kasih. (^_^)</p>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> Sebenarnya saya tidak tahu, bagaimana cara yang benar dalam mengkonfigurasi DNSCypt-proxy di FreeBSD. Yang saya lakukan berikut ini adalah hasil buah pemikiran sendiri.
+> 
+> Maka dari itu, apabila cara yang saya lakukan ternyata tidak tepat, **mohon kesediannya untuk memberikan rekomendasi cara yang benar**.
+> 
+> Terima kasih. (^_^)
+
 
 # Instalasi
 
@@ -65,9 +65,10 @@ WWW: https://github.com/jedisct1/dnscrypt-proxy
 
 Saya akan menggunakan pkg.
 
-{% shell_user %}
-doas pkg install dnscrypt-proxy2
-{% endshell_user %}
+```
+$ doas pkg install dnscrypt-proxy2
+```
+
 
 # Konfigurasi
 
@@ -144,38 +145,38 @@ Namun, untuk kali ini, mungkin saya kurang bisa memahami pesan rekomendasi untuk
 
 Baik, langsung saja saya mulai dengan menambahkan satu baris konfigurasi pada `/etc/rc.conf`.
 
-{% shell_user %}
-doas vim /etc/rc.conf
-{% endshell_user %}
+```
+$ doas vim /etc/rc.conf
+```
 
-{% highlight_caption /etc/rc.conf %}
-{% highlight conf linenos %}
+```conf
+!filename: /etc/rc.conf
 # ...
 # ...
 
 # dnscrypt-proxy2
 dnscrypt_proxy_mac_portacl_enable="YES"
-{% endhighlight %}
+```
 
 Tujuan dari penambahan ini adalah untuk merubah default port yang akan di-listen dari *default* port 5353 (TCP/UDP) ke port 53 (TCP/UDP) dengan bantuan `mac_portacl` (*network port access control policy*).
 
 Selanjutnya cek file konfigurasi untuk DNSCrypt-proxy.
 
-{% shell_user %}
-doas vim /usr/local/etc/dnscrypt-proxy/dnscrypt-proxy.toml
-{% endshell_user %}
+```
+$ doas vim /usr/local/etc/dnscrypt-proxy/dnscrypt-proxy.toml
+```
 
 Periksa apakah port yang digunakan sudah menggunakan port **53**, kira-kira pada baris 37.
 
-{% highlight_caption /usr/local/etc/dnscrypt-proxy/dnscrypt-proxy.toml %}
-{% highlight toml linenos %}
+```toml
+!filename: /usr/local/etc/dnscrypt-proxy/dnscrypt-proxy.toml
 ## List of local addresses and ports to listen to. Can be IPv4 and/or IPv6.
 ## Example with both IPv4 and IPv6:
 ## listen_addresses = ['127.0.0.1:5353']
 
 listen_addresses = ['127.0.0.1:53']
 
-{% endhighlight %}
+```
 
 Nah, sejauh yang saya pahami pada pesan rekomendasi pasca proses instalasi, kita diminta untuk menambahkan beberapa pengaturan seperti untuk `[ipfw]`, `[pf]`, dan `[unbound]`.
 
@@ -183,35 +184,35 @@ Selanjutnya, kita perlu membuat dns nameserver memiliki alamat `127.0.0.1`. Kala
 
 Cek dengan perintah,
 
-{% shell_user %}
-cat /etc/resolv.conf
-{% endshell_user %}
+```
+$ cat /etc/resolv.conf
+```
 
-{% highlight_caption /etc/resolv.conf %}
-{% highlight conf linenos %}
+```conf
+!filename: /etc/resolv.conf
 nameserver 118.98.44.10
 nameserver 118.98.44.100
 nameserver fe80::1%wlan0
-{% endhighlight %}
+```
 
 Untuk membuat perubahan yang permanen, saya menggunakan `/etc/dhclient.conf`.
 
-{% shell_user %}
-doas vim /etc/dhclient.conf
-{% endshell_user %}
+```
+$ doas vim /etc/dhclient.conf
+```
 
 Tambahkan baris ini,
 
-{% highlight_caption /etc/dhclient.conf %}
-{% highlight conf linenos %}
+```conf
+!filename: /etc/dhclient.conf
 supersede domain-name-servers 127.0.0.1;
-{% endhighlight %}
+```
 
 Selanjutnya, untuk dapat menerapkan konfigurasi ini, kita perlu merestart network.
 
-{% shell_user %}
-doas service netif restart
-{% endshell_user %}
+```
+$ doas service netif restart
+```
 
 Nah, sekarang coba **restart** terlebih dahulu. Agar konfigurasi yang kita pasang pada file `/etc/rc.conf` dapat dijalankan.
 
@@ -219,9 +220,9 @@ Setelah itu, saat ini kita tidak dapat melakukan ping keluar. Tapi jangan khawat
 
 Coba periksa status dari service DNSCrypt-proxy.
 
-{% shell_user %}
-doas service dnscrypt-proxy onestatus
-{% endshell_user %}
+```
+$ doas service dnscrypt-proxy onestatus
+```
 
 Hasilnya akan,
 
@@ -231,9 +232,9 @@ dnscrypt_proxy is not running.
 
 Kalau kita coba untuk menjalankannya.
 
-{% shell_user %}
-doas service dnscrypt-proxy onestart
-{% endshell_user %}
+```
+$ doas service dnscrypt-proxy onestart
+```
 
 Hasilnya akan tetap sama.
 
@@ -245,9 +246,9 @@ dnscrypt_proxy is not running.
 
 Lantas saya mencoba menjalankan DNSCrypt-proxy via Terminal dengan mengkaitkan dengan file config.
 
-{% shell_user %}
-doas dnscrypt-proxy -config /usr/local/etc/dnscrypt-proxy/dnscrypt-proxy.toml
-{% endshell_user %}
+```
+$ doas dnscrypt-proxy -config /usr/local/etc/dnscrypt-proxy/dnscrypt-proxy.toml
+```
 
 Nah, outputnya akan seperti ini.
 
@@ -394,9 +395,11 @@ Dan pada akhirnya akan ada output,
 
 Kalau sudah begini, langsung bisa kita gunakan.
 
-Coba lakukan pengetesan dengan [**dnsleaktest.com**](https://www.dnsleaktest.com/){:target="_blank"}.
+Coba lakukan pengetesan dengan [**dnsleaktest.com**](https://www.dnsleaktest.com/).
 
-{% image https://i.postimg.cc/zvPYSxkr/gambar-01.png | 1 | Hasil pengetesan dengan dnsleaktest.com<br>(<i>gambar menyusul server postimages sedang maintenance</i>) %}
+![Gambar 1](https://i.postimg.cc/zvPYSxkr/gambar-01.png)
+
+Gambar 1. Hasil pengetesan dengan dnsleaktest.com (*gambar menyusul server postimages sedang maintenance*)
 
 Selanjutnya, saya perlu untuk membuat proses pemanggilan DNSCrypt-proxy ini menjadi otomatis saat sistem pertama kali di jalankan. Agar tidak perlu repot-repot.
 
@@ -404,46 +407,47 @@ Karena saya menggunakan BSPWM, saya hanya perlu menambahkan perintah pemanggilan
 
 Contohnya begini kira-kira untuk punya saya.
 
-{% shell_user %}
-vim ~/.config/bspwm/bspwmrc
-{% endshell_user %}
+```
+$ vim ~/.config/bspwm/bspwmrc
+```
 
 Dan tambahkan command untuk menjalankan DNSCrypt-proxy seperti saat kita menjalankan di atas Terminal.
 
-{% highlight_caption $HOME/.config/bspwm/bspwmrc %}
-{% highlight conf linenos %}
+```conf
+!filename: $HOME/.config/bspwm/bspwmrc
 # ...
 # ...
 sudo dnscrypt-proxy -config /usr/local/etc/dnscrypt-proxy/dnscrypt-proxy.toml &
-{% endhighlight %}
+```
 
 Untuk teman-teman yang menggunakan Desktop Environment atau Window Manager yang lain, silahkan menyesuaikan sendiri yaa. (^_^)
 
-<br>
 Nah, permasalahannya, adalah saya memerlukan **sudo**.
 
 Sementara, saya akan izinkan user saya, agar menjalankan DNSCrypt-proxy tanpa perlu memasukkan password.
 
 Caranya, tambahkan pada `visudo`.
 
-{% shell_user %}
-doas visudo
-{% endshell_user %}
+```
+$ doas visudo
+```
 
-{% highlight_caption visudo %}
-{% highlight conf linenos %}
+```conf
+!filename: visudo
 # ...
 # ...
 
 bandithijo ALL=(ALL) NOPASSWD: /usr/bin/killall,/usr/local/sbin/dnscrypt-proxy
-{% endhighlight %}
+```
 
 Nah, saya juga sekalian menambahkan untuk `killall` agar dapat dijalankan tanpa perlu memasukkan password.
 
-{% box_info %}
-<p><b>visudo</b> hanya akan terdapat pada teman-teman yang menggunakan paket <b>sudo</b> pada FreeBSD.</p>
-<p>Untuk yang menggunakan <b>doas</b>, silahkan menyesuaikan sendiri untuk pengaturannya yaa. (^_^)</p>
-{% endbox_info %}
+> INFO
+> 
+> **visudo** hanya akan terdapat pada teman-teman yang menggunakan paket **sudo** pada FreeBSD.
+> 
+> Untuk yang menggunakan **doas**, silahkan menyesuaikan sendiri untuk pengaturannya yaa. (^_^)
+
 
 # Pesan Penulis
 
@@ -452,18 +456,16 @@ Oke sementara segini dulu.
 Mungkin beberapa hari lagi akan saya update hasil ekperimen menjalankan DNSCrypt-proxy tanpa menggunakan **sudo**.
 
 
-
-
 # Referensi
 
-1. [dnscrypt.info/](https://dnscrypt.info/){:target="_blank"}
+1. [dnscrypt.info/](https://dnscrypt.info/)
 <br>Diakses tanggal: 2020/03/22
 
-2. [dnscrypt.org/](https://www.dnscrypt.org/){:target="_blank"}
+2. [dnscrypt.org/](https://www.dnscrypt.org/)
 <br>Diakses tanggal: 2020/03/22
 
-3. [en.wikipedia.org/wiki/DNSCrypt](https://en.wikipedia.org/wiki/DNSCrypt){:target="_blank"}
+3. [en.wikipedia.org/wiki/DNSCrypt](https://en.wikipedia.org/wiki/DNSCrypt)
 <br>Diakses tanggal: 2020/03/22
 
-4. [github.com/DNSCrypt/dnscrypt-proxy](https://github.com/DNSCrypt/dnscrypt-proxy){:target="_blank"}
+4. [github.com/DNSCrypt/dnscrypt-proxy](https://github.com/DNSCrypt/dnscrypt-proxy)
 <br>Diakses tanggal: 2020/03/22

@@ -1,26 +1,24 @@
 ---
 layout: 'post'
 title: "Membuat Input Select yang Berbasis Rentang pada Rails"
-date: 2020-01-27 11:46
+date: '2020-01-27 11:46'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Rails']
+tags: ['Rails']
 pin:
 hot:
 contributors: []
 description: "Catatan kali ini mengenai cara membuat input selection yang berbasis rentang (range) pada web aplikasi yang dibangun dengan Ruby on Rails."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
-
 # Prerequisite
 
-`Ruby 2.6.3` `Rails 5.2.3` `PostgreSQL 11.5`
+`ruby 2.6.3` `rails 5.2.3` `postgresql 11.5`
+
 
 # Prakata
 
@@ -28,12 +26,13 @@ Catatan kali ini masih dengan Rails sebagai Fullstack.
 
 Mengenai penggunaan Input Select yang mengambil data berupa Range (rentang) dari field yang berisi nilai di dalam database.
 
+
 # Sekenario
 
 Saya mempunyai sebuah tabel bernama Experience. Di dalam tabel ini terdapat field harga (*price*).
 
-{% highlight_caption db/schema.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: db/schema.rb
 create_table "experiences", force: :cascade do |t|
   # ...
   # ...
@@ -41,20 +40,20 @@ create_table "experiences", force: :cascade do |t|
   # ...
   # ...
 end
-{% endhighlight %}
+```
 
 Saya ingin membuat fitur search filter berdasarkan rentang harga tertentu.
 
 Misalkan:
 
-{% pre_whiteboard %}
+```
 - RM 1   - RM 100
 - RM 101 - RM 300
 - RM 301 - RM 500
 - RM 501 - RM 1000
-{% endpre_whiteboard %}
+```
 
-{% image https://i.postimg.cc/Dz531bWD/gambar-01.png | 1 %}
+![Gambar 1](https://i.postimg.cc/Dz531bWD/gambar-01.png)
 
 
 # Pemecahan Masalah
@@ -85,12 +84,13 @@ Terlihat bahwa pada tabel Experience, terdapat 2 buah Experience yang memiliki h
 
 Sekarang saya akan ke controller terlebih dahulu.
 
+
 ## Controller
 
 Pada homepage_controller, saya akan buatkan sebuah instance variable `@search` untuk menampung object dari `params[:q]`.
 
-{% highlight_caption app/controllers/homepage_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/homepage_controller.rb
 class HomepageController < ApplicationController
   def index
     @search = Experience.ransack(params[:q])
@@ -99,12 +99,12 @@ class HomepageController < ApplicationController
   # ...
   # ...
 end
-{% endhighlight %}
+```
 
 Kemudian, pada experiences_controller juga akan dibuatkan instance variable yang sama.
 
-{% highlight_caption app/controllers/experiences_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/experiences_controller.rb
 class ExperiencesController < ApplicationController
   # Memanggil method convert_string_into_range, hanya pada action index
   before_action :convert_string_into_range, only: [:index]
@@ -130,24 +130,26 @@ class ExperiencesController < ApplicationController
     end
   end
 end
-{% endhighlight %}
+```
 
 Selanjutnya, pada routes.
+
 
 ## Routes
 
 Seperti biasa, kita memberikan route untuk action index dari homepage_controller.
 
-{% highlight_caption config/routes.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: config/routes.rb
 Rails.application.routes.draw do
   root to: 'homepage#index'
   # ...
   # ...
 end
-{% endhighlight %}
+```
 
 Nah, kalo sudah, tinggal buat view template.
+
 
 ## View Template
 
@@ -155,8 +157,8 @@ Contoh blok html di bawah ini hanya sebagai dummy.
 
 Hanya blok code ERB saja yang perlu dilihat.
 
-{% highlight_caption app/views/homepage/index.html %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/homepage/index.html
 <%= search_form_for @search, url: experiences_path do |f| %>
   <div class="position-relative">
     <div class="row column-search">
@@ -192,7 +194,7 @@ Hanya blok code ERB saja yang perlu dilihat.
     </div>
   </div>
 <% end %>
-{% endhighlight %}
+```
 
 Pada contoh di atas, saya mempassing nilai dari form search ini ke dalam instance variable `@search` dan mengarahkan hasil outputnya pada halaman experience index `experiences_path`.
 
@@ -227,11 +229,10 @@ Terima kasih
 (^_^)
 
 
-
 # Referensi
 
-1. [apidock.com/rails/v4.2.7/ActionView/Helpers/FormOptionsHelper/options_for_select](https://apidock.com/rails/v4.2.7/ActionView/Helpers/FormOptionsHelper/options_for_select){:target="_blank"}
+1. [apidock.com/rails/v4.2.7/ActionView/Helpers/FormOptionsHelper/options_for_select](https://apidock.com/rails/v4.2.7/ActionView/Helpers/FormOptionsHelper/options_for_select)
 <br>Diakses tanggal: 2020/01/27
 
-2. [github.com/activerecord-hackery/ransack/wiki/Basic-Searching#in](https://github.com/activerecord-hackery/ransack/wiki/Basic-Searching#in){:target="_blank"}
+2. [github.com/activerecord-hackery/ransack/wiki/Basic-Searching#in](https://github.com/activerecord-hackery/ransack/wiki/Basic-Searching#in)
 <br>Diakses tanggal: 2020/01/27

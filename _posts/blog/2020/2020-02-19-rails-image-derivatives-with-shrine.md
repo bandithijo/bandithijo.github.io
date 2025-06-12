@@ -1,36 +1,36 @@
 ---
 layout: 'post'
 title: "Membuat Image Derivatives dengan Shrine pada Rails"
-date: 2020-02-19 14:22
+date: '2020-02-19 14:22'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Rails']
+tags: ['Rails', 'Shrine']
 pin:
 hot:
 contributors: []
 description: "Membuat turunan dari original image dapat mempermudah kita membuat diferensiasi terhadap ukuran image yang akan kita gunakan pada masing-msing kebutuhan yang berbeda pada sis frontend. Misalkan, ukuran image untuk thumbnails, menggunakan image dengan ukuran yang lebih kecil dari pada image untuk gallery. Catatan kali ini, akan membahas bagaimana cara membuat image derivatives dengan Shrine gem pada Ruby on Rails."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
-
 # Prerequisite
 
-`Ruby 2.6.3` `Rails 5.2.3` `PostgreSQL 11.5`
+`ruby 2.6.3` `rails 5.2.3` `postgresql 11.5`
+
 
 # Prakata
 
 Pada catatan kali ini saya akan mendokumentasikan proses implementasi image processing dengan Shrine gem pada aplikasi Ruby on Rails.
+
 
 ## Shrine itu apa yaa?
 
 Definisi sederhananya, Shrine adalah *file attachment toolkit* untuk aplikasi Ruby.
 
 Aplikasi Ruby artinya Shrine tidak hanya dapat digunakan oleh aplikasi yang dibuat dengan *Ruby web framework* seperti Ruby on Rails, melainkan dapat pula digunakan pada *Ruby web framework* yang lain seperti Sinatra, Hanami, Roda, Cuba, Grape.
+
 
 ## Kenapa memilih menggunakan Shrine?
 
@@ -41,10 +41,10 @@ Shrine memiliki beberapa keuntungan diantaranya:
 3. Cloud storage, dukungan penyimpanan files yang berada di local disk, AWS S3, Google Cloud, Cloudinary dan lainnya
 4. Persistence integrations, bekerja dengan baik pada Sequel, ActiveRecord, ROM, Hanami dan Mongoid serta lainnya
 5. Flexible processing, mengenerate thumbnail eagerly atau onthe-fly dengan menggunakan imageMagick atau libvips
-6. [dst](https://github.com/shrinerb/shrine){:target="_blank"}
+6. [dst](https://github.com/shrinerb/shrine)
 
-<br>
 Nah, pada catatan kali ini, saya akan membahas spesifik mengenai poin ke 5, **Flexible processing** atau lebih khusus ke **File processing**, atau lebih khusus lagi adalah **Image Processing**  yang akan digunakan untuk menggenerate *set of thumbnails*, atau dalam kata lain *image derivatives* (turunan gambar) dari gambar dengan ukuran asli yang diupload oleh user.
+
 
 # Sekenario
 
@@ -54,18 +54,21 @@ Namun, ternyata pengguna mengupload gambar dengan ukuran yang besar-besar, tentu
 
 Untuk mengakali ini, saya memanfaatkan fungsi *image processing* yang dapat dikonfigurasi di dalam Shrine untuk menggenerate *set of thumbnails* sesuai kebutuhan, misal dalam 3 ukuran (small, medium dan large).
 
+
 # Pemecahan Masalah
+
 
 ## Pemasangan Shrine
 
 Saya sudah memasang Shrine ke dalam Gemfile aplikasi saya.
 
-{% highlight_caption Gemfile %}
-{% highlight ruby linenos %}
+```ruby
+!filename: Gemfile
 # ...
 # ...
 gem "shrine", "~> 3.0"
-{% endhighlight %}
+```
+
 
 ## Pemasangan Image Processing
 
@@ -75,34 +78,34 @@ Pada catatan kali ini saya tidak menjelaskan mengenai penggunaan libvips.
 
 **Pada Arch Linux**
 
-{% shell_user %}
-sudo pacman -S imagemagick
-{% endshell_user %}
-
+```
+$ sudo pacman -S imagemagick
+```
 
 Untuk distribusi yang lain, silahkan mencari paket ImageMagick yang tersedia pada repository distro masing-masing.
 
 Selanjutnya tambahkan `image_processing` pada Gemfile.
 
-{% highlight_caption Gemfile %}
-{% highlight ruby linenos %}
+```ruby
+!filename: Gemfile
 # ...
 # ...
 gem 'image_processing', '~> 1.8'
-{% endhighlight %}
+```
 
 Install gem yang baru saja kita pasang.
 
-{% shell_user %}
-bundle install
-{% endshell_user %}
+```
+$ bundle install
+```
+
 
 ## Konfigurasi Initializer Shrine
 
 Tambahkan plugin **derivatives** pada Shrine initializer.
 
-{% highlight_caption config/initializers/shrine.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: config/initializers/shrine.rb
 # ...
 # ...
 # ...
@@ -112,16 +115,17 @@ Shrine.plugin ...
 Shrine.plugin ...
 Shrine.plugin :derivatives
 Shrine.plugin :default_url
-{% endhighlight %}
+```
 
 Saya juga menambahkan plugin **default_url** agar image yang belum memiliki turunan, dapat menggunakan original image.
+
 
 ## Models
 
 Selanjutnya saya akan menambahkan fungsi untuk *eager processing* atau *derivatives processing* pada model image uploader.
 
-{% highlight_caption app/models/image_uploader.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/models/image_uploader.rb
 require "image_processing/mini_magick"
 
 class ImageUploader < Shrine
@@ -146,7 +150,7 @@ class ImageUploader < Shrine
     file&.url if derivative
   end
 end
-{% endhighlight %}
+```
 
 Saya rasa, pada blok *eager processing / derivatives processing* sudah dapat dipahami yaa.
 
@@ -158,8 +162,8 @@ Namun, saya sempat membaca kalau libvips dapat memproses lebih ringan dan lebih 
 
 Model `image_uploader.rb` ini tentunya akan dipanggil pada model-model yang memiliki field `image_data:text` atau dengan nama yang lain namun berakhiran `_data:text`, caranya dengan menambahkan include seperti di bawah ini.
 
-{% highlight_caption app/models/nama_model.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/models/nama_model.rb
 class NamaModel < ApplicationRecord
   # ...
   # ...
@@ -172,7 +176,8 @@ class NamaModel < ApplicationRecord
   # ...
   # ...
 end
-{% endhighlight %}
+```
+
 
 ## Controller
 
@@ -180,8 +185,8 @@ Selanjutnya, pada controller yang menggunakan image uploader, saya akan menambah
 
 Misal, saya memiliki posts controller.
 
-{% highlight_caption app/controllers/admin/posts_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/admin/posts_controller.rb
 class Admin::PostsController < AdminsController
   def index
     # ...
@@ -236,12 +241,12 @@ class Admin::PostsController < AdminsController
     params.require(:post).permit(:title, :content, :image)
   end
 end
-{% endhighlight %}
+```
 
 **Gimana kalau field `image_data` berada pada tabel yang berelasi?**
 
-{% highlight_caption app/controllers/admin/experiences_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/admin/experiences_controller.rb
 class Admin::ExperiencesController < AdminsController
 
   def index
@@ -297,7 +302,8 @@ class Admin::ExperiencesController < AdminsController
     params.require(:experience).permit(..., ..., ...)
   end
 end
-{% endhighlight %}
+```
+
 
 ## Views
 
@@ -307,8 +313,8 @@ Sekarang cara memanggilnya pada view template.
 
 Perhatikan bagian `image_tag`.
 
-{% highlight_caption app/views/public/posts/index.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/public/posts/index.html.erb
 <!-- Post list -->
 <% @posts.each do |post| %>
   <div class="row">
@@ -331,11 +337,11 @@ Perhatikan bagian `image_tag`.
   </div>
 <% end %>
 <!-- END Post list -->
-{% endhighlight %}
+```
 
 Saya menggunakan bentuk `image_tag` seperti ini,
 
-```erb
+```eruby
 <%= image_tag (post.image.present? ? post.image_url(:small) : "img-default.jpg") %>
 ```
 
@@ -351,13 +357,12 @@ Saya sudah menambahkan plugin **default_url** pada Shrine initializer, yang berg
 
 Bisa saja, tidak perlu menambahkan plugin **default_url**, namun pada `image_tag` akan menjadi 3 kondisi seperti ini,
 
-```erb
+```eruby
 <%= image_tag (post.image_url(:small) || post.image_url || "img-default.jpg") %>
 ```
 
 Atau teman-teman dapat pula membuat view helper sendiri untuk menghandlenya.
 
-<br>
 Nah, contoh blok kode di atas adalah untuk membuat tampilan thumbnail dari artikel list yang ad di posts#index. Karena itu, saya menggunakan ukuran `:small`.
 
 Berdasarkan image turunan yang saya definikan di dalam model image_uploader, terdapat 3 ukuran, `:small`, `:medium`, dan `:large`.
@@ -365,6 +370,7 @@ Berdasarkan image turunan yang saya definikan di dalam model image_uploader, ter
 Tinggal dikondisikan saja, ukuran-ukuran mana saja yang akan digunakan pada template.
 
 Misal pada bagian detail artikel, saya menggunakan ukuran `:medium`. Lalu apabila gambar diklik, gambar akan menampilkan ukuran `:large`.
+
 
 # Tambahan
 
@@ -378,8 +384,8 @@ Saya akan buat direktori baru bernama `script` dan membuat file baru bernama `de
 
 Namanya sengaja saya buat keren. Biar sedikit memprovokasi.
 
-{% highlight_caption script/derivatives_bomb.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: script/derivatives_bomb.rb
 # WHAT IS THIS?
 # This script is for adding derivatives in existing photos purposes
 # Existing photos means, photos that had been on server before image
@@ -456,13 +462,13 @@ d8888b.  .d88b.  d8b   db d88888b db
 88  .8D `8b  d8' 88  V888 88.     db
 Y8888D'  `Y88P'  VP   V8P Y88888P YP
 """
-{% endhighlight %}
+```
 
 Cara menjalankannya sangat mudah,
 
-{% shell_user %}
-rails runner script/derivatives_bomb.rb
-{% endshell_user %}
+```
+$ rails runner script/derivatives_bomb.rb
+```
 
 Tunggu prosesnya sampai selesai.
 
@@ -492,6 +498,7 @@ Yah, bagaimanapun script ini masih jauh dari sempurna. Masih remah-remah biskuit
 
 Namun, cukup berguna bagi saya.
 
+
 # Pesan Penulis
 
 Catatan ini masih jauh dari kata sempurna.
@@ -509,18 +516,16 @@ Terima kasih.
 (^_^)
 
 
-
-
 # Referensi
 
-1. [github.com/shrinerb/shrine](https://github.com/shrinerb/shrine){:target="_blank"}
+1. [github.com/shrinerb/shrine](https://github.com/shrinerb/shrine)
 <br>Diakses tanggal: 2020/02/19
 
-2. [github.com/janko/image_processing](https://github.com/janko/image_processing){:target="_blank"}
+2. [github.com/janko/image_processing](https://github.com/janko/image_processing)
 <br>Diakses tanggal: 2020/02/19
 
-3. [shrinerb.com/docs/processing](https://shrinerb.com/docs/processing){:target="_blank"}
+3. [shrinerb.com/docs/processing](https://shrinerb.com/docs/processing)
 <br>Diakses tanggal: 2020/02/19
 
-4. [shrinerb.com/docs/changing-derivatives](https://shrinerb.com/docs/changing-derivatives){:target="_blank"}
+4. [shrinerb.com/docs/changing-derivatives](https://shrinerb.com/docs/changing-derivatives)
 <br>Diakses tanggal: 2020/02/19

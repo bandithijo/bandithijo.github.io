@@ -15,12 +15,10 @@ contributors: []
 description: "Bagaimana memasangkan pagination pada web aplikasi yang dibangun menggunakan Ruby on Rails. Kali ini, saya akan menggunakan gem yang mengklaim dirinya sebagai salah satu gem tercepat dan teringan diantara gem-gem pagination yang lain. yaitu, Pagy."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
-
 # Prerequisite
 
-`Ruby 2.6.3` `Rails 5.2.3` `PostgreSQL 11.5`
+`ruby 2.6.3` `rails 5.2.3` `postgresql 11.5`
+
 
 # Prakata
 
@@ -32,11 +30,12 @@ Bos ditempat saya bekerja, pernah membagikan sebuah tulisan mengenai perbandinga
 2. Will Paginate
 3. Pagy
 
+
 # Kenapa Pagy?
 
 Coba teman-teman melihat sebentar pada artikel mengenai perbandingan diantara 3 pagination gems tersebut.
 
-Cek [di sini](https://ddnexus.github.io/pagination-comparison/gems.html){:target="_blank"}.
+Cek [di sini](https://ddnexus.github.io/pagination-comparison/gems.html).
 
 Pada artikel tersebut, Pagy benar-benar tidak terkalahkan.
 
@@ -52,52 +51,52 @@ Dari artikel tersebut, hasil yang diberika Pagy sangat mengintimidasi pembaca ya
 
 Setelah membaca-baca dan mencoba-coba sedikit, saya pun memutuskan untuk memigrasikan pagination pada proyek yang sedang saya kerjakan yang sebelumnya menggunakan Kaminari.
 
+
 # Migrasi Kaminari to Pagy
 
 Langkah-langkah migrasi yang saya lakukan adalah, saya tidak langsung menghapus Kaminari gem dari Gemfile. Namun, menambahkan Pagy gem.
 
-{% highlight_caption Gemfile %}
-{% highlight ruby linenos %}
-
+```ruby
+!filename: Gemfile
 # ...
 # ...
 gem 'kaminari',      '~> 1.1', '>= 1.1.1'
 gem 'pagy',          '~> 3.7', '>= 3.7.2'
 # ...
 # ...
-{% endhighlight %}
+```
 
 Jalankan bundle install
 
-{% shell_user %}
-bundle install
-{% endshell_user %}
+```
+$ bundle install
+```
 
 Setelah selesai, tambahkan module **Pagy::Backend** dan **Pagy::Frontend**.
 
-{% highlight_caption app/controllers/application_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/application_controller.rb
 class ApplicationController < ActionController::Base
   include Pagy::Backend
 
   ...
   ...
 end
-{% endhighlight %}
+```
 
-{% highlight_caption app/helpers/application_helper.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/helpers/application_helper.rb
 module ApplicationHelper
   include Pagy::Frontend
   ...
   ...
 end
-{% endhighlight %}
+```
 
 Kemudian, tambahkan pagy initializer apabila diperlukan.
 
-{% highlight_caption config/initializers/pagy.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: config/initializers/pagy.rb
 # encoding: utf-8
 # frozen_string_literal: true
 
@@ -268,7 +267,7 @@ Kemudian, tambahkan pagy initializer apabila diperlukan.
 
 # Default i18n key
 # Pagy::VARS[:i18n_key] = 'pagy.item_name'   # default
-{% endhighlight %}
+```
 
 Secara default, semua konfigurasinya dalam keadaan terdisable.
 
@@ -278,8 +277,8 @@ Misalkan seperti default items per satu halaman, secara default berjumlah 20.
 
 Atau contoh lain, untuk frontend.
 
-{% highlight_caption config/initializers/pagy.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: config/initializers/pagy.rb
 # ...
 # ...
 
@@ -303,9 +302,10 @@ require 'pagy/extras/bootstrap'
 
 # ...
 # ...
-{% endhighlight %}
+```
 
 Saya menggunakan bootstrap, maka saya memilih frontend extra untuk Bootstrap theme, agar tampilan pagination pada view template saya mengunakan Bootstrap theme.
+
 
 # Controller
 
@@ -313,8 +313,8 @@ Selanjutnya pada controller, bisa memigrasikan object query yang menggunakan Kam
 
 **Kaminary**
 
-{% highlight_caption app/controllers/admin/users_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/admin/users_controller.rb
 class Admin::UsersController < AdminsController
   def index
     @users = User.order(id: :desc).page(params[:page])
@@ -322,12 +322,12 @@ class Admin::UsersController < AdminsController
 
   # ...
 end
-{% endhighlight %}
+```
 
 **Pagy**
 
-{% highlight_caption app/controllers/admin/users_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/admin/users_controller.rb
 class Admin::UsersController < AdminsController
   def index
     @pagy, @users = pagy(User.order(id: :desc), items: 25)
@@ -335,7 +335,8 @@ class Admin::UsersController < AdminsController
 
   # ...
 end
-{% endhighlight %}
+```
+
 
 # View
 
@@ -343,8 +344,8 @@ Kemudian pada view template, saya akan menambahkan direktori `app/views/pagy/` d
 
 Tujuannya agar mudah untuk melakukan kostumisasi.
 
-{% highlight_caption app/views/pagy/_bootstrap_nav.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/pagy/_bootstrap_nav.html.erb
 <%#
   This template is i18n-ready: if you don't use i18n, then you can replace the pagy_t
   calls with the actual strings ("&lsaquo; Prev", "Next &rsaquo;", "&hellip;").
@@ -369,38 +370,40 @@ Tujuannya agar mudah untuk melakukan kostumisasi.
 <% end                         -%>
 <%#                            -%>  </ul>
 <%#                            -%></nav>
-{% endhighlight %}
+```
 
 Nah, mantap, kalo sudah tinggal merubah helper method yang dimiliki kaminari pada view template.
 
 Pertama-tama, `.total_count`. Ini adalah helper method yang disediakan oleh kaminari untuk mentotal jumlah dari collection.
 
 **Kamniari**
-{% highlight_caption app/views/admin/users/index.html.erb %}
-{% highlight eruby linenos %}
+
+```eruby
+!filename: app/views/admin/users/index.html.erb
 ...
 ...
   <%= @users.total_count %>
 ...
 ...
-{% endhighlight %}
+```
 
 **Pagy**
-{% highlight_caption app/views/admin/users/index.html.erb %}
-{% highlight eruby linenos %}
+
+```eruby
+!filename: app/views/admin/users/index.html.erb
 ...
 ...
   <%= @pagy.count %>
 ...
 ...
-{% endhighlight %}
+```
 
 Kedua, pada bagian paginationnya akan seperti ini.
 
 **Kaminari**
 
-{% highlight_caption app/views/admin/users/index.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/admin/users/index.html.erb
 ...
 ...
   <!-- Kaminari Pagination -->
@@ -410,12 +413,12 @@ Kedua, pada bagian paginationnya akan seperti ini.
   <!-- END Kaminari Pagination -->
 ...
 ...
-{% endhighlight %}
+```
 
 **Pagy**
 
-{% highlight_caption app/views/admin/users/index.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/admin/users/index.html.erb
 ...
 ...
   <!-- Pagy Pagination -->
@@ -425,12 +428,12 @@ Kedua, pada bagian paginationnya akan seperti ini.
   <!-- END Pagy Pagination -->
 ...
 ...
-{% endhighlight %}
+```
 
 Atau seperti ini apabila jumlah halaman hanya satu.
 
-{% highlight_caption app/views/admin/users/index.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/admin/users/index.html.erb
 ...
 ...
   <!-- Pagy Pagination -->
@@ -439,7 +442,7 @@ Atau seperti ini apabila jumlah halaman hanya satu.
   <!-- END Pagy Pagination -->
 ...
 ...
-{% endhighlight %}
+```
 
 Selanjutnya saya hanya perlu merubah semua collection pada controller dan view helper dari Kaminari ke Pagy.
 
@@ -458,15 +461,14 @@ Terima kasih.
 
 # Referensi
 
-1. [ddnexus.github.io/pagination-comparison/gems.html](https://ddnexus.github.io/pagination-comparison/gems.html){:target="_blank"}
+1. [ddnexus.github.io/pagination-comparison/gems.html](https://ddnexus.github.io/pagination-comparison/gems.html)
 <br>Diakses tanggal: 2020/02/20
 
-2. [ddnexus.github.io/pagy/migration-guide](https://ddnexus.github.io/pagy/migration-guide){:target="_blank"}
+2. [ddnexus.github.io/pagy/migration-guide](https://ddnexus.github.io/pagy/migration-guide)
 <br>Diakses tanggal: 2020/02/20
 
-3. [ddnexus.github.io/pagy/](https://ddnexus.github.io/pagy/){:target="_blank"}
+3. [ddnexus.github.io/pagy/](https://ddnexus.github.io/pagy/)
 <br>Diakses tanggal: 2020/02/20
 
-4. [github.com/ddnexus/pagy](https://github.com/ddnexus/pagy){:target="_blank"}
+4. [github.com/ddnexus/pagy](https://github.com/ddnexus/pagy)
 <br>Diakses tanggal: 2020/02/20
-

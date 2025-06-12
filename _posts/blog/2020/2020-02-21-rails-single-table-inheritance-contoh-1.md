@@ -1,26 +1,24 @@
 ---
 layout: 'post'
 title: "Mengenal Single Table Inheritance pada Rails (Contoh 1)"
-date: 2020-02-21 18:58
+date: '2020-02-21 18:58'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Rails']
+tags: ['Rails', 'Single Table Inheritance']
 pin:
 hot:
 contributors: []
 description: "Mengimplementasikan Single Table Inheritance pada web apps yang dibangun dengan Ruby on Rails."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
-
 # Prerequisite
 
-`Ruby 2.6.3` `Rails 5.2.4` `PostgreSQL 11.5`
+`ruby 2.6.3` `rails 5.2.4` `postgresql 11.5`
+
 
 # Prakata
 
@@ -38,7 +36,10 @@ Catatan kali ini adalah contoh pertama.
 
 Kira-kira seperti ini ERD-nya.
 
-{% image https://i.postimg.cc/2yPq01Rv/gambar-01.png | 1 | ERD Single Table Inheritance contacts dengan friends dan emergencies %}
+![Gambar 1](https://i.postimg.cc/2yPq01Rv/gambar-01.png)
+
+Gambar 1. ERD Single Table Inheritance contacts dengan friends dan emergencies
+
 
 # Migrations
 
@@ -46,12 +47,12 @@ Saya membuat dua buah model migration untuk tabel users dan contacts.
 
 **users**
 
-{% shell_user %}
-rails g model user email first_name last_name
-{% endshell_user %}
+```
+$ rails g model user email first_name last_name
+```
 
-{% highlight_caption db/migrations/20200219025008_create_users.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: db/migrations/20200219025008_create_users.rb
 class CreateUsers < ActiveRecord::Migration[5.2]
   def change
     create_table :users do |t|
@@ -62,16 +63,16 @@ class CreateUsers < ActiveRecord::Migration[5.2]
     end
   end
 end
-{% endhighlight %}
+```
 
-<br>
 **contacts**
-{% shell_user %}
-rails g model contact user_id:integer type first_name last_name phone_number
-{% endshell_user %}
 
-{% highlight_caption db/migrations/20200219025125_create_contacts.rb %}
-{% highlight ruby linenos %}
+```
+$ rails g model contact user_id:integer type first_name last_name phone_number
+```
+
+```ruby
+!filename: db/migrations/20200219025125_create_contacts.rb
 class CreateContacts < ActiveRecord::Migration[5.2]
   def change
     create_table :contacts do |t|
@@ -85,7 +86,7 @@ class CreateContacts < ActiveRecord::Migration[5.2]
     add_index :contacts, [:type, :user_id]
   end
 end
-{% endhighlight %}
+```
 
 Bagian penting yang harus ditambahkan adalah,
 
@@ -95,47 +96,49 @@ add_index :contacts, [:type, :user_id]
 
 Kemudian jalankan migration tersebut.
 
-{% shell_user %}
-rails db:migrate
-{% endshell_user %}
+```
+$ rails db:migrate
+```
+
 
 # Models
 
 Setelah migration berhasil dijalankan, saya akan membuat scope pada model contact untuk model friend dan emergency.
 
-{% highlight_caption app/models/contact.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/models/contact.rb
 class Contact < ApplicationRecord
   scope :friends,   -> { where(type: 'Friend') }    # Contact.friends
   scope :emergency, -> { where(type: 'Emergency') } # Contact.emergencies
 end
-{% endhighlight %}
+```
 
 Nah, kemudian tinggal buat kedua model tersebut.
 
-{% highlight_caption app/models/friend.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/models/friend.rb
 class Friend < Contact
   belongs_to :user
 end
-{% endhighlight %}
+```
 
-{% highlight_caption app/models/emergency.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/models/emergency.rb
 class Emergency < Contact
   belongs_to :user
 end
-{% endhighlight %}
+```
 
 Selanjutnya, model user yang memiliki relation `has_many` dengan kedua model tersebut.
 
-{% highlight_caption app/model/user.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/model/user.rb
 class User < ApplicationRecord
   has_many :friends,     class_name: 'Friend'
   has_many :emergencies, class_name: 'Emergency'
 end
-{% endhighlight %}
+```
+
 
 # Controllers
 
@@ -143,8 +146,8 @@ Model sudah jadi, selanjutnya mengatur controller.
 
 Saya akan mulai dari users controller yang tidak perlu ada modifikasi.
 
-{% highlight_caption app/controllers/users_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/users_controller.rb
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
@@ -202,12 +205,12 @@ class UsersController < ApplicationController
     params.require(:user).permit(:first_name, :last_name, :email)
   end
 end
-{% endhighlight %}
+```
 
 Nah, selanjutnya contacts controller yang akan menggunakan object user di dalamnya.
 
-{% highlight_caption app/controllers/contacts_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/contacts_controller.rb
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:edit, :update, :destroy]
 
@@ -272,14 +275,15 @@ class ContactsController < ApplicationController
     )
   end
 end
-{% endhighlight %}
+```
+
 
 # Routes
 
 Pada routes, saya akan menggunakan namespace untuk `:users`.
 
-{% highlight_caption config/routes.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: config/routes.rb
 Rails.application.routes.draw do
   root to: 'users#index'
 
@@ -288,7 +292,7 @@ Rails.application.routes.draw do
     resources :emergencies, controller: :contacts, type: 'Emergency'
   end
 end
-{% endhighlight %}
+```
 
 Dari routes tersebut, saya akan mendapatkan route seperti ini.
 
@@ -320,6 +324,7 @@ edit_user_emergency GET    /users/:user_id/emergencies/:id/edit(.:format)  conta
                     DELETE /users/:id(.:format)                            users#destroy
 ```
 
+
 # Views
 
 Selanjutnya view template.
@@ -345,8 +350,8 @@ Selanjutnya view template.
 
 Yang terpenting adalah users shows.
 
-{% highlight_caption app/views/users/show.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/users/show.html.erb
 ...
 ...
 
@@ -387,12 +392,12 @@ Yang terpenting adalah users shows.
     <% end %>
   </tbody>
 </table>
-{% endhighlight %}
+```
 
 Partial dari `users/show/_table_body`.
 
-{% highlight_caption app/views/users/show/_table_body.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/users/show/_table_body.html.erb
 <tr>
   <td><%= contact.first_name %></td>
   <td><%= contact.last_name %></td>
@@ -403,17 +408,17 @@ Partial dari `users/show/_table_body`.
     <%= link_to 'Delete', [user, contact], method: :delete %>
   </td>
 </tr>
-{% endhighlight %}
+```
 
 Lalu form dari `contacts/_form`.
 
-{% highlight_caption app/views/contacts/_form.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/contacts/_form.html.erb
 <%= form_with(model: [user, contact], local: true) do |form| %>
   ...
   ...
 <% end %>
-{% endhighlight %}
+```
 
 Yang perlu diperhatikan adalah pada bagian kedua partial di atas.
 
@@ -421,7 +426,7 @@ Terdapat `[user, contact]`, karena contact merupakan controller namespace dan ro
 
 Oke, sepertinya segini aja.
 
-Apaila teman-teman ingin melihat detail projectnya lebih jelas, ada di repository GitHub milik saya, [di sini](https://github.com/bandithijo/coba_single_table_inheritance){:target="_blank"}.
+Apaila teman-teman ingin melihat detail projectnya lebih jelas, ada di repository GitHub milik saya, [di sini](https://github.com/bandithijo/coba_single_table_inheritance).
 
 Mudah-mudahan dapat bermanfaat buat teman-teman.
 
@@ -430,18 +435,13 @@ Terima kasih.
 (^_^)
 
 
-
-
-
-
-
 # Referensi
 
-1. [www.driftingruby.com/episodes/single-table-inheritance](https://www.driftingruby.com/episodes/single-table-inheritance){:target="_blank"}
+1. [www.driftingruby.com/episodes/single-table-inheritance](https://www.driftingruby.com/episodes/single-table-inheritance)
 <br>Diakses tanggal: 2020/02/21
 
-2. [guides.rubyonrails.org/routing.html#controller-namespaces-and-routing](https://guides.rubyonrails.org/routing.html#controller-namespaces-and-routing){:target="_blank"}
+2. [guides.rubyonrails.org/routing.html#controller-namespaces-and-routing](https://guides.rubyonrails.org/routing.html#controller-namespaces-and-routing)
 <br>Diakses tanggal: 2020/02/21
 
-3. [api.rubyonrails.org/classes/ActiveRecord/Inheritance.html](https://api.rubyonrails.org/classes/ActiveRecord/Inheritance.html){:target="_blank"}
+3. [api.rubyonrails.org/classes/ActiveRecord/Inheritance.html](https://api.rubyonrails.org/classes/ActiveRecord/Inheritance.html)
 <br>Diakses tanggal: 2020/02/21

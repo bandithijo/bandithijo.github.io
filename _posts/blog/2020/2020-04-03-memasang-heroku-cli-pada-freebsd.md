@@ -1,30 +1,29 @@
 ---
 layout: 'post'
 title: "Memasang Heroku-CLI pada FreeBSD"
-date: 2020-04-03 19:31
+date: '2020-04-03 19:31'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'FreeBSD']
+tags: ['FreeBSD', 'Heroku']
 pin:
 hot:
 contributors: []
 description: "Heroku adalah Cloud Application Platform (PAAS - Platform as a Service) dimana kita sebagai web developer dapat dengan mudah mengkonfigurasi aplikasi yang kita buat agar dapat diakses di internet. Apakah CLI yang disediakan, dapat digunakan pada FreeBSD?"
 ---
 
-resume BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
-
 # Pendahuluan
 
 Heroku adalah *Cloud Application Platform* (PAAS - *Platform as a Service*) dimana kita sebagai *web developer* dapat dengan mudah memasang aplikasi yang kita buat agar dapat diakses di internet.
 
+
 # Permasalahan
 
 Heroku CLI tidak menyediakan binary untuk FreeBSD. Di FreeBSD pkg & ports juga tidak ada.
+
 
 # Pemecahan Masalah
 
@@ -39,37 +38,38 @@ Saya akan mulai dari nomor satu.
 
 Pertama install **yarn**.
 
-{% shell_user %}
-doas pkg install yarn
-{% endshell_user %}
+```
+$ doas pkg install yarn
+```
 
 Lalu cloning repository GitHub heroku/cli.
 
-{% shell_user %}
-git clone https://github.com/heroku/cli.git heroku-cli
-{% endshell_user %}
+```
+$ git clone https://github.com/heroku/cli.git heroku-cli
+```
 
 Masuk ke dalam direktori hasil cloning.
 
-{% shell_user %}
-cd heroku-cli
-{% endshell_user %}
+```
+$ cd heroku-cli
+```
 
 Install dengan menggunakan perintah yarn, proses ini akan mengenerate `bin/run` sebagai heroku cli.
 
-{% shell_user %}
-yarn install
-{% endshell_user %}
+```
+$ yarn install
+```
 
 Kemudian, buat symbolic link agar dapat diakses dari mana saja.
 
-{% shell_user %}
-doas ln -sf $(pwd)/bin/run /usr/local/bin/heroku
-{% endshell_user %}
+```
+$ doas ln -sf $(pwd)/bin/run /usr/local/bin/heroku
+```
 
 **Kekurangan** dari cara instalasi ini adalah waktu dari proses eksekusi yang lama.
 
 Maka dari itu, saya merekomendasikan cara yang kedua.
+
 
 ## Instalasi dengan node dan npm
 
@@ -77,17 +77,17 @@ Pastikan teman-teman sudah memasang `node` dan `npm`.
 
 Kemudian untuk memasang heroku CLI sangat mudah.
 
-{% shell_user %}
-npm install -g heroku
-{% endshell_user %}
+```
+$ npm install -g heroku
+```
 
 **Saya lebih merekomendasikan untuk menggunakan cara kedua**, karena waktu proses eksekusi yang lebih cepat daripada menggunakan cara yang pertama.
 
 Sekarang coba lakukan pengecekan versi.
 
-{% shell_user %}
-heroku --version
-{% endshell_user %}
+```
+$ heroku --version
+```
 
 ```
 heroku/7.39.2 freebsd-x64 node-v13.10.1
@@ -102,15 +102,10 @@ Terima kasih.
 (^_^)
 
 
-
-
-
-
-
 # Referensi
 
-1. [devcenter.heroku.com/articles/heroku-cli](https://devcenter.heroku.com/articles/heroku-cli){:target="_blank"}
+1. [devcenter.heroku.com/articles/heroku-cli](https://devcenter.heroku.com/articles/heroku-cli)
 <br>Diakses tanggal: 2020/04/03
 
-2. [github.com/heroku/cli/issues/57#issuecomment-394142666](https://github.com/heroku/cli/issues/57#issuecomment-394142666){:target="_blank"}
+2. [github.com/heroku/cli/issues/57#issuecomment-394142666](https://github.com/heroku/cli/issues/57#issuecomment-394142666)
 <br>Diakses tanggal: 2020/04/03

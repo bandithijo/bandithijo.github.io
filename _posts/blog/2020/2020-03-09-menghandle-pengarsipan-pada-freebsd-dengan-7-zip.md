@@ -1,22 +1,19 @@
 ---
 layout: 'post'
 title: "Menghandle Pengarsipan pada FreeBSD dengan 7-Zip"
-date: 2020-03-09 16:41
+date: '2020-03-09 16:41'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'FreeBSD']
+tags: ['FreeBSD']
 pin:
 hot:
 contributors: []
 description: "Selama ini, saya selalu menggunkan tools pengarsipan GUI. Ternyata dengan 7zip, pengarsipan di Terminal juga jadi lebih mudah. Ada banyak sekali option dan parameter yang dapat kita gunakan. Tapi saya hanya mencatat sebagian kecil yang saya perlukan."
 ---
-
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
 
 # Pendahuluan
 
@@ -25,6 +22,7 @@ Oke!
 Sistem sudah siap untuk dipakai menulis kembali.
 
 Mungkin sebagian dari teman-teman sudah mengetahui kalau saya baru saja bermigrasi dari Arch Linux ke FreeBSD. Kira-kira akhir Februari 2020, saya memulai proses migrasi. Berarti saat ini sudah hampir dua pekan lebih.
+
 
 # Permasalahan
 
@@ -39,6 +37,7 @@ Misalnya, saya memerlukan program tools pengarsipan GUI. Diantara yang saya tahu
 **Kenapa tidak menggunakan Xarchiver saja?**
 
 Xarchiver tidak dapat membuat dan membuka arsip `.zip` yang terenkripsi (berpassword). Namun, dapat dilakukan dengan mudah oleh file-roller. Maka dari itu saya biasanya menggunakan file-roller.
+
 
 # Pemecahan Masalah
 
@@ -77,7 +76,8 @@ Maksudnya keren di sini adalah, selain free dan open-source, 7-Zip juga memiliki
 3. Untuk ZIP dan GZIP format, 7-Zip menyediak compression ratio hingga 2-10%
 4. Enkripsi AES-256 pada 7z dan ZIP format
 5. Memiliki command line yang powerful
-6. [dst.](https://www.7-zip.org/){:target="_blank"}
+6. [dst.](https://www.7-zip.org/)
+
 
 ## Batasan Penggunaan
 
@@ -86,15 +86,16 @@ Karena 7-Zip memiliki perintah-perintah command line yang powerful dan banyak, m
 1. Membuat ZIP format dengan enkripsi
 2. Mengekstrak ZIP format yang terenkripsi
 
+
 ## Membuat Arsip Berformat ZIP yang Terenkripsi
 
 Untuk membuat ZIP archive dengan enkripsi, caranya sangat mudah.
 
 **Membuat file ZIP dari beberapa file (file1, file2, file3)**
 
-{% shell_user %}
-7z a -p arsip.zip file1.doc file2.xls file3.ppt
-{% endshell_user %}
+```
+$ 7z a -p arsip.zip file1.doc file2.xls file3.ppt
+```
 
 Keterangan:
 
@@ -128,27 +129,27 @@ Everything is Ok
 
 Kalau berhasil, file arsip berformat ZIP yang terenkripsi telah berhasil dibuat.
 
-<pre>
-<mark>-rw-r--r--  1 bandithijo  bandithijo  448 Mar  9 18:54 arsip.zip</mark>
+```
+-rw-r--r--  1 bandithijo  bandithijo  448 Mar  9 18:54 arsip.zip  👈️
 -rw-r--r--  1 bandithijo  bandithijo    0 Mar  9 18:51 file1.doc
 -rw-r--r--  1 bandithijo  bandithijo    0 Mar  9 18:51 file2.xls
 -rw-r--r--  1 bandithijo  bandithijo    0 Mar  9 18:51 file3.ppt
-</pre>
+```
 
 Ilustrasinya kira-kira seperti ini.
 
-{% image https://i.postimg.cc/Y9W5f9Xs/gambar-01.gif | 1 %}
+![Gambar 1](https://i.postimg.cc/Y9W5f9Xs/gambar-01.gif)
 
-{% box_info %}
-<p>Selain membuat arsip berformat ZIP dari beberapa file, dapat pula langsung membuat file pada direktori.
-<br>
-Misalkan, saya memiliki direktori bernama <b>arsip/</b>.
+> INFO
+> 
+> Selain membuat arsip berformat ZIP dari beberapa file, dapat pula langsung membuat file pada direktori.
+> 
+> Misalkan, saya memiliki direktori bernama **arsip/**.
+> 
+> ```
+> $ 7z a -p arsip.zip arsip
+> ```
 
-<pre>
-$ <b>7z a -p arsip.zip arsip</b>
-</pre>
-</p>
-{% endbox_info %}
 
 ## Mengekstrak Arsip Berformat ZIP yang Terenkripsi
 
@@ -156,10 +157,9 @@ Untuk mengkestrak ZIP archive yang terenkripsi, caranya sangat mudah sekali.
 
 Cukup menggunakan *function letter* yang sama seperti untuk mengekstrak arsip biasa, yaitu `x`.
 
-{% shell_user %}
-7z x arsip.zip
-{% endshell_user %}
-
+```
+$ 7z x arsip.zip
+```
 
 Kemudian, akan diminta memasukkan password untuk proses dekripsi.
 
@@ -187,16 +187,17 @@ Compressed: 448
 
 Nah kalau berhasil,
 
-<pre>
+```
 -rw-r--r--  1 bandithijo  bandithijo  448 Mar  9 19:24 arsip.zip
-<mark>-rw-r--r--  1 bandithijo  bandithijo    0 Mar  9 18:51 file1.doc</mark>
-<mark>-rw-r--r--  1 bandithijo  bandithijo    0 Mar  9 18:51 file2.xls</mark>
-<mark>-rw-r--r--  1 bandithijo  bandithijo    0 Mar  9 18:51 file3.ppt</mark>
-</pre>
+-rw-r--r--  1 bandithijo  bandithijo    0 Mar  9 18:51 file1.doc 👈️
+-rw-r--r--  1 bandithijo  bandithijo    0 Mar  9 18:51 file2.xls 👈️
+-rw-r--r--  1 bandithijo  bandithijo    0 Mar  9 18:51 file3.ppt 👈️
+```
 
 Ilustrasinya kira-kira seperti ini.
 
-{% image https://i.postimg.cc/SRGtDzcD/gambar-02.gif | 2 %}
+![Gambar 2](https://i.postimg.cc/SRGtDzcD/gambar-02.gif)
+
 
 # Pesan Penulis
 
@@ -213,15 +214,10 @@ Terima kasih.
 (^_^)
 
 
-
-
-
-
-
 # Referensi
 
-1. [www.2daygeek.com/zip-7zip-encrypt-decrypt-password-protect-files-folders-linux/](https://www.2daygeek.com/zip-7zip-encrypt-decrypt-password-protect-files-folders-linux/){:target="_blank"}
+1. [www.2daygeek.com/zip-7zip-encrypt-decrypt-password-protect-files-folders-linux/](https://www.2daygeek.com/zip-7zip-encrypt-decrypt-password-protect-files-folders-linux/)
 <br>Diakses tanggal: 2020/03/09
 
-2. [www.7-zip.org/](https://www.7-zip.org/){:target="_blank"}
+2. [www.7-zip.org/](https://www.7-zip.org/)
 <br>Diakses tanggal: 2020/03/09
