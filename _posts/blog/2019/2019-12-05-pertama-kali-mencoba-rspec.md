@@ -1,26 +1,24 @@
 ---
 layout: 'post'
 title: "Pertama Kali Mencoba RSpec"
-date: 2019-12-05 07:10
+date: '2019-12-05 07:10'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Rails', 'RSpec']
+tags: ['Rails', 'RSpec']
 pin:
 hot:
 contributors: []
 description: "Catatan kali ini mengenai pertama kalinya mencoba RSpec."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
-
 # Prerequisite
 
-`Ruby 2.6.3` `Rails 6.0.1` `PostgreSQL 11.5` `RSpec 4.0.0.beta3`
+`ruby 2.6.3` `rails 6.0.1` `postgresql 11.5` `rspec 4.0.0.beta3`
+
 
 # Prakata
 
@@ -40,6 +38,7 @@ Ini adalah bukti yang sangat bagus sekali, untuk menjelaskan bahwa dalam membuat
 
 Kalau saya tidak ngawur, konsep ngoding sambil melakukan testing itu dikenal dengan **Test Driven Development** (TDD).
 
+
 # Kenapa RSpec?
 
 Kalau Ruby on Rails sudah membawa MiniTest secara default, lantas mengapa memilih menggunakan RSpec?
@@ -52,8 +51,8 @@ Coba perhatikan contoh dibawah ini.
 
 Berikut ini adalah beberapa spesifikasi list pada model Author.
 
-{% highlight_caption spec/models/author_spec.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: spec/models/author_spec.rb
 RSpec.describe Author, type: :model do
   context 'Validation Presence Tests' do
     it 'Ensures full name presence'
@@ -78,7 +77,7 @@ RSpec.describe Author, type: :model do
     it 'Ensures email has uniqueness'
   end
 end
-{% endhighlight %}
+```
 
 Setiap list tersebut, nantinya akan saya *breakdown* sesuai dengan konteksnya dan judulnya.
 
@@ -88,13 +87,14 @@ Cukup dapat dimengerti kan, maksud dari list tersebut.
 
 Nah, sekarang saya lanjutkan untuk proses memasang RSpec pada project Rails kita.
 
+
 # Instalasi
 
 Pada project baru, saya menjalankan perintah ini.
 
-{% shell_user %}
-rails new blog_rspec_test -d postgresql -T
-{% endshell_user %}
+```
+$ rails new blog_rspec_test -d postgresql -T
+```
 
 Penambahan option `-T`, adalah untuk men-*disable* *built-in test* pada project yang baru kita buat.
 
@@ -104,8 +104,8 @@ Pada project yang sudah ada, langsung saja mengikuti langkah selanjutnya.
 
 Kemudian, pasang gem **rspec-rails** pada block `:development` dan `:text` di `Gemfile` project.
 
-{% highlight_caption Gemfile %}
-{% highlight ruby linenos %}
+```ruby
+!filename: Gemfile
 # ...
 # ...
 
@@ -113,7 +113,7 @@ group :development, :test do
   # ...
   gem 'rspec-rails', '~> 4.0.0.beta3'
 end
-{% endhighlight %}
+```
 
 Tujuan memasukkan gem ini pada group `:development` agar lebih mudah. Karen, kalau hanya pada group `:test`, kita hanya dapat mendapatkan gem ini *evinmonment test* (`RAILS_ENV=test`).
 
@@ -121,15 +121,15 @@ Saya menggunakan versi **4.0.0.beta3** karena terdapat test yang sudah deprecate
 
 Selanjutnya, seperti biasa, setiap setelah menambahkan gem baru pada `Gemfile`, kita perlu menjalankan perintah,
 
-{% shell_user %}
-bundle install
-{% endshell_user %}
+```
+$ bundle install
+```
 
 Setelah proses instalasi selesai, kita juga perlu meng-*generate* *boilerplate* dari konfigurasi yang sudah disediakan oleh rspec-rails.
 
-{% shell_user %}
-rails generate rspec:install
-{% endshell_user %}
+```
+$ rails generate rspec:install
+```
 
 Hasil generate tersebut, akan membuat beberapa file konfigurasi pada direktori `rspec/`.
 
@@ -156,6 +156,7 @@ Kalau tidak ingin menambahkannya sekarang, kita juga dapat menambahkannya dilain
 
 Nah, sekarang kita dapat lanjut pada tahapan membuat spesifikasi test.
 
+
 # Model Specs
 
 Saya sependapat dengan pernyataan bahwa, "Untuk memahami apa itu test, paling mudah kita mulai dari model test."
@@ -166,15 +167,15 @@ Kenapa, karena kita dapat memanfaatkan validation yang terdapat di dalam model. 
 
 RSpec juga sudah menyediakan *spec file generator*. Tinggal kita pergunakan saja. Enak sekali kan.
 
-{% shell_user %}
-rails generate rspec:model nama_model
-{% endshell_user %}
+```
+$ rails generate rspec:model nama_model
+```
 
 Pada, kasus ini, saya memiliki nama model `author`.
 
-{% shell_user %}
-rails generate rspec:model author
-{% endshell_user %}
+```
+$ rails generate rspec:model author
+```
 
 Maka, rspec akan men-*generate* satu file spec untuk kita.
 
@@ -184,14 +185,14 @@ Maka, rspec akan men-*generate* satu file spec untuk kita.
 
 Untuk melihat daftar dari generator apa saja yang disediakan oleh RSpec, dapat menggunakan perintah,
 
-{% shell_user %}
-rails generate --help | grep rspec
-{% endshell_user %}
+```
+$ rails generate --help | grep rspec
+```
 
 Sebelum saya menjabarkan spesifikasi model test untuk model author, saya akan menunjukkan isi dari model author yang di dalamnya terdapat daftar validation dari model author.
 
-{% highlight_caption app/models/author.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/models/author.rb
 class Author < ApplicationRecord
   has_many :articles
 
@@ -208,7 +209,7 @@ class Author < ApplicationRecord
   validates :password, presence: true,
                        length: {minimum: 8}
 end
-{% endhighlight %}
+```
 
 Nah, sekarang pasti sudah mengerti kan, kenapa untuk belajar, sangat mudah kita mulai dari model test.
 
@@ -220,8 +221,8 @@ Kita dapat melihat pada validation model author tersebut, setiap field memiliki 
 
 Saya akan mulai dari filed `full_name` terlebih dahulu.
 
-{% highlight_caption spec/models/author_spec.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: spec/models/author_spec.rb
 require 'rails_helper'
 
 RSpec.describe Author, type: :model do
@@ -236,7 +237,7 @@ RSpec.describe Author, type: :model do
     end
   end
 end
-{% endhighlight %}
+```
 
 Pada spesifikasi ini, saya hanya membuat filed `full_name` bernilai `nil`. Dengan maksud membuat field tersebut kosong. Dan test dianggap benar, apabila hasil dari spesifikasi tersebut bernilai salah ` eq(false)`.
 
@@ -276,8 +277,8 @@ Nah, dengan begitu, saya langsung dapat menuliskan spesifikasi untuk menguji sem
 
 Kira-kira seperti ini.
 
-{% highlight_caption spec/models/author_spec.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: spec/models/author_spec.rb
 require 'rails_helper'
 
 RSpec.describe Author, type: :model do
@@ -396,7 +397,7 @@ RSpec.describe Author, type: :model do
     end
   end
 end
-{% endhighlight %}
+```
 
 Nah, gimana?
 
@@ -404,9 +405,9 @@ Mudah dipahami kan?
 
 Nah, untuk menalankan test-nya gunakan perintah ini,
 
-{% shell_user %}
-bundle exec rspec
-{% endshell_user %}
+```
+$ bundle exec rspec
+```
 
 Nanti akan keluar output seperti ini.
 
@@ -436,13 +437,14 @@ Sesuai dengan jumlah spesifikasi yang kita tulis, ada 11 buah. Dan kesemuanya be
 
 Selanjutnya untuk controller spec.
 
+
 # Controller Spec
 
 Kita gunakan lagi *spec file generator* yang sudah disediakan oleh RSpec.
 
-{% shell_user %}
-rails generate rspec:controller authors
-{% endshell_user %}
+```
+$ rails generate rspec:controller authors
+```
 
 Karena kita akan menguji controller, tentu saja kita mengikuti *naming convention* dari Rails, yang mengharuskan menggunakan penamaan plural pada controller. Berbeda dengan model yang menggunakan penamaan singular.
 
@@ -456,8 +458,8 @@ Belum banyak yang saya pahami mengenai controller spec ini, jadi langsung saja s
 
 Kira-kira seperti ini.
 
-{% highlight_caption spec/controllers/authors_controller_spec.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: spec/controllers/authors_controller_spec.rb
 require 'rails_helper'
 
 RSpec.describe AuthorsController, type: :controller do
@@ -502,7 +504,7 @@ RSpec.describe AuthorsController, type: :controller do
     end
   end
 end
-{% endhighlight %}
+```
 
 Wkwkwkwk.
 
@@ -529,11 +531,11 @@ Terima kasih.
 
 # Referensi
 
-1. [github.com/rspec/rspec-rails](https://github.com/rspec/rspec-rails){:target="_blank"}
+1. [github.com/rspec/rspec-rails](https://github.com/rspec/rspec-rails)
 <br>Diakses tanggal: 2019/12/05
 
-2. [Everyday Rails Testing with RSpec : A practical approach to test-driven development by Aaron Sumner](http://leanpub.com/everydayrailsrspec){:target="_blank"}
+2. [Everyday Rails Testing with RSpec : A practical approach to test-driven development by Aaron Sumner](http://leanpub.com/everydayrailsrspec)
 <br>Diakses tanggal: 2019/12/05
 
-3. [relishapp.com/rspec/rspec-rails/docs](https://relishapp.com/rspec/rspec-rails/docs){:target="_blank"}
+3. [relishapp.com/rspec/rspec-rails/docs](https://relishapp.com/rspec/rspec-rails/docs)
 <br>Diakses tanggal: 2019/12/05

@@ -183,7 +183,7 @@ Saya juga memberikan role berupa **SUPERUSER** dan **CREATEDB**.
 Cek apakah sudah terdaftar, dengan perintah:
 
 ```
-postgres=# \du;
+postgres=# \du
 ```
 
 ```
@@ -205,7 +205,7 @@ postgres=# CREATE DATABASE bandithijo OWNER bandithijo;
 Cek apakah database berhasil dibuat, dengan perintah:
 
 ```
-postgres=# \l;
+postgres=# \l
 ```
 
 ```

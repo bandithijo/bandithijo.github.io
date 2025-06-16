@@ -1,32 +1,31 @@
 ---
 layout: 'post'
 title: "Rails time_select dengan Integer"
-date: 2019-12-04 08:00
+date: '2019-12-04 08:00'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Rails']
+tags: ['Rails']
 pin:
 hot:
 contributors: []
 description: "Catatan kali ini mengenai cara menggunakan input time_select namun dengan tupe data integer pada Ruby on Rails."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
-
 # Prerequisite
 
-`Ruby 2.6.3` `Rails 5.2.3` `PostgreSQL 11.5`
+`ruby 2.6.3` `rails 5.2.3` `postgresql 11.5`
+
 
 # Prakata
 
 Saya mendapatkan kasus dimana saya harus membuat "duration" field dengan tipe data integer. Yang mana sebelumnya duration field ini saya set dengan tipe data time.
 
 Tujuan dari penggunaan tipe data integer pada duration field agar nantinya dapat dengan mudah diolah, seperti difilter berdasarkan jumlah menit tertentu, dan lain sebagainya.
+
 
 # Target
 
@@ -36,13 +35,17 @@ Contoh, untuk durasi selama **8 jam 30 menit**, berarti data akan disimpan sebes
 
 Tampilannya kira-kira seperti ini, untuk pemilihan jam dan menit.
 
-{% image https://i.postimg.cc/j5s63RNM/gambar-01.png | 1 | time_select untuk jam dan menit %}
+![Gambar 1](https://i.postimg.cc/j5s63RNM/gambar-01.png)
+
+Gambar 1. time_select untuk jam dan menit
+
 
 # Permasalahan
 
 `time_select` adalah salah satu method yang dimiliki oleh `ActionView::Helpers::DateHelper`. Beberapa method lain diantaranya seperti, `date_select`, `datetime_select`, dll.[<sup>1</sup>](#referensi)
 
 Secara normal, `time_select` ini akan bekerja dengan baik pada field dengan tipe data time. Namun, karena kebutuhan project, saya perlu memodifikasi agar `time_select` dapat menyimpan data ke dalam field dengan tipe data integer.
+
 
 # Solusi
 
@@ -52,14 +55,14 @@ Oke, kembali ke pokok perbincangan utama.
 
 Untuk merubah kolom/field duration dari tipe data time menjadi integer, saya melakukan migration seperti ini.
 
-{% shell_user %}
-rails g migration alter_experiences_duration_to_integer
-{% endshell_user %}
+```
+$ rails g migration alter_experiences_duration_to_integer
+```
 
 Kemudian menuliskan manual, masing-masing method up dan down-nya.
 
-{% highlight_caption db/migrate/20191122060352_alter_experiences_duration_to_integer.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: db/migrate/20191122060352_alter_experiences_duration_to_integer.rb
 class AlterExperiencesDurationToInteger < ActiveRecord::Migration[5.2]
   def up
     remove_column :experiences, :duration, :time
@@ -71,14 +74,14 @@ class AlterExperiencesDurationToInteger < ActiveRecord::Migration[5.2]
     add_column :experiences, :duration, :time
   end
 end
-{% endhighlight %}
+```
 
 Perlu diketahui, saya melakukan perintah `remove_column` karena web aplikasi yang saya bangun, belum memiliki data sungguhan. Apabila sudah memiliki data sungguhan, sangat dihindari untuk melakukan penghapusan kolom/field. Lebih baik membuat kolom/field yang baru.
 
 Berikut ini adalah contoh dari skema tabel experiences yang saya miliki.
 
-{% highlight_caption db/schema.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: db/schema.rb
 create_table "experiences", force: :cascade do |t|
   # ...
   # ...
@@ -86,7 +89,7 @@ create_table "experiences", force: :cascade do |t|
   # ...
   # ...
 end
-{% endhighlight %}
+```
 
 Karena saya menggunakan seed untuk membuat data-data dummy, saya perlu merubah formatnya dari format time menjadi total menit.
 
@@ -104,8 +107,8 @@ duration: [90, 180, 390, 480].sample
 
 Karena data sudah disimpan dalam bentuk integer dan dalam satuan menit, maka saya perlu bantuan helper method untuk mengkonversi bentuk dari "hanya menit" menjadi "jam dan menit".
 
-{% highlight_caption app/helpers/experiences_helper.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/helpers/experiences_helper.rb
 def formatted_duration(total_minute)
   hours = total_minute / 60
   minutes = total_minute % 60
@@ -115,21 +118,21 @@ def formatted_duration(total_minute)
     pluralize("#{ hours }", "hour") + " " + pluralize("#{ minutes }", "minute")
   end
 end
-{% endhighlight %}
+```
 
 Dengan begini, saya memiliki helper method bernama `formatted_duration()` yang dapat saya manfaatkan untuk mengkonversi tampilan data duration yang hanya dalam satuan menit, menjadi bentuk jam dan menit.
 
 Kira-kira seperti ini contoh penggunaannya dalam view template.
 
-{% highlight_caption app/views/experiences/index.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/experiences/index.html.erb
 <div class="row no-gutters">
   <div class="col-sm-6">
     <span class="icon-time1 mr-1"></span>
     <span>Duration: <%= formatted_duration(experience.duration) %></span>
   </div>
 </div>
-{% endhighlight %}
+```
 
 Nah, sekarang bagian input field.
 
@@ -137,8 +140,8 @@ Pada bagian ini, harus saya akui, cukup merepotkan. Saya menghabiskan banyak sek
 
 Pertama-tama pada view template dulu.
 
-{% highlight_caption app/views/experiences/new.html.erb,app/views/experiences/edit.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/experiences/new.html.erb,app/views/experiences/edit.html.erb
 <div class="form-group row no-gutters form-custom mb-3">
   <label class="col-md-3 col-form-label p-sm-0 d-flex align-items-center">Duration</label>
   <div class="col-md-9">
@@ -161,17 +164,17 @@ Pertama-tama pada view template dulu.
     </div>
   </div>
 </div>
-{% endhighlight %}
+```
 
 Algoritma dari kode di atas adalah:
 
 1. Jika data baru, maka masuk ke dalam blok else, yang akan digunakan oleh `experiences#new`.
-2. Jika data edit, maka masuk de dalam blok if, yang artinya data duration yang berupa menit, akan dipecah menjadi dua variabel, `hours` dan `minutes`. Kemudian dimasukkan ke dalam `hidden_field_tag` masing-masing, dan akan dikrimkan ke `experiences#edit`.
+1. Jika data edit, maka masuk de dalam blok if, yang artinya data duration yang berupa menit, akan dipecah menjadi dua variabel, `hours` dan `minutes`. Kemudian dimasukkan ke dalam `hidden_field_tag` masing-masing, dan akan dikrimkan ke `experiences#edit`.
 
 Nah, berikut ini isi dari `experiences_controller.rb` yang akan menerima data dari kedua inputan pada view template di atas.
 
-{% highlight_caption app/controllers/experiences_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/experiences_controller.rb
 class ExperiencesController < ApplicationController
 
   def new
@@ -218,9 +221,10 @@ class ExperiencesController < ApplicationController
     params.require(:experience).permit( ..., ...., :duration, ..., ...)
   end
 end
-{% endhighlight %}
+```
 
 Selesai!
+
 
 # Pesan Penulis
 
@@ -233,8 +237,8 @@ Terima kasih (^_^)v
 
 # Referensi
 
-1. [api.rubyonrails.org/v5.2.1/classes/ActionView/Helpers/DateHelper.html](https://api.rubyonrails.org/v5.2.1/classes/ActionView/Helpers/DateHelper.html){:target="_blank"}
+1. [api.rubyonrails.org/v5.2.1/classes/ActionView/Helpers/DateHelper.html](https://api.rubyonrails.org/v5.2.1/classes/ActionView/Helpers/DateHelper.html)
 <br>Diakses tanggal: 2019/12/04
 
-2. [guides.rubyonrails.org/form_helpers.html#using-date-and-time-form-helpers](https://guides.rubyonrails.org/form_helpers.html#using-date-and-time-form-helpers){:target="_blank"}
+2. [guides.rubyonrails.org/form_helpers.html#using-date-and-time-form-helpers](https://guides.rubyonrails.org/form_helpers.html#using-date-and-time-form-helpers)
 <br>Diakses tanggal: 2019/12/04

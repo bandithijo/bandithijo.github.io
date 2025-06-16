@@ -1,26 +1,24 @@
 ---
 layout: 'post'
 title: "Select Menu dengan Short Description Menggunakan jQuery pada Rails"
-date: 2019-12-14 01:44
+date: '2019-12-14 01:44'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Rails', 'Javascript']
+tags: ['Rails', 'JavaScript', 'jQuery']
 pin:
 hot:
 contributors: []
 description: "Catatan kali ini mengenai cara membuat select menu dengan keterangan kecil yang berada di bagian bawah dari menu menggunaka jQuery pada Ruby on Rails."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
-
 # Prerequisite
 
-`Ruby 2.6.3` `Rails 5.2.3` `PostgreSQL 11.5`
+`ruby 2.6.3` `rails 5.2.3` `postgresql 11.5`
+
 
 # Prakata
 
@@ -28,15 +26,19 @@ Pernah membuat menu select atau dropdown menu, namun merasa keterngan nama yang 
 
 Misalnya, seperti pada project yang sedang saya kerjakan. Terdapat menu select untuk memilih salah satu Cancellation Policy melalui menu select. Seperti di bawah ini.
 
-{% image https://i.postimg.cc/4NKCw592/gambar-01.png | 1 | Cancellation Policy Menu Select %}
+![Gambar 1](https://i.postimg.cc/4NKCw592/gambar-01.png)
+
+Gambar 1. Cancellation Policy Menu Select
 
 Lihat, tidak ada informasi yang lebih detail mengenail masing-masing menu.
 
 Kalau seperti ini, tentunya kita akan bingung, mana menu yang pas untuk kita pilih.
 
+
 # Permasalahan
 
 Pada umumnya, memang menu select tidak terdapat penjelasan singkat. Hanya tertulis nama dari value yang dijadikan menu selection.
+
 
 # Sekenario
 
@@ -48,12 +50,13 @@ Data text diambil dari tabel yang menampung data-data Cancellation Policy.
 
 Data yang ditampilkan akan mengikuti menu select yang sedang dipilih (*selected*).
 
+
 # Pemecahan Masalah
 
 Pada view template, pada bagian form, seperti ini yang saya lakukan.
 
-{% highlight_caption app/view/experiences/_form.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/view/experiences/_form.html.erb
 <style>
 /* For Cancellation Policy Short Description */
 .description {
@@ -89,7 +92,7 @@ Pada view template, pada bagian form, seperti ini yang saya lakukan.
     </div>
   </div>
 </div>
-{% endhighlight %}
+```
 
 Jangan mentah-mentah mengikuti struktur kode di atas yaa, seperti Stylesheet dan Javascript.
 
@@ -105,8 +108,8 @@ Pada bagian `class="description"` berisi tag DIV yang nantinya akan dijadikan se
 
 Selanjutnya, tinggal meracik jQuery saja.
 
-{% highlight_caption app/view/experiences/_form.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/view/experiences/_form.html.erb
 ...
 ...
 ...
@@ -120,7 +123,7 @@ $(function() {
   });
 });
 </script>
-{% endhighlight %}
+```
 
 `#experience_cancellation_policy_id` adalah pola penamaan id dari menu selection `collection_select :cancellation_policy_id` yang berada pada form Experience. Sudah dapat dipastikan kalau pola penamaannya akan seperti itu.
 
@@ -128,7 +131,9 @@ Atau dapat juga menggunakan inspect element pada Browser untuk mengetahui id dar
 
 Nah, kalau sudah semua, hasilnya akan seperti ini.
 
-{% image https://i.postimg.cc/bN475t0y/gambar-02.gif | 2 | Cancellation Policy Menu Select dengan Short Description %}
+![Gambar 2](https://i.postimg.cc/bN475t0y/gambar-02.gif)
+
+Gambar 2. Cancellation Policy Menu Select dengan Short Description
 
 Selesai!
 
@@ -139,12 +144,7 @@ Terima kasih.
 (^_^)
 
 
-
-
-
-
-
 # Referensi
 
-1. [www.w3schools.com/jquery/jquery_hide_show.asp](https://www.w3schools.com/jquery/jquery_hide_show.asp){:target="_blank"}
+1. [www.w3schools.com/jquery/jquery_hide_show.asp](https://www.w3schools.com/jquery/jquery_hide_show.asp)
 <br>Diakses tanggal: 2019/12/14

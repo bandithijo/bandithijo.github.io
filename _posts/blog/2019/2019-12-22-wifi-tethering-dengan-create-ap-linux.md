@@ -1,22 +1,19 @@
 ---
 layout: 'post'
 title: "Berbagi WiFi Tethering dengan create_ap pada GNU/Linux"
-date: 2019-12-22 09:51
+date: '2019-12-22 09:51'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Ulasan']
+tags: ['create_ap']
 pin:
 hot:
 contributors: []
 description: "Fitur tethering Wi-Fi mungkin mudah didapatkan apabila menggunakan Desktop Environment tertentu. Karena biasanya sudah menyediakan menu untuk berbagi network dengan Wi-Fi. Namun, bagaimana apabila kita menggunakan Window Manager? comprehensive network manager seperti NetworkManager sejauh yang saya tahu, belum memiliki fitur ini, namun ConnMan sudah memiliki fitur Wi-F- tethering. Namun, jangan khawatir, sudah ada tools yang standalone yang dapat menyediakan layanan Wi-Fi tethering, yaitu create_ap."
 ---
-
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
 
 # Prakata
 
@@ -28,71 +25,80 @@ Bahasa awamnya WiFi Tethering, atau berbagi koneksi internet lewat WiFi. Nah.
 
 Kira-kira seperti itu.
 
+
 # Ulasan
 
 Bagi pengguna GNU/Linux seperti saya yang hanya menggunakan Window Manager, script seperti ini sangat membantu dan nyaman digunakan. Karena tidak harus membuka aplikasi GUI.
+
 
 ## Fitur yang diberikan
 
 Beberapa fitur yang diberikan oleh **create_ap** adalah:
 
 1. Membuat Access Point (AP) pada channel mana saja
-2. Dapat menggunakan salah satu dari enkripsi yang disediakan (WPA, WPA2, WPA/WPA2, Open (no encryption)
-3. Menyembunyikan SSID
-4. Menonaktifkan komunikasi antara client (client isolation)
-5. Mendukung IEEE 802.11n dan 802.11ac
-6. Internet sharing dengan metode: NATed, Bridged atau None (tidak ada internet sharing)
-7. Memilih IP Gateway untuk AP (hanya dapat dilakukan pada NATed dan None)
-8. Membuat Access Point (AP) dengan interface yang sama dengan koneksi internet yang kita gunakan.
-9. Dapat membuat SSID dengan pipe atau dengan argument
+1. Dapat menggunakan salah satu dari enkripsi yang disediakan (WPA, WPA2, WPA/WPA2, Open (no encryption)
+1. Menyembunyikan SSID
+1. Menonaktifkan komunikasi antara client (client isolation)
+1. Mendukung IEEE 802.11n dan 802.11ac
+1. Internet sharing dengan metode: NATed, Bridged atau None (tidak ada internet sharing)
+1. Memilih IP Gateway untuk AP (hanya dapat dilakukan pada NATed dan None)
+1. Membuat Access Point (AP) dengan interface yang sama dengan koneksi internet yang kita gunakan.
+1. Dapat membuat SSID dengan pipe atau dengan argument
+
 
 ## Dependensi
 
 Paket-paket berikut ini perlu dipasang, agar dapat menggunakan **create_ap**.
 
+
 ### General
 
 1. `bash`/`zsh`/dst.
-2. `util-linux` (untuk getopt)
-3. `procps` atau `procps-ng`
-4. `hostapd`
-5. `iproute2`
-6. `iw`
-7. `iwconfig` (kamu hanya memerlukan paket ini apabila `iw` tidak dapat mengenali adapter yang kita gunakan)
-8. `haveged` (optional)
+1. `util-linux` (untuk getopt)
+1. `procps` atau `procps-ng`
+1. `hostapd`
+1. `iproute2`
+1. `iw`
+1. `iwconfig` (kamu hanya memerlukan paket ini apabila `iw` tidak dapat mengenali adapter yang kita gunakan)
+1. `haveged` (optional)
+
 
 ### Untuk NATed atau None
 
 1. `dnsmasq`
-2. `iptables`
+1. `iptables`
+
 
 ## Instalasi
+
 
 ### Arch Linux
 
 Beruntungnya saya menggunakan Arch Linux. Paket **create_ap** sudah terdapat pada official repo.
 
-{% shell_user %}
-sudo pacman -S create_ap
-{% endshell_user %}
+```
+$ sudo pacman -S create_ap
+```
+
 
 ### Distribusi lain
 
 Untuk yang menggunakan distribusi lain, dapat membuild sendiri dari source.
 
-{% shell_user %}
-git clone https://github.com/oblique/create_ap
-cd create_ap
-make install
-{% endshell_user %}
+```
+$ git clone https://github.com/oblique/create_ap
+$ cd create_ap
+$ make install
+```
+
 
 ## Penggunaan
 
 Sekarang, coba saya jalankan dulu **create_ap**.
 
-{% shell_user %}
-create_ap
-{% endshell_user %}
+```
+$ create_ap
+```
 
 ```
 Usage: create_ap [options] <wifi-interface> [<interface-with-internet>] [<access-point-name> [<passphrase>]]
@@ -173,111 +179,128 @@ Sangat mudah sekali penggunaannya.
 
 Bentuk dari perintahnya akan seperti ini.
 
-{% shell_user %}
-create_ap [options] &lt;wifi-interface> [&lt;interface-with-internet>] [&lt;access-point-name> [&lt;passphrase>]]
-{% endshell_user %}
+```
+$ create_ap [options] &lt;wifi-interface> [&lt;interface-with-internet>] [&lt;access-point-name> [&lt;passphrase>]]
+```
+
 
 ### Tanpa passphrase (open network)
 
-{% shell_user %}
-create_ap wlan0 eth0 MyAccessPoint
-{% endshell_user %}
+```
+$ create_ap wlan0 eth0 MyAccessPoint
+```
 
 Berarti, kita mendapatkan internet dari interface `eth0` dan akan kita sharing menggunakan interface `wlan0` dengan nama Access Point `MyAccessPoint`.
 
-Mudha dimengerti kan?
+Mudah dimengerti kan?
+
 
 ### WPA + WPA2 passphrase
 
-{% shell_user %}
-create_ap wlan0 eth0 MyAccessPoint MyPassPhrase
-{% endshell_user %}
+```
+$ create_ap wlan0 eth0 MyAccessPoint MyPassPhrase
+```
+
 
 ### Access Point tanpa internet
 
-{% shell_user %}
-create_ap -n wlan0 MyAccessPoint MyPassPhrase
-{% endshell_user %}
+```
+$ create_ap -n wlan0 MyAccessPoint MyPassPhrase
+```
+
 
 ### Bridged internet sharing
 
-{% shell_user %}
-create_ap -m bridge wlan0 eth0 MyAccessPoint MyPassPhrase
-{% endshell_user %}
+```
+$ create_ap -m bridge wlan0 eth0 MyAccessPoint MyPassPhrase
+```
+
 
 ### Bridged Internet sharing (pre-configured bridge interface)
 
-{% shell_user %}
-create_ap -m bridge wlan0 br0 MyAccessPoint MyPassPhrase
-{% endshell_user %}
+```
+$ create_ap -m bridge wlan0 br0 MyAccessPoint MyPassPhrase
+```
+
 
 ### Internet sharing sharing dari WiFi interface yang sama
 
 Ini yang paling sering saya pergunakan.
 
-{% shell_user %}
-create_ap wlan0 wlan0 MyAccessPoint MyPassPhrase
-{% endshell_user %}
+```
+$ create_ap wlan0 wlan0 MyAccessPoint MyPassPhrase
+```
+
 
 ### Menggunakan WiFi adapter driver yang berbeda
 
-{% shell_user %}
-create_ap --driver rtl871xdrv wlan0 eth0 MyAccessPoint MyPassPhrase
-{% endshell_user %}
+```
+$ create_ap --driver rtl871xdrv wlan0 eth0 MyAccessPoint MyPassPhrase
+```
+
 
 ### Tanpa passphrase (open network) menggunakan pipe
 
 Nah, ini adalah fitur yang dimention pada poin nomor 9 di atas.
 
-{% shell_user %}
-echo -e "MyAccessPoint" | create_ap wlan0 eth0
-{% endshell_user %}
+```
+$ echo -e "MyAccessPoint" | create_ap wlan0 eth0
+```
+
 
 ### WPA + WPA2 passphrase menggunakan pipe
 
-{% shell_user %}
-echo -e "MyAccessPoint\nMyPassPhrase" | create_ap wlan0 eth0
-{% endshell_user %}
+```
+$ echo -e "MyAccessPoint\nMyPassPhrase" | create_ap wlan0 eth0
+```
+
 
 ### Enable IEEE 802.11n
 
-{% shell_user %}
-create_ap --ieee80211n --ht_capab '[HT40+]' wlan0 eth0 MyAccessPoint MyPassPhrase
-{% endshell_user %}
+```
+$ create_ap --ieee80211n --ht_capab '[HT40+]' wlan0 eth0 MyAccessPoint MyPassPhrase
+```
+
 
 ### Client Isolation
 
 Ini adalah contoh penggunaan fitur nomor 4 di atas.
 
-{% shell_user %}
-create_ap --isolate-clients wlan0 eth0 MyAccessPoint MyPassPhrase
-{% endshell_user %}
+```
+$ create_ap --isolate-clients wlan0 eth0 MyAccessPoint MyPassPhrase
+```
+
 
 ## Systemd Service
 
 Kita juga dapat memanfaatkan systemd service untuk membuat konfigurasi yang persisten.
 
+
 ### Menjalankan service
 
-{% shell_user %}
-sudo systemctl start create_ap
-{% endshell_user %}
+```
+$ sudo systemctl start create_ap
+```
+
 
 ### Menjalankan service saat proses booting
 
-{% shell_user %}
-sudo systemctl enable create_ap
-{% endshell_user %}
+```
+$ sudo systemctl enable create_ap
+```
+
 
 # Troubleshooting
+
 
 ## ERROR: Failed to initialize lock
 
 Apabila saat menjalankan `create_ap` muncul pesan seperti di atas, maka cukup hapus file `.lock` yang tersimpan pada direktori `/tmp`.
 
-{% shell_user %}
-rm /tmp/create_ap.all.lock
-{% endshell_user %}
+```
+$ rm /tmp/create_ap.all.lock
+```
+
 
 # Pesan Penulis
 
@@ -292,13 +315,7 @@ Apalagi saya yang hanya user biasa ini.
 Untuk dokumentasi lebih lengkap dapat mengunjungi halaman GitHb repo dari **create_ap**.
 
 
-
-
-
-
-
-
 # Referensi
 
-1. [github.com/oblique/create_ap](https://github.com/oblique/create_ap){:target="_blank"}
+1. [github.com/oblique/create_ap](https://github.com/oblique/create_ap)
 <br>Diakses tanggal: 2019/12/22

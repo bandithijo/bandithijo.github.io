@@ -1,26 +1,23 @@
 ---
 layout: 'post'
 title: 'Konfigurasi Custom Domain GitHub Pages dengan Amazon Route 53'
-date: 2019-06-01 10:10
+date: '2019-06-01 10:10'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Ulasan']
+tags: ['GitHub Pages', 'AWS', 'Route 53']
 pin:
 hot:
 contributors: []
 description: "Catatan ini mengenai cara mengkonfigurasi custom domain dengan GitHub Pages dan Amazon Route 53."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
-
 # Prakata
 
-Kira-kira sudah dua minggu ini saya mengikuti kelas "[Belajar Menjadi AWS Solutions Architect Associate](https://www.dicoding.com/academies/104){:target="_blank"}" yang diadakan oleh Dicoding.
+Kira-kira sudah dua minggu ini saya mengikuti kelas "[Belajar Menjadi AWS Solutions Architect Associate](https://www.dicoding.com/academies/104)" yang diadakan oleh Dicoding.
 
 Yang menarik, pada *final submission*, saya akan mencoba mengumpulkan *submission* dengan memanfaatkan layanan Amazon Route 53 untuk mengelola DNS dari domain ini, yang sebelumnya saya kelola menggunakan Netlify.
 
@@ -50,7 +47,7 @@ Di sini, saya mengasumsikan teman-teman sudah memiliki GitHub Pages.
 
 Secara *default* GitHub Pages memiliki nama domain seperti ini **username.github.io**.
 
-{% image https://i.postimg.cc/NfDMr5Gt/gambar-01.png | 1 %}
+![Gambar 1](https://i.postimg.cc/NfDMr5Gt/gambar-01.png)
 
 Untuk mengatur konfirgurasi dari *custom domain* pada GitHub Pages, caranya sangat mudah.
 
@@ -60,7 +57,7 @@ Untuk mengatur konfirgurasi dari *custom domain* pada GitHub Pages, caranya sang
 
 3. Scrolling ke bawah, sampai menemukan section "GitHub Pages", seperti di bawah.
 
-    {% image https://i.postimg.cc/J4przvK4/gambar-02.png | 2 %}
+   ![Gambar 2](https://i.postimg.cc/J4przvK4/gambar-02.png)
 
 4. Pada bagian **Custom domain**, isikan dengan domain yang teman-teman miliki.
 
@@ -80,30 +77,30 @@ Teman-teman perlu menambahkan file bernama `CNAME` yang berisi nama domain teman
 
 Contohnya seperti `CNAME` milik saya.
 
-{% highlight_caption CNAME %}
-{% highlight sh %}
+```bash
+!filename: CNAME
 bandithijo.com
-{% endhighlight %}
+```
 
 Hanya seperti itu saja isi di dalam `CNAME`.
 
 
-<br>
 ## 2. Konfigurasi Hosted Zone di Route 53
 
 Di sini saya mengasumsikan teman-teman sudah mempunyai akun Amazon.
 
 Selanjutnya akan saya bagi dalam 3 tahapan.
 
+
 ### Mendaftarkan Domain ke Hosted Zone
 
-1. Masuk ke Amazon Console dan pilih layanan [Route 53](https://console.aws.amazon.com/route53){:target="_blank"}.
+1. Masuk ke Amazon Console dan pilih layanan [Route 53](https://console.aws.amazon.com/route53).
 
 2. Selanjutnya, pilih tab "**Hosted Zones**".
 
 3. Buat Hosted Zone baru dengan memilih tombol biru pada bagian atas bertuliskan "**Create Hosted Zone**".
 
-   {% image https://i.postimg.cc/wjdjPLWD/gambar-03.png | 3 %}
+   ![Gambar 3](https://i.postimg.cc/wjdjPLWD/gambar-03.png)
 
 4. Isikan **Domain Name:** dengan domain yang teman-teman miliki.
 
@@ -117,7 +114,7 @@ Selanjutnya akan saya bagi dalam 3 tahapan.
 
 9. Tampilannya akan seperti di bawah ini.
 
-   {% image https://i.postimg.cc/BvmZXyJC/gambar-04.png | 4 %}
+   ![Gambar 4](https://i.postimg.cc/BvmZXyJC/gambar-04.png)
 
 10. Saat pertama kali dibuat, hanya akan terdapat dua buah record set, **Nameservers** dan **SOA (*Start of authority*)**, seperti yang saya kotak merah pada gambar di atas.
 
@@ -136,11 +133,12 @@ Selanjutnya akan saya bagi dalam 3 tahapan.
 
 12. Selanjutnya Kita perlu menambahkan 2 record set, A dan CNAME.
 
+
 ### Menambahkan Record Set A
 
 1. Buat record set A dengan memilih tombol biru **Create Record Set** di bagian atas.
 
-   {% image https://i.postimg.cc/52q2MyGT/gambar-05.png | 5 %}
+   ![Gambar 5](https://i.postimg.cc/52q2MyGT/gambar-05.png)
 
 2. Lalu isikan seperti gambar di atas.
 
@@ -159,11 +157,12 @@ Selanjutnya akan saya bagi dalam 3 tahapan.
 
 6. Kemudian **Save Record Set** untuk menyimpan konfigurasi ini.
 
+
 ### Menambahkan Record Set CNAME
 
 1. Buat record set CNAME dengan memilih tombol biru **Create Record Set** di bagian atas.
 
-   {% image https://i.postimg.cc/ZqbKYZzR/gambar-06.png | 6 %}
+   ![Gambar 6](https://i.postimg.cc/ZqbKYZzR/gambar-06.png)
 
 2. Lalu isikan seperti gambar di atas.
 
@@ -180,14 +179,11 @@ Selanjutnya akan saya bagi dalam 3 tahapan.
 6. Kemudian **Save Record Set** untuk menyimpan konfigurasi ini.
 
 
-<br>
 Kita perlu melakukan pengujian apakah konfigurasi Name Record A dan CNAME yang kita masukkan di atas berhasil atau belum.
 
 Tapi, nanti akan kita lakukan di akhir. Setelah kita memasukkan konfigurasi Nameservers pada penyedia layanan domain.
 
 
-
-<br>
 ## 3. Konfigurasi Nameservers di Penyedia Layanan Domain
 
 Saya membeli domain pada Dewaweb.com.
@@ -196,22 +192,20 @@ Bagi teman-teman yang tidak membeli domain di Dewaweb, jangan khawatir, karena m
 
 Secara garis besar, tampilannya akan mirip seperti di bawah ini.
 
-{% image https://i.postimg.cc/MZL7c65v/gambar-07.png | 7 %}
+![Gambar 7](https://i.postimg.cc/MZL7c65v/gambar-07.png)
 
 Masukkan 4 alamat Nameservers yang sudah kita catat sebelumnya.
-
 
 Dengan begini, tahap konfigurasi Custom Domain GitHub Pages dengan Route 53 sebagai DNS Management telah selesai.
 
 
-<br>
 # Pengujian
 
 Lakukan pengujian `ping` terlebih dahulu, apakah domain kita sudah *up* atau belum.
 
-{% shell_user %}
-ping -c 3 bandithijo.com
-{% endshell_user %}
+```
+$ ping -c 3 bandithijo.com
+```
 
 ```
 PING bandithijo.com (185.199.109.153) 56(84) bytes of data.
@@ -224,12 +218,11 @@ PING bandithijo.com (185.199.109.153) 56(84) bytes of data.
 rtt min/avg/max/mdev = 42.743/43.145/43.532/0.364 ms
 ```
 
-<br>
 Selanjutnya tahap menggali informasi DNS nameserver dengan DNS lookup utility bernama `dig`.
 
-{% shell_user %}
-dig bandithijo.com
-{% endshell_user %}
+```
+$ dig bandithijo.com
+```
 
 ```
 ; <<>> DiG 9.14.2 <<>> bandithijo.com
@@ -271,12 +264,13 @@ Perhatikan hasilnya.
 
 Apabila telah sesuai dengan yang kita inputkan pada Amazon Console Route 53, berarti konfigurasi kita telah berhasil.
 
-{% box_info %}
-<p>Perlu diperhatikan bahwa proses perubahan Nameservers di atas sampai menjadi Nameservers yang baru, <mark><b>memerlukan waktu yang tidak sebentar</b></mark>.</p>
-<p>Jadi jangan khawatir apabila setelah teman-teman selesai mengkonfigurasi, tidak langsung dapat dilihat hasilnya.</p>
-{% endbox_info %}
+> INFO
+> 
+> Perlu diperhatikan bahwa proses perubahan Nameservers di atas sampai menjadi Nameservers yang baru, **memerlukan waktu yang tidak sebentar**.
+> 
+> Jadi jangan khawatir apabila setelah teman-teman selesai mengkonfigurasi, tidak langsung dapat dilihat hasilnya.
 
-<br>
+
 # Pesan Penulis
 
 Apabila mengalami kegagalan, silahkan merujuk juga ke tautan referensi yang saya sertakan di bawah.
@@ -285,26 +279,23 @@ Sepertinya cukup segini dulu, ya geys!
 
 Terima kasih.
 
-<br>
 **2019/06/01 13:44**
 
 Alhamdulillah, Final Submission saya telah dinyatakan lulus.
 
-{% image https://i.postimg.cc/q73xftHy/gambar-08.png | 8 %}
+![Gamabr 8](https://i.postimg.cc/q73xftHy/gambar-08.png)
 
 
-<br>
 # Referensi
 
-1. [help.github.com/en/articles/using-a-custom-domain-with-github-pages](https://help.github.com/en/articles/using-a-custom-domain-with-github-pages){:target="_blank"}
+1. [help.github.com/en/articles/using-a-custom-domain-with-github-pages](https://help.github.com/en/articles/using-a-custom-domain-with-github-pages)
 <br>Diakses tanggal: 2019/06/01
 
-2. [help.github.com/en/articles/securing-your-github-pages-site-with-https](https://help.github.com/en/articles/securing-your-github-pages-site-with-https){:target="_blank"}
+2. [help.github.com/en/articles/securing-your-github-pages-site-with-https](https://help.github.com/en/articles/securing-your-github-pages-site-with-https)
 <br>Diakses tanggal: 2019/06/01
 
-3. [help.github.com/en/articles/troubleshooting-custom-domains](https://help.github.com/en/articles/troubleshooting-custom-domains){:target="_blank"}
+3. [help.github.com/en/articles/troubleshooting-custom-domains](https://help.github.com/en/articles/troubleshooting-custom-domains)
 <br>Diakses tanggal: 2019/06/01
 
-4. [sophiafeng.com/technical/2015/02/12/setting-up-custom-domain-name-with-github-pages-and-amazon-route-53/](http://sophiafeng.com/technical/2015/02/12/setting-up-custom-domain-name-with-github-pages-and-amazon-route-53/){:target="_blank"}
+4. [sophiafeng.com/technical/2015/02/12/setting-up-custom-domain-name-with-github-pages-and-amazon-route-53/](http://sophiafeng.com/technical/2015/02/12/setting-up-custom-domain-name-with-github-pages-and-amazon-route-53/)
 <br>Diakses tanggal: 2019/06/01
-

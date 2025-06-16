@@ -1,53 +1,52 @@
 ---
 layout: 'post'
 title: 'Memanfaatkan Dunst Sebagai PopUp Notifikasi Bantuan Keyboard Shortcut (ver. 2)'
-date: 2019-06-17 17:18
+date: '2019-06-17 17:18'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips']
+tags: ['dunst']
 pin:
 hot:
 contributors: []
 description: "Dunst adalah replacement untuk standalone notification daemon yang ringan. Biasanya digunakan oleh pengguna Window Manager. Catatan kali ini, saya akan memanfaatkan dunst untuk menampilkan daftar keybind keymap."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
-
 # Prakata
 
-Latar belakang dari ditulisnya post ini adalah, untuk menyempurnakan [post sebelumnya]({{ site.url }}/blog/dunst-sebagai-notifikasi-bantuan-pengingat-shortcut){:target="_blank"} dengan judul yang sama.
+Latar belakang dari ditulisnya post ini adalah, untuk menyempurnakan [post sebelumnya]({{ site.url }}/blog/dunst-sebagai-notifikasi-bantuan-pengingat-shortcut) dengan judul yang sama.
 
 Berkat pertanyaan dari Nabil, saya memikirkan kembali script untuk Keyboard Shortcut Helper ini.
 
-{% image https://i.postimg.cc/CLxBq08Z/gambar-01.png | 1 %}
+![Gambar 1](https://i.postimg.cc/CLxBq08Z/gambar-01.png)
 
 Kalau kita lihat pada *command* di atas, saya menggunakan script bernama **help-script-browser.sh** untuk menyeleksi file dan membukanya.
 
-{% image https://i.postimg.cc/wMLCxM51/gambar-02.png | 2 %}
+![Gambar 2](https://i.postimg.cc/wMLCxM51/gambar-02.png)
 
 Cara ini sangat tidak praktis.
 
 Alhamdulillahnya terpikirlah cara untuk menggunakan `dmenu` saja.
 
-{% image https://i.postimg.cc/WbmBQDbK/gambar-03.png | 3 %}
+![Gambar 3](https://i.postimg.cc/WbmBQDbK/gambar-03.png)
 
 Dengan begini, akan lebih sederhana dan singkat proses pemanggilan plain text yang berisi Keyboard Shortcut Helper.
 
-Ide ini terinspirasi dari script [**st-urlopener**](https://github.com/thomas154/st-urlopener/blob/master/urlopener){:target="_blank"} yang digunakan untuk mengambil url pada screen terminal yang terlihat.
+Ide ini terinspirasi dari script [**st-urlopener**](https://github.com/thomas154/st-urlopener/blob/master/urlopener) yang digunakan untuk mengambil url pada screen terminal yang terlihat.
+
 
 # Proses Pembuatan
 
 Sekenarionya akan seperti ini.
 
 1. Membuat *script* dmenu untuk memilih *plain text* untuk ditampilkan
-2. Membuat *plain text* berisi *keyboard shortcut* yang akan dipanggil oleh dmenu
+1. Membuat *plain text* berisi *keyboard shortcut* yang akan dipanggil oleh dmenu
 
 Langsung saja kita eksekusi.
+
 
 ## Pembuatan Script
 
@@ -57,16 +56,16 @@ Langsung saja tanpa bertele-tele.
 
    Saya akan memberi nama `keybind-helper`.
 
-   {% shell_user %}
-sudo touch /usr/bin/keybind-helper
-sudo chmod +x /usr/bin/keybind-helper
-{% endshell_user %}
+   ```
+   $ sudo touch /usr/bin/keybind-helper
+   $ sudo chmod +x /usr/bin/keybind-helper
+   ```
 
 2. Edit file script tersebut dengan *text editor* favorit kalian.
 
-   {% shell_user %}
-sudo vim /usr/bin/keybind-helper
-{% endshell_user %}
+   ```
+   $ sudo vim /usr/bin/keybind-helper
+   ```
 
 3. Isikan, kira-kira seperti contoh di bawah ini.
 
@@ -89,8 +88,9 @@ sudo vim /usr/bin/keybind-helper
 
    Perhatikan bagian ini,
 
-   <pre>
-   tail -n 55 <mark>$HOME/.config/rofi-help/keybinds-bspwm</mark></pre>
+   ```
+   $ tail -n 55 $HOME/.config/rofi-help/keybinds-bspwm
+   ```
 
    Pada bagian yang saya *marking* adalah bagian dimana saya meletakkan *plain text* berisi *keyboard shortcut*.
 
@@ -100,32 +100,35 @@ sudo vim /usr/bin/keybind-helper
 
 4. Apabila ingin menambahkan pilihan yang lain, cukup menambahkan pada variabel `pilihan=`.
 
-    <pre>
-pilihan="BSPWM\nMPV\nST\nTMUX\nVIM<mark>\nTAMBAHAN</mark>"</pre>
+   ```
+   pilihan="BSPWM\nMPV\nST\nTMUX\nVIM\nTAMBAHAN"
+   ```
 
-    Dan juga `case` nya.
+   Dan juga `case` nya.
 
-    <pre>
-case "$terpilih" in
-        BSPWM) ...
-        MPV) ...
-        ST) ...
-        TMUX) ...
-        VIM) ...
-        <mark>TAMBAHAN) ... </mark>
-esac</pre>
+   ```
+   case "$terpilih" in
+           BSPWM) ...
+           MPV) ...
+           ST) ...
+           TMUX) ...
+           VIM) ...
+           TAMBAHAN) ...
+   esac
+   ```
 
 5. Contoh di atas, apabila teman-teman menggunakan `dmenu`.
 
     Untuk yang ingin menggunakan Rofi, tinggal tambahkan saja seperti ini pada variabel `terpilih=`.
 
-    <pre>
-terpilih=$(echo -e "$pilihan" | <mark>rofi -dmenu</mark> -i -p KEYBINDS:)</pre>
-
+    ```
+    $ terpilih=$(echo -e "$pilihan" | rofi -dmenu -i -p KEYBINDS:)
+    ```
 
 Dengan begini proses pembuatan *script* telah selesai.
 
 Kita akan lanjut membuat *plain text* yang berisi *keyboard shortcut*.
+
 
 ## Pembuatan Plain Text
 
@@ -133,9 +136,9 @@ Seperti yang sedikit sudah saya singgung pada *section* di atas.
 
 Perhatikan lagi bagian ini,
 
-{% shell_user %}
-tail -n 55 <mark>$HOME/.config/rofi-help/keybinds-bspwm</mark>
-{% endshell_user %}
+```
+$ tail -n 55 $HOME/.config/rofi-help/keybinds-bspwm
+```
 
 Pada bagian yang saya *marking* adalah bagian dimana saya meletakkan *plain text* berisi *keyboard shortcut*.
 
@@ -271,30 +274,29 @@ Kalau sekenario di atas sudah teman-teman selesaikan, hasilnya akan seperti ini.
 
 **Rofi**
 
-{% image https://i.postimg.cc/MKgFcjbP/gambar-04.gif | 4 %}
+![Gambar 4](https://i.postimg.cc/MKgFcjbP/gambar-04.gif)
 
-<br>
 **dmenu**
 
-{% image https://i.postimg.cc/5tX58P48/gambar-05.gif | 5 %}
+![Gambar 5](https://i.postimg.cc/5tX58P48/gambar-05.gif)
 
 Tinggal kita pasangkan pemanggilannya pada *keyboard shortcut* pada Window Manager masing-masing.
 
 Contohnya seperti pada BSPWM yang saya gunakan.
 
-{% shell_user %}
-vim ~/.config/sxhkd/sxhkdrc
-{% endshell_user %}
+```
+$ vim ~/.config/sxhkd/sxhkdrc
+```
 
-{% highlight_caption $HOME/.config/sxhkd/sxhkdrc %}
-{% highlight sh linenos %}
+```bash
+!filename: $HOME/.config/sxhkd/sxhkdrc
 # ...
 # ...
 
 # keybind helper
 super + F10
     /usr/bin/keybind-helper
-{% endhighlight %}
+```
 
 Untuk teman-teman yang menggunakan Window Manager atau Desktop Environment yang lain, silahkan menyesuaikan sendiri yaa.
 
@@ -305,8 +307,7 @@ Terima kasih untuk Nabil yang sudah menginspirasi untuk memperbaiki pola kerja d
 Terima kasih sudah mampir kawan.
 
 
-
 # Referensi
 
-1. [github.com/thomas154/st-urlopener/blob/master/urlopener](https://github.com/thomas154/st-urlopener/blob/master/urlopener){:target="_blank"}
+1. [github.com/thomas154/st-urlopener/blob/master/urlopener](https://github.com/thomas154/st-urlopener/blob/master/urlopener)
 <br>Diakses tanggal: 2019/06/17

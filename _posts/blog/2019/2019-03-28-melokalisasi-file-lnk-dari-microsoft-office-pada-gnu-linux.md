@@ -1,70 +1,86 @@
 ---
 layout: 'post'
 title: 'Melokalisasi File .lnk yang Dihasilkan oleh Microsoft Office pada Arch Linux'
-date: 2019-03-28 08:33
+date: '2019-03-28 08:33'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Wine', 'Arch Linux']
+tags: ['Wine', 'Arch Linux', 'Microsoft Office']
 pin:
 hot: true
 contributors: []
 description: "File .lnk dapat benar-benar membuat kotor direktori home kalian apabila tidak dilokalisasi dengan benar."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
-
 # Prakata
 
 Beberapa waktu yang lalu, saya mencoba memasang **Microsoft Office 2010** pada distribusi sistem operasi **Arch Linux** menggunakan **Wine 4.4-1**.
 
-{% image https://i.postimg.cc/yWqzSvDJ/gambar-01.gif | 1 %}
+![Gambar 1](https://i.postimg.cc/yWqzSvDJ/gambar-01.gif)
 
 Hasilnya lumayan memuaskan, meskipun beberapa aplikasi yang dibawa oleh Microsoft Office ini belum dapat dijalankan.
 
-{% image https://i.postimg.cc/sXSKwrKg/gambar-02.png | 2 | Microsoft Word 2010 %}
+![Gambar 2](https://i.postimg.cc/sXSKwrKg/gambar-02.png)
 
-{% image https://i.postimg.cc/SxjzTwBC/gambar-03.png | 3 | Microsoft Excel 2010 %}
+Gambar 2. Microsoft Word 2010
 
-{% image https://i.postimg.cc/sDKmnKP7/gambar-04.png | 4 | Microsoft Access 2010 %}
+![Gambar 3](https://i.postimg.cc/SxjzTwBC/gambar-03.png)
 
-{% image https://i.postimg.cc/PfW2DdP6/gambar-05.png | 5 | Microsoft Outlook 2010 %}
+Gambar 3. Microsoft Excel 2010
 
-{% image https://i.postimg.cc/prJCMJwN/gambar-06.png | 6 | Microsoft Clip Organizer %}
+![Gambar 4](https://i.postimg.cc/sDKmnKP7/gambar-04.png)
 
-{% image https://i.postimg.cc/WbsS6xZs/gambar-07.png | 7 | Microsoft Publisher 2010 %}
+Gambar 4. Microsoft Access 2010
 
-{% image https://i.postimg.cc/x14RQC4d/gambar-08.png | 8 | Microsoft Office Picture Manager %}
+![Gambar 5](https://i.postimg.cc/PfW2DdP6/gambar-05.png)
 
-<br>
+Gambar 5. Microsoft Outlook 2010
+
+![Gambar 6](https://i.postimg.cc/prJCMJwN/gambar-06.png)
+
+Gambar 6. Microsoft Clip Organizer
+
+![Gambar 7](https://i.postimg.cc/WbsS6xZs/gambar-07.png)
+
+Gambar 7. Microsoft Publisher 2010
+
+![Gambar 8](https://i.postimg.cc/x14RQC4d/gambar-08.png)
+
+Gambar 8. Microsoft Office Picture Manager
+
 Beberapa aplikasi Microsoft Office yang belum dapat dijalankan, diantaranya :
 
-{% image https://i.postimg.cc/Wzv8yHf6/gambar-09.png | 9 | Microsoft OneNote 2010 %}
+![Gambar 9](https://i.postimg.cc/Wzv8yHf6/gambar-09.png)
 
-{% image https://i.postimg.cc/LsgV8pc3/gambar-10.png | 10 | Microsoft PowerPoint 2010 %}
+Gambar 9. Microsoft OneNote 2010
 
-{% box_info %}
-<p> Ternyata, untuk dapat menjalankan Microsoft PowerPoint, kita perlu menambahkan library pada <code>winecfg</code> bernama <code>riched20</code>.</p>
-{% endbox_info %}
+![Gambar 10](https://i.postimg.cc/LsgV8pc3/gambar-10.png)
+
+Gambar 10. Microsoft PowerPoint 2010
+
+> INFO
+> 
+> Ternyata, untuk dapat menjalankan Microsoft PowerPoint, kita perlu menambahkan library pada `winecfg` bernama `riched20`.
 
 Meski begitu saat ini saya tidak benar-benar menggunakan aplikasi Microsoft Office.
 
 Saya hanya menggunakan Microsoft Word untuk melihat template dokumen-dokumen dari tugas akhir yang disediakan oleh kampus dalam format `.doc` dan `.docx` kemudian secara manual saya buat ulang untuk format `.odt` (LibreOffice Word Document).
 
-{% box_pertanyaan %}
-<p><b>Kenapa tidak menggunakan Microsoft Word saja? Kan sudah berhasil dipasang?</b></p>
-<ol>
-<li>Saya tidak takut untuk menjadi berbeda.</li>
-<li>Saya tidak takut untuk menggunakan LibreOffice.</li>
-<li>Saya menggunakan format <code>.fodt</code> (<i>Flat XML Open Document Text</i>) yang dapat digunakan di dalam <b>Git</b> sehingga memudahkan saya dalam mengerjakan tugas akhir (<i>Version Control System</i>).</li>
-</ol>
-<p>Poin ketiga adalah yang menjadi alasan terbesar saya. Mengapa saya bersikeras untuk menggunakan LibreOffice dalam mengerjakan tugas akhir.</p>
-<p>Mengenai file berekstensi <code>.fodt</code> akan saya ulas pada tulisan yang lain.</p>
-{% endbox_pertanyaan %}
+> PERTANYAAN?
+> 
+> **Kenapa tidak menggunakan Microsoft Word saja? Kan sudah berhasil dipasang?**
+> 
+> 1. Saya tidak takut untuk menjadi berbeda.
+> 1. Saya tidak takut untuk menggunakan LibreOffice.
+> 1. Saya menggunakan format `.fodt` (*Flat XML Open Document Text*) yang dapat digunakan di dalam **Git** sehingga memudahkan saya dalam mengerjakan tugas akhir (*Version Control System*).
+> 
+> Poin ketiga adalah yang menjadi alasan terbesar saya. Mengapa saya bersikeras untuk menggunakan LibreOffice dalam mengerjakan tugas akhir.
+> 
+> Mengenai file berekstensi `.fodt` akan saya ulas pada tulisan yang lain.
+
 
 # Permasalahan
 
@@ -72,7 +88,7 @@ Pada tulisan ini, saya hanya mengkhususkan pada **Microsoft Word** saja. Karena 
 
 Permasalahan yang muncul dari penggunaan aplikasi Microsoft Word di atas sistem operasi Arch Linux dengan menggunakan Wine adalah:
 
-<mark><b>Muncul file berekstensi '.lnk' dengan diawali oleh nama dari dokumen yang sedang kita buka pada Microsoft Word</b>.</mark>
+**Muncul file berekstensi '.lnk' dengan diawali oleh nama dari dokumen yang sedang kita buka pada Microsoft Word**.
 
 File ini seperti file *shortcut*. Letaknya pun random. Kadang berada di direktori yang sama dengan file dokumen. Kadang berada di Home, kadang berada di direktori Documents.
 
@@ -80,64 +96,65 @@ Contohnya seperti ini.
 
 **.lnk pada direktori yang sama**.
 
-<pre>
-/home/bandithijo
-├── Desktop
-├── Documents
-│   └── Tugas_akhir
-│       ├── Template-PROPOSAL.doc
-│       ├── <mark>Template-PROPOSAL.lnk</mark>
-│       ├── Template-SKRIPSI.doc
-│       └── <mark>Template-SKRIPSI.lnk</mark>
-├── Downloads
-├── Music
-├── Pictures
-├── Public
-├── Templates
-└── Videos
-</pre>
+```
+📂 /home/bandithijo/
+├── 📁 Desktop/
+├── 📂 Documents/
+│   └── 📂 Tugas_akhir/
+│       ├── 📄 Template-PROPOSAL.doc
+│       ├── 📄 Template-PROPOSAL.lnk 👈️
+│       ├── 📄 Template-SKRIPSI.doc
+│       └── 📄 Template-SKRIPSI.lnk 👈️
+├── 📁 Downloads/
+├── 📁 Music/
+├── 📁 Pictures/
+├── 📁 Public/
+├── 📁 Templates/
+└── 📁 Videos/
+```
 
 **.lnk pada direktori Documents**.
 
-<pre>
-/home/bandithijo
-├── Desktop
-├── Documents
-│   ├── <mark>Template-PROPOSAL.lnk</mark>
-│   ├── <mark>Template-SKRIPSI.lnk</mark>
-│   └── Tugas_akhir
-│       ├── Template-PROPOSAL.doc
-│       └── Template-SKRIPSI.doc
-├── Downloads
-├── Music
-├── Pictures
-├── Public
-├── Templates
-└── Videos
-</pre>
+```
+📂 /home/bandithijo/
+├── 📁 Desktop/
+├── 📂 Documents/
+│   ├── 📄 Template-PROPOSAL.lnk 👈️
+│   ├── 📄 Template-SKRIPSI.lnk 👈️
+│   └── 📂 Tugas_akhir/
+│       ├── 📄 Template-PROPOSAL.doc
+│       └── 📄 Template-SKRIPSI.doc
+├── 📁 Downloads/
+├── 📁 Music/
+├── 📁 Pictures/
+├── 📁 Public/
+├── 📁 Templates/
+└── 📁 Videos/
+```
 
 **.lnk pada direktori Home**.
 
-<pre>
-/home/bandithijo
-├── Desktop
-├── Documents
-│   └── Tugas_akhir
-│       ├── Template-PROPOSAL.doc
-│       └── Template-SKRIPSI.doc
-├── Downloads
-├── Music
-├── Pictures
-├── Public
-├── <mark>Template-PROPOSAL.lnk</mark>
-├── <mark>Template-SKRIPSI.lnk</mark>
-├── Templates
-└── Videos
-</pre>
+```
+📂 /home/bandithijo/
+├── 📁 Desktop/
+├── 📂 Documents/
+│   └── 📂 Tugas_akhir/
+│       ├── 📄 Template-PROPOSAL.doc
+│       └── 📄 Template-SKRIPSI.doc
+├── 📁 Downloads/
+├── 📁 Music/
+├── 📁 Pictures/
+├── 📁 Public/
+├── 📄 Template-PROPOSAL.lnk 👈️
+├── 📄 Template-SKRIPSI.lnk 👈️
+├── 📁 Templates/
+└── 📁 Videos/
+```
 
 Kira-kira, ilustrasinya seperti di atas.
 
 Awalnya, saya tidak begitu menghiraukan. Namun, lama-kelamaan menjadi tidak sedap dipandang juga.
+
 
 # Penyelesaian
 
@@ -159,15 +176,15 @@ Nah, sekarang kita akan sediakan direktori *Recent* untuk mengatasi permasalahan
 
    Contohnya seperti punya saya.
 
-   {% shell_user %}
-cd ~/.wine/drive_c/users/bandithijo
-{% endshell_user %}
+   ```
+   $ cd ~/.wine/drive_c/users/bandithijo
+   ```
 
 2. Kemudian , lihat isi di dalam direktori ini. Apakah sudah terdapat direktori yang bernama `Recent` atau tidak.
 
-   {% shell_user %}
-ls -la
-{% endshell_user %}
+   ```
+   $ ls -la
+   ```
 
    ```
    drwxr-xr-x  AppData
@@ -196,13 +213,13 @@ ls -la
 
 3. Ketik perintah di bawah untuk membuat direktori `Recent`.
 
-   {% shell_user %}
-mkdir Recent
-{% endshell_user %}
+   ```
+   $ mkdir Recent
+   ```
 
    Lalu, periksa kembali keberadaan direktori ini, apakah sudah berhasil dibuat atau tidak.
 
-   <pre>
+   ```
    drwxr-xr-x  AppData
    drwxr-xr-x 'Application Data'
    drwxr-xr-x  Contacts
@@ -217,17 +234,19 @@ mkdir Recent
    lrwxrwxrwx 'My Music' -> /home/bandithijo/snd
    lrwxrwxrwx 'My Pictures' -> /home/bandithijo/pix
    lrwxrwxrwx 'My Videos' -> /home/bandithijo/vid
-   <mark>drwxr-xr-x  Recent</mark>
+   drwxr-xr-x  Recent 👈️
    drwxr-xr-x 'Saved Games'
    drwxr-xr-x  Searches
    drwxr-xr-x 'Start Menu'
-   drwxr-xr-x  Temp</pre>
+   drwxr-xr-x  Temp
+   ```
 
    Buat juga, direktori **Recent** pada *users* Public.
 
    Yang beralamat di `~/.wine/drive_c/users/Public`.
 
    Selesai.
+
 
 # Pengujian
 
@@ -237,27 +256,25 @@ Lalu, periksa direktori Home, Documents, dan direktori tempat file dokumen berad
 
 Apabila tidak, sekarang coba periksa pada direktori **Recent** yang baru saja kita buat.
 
-{% shell_user %}
-ls -l ~/.wine/drive_c/users/bandithijo/Recent
-{% endshell_user %}
+```
+$ ls -l ~/.wine/drive_c/users/bandithijo/Recent
+```
 
 Hasilnya,
 
-<pre>
+```
 total 12
-<mark>-rw-r--r-- Template-PROPOSAL.doc.lnk</mark>
-<mark>-rw-r--r-- Template-SKRIPSI.doc.lnk</mark>
-</pre>
+-rw-r--r-- Template-PROPOSAL.doc.lnk 👈️
+-rw-r--r-- Template-SKRIPSI.doc.lnk 👈️
+```
 
 Sekarang file berekstensi `.lnk` yang dihasilkan oleh Microsoft Office sudah tidak lagi berhamburan pada struktur direktori GNU/Linux, karena sudah kita lokalisasi pada direktori **Recent** sebagaimana pada habitat asalnya. Hehe.
 
 
-
 # Referensi
 
-1. [Office 2010 and .lnk files ](https://www.codeweavers.com/support/forums/general/?t=26;msg=128936){:target="_blank"}
+1. [Office 2010 and .lnk files ](https://www.codeweavers.com/support/forums/general/?t=26;msg=128936)
 <br>Diakses tanggal: 2019/03/27
 
-2. [Microsoft Office under Linux: .lnk files, WINE, Crossover, and you](http://www.efficientsoftware.co.nz/microsoft-office-linux-lnk-wine/){:target="_blank"}
+2. [Microsoft Office under Linux: .lnk files, WINE, Crossover, and you](http://www.efficientsoftware.co.nz/microsoft-office-linux-lnk-wine/)
 <br>Diakses tanggal: 2019/03/27
-

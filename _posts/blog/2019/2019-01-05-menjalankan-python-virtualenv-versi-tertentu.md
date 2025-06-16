@@ -1,22 +1,19 @@
 ---
 layout: 'post'
 title: 'Menjalankan Python Virtualenv Versi Python yang Spesifik pada Arch Linux'
-date: 2019-01-05 12:07
+date: '2019-01-05 12:07'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Arch Linux', 'Tips', 'Python']
+tags: ['Python']
 pin:
 hot:
 contributors: []
 description: "Catatan ini mengenai trik membuat dan menjalankan Python Virtualenv dengan versi yang spesifik pada Arch Linux."
 ---
-
-<!-- BANNER OF THE POST -->
-<!-- <img class="post-body-img" src="{{ site.lazyload.logo_blank_banner }}" data-echo="#" onerror="imgError(this);" alt="banner"> -->
 
 # Latar Belakang Masalah
 
@@ -26,15 +23,15 @@ Saat tulisan ini dibuat, Arch Linux secara *default* sudah membawa Python versi 
 
 Apabila saya menjalankan,
 
-{% shell_user %}
-virtualenv venv
-{% endshell_user %}
+```
+$ virtualenv venv
+```
 
 Maka saat saya aktifkan dan saya lihat versi Pythonnya, masih menggunakan Python 3.7.
 
-{% shell_user %}
-python -V
-{% endshell_user %}
+```
+$ python -V
+```
 
 ```
 Python 3.7.2
@@ -42,19 +39,20 @@ Python 3.7.2
 
 Bagaimana caranya agar di dalam Python Environment yang saya buat dapat menggunakan Python 3.6?
 
+
 # Solusi
 
 1. Install Python 3.6 dari AUR
 
-   {% shell_user %}
-yay python36
-{% endshell_user %}
+   ```
+   $ yay python36
+   ```
 
 2. Buat virtualenv dari versi python 3.6
 
-   {% shell_user %}
-virtualenv -p python3.6 <mark>venv</mark>
-{% endshell_user %}
+   ```
+   $ virtualenv -p python3.6 <mark>venv</mark>
+   ```
 
    `venv` adalah nama dari virtual environment.
 
@@ -72,28 +70,29 @@ virtualenv -p python3.6 <mark>venv</mark>
 
 3. Aktivasi virtual environment.
 
-   {% shell_user %}
-cd venv
-{% endshell_user %}
+   ```
+   $ cd venv
+   ```
 
-   {% shell_user %}
-source bin/activate
-{% endshell_user %}
+   ```
+   $ source bin/activate
+   ```
 
    Nanti akan ada tanda-tanda pada Terminal kalian apabila kalian mengunakan Theme tertentu yang menampilkan bahwa kita saat ini telah berada pada virtual environment.
 
    Seperti ini.
 
-   <pre>
-   <mark>(venv)</mark>
+   ```
+   (venv)
    ~/venv
-   $_</pre>
+   $_
+   ```
 
    Lakukan pengecekan versi Python.
 
-   {% shell_user %}
-python -V
-{% endshell_user %}
+   ```
+   $ python -V
+   ```
 
    ```
    Python 3.6.7
@@ -116,6 +115,5 @@ Terima kasih.
 
 # Referensi
 
-1. [reddit.com/r/archlinux/comments/7ozxtx/how_to_manage_python_versions/](https://www.reddit.com/r/archlinux/comments/7ozxtx/how_to_manage_python_versions/){:target="_blank"}
+1. [reddit.com/r/archlinux/comments/7ozxtx/how_to_manage_python_versions/](https://www.reddit.com/r/archlinux/comments/7ozxtx/how_to_manage_python_versions/)
 <br>Diakses tanggal: 2019/01/05
-

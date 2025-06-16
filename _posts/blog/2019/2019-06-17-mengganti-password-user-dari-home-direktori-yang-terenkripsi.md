@@ -1,28 +1,28 @@
 ---
 layout: 'post'
 title: 'Mengganti Password User dari Home Direktori yang Terenkripsi'
-date: 2019-06-17 13:18
+date: '2019-06-17 13:18'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips']
+tags: ['eCryptfs', 'Encryption']
 pin:
 hot:
 contributors: []
 description: "Memiliki Home direktori yang terenkripsi bukan berarti kita hanya dapat mengeset password hanya pada saat pertama kali enkripsi dibuat dan tidak dapat menggantinya. Tentu saja kita dapat menggantinya. Catatan berikut ini mudah-mudahan dapat membantu kalian memberikan gambaran, tentang bagaimana mengganti password terhadap home direktori yang terenkripsi."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
+> PERHATIAN!
+> 
+> Lakukan *backup* data sebelum melakukan proses di bawah.
+> 
+> Segala bentuk kerugian, seperti kehilangan data maupun rusaknya perangkat yang kalian gunakan, bukan merupakan tanggung jawab penulis.
+> 
+> *Do with Your Own Risk!*
 
-{% box_perhatian %}
-<p>Lakukan <i>backup</i> data sebelum melakukan proses di bawah.</p>
-<p>Segala bentuk kerugian, seperti kehilangan data maupun rusaknya perangkat yang kalian gunakan, bukan merupakan tanggung jawab penulis.</p>
-<p><i>Do with Your Own Risk!</i></p>
-{% endbox_perhatian %}
 
 # Prakata
 
@@ -34,11 +34,13 @@ Saya adalah salah satu dari orang yang aneh tersebut.
 
 Alasannya bukan karena menerapkan jadwal khusus untuk berganti *password* secara berkala, namun karena seringnya berkontribusi dalam menjawab pertanyaan teman-teman pada group Telegram, yang terkadang perlu untuk menampilkan demonstrasi berupa video dengan menampilkan *screenkey*. Hal ini menyebabkan *password* user saya terekspose karena saya lupa untuk menonaktifkannya.
 
+
 # Permasalahanan
 
 Karena Home direktori saya adalah direktori yang terenkripsi (menggunakan eCryptfs), disinilah letak tantangannya. Karena tentu saja prosedur untuk mengganti *password* menjadi tidak biasa.
 
-Teman-teman dapat melihat catatan proses enkripsi Home direktori yang saya lakukan di sini, "[Mengenkripsi Home Direktori pada GNU/Linux]({{ site.url }}/blog/mengenkripsi-home-direktori-pada-gnu-linux){:target="_blank"}".
+Teman-teman dapat melihat catatan proses enkripsi Home direktori yang saya lakukan di sini, "[Mengenkripsi Home Direktori pada GNU/Linux]({{ site.url }}/blog/mengenkripsi-home-direktori-pada-gnu-linux)".
+
 
 # Pemecahan Masalah
 
@@ -50,6 +52,7 @@ Saya akan bagi dalam dua langkah, agar lebih mudah untuk dipahami.
 2. Mengganti *password* username
 
 Langkah di atas, memang tidak harus berurutan, namun saya merekomendasikan untuk mengerjakan tahap pertama lebih dahulu.
+
 
 ## Mengganti Password Home Direktori Terenkripsi
 
@@ -69,11 +72,11 @@ Namun, **saya sangat merekomendasikan untuk *logout* terlebh dahulu, dan menggun
 
 4. Jalankan perintah di bawah ini untuk mengganti *password* Home direktori yang terenkripsi dengan eCryptfs.
 
-   {% shell_root %}
-ecryptfs-rewrap-passphrase /home/.ecryptfs/<mark>bandithijo</mark>/.ecryptfs/wrapped-passphrase
-{% endshell_root %}
+   ```
+   $ ecryptfs-rewrap-passphrase /home/.ecryptfs/<mark>bandithijo</mark>/.ecryptfs/wrapped-passphrase
+   ```
 
-   Jangan lupa mengganti <mark>bandithijo</mark>, dengan username yang teman-teman gunakan.
+   Jangan lupa mengganti `bandithijo`, dengan username yang teman-teman gunakan.
 
    Apabila berhasil, akan mengeluarkan *output* seperti di bawah ini.
 
@@ -87,6 +90,7 @@ ecryptfs-rewrap-passphrase /home/.ecryptfs/<mark>bandithijo</mark>/.ecryptfs/wra
 
    **Jangan *logout* dulu, karena kita akan lanjut ke tahap berikutnya**.
 
+
 ## Mengganti Password User
 
 Setelah sebelumnya kita berhasil mengganti *passphrase*/*password* dari Home direktori, langkah selanjutnya, kita akan mengganti *password* dari user yang kita gunakan.
@@ -95,16 +99,15 @@ Ini penting mengingat cara kerja dekripsi dari Home direktori menggunakan eCrypt
 
 Caranya tentu saja sudah sangat familiar.
 
-{% shell_user %}
-passwd <mark>bandithijo</mark>
-{% endshell_user %}
+```
+$ passwd bandithijo
+```
 
-Jangan lupa mengganti <mark>bandithijo</mark> dengan username kalian.
+Jangan lupa mengganti `bandithijo` dengan username kalian.
 
 Dengan begini tahapan mengganti *password* user dari Home direktori yang terenkripsi telah selesai.
 
 Lakukan pengujian, apakah kalian bisa masuk ke desktop, dan lihat apakah Home direktori berhasil di-dekripsi secara otomatis.
-
 
 
 # Pesan Penulis
@@ -118,10 +121,7 @@ Sepertinya seperti ini saja.
 Terima Kasih.
 
 
-
 # Referensi
 
-1. [wiki.archlinux.org/index.php/ECryptfs#Mounting_2](https://wiki.archlinux.org/index.php/ECryptfs#Mounting_2){:target="_blank"}
+1. [wiki.archlinux.org/index.php/ECryptfs#Mounting_2](https://wiki.archlinux.org/index.php/ECryptfs#Mounting_2)
 <br>Diakses tanggal: 2019/06/17
-
-

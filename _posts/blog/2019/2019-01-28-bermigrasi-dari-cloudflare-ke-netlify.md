@@ -1,22 +1,19 @@
 ---
 layout: 'post'
 title: 'BanditHijo.com, Bermigrasi dari Cloudflare ke Netlify'
-date: 2019-01-28 01:18
+date: '2019-01-28 01:18'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Jekyll', 'Tips', 'Ulasan']
+tags: ['Jekyll']
 pin:
 hot:
 contributors: []
 description: "Awalmula bandithijo berpindah domain ke .com menggunakan CLoudflare sebagai DNS resolver. Kali ini, kita akan coba menggunakan Netlify yang bertugas dsebagai CI dan juga DNS resolver."
 ---
-
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
 
 # Prakata
 
@@ -26,19 +23,22 @@ Awalnya hanya ingin coba-coba, namun setelah berhasil dan merasakan ada "*someth
 
 Kedua platform ini tidak dapat dibandingkan karena memiliki definisi dan fungsi yang berbeda.
 
-[Apa itu Cloudflare?](https://www.cloudflare.com/){:target="_blank"}
-<span style="font-size:14px;"><i>Cloudflare, Inc. is a U.S. company that provides content delivery network services, DDoS mitigation, Internet security and distributed domain name server services. Cloudflare's services sit between the visitor and the Cloudflare user's hosting provider, acting as a reverse proxy for websites. - Wikipedia</i></span>
+[Apa itu Cloudflare?](https://www.cloudflare.com/) \
+*Cloudflare, Inc. is a U.S. company that provides content delivery network services, DDoS mitigation, Internet security and distributed domain name server services. Cloudflare's services sit between the visitor and the Cloudflare user's hosting provider, acting as a reverse proxy for websites. - Wikipedia*
 
-[Apa itu Netlify?](https://www.netlify.com/){:target="_blank"}
-<span style="font-size:14px;"><i>Netlify is a San Francisco-based cloud computing company that offers hosting and serverless backend services for static websites. It features continuous deployment from Git across a global application delivery network, serverless form handling,support for AWS Lambda functions, and full integration with Let's Encrypt. - Wikipedia</i></span>
+[Apa itu Netlify?](https://www.netlify.com/) \
+*Netlify is a San Francisco-based cloud computing company that offers hosting and serverless backend services for static websites. It features continuous deployment from Git across a global application delivery network, serverless form handling,support for AWS Lambda functions, and full integration with Let's Encrypt. - Wikipedia*
 
 Pokoknya, saat ini, saya hanya butuh konfigurasi DNS dan Nameservers-nya saja untuk dapat menghubungkan GitHub/GitLab dengan domain name yang saya beli dari Dewaweb.
+
 
 # Proses Migrasi
 
 Proses-proses di bawah ini ~~tidak~~ harus berurutan. Saya mencoba menyusun dan mengurutkan berdasarkan sekenario yang saya alami.
 
+
 ## GitHub
+
 
 ### Menghapus GitHub Page
 
@@ -46,12 +46,13 @@ Sebenarnya langkah ini tidak diperlukan. Ini hanya preferensi saya saja.
 
 1. Buka tab **Settings** pada repository GitHub.
 
-   {% image https://i.postimg.cc/kgV8Y97C/gambar-01.png | 1 %}
+   ![Gambar 1](https://i.postimg.cc/kgV8Y97C/gambar-01.png)
 
 2. Scrolling ke bawah, pada bagian "GitHub Pages". Ganti **Source** dari **master branch** menjadi **None**.
 
-   {% image https://i.postimg.cc/6QnZw071/gambar-02.png | 2 %}
-Kemudian, **Save**.
+   ![Gambar 2](https://i.postimg.cc/6QnZw071/gambar-02.png)
+
+   Kemudian, **Save**.
 
    Karena saya memiliki **custom domain** maka saya hapus dahulu isian dari **Custom domain**. Setelah itu, baru merubah **Source** menjadi **None**.
 
@@ -59,38 +60,41 @@ Kemudian, **Save**.
 
 3. Selanjutnya, rename repository dari **bandithijo.github.io** menjadi **bandithijo.com**.
 
-   {% image https://i.postimg.cc/0QCJKy0Y/gambar-03.png | 3 %}
-Kemudian **Rename**.
+   ![Gambar 3](https://i.postimg.cc/0QCJKy0Y/gambar-03.png)
+
+   Kemudian **Rename**.
 
    Setelah berhasil, nama dari repositori saya akan berubah.
 
-   {% image https://i.postimg.cc/wvzmBmLx/gambar-04.png | 4 %}
+   ![Gambar 4](https://i.postimg.cc/wvzmBmLx/gambar-04.png)
 
    Tujuannya hanya untuk menyamakan presepsi saja, bahwa sudah tidak ada lagi repositori yang bernama **bandithijo.github.io**.
 
    Agar dikemudian hari tidak menimbulkan ambigu.
 
+
 ### Mengganti Nama Direktori Root
 
 1. Saya juga perlu mengganti nama direktori root yang ada di laptop.
 
-   {% shell_user %}
-mv bandithijo.github.io bandithijo.com
-{% endshell_user %}
+   ```
+   $ mv bandithijo.github.io bandithijo.com
+   ```
 
    Tujuannya masih sama, agar tidak menimbulkan ambigu di kemudian hari.
+
 
 ### Mengganti Alamat Git Remote
 
 1. Ganti alamat GitHub **remote** yang lama dengan yang baru.
 
-   {% shell_user %}
-vim .git/config
-{% endshell_user %}
+   ```
+   $ vim .git/config
+   ```
 
    Ganti pada section `[remote "origin"]`, `/bandithijo.github.io.git` menjadi `/bandithijo.com.git`.
 
-   ```sh
+   ```bash
    # ...
    # ...
 
@@ -104,44 +108,49 @@ vim .git/config
 
    Perubahan alamat remote ini adalah hal yang direkomendasikan oleh perintah `git` saat saya melakukan `git push -u origin master`.
 
-   {% image https://i.postimg.cc/jS5Cdr51/gambar-05.png | 5 %}
+   ![Gambar 5](https://i.postimg.cc/jS5Cdr51/gambar-05.png)
+
 
 ### Menghapus CNAME
 
 1. Hapus **CNAME** yang ada pada root direktori.
 
-   <pre>
-   bandithijo.com
-   ├── _drafts/
-   ├── _includes/
-   ├── _layouts/
-   ├── _posts/
-   ├── _site/
-   ├── assets/
-   ├── pages/
-   ├── _config.yml
-   ├── 404.html
-   ├── <mark>CNAME</mark>  <-- Hapus aku
-   ├── Gemfile
-   ├── Gemfile.lock
-   └── index.html</pre>
+   ```
+   📂 bandithijo.com/
+   ├── 📁 _drafts/
+   ├── 📁 _includes/
+   ├── 📁 _layouts/
+   ├── 📁 _posts/
+   ├── 📁 _site/
+   ├── 📁 assets/
+   ├── 📁 pages/
+   ├── 📄 _config.yml
+   ├── 📄 404.html
+   ├── 📄 CNAME 👈️ Hapus
+   ├── 📄 Gemfile
+   ├── 📄 Gemfile.lock
+   └── 📄 index.html
+   ```
 
-   {% shell_user %}
-rm CNAME
-{% endshell_user %}
+   ```
+   $ rm CNAME
+   ```
+
 
 ## Netlify
 
+
 ### Tambah Site Baru
 
-1. Setelah login dan otomatis di arahkan ke alamat [app.netlify.com/](https://app.netlify.com/){:target="_blank"}. Saya menambahkan site baru.
+1. Setelah login dan otomatis di arahkan ke alamat [app.netlify.com/](https://app.netlify.com/). Saya menambahkan site baru.
 
-   {% image https://i.postimg.cc/8PS526Mt/gambar-06.png | 6 %}
+   ![Gambar 6](https://i.postimg.cc/8PS526Mt/gambar-06.png)
 
 2. Karena saya menggunakan GitHub repo, maka pada langkah 1, ini saya memilih GitHub.
 
-   {% image https://i.postimg.cc/RFhfnnXc/gambar-07.png | 7 %}
-Asiknya dengan Netlify, saya dapat berganti-ganti **resource**.
+   ![Gambar 7](https://i.postimg.cc/RFhfnnXc/gambar-07.png)
+
+   Asiknya dengan Netlify, saya dapat berganti-ganti **resource**.
 
    Jadi meskipun saya memilih GitHub saat ini, nanti saya masih dapat berubah ke resource yang lain, GitLab misalnya.
 
@@ -149,35 +158,38 @@ Asiknya dengan Netlify, saya dapat berganti-ganti **resource**.
 
 4. Pada tahap ini, saya diminta untuk memilih repository GitHub.
 
-   {% image https://i.postimg.cc/6QvVHZdt/gambar-08.png | 8 %}
+   ![Gambar 8](https://i.postimg.cc/6QvVHZdt/gambar-08.png)
 
 5. Padah tahap ini saya diminta untuk melakukan setting untuk mendeploy repository.
 
-   {% image https://i.postimg.cc/26KQM9bb/gambar-09.png | 9 %}
-Saya menambahkan `;rm _site/feed.xml` karena saya tidak menggunakan `feed.xml`.
+   ![Gambar 9](https://i.postimg.cc/26KQM9bb/gambar-09.png)
+
+   Saya menambahkan `;rm _site/feed.xml` karena saya tidak menggunakan `feed.xml`.
 
    Pada langkah ini, sebenarnya di laptop (*local*/*development*), saya membuild Jekyll dengan menggunakan *custom command*.
 
-   {% shell_user %}
-JEKYLL_ENV=production jekyll build; rm _site/feed.xml
-{% endshell_user %}
+   ```
+   $ JEKYLL_ENV=production jekyll build; rm _site/feed.xml
+   ```
 
    Terdapat `JEKYLL_ENV=production` yang mendefiniskan bahwa build ini untuk **production environment**.
 
    Kegunaan dari *variabels* ini adalah saya membagi *environment* menjadi dua, *development* dan *production*. Yang mana terdapat beberapa elemen yang tidak akan ditampilkan pada *development environment* seperti: Disqus, Google Analytics, dan SEO support.
 
-   Netlify menyediakan [Build Environment Variables](https://www.netlify.com/docs/build-settings/){:target="_blank"}, namun tidak support untuk Jekyll, hanya mensupport: Node, NPM, dan Yarn.
+   Netlify menyediakan [Build Environment Variables](https://www.netlify.com/docs/build-settings/), namun tidak support untuk Jekyll, hanya mensupport: Node, NPM, dan Yarn.
 
    Untuk mengatasi hal ini pada Netlify, saya perlu menambahkan gem bernama `jekyll-netlify`.
 
-   Tambahkan pada jajaran plugins di `gemfile`.
+   Tambahkan pada jajaran plugins di `Gemfile`.
 
    ```ruby
+   !filename: Gemfile
    gem 'jekyll-netlify', '~> 0.2.0'
    ```
    Kemudian, tambahkan pada jajaran plugins di `_config.yaml`.
 
    ```ruby
+   !filename: _config.yaml
    plugins:
      - jekyll-netlify
    ```
@@ -190,57 +202,64 @@ JEKYLL_ENV=production jekyll build; rm _site/feed.xml
 
 6. Akan keluar tampilan seperti ini.
 
-   {% image https://i.postimg.cc/JntfdM1b/gambar-10.png | 10 %}
-Saat ini statusnya project kita sedang di build dan di deploy oleh Netlify.
+   ![Gambar 10](https://i.postimg.cc/JntfdM1b/gambar-10.png)
+
+   Saat ini statusnya project kita sedang di build dan di deploy oleh Netlify.
+
 
 ### Konfigurasi Custom Domain
 
 1. Sembari menunggu proses deploy selesai, saya melakukan **Domain settings**.
 
-   {% image https://i.postimg.cc/7PFFXFj2/gambar-11.png | 11 %}
+   ![Gambar 11](https://i.postimg.cc/7PFFXFj2/gambar-11.png)
 
 2. Karena saya memiliki domain sendiri, yaitu **bandithijo.com**, maka saya melakukan konfigurasi custom domain, pilih **Add custom domain**.
 
-   {% image https://i.postimg.cc/vB3WDw9S/gambar-12.png | 12 %}
+   ![Gambar 12](https://i.postimg.cc/vB3WDw9S/gambar-12.png)
 
 3. Saya mengisikan "bandithijo.com", lebih direkomendasikan untuk menggunakan "www". Namun pada tulisan kali ini saya akan menunjukkan mudahnya konfigurasi custom domain pada Netlify.
 
-   {% image https://i.postimg.cc/NFnm78d6/gambar-13.png | 13 %}
-Tekan **Verify**.
+   ![Gambar 13](https://i.postimg.cc/NFnm78d6/gambar-13.png)
+
+   Tekan **Verify**.
 
 4. Netlify akan mengkonfirmasi bahwa "bandithijo.com" sudah ada yang punya, apakah pemiliknya adalah saya?
 
-   {% image https://i.postimg.cc/Y00QWDz2/gambar-14.png | 14 %}
-Tentu saja, **Yes, add domain**.
+   ![Gambar 14](https://i.postimg.cc/Y00QWDz2/gambar-14.png)
+
+   Tentu saja, **Yes, add domain**.
 
 5. Akan tampil domain "bandithijo.com" dan "www.bandithijo.com" yang memiliki status **Check DNS configuration**.
 
-   {% image https://i.postimg.cc/76zY5gpG/gambar-15.png | 15 %}
-Pilih salah satu dari kedua warning tersebut.
+   ![Gambar 15](https://i.postimg.cc/76zY5gpG/gambar-15.png)
+
+   Pilih salah satu dari kedua warning tersebut.
 
 6. Akan terbuka popup window yang berisi tentang rekomendasi konfigurasi DNS. Untuk melakukan *pointing root domain* ke Netlify.
 
-   {% image https://i.postimg.cc/T1qd9T2T/gambar-16.png | 16 %}
-Namun, saya hiraukan saja, karena saya hanya ingin praktis dengan menggunakan DNS dari Netlify.
+   ![Gambar 16](https://i.postimg.cc/T1qd9T2T/gambar-16.png)
+
+   Namun, saya hiraukan saja, karena saya hanya ingin praktis dengan menggunakan DNS dari Netlify.
 
 7. Scrolling ke bawah, untuk menemukan bantuan dalam menggunakan DNS dari Netlify.
 
-   {% image https://i.postimg.cc/8cVkM7Sy/gambar-17.png | 17 %}
-Saat ini, saya memilih menggunakan Netlify DNS agar lebih praktis.
+   ![Gambar 17](https://i.postimg.cc/8cVkM7Sy/gambar-17.png)
+
+   Saat ini, saya memilih menggunakan Netlify DNS agar lebih praktis.
 
 8. Sekali lagi saya diminta untuk memastikan apakah domain **bandithijo.com** benar saya miliki atau tidak.
 
-   {% image https://i.postimg.cc/vZ1R8QRD/gambar-18.png | 18 %}
+   ![Gambar 18](https://i.postimg.cc/vZ1R8QRD/gambar-18.png)
 
-   {% image https://i.postimg.cc/NFnm78d6/gambar-13.png | 13 %}
+   ![Gambar 19](https://i.postimg.cc/NFnm78d6/gambar-13.png)
 
 9. Bagian menambahkan DNS record yang lain, saya **continue** saja.
 
-   {% image https://i.postimg.cc/j5bBhPDJ/gambar-19.png | 19 %}
+   ![Gambar 20](https://i.postimg.cc/j5bBhPDJ/gambar-19.png)
 
 10. Copy paste domain Nameserver milik Netlify yang nanti akan saya letakkan pada konfigurasi Nameserver di Dewaweb.
 
-    {% image https://i.postimg.cc/fbX6XBRN/gambar-20.png | 20 %}
+    ![Gambar 21](https://i.postimg.cc/fbX6XBRN/gambar-20.png)
 
     ```
     dns1.p06.nsone.net
@@ -253,21 +272,24 @@ Saat ini, saya memilih menggunakan Netlify DNS agar lebih praktis.
 
 1. Saya perlu mengganti Default subdomain yang diberikan secara random oleh Netlify.
 
-   {% image https://i.postimg.cc/LX5Lw0gd/gambar-21.png | 21 %}
-Pilih **Edit site name**. Untuk merubahnya.
+   ![Gambar 22](https://i.postimg.cc/LX5Lw0gd/gambar-21.png)
+
+   Pilih **Edit site name**. Untuk merubahnya.
 
 2. Saya isikan sesuai nama domain yang saya miliki. **bandithijo**.
 
-   {% image https://i.postimg.cc/W179PCzt/gambar-22.png | 22 %}
-Pilih **Save**.
+   ![Gambar 23](https://i.postimg.cc/W179PCzt/gambar-22.png)
+
+   Pilih **Save**.
 
 3. Lakukan pengecekan. **Go to DNS panel**.
 
-   {% image https://i.postimg.cc/YqHfqRJF/gambar-23.png | 23 %}
+   ![Gambar 24](https://i.postimg.cc/YqHfqRJF/gambar-23.png)
 
-   {% image https://i.postimg.cc/m2y3cMs5/gambar-24.png | 24 %}
+   ![Gambar 25](https://i.postimg.cc/m2y3cMs5/gambar-24.png)
 
    Maka target dari DNS record sudah di arahkan ke alamat Default domain yang baru.
+
 
 ### Redirect Default Subdomain Netlify ke Primary Domain
 
@@ -275,22 +297,23 @@ Pilih **Save**.
 
 2. Netlify sudah menyarankan untuk membuat file `_redirects` pada direktori root dari direktori site saya.
 
-   {% image https://i.postimg.cc/sDgxcZW8/gambar-25.png | 25 %}
+   ![Gambar 26](https://i.postimg.cc/sDgxcZW8/gambar-25.png)
 
    Namun, saya lebih memilih cara lain.
 
 3. Saya memilih menambahkan file `netlify.toml` pada direktori root Jekyll saya. Yang isinya mirip seperti file `_redirects` yang disarankan oleh Netlify.
 
-   {% shell_user %}
-vim netlify.toml
-{% endshell_user %}
+   ```
+   $ vim netlify.toml
+   ```
 
-   <pre>
+   ```
    [[redirects]]
      from = "https://bandithijo.netlify.com/*"
      to = "https://bandithijo.com/:splat"
      status = 301
-     force = true</pre>
+     force = true
+   ```
 
    Saya menggunakan cara ini karena, saat menggunakan file `_redirects`, pada bagian **Settings** > **GitHub page**, dikatakan bahwa isi dari file `_redirects` tidak sesuai dengan semestinya.
 
@@ -298,7 +321,9 @@ vim netlify.toml
 
    Sekarang, apabila ada pengunjung yang dengan atau tanpa sengaja mengakses alamat **bandithijo.netlify.com** akan otomatis didirect ke **bandithijo.com**.
 
+
 ## Dewaweb
+
 
 ### Menambahkan Netlify Nameservers
 
@@ -306,21 +331,22 @@ vim netlify.toml
 
 2. Saya hanya perlu mengganti default Dewaweb Nameserver dengan 4 buah Nameserver yang sudah diberikan oleh Netlify.
 
-   {% image https://i.postimg.cc/4dMGQmTC/gambar-26.png | 26 %}
+   ![Gambar 27](https://i.postimg.cc/4dMGQmTC/gambar-26.png)
 
-   {% image https://i.postimg.cc/brthCpzZ/gambar-27.png | 27 %}
+   ![Gambar 28](https://i.postimg.cc/brthCpzZ/gambar-27.png)
 
 3. Pastikan berhasil memasukkan Nameserver Netlify.
 
-   {% image https://i.postimg.cc/GhRL7Tyr/gambar-28.png | 28 %}
+   ![Gambar 29](https://i.postimg.cc/GhRL7Tyr/gambar-28.png)
 
    Apabila gagal, ulangi sampai Nameserver benar-benar tersimpan.
 
 3. Pada Dewaweb, saya tidak perlu melakukan konfigurasi **DNS Management**.
 
-   {% image https://i.postimg.cc/qM2tgd8B/gambar-29.png | 29 %}
+   ![Gambar 30](https://i.postimg.cc/qM2tgd8B/gambar-29.png)
 
    Karena saya sudah menggunakan DNS management milik Netlify.
+
 
 # Konfigurasi HTTPS
 
@@ -333,20 +359,28 @@ Namun untuk mencatat prosedur manualnya, saya akan tetap menuliskan langkah-lang
 1. Kembali lagi ke Netlify
 
 2. Scrolling ke bagian paling bawah dari halaman Settings Domain.
-{% image https://i.postimg.cc/7L6jtw9q/gambar-30.png | 30 %}
-Pilih **Verify DNS configuration**.
+
+   ![Gambar 31](https://i.postimg.cc/7L6jtw9q/gambar-30.png)
+
+   Pilih **Verify DNS configuration**.
 
 3. Apabila berhasil.
-{% image https://i.postimg.cc/J05LVKk8/gambar-31.png | 31 %}
-Tinggal menunggu (paling lama 24 jam) hingga Netlify memberikan sertifikat Let's Encrypt (TLS/SSL certificate) untuk mendapatkan HTTPS.
+
+   ![Gambar 32](https://i.postimg.cc/J05LVKk8/gambar-31.png)
+
+   Tinggal menunggu (paling lama 24 jam) hingga Netlify memberikan sertifikat Let's Encrypt (TLS/SSL certificate) untuk mendapatkan HTTPS.
 
 4. Yak! Tidak sampai 5 menit, SSL/TLS certificate dari Let's Encrypt saya sudah jadi.
-{% image https://i.postimg.cc/VsW5XP7K/gambar-32.png | 32 %}
+
+   ![Gambar 33](https://i.postimg.cc/VsW5XP7K/gambar-32.png)
 
 5. Saya coba cek di browser.
-{% image https://i.postimg.cc/63N5GMCs/gambar-33.png | 33 %}
+
+   ![Gambar 34](https://i.postimg.cc/63N5GMCs/gambar-33.png)
+
 
 # Tips
+
 
 ## WWW or not WWW?
 
@@ -355,7 +389,9 @@ Untuk masalah ini, Belum akan saya bahas di sini.
 Namun apabila ingin berpindah dari "tanpa WWW (apex domain)" dan ingin menggunakan "WWW (subdomain)" caranya sangat mudah.
 
 Cukup klik menu pada domain **www.bandithijo.com**.
-{% image https://i.postimg.cc/T3QG7R8P/gambar-34.png | 34 %}
+
+![Gambar 35](https://i.postimg.cc/T3QG7R8P/gambar-34.png)
+
 Lalu klik **Set as primary domain**.
 
 
@@ -374,30 +410,27 @@ Ini adalah catatan yang sangat panjang. Mudah-mudahan pengalaman saya dapat berm
 
 # Terima Kasih
 
-1. [Aflasio](https://blog.aflasio.com/){:target="_blank"}
-
-2. [Nanda Okitavera](https://okitavera.me/){:target="_blank"}
-
-3. Beserta teman-teman di group [JAMstack Indonesia](https://t.me/JAMstackID){:target="_blank"} yang telah banyak menginspirasi saya (memberikan observation value) bagi saya untuk bermigrasi menggunakan Netlify.
-
+1. [Aflasio](https://blog.aflasio.com/)
+2. [Nanda Okitavera](https://okitavera.me/)
+3. Beserta teman-teman di group [JAMstack Indonesia](https://t.me/JAMstackID) yang telah banyak menginspirasi saya (memberikan observation value) bagi saya untuk bermigrasi menggunakan Netlify.
 
 
 # Referensi
 
-1. [www.netlify.com/docs/continuous-deployment/](https://www.netlify.com/docs/continuous-deployment/){:target="_blank"}
+1. [www.netlify.com/docs/continuous-deployment/](https://www.netlify.com/docs/continuous-deployment/)
 <br>Diakses tanggal: 2019/01/28
 
-2. [www.netlify.com/docs/custom-domains/](https://www.netlify.com/docs/custom-domains/){:target="_blank"}
+2. [www.netlify.com/docs/custom-domains/](https://www.netlify.com/docs/custom-domains/)
 <br>Diakses tanggal: 2019/01/28
 
-3. [www.netlify.com/docs/dns/](https://www.netlify.com/docs/dns/){:target="_blank"}
+3. [www.netlify.com/docs/dns/](https://www.netlify.com/docs/dns/)
 <br>Diakses tanggal: 2019/01/28
 
-4. [www.netlify.com/docs/redirects/](https://www.netlify.com/docs/redirects/){:target="_blank"}
+4. [www.netlify.com/docs/redirects/](https://www.netlify.com/docs/redirects/)
 <br>Diakses tanggal: 2019/01/28
 
-5. [www.netlify.com/docs/netlify-toml-reference/](https://www.netlify.com/docs/netlify-toml-reference/){:target="_blank"}
+5. [www.netlify.com/docs/netlify-toml-reference/](https://www.netlify.com/docs/netlify-toml-reference/)
 <br>Diakses tanggal: 2019/01/28
 
-6. [github.com/jayvdb/jekyll-netlify](https://github.com/jayvdb/jekyll-netlify){:target="_blank"}
+6. [github.com/jayvdb/jekyll-netlify](https://github.com/jayvdb/jekyll-netlify)
 <br>Diakses tanggal: 2019/01/28

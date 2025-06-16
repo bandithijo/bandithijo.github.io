@@ -1,26 +1,24 @@
 ---
 layout: 'post'
 title: "Autcomplete Tag dengan ActsAsTaggable, Select2, dan simple_form pada Rails"
-date: 2019-12-07 11:47
+date: '2019-12-07 11:47'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Rails', 'Javascript']
+tags: ['Rails', 'JavaScript']
 pin:
 hot:
 contributors: []
 description: "Catatan ini mengenai cara membuat autocomplete tag dengan ActsAsTaggable, Select2, dan SimpleForm pada Ruby on Rails."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
-
 # Prerequisite
 
-`Ruby 2.6.3` `Rails 5.2.3` `PostgreSQL 11.5`
+`ruby 2.6.3` `rails 5.2.3` `postgresql 11.5`
+
 
 # Prakata
 
@@ -48,24 +46,29 @@ Nah, atas dasar permasalah tersebut, catatan ini saya buat.
 Kira-kira, tampilan jadinya akan seperti ini.
 
 
-{% image https://i.postimg.cc/8kKFvCr4/gambar-01.png | 1 | Multiple tag %}
+![Gambar 1](https://i.postimg.cc/8kKFvCr4/gambar-01.png)
 
-{% image https://i.postimg.cc/vmsDygpY/gambar-02.png | 2 | Autcomplete tag suggestion %}
+Gambar 1. Multiple tag
+
+![Gambar 2](https://i.postimg.cc/vmsDygpY/gambar-02.png)
+
+Gambar 2. Autcomplete tag suggestion
 
 Nah, dari ilustrasi gambar tersebut, saya rasa pasti sudah paham kan yaa.
+
 
 # Instalasi
 
 Sebagai langkah awal, kita perlu memasang semua gem yang diperlukan pada `Gemfile`.
 
-{% highlight_caption Gemfile %}
-{% highlight ruby linenos %}
+```ruby
+!filename: Gemfile
 # ...
 # ...
 gem 'acts-as-taggable-on',      '~> 6.0'
 gem 'simple_form',              '~> 5.0', '>= 5.0.1'
 gem 'select2-rails',            '~> 4.0', '>= 4.0.3'
-{% endhighlight %}
+```
 
 Versi dari gem di atas, adalah versi dari gem saat catatan ini ditulis.
 
@@ -75,44 +78,46 @@ Versi dari gem di atas, adalah versi dari gem saat catatan ini ditulis.
 
 **simple_form** gem, akan saya gunakan untuk mempermudah saya dalam membuat form. Karena ada beberapa keterbatasan dari form yand disediakan oleh Rails. Terkhusus untuk mengakomodir pembuatan autocomplete tag ini.
 
-
 Setelah menambahkan gem, jangan lupa untuk menginstallnya.
 
-{% shell_user %}
-bundle install
-{% endshell_user %}
+```
+$ bundle install
+```
 
 Setelah itu kita perlu melakukan langkah-langkah *post installation* terhadap masing-masing gem.
+
 
 ## ActsAsTaggable
 
 Kita perlu melakukan generate migration untuk ActsAsTaggable.
 
-{% shell_user %}
-rails acts_as_taggable_on_engine:install:migrations
-{% endshell_user %}
+```
+$ rails acts_as_taggable_on_engine:install:migrations
+```
 
 Lalu, jalankan migrationnya.
 
-{% shell_user %}
-rails db:migrate
-{% endshell_user %}
+```
+$ rails db:migrate
+```
 
 Dari migration tersebut, akan dibuatkan 2 buah skema baru, yaitu tabel **taggings** dan **tags**.
+
 
 ## Simple Form
 
 Selanjutnya, untuk simple_form, jalankan juga generator yang sudah disediakan oleh simple_form.
 
-{% shell_user %}
-rails generate simple_form:install
-{% endshell_user %}
+```
+$ rails generate simple_form:install
+```
 
 Karena saya menggunakan **Bootstrap**, maka saya perlu menambahkan option `--bootstrap`.
 
-{% shell_user %}
-rails generate simple_form:install --bootstrap
-{% endshell_user %}
+```
+$ rails generate simple_form:install --bootstrap
+```
+
 
 ## Select2 Rails
 
@@ -124,31 +129,31 @@ Untuk proses *post installation*, kita hanya perlu memanggil library ini pada we
 
 Tambahkan select2_rails pada javascript assets.
 
-{% highlight_caption app/assets/javascripts/application.js %}
-{% highlight javascript linenos %}
+```javascript
+!filename: app/assets/javascripts/application.js
 // ...
 // ...
 // ...
 
 //= require select2
-{% endhighlight %}
+```
 
 Tambahkan select2_rails pada stylesheet assets.
 
-{% highlight_caption app/assets/stylesheets/application.scss %}
-{% highlight scss linenos %}
+```scss
+!filename: app/assets/stylesheets/application.scss
 
 // ...
 // ...
 // ...
 @import "select2";
 @import "select2-bootstrap";
-{% endhighlight %}
+```
 
 Kalau yang menggunakan `application.css`.
 
-{% highlight_caption app/assets/stylesheets/application.css %}
-{% highlight css linenos %}
+```css
+!filename: app/assets/stylesheets/application.css
 /*
  ...
  ...
@@ -156,9 +161,10 @@ Kalau yang menggunakan `application.css`.
  *= require select2
  *= require select2-bootstrap
  */
-{% endhighlight %}
+```
 
 Nah, selanjutnya tinggal mengaplikasikan ke dalam project.
+
 
 # Penerapan
 
@@ -168,6 +174,7 @@ Cara yang saya berikan di bawah ini hanya ilustrasi yang saya lakukan pada proje
 
 Sebagai ilustrasi saya memiliki sebuah aplikasi blog dengan model article dan author.
 
+
 ## Model
 
 Saya akan mulai dari membuat relasi antara model tag dengan article.
@@ -176,20 +183,20 @@ Model tag ini tidak langsung dibuat oleh ActsAsTaggable. Karena memang tidak dip
 
 Namun, kita perlu membuat model ini agar kita dapat membuat object pada controller.
 
-{% highlight_caption app/models/tag.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/models/tag.rb
 class Tag < ApplicationRecord
   has_many :taggings
   has_many :articles, through: :taggings
 end
-{% endhighlight %}
+```
 
 Selanjutnya, pada model article.
 
 Saya akan menambahkan relasi dan mendefinisikan object yang akan digunakan oleh ActsAsTaggable.
 
-{% highlight_caption app/models/article.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/models/article.rb
 class Article < ApplicationRecord
   # ...
   # ...
@@ -201,7 +208,7 @@ class Article < ApplicationRecord
   # ...
   # ...
 end
-{% endhighlight %}
+```
 
 Sebenarnya, apabila object tag kita bernama tag, cukup gunakan,
 
@@ -218,15 +225,14 @@ Kecuali, kita ingin mengeset nama yang lain untuk object tag ini.
 Namun, untuk tujuan catatan ini, saya lebih baik menuliskannya saja.
 
 
-
 ## Controller
 
 Setelah membuat relasi dan mendefinisikan object tag, kita akan punya object tag yang dapat kita panggil di dalam articles controller.
 
 Karena kita akan menggunakan form pada action `:new` dan `:edit`, maka saya perlu membuat instance variable dari object tag yang nantinya akan digunakan untuk menampilkan autocomplete tag suggestion yang tersedia dalam populasi object tags.
 
-{% highlight_caption app/controllers/articles_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/articles_controller.rb
 class ArticlesController < ApplicationController
   def index
     # ...
@@ -264,7 +270,7 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:title, :author_id, , :post, tag_list: [])
   end
 end
-{% endhighlight %}
+```
 
 Jangan lupa untuk memberikan permit pada object `:tag_list` berupa `tag_list: []`.
 
@@ -276,6 +282,7 @@ tag_list: ["#rubyonrails", "#rubyconf", "#rspec"]
 
 Nah, sekarang tinggal membuat form pada view template.
 
+
 ## View
 
 Pada tahapan ini saya menggunakan 2 buah gem untuk membantu saya mengurusi masalah *front end*. Yaitu, simple_form dan select2_rails.
@@ -284,24 +291,24 @@ Pertama, saya akan membuat form dulu dengan bantuan `simple_form`.
 
 Karena yang memerlukan from ini adalah action `:new` dan `:edit`, maka saya akan membuatnya menjadi render partial template.
 
-{% highlight_caption app/views/articles/new.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/articles/new.html.erb
 <%= simple_form_for(@article, url: { action: :create }, html: { id: 'form' } ) do |f| %>
   <%= render 'form', f: f, article: @article, tag_list: @tag_list %>
 <% end %>
-{% endhighlight %}
+```
 
-{% highlight_caption app/views/articles/edit.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/articles/edit.html.erb
 <%= simple_form_for(@article, url: { action: :update }, html: { id: 'form' } ) do |f| %>
   <%= render 'form', f: f, article: @article, tag_list: @tag_list %>
 <% end %>
-{% endhighlight %}
+```
 
 Kemudian formnya akan seperti ini.
 
-{% highlight_caption app/views/articles/_form.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/articles/_form.html.erb
 <div class="form-row">
   <div class="form-group">
     <label>Title</label>
@@ -331,12 +338,12 @@ Kemudian formnya akan seperti ini.
     <%= f.submit "Publish", class: "btn btn-primary" %>
   </div>
 </div>
-{% endhighlight %}
+```
 
 Kemudian pada bagian bawah dari file `_form.html.erb` ini, kita akan menambahkan javascript library dari Select2.
 
-{% highlight_caption app/views/articles/_form.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/articles/_form.html.erb
 ...
 ...
 ...
@@ -350,7 +357,7 @@ Kemudian pada bagian bawah dari file `_form.html.erb` ini, kita akan menambahkan
     });
   });
 </script>
-{% endhighlight %}
+```
 
 Untuk mendapatkan id `#article_tag_list` dapat menggunakan fitur inspect yang ada pada Browser dan lakukan inspeksi terhadap kolom input.
 
@@ -373,20 +380,20 @@ Terima kasih.
 
 # Referensi
 
-1. [github.com/mbleigh/acts-as-taggable-on](https://github.com/mbleigh/acts-as-taggable-on){:target="_blank"}
+1. [github.com/mbleigh/acts-as-taggable-on](https://github.com/mbleigh/acts-as-taggable-on)
 <br>Diakses tanggal: 2019/12/07
 
-2. [github.com/plataformatec/simple_form](https://github.com/plataformatec/simple_form){:target="_blank"}
+2. [github.com/plataformatec/simple_form](https://github.com/plataformatec/simple_form)
 <br>Diakses tanggal: 2019/12/07
 
-3. [github.com/argerim/select2-rails](https://github.com/argerim/select2-rails){:target="_blank"}
+3. [github.com/argerim/select2-rails](https://github.com/argerim/select2-rails)
 <br>Diakses tanggal: 2019/12/07
 
-4. [select2.org/](https://select2.org/){:target="_blank"}
+4. [select2.org/](https://select2.org/)
 <br>Diakses tanggal: 2019/12/07
 
-5. [select2.github.io/select2/](https://select2.github.io/select2/){:target="_blank"}
+5. [select2.github.io/select2/](https://select2.github.io/select2/)
 <br>Diakses tanggal: 2019/12/07
 
-6. [select2.github.io/select2-bootstrap-theme/4.0.3.html](https://select2.github.io/select2-bootstrap-theme/4.0.3.html){:target="_blank"}
+6. [select2.github.io/select2-bootstrap-theme/4.0.3.html](https://select2.github.io/select2-bootstrap-theme/4.0.3.html)
 <br>Diakses tanggal: 2019/12/07

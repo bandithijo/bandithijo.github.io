@@ -1,28 +1,28 @@
 ---
 layout: 'post'
 title: 'Mengenkripsi Home Direktori pada GNU/Linux'
-date: 2019-06-14 15:41
+date: '2019-06-14 15:41'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips']
+tags: ['eCryptfs']
 pin:
 hot:
 contributors: []
 description: "Home direktori merupakan direktori yang sangat personal untuk kita. Ketika laptop saya hilang, mungkin orang lain akan dapat mengakses home direktori tersebut. Maka dari itu, saya memutuskan untuk mengenkripsi home direktori. Dan membuat proses decrypt dan encrypt berjalan secara otomatis saat session login. Sehingga, kita hanya perlu memasukkan password sekali saat login, dan enkripsi dari home direktori akan terbuka."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
+> PERHATIAN!
+> 
+> Lakukan *backup* data sebelum melakukan proses di bawah.
+> 
+> Segala bentuk kerugian, seperti kehilangan data maupun rusaknya perangkat yang kalian gunakan, **bukan merupakan tanggung jawab penulis**.
+> 
+> *Do with Your Own Risk!*
 
-{% box_perhatian %}
-<p>Lakukan <i>backup</i> data sebelum melakukan proses di bawah.</p>
-<p markdown=1>Segala bentuk kerugian, seperti kehilangan data maupun rusaknya perangkat yang kalian gunakan, **bukan merupakan tanggung jawab penulis**.</p>
-<p><i>Do with Your Own Risk!</i></p>
-{% endbox_perhatian %}
 
 # Prakata
 
@@ -30,20 +30,22 @@ Saya tidak akan berbasa-basi mengenai *privacy* di sini.
 
 Saya yakin teman-teman yang tertarik dengan topik ini memiliki alasan dan kepentingan masing-masing.
 
-Sebenarnya, saya sudah pernah menuliskan mengenai topik ini, namun terletak pada sub bab dari ebook proses instalasi Arch Linux pada UEFI firmware yang saya tulis [di sini]({{ site.url }}/arch/step-7-install-gnome-and-complete-installation#710-encrypt-home-directory){:target="_blank"}.
+Sebenarnya, saya sudah pernah menuliskan mengenai topik ini, namun terletak pada sub bab dari ebook proses instalasi Arch Linux pada UEFI firmware yang saya tulis [di sini]({{ site.url }}/arch/step-7-install-gnome-and-complete-installation#710-encrypt-home-directory).
 
 Karena tidak aksesible banget, jadi saya memutuskan untuk membuat post tersendiri.
 
+
 # Mengenkripsi Home Direktori
 
-{% box_perhatian %}
-<p>
-Saya sangat merekomendasikan untuk tidak menerapkan proses enkripsi ini pada Home direktori yang sudah terisi penuh dengan banyak file.</p>
-<p>Karena, proses pengenkripsian file-file yang ada didalam direktori Home akan memakan waktu yang sangat lama dan akan menambah kapasitas hardisk menjadi 2x Home (direktori Home lama + direktori Home baru).</p>
-<br>
-<p>Saya menyarankan untuk membuat user baru saja.</p>
-<p>Best practicenya memang biasa saya terapkan pada saat awal instalasi sistem operasi.</p>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> Saya sangat merekomendasikan untuk tidak menerapkan proses enkripsi ini pada Home direktori yang sudah terisi penuh dengan banyak file.
+> 
+> Karena, proses pengenkripsian file-file yang ada didalam direktori Home akan memakan waktu yang sangat lama dan akan menambah kapasitas hardisk menjadi 2x Home (direktori Home lama + direktori Home baru).
+> 
+> Saya menyarankan untuk membuat user baru saja.
+> 
+> Best practicenya memang biasa saya terapkan pada saat awal instalasi sistem operasi.
 
 Proses mengenkripsi Home direktori ini akan saya bagi dalam beberapa tahapan, agar teman-teman mudah untuk memahami dan mudah memetakan apabila nanti akan mengajukan pertanyaan atau pembahasan saat berdiskusi.
 
@@ -54,9 +56,9 @@ Oke, berikut ini adalah sekenarionya.
 
 Kita memerlukan paket tambahan yang wajib dipasang untk melakukan proses enkripsi.
 
-{% shell_user %}
-sudo pacman -S ecryptfs-utils lsof
-{% endshell_user %}
+```
+$ sudo pacman -S ecryptfs-utils lsof
+```
 
 Yak! Sudah bisa ditebak, paket yang saya gunakan untuk mengenkripsi Home direktori adalah **eCryptfs**.
 
@@ -68,9 +70,9 @@ Saya memerlukan paket `lsof` untuk mendeteksi apakah masih terdapat proses yang 
 
 Setelah kedua paket yang kita perlukan telah selesai dipasang, langkah selanjutnya adalah menambahkannya pada kernel module.
 
-{% shell_user %}
-sudo modprobe ecryptfs
-{% endshell_user %}
+```
+$ sudo modprobe ecryptfs
+```
 
 Apabila tidak menampilkan *error*, artinya perintah di atas telah berhasil.
 
@@ -99,11 +101,11 @@ Oke, langsung saja kita eksekusi.
 
 3. Setelah berhasil login dengan akun root, lakukan pengecekan apakah user yang kamu gunakan tadi masih memiliki proses yang berjalan (*running process*).
 
-   {% shell_root %}
-ps -U <mark>bandithijo</mark>
-{% endshell_root %}
+   ```
+   $ ps -U bandithijo
+   ```
 
-   Ganti <mark>bandithijo</mark> dengan username yang kamu gunakan, yang ingin dienkripsi Home direktorinya.
+   Ganti `bandithijo` dengan username yang kamu gunakan, yang ingin dienkripsi Home direktorinya.
 
    Apabila perintah di atas menampilkan *output* seperti di bawah ini.
 
@@ -111,6 +113,7 @@ ps -U <mark>bandithijo</mark>
    PID  TTY      TIME  CMD
 
    ```
+
    Artinya, sudah tidak lagi terdapat proses yang *running* pada user tersebut.
 
    Dengan begini, kita dapat lanjut ke tahap berikutnya.
@@ -120,11 +123,11 @@ ps -U <mark>bandithijo</mark>
 
 1. Perintah di bawah ini akan memigrasikan atau membuat salinan (*cloning*) dari Home direktori kalian namun dalam bentuk yang sudah terenkripsi.
 
-   {% shell_root %}
-ecryptfs-migrate-home -u <mark>bandithijo</mark>
-{% endshell_root %}
+   ```
+   $ ecryptfs-migrate-home -u bandithijo
+   ```
 
-   Jangan lupa untuk mengganti <mark>bandithijo</mark> dengan nama username dari user yang Home direktorinya ingin teman-teman enkripsi.
+   Jangan lupa untuk mengganti `bandithijo` dengan nama username dari user yang Home direktorinya ingin teman-teman enkripsi.
 
    Perintah di atas, akan menghasilkan *output* seperti di bawah ini.
 
@@ -135,9 +138,9 @@ ecryptfs-migrate-home -u <mark>bandithijo</mark>
    Enter your login passphrase [bandithijo]: _
    ```
 
-   {% box_perhatian %}
-    <p>Masukkan <b>password</b> yang sama dengan <b>login password username</b> kalian.</p>
-   {% endbox_perhatian %}
+   > PERHATIAN!
+   > 
+   > Masukkan **password** yang sama dengan **login password username** kalian.
 
    Perhatikan dengan seksama *output* tersebut.
 
@@ -149,9 +152,10 @@ ecryptfs-migrate-home -u <mark>bandithijo</mark>
 
 2. Setelah proses enkripsi selesai, kita dapat *logout* (**jangan *reboot**).
 
-   {% shell_user %}
-exit
-{% endshell_user %}
+   ```
+   $ exit
+   ```
+
 
 ## Pengetesan Dekrip Home Direktori
 
@@ -168,9 +172,9 @@ Setelah kita melakukan enkripsi Home direktori, tentunya kita ingin melakukan pe
 
 2. Jalankan perintah di bawah untuk mendekripsi Home direktori (sekaligus me-*mounting*-nya).
 
-   {% shell_user %}
-ecryptfs-mount-private
-{% endshell_user %}
+   ```
+   $ ecryptfs-mount-private
+   ```
 
    ```
    Enter your login passphrase: _
@@ -182,45 +186,54 @@ ecryptfs-mount-private
 
 3. Sekarang coba lakukan pengetesan dengan perintas `ls`.
 
-   {% shell_user %}
-ls -la /home/<mark>bandithijo</mark>
-{% endshell_user %}
+   ```
+   $ ls -la /home/<mark>bandithijo</mark>
+   ```
 
-   Jangan lupa mengganti <mark>bandithijo</mark> dengan nama username kalian.
+   Jangan lupa mengganti `bandithijo` dengan nama username kalian.
 
    Nama username juga berarti nama direktori dari Home user tersebut.
 
-   {% box_info %}
-    <p>Kita perlu mencatat kunci simetris 128-bit value yang kita gunakan untuk mengenkripsi/dekripsi. </p>
-    {% shell_user %}
-ecryptfs-unwrap-passphrase
-{% endshell_user %}
-    <pre>
-    Pas phrase: _</pre>
-    <p>Masukkan <i>login password</i> yang juga menjadi <i>password dekripsi</i> dari Home direktori.</p>
-    <p>Apabila benar, kira-kira hasilnya akan seperti ini.</p>
-    <pre>
-    c17 10cc56hj093gj7930lkfip3vn24g</pre>
-    Bentuknya mirip MD5 hash, tapi bukan.
-    <br>
-    <p>Catat pada secarik kertas dan simpan baik-baik.</p>
-    <p>Kita akan gunakan kembali untuk me-<i>recovery</i> Home direktori yang terenkripsi pada kasus misalkan <code>wrapped-passphrase</code> tidak sengaja terhapus atau <i>corrupted</i> atau bahkan kalian lupa <i>login password</i>.</p>
-   {% endbox_info %}
+   > INFO
+   > 
+   > Kita perlu mencatat kunci simetris 128-bit value yang kita gunakan untuk mengenkripsi/dekripsi.
+   > 
+   > ```
+   > $ ecryptfs-unwrap-passphrase
+   > ```
+   > 
+   ```
+   Pas phrase: _
+   ```
+
+   Masukkan *login password* yang juga menjadi *password dekripsi* dari Home direktori.
+   > 
+   > Apabila benar, kira-kira hasilnya akan seperti ini.
+   > 
+   > ```
+   > c17 10cc56hj093gj7930lkfip3vn24g
+   > ```
+   > 
+   > Bentuknya mirip MD5 hash, tapi bukan.
+   > 
+   > Catat pada secarik kertas dan simpan baik-baik.
+   > 
+   > Kita akan gunakan kembali untuk me-*recovery* Home direktori yang terenkripsi pada kasus misalkan `wrapped-passphrase` tidak sengaja terhapus atau `corrupted` atau bahkan kalian lupa *login password*.
 
 4. Selanjutnya lakukan pengecekan keberadaan dari file-file berikut ini.
 
-   {% shell_user %}
-ls .ecryptfs
-{% endshell_user %}
+   ```
+   $ ls .ecryptfs
+   ```
 
-   <pre>
-   <mark>auto-mount</mark> <mark>auto-unmount</mark> Private.mnt Private.sig <mark>wrapped-passphrase</mark></pre>
+   ```
+   auto-mount auto-unmount Private.mnt Private.sig wrapped-passphrase
+   ```
 
-   Pastikan file-file yang saya marking kuning.
-
-   File-file tersebut harus ada pada direktori `.ecryptfs`
+   Pastikan file-file `auto-mount`, `auto-unmount`, dan `wrapped-passphrase` harus ada pada direktori `.ecryptfs`
 
    Direktori ini merupakan *symbolic link* dari `/home/.ecryptfs/bandithijo/.ecryptfs/`
+
 
 ## Memberikan eCryptfs Akses PAM
 
@@ -234,28 +247,32 @@ Untuk mengatasi masalah ini sangat mudah. Tinggal kita tambahkan beberapa baris 
 
 1. Gunakan *text editor* favorit kalian untuk mengedit file di bawah ini.
 
-   {% shell_user %}
-sudo vim /etc/pam.d/system-auth
-{% endshell_user %}
+   ```
+   $ sudo vim /etc/pam.d/system-auth
+   ```
 
-   {% highlight_caption /etc/pam.d/system-auth %}
-   {% pre_caption %}
-#%PAM-1.0<br>
-auth      required  pam_unix.so     try_first_pass nullok
-<mark>auth      required  pam_ecryptfs.so unwrap</mark>
-auth      optional  pam_permit.so
-auth      required  pam_env.so<br>
-account   required  pam_unix.so
-account   optional  pam_permit.so
-account   required  pam_time.so<br>
-<mark>password  optional  pam_ecryptfs.so</mark>
-password  required  pam_unix.so     try_first_pass nullok sha512 shadow
-password  optional  pam_permit.so<br>
-session   required  pam_limits.so
-session   required  pam_unix.so
-<mark>session   optional  pam_ecryptfs.so unwrap</mark>
-session   optional  pam_permit.so
-{% endpre_caption %}
+   ```
+   !filename: /etc/pam.d/system-auth
+   #%PAM-1.0
+
+   auth      required  pam_unix.so     try_first_pass nullok
+   auth      required  pam_ecryptfs.so unwrap 👈️
+   auth      optional  pam_permit.so
+   auth      required  pam_env.so
+
+   account   required  pam_unix.so
+   account   optional  pam_permit.so
+   account   required  pam_time.so
+
+   password  optional  pam_ecryptfs.so 👈️
+   password  required  pam_unix.so     try_first_pass nullok sha512 shadow
+   password  optional  pam_permit.so
+
+   session   required  pam_limits.so
+   session   required  pam_unix.so
+   session   optional  pam_ecryptfs.so unwrap 👈️
+   session   optional  pam_permit.so
+   ```
 
    Tambahkan tiga baris yang saya *marking* kuning sesuai posisinya.
 
@@ -272,15 +289,15 @@ session   optional  pam_permit.so
 
 ## Menghapus Direktori Home Backup
 
-Saat kita melakukan tahap pertama, yaitu tahap migrasi atau mengenkripsi Home direktori, proses yang terjadi adalah Home direktori kita akan disalin dalam bentuk terenkripsi ke dalam direktori `/home/.ecryptfs/bandithijo/.Private` dan Home direktori lama kita akan di-*rename* menjadi <code>/home/bandithijo.<mark>p7o6p7R2</mark></code>. Sedangkan direktori `/home/bandithijo` akan menjadi direktori kosong sebagai tempat untuk *mounting* pada saat proses dekripsi.
+Saat kita melakukan tahap pertama, yaitu tahap migrasi atau mengenkripsi Home direktori, proses yang terjadi adalah Home direktori kita akan disalin dalam bentuk terenkripsi ke dalam direktori `/home/.ecryptfs/bandithijo/.Private` dan Home direktori lama kita akan di-*rename* menjadi `/home/bandithijo.p7o6p7R2`. Sedangkan direktori `/home/bandithijo` akan menjadi direktori kosong sebagai tempat untuk *mounting* pada saat proses dekripsi.
 
 Bagian yang saya *marking* kuning adalah deretan karakter random yang di-*generate* oleh eCryptfs pada saat proses migrasi Home direktori.
 
 Coba lakukan pemeriksaan isi dari Home direktori kita.
 
-{% shell_user %}
-ls -a /home
-{% endshell_user %}
+```
+$ ls -a /home
+```
 
 ```
 bandithijo bandithijo.p7o6p7R2 .ecryptfs
@@ -294,15 +311,15 @@ Penjelasan mudahnya, direktroi ini adalah Home direktori lama kita yang sudah di
 
 Kita dapat menghapusnya dengan aman.
 
-{% shell_user %}
-sudo rm -rvf bandithijo.p7o6p7R2
-{% endshell_user %}
+```
+$ sudo rm -rvf bandithijo.p7o6p7R2
+```
 
 Tunggu proses penghapusan sampai selesai.
 
 Dengan begini, proses enkripsi Home direktori kita telah selesai.
 
-Apabila teman-teman ingin mengganti *password* dari user yang berarti juga harus mengganti *passphrase* dari Home direktori yang terenkripsi, silahkan mengunjungi tulisan saya yang ini, "[Mengganti Password User dari Home Direktori yang Terenkripsi]({{ site.url }}/blog/mengganti-password-user-dari-home-direktori-yang-terenkripsi){:target="_blank"}".
+Apabila teman-teman ingin mengganti *password* dari user yang berarti juga harus mengganti *passphrase* dari Home direktori yang terenkripsi, silahkan mengunjungi tulisan saya yang ini, "[Mengganti Password User dari Home Direktori yang Terenkripsi]({{ site.url }}/blog/mengganti-password-user-dari-home-direktori-yang-terenkripsi)".
 
 
 # Pesan Penulis
@@ -314,13 +331,10 @@ Dapat pula teman-teman yang menggunakan Arch Linux, merujuk pada Arch Wiki eCryp
 Sepertinya seperti ini saja.
 
 
-
-
 # Referensi
 
-1. [bandithijo.com/arch/step-7-install-gnome-and-complete-installation#710-encrypt-home-directory](https://bandithijo.com/arch/step-7-install-gnome-and-complete-installation#710-encrypt-home-directory){:target="_blank"}
+1. [bandithijo.com/arch/step-7-install-gnome-and-complete-installation#710-encrypt-home-directory](https://bandithijo.com/arch/step-7-install-gnome-and-complete-installation#710-encrypt-home-directory)
 <br>Diakses tanggal: 2019/06/14
 
-2. [wiki.archlinux.org/index.php/ECryptfs](https://wiki.archlinux.org/index.php/ECryptfs){:target="_blank"}
+2. [wiki.archlinux.org/index.php/ECryptfs](https://wiki.archlinux.org/index.php/ECryptfs)
 <br>Diakses tanggal: 2019/06/14
-

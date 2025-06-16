@@ -1,28 +1,26 @@
 ---
 layout: 'post'
 title: "Menambahkan Database pada Rails Project"
-date: 2019-10-09 21:30
+date: '2019-10-09 21:30'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Rails']
+tags: ['Rails']
 pin:
 hot:
 contributors: []
 description: "Catatan kali ini mengenai cara menambahkan atau mengganti database pada Ruby on Rails project yang sudah ada."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
-
 # Latar Belakang Masalah
 
-Setelah pada blog post sebelumnya saya menulis tentang "[Membuat Rails Project tanpa Database](https://bandithijo.com/blog/rails-project-tanpa-database){:target="_blank"}".
+Setelah pada blog post sebelumnya saya menulis tentang "[Membuat Rails Project tanpa Database](/blog/rails-project-tanpa-database)".
 
 Pada tulisan kali ini, saya akan membahas mengenai bagaimana cara menambahkan database engine pada Rails project yang sudah ada.
+
 
 # Tambahkan Gem
 
@@ -32,8 +30,8 @@ Untuk tulisan ini saya akan menggunakan PostgreSQL sebagai contoh.
 
 Tambahkan saja ke dalam file `Gemfile`.
 
-{% highlight_caption Gemfile %}
-{% highlight ruby linenos %}
+```ruby
+!filename: Gemfile
 ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -44,7 +42,8 @@ gem 'pg', '>= 0.18'
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-{% endhighlight %}
+```
+
 
 # Tambahkan Database.yml
 
@@ -52,8 +51,8 @@ Setelah itu, kita perlu membuat file `config/database.yml`.
 
 Untuk PostgreSQL engine, memiliki isi sebagia berikut.
 
-{% highlight_caption config/database.yml %}
-{% highlight yaml linenos %}
+```yaml
+!filename: config/database.yml
 # PostgreSQL. Versions 9.1 and up are supported.
 #
 # Install the pg driver:
@@ -79,13 +78,13 @@ default: &default
 
 development:
   <<: *default
-  database: <mark>project_mahal_development</mark>
+  database: project_mahal_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: <mark>project_mahal</mark>
+  #username: project_mahal
 
   # The password associated with the postgres role (username).
   #password:
@@ -113,7 +112,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: <mark>project_mahal_test</mark>
+  database: project_mahal_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -136,19 +135,18 @@ test:
 #
 production:
   <<: *default
-  database: <mark>project_mahal_production</mark>
-  username: <mark>project_mahal</mark>
-  password: <%= ENV['<mark>PROJECT_MAHAL_DATABASE_PASSWORD</mark>'] %>
-{% endhighlight %}
+  database: project_mahal_production
+  username: project_mahal
+  password: <%= ENV['PROJECT_MAHAL_DATABASE_PASSWORD'] %>
+```
 
-Perhatikan bagian yang saya <mark>marking</mark> kuning, adalah bagian yang perlu teman-teman ganti dengan nama project yang teman-teman miliki.
 
 # Aktifkan Active Record
 
 Selanjutnya, kita perlu mengaktifkan Active Record pada `config/application.rb`.
 
-{% highlight_caption config/application.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: config/application.rb
 require "rails"
 # Pick the frameworks you want:
 require "active_model/railtie"
@@ -161,17 +159,18 @@ require "action_view/railtie"
 require "action_cable/engine"
 require "sprockets/railtie"
 require "rails/test_unit/railtie"
-{% endhighlight %}
+```
 
 Mantap, tinggal langkah terakhir, membuat database.
+
 
 # Create Database
 
 Jalankan dengan perintah `rake`.
 
-{% shell_user %}
-rails db:create
-{% endshell_user %}
+```
+$ rails db:create
+```
 
 Apabila menghasilkan output seperti di bawah ini.
 
@@ -186,8 +185,7 @@ Mudah-mudahan dapat bermanfaat buat teman-teman.
 Terima kasih (^_^)v
 
 
-
 # Referensi
 
-1. [How to add a Postgre Database to an existing Rails project](https://stackoverflow.com/a/48025954/4862516){:target="_blank"}
+1. [How to add a Postgre Database to an existing Rails project](https://stackoverflow.com/a/48025954/4862516)
 <br>Diakses tanggal: 2019/10/09

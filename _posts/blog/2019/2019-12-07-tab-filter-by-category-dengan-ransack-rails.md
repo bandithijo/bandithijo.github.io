@@ -1,64 +1,64 @@
 ---
 layout: 'post'
 title: "Membuat Tab Filter by Category dengan Ransack pada Rails"
-date: 2019-12-07 17:45
+date: '2019-12-07 17:45'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Rails']
+tags: ['Rails', 'Ransack']
 pin:
 hot:
 contributors: []
 description: "Catatan ini mengenai cara membuat filter by category menggunakan Ransack gem pada Ruby on Rails."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
-
 # Prerequisite
 
-`Ruby 2.6.3` `Rails 5.2.3` `PostgreSQL 11.5`
+`ruby 2.6.3` `rails 5.2.3` `postgresql 11.5`
+
 
 # Prakata
 
-Beberapa waktu yang lalu, saya pernah membangun project dengan menggunakan **Ransack** gem untuk menghandle [MetaSearch](https://github.com/activerecord-hackery/meta_search){:target="_blank"}.
+Beberapa waktu yang lalu, saya pernah membangun project dengan menggunakan **Ransack** gem untuk menghandle [MetaSearch](https://github.com/activerecord-hackery/meta_search).
 
 Sedikit penjelasan mengenai Ransack,
 
 Ransack sendiri pengertian singkatnya adalah **Object-based searching**.
 
-Ditulis ulang dari MetaSearch yang dibuat oleh [Ernie Miller](http://twitter.com/erniemiller){:target="_blank"} dan didevelop/dimaintain selama bertahun-tahun oleh [Jon Atack](http://twitter.com/jonatack){:target="_blank"} dan [Ryan Bigg](http://twitter.com/ryanbigg){:target="_blank"} serta mendapatkan bantuan dari [sekelompok contributor](https://github.com/activerecord-hackery/ransack/graphs/contributors){:target="_blank"} yang hebat.
+Ditulis ulang dari MetaSearch yang dibuat oleh [Ernie Miller](http://twitter.com/erniemiller) dan didevelop/dimaintain selama bertahun-tahun oleh [Jon Atack](http://twitter.com/jonatack) dan [Ryan Bigg](http://twitter.com/ryanbigg) serta mendapatkan bantuan dari [sekelompok contributor](https://github.com/activerecord-hackery/ransack/graphs/contributors) yang hebat.
 
-Ransack dapat membantu kita membuat [simple](http://ransack-demo.herokuapp.com/){:target="_blank"} dan [advanced](http://ransack-demo.herokuapp.com/users/advanced_search){:target="_blank"} search forms untuk Rails aplikasi kita.
+Ransack dapat membantu kita membuat [simple](http://ransack-demo.herokuapp.com/) dan [advanced](http://ransack-demo.herokuapp.com/users/advanced_search) search forms untuk Rails aplikasi kita.
 
-Jika teman-teman mencari gem untuk menyederhanakan pembuatan query pada model dan controller, Ransack mungkin bukan gem yang tepat. Mungkin bisa mencoba [Squeel](https://github.com/activerecord-hackery/squeel){:target="_blank"}.
+Jika teman-teman mencari gem untuk menyederhanakan pembuatan query pada model dan controller, Ransack mungkin bukan gem yang tepat. Mungkin bisa mencoba [Squeel](https://github.com/activerecord-hackery/squeel).
 
 Ransack kompatibel dengan Rails versi 6.0, 5.2, 5.1, 5.0, dan pada Ruby 2.3 ke atas.
 
 Alasan kenapa memilih Ransack, karena Ransack works out-of-the-box pada Active Record.
 
+
 # Instalasi
 
 Seperti biasa, tambahkan pada `Gemfile`.
 
-{% highlight_caption Gemfile %}
-{% highlight ruby linenos %}
+```ruby
+!filename: Gemfile
 # ...
 # ...
 
 gem 'ransack', '~> 2.3'
-{% endhighlight %}
+```
 
 Setelah itu jangan lupa untuk menjalankan,
 
-{% shell_user %}
-bundle install
-{% endshell_user %}
+```
+$ bundle install
+```
 
 Untuk menginstall Ransack pada web aplikasi kita.
+
 
 # Penerapan
 
@@ -68,18 +68,23 @@ Namun, saya akan menuliskan penggunaan Ransack untuk membuat tab filter berdasar
 
 Kira-kira seperti ini hasilnya.
 
-{% image https://i.postimg.cc/jSsxsCTt/gambar-01.png | 1 | Hasil dari filter pada tab All %}
+![Gambar 1](https://i.postimg.cc/jSsxsCTt/gambar-01.png)
 
-{% image https://i.postimg.cc/wj063HxJ/gambar-02.png | 2 | Hasil dari filter pada tab tertentu, berdasarkan negara %}
+Gambar 1. Hasil dari filter pada tab All
+
+![Gambar 2](https://i.postimg.cc/wj063HxJ/gambar-02.png)
+
+Gambar 2. Hasil dari filter pada tab tertentu, berdasarkan negara
 
 Contoh di atas, sudah dapat kita perkirakan bahwa hasil dari object yang sudah difilter akan ditampilkan pada view `index.html.erb`.
+
 
 ## Controller
 
 Nah, pada bagian controller, isinya sangat orisinil seperti yang dicontohkan pada halaman readme dari Ransack.
 
-{% highlight_caption app/controllers/careers_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/careers_controller.rb
 class CareersController < ApplicationController
   def index
     @q = Career.ransack(params[:q])
@@ -90,7 +95,7 @@ class CareersController < ApplicationController
   # ...
   # ...
 end
-{% endhighlight %}
+```
 
 Pada model dan route, tidak perlu kita tambahkan apa-apa.
 
@@ -121,8 +126,8 @@ Untuk view template style dari tab, sesuaikan dengan style yang teman-teman guna
 
 Yang saya berikan di bawah, hanya contoh saja.
 
-{% highlight_caption app/views/careers/index.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/careers/index.html.erb
 <nav class="nav">
   <% if (params.has_key?(:q)) %>
     <%= link_to 'All', careers_path, class: "nav-link" %>
@@ -142,7 +147,7 @@ Yang saya berikan di bawah, hanya contoh saja.
                              class: "nav-link" %>
   <% end %>
 </nav>
-{% endhighlight %}
+```
 
 Hmmm, kurang beautiful yaa...
 
@@ -150,8 +155,8 @@ Wkwkwkwk
 
 Mungkin bisa disederhanakan lagi seperti ini.
 
-{% highlight_caption app/views/careers/index.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/careers/index.html.erb
 <nav class="nav">
     <%= link_to 'All', careers_path, class: "nav-link #{params.has_key?(:q) ? '' : 'active'}" %>
     <%= link_to 'Singapore', careers_path(q: {country_cont: 'Singapore'}),
@@ -161,7 +166,7 @@ Mungkin bisa disederhanakan lagi seperti ini.
     <%= link_to 'Thailand',  careers_path(q: {country_cont: 'Thailand'}),
                              class: "nav-link #{'active' if params.has_key?(:q) && params[:q][:country_cont] == 'Thailand'}" %>
 </nav>
-{% endhighlight %}
+```
 
 Dah!
 
@@ -173,8 +178,8 @@ Yuk kita lakukan, agar kode di view template kita lebih *compact*.
 
 Buat instance variable baru untuk daftar negara-negara pada controller.
 
-{% highlight_caption app/controllers/careers_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/careers_controller.rb
 class CareersController < ApplicationController
   def index
     @q = Career.ransack(params[:q])
@@ -187,12 +192,12 @@ class CareersController < ApplicationController
   # ...
   # ...
 end
-{% endhighlight %}
+```
 
 Sekarang kita memiliki instance variable `@country_list` yang dapat kita gunakan pada view template.
 
-{% highlight_caption app/views/careers/index.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/careers/index.html.erb
 <nav class="nav">
   <%= link_to 'All', careers_path, class: "nav-link #{params.has_key?(:q) ? '' : 'active'}" %>
   <% @country_list.each do |country| %>
@@ -200,7 +205,7 @@ Sekarang kita memiliki instance variable `@country_list` yang dapat kita gunakan
                          class: "nav-link #{'active' if params.has_key?(:q) && params[:q][:country_cont] == country}" %>
   <% end %>
 </nav>
-{% endhighlight %}
+```
 
 Nah, gimana? Asik kan?
 
@@ -208,8 +213,8 @@ Wkwkwk
 
 Selanjutnya, untuk menampilkan hasil dari index listnya, seperti ini.
 
-{% highlight_caption app/views/careers/index.html.erbion /etc/default/grub %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/careers/index.html.erb
 ...
 ...
 
@@ -233,7 +238,7 @@ Selanjutnya, untuk menampilkan hasil dari index listnya, seperti ini.
   <% end %>
   <!-- END Available Position -->
 </div>
-{% endhighlight %}
+```
 
 Selesai!
 
@@ -245,15 +250,17 @@ Namun, ada hal yang masih kurang memuaskan.
 
 Saya masih belum dapat membuat URL nya menjadi lebih cantik.
 
-<pre class="url">
-http://localhost:3000/careers<mark>?q%5Bcountry_cont%5D=Malaysia</mark>
-</pre>
+```
+http://localhost:3000/careers?q%5Bcountry_cont%5D=Malaysia
+```
 
 Mungkin akan saya cari pada kesempatan yang lain.
 
 Atau teman-teman punya rekomendasi untuk membuat URL menjadi lebih cantik, boleh tulis pada komentar di bawah yaa.
 
+
 # Update
+
 
 ## Nice URL Form
 
@@ -261,22 +268,22 @@ Oke, akhirnya saya berhasil untuk membuat bentuk dari URL menjadi lebih bagus.
 
 Kira-kira akan saya buat seperti ini.
 
-<pre class="url">
-http://localhost:3000/careers<mark>?country=Malaysia</mark>
-</pre>
+```
+http://localhost:3000/careers?country=Malaysia
+```
 
 Caranya sangat mudah, saya hanya perlu bermain pada router dan controller.
 
 Pertama-tama definiskan url form yang diinginkan pada `routes.rb`.
 
-{% highlight_caption config/routes.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: config/routes.rb
 
   # ...
   # ...
 
   get 'careers?country=:country', to: 'careers#index', as: 'career_country'
-{% endhighlight %}
+```
 
 Pendefinisan routing ini, akan menghasilkan sebuah path baru untuk kita, yaitu `career_country_path`.
 
@@ -288,8 +295,8 @@ Selanjutnya akan saya gunakan pada controller.
 
 Pada instance variable `@q`, ubah object params yang ditangkap  dari `:q` menjadi `:country`.
 
-{% highlight_caption app/controllers/careers_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/careers_controller.rb
 class CareersController < ApplicationController
   def index
     @q = Career.ransack(country_cont: params[:country])
@@ -302,14 +309,14 @@ class CareersController < ApplicationController
   # ...
   # ...
 end
-{% endhighlight %}
+```
 
 Langkah terakhir, tinggal menggunakan path yang sudah didefinisikan di atas ke view template.
 
 Serta merubah beberapa properti untuk `.active` class pada button tab yang aktif.
 
-{% highlight_caption app/views/careers/index.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/careers/index.html.erb
 <nav class="nav">
   <%= link_to 'All', careers_path, class: "nav-link #{params.has_key?(:country) ? '' : 'active'}" %>
   <% @country_list.each do |country| %>
@@ -317,17 +324,16 @@ Serta merubah beberapa properti untuk `.active` class pada button tab yang aktif
                          class: "nav-link #{'active' if params[:country] == country}" %>
   <% end %>
 </nav>
-{% endhighlight %}
+```
 
 Selesai.
 
 Sekarang bentuk dari url menjadi lebih bagus.
 
 <!-- PERHATIAN -->
-<div class="blockquote-red">
-<div class="blockquote-red-title">[ ! ] Perhatian</div>
-<p>Saya tidak merekomendasikan menggunakan cara di atas untuk mempercantik URL, karena akan mempersulit apabila ingin dipadukan dengan sorting atau searching.</p>
-</div>
+> PERHATIAN!
+> 
+> Saya tidak merekomendasikan menggunakan cara di atas untuk mempercantik URL, karena akan mempersulit apabila ingin dipadukan dengan sorting atau searching.
 
 Oke, sepertinya segini saja.
 
@@ -340,14 +346,14 @@ Terima kasih.
 
 # Referensi
 
-1. [github.com/activerecord-hackery/ransack](https://github.com/activerecord-hackery/ransack){:target="_blank"}
+1. [github.com/activerecord-hackery/ransack](https://github.com/activerecord-hackery/ransack)
 <br>Diakses tanggal: 2019/12/07
 
-2. [github.com/activerecord-hackery/meta_search](https://github.com/activerecord-hackery/meta_search){:target="_blank"}
+2. [github.com/activerecord-hackery/meta_search](https://github.com/activerecord-hackery/meta_search)
 <br>Diakses tanggal: 2019/12/07
 
-3. [ransack-demo.herokuapp.com/](http://ransack-demo.herokuapp.com/){:target="_blank"}
+3. [ransack-demo.herokuapp.com/](http://ransack-demo.herokuapp.com/)
 <br>Diakses tanggal: 2019/12/07
 
-4. [ransack-demo.herokuapp.com/users/advanced_search](http://ransack-demo.herokuapp.com/users/advanced_search){:target="_blank"}
+4. [ransack-demo.herokuapp.com/users/advanced_search](http://ransack-demo.herokuapp.com/users/advanced_search)
 <br>Diakses tanggal: 2019/12/07

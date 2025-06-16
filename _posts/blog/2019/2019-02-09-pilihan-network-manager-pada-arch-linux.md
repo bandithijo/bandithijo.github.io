@@ -1,22 +1,19 @@
 ---
 layout: 'post'
 title: 'Comprehensive Network Manager yang Saya Pergunakan pada Arch Linux'
-date: 2019-02-09 05:52
+date: '2019-02-09 05:52'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Arch Linux', 'Tips', 'Tools', 'Terminal']
+tags: ['Network Manager', 'Tool']
 pin:
 hot:
 contributors: []
 description: "Terdapat banyak sekali tools yang dapat kita gunakan untuk mengatur jaringan di GNU/Linux. Perkakas-perkakas ini sering diistilahkan dengan Comprehensive Network Manager, atau Network Manager saja. Tapi jangan salah paham yaa, karena salah satu Network Manager tersebut ada yang bernama NetworkManager."
 ---
-
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
 
 # Prakata
 
@@ -32,7 +29,7 @@ Kegunaan dari Network Manager ini adalah untuk memfasilitasi kita mengelola peng
 | systemd-networkd | No | Yes | networkctl | No | internal | `systemd-networkd.service`, `systemd-resolved.service` |
 | Wicd | Yes | No | wicd-cli, wicd-curses | No | dhcpcd | `wicd.service` |
 
-<p class="img-caption" style="text-align:left;">Sumber: <a href="https://wiki.archlinux.org/index.php/Network_configuration#Network_managers" target="_blank">Arch Wiki/Network Configuration</a></p>
+Sumber: [Arch Wiki/Network Configuration](https://wiki.archlinux.org/index.php/Network_configuration#Network_managers)
 
 Apabila kita melakukan instalasi Arch Linux dengan Archiso, biasanya yang paling populer untuk terkoneksi dengan jaringan wireless adalah `wifi-menu`, paket ini merupakah paket yang dibawa secara *default* oleh `netctl` yang merupakan salah satu Network Manger yang sudah ada di dalam Archiso, selain `systemd-network`.
 
@@ -42,38 +39,40 @@ Untuk catatan kali ini, saya hanya akan mendokumentasikan mengenai **NetworkMana
 
 Saya juga merekomendasikan untuk teman-teman yang baru menggunakan Arch Linux atau yang ingin praktis dan simpel seperti saya, NetworkManager adalah pilihan yang mudah.
 
+
 # Instalasi
 
 Proses pemasangan paket `networkmanager` juga sangat mudah.
 
-{% shell_user %}
-sudo pacman -S networkmanager
-{% endshell_user %}
+```
+$ sudo pacman -S networkmanager
+```
 
 Secara *default* paket ini sudah membawa daemon untuk services, aplikasi CLI yaitu `nmcli` dan aplikasi TUI `nmtui`.
 
 Atau dapat pula menambahkan paket untuk GUI.
 
-{% shell_user %}
-sudo pacman -S nm-connection-editor
-{% endshell_user %}
+```
+$ sudo pacman -S nm-connection-editor
+```
 
 Namun, apabila paket ini sudah terdapat dalam proses pemasangan paket `networkmanager`, tidak perlu lagi kita instal kembali.
 
 Untuk yang ingin menggunakan trayicon dapat menambahkan paket `network-manager-applet`.
 
-{% shell_user %}
-sudo pacman -S Network-manager-applet
-{% endshell_user %}
+```
+$ sudo pacman -S Network-manager-applet
+```
 
 Setelah memasang paket `networkmanager` jangan lupa untuk mengaktifkan daemon services dari Network Manager.
 
-{% shell_user %}
-sudo systemctl enable NetworkManager.service
-sudo systemctl start NetworkManager.service
-{% endshell_user %}
+```
+$ sudo systemctl enable NetworkManager.service
+$ sudo systemctl start NetworkManager.service
+```
 
 Perhatikan huruf besar dan kecilnya!
+
 
 # Konfigurasi
 
@@ -81,29 +80,37 @@ Sejujurnya saya bingung apa yang harus dikonfigurasi, karena semua sudah dihandl
 
 Kita hanya perlu memasukkan profil jaringan seperti SSID, dll.
 
+
 # Paket Tambahan
 
 Ada beberapa paket tambahan yang saya pergunakan, Seperti
 
 1. Modem Support:
-   - [`modemmanager`](https://www.archlinux.org/packages/?name=modemmanager){:target="_blank"}
-   - [`mobile-broadband-provider-info`](https://www.archlinux.org/packages/?name=mobile-broadband-provider-info){:target="_blank"}
-   - [`usb_modeswitch`](https://www.archlinux.org/packages/?name=usb_modeswitch){:target="_blank"}.
+   - [`modemmanager`](https://www.archlinux.org/packages/?name=modemmanager)
+   - [`mobile-broadband-provider-info`](https://www.archlinux.org/packages/?name=mobile-broadband-provider-info)
+   - [`usb_modeswitch`](https://www.archlinux.org/packages/?name=usb_modeswitch)
 
 2. VPN Support:
-   - [`networkmanager-openvpn`](https://www.archlinux.org/packages/?name=networkmanager-openvpn){:target="_blank"}
-   - [`networkmanager-pptp`](https://www.archlinux.org/packages/?name=networkmanager-pptp){:target="_blank"}
-   - dan masih banyak lagi, silahkan lihat di [Arch Wiki](https://wiki.archlinux.org/index.php/NetworkManager#VPN_support){:target="_blank"}
+   - [`networkmanager-openvpn`](https://www.archlinux.org/packages/?name=networkmanager-openvpn)
+   - [`networkmanager-pptp`](https://www.archlinux.org/packages/?name=networkmanager-pptp)
+   - dan masih banyak lagi, silahkan lihat di [Arch Wiki](https://wiki.archlinux.org/index.php/NetworkManager#VPN_support)
+
 
 # Tampilan
+
 
 ## GUI
 
 Berikut ini adalah beberapa tampilan NetworkManager menggunakan GUI.
 
-{% image https://i.postimg.cc/0NDyGKzB/gambar-01.png | 1 | nm-applet %}
+![Gambar 1](https://i.postimg.cc/0NDyGKzB/gambar-01.png)
 
-{% image https://i.postimg.cc/C14MXyHC/gambar-02.png | 2 | nm-connection-editor %}
+Gambar 1. nm-applet
+
+![Gambar 2](https://i.postimg.cc/C14MXyHC/gambar-02.png)
+
+Gambar 2. nm-connection-editor
+
 
 ## TUI
 
@@ -111,15 +118,24 @@ Untuk saat ini, saya lebih sering menggunakan TUI, dan tidak menggunakan kedua p
 
 Fungsinya sama saja, hanya berbeda tampilan.
 
-{% image https://i.postimg.cc/W1HPDNSf/gambar-03.png | 3 | nmtui, bagian depan %}
+![Gambar 3](https://i.postimg.cc/W1HPDNSf/gambar-03.png)
 
-{% image https://i.postimg.cc/vBWRSWyp/gambar-04.png | 4 | nmtui, bagian Edit connection %}
+Gambar 3. nmtui, bagian depan
 
-{% image https://i.postimg.cc/j5V0XMpH/gambar-05.png | 5 | nmtui, bagian Activate a connection %}
+![Gambar 4](https://i.postimg.cc/vBWRSWyp/gambar-04.png)
 
-{% image https://i.postimg.cc/QMKZ12yN/gambar-06.png | 6 | nmtui, bagian Set system hostname %}
+Gambar 4. nmtui, bagian Edit connection
+
+![Gambar 5](https://i.postimg.cc/j5V0XMpH/gambar-05.png)
+
+Gambar 5. nmtui, bagian Activate a connection
+
+![Gambar 6](https://i.postimg.cc/QMKZ12yN/gambar-06.png)
+
+Gambar 6. nmtui, bagian Set system hostname
 
 Sejak menggunakan `nmtui`, saya tidak memerlukan lagi `nm-applet`. Sehingga membuat saya terbebas dari menggunakan trayicon.
+
 
 ## Memanfaatkan Rofi untuk Interface NetworkManager
 
@@ -129,18 +145,20 @@ Sebelumnya, saya menggunakan aplikasi `nmtui` untuk melakukan konfigurasi jaring
 
 Untuk memanggilnya, saya menggunakan <kbd>SUPER</kbd>+<kbd>F8</kbd>.
 
-{% highlight_caption $HOME/.config/sxhkd/sxhkdrc %}
-{% highlight sh linenos %}
+```bash
+!filename: $HOME/.config/sxhkd/sxhkdrc
 # ...
 # ...
 
 # Network Manager Dmenu
 bindsym $mod+F8 exec --no-startup-id networkmanager_dmenu
-{% endhighlight %}
+```
 
 Aplikasi ini dapat kita gunakan untuk memilih-mili jaringan dan beberapa menu jaringan. Dapat menggunakan `dmenu` atau `rofi` sebagai frontend nya. Tentu saja saya memilih menggunakan `rofi` agar seragam dengan theme. Hehehe.
 
-{% image https://i.postimg.cc/LsHPsDVN/gambar-17.gif | 17 | Tampilan NetworkManager_dmenu dengan Rofi %}
+![Gambar 7](https://i.postimg.cc/LsHPsDVN/gambar-17.gif)
+
+Gambar 7. Tampilan NetworkManager_dmenu dengan Rofi
 
 
 # Pesan Penulis
@@ -151,9 +169,13 @@ Menggunakan Arch Linux memberikan kita kemudahan untuk membongkar-pasang berbaga
 
 Beberapa waktu yang lalu, saya pun sempat mencoba **connman** dan **wicd**.
 
-{% image https://i.postimg.cc/mZ9spG8J/gambar-07.png | 7 | Tampilan GUI dari <code>connman-gtk</code> %}
+![Gambar 8](https://i.postimg.cc/mZ9spG8J/gambar-07.png)
 
-{% image https://i.postimg.cc/3JHHPbqR/gambar-08.png | 8 | Tampilan GUI dari <code>wicd-gtk</code> %}
+Gambar 8. Tampilan GUI dari `connman-gtk`
+
+![Gambar 9](https://i.postimg.cc/3JHHPbqR/gambar-08.png)
+
+Gambar 9. Tampilan GUI dari `wicd-gtk`
 
 Sebaik-baik dokumentasi adalah yang ditulis dan dikelola secara aktif oleh developer dari aplikasi yang bersangkutan.
 
@@ -166,8 +188,8 @@ Sepertinya ini saja yang dapat saya tulisakan. Mudah-mudahan dapat bermanfaat ba
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/Network_configuration#Network_managers](https://wiki.archlinux.org/index.php/Network_configuration#Network_managers){:target="_blank"}
+1. [wiki.archlinux.org/index.php/Network_configuration#Network_managers](https://wiki.archlinux.org/index.php/Network_configuration#Network_managers)
 <br>Diakses tanggal: 2019/02/09
 
-2. [wiki.archlinux.org/index.php/NetworkManager](https://wiki.archlinux.org/index.php/NetworkManager){:target="_blank"}
+2. [wiki.archlinux.org/index.php/NetworkManager](https://wiki.archlinux.org/index.php/NetworkManager)
 <br>Diakses tanggal: 2019/02/09

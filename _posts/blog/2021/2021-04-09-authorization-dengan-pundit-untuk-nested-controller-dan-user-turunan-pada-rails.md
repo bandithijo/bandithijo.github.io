@@ -276,7 +276,7 @@ end
 ```
 
 
-## Authroize controller
+## Authorize controller
 
 Nah, kita telah mengatur policy untuk action edit, maka kita perlu memberikan authorization pada action edit di **articles_controller**.
 

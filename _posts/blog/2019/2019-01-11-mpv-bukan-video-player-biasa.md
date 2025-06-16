@@ -1,22 +1,19 @@
 ---
 layout: 'post'
 title: 'MPV, Bukan Pemutar Video Biasa'
-date: 2019-01-11 17:45
+date: '2019-01-11 17:45'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Tools', 'Ulasan']
+tags: ['MPV']
 pin:
 hot:
 contributors: []
 description: "Sebelum mengenal MPV, saya selalu merasa bahwa QuickTime (OSX Video Player) adalah Video Player Favorit saya. Sampai saya mengetahui MPV. Keyakinan sayapun goyah dan berubah. Catatan kali ini, saya akan bercerita ulasan dan bagaimana cara saya mengkonfigurasi MPV."
 ---
-
-<!-- BANNER OF THE POST -->
-<!-- <img class="post-body-img" src="{{ site.lazyload.logo_blank_banner }}" data-echo="#" onerror="imgError(this);" alt="banner"> -->
 
 # Prakata
 
@@ -25,6 +22,7 @@ Teman-teman pasti memiliki pemutar video favorit masing-masing. Begitupun saya, 
 Selama menggunakan MPV tidak habis-habisnya saya menemukan fitur-fitur yang berguna untuk memudahkan urusan-urusan saya dalam hal video. Awalnya saya hanya ingin pemutar video yang memiliki *user interface* yang minimalis (karena hanya ingin fokus pada video), ringan, dan cepat saat dipanggil.
 
 Namun, seiring berjalannya waktu, ternyata banyak sekali fitur-fitur yang dimiliki oleh MPV, dengan fitur yang hampir menyerupai VLC. Malah beberapa fitur pada MPV, saya belum pernah menggunakannya pada saat menggunakan VLC, karena belum adanya kebutuhan akan hal tersebut saat masih menggunakan VLC.
+
 
 # Sekilas Tentang MPV
 
@@ -39,15 +37,17 @@ Kelebihan-kelebihan yang dimiliki oleh MPV:
 5. Tentu saja **MPV masih aktif dikembangkan**, berfokus pada refactoring dan pembersihan kode serta menambahkan fitur
 6. **Free, open source dan multi platform**
 
+
 # Instalasi
 
 Untuk distribusi Arch Linux, langsung saja pasang dari repository.
 
-{% shell_user %}
-sudo pacman -S mpv
-{% endshell_user %}
+```
+$ sudo pacman -S mpv
+```
 
 Untuk distribusi lain, silahkan menyesuaikan.
+
 
 # Konfigurasi
 
@@ -55,60 +55,62 @@ Secara *default*, MPV akan membaca file konfigurasi yang terdapat pada direktori
 
 Untuk membantu konfigurasi awal, kita dapat mengambil sampel konfigurasi default settings, dengan cara sebagai berikut.
 
-{% shell_user %}
-cp -r /usr/share/doc/mpv/ ~/.config/
-{% endshell_user %}
+```
+$ cp -r /usr/share/doc/mpv/ ~/.config/
+```
 
 Saat ini saya hanya menggunakan 2 file yang ada pada direktori config ini, yaitu:
+
 1. `input.conf` - Untuk *keyboard shortcuts*
 2. `mpv.conf` - Untuk konfigurasi mpv itu sendiri
 
 Saya akan mulai dari file `mpv.conf` terlebih dahulu.
+
 
 ## Konfigurasi mpv.conf
 
 Buka Terminal dan edit file `mpv.conf`.
 
 Saya menambahkan pada baris paling akhir setelah bagian/blok `profiles`, option-option di bawah.
-{% highlight_caption $HOME/.config/mpv/mpv.conf %}
-{% pre_caption %}
+
+```bash
+!filename: $HOME/.config/mpv/mpv.conf
 ###########
 # General #
 ###########
 
 input-ipc-server=/tmp/mpvsocket           # listen for IPC on this socket
-<mark>save-position-on-quit=no</mark>                  # handled by a script
+save-position-on-quit=no                  # handled by a script
 
 #no-border                                # no window title bar
 msg-module                                # prepend module name to log messages
 msg-color                                 # color log messages on terminal
-<mark>term-osd-bar</mark>                              # display a progress bar on the terminal
+term-osd-bar                              # display a progress bar on the terminal
 use-filedir-conf                          # look for additional config files in the directory of the opened file
 #pause                                    # no autoplay
-<mark>keep-open</mark>                                 # keep the player open when a file's end is reached
-<mark>autofit-larger=90%x90%</mark>                    # resize window in case it's larger than W%xH% of the screen
+keep-open                                 # keep the player open when a file's end is reached
+autofit-larger=90%x90%                    # resize window in case it's larger than W%xH% of the screen
 cursor-autohide-fs-only                   # don't autohide the cursor in window mode, only fullscreen
 input-media-keys=no                       # enable/disable OSX media keys
 cursor-autohide=1000                      # autohide the curser after 1s
 prefetch-playlist=yes
 force-seekable=yes
 
-<mark>screenshot-format=png
+screenshot-format=png
 screenshot-png-compression=8
-screenshot-template='~/pix/ScreenShot/%F (%P) %n'</mark>
+screenshot-template='~/pix/ScreenShot/%F (%P) %n'
 
 hls-bitrate=max                           # use max quality for HLS streams
 
-<mark>[ytdl-desktop]
+[ytdl-desktop]
 profile-desc=cond:is_desktop()
-ytdl-format=bestvideo[height<=?720]+bestaudio/best</mark>
+ytdl-format=bestvideo[height<=?720]+bestaudio/best
 
-<mark>[ytdl-laptop]
+[ytdl-laptop]
 profile-desc=cond:is_laptop()
-ytdl-format=bestvideo[height<=?720][fps<=?30][vcodec!=?vp9][protocol!=http_dash_segments]+bestaudio/best</mark>
+ytdl-format=bestvideo[height<=?720][fps<=?30][vcodec!=?vp9][protocol!=http_dash_segments]+bestaudio/best
 
 [default]
-
 
 #########
 # Cache #
@@ -189,9 +191,10 @@ audio-file-auto=fuzzy                     # external audio doesn't has to match 
 audio-pitch-correction=yes                # automatically insert scaletempo when playing with higher speed
 volume-max=200                            # maximum volume in %, everything above 100 results in amplification
 volume=100                                # default volume, 100 = unchanged
-{% endpre_caption %}
+```
 
 Berikut ini adalah penjelasan dari beberapa option yang saya gunakan. Saya tidak dapat menjelaskan semuanya secara detail.
+
 
 ### Save Position on Quit
 
@@ -201,6 +204,7 @@ save-position-on-quit=no
 
 Option di atas digunakan untuk menyimpan posisi terakhir dari *seek bar*. Sehingga memungkinkan kita saat membuka file video yang sama, akan kembali dimulai pada menit sebelum mpv di-*quit*.
 
+
 ### Display Progress Bar on Terminal
 
 ```
@@ -208,6 +212,7 @@ term-osd-bar
 ```
 
 Karena terkadang saya menjalankan mpv juga dari Terminal, misalkan menonton video melalui url youtube, saya membutuhkan progress bar untuk memberikan saya referensi di mana posisi saya saat ini (sudah berapa menit).
+
 
 ### Keep Open After Video End
 
@@ -217,6 +222,7 @@ keep-open
 
 Option ini digunakan agar mpv tidak otomatis keluar saat selesai menjalankan video/audio.
 
+
 ### Default Window Size
 
 ```
@@ -224,6 +230,7 @@ autofit-larger=90%x90%
 ```
 
 Option ini saya pergunakan agar saat membuka mpv, video tidak lebih besar dari resolusi layar yang saya gunakan.
+
 
 ### ScreenShot Format
 
@@ -234,6 +241,7 @@ screenshot-template='~/pix/ScreenShot/%F (%P) %n'
 ```
 
 Option ini saya pergunakan untuk mengatur screenshot file type dan lokasi dimana hasil screenshot disimpan beserta format namanya.
+
 
 ### youtube-dl Format
 
@@ -249,6 +257,7 @@ ytdl-format=bestvideo[height<=?720][fps<=?30][vcodec!=?vp9][protocol!=http_dash_
 
 Option di atas saya pergunakan untuk mengatur format video yang akan dipilih pada saat menonton streaming YouTube. Saya menggunakan fiber optik internet, sehingga tidak ada masalah untuk mengeset pada resoulsi 720.
 
+
 ## Konfigurasi input.conf
 
 Untuk file konfigurasi `input.conf` saya tidak menambahkan banyak pengaturan *keyboard shortcuts*.
@@ -257,44 +266,46 @@ Saya hanya menambahkan untuk pengaturan **horizontal flip** dan **rotate** video
 
 Edit file `input.conf` dan tambahkan di paling bawah.
 
-{% highlight_caption $HOME/.config/mpv/input.conf %}
-{% pre_caption %}
+```bash
+!filename: $HOME/.config/mpv/input.conf
 - cycle-values video-rotate "90" "180" "270" "0"
 = vf toggle hflip                       # toggle for flip video horizontal
 \ vf toggle negate                      # toggle for invert video color
-{% endpre_caption %}
+```
 
 Option di atas bertujuan untuk:
 
-1. Tombol <kbd> - </kbd> untuk melakukan rotate ke kanan
-2. Tombol <kbd> = </kbd> untuk membuat video menjadi horizontal flip
-3. Tombol <kbd> \ </kbd> untuk membuat color dari video menjadi negatif (inverted/reversed)
+1. Tombol <kbd>-</kbd> untuk melakukan rotate ke kanan
+2. Tombol <kbd>=</kbd> untuk membuat video menjadi horizontal flip
+3. Tombol <kbd>\</kbd> untuk membuat color dari video menjadi negatif (inverted/reversed)
 
 
 # Contoh Pemanfaatan MPV
+
 
 ## Menonton YouTube
 Sangat praktis sekali untuk dapat menonton video YouTube di MPV.
 
 Caranya pun sangat mudah. Hanya perlu mengcopy paste url video YouTube setelah perintah mpv.
 
-{% shell_user %}
-mpv https://www.youtube.com/watch?v=Jju_lt5f0Zo
-{% endshell_user %}
+```
+$ mpv https://www.youtube.com/watch?v=Jju_lt5f0Zo
+```
 
-{% box_pertanyaan %}
-<p><b>Mengapa Menonton YouTube Menggunakan MPV?</b></p>
-Berikut ini adalah beberapa alasan saya:
-<ol>
-<li><b>Praktis</b> dan <b>simpel</b></li>
-<li><b>Minim distraksi</b> dari user interface YouTube</li>
-<li><b>Bebas dari iklan</b></li>
-<li><b>Volume</b> dapat kita push hingga <b>lebih dari 100%</b> untuk video yang memiliki suara yang kecil</li>
-<li><b>Brightness, Contrast</b> serta <b>Saturation</b> yang <b>dapat kita atur</b> sendiri. Karena terkadang ada video yang terlalu gelap</li>
-<li><b>Video dapat dikontrol</b>, seperti: fast, slow, maju satu frame, maju 10 frame, dll</li>
-<li>dll.</li>
-</ol>
-{% endbox_pertanyaan %}
+> PERTANYAAN?
+> 
+> **Mengapa Menonton YouTube Menggunakan MPV?**
+> 
+> Berikut ini adalah beberapa alasan saya:
+> 
+> 1. **Praktis** dan simpel
+> 1. **Minim distraksi** dari user interface YouTube
+> 1. **Bebas dari iklan**
+> 1. **Volume** dapat kita push hingga **lebih dari 100%** untuk video yang memiliki suara yang kecil
+> 1. **Brightness, Contrast** serta **Saturation** yang **dapat kita atur** sendiri. Karena terkadang ada video yang terlalu gelap
+> 1. **Video dapat dikontrol**, seperti: fast, slow, maju satu frame, maju 10 frame, dll
+> 1. dll.
+
 
 ## WebCam Viewer
 Selain dapat memutar video, MPV juga saya pergunakan untuk menampilkan output dari kamera WebCam.
@@ -303,17 +314,17 @@ Tidak seperti aplikasi WebCam pada umumnya yang harus bergantian dalam menampilk
 
 Sepertinya untuk menggunakan fitur ini, kita memerlukan paket `v4l-utils`.
 
-{% shell_user %}
-sudo pacman -S v4l-utils
-{% endshell_user %}
+```
+$ sudo pacman -S v4l-utils
+```
 
 Namun, saya belum yakin apakah fitur ini membutuhkan paket `v4l-utils` atau tidak.
 
 Sebelumnya cek dulu apakah terdapat webcam yang aktif.
 
-{% shell_user %}
-ls -l /dev/video*
-{% endshell_user %}
+```
+$ ls -l /dev/video*
+```
 
 ```
 crw-rw----+ 1 root video 81, 0 Jan 11 21:39 /dev/video0
@@ -324,51 +335,53 @@ Setelah itu baru kita panggil WebCam yang aktif.
 
 Dalam kasus ini hanya `/dev/video0/` saja yang saya gunakan.
 
-{% shell_user %}
-mpv <mark>av://v4l2:/dev/video0</mark>
-{% endshell_user %}
+```
+$ mpv av://v4l2:/dev/video0
+```
 
 Apabila ingin menambahkan propertis lain seperti hitam putih dan horizontal flip, kira-kira seperti ini contohnya.
 
 Horizontal flip.
 
-{% shell_user %}
-mpv av://v4l2:/dev/video0 <mark>--vf=hflip</mark>
-{% endshell_user %}
+```
+$ mpv av://v4l2:/dev/video0 --vf=hflip
+```
 
 Atau hitam putih.
 
-{% shell_user %}
-mpv av://v4l2:/dev/video0 <mark>--saturation=-100</mark>
-{% endshell_user %}
+```
+$ mpv av://v4l2:/dev/video0 --saturation=-100
+```
 
 Hasilnya,
 
-{% box_pertanyaan %}
-<p><b>Mengapa Mengunakan MPV sebagai WebCam viewer?</b></p>
-Berikut ini adalah beberapa alasan saya:
-<ol>
-<li><b>Praktis</b> dan <b>simpel</b></li>
-<li><b>Minim distraksi</b> dari user interface YouTube</li>
-<li><b>Brightness, Contrast</b> serta <b>Saturation</b> yang <b>dapat kita atur</b> sendiri.</li>
-<li> Dapat <b>Multi Cam</b></li>
-<li>Cenderung <b>ringan</b> dan tidak membuat laptop menjadi panas</li>
-</ol>
-{% endbox_pertanyaan %}
+> PERTANYAAN?
+> 
+> **Mengapa Mengunakan MPV sebagai WebCam viewer?**
+> 
+> Berikut ini adalah beberapa alasan saya:
+> 
+> 1. **Praktis** dan **simpel**
+> 1. **Minim distraksi** dari user interface YouTube
+> 1. **Brightness**, **Contrast** serta **Saturation** yang **dapat kita atur** sendiri.
+> 1. Dapat **Multi Cam**
+> 1. Cenderung **ringan** dan tidak membuat laptop menjadi panas
 
-<!-- IMAGE CAPTION -->
-{% image https://i.postimg.cc/LXK2R865/gambar-01.gif | 1 | MPV menampilkan output dari banyak WebCam %}
+![Gambar 1](https://i.postimg.cc/LXK2R865/gambar-01.gif)
 
-<!-- IMAGE CAPTION -->
-{% image https://i.postimg.cc/KYrxGyK5/gambar-02.gif | 2 | Demonstrasi Horizontal Flip dan Rotate menggunakan keyboard Shortcut %}
+Gambar 1. MPV menampilkan output dari banyak WebCam
+
+![Gambar 2](https://i.postimg.cc/KYrxGyK5/gambar-02.gif)
+
+Gambar 2. Demonstrasi Horizontal Flip dan Rotate menggunakan keyboard Shortcut
 
 
 ## Subtitle
 
 Pada konfigurasi yang saya buat, saya menghidden visibility dari subtitle.
 
-{% highlight_caption $HOME/.config/mpv/mpv.conf %}
-{% highlight sh linenos %}
+```bash
+!filename: $HOME/.config/mpv/mpv.conf
 # ...
 # ...
 
@@ -379,11 +392,12 @@ Pada konfigurasi yang saya buat, saya menghidden visibility dari subtitle.
 no-sub-visibility                       # namun dalam keadaan terhidden
 # ...
 # ...
-{% endhighlight %}
+```
 
 Tujuannya, agar subtitle tidak langsung ditampilkan pada semua video.
 
 Cara menggunakannya,
+
 1. Tekan <kbd>V</kbd> untuk meng-*enable* dan *disable* visibility dari subtitle.
 2. Apabila terdapat lebih dari 1 subtitle, kita dapat berpindah antar subtitle menggunakan <kbd>J</kbd> untuk Next Subtitle dan <kbd>SHIFT</kbd> + <kbd>J</kbd> untuk Previous Subtitle.
 
@@ -392,11 +406,12 @@ Cara menggunakannya,
 
 MPV juga dapat menampilkan dual subtitle.
 
-{% shell_user %}
-mpv video.mp4 --sub-file=subtitle1.srt --sub-file=subtitle2.srt --secondary-sid=2
-{% endshell_user %}
+```
+$ mpv video.mp4 --sub-file=subtitle1.srt --sub-file=subtitle2.srt --secondary-sid=2
+```
 
-{% image https://i.postimg.cc/tTtgmqnz/gambar-03.png | 3 %}
+![Gambar 3](https://i.postimg.cc/tTtgmqnz/gambar-03.png)
+
 
 # Keyboard Shortcuts
 
@@ -425,7 +440,6 @@ Default Keyboard Shortcuts berdasarkan file `input.conf`.
 | <kbd> ] </kbd> | multiply speed 1.1 |
 | <kbd> { </kbd> | multiply speed 0.5 |
 | <kbd> } </kbd> | multiply speed 2.0 |
-
 
 **Keluar**
 
@@ -470,6 +484,7 @@ Keyboard Shortcuts yang saya tambahkan.
 | <kbd> - </kbd> | rotate left 90 180 270 0 |
 | <kbd> = </kbd> | horizontal flip |
 
+
 # Pesan Penulis
 
 Masih banyak fitur-fitur keren dari MPV yang mungkin belum tercover oleh tulisan ini. Mudah-mudahan dapat saya tambahkan lagi dilain waktu apabila menemukan penerapan lain dari penggunaan MPV.
@@ -477,12 +492,11 @@ Masih banyak fitur-fitur keren dari MPV yang mungkin belum tercover oleh tulisan
 
 # Referensi
 
-1. [mpv.io](https://mpv.io/){:target="_blank"}
+1. [mpv.io](https://mpv.io/)
 <br>Diakses tanggal: 2019/01/11
 
-2. [github.com/mpv-player/mpv](https://github.com/mpv-player/mpv){:target="_blank"}
+2. [github.com/mpv-player/mpv](https://github.com/mpv-player/mpv)
 <br>Diakses tanggal: 2019/01/11
 
-3. [wiki.archlinux.org/index.php/mpv](https://wiki.archlinux.org/index.php/mpv){:target="_blank"}
+3. [wiki.archlinux.org/index.php/mpv](https://wiki.archlinux.org/index.php/mpv)
 <br>Diakses tanggal: 2019/01/11
-

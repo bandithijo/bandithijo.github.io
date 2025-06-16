@@ -1,28 +1,28 @@
 ---
 layout: 'post'
 title: 'Memanfaatkan Dunst Sebagai PopUp Notifikasi Bantuan Keyboard Shortcut'
-date: 2019-02-20 10:45
+date: '2019-02-20 10:45'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'I3WM']
+tags: ['dunst']
 pin:
 hot: true
 contributors: []
 description: "Dunst adalah replacement untuk standalone notification daemon yang ringan. Biasanya digunakan oleh pengguna Window Manager. Catatan kali ini, saya akan memanfaatkan dunst untuk menampilkan daftar keybind keymap."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
+> INFO
+> 
+> Sudah ada versi yang lebih baru dari topik ini.
+> 
+> Silahkan mengunjungi alamat di bawah.
+> 
+> [Memanfaatkan Dunst Sebagai PopUp Notifikasi Bantuan Keyboard Shortcut (ver. 2)]({{ site.url }}/blog/dunst-sebagai-notifikasi-bantuan-pengingat-shortcut-2)
 
-{% box_info %}
-<p>Sudah ada versi yang lebih baru dari topik ini.</p>
-<p>Silahkan mengunjungi alamat di bawah.</p>
-<p>"<a href="{{ site.url }}/blog/dunst-sebagai-notifikasi-bantuan-pengingat-shortcut-2">Memanfaatkan Dunst Sebagai PopUp Notifikasi Bantuan Keyboard Shortcut (ver. 2)</a>"</p>
-{% endbox_info %}
 
 # Prakata
 
@@ -37,14 +37,14 @@ Sebentar...
 Mungkin ada beberapa dari teman-teman yang belum mengerti. *Environment* seperti apa sih itu?
 
 1. **i3 Window Manager**
-2. **Tmux**
-3. **Vim**
-4. **Ranger**
-5. **Neomutt**
-6. **Newsboat**
-7. **MPV**
-8. **st Terminal**
-9. dst...
+1. **Tmux**
+1. **Vim**
+1. **Ranger**
+1. **Neomutt**
+1. **Newsboat**
+1. **MPV**
+1. **st Terminal**
+1. dst...
 
 Di atas adalah contoh dari beberapa aplikasi yang memiliki konfigurasi *keyboard shortcut* agar dapat digunakan.
 
@@ -53,6 +53,7 @@ Memang tidak semua kita gunakan dan kita perlukan.
 Maka dari itu, tujuan tulisan kali ini adalah untuk memecahkan permasalahan **apabila kita mengalami kelupaan dan tidak ingin repot membuka `man` (manual) dari aplikasi tersebut**. Cukup dengan membuat *script* sederhana untuk memanggil "catatan" berisi *keyboard shortcut* yang sudah kita rangkum sebelumnya.
 
 Sangat memudahkan sekali (menurut saya). Hehe.
+
 
 # Sekenario
 
@@ -63,10 +64,12 @@ Karena daripada menunggu sampai berhasil menerapkan rancangan yang ideal namun t
 Sekenarionya secara sederhana akan seperti ini:
 
 1. Membuat Shell *script* yang digunakan untuk menampilkan isi dari sebuah direktori, sekaligus dapat mengeksekusi isi file yang ada di dalamnya apabila dipilih.
-2. Membuat Shell *script* yang digunakankan untuk memanggil `dunstify` yang akan menampilkan file text yang berisi daftar *keyboard shortcut*.
-3. Membuat file text berisi daftar *keyboard shortcut*.
+1. Membuat Shell *script* yang digunakankan untuk memanggil `dunstify` yang akan menampilkan file text yang berisi daftar *keyboard shortcut*.
+1. Membuat file text berisi daftar *keyboard shortcut*.
+
 
 # Eksekusi
+
 
 ## Membuat Script File Browser
 
@@ -76,16 +79,16 @@ Pada tahap ke-1 ini, saya menyebut ini sebagai **file browser** karena secara gl
 
    Saya memilih untuk meletakannya pada direktori `~/.config/rofi/`.
 
-   {% shell_user %}
-cd ~/.config/rofi
-touch help-script-browser.sh
-chmod +x help-script-browser.sh
-vim help-script-browser.sh
-{% endshell_user %}
+   ```
+   $ cd ~/.config/rofi
+   $ touch help-script-browser.sh
+   $ chmod +x help-script-browser.sh
+   $ vim help-script-browser.sh
+   ```
 
    Isikan di dalamnya seperti ini.
 
-   ```sh
+   ```bash
    #!/bin/env sh
 
    # direktori target tempat script dunstify berada
@@ -112,13 +115,13 @@ vim help-script-browser.sh
 
 2. Apabila teman-teman menggunakan **i3wm** dan **Rofi**, tinggal kita buatkan konfigurasi `bindkey` nya saja. Pada konfigurasi i3wm.
 
-   {% shell_user %}
-vim ~/.config/i3/config
-{% endshell_user %}
+   ```
+   $ vim ~/.config/i3/config
+   ```
 
    Tambahkan seperti ini, kira-kira.
 
-   ```sh
+   ```bash
    # ...
    # ...
 
@@ -131,6 +134,7 @@ vim ~/.config/i3/config
    Silahkan menyesuaikan dengan preferensi masing-masing.
 
    Tahap ke-1, telah selesai.
+
 
 ## Membuat Script Dunstify
 
@@ -149,24 +153,24 @@ Misalnya,
 
 1. Buat direktori khusus untuk menyimpan Shell *script* ini. Saya akan memilih membuat direktori baru dengan nama `~/.config/rofi-help/`.
 
-   {% shell_user %}
-mkdir -p ~/.config/rofi-help
-{% endshell_user %}
+   ```
+   $ mkdir -p ~/.config/rofi-help
+   ```
 
 2. Buat file Shell *script* dari *keyboard shortcut* yang akan kita gunakan.
 
    Misalkan i3wm. Namun, jangan berikan ekstensi `.sh` agar tampilannya lebih rapi.
 
-   {% shell_user %}
-cd ~/.config/rofi-help
-touch "I3WM Window Manager"
-chmod +x "I3WM Window Manager"
-vim "I3 Window Manager"
-{% endshell_user %}
+   ```
+   $ cd ~/.config/rofi-help
+   $ touch "I3WM Window Manager"
+   $ chmod +x "I3WM Window Manager"
+   $ vim "I3 Window Manager"
+   ```
 
    Kemudian isikan seperti ini.
 
-   ```sh
+   ```bash
    #!/bin/env sh
    dunstify "i3WM KEYBINDS:" "`tail -n 50 $HOME/.config/rofi-help/keybinds-i3`"
    ```
@@ -186,9 +190,9 @@ Saya akan melanjutkan proses di atas. Yaitu membuat file text untuk daftar *keyb
 
    Dalam konteks ini, kita sedang membuat untuk daftar *keyboard shortcut* dari i3wm.
 
-   {% shell_user %}
-touch keybinds-i3
-{% endshell_user %}
+   ```
+   $ touch keybinds-i3
+   ```
 
    **Perhatian!** Saya menggunakan aturan penamaan yang sama pada setiap file text. Yaitu, dengan memberikan awalan `keybinds-`.
 
@@ -245,15 +249,17 @@ touch keybinds-i3
 
    Pengaturan lebar dari notifikasi **Dunst** ini akan berbeda setiap dari teman-teman. Bergantung pada konfigurasi lebar notifikasi dunst yang teman-teman pergunakan (pada `dunstrc` bagian `geometry = `).
 
-   Contoh-contoh daftar *keboard shortcut* yang saya pergunakan dapat di lihat pada dotfiles milik saya, [di sini](https://github.com/bandithijo/dotfiles/tree/master/.config/rofi-help){:target="_blank"}.
+   Contoh-contoh daftar *keboard shortcut* yang saya pergunakan dapat di lihat pada dotfiles milik saya, [di sini](https://github.com/bandithijo/dotfiles/tree/master/.config/rofi-help).
 
 
-<br>
 Silahkan menambahkan menambahkan sendiri untuk membuat daftar *keyboard shortcut* aplikasi yang lain. Dengan mengulang tahap ke-2 dan ke-3.
+
 
 # Hasilnya
 
-{% image https://i.postimg.cc/vZsSj7b9/gambar-01.gif | 1 | Demonstrasi hasil akhir dari semua proses di atas %}
+![Gambar 1](https://i.postimg.cc/vZsSj7b9/gambar-01.gif)
+
+Gambar 1. Demonstrasi hasil akhir dari semua proses di atas
 
 
 # Pesan Penulis

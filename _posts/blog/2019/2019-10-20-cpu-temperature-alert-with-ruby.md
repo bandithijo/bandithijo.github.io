@@ -1,22 +1,19 @@
 ---
 layout: 'post'
 title: "Membuat CPU Temperature Alert dengan Ruby"
-date: 2019-10-20 21:29
+date: '2019-10-20 21:29'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Ruby']
+tags: ['Ruby']
 pin:
 hot:
 contributors: []
 description: "Kadang saya memerlukan sebuah pananda yang benar-benar dapat menarik perhatian saya saat CPU temperature mencapai suhu tinggi. Tujuannya agar saya dapat mengambil tindakan antisipasi. Saya memang sudah memiliki status indikator. Namun, masih belum cukup menarik perhatian saya, terutama saat saya tidak sedang berada di depan laptop dan laptop sedang digunakan untuk mengcompile."
 ---
-
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
 
 # Pendahuluan
 
@@ -40,14 +37,17 @@ Hal ini juga disebabkan karena minimalnya sistem notifikasi dari sistem yang say
 
 Atas dasar ini, saya berinisiatif untuk menambahkan fitur notifikasi suara apabila CPU sudah mencapai suhu tertentu.
 
-{% image https://i.postimg.cc/Cx6kK0qQ/gambar-01.png | 1 | Tampilan notifikasi Peringatan Hot CPU Temperature %}
+![Gambar 1](https://i.postimg.cc/Cx6kK0qQ/gambar-01.png)
+
+Gambar 1. Tampilan notifikasi Peringatan Hot CPU Temperature
 
 Langsung saja saya tuliskan script ~~sederhana~~ cupu, yang saya tulis menggunakan bahasa Ruby.
 
+
 # Script
 
-{% highlight_caption $HOME/.local/bin/notify-hightemp %}
-{% highlight ruby linenos %}
+```ruby
+!filename: $HOME/.local/bin/notify-hightemp
 #!/usr/bin/env ruby
 
 # Copyright (C) 2019 Rizqi Nur Assyaufi <bandithijo@gmail.com>
@@ -97,11 +97,11 @@ begin
 rescue Interrupt
   puts "\nExiting..."
 end
-{% endhighlight %}
+```
 
 Saya beri nama file `notify-hightemp`.
 
-Saya tidak menggunakan ekstensi `.rb` karena saya sudah mendefinisikan *SheBang* <mark>#!/usr/bin/env ruby</mark> dari file ini, agar sistem dapat mengenali bahwa saya ingin mengeksekusi file ini dengan Ruby intepreter. Selain itu agar lebih mudah dipanggil di Terminal, hehe.
+Saya tidak menggunakan ekstensi `.rb` karena saya sudah mendefinisikan *SheBang* `#!/usr/bin/env ruby` dari file ini, agar sistem dapat mengenali bahwa saya ingin mengeksekusi file ini dengan Ruby intepreter. Selain itu agar lebih mudah dipanggil di Terminal, hehe.
 
 Saya menggunakan perintah `cat /sys/class/thermal/thermal_zone0/temp` agar lebih fleksibel digunakan pada mesin yang lain. Karena selain `/sys` kita juga dapat menggunakan `/proc`
 
@@ -111,13 +111,14 @@ Teman-teman bisa mengolahnya sendiri untuk menangkap nilai dari core yang lain.
 
 Selanjutnya, berikan permission untuk execute.
 
-{% shell_user %}
-chmod +x notify-hightemp
-{% endshell_user %}
+```
+$ chmod +x notify-hightemp
+```
 
 Copykan ke direktori `/usr/bin/` untuk dieksekusi semua user atau `~/.local/bin/` untuk user kita saja.
 
 Selanjutnya tinggal meletakkan pada autorun.
+
 
 # Autorun
 
@@ -125,19 +126,19 @@ Bagian ini akan tergantung dari DE atau WM yang teman-teman pergunakan.
 
 Karena saya menggunakan BSPWM, kira-kira seperti ini cara saya menambahkan script yang baru saja kita buat ini kedalam sistem autorun.
 
-{% shell_user %}
-vim ~/.config/bspwm/autostart
-{% endshell_user %}
+```
+$ vim ~/.config/bspwm/autostart
+```
 
-{% highlight_caption ~/.config/bspwm/autostart %}
-{% highlight sh linenos %}
+```bash
+!filename: ~/.config/bspwm/autostart
 #!/usr/bin/env sh
 
 # ...
 # ...
 
 kill -9 $(pidof notify-hightemp); notify-hightemp &
-{% endhighlight %}
+```
 
 Penambahakan `kill -9 $(pidof notify-hightemp)` bertujuan agar ketika saya merestart WM, script ini tidak dipanggil lagi. Namun, akan dikill terlebih dahulu, kemudian baru dijalankan kembali.
 
@@ -155,7 +156,9 @@ $0="notify-hightemp"
 
 Namun, terlihat seperti kurang Ruby banget, hehe.
 
+
 # Tambahan
+
 
 ## ThinkAlert
 
@@ -163,16 +166,16 @@ Untuk pengguna ThinkPad jadul seperti saya (ThinkPad X61), saya menambahkan `thi
 
 Untuk pengguna distro selain Arch, mungkin tidak ada `thinkalert` di repository. Tinggal pasang saja dari GitHub repo dari thinkalert.
 
-{% shell_user %}
-git clone https://github.com/floriandejonckheere/thinkalert.git
-cd thinkalert
-{% endshell_user %}
+```
+$ git clone https://github.com/floriandejonckheere/thinkalert.git
+$ cd thinkalert
+```
 
 Isinya cuma dua file.
 
-{% shell_user %}
-ls
-{% endshell_user %}
+```
+$ ls
+```
 
 ```
 README.md  thinkalert  thinkalert.c
@@ -180,14 +183,14 @@ README.md  thinkalert  thinkalert.c
 
 Nah, `thinkalert.c` ini yang akan kita compile menjadi file binary.
 
-{% shell_user %}
-gcc -c thinkalert thinkalert.c
-{% endshell_user %}
+```
+$ gcc -c thinkalert thinkalert.c
+```
 
 Kalau ada warning (peringatan) mengenai penggunaan `setgroups`, bisa ganti menjadi `getgroups`
 
-{% highlight_caption thinkalert.c %}
-{% highlight c linenos %}
+```c
+!filename: thinkalert.c
 // ...
 // ...
 
@@ -199,22 +202,22 @@ void dropPrivs() {
 
         // Drop ancillary group memberships.
         if (!olduid) getgroups(1, &newgid);
-{% endhighlight %}
+```
 
 Kemudian compile ulang.
 
 Selanjutnya, install ke `/usr/bin/`.
 
-{% shell_user %}
-sudo install -Dm4755 thinkalert /usr/bin/thinkalert
-exec $SHELL
-{% endshell_user %}
+```
+$ sudo install -Dm4755 thinkalert /usr/bin/thinkalert
+$ exec $SHELL
+```
 
 Nah, coba jalankan **thinkalert**.
 
-{% shell_user %}
-thinkalert
-{% endshell_user %}
+```
+$ thinkalert
+```
 
 ```
 thinkalert <on|off|toggle>
@@ -226,9 +229,9 @@ Kalau keluar output seperti di atas, artinya **thinkalert** telah berhasil dipas
 
 Coba test dengan menjalankan **thinkalert** kedip 5 kali.
 
-{% shell_user %}
-thinkalert 5
-{% endshell_user %}
+```
+$ thinkalert 5
+```
 
 Kalau berhasil, thinklight akan berkedip 5 kali. Keren!
 
@@ -243,15 +246,15 @@ Mudah-mudahan bermanfaat.
 
 Terima kasih (^_^)v
 
-Oh ya, kalo mau audio `aircraftalarm.wav`, dapat diunduh [di sini](https://freesound.org/people/guitarguy1985/sounds/57806/){:target="_blank"} yaa.
+Oh ya, kalo mau audio `aircraftalarm.wav`, dapat diunduh [di sini](https://freesound.org/people/guitarguy1985/sounds/57806/) yaa.
 
 Tapi tidak saya rekomendasikan karena mungkin dapat menyebabkan serangan panik, hehe.
 
 
 # Referensi
 
-1. [github.com/floriandejonckheere/thinkalert](https://github.com/floriandejonckheere/thinkalert){:target="_blank"}
+1. [github.com/floriandejonckheere/thinkalert](https://github.com/floriandejonckheere/thinkalert)
 <br>Diakses tanggal: 2020/05/06
 
-2. [aur.archlinux.org/packages/thinkalert](https://aur.archlinux.org/packages/thinkalert){:target="_blank"}
+2. [aur.archlinux.org/packages/thinkalert](https://aur.archlinux.org/packages/thinkalert)
 <br>Diakses tanggal: 2020/05/06

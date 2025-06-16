@@ -1,64 +1,65 @@
 ---
 layout: 'post'
 title: 'Zgen, ZSH Plugin Manager'
-date: 2019-02-18 12:15
+date: '2019-02-18 12:15'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Ulasan', 'Tips', 'Terminal']
+tags: ['zsh', 'zgen']
 pin:
 hot:
 contributors: []
 description: "Z Shell juga memiliki plugin-plugin yang dapat kita manfaatkan untuk menambah fitur yang ingin kita gunakan. Untuk memanajemen plugin-plugin tersebut, saya memilih untuk menggunakan plugin manager yang bernama Zgen."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
-
 # Prakata
 
 Sejak menggunakan macOS (dulunya OSX), saya sudah mengenal ZSH shell dalam keseharian menggunakan Terminal. Saat itu kira-kira sekitar tahun 2014. Namun, baru sekarang saya sadari ternyata ZSH juga memiliki *plugin manger*.
 
-Berawal dari keinginan saya untuk menggunakan ZSH theme yang simpel, kemudian [Nanda Okitavera](https://okitavera.me/){:target="_blank"} mengenalkan ZSH theme bernama [**subnixr/minimal**](https://github.com/subnixr/minimal){:target="_blank"}. Proses instalasi ZSH theme ini menggunakan Zgen atau Antigen. Dari sinilah awal perkenalan saya dengan Zgen -- *A lightweight plugin manager for Zsh inspired by Antigen*.
+Berawal dari keinginan saya untuk menggunakan ZSH theme yang simpel, kemudian [Nanda Okitavera](https://okitavera.me/) mengenalkan ZSH theme bernama [**subnixr/minimal**](https://github.com/subnixr/minimal). Proses instalasi ZSH theme ini menggunakan Zgen atau Antigen. Dari sinilah awal perkenalan saya dengan Zgen -- *A lightweight plugin manager for Zsh inspired by Antigen*.
+
 
 # Alasan Menggunakan Zgen
 
 Seperti namanya, *plugin manager*, tentunya berguna untuk memanajemen plugin. Mungkin teman-teman yang menggunakan Vim *text editor* akan langsung memahami, bahwa keberadaan *plugin manager* sangat memudahkan kita membongkar-pasang Vim plugin yang ingin atau tidak kita gunakan. Semudah memanajemen plugins/extensions pada *text editor* GUI seperti VSCode.
 
-Penjelasan mengenai **Apa itu Zgen?** dapat dibaca sendiri pada halaman GitHub dari Zgen, [di sini](https://github.com/tarjoilija/zgen){:target="_blank"}.
+Penjelasan mengenai **Apa itu Zgen?** dapat dibaca sendiri pada halaman GitHub dari Zgen, [di sini](https://github.com/tarjoilija/zgen).
+
 
 # Instalasi
+
 
 ## Instalasi Zgen
 
 1. Backup `.zshrc`.
 
-   {% shell_user %}
-cp ~/.zshrc ~/.zshrc.old
-{% endshell_user %}
+   ```
+   $ cp ~/.zshrc ~/.zshrc.old
+   ```
 
    Atau bisa gunakan nama apa saja. `.bak`, `.backup`, dll.
 
 2. Cloning repository Zgen.
 
-   {% shell_user %}
-git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
-{% endshell_user %}
+   ```
+   $ git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
+   ```
 
    Hasil *cloning* di atas akan berada pada direktori `~/.zgen/`.
 
 3. Tambahkan bari di bawah ini pada file `~/.zshrc`.
 
-   ```sh
+   ```bash
    # load zgen
    source "${HOME}/.zgen/zgen.zsh"
-   
+
    # ...
    # ...
    ```
+
    Letakkan saja pada posisi paling atas dari `.zshrc`.
 
    Saran saya, hapus saja semua konfigurasi `oh-my-zsh` yang ada di dalam file `.zshrc`.
@@ -69,11 +70,12 @@ git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
 
    Selanjutnya, pemasangan `oh-my-zsh` sebagai plugin.
 
+
 ## Instalasi OH-MY-ZSH
 
 1. Tambahkan di bagian bawah atau setelah baris kode `# load zgen` di atas.
 
-   ```sh
+   ```bash
    # if the init scipt doesn't exist
    if ! zgen saved; then
        echo "Creating a zgen save"
@@ -99,9 +101,9 @@ git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
    ```
    Selesai. Hanya seperti ini saja cara pemasangannya.
 
-2. Kemudian untuk penambahakn plugin lain seperti [**zsh-usrs/zsh-completions**](https://github.com/zsh-users/zsh-completions){:target="_blank"}, tingal menambahkan saja di bagian dalam dari `if ... fi`.
+2. Kemudian untuk penambahakn plugin lain seperti [**zsh-usrs/zsh-completions**](https://github.com/zsh-users/zsh-completions), tingal menambahkan saja di bagian dalam dari `if ... fi`.
 
-   ```sh
+   ```bash
        # ...
        # ...
 
@@ -112,9 +114,9 @@ git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
        # ...
    ```
 
-3. Satu contoh plugin lagi, misalnya plugin untuk theme, seperti [**subnixr/minimal**](https://github.com/subnixr/minimal){:target="_blank"}.
+3. Satu contoh plugin lagi, misalnya plugin untuk theme, seperti [**subnixr/minimal**](https://github.com/subnixr/minimal).
 
-   ```sh
+   ```bash
        # ...
        # ...
 
@@ -127,7 +129,7 @@ git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
 
    Kemudian, tambahkan konfigurasi untuk **minimal** theme ini di bagian luar dari blok plugin.
 
-   ```sh
+   ```bash
    MNML_OK_COLOR=7
    MNML_ERR_COLOR=1
    MNML_USER_CHAR='$'
@@ -147,12 +149,13 @@ git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
    MNML_MAGICENTER=(mnml_me_dirs mnml_me_ls mnml_me_git)
    ```
 
+
 # Hasilnya
 
 Secara keseluruhan, isi dari kesemua komponan di atas yang ada di dalam file `~/.zshrc` saya akan seperti ini.
 
-{% highlight_caption $HOME/.zshrc %}
-{% highlight sh linenos %}
+```bash
+!filename: $HOME/.zshrc
 # -----------------------------------------------------------------ZGEN CONFIG
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
@@ -208,24 +211,26 @@ MNML_INFOLN=(mnml_err mnml_jobs mnml_uhp mnml_files)
 # An additional array is used to configure magic enter's behavior:
 MNML_MAGICENTER=(mnml_me_dirs mnml_me_ls mnml_me_git)
 # -----------------------------------------------------------------END MINIMAL
-{% endhighlight %}
+```
 
-Untuk melihat isi dari `~/.zshrc` lebih lengkap, silahkan melihat pada repositori dotfiles milik saya, [**di sini**](https://github.com/bandithijo/dotfiles/blob/master/.zshrc){:target="_blank"}.
+Untuk melihat isi dari `~/.zshrc` lebih lengkap, silahkan melihat pada repositori dotfiles milik saya, [**di sini**](https://github.com/bandithijo/dotfiles/blob/master/.zshrc).
 
-{% box_pertanyaan %}
-<p><b>Mengapa saya menggunakan dua buah teheme?</b></p>
-<p>Saya menggunakan <b>oh-my-zsh</b> theme yang bernama <b>avit</b> sebagai <i>fallback</i> apabila <b>minimal</b> theme yang saya gunakan mengalami kendala.</p>
-<p>Ini juga hanya asumsi saya saja. Untuk mengantisipasi. Pada kenyataannya juga belum teruji. Karena selama ini, belum pernah menemui kendala dengan <b>minimal</b> theme.</p>
-{% endbox_pertanyaan %}
+> PERTANYAAN?
+> 
+> **Mengapa saya menggunakan dua buah teheme?**
+> 
+> Saya menggunakan **oh-my-zsh** theme yang bernama **avit** sebagai *fallback* apabila **minimal** theme yang saya gunakan mengalami kendala.
+> 
+> Ini juga hanya asumsi saya saja. Untuk mengantisipasi. Pada kenyataannya juga belum teruji. Karena selama ini, belum pernah menemui kendala dengan **minimal** theme.
 
 
 # Reset Konfigurasi
 
 Setelah menambahkan atau menghapus plugin, jangan lupa untuk melakukan perintah *reset*.
 
-{% shell_user %}
-zgen reset
-{% endshell_user %}
+```
+$ zgen reset
+```
 
 ```
 -- zgen: Deleting `/home/bandithijo/.zgen/init.zsh` ...
@@ -243,7 +248,9 @@ Creating a zgen save
 
 Selesai.
 
+
 # Troubleshoting
+
 
 ## Perintah Terulang pada Output
 
@@ -251,23 +258,23 @@ Selesai.
 
 Sebenarnya, sudah pernah mengalami hal ini, namun karena lupa melakukan pencatatan, dan ternyata mengalami untuk kedua kali, malah jadi kebingungan.
 
-{% image https://i.postimg.cc/1Xs2bb4M/gambar-02.gif | 2 %}
+![Gambar 1](https://i.postimg.cc/1Xs2bb4M/gambar-02.gif)
 
 Dapat dilihat pada ilustrasi di atas, apapun perintah (*command*) yang saya tulisakan, akan ditampilkan kembali pada baris *output*.
 
-{% image https://i.postimg.cc/qR8WbpBz/gambar-01.png | 1 %}
+![Gambar 2](https://i.postimg.cc/qR8WbpBz/gambar-01.png)
 
 Saya mengalami permasalah ini pada terminal URxvt dan Termite, namun tidak pada ST terminal yang sehari-hari saya pergunakan.
 
 Namun, pada ST terminal, saat saya menggunakan `:terminal` di dalam Vim text editor, permasalahan yang sama mulai terlihat.
 
-Untung saja ada group [BGLI (Belajar GNU/Linux Indonesia)](https://t.me/GNULinuxIndonesia){:target="_blank"}, jadi bisa menanyakan di sana.
+Untung saja ada group [BGLI (Belajar GNU/Linux Indonesia)](https://t.me/GNULinuxIndonesia), jadi bisa menanyakan di sana.
 
->Terkadang perlu "sudut pandang" orang lain dalam menemukan "kata kunci" yang tepat untuk mencari solusi dari sebuah masalah.
+> Terkadang perlu "sudut pandang" orang lain dalam menemukan "kata kunci" yang tepat untuk mencari solusi dari sebuah masalah.
 
-{% image https://i.postimg.cc/K8MfrJ8Y/gambar-03.png | 3 %}
+![Gambar 3](https://i.postimg.cc/K8MfrJ8Y/gambar-03.png)
 
-<p class="img-caption">URL: <a href="https://stackoverflow.com/questions/30940299/zsh-repeats-command-in-output">ZSH repeats command in output</a></p>
+Gambar 3. URL: [ZSH repeats command in output](https://stackoverflow.com/questions/30940299/zsh-repeats-command-in-output)
 
 Dari jawaban yang diberikan pada tautan di atas. Kita perlu menambahkan variabel milik OH-MY-ZSH, yaitu:
 
@@ -279,8 +286,8 @@ Karena, saya belum memasukkan variabel-variabel milik OH-MY-ZSH pada file `~/.zs
 
 Apabila ingin ditambahkan variabel-variabel milik OH-MY-ZSH secara komplit, kira-kira seperti ini.
 
-{% highlight_caption $HOME/.zshrc %}
-{% highlight sh linenos %}
+```bash
+!filename: $HOME/.zshrc
 # -------------------------------------------------------------------OH-MY-ZSH
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -308,11 +315,12 @@ DISABLE_AUTO_TITLE="true"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 # ---------------------------------------------------------------END OH-MY-ZSH
-{% endhighlight %}
+```
 
 Dengan begini permasalahan "Perintah Terulang pada Output" tidak terjadi lagi.
 
 Terima kasih untuk **Karen Kishou @snowsu**.
+
 
 # Pesan Penulis
 
@@ -325,9 +333,8 @@ Sepertinya ini saja. Mudah-mudahan dapat bermanfaat untuk teman-teman.
 
 # Referensi
 
-1. [github.com/tarjoilija/zgen](https://github.com/tarjoilija/zgen){:target="_blank"}
+1. [github.com/tarjoilija/zgen](https://github.com/tarjoilija/zgen)
 <br>Diakses tanggal: 2019/02/18
 
-2. [github.com/subnixr/minimal](https://github.com/subnixr/minimal){:target="_blank"}
+2. [github.com/subnixr/minimal](https://github.com/subnixr/minimal)
 <br>Diakses tanggal: 2019/02/18
-

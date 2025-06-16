@@ -1,34 +1,33 @@
 ---
 layout: 'post'
 title: "Mudah Mengupgrade Jekyll 4"
-date: 2019-10-16 07:12
+date: '2019-10-16 07:12'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Jekyll']
+tags: ['Jekyll']
 pin:
 hot:
 contributors: []
 description: "Cerita proses upgrde Jekyll 3.8.6 ke 4.0.0 dari BanditHijo (R)-Chive."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
-
 # Prakata
 
 Jekyll 4.0.0 akhirnya dirilis pada tanggal 20 Agustus 2019.
 
-Mengenai fitur-fitur serta perbaikan apa saja yang dibawa oleh Jekyll 4.0.0 ini, bisa teman-teman baca sendiri yaa pada halaman Jekyll News [di sini](https://jekyllrb.com/news/2019/08/20/jekyll-4-0-0-released/){:target="_blank"}.
+Mengenai fitur-fitur serta perbaikan apa saja yang dibawa oleh Jekyll 4.0.0 ini, bisa teman-teman baca sendiri yaa pada halaman Jekyll News [di sini](https://jekyllrb.com/news/2019/08/20/jekyll-4-0-0-released/).
 
 Langsung saja, saya akan menceritakan proses upgrade BanditHijo.com dari Jekyll 3.8.6 ke 4.0.0.
+
 
 # Proses Upgrade
 
 Saya akan menceritakan runut berdasarkan kronologi yang saya lakukan.
+
 
 ## Upgrade Jekyll
 
@@ -36,54 +35,58 @@ Untuk dapat menggunakan Jekyll 4.0.0, minimal saya harus memiliki Ruby versi 2.4
 
 Cara mengeceknya.
 
-{% shell_user %}
-ruby -v
-{% endshell_user %}
+```
+$ ruby -v
+```
 
 ```
 ruby 2.6.2p47 (2019-03-13 revision 67232) [x86_64-linux]
 ```
 
-{% box_info %}
-<p>Seharusnya saat tulisan ini dibuat, versi Ruby yang paling terbaru adalah,
-<pre>
-ruby 2.6.5p114 (2019-10-01 revision 67812) [x86_64-linux]
-</pre>
-Namun, karena satu dan lain hal, salah satunya untuk kebutuhan deploy di Netlify, saya hanya dapat menggunakan Ruby versi,
-<pre>
-ruby 2.6.2p47 (2019-03-13 revision 67232) [x86_64-linux]
-</pre></p>
-{% endbox_info %}
+> INFO
+> 
+> Seharusnya saat tulisan ini dibuat, versi Ruby yang paling terbaru adalah,
+> 
+> ```
+> $ ruby 2.6.5p114 (2019-10-01 revision 67812) [x86_64-linux]
+> ```
+> 
+> Namun, karena satu dan lain hal, salah satunya untuk kebutuhan deploy di Netlify, saya hanya dapat menggunakan Ruby versi,
+> 
+> ```
+> ruby 2.6.2p47 (2019-03-13 revision 67232) [x86_64-linux]
+> ```
 
 Selanjutnya tinggal upgrade Jekyll gem.
 
-{% shell_user %}
-gem update jekyll
-{% endshell_user %}
+```
+$ gem update jekyll
+```
+
 
 ## Edit Gemfile
 
 Langkah selanjutnya, saya perlu mengedit Gemfile yang ada di dalam root project.
 
-{% shell_user %}
-vim Gemfile
-{% endshell_user %}
+```
+$ vim Gemfile
+```
 
 Hal yang paling utama adalah, mengganti versi dari `jekyll` gem, menjadi versi 4.0.0.
 
-{% highlight_caption Gemfile %}
-{% highlight ruby linenos %}
+```ruby
+!filename: Gemfile
 # ...
 
 gem 'jekyll', '~> 4.0.0'
 
 # ...
-{% endhighlight %}
+```
 
 Selanjutnya, upgrade plugin gem.
 
-{% highlight_caption Gemfile %}
-{% highlight ruby linenos %}
+```ruby
+!filename: Gemfile
 # ...
 # ...
 
@@ -96,7 +99,7 @@ group :jekyll_plugins do
   gem 'jekyll-pwa-plugin',              '~> 2.2'
   gem 'jekyll-last-modified-at',        '~> 1.1.0'
 end
-{% endhighlight %}
+```
 
 Perlu diperhatikan, karena saya menggunakan cukup banyak plugin pendukung, maka untuk dapat mengupgrade versi jekyll pada BanditHijo.com ini sangat bergantung pada dependensi dari plugin-plugin gem tersebut.
 
@@ -106,15 +109,16 @@ Karena masalah dependensi tersebut, menjadi salah satu yang mendasari mengapa sa
 
 Setelah itu, jalankan perintah Bundle Update.
 
-{% shell_user %}
-bundle update
-{% endshell_user %}
+```
+$ bundle update
+```
 
 Dengan begini, proses update versi Jekyll yang ada di project BanditHijo.com telah selesai.
 
+
 # Tambahan
 
-Sebelumnya, saya menggunakan plugin [**jekyll-netlify**](https://github.com/jayvdb/jekyll-netlify/){:target="_blank"}, yang saya manfaatkan untuk mengeset environment `site.environment=production` pada Netlify.
+Sebelumnya, saya menggunakan plugin [**jekyll-netlify**](https://github.com/jayvdb/jekyll-netlify/), yang saya manfaatkan untuk mengeset environment `site.environment=production` pada Netlify.
 
 Karena ada beberapa bagian pada template yang perlu saya pisahkan antara *development* dan *production*, misalnya Google Analytics dan Disqus Comments.
 
@@ -122,7 +126,9 @@ Namun sepertinya gem ini belum mengupgrade gemspec mereka, jadi dengan senang ha
 
 Kemudian, saya mendapati bahwa untuk Jekyll, kita sudah dapat mengeset **Environment variables** pada Netlify. Seingat saya, diawal-awal saya menggunakan Netlify, memang belum bisa, maka dari itu saya menggunakan bantuan gem jekyll-netlify.
 
-{% image https://i.postimg.cc/dVH7Tggr/gambar-01.png | 1 | Netlify Deploy Environment Variables %}
+![Gambar 1](https://i.postimg.cc/dVH7Tggr/gambar-01.png)
+
+Gambar 1. Netlify Deploy Environment Variables
 
 Yay! Dengan begini, mendeploy Jekyll project pada Netlify sudah sangat enak sekali.
 
@@ -133,11 +139,10 @@ Mudah-mudahan dapat bermanfaat buat teman-teman.
 Terima kasih (^_^)v
 
 
-
 # Referensi
 
-1. [Upgrading from 3.x to 4.x](https://jekyllrb.com/docs/upgrading/3-to-4/){:target="_blank"}
+1. [Upgrading from 3.x to 4.x](https://jekyllrb.com/docs/upgrading/3-to-4/)
 <br>Diakses tanggal: 2019/10/16
 
-2. [Jekyll 4.0.0 Released](https://jekyllrb.com/news/2019/08/20/jekyll-4-0-0-released/){:target="_blank"}
+2. [Jekyll 4.0.0 Released](https://jekyllrb.com/news/2019/08/20/jekyll-4-0-0-released/)
 <br>Diakses tanggal: 2019/10/16

@@ -1,26 +1,24 @@
 ---
 layout: 'post'
 title: "Navigation Bar Global Menu Preferences pada Rails"
-date: 2019-12-21 10:23
+date: '2019-12-21 10:23'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Rails']
+tags: ['Rails']
 pin:
 hot:
 contributors: []
 description: "Catatan kali ini mengenai cara membuat navbar yang memiliki menu yang pilihannya hanya terdapat pada controller tertentu, namun menjadi dapat digunakan pada semua halaman."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
-
 # Prerequisite
 
-`Ruby 2.6.3` `Rails 5.2.4` `PostgreSQL 11.5`
+`ruby 2.6.3` `rails 5.2.4` `postgresql 11.5`
+
 
 # Prakata
 
@@ -30,7 +28,9 @@ Tapi, mudah-mudahan judul yang saya berikan saat ini, dapat mewakili isi dari tu
 
 Mungkin saya akan mulai dengan memberikan ilustrasi gambar.
 
-{% image https://i.postimg.cc/jdv4sB52/gambar-01.gif | 1 | Navigation Bar dengan Menu Language dan Currency Preferences %}
+![Gambar 1](https://i.postimg.cc/jdv4sB52/gambar-01.gif)
+
+Gambar 1. Navigation Bar dengan Menu Language dan Currency Preferences
 
 Nah, sudah sedikit terbayang kan.
 
@@ -39,6 +39,7 @@ Jadi, dropdown menu tersebut mempunyai fungsi seperti ini:
 1. Dapat mengganti language dan currency di setiap halaman.
 2. Berfungsi pada user maupun guest
 3. Apabila guest melakukan registrasi, maka language atau currency yang mereka pilih juga akan ikut tersimpan.
+
 
 # Permasalahan
 
@@ -54,14 +55,16 @@ Bagi Junior Rails Developer seperti saya yang masih anak kemarin sore, ini merup
 
 Saking bersemangatnya, rasanya seperti ada tablet Redoxon yang di larutkan di dalam dada. Wkwkwk
 
+
 # Pemecahan Masalah
 
 Sebagai sekenario, saya sudah memiliki tabel `users` dengan field `locales:string` untuk menyimpan data language dan field `rate:string` untuk menyimpan data currency.
 
+
 ## Schema
 
-{% highlight_caption db/schema.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: db/schema.rb
 create_table "users", force: :cascade do |t|
   # ...
   # ...
@@ -72,7 +75,8 @@ create_table "users", force: :cascade do |t|
   # ...
   # ...
 end
-{% endhighlight %}
+```
+
 
 ## Controller
 
@@ -86,28 +90,28 @@ Masukkan kedua controller yang akan kita buat ke dalam direktori `users/` agar n
 
 Kira-kira seperti ini struktur file dan direktorinya.
 
-<pre>
-├─ app/
-│  ├─ assets/
-│  ├─ channels/
-│  ├─ controllers/
-│  │  ├─ admins/
-│  │  ├─ concerns/
-│  │  ├─ <mark>users/</mark>
-│  │  │  ├─ <mark>locales_controller.rb</mark>
-│  │  │  └─ <mark>rates_controller.rb</mark>
-│  │  ├─ admins_controller.rb
-│  │  └─ application_controller.rb
+```
+├─ 📂 app/
+│  ├─ 📁 assets/
+│  ├─ 📁 channels/
+│  ├─ 📂 controllers/
+│  │  ├─ 📁 admins/
+│  │  ├─ 📁 concerns/
+│  │  ├─ 📂 users/ 👈️
+│  │  │  ├─ 📄 locales_controller.rb 👈️
+│  │  │  └─ 📄 rates_controller.rb 👈️
+│  │  ├─ 📄 admins_controller.rb
+│  │  └─ 📄 application_controller.rb
 │  ├─ ...
 │  ...
 ├─ ...
 ...
-</pre>
+```
 
 Berikut ini isi dari file-file tersebut.
 
-{% highlight_caption app/controllers/users/locales_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/users/locales_controller.rb
 class Users::LocalesController < ApplicationController
   before_action :authenticate_user!
 
@@ -125,10 +129,10 @@ class Users::LocalesController < ApplicationController
     params.permit(:locale)
   end
 end
-{% endhighlight %}
+```
 
-{% highlight_caption app/controllers/users/rates_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/users/rates_controller.rb
 class Users::RatesController < ApplicationController
   before_action :authenticate_user!
 
@@ -146,7 +150,7 @@ class Users::RatesController < ApplicationController
     params.permit(:rate)
   end
 end
-{% endhighlight %}
+```
 
 Oh iya, karena catatan kali ini berhubungan dengan bahasa (*locale*), maka saya akan menyinggung sedikit penggunaan **Rails Internationalization (I18n) API** [<sup>2</sup>](#referensi) untuk fungsi language preferences.
 
@@ -154,32 +158,32 @@ Pada dua controller di atas. Saya sudah menggunakan helper i18n pada object `:no
 
 Oke langsung saja, saya buat dulu file `en.yml`.
 
-{% highlight_caption config/locales/en.yml %}
-{% highlight yaml linenos %}
+```yaml
+!filename: config/locales/en.yml
 en:
   navbar:
     rate_updated: "Your currency rate has been updated"
     rate_failed_update: "Failed to update your currency rate"
     locale_updated: "Your default language has been updated"
     locale_failed_update: "Failed to update your default language"
-{% endhighlight %}
+```
 
 Karena saya juga menggunakan bahasa Mandarin, maka saya akan buat juga file `ch.yml`.
 
-{% highlight_caption config/locales/ch.yml %}
-{% highlight yaml linenos %}
+```yaml
+!filename: config/locales/ch.yml
 en:
   navbar:
     rate_updated: "您的货币汇率已更新"
     rate_failed_update: "无法更新您的货币汇率"
     locale_updated: "您的默认语言已更新"
     locale_failed_update: "无法更新您的默认语言"
-{% endhighlight %}
+```
 
 Selanjutnya, saya akan mendifinisikan dimana **translation load path**, **permit available locale**, dan **default locale** yang digunakan di `config/initializers/locale.rb`.
 
-{% highlight_caption config/initializers/locale.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: config/initializers/locale.rb
 # Where the I18n library should search for translation files
 I18n.load_path += Dir[Rails.root.join('lib', 'locale', '*.{rb,yml}')]
 
@@ -188,14 +192,14 @@ I18n.available_locales = ['en', 'ch']
 
 # Set default locale to something other than :en
 I18n.default_locale = 'en'
-{% endhighlight %}
+```
 
 Selanjutnya, saya akan mengkonfigurasi locale pada `application_controller.rb` untuk menangani semua permintaan terhadap locale.
 
 Oh ya, sekalian untuk rate preferences juga.
 
-{% highlight_caption app/controllers/application_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/application_controller.rb
 class ApplicationController < ActionController::Base
   before_action :set_rate
   around_action :set_locale
@@ -215,21 +219,21 @@ class ApplicationController < ActionController::Base
     current_user ? {locale: I18n.locale} : {locale: I18n.locale, rate: @rate}
   end
 end
-{% endhighlight %}
+```
 
 `current_user` adalah object yang disediakan oleh Devise gem untuk user yang sudah loginmelakukan login.
 
 Saya menggunakan helper `default_url_options` untuk membuat url form menjadi lebih mudah dibaca.
 
-<pre class="url">
+```
 http://localhost:3000/en/users
-</pre>
+```
 
 Kalau saya tidak menggunakan helper tersebut, maka url secara default akan seperti ini.
 
-<pre class="url">
+```
 http://localhost:3000/users?locale=en
-</pre>
+```
 
 Nah, pasti akan lebih memilih url form yang atas.
 
@@ -238,8 +242,8 @@ Nah, pasti akan lebih memilih url form yang atas.
 
 Kemudian pada bagian routing, tinggal mengikuti controller.
 
-{% highlight_caption config/routes.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: config/routes.rb
 Rails.application.routes.draw do
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
     # ...
@@ -258,7 +262,7 @@ Rails.application.routes.draw do
     # ...
   end
 end
-{% endhighlight %}
+```
 
 Blok `scope "(:locale)", locale: ...` dimaksudkan untuk membuat url form menjadi seperti yang saya sebutkan di atas.
 
@@ -267,6 +271,7 @@ Sehingga blok-blok routing yang lain, harus dimasukkan ke dalam blok ini agar me
 Karena Admin tidak memerlukan url form yang bagus, maka saya keluarkan saja dari blok tersebut.
 
 Selanjutnya, tinggal membuat view template.
+
 
 ## View
 
@@ -278,39 +283,39 @@ Seperti yang tertulis pada judul, saya akan membuat menu ini pada navigation bar
 
 Struktur file dan direktorinya seperti ini.
 
-<pre>
-├─ app/
-│  ├─ assets/
-│  ├─ channels/
-│  ├─ controllers/
-│  ├─ helpers/
-│  ├─ jobs/
-│  ├─ mailers/
-│  ├─ models/
-│  └─ views/
-│     ├─ admins/
-│     ├─ layouts/
-│     │  ├─ admins/
-│     │  ├─ <mark>users/</mark>
-│     │  │  ├─ <mark>navbar/</mark>
-│     │  │  │  ├─ <mark>_locale.html.erb</mark>
-│     │  │  │  └─ <mark>_rate.html.erb</mark>
-│     │  │  ├─ <mark>_flash_message.html.erb</mark>
-│     │  │  └─ <mark>_navbar.html.erb</mark>
-│     │  ├─ admins.html.erb
-│     │  ├─ admins_devise.html.erb
-│     │  ├─ application.html.erb
-│     │  ├─ mailer.html.erb
-│     │  └─ mailer.text.erb
-│     └─ users/
+```
+├─ 📂 app/
+│  ├─ 📁 assets/
+│  ├─ 📁 channels/
+│  ├─ 📁 controllers/
+│  ├─ 📁 helpers/
+│  ├─ 📁 jobs/
+│  ├─ 📁 mailers/
+│  ├─ 📁 models/
+│  └─ 📂 views/
+│     ├─ 📁 admins/
+│     ├─ 📂 layouts/
+│     │  ├─ 📁 admins/
+│     │  ├─ 📂 users/ 👈️
+│     │  │  ├─ 📂 navbar/ 👈️
+│     │  │  │  ├─ 📄 _locale.html.erb 👈️
+│     │  │  │  └─ 📄 _rate.html.erb 👈️
+│     │  │  ├─ 📄 _flash_message.html.erb 👈️
+│     │  │  └─ 📄 _navbar.html.erb 👈️
+│     │  ├─ 📄 admins.html.erb
+│     │  ├─ 📄 admins_devise.html.erb
+│     │  ├─ 📄 application.html.erb
+│     │  ├─ 📄 mailer.html.erb
+│     │  └─ 📄 mailer.text.erb
+│     └─ 📁 users/
 ├─ ...
 ...
-</pre>
+```
 
 Saya mulai dari membuat render partial dari navigation bar pada `application.html.erb`.
 
-{% highlight_caption app/views/layouts/application.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/layouts/application.html.erb
 <!DOCTYPE html>
 <html>
   <head>
@@ -329,14 +334,14 @@ Saya mulai dari membuat render partial dari navigation bar pada `application.htm
     <%= yield %>
   </body>
 </html>
-{% endhighlight %}
+```
 
 Berikut ini isi dari file `_navbar.html.erb`.
 
 Saya membuat render partial untuk blok language dan currency.
 
-{% highlight_caption app/views/layouts/users/_navbar.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/layouts/users/_navbar.html.erb
 <nav class="navbar navbar-expand-xl">
   <!-- Right Menu -->
   <div class="collapse navbar-collapse" id="navbar4">
@@ -412,10 +417,10 @@ Saya membuat render partial untuk blok language dan currency.
   </div>
   <!-- END Right Menu -->
 </nav>
-{% endhighlight %}
+```
 
-{% highlight_caption app/views/layouts/users/navbar/_locale.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/layouts/users/navbar/_locale.html.erb
 <div class="col-md-auto border-bottom">
   <span>Language</span>
   <!-- Change language for user -->
@@ -454,10 +459,10 @@ Saya membuat render partial untuk blok language dan currency.
     <% end %>
   <% end %>
 </div>
-{% endhighlight %}
+```
 
-{% highlight_caption app/views/layouts/users/navbar/_rate.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/layouts/users/navbar/_rate.html.erb
 <div class="col-md-auto px-2">
   <span><%= t("navbar_menu.currency_title") %></span>
   <!-- Change currency for user -->
@@ -517,20 +522,19 @@ Saya membuat render partial untuk blok language dan currency.
     <% end %>
   <% end %>
 </div>
-{% endhighlight %}
-
+```
 
 Selanjutnya, isi dari file `_flash_message.html.erb`
 
-{% highlight_caption app/views/layouts/users/_flash_message.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/layouts/users/_flash_message.html.erb
 <% flash.each do |name, msg| %>
   <div class="alert bg-<%= name == 'error' ? 'secondary' : 'primary' %> text-center text-white">
     <i class="fa fa-exclamation-triangle mr-1"></i><%= msg %>
     <span class="close-button fa fa-times fa-2x" aria-hidden="true" data-dismiss="alert"></span>
   </div>
 <% end %>
-{% endhighlight %}
+```
 
 Selesai!
 
@@ -547,14 +551,10 @@ Terima kasih.
 (^_^)
 
 
-
-
-
-
 # Referensi
 
-1. [guides.rubyonrails.org/routing.html#controller-namespaces-and-routing](https://guides.rubyonrails.org/routing.html#controller-namespaces-and-routing){:target="_blank"}
+1. [guides.rubyonrails.org/routing.html#controller-namespaces-and-routing](https://guides.rubyonrails.org/routing.html#controller-namespaces-and-routing)
 <br>Diakses tanggal: 2019/12/21
 
-2. [guides.rubyonrails.org/i18n.html](https://guides.rubyonrails.org/i18n.html){:target="_blank"}
+2. [guides.rubyonrails.org/i18n.html](https://guides.rubyonrails.org/i18n.html)
 <br>Diakses tanggal: 2019/12/21

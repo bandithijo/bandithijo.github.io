@@ -1,30 +1,28 @@
 ---
 layout: 'post'
 title: "Membuat Fitur Search dengan Ransack dan EasyAutocomplete pada Rails"
-date: 2019-12-08 17:02
+date: '2019-12-08 17:02'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tips', 'Rails', 'Javascript']
+tags: ['Rails', 'JavaScript', 'Ransack']
 pin:
 hot:
 contributors: []
 description: "Catatan kali ini mengenai cara membuat fitur pencari dengan memanfaatkan Rasack gem dan EasyAutocomplete javascript library pada Ruby on Rails."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
-
 # Prerequisite
 
-`Ruby 2.6.3` `Rails 5.2.3` `PostgreSQL 11.5`
+`ruby 2.6.3` `rails 5.2.3` `postgresql 11.5`
+
 
 # Prakata
 
-Pada artikel sebelumnya, ["Membuat Tab Filter by Category dengan Ransack pada Rails"](/blog/tab-filter-by-category-dengan-ransack-rails){:target="_blank"}, saya sudah pernah membahas mengenai Ransack gem. Namun, bukan dimanfaatkan untuk pencarian, melainkan untuk mengakali dalam membuat fungsi tab yang akan menghasilkan index list yang sudah difilter berdasarkan hasil dari field tertentu. Wkwkwk.
+Pada artikel sebelumnya, ["Membuat Tab Filter by Category dengan Ransack pada Rails"](/blog/tab-filter-by-category-dengan-ransack-rails), saya sudah pernah membahas mengenai Ransack gem. Namun, bukan dimanfaatkan untuk pencarian, melainkan untuk mengakali dalam membuat fungsi tab yang akan menghasilkan index list yang sudah difilter berdasarkan hasil dari field tertentu. Wkwkwk.
 
 Nah, kali ini saya akan menuliskan catatan yang memanfaatkan Ransack gem dengan benar (mungkin). (^_^)
 
@@ -34,40 +32,47 @@ Misal, dalam project yang saya kerjakan adalah field location dan nama dari expe
 
 Kira-kira, hasilnya akan seperti ini.
 
-{% image https://i.postimg.cc/PxTsjZ4z/gambar-01.png | 1 | Autocomplete suggestion pada input field pencarian %}
+![Gambar 1](https://i.postimg.cc/PxTsjZ4z/gambar-01.png)
 
-{% image https://i.postimg.cc/KzfXvzpX/gambar-02.gif | 2 | Ilustrasi bergerak dari autocomplete suggestion pada pencarian %}
+Gambar 1. Autocomplete suggestion pada input field pencarian
 
-Nah, pada implementasi fitur ini, saya menggunakan bantuan JQuery plugin yang bernama [**EasyAutocomplete**](http://easyautocomplete.com/){:target="_blank"}. Saya menggunakan tipe [**categories**](http://easyautocomplete.com/guide#sec-categories){:target="_blank"}.
+![Gambar 2](https://i.postimg.cc/KzfXvzpX/gambar-02.gif)
+
+Gambar 2. Ilustrasi bergerak dari autocomplete suggestion pada pencarian
+
+Nah, pada implementasi fitur ini, saya menggunakan bantuan JQuery plugin yang bernama [**EasyAutocomplete**](http://easyautocomplete.com/). Saya menggunakan tipe [**categories**](http://easyautocomplete.com/guide#sec-categories).
+
 
 # Instalasi
+
 
 ## Ransack
 
 Proses instalasi Ransack gem, sama seperti gem-gem pada umumnya. Gabungkan dengan formasi gem yang teman-teman miliki di `Gemfile`.
 
-{% highlight_caption Gemfile %}
-{% highlight ruby linenos %}
+```ruby
+!filename: Gemfile
 # ...
 # ...
 # ...
 
 gem 'ransack', '~> 2.3'
-{% endhighlight %}
+```
 
 Jangan lupa untuk diinstall.
 
-{% shell_user %}
-bundle install
-{% endshell_user %}
+```
+$ bundle install
+```
 
 Setelah selesai, selanjutnya saya akan memasang EasyAutocomplete JQuery plugin.
+
 
 ## EasyAutocomplete
 
 Proses instalasi ini ada banyak varian, namun untuk catatan kali ini, saya memilih untuk memasang secara manual.
 
-Download langsung dari EasyAutocomplete official website, [di sini](http://easyautocomplete.com/download){:target="_blank"}.
+Download langsung dari EasyAutocomplete official website, [di sini](http://easyautocomplete.com/download).
 
 Versi yang paling up-to-date pada saat catatan ini dibuat adalah EasyAutocomplete 1.3.5.
 
@@ -76,14 +81,14 @@ Hasil dari download ini berupa file terkompresi **EasyAutocomplete-1.3.5.zip**.
 Kalau kita buka, akan seperti ini.
 
 ```
-EasyAutocomplete-1.3.5/
- ├─ easy-autocomplete.css
- ├─ easy-autocomplete.min.css
- ├─ easy-autocomplete.themes.css
- ├─ easy-autocomplete.themes.min.css
- ├─ jquery.easy-autocomplete.js
- ├─ jquery.easy-autocomplete.min.js
- └─ maps/
+📂 EasyAutocomplete-1.3.5/
+ ├─ 📄 easy-autocomplete.css
+ ├─ 📄 easy-autocomplete.min.css
+ ├─ 📄 easy-autocomplete.themes.css
+ ├─ 📄 easy-autocomplete.themes.min.css
+ ├─ 📄 jquery.easy-autocomplete.js
+ ├─ 📄 jquery.easy-autocomplete.min.js
+ └─ 📁 maps/
 ```
 
 Nah, tinggal saya distribusikan ke dalam Rails project. Tapi tentu saja tidak semua.
@@ -93,47 +98,48 @@ Gunakan yang diperlukan saja.
 Saya memilih,
 
 1. `easy-autocomplete.css`
-2. `jquery.easy-autocomplete.js`
+1. `jquery.easy-autocomplete.js`
 
 Kemudian saya distribusikan ke dalam direktori `vendor/` yang ada di Rails project saya.
 
-<pre>
+```
 .
-├─ app/
-├─ bin/
-├─ config/
-├─ db/
-├─ lib/
-├─ log/
-├─ node_modules/
-├─ public/
-├─ storage/
-├─ test/
-├─ tmp/
-├─ vendor/
-│  └─ assets/
-│     ├─ javascripts/
-│     │  └─ <mark>easy-autocomplete.css</mark>
-│     └─ stylesheets/
-│        └─ <mark>jquery.easy-autocomplete.js</mark>
-├─ config.ru
-├─ Gemfile
-├─ Gemfile.lock
-├─ package.json
-├─ Rakefile
-└─ README.md
-</pre>
+├─ 📁 app/
+├─ 📁 bin/
+├─ 📁 config/
+├─ 📁 db/
+├─ 📁 lib/
+├─ 📁 log/
+├─ 📁 node_modules/
+├─ 📁 public/
+├─ 📁 storage/
+├─ 📁 test/
+├─ 📁 tmp/
+├─ 📂 vendor/
+│  └─ 📂 assets/
+│     ├─ 📂 javascripts/
+│     │  └─ 📄 easy-autocomplete.css 👈️
+│     └─ 📂 stylesheets/
+│        └─ 📄 jquery.easy-autocomplete.js 👈️
+├─ 📄 config.ru
+├─ 📄 Gemfile
+├─ 📄 Gemfile.lock
+├─ 📄 package.json
+├─ 📄 Rakefile
+└─ 📄 README.md
+```
 
 Nah, setelah file javascript dan stylesheet tersebut saya distribusikan, saya dapat mulai mengimplementasikan fungsi pencarian dengan menggunakan Ransack.
 
 Saya akan mulai dari controller.
 
+
 # Controller
 
 Karena saya akan menampilkan hasil dari pencarian pada halaman experience index. Maka, saya akan membuat pemanggilan object pada Experiences controller.
 
-{% highlight_caption app/controllers/experiences_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/experiences_controller.rb
 class ExperiencesController < ApplicationController
   def index
     # Default for Ransack
@@ -156,7 +162,7 @@ class ExperiencesController < ApplicationController
     @experience = Experience.friendly.find(params[:id])
   end
 end
-{% endhighlight %}
+```
 
 Terlihat pada action `:index`, saya membuat dua buah instance variable yang bernama `@experience_locations` dan `@experience_names` yang kemudian saya masukkan ke dalam blok `respond_to` untuk ditampilkan dalam format JSON.
 
@@ -168,19 +174,19 @@ Saya akan membuat file `topsearch.js` pada directory `app/assets/javascripts/`.
 
 Dan menambahkannya pada `app/assets/javascripts/application.js`.
 
-{% highlight_caption app/assets/javascripts/application.js %}
-{% highlight javascript linenos %}
+```javascript
+!filename: app/assets/javascripts/application.js
 // ...
 // ...
 // ...
 
 //= require topsearch
-{% endhighlight %}
+```
 
 Kenapa saya namakan `topsearch` karena feature ini diletakkan pada navigation bar yang posisinya ada di bagian atas, dan akan digunakan di setiap halaman pada web aplikasi.
 
-{% highlight_caption app/assets/javascripts/topsearch.jsion /etc/default/grub %}
-{% highlight javascript linenos %}
+```javascript
+!filename: app/assets/javascripts/topsearch.js
 document.addEventListener("turbolinks:load", function() {
   $input = $("[data-behavior='autocomplete']")
 
@@ -211,7 +217,7 @@ document.addEventListener("turbolinks:load", function() {
   }
   $input.easyAutocomplete(options)
 });
-{% endhighlight %}
+```
 
 Sebenarnya, saya tidak benar-benar mengerti tentang Javascript. Tapi saya yakin, teman-teman lebih mengerti daripada saya.
 
@@ -233,6 +239,7 @@ Kemudian tinggal saya panggil dengan `$input.easyAutocomplete(options)`.
 
 Sekarang saya buat form pencariannya di view template.
 
+
 # View
 
 Form pencarian yang saya mau, bukan hanya terletak pada halaman tertentu. Melainkan, pada navigation bar. Yang artinya, dapat saya gunakan pada setiap halaman.
@@ -241,8 +248,8 @@ Nah, karena saya menggunakan Bootstrap Navigation Bar, pasti sudah paham, kalau 
 
 Class pada contoh di bawah, hanya ilustrasi yaa.
 
-{% highlight_caption app/views/layouts/navigation_bar.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/layouts/navigation_bar.html.erb
 ...
 ...
 
@@ -252,7 +259,7 @@ Class pada contoh di bawah, hanya ilustrasi yaa.
 
 ...
 ...
-{% endhighlight %}
+```
 
 Form pencarian di atas, akan dialamatkan ke experiences index, maka dari itu target alamatnya adalah `experiences_path`.
 
@@ -266,8 +273,8 @@ Kemudian, saya membuat file bernama `index.json.jbuilder` pada `app/view/experie
 
 Isinya seperti ini.
 
-{% highlight_caption app/views/experiences/index.json.jbuilder %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/views/experiences/index.json.jbuilder
 json.experience_locations do
   json.array!(@experience_locations) do |experience|
     json.name experience.location
@@ -281,7 +288,7 @@ json.experience_names do
     json.url public_experiences_path(q: { name_cont: experience.name })
   end
 end
-{% endhighlight %}
+```
 
 Dapat dilihat pada blok kode di atas, bahwa saya memanggil instance variable `@experience_locations` dan `@experience_names` yang sudah saya definisikan sebelumnya pada experiences controller.
 
@@ -289,20 +296,22 @@ Dapat dilihat pada blok kode di atas, bahwa saya memanggil instance variable `@e
 
 Apabila kita coba di Browser, dengan url form seperti ini,
 
-<pre class="url">
-http://localhost:3000/experiences.json?q=<mark>location_atau_nama_experience</mark>
-</pre>
+```
+http://localhost:3000/experiences.json?q=location_atau_nama_experience
+```
 
 akan seperti ini hasilnya.
 
-{% image https://i.postimg.cc/9XBGF43f/gambar-03.png | 3 | Hasil pencarian dalam bentuk JSON. %}
+![Gambar 3](https://i.postimg.cc/9XBGF43f/gambar-03.png)
+
+Gambar 3. Hasil pencarian dalam bentuk JSON
 
 Nah, langkah terakhir tinggal membuat blok kode untuk menampilkan hasil pencarian pada `index.html.erb`.
 
 Untuk detailnya dapat teman-teman olah sendiri.
 
-{% highlight_caption app/views/experience/index.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/experience/index.html.erb
 <% @experiences.each do |experience| %>
 
   ...
@@ -314,7 +323,7 @@ Untuk detailnya dapat teman-teman olah sendiri.
   ...
 
 <% end %>
-{% endhighlight %}
+```
 
 Selesai!
 
@@ -322,7 +331,7 @@ Mudah-mudahan bermanfaat.
 
 Mungkin pada kesempatan yang lain, akan saya buatkan demo projectnya dan membuat GitHub reponya.
 
-Atau dapat juga saya menuliskan cara lain dengan memanfaatkan JQuery plugin yang lain, seperti [Select2](https://select2.org/){:target="_blank"}.
+Atau dapat juga saya menuliskan cara lain dengan memanfaatkan JQuery plugin yang lain, seperti [Select2](https://select2.org/).
 
 Sepertinya menarik, kalo lebih banyak pilihan.
 
@@ -333,15 +342,10 @@ Terima kasih.
 (^_^)
 
 
-
-
-
-
-
 # Referensi
 
-1. [easyautocomplete.com/](http://easyautocomplete.com/){:target="_blank"}
+1. [easyautocomplete.com/](http://easyautocomplete.com/)
 <br>Diakses tanggal: 2019/12/07
 
-2. [github.com/activerecord-hackery/ransack](https://github.com/activerecord-hackery/ransack){:target="_blank"}
+2. [github.com/activerecord-hackery/ransack](https://github.com/activerecord-hackery/ransack)
 <br>Diakses tanggal: 2019/12/07

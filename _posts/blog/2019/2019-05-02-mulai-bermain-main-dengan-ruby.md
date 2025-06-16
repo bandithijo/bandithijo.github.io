@@ -1,35 +1,35 @@
 ---
 layout: 'post'
 title: 'Mulai Bermain-main dengan Ruby'
-date: 2019-05-02 00:29
+date: '2019-05-02 00:29'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Ruby', 'Ulasan']
+tags: ['Ruby']
 pin:
 hot:
 contributors: []
 description: "Catatan ini adalah awal pertama kali saya mulai menekuni bahasa pemrograman Ruby."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
-
 # Prakata
 
-Awal saya bertemu dengan bahasa Ruby adalah saat mengikuti "[*Online Course Ruby on Rails*](https://www.idrails.com/training-ruby-on-rails){:target="_blank"}" yang dibawakan oleh mas [Agung Setiawan](http://agung-setiawan.com/){:target="_blank"} pada Agustus 2017.
+Awal saya bertemu dengan bahasa Ruby adalah saat mengikuti "[*Online Course Ruby on Rails*](https://www.idrails.com/training-ruby-on-rails)" yang dibawakan oleh mas [Agung Setiawan](http://agung-setiawan.com/) pada Agustus 2017.
 
-{% image https://i.postimg.cc/854nxFQN/50041702-10217428365690776-8442941827375431680-n.jpg | 1 | Sumber: <a href="https://www.facebook.com/photo.php?fbid=10217428365610774&set=pb.1524018222.-2207520000.1556728701.&type=3&theater" target="_blank">Facebook Agung Setiawan</a> Batch 9 (Posted: 18 Januari 2019) %}
+![Gambar 1](https://i.postimg.cc/854nxFQN/50041702-10217428365690776-8442941827375431680-n.jpg)
+
+Gambar 1. Sumber: [Facebook Agung Setiawan](https://www.facebook.com/photo.php?fbid=10217428365610774&set=pb.1524018222.-2207520000.1556728701.&type=3&theater) Batch 9 (Posted: 18 Januari 2019)
 
 Saat itu saya termasuk dalam **Batch 2**, saat tulisan ini saya buat, course ini sudah memasuki **Batch 10**.
 
-{% box_info %}
-<p>Berdasarkan email dari mas Agung Setiawan yang saya terima pada 3 May 2019, pada pukul 09:28.</p>
-<p><b>"Batch 10 ini adalah batch terakhir sebelum course-nya saya hentikan sampai waktu yang tidak ditentukan."</b></p>
-{% endbox_info %}
+> INFO
+> 
+> Berdasarkan email dari mas Agung Setiawan yang saya terima pada 3 May 2019, pada pukul 09:28.
+> 
+> **"Batch 10 ini adalah batch terakhir sebelum course-nya saya hentikan sampai waktu yang tidak ditentukan."**
 
 Bagi teman-teman yang tertarik bisa langsung menghubungi mas Agung Setiawan pada nomor Handphone yang tertera pada poster di atas.
 
@@ -57,6 +57,7 @@ Sensasi seperti ini bukan yang pertama kali saya dapat. Saya pernah mengalami se
 
 Saya menafsirkan, maksud dari sensasi ini adalah, saya sudah mulai "klik" dan tidak ada lagi rasa takut.
 
+
 # Pembahasan
 
 Maksud dari blog post kali ini adalah, saya ingin menampilkan kebiasaan saya saat mempelajari bahasa pemrograman yang baru.
@@ -75,11 +76,12 @@ Saat mempelajari bahasa Python, saya membuat beberapa Python script untuk menyel
 
 Nah, karena saat ini sedang belajar Ruby, saya akan mulai mengkonfersikan Python script yang saya buat menjadi Ruby script, wkwkwkwk.
 
+
 ## Contoh 1
 
 Di bawah ini adalah contoh Python script sederhana yang saya gunakan untuk membuat multiple user pada sistem operasi GNU/Linux.
 
-{% highlight python linenos %}
+```python
 #!/usr/bin/env python3
 
 import os
@@ -97,11 +99,11 @@ for user in range(1, userDibuat+1):
     print('Username:', username, 'berhasil ditambahkan !')
 
 print('>> SELESAI MAS BROH !')
-{% endhighlight %}
+```
 
 Nah, sekarang versi Ruby nya.
 
-{% highlight ruby linenos %}
+```ruby
 #!/usr/bin/env ruby
 
 puts 'Masukkan jumlah user yang ingin dibuat: '
@@ -118,7 +120,7 @@ userDibuat.times do |user|
 end
 
 puts '>> SELESAI MAS BROH !'
-{% endhighlight %}
+```
 
 Gimana? Mirip bukan?
 
@@ -129,7 +131,6 @@ Secara struktur sintaks, sama-sama mudah untuk dibaca dan ndak bikin ngebong.
 
 {% youtube jr43cIer1Fw %}
 
-<br>
 Nah! Dari kedua contoh di atas. Masih banyak lagi yang akan saya coba konfersikan. Karena setiap Python script memiliki fungsi yang berbeda-beda.
 
 Saya jadi penasaran dan sangat bersemangat untuk melanjutkan proses belajar Ruby ini.
@@ -141,9 +142,8 @@ Terima kasih yang sudah mampir yaa.
 
 # Referensi
 
-1. [ruby-doc.org/core-2.4.0/Kernel.html#method-i-system](https://ruby-doc.org/core-2.4.0/Kernel.html#method-i-system){:target="_blank"}
+1. [ruby-doc.org/core-2.4.0/Kernel.html#method-i-system](https://ruby-doc.org/core-2.4.0/Kernel.html#method-i-system)
 <br>Diakses tanggal: 2019/05/02
 
-2. [ruby-doc.org/core-2.4.0/ARGF.html](https://ruby-doc.org/core-2.4.0/ARGF.html){:target="_blank"}
+2. [ruby-doc.org/core-2.4.0/ARGF.html](https://ruby-doc.org/core-2.4.0/ARGF.html)
 <br>Diakses tanggal: 2019/05/02
-
