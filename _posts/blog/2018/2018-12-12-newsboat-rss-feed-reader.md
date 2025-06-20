@@ -1,28 +1,26 @@
 ---
 layout: 'post'
 title: 'Newsboat, Mendapatkan Info Update Artikel Terbaru Blog/Website'
-date: 2018-12-12 06:44
+date: '2018-12-12 06:44'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Terminal', 'Tools', 'Tips', 'Ulasan']
+tags: ['Newsboat']
 pin:
 hot:
 contributors: []
 description: "Newsboat adalah salah satu RSS feed reader yang sederhana dan berjalan dengan Terminal User Interface. Sangat cocok untuk teman-teman yang lebih sering berinteraksi dengan Terminal."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post-body-img" src="{{ site.lazyload.logo_blank_banner }}" data-echo="" onerror="imgError(this);" alt="banner"> -->
-
 # Prakata
 
 Sejak di rumah sudah dipasang akses internet, saya mulai konstan untuk menjelajah berbagai macam website. Terkadang ada beberapa website menarik yang selalu saya ikuti. Semakin lama, jumlah website yang saya kunjungi semakin banyak, dan sangat melelahkan membukanya satu-persatu. Terkadang saat saya berkunjung, tidak terdapat informasi terbaru (biasanya pada blog/news). Misalkan ada 10 saja website yang ingin kita kunjungi satu per satu, namun sayangnya tidak dari semuanya sudah memiliki artikel baru. Tidak efisien bukan? Bayangkan bila 10, 20, 50 website yang harus kita kunjungi.
 
 Dari masalah di atas, tentu saja saya menggunakan *bookmark* yang ada di *browser* untuk mencatat alamat-alamat website favorit saya. Hanya saja, lama-kelamaan menjadi kegiatan yang tidak efektif karena saya harus membuka dulu website serta me-*load* konten-konten yang ada di dalamnya, namun tidak menemukan update artikel terbaru.
+
 
 # Pemecahan Masalah
 
@@ -52,39 +50,40 @@ Karena sosial media menggunakan ***Timeline***.
 
 Bagaimanapun juga hal ini tidak akan dialami oleh Blog apabila memanfaatkan fitur Rss feed. Blog author dapat mempublish artikel kapanpun, Blog reader pun dapat membaca artikel kapanpun. Tidak akan tergeser atau tergusur oleh artikel Blog yang lain. Sudah memiliki porsi dan tempatnya masing-masing.
 
+
 # Instalasi
 
 Kita membutuhkan aplikasi RSS feed reader untuk mengumpulkan semua daftar RSS dari website yang kita favoritkan.
 
-Aplikasi yang saya rekomendasikan adalah [`newsboat`](https://www.archlinux.org/packages/community/x86_64/newsboat/){:target="_blank"}. Newsboat adalah aplikasi yang berjalan di atas Terminal.
+Aplikasi yang saya rekomendasikan adalah [`newsboat`](https://www.archlinux.org/packages/community/x86_64/newsboat/). Newsboat adalah aplikasi yang berjalan di atas Terminal.
 
 1. Pasang aplikasi `newsboat`.
 
-   {% shell_user %}
-sudo pacman -S newsboat
-{% endshell_user %}
+   ```
+   $ sudo pacman -S newsboat
+   ```
 
    Sesuaikan dengan distribusi sistem operasi GNU/Linux masing-masing.
 
 2. Karena aplikasi ini berjalan di atas Terminal dan belum tersedia *application launcher*-nya, maka kita perlu membuatnya sendiri.
 
-   {% shell_user %}
-vim .local/share/applications/newsboat.desktop
-{% endshell_user %}
+   ```
+   $ vim .local/share/applications/newsboat.desktop
+   ```
 
-   {% highlight_caption $HOME/.local/share/applications/newsboat.desktop %}
-   {% pre_caption %}
-[Desktop Entry]
-Name=newsboat
-Comment=Newsbeuter is an open-source RSS/Atom feed reader for text terminals.
-<mark>Exec=urxvt -e newsboat</mark>
-Icon=liferea
-Terminal=false
-Type=Application
-StartupNotify=true
-Categories=Network;News;
-Keywords=news;feed;aggregator;blog;podcast;
-{% endpre_caption %}
+   ```bash
+   !filename: $HOME/.local/share/applications/newsboat.desktop
+   [Desktop Entry]
+   Name=newsboat
+   Comment=Newsbeuter is an open-source RSS/Atom feed reader for text terminals.
+   <mark>Exec=urxvt -e newsboat</mark>
+   Icon=liferea
+   Terminal=false
+   Type=Application
+   StartupNotify=true
+   Categories=Network;News;
+   Keywords=news;feed;aggregator;blog;podcast;
+   ```
 
    Pada bagian `Exec=`, Terminal emulator `urxvt` mungkin ingin diganti dengan Terminal emulator yang teman-teman gunakan, misal: `gnome-terminal`, `xfce4-terminal`, `termite`, `konsole`, dan lain sebagainya. Perhatikan `-e` tidak berlaku untuk semua Terminal Emulator. Beberapa diantara yang lainnya menggunakan `-x`.
 
@@ -93,24 +92,25 @@ Keywords=news;feed;aggregator;blog;podcast;
 
 Sebelum kita jalankan, sebaiknya kita konfigurasi terlebih dahulu. Karena newsboat tidak dapat menjalankan apa-apa tanpa ada alamat RSS feed di dalamnya. Kalian dapat meletakkan file konfigurasi pada direktori `~/.newsboat/`, namun saya lebih menyukai meletakkan file konfigurasi pada direktori `~/.config/newsboat/`.
 
-{% shell_user %}
-mkdir -p ~/.config/newsboat
-{% endshell_user %}
+```
+$ mkdir -p ~/.config/newsboat
+```
 
 Setelah itu di dalam direktori `~/.config/newsboat/` ini, kita perlu membuat 2 buah file, yaitu `config` dan `urls`.
 
 File `config` diperlukan untuk pengaturan dari newsboat, seperti: *keyboard shortcuts*, *colorscheme*, dll. Sedangkan file `urls` diperlukan untuk menempakatan semua koleksi alamat RSS feed yang kita favoritkan.
 
+
 ## Membuat File Konfigurasi
 
 Kita akan membuat file konfigurasi. Pada tahap ini teman-teman dapat mencontoh konfigurasi yang saya miliki.
 
-{% shell_user %}
-vim ~/.config/newsboat/config
-{% endshell_user %}
+```
+$ vim ~/.config/newsboat/config
+```
 
-{% highlight_caption $HOME/.config/newsboat/config %}
-{% pre_caption %}
+```bash
+!filename: $HOME/.config/newsboat/config
 auto-reload yes
 datetime-format "%Y/%m/%d, %R"
 
@@ -179,7 +179,7 @@ color listfocus_unread   black     yellow bold
 color info               yellow    black
 color article            default   default
 # ----------------------------------------------------------------------------
-{% endpre_caption %}
+```
 
 Selesai.
 
@@ -192,12 +192,12 @@ Silahkan disesuaikan dengan preferensi masing-masing.
 
 Selanjutnya, kita akan membuat file `urls` yang digunakan untuk mendaftar link dari RSS feed favorit kita.
 
-{% shell_user %}
-vim ~/.config/newsboat/urls
-{% endshell_user %}
+```
+$ vim ~/.config/newsboat/urls
+```
 
-{% highlight_caption $HOME/.config/newsboat/urls %}
-{% pre_caption %}
+```bash
+!filename: $HOME/.config/newsboat/urls
 --------------------------------------------------------------------DOTFRIENDS
 https://bandithijo.com/feed/blog.xml "~BanditHijo Blog" "dotfriends"
 https://bandithijo.com/feed/vlog.xml "~BanditHijo Vlog" "dotfriends"
@@ -207,7 +207,7 @@ https://www.archlinux.org/feeds/news/ "Tech News"
 https://kabarlinux.id/feed/ "Tech News"
 https://fedoramagazine.org/feed/ "Tech News"
 http://planet.gnome.org/atom.xml "Tech News"
-{% endpre_caption %}
+```
 
 Selesai.
 
@@ -223,50 +223,49 @@ https://rss-feed-url "tag"
 
 Silahkan diisi sesuai dengan daftar RSS feed masing-masing.
 
-{% box_info %}
-<p>Untuk mengedit URL di dalam Newsboat (pada saat Newsboat sedang terbuka), gunakan <kbd>Shift</kbd>+<kbd>E</kbd>.</p>
-{% endbox_info %}
+> INFO
+> 
+> Untuk mengedit URL di dalam Newsboat (pada saat Newsboat sedang terbuka), gunakan <kbd>Shift</kbd>+<kbd>E</kbd>.
+
 
 # Bagaimana Mendapatkan RSS Feed URL?
 
 Biasanya pemilik blog/website tanpa sadar atau dengan sengaja meletakkan icon/tulisan RSS.
 
-<!-- IMAGE CAPTION -->
-![gambar_4]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/nzRT1sRY/gambar-04.png" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 0 - Icon dari RSS Feed</p>
+![Gambar 1](https://i.postimg.cc/nzRT1sRY/gambar-04.png)
+
+Gambar 1.  Icon dari RSS Feed
 
 Teman-teman bisa mencari dan menelusuri *layout* dari blog/website yang teman-teman incar.
 
 Atau kita dapat menggunakan add-ons untuk mendeteksi dan membaca format RSS feed yang terdapat pada sebuah blog/website. Tinggal cari saja untuk *browser* masing-masing.
 
-
-{% box_info %}
-<p>Bertepatan dengan artikel ini saya tulis, Firefox baru-baru saja mengeluarkan update versi <b>64.0</b>. Dan sangat disayangkan pada update versi ini, Firefox memutuskan untuk <a href="https://support.mozilla.org/en-US/kb/feed-reader-replacements-firefox" target="_blank">menghentikan dukungan terhadap fitur <b>web feeds</b> dan <b>Live Bookmarks</b></a>.</p>
-<p>Fitur ini yang biasanya saya manfaatkan untuk menangkap RSS feed yang terdapat pada sebuah blog/website.</p>
-{% endbox_info %}
+> INFO
+> 
+> Bertepatan dengan artikel ini saya tulis, Firefox baru-baru saja mengeluarkan update versi **64.0**. Dan sangat disayangkan pada update versi ini, Firefox memutuskan untuk [menghentikan dukungan terhadap fitur **web feeds** dan **Live Bookmarks**](https://support.mozilla.org/en-US/kb/feed-reader-replacements-firefox).
+> 
+> Fitur ini yang biasanya saya manfaatkan untuk menangkap RSS feed yang terdapat pada sebuah blog/website.
 
 Untuk mengatasi hal tersebut di atas, saya biasa menggunakan add-ons juga apabila menggunakan Google Chrome. Maka tidak ada jalan lain selain menambahkan add-ons pada Firefox.
 
-Firefox add-ons yang saya pergunakan adalah [**Easy to RSS**](https://addons.mozilla.org/en-US/firefox/addon/easy-to-rss){:target="_blank"}. Add-ons ini juga saya pergunakan di Google Chrome. Fungsinya sederhana, untuk mengambil RSS feed dari website. Tanpa Web Interface.
+Firefox add-ons yang saya pergunakan adalah [**Easy to RSS**](https://addons.mozilla.org/en-US/firefox/addon/easy-to-rss). Add-ons ini juga saya pergunakan di Google Chrome. Fungsinya sederhana, untuk mengambil RSS feed dari website. Tanpa Web Interface.
 
 Namun, cara di atas tidak sepenuhnya berhasil. Hanya berhasil terhadap blog/website yang meletakkan RSS feed pada head markup html. Sebagai contoh, add-ons Easy to RSS tidak dapat mendeteksi RSS feed milik saya, karena saya letakkan di bagian footer.
 
 
 # Tampilan Newsboat
 
-<!-- IMAGE CAPTION -->
-![gambar_1]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/Vs3fvJ7t/gambar-01.png" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 1 - Tampilan Depan, daftar RSS feed</p>
+![Gambar 2](https://i.postimg.cc/Vs3fvJ7t/gambar-01.png)
 
-<br>
-<!-- IMAGE CAPTION -->
-![gambar_2]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/fW3WMcvZ/gambar-02.png" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 2 - Daftar Artikel dari Salah Satu Blog</p>
+Gambar 2. Tampilan Depan, daftar RSS feed
 
-<br>
-<!-- IMAGE CAPTION -->
-![gambar_3]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/DyL2X7DM/gambar-03.png" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 3 - Tampilan Isi</p>
+![Gambar 3](https://i.postimg.cc/fW3WMcvZ/gambar-02.png)
+
+Gambar 3. Daftar Artikel dari Salah Satu Blog
+
+![Gambar 4](https://i.postimg.cc/DyL2X7DM/gambar-03.png)
+
+Gambar 4. Tampilan Isi
 
 
 # Lokasi Cache Data dari Newsboat
@@ -280,6 +279,7 @@ Ada satu lagi lokasi yang perlu teman-teman ketahui. Yaitu, lokasi di mana data-
 
 Saya sudah pernah menggunakan RSS feed reader tipe web apps, yaitu **Commafeed**. Sudah juga menggunakan GTK+ apps yaitu **Liferea**. Sehingga saat menemukan newsboat, saya suda mengetahui apa-apa kebutuhan yang saya perlukan dari sebuah RSS feed reader.
 
+
 # Pesan Penulis
 
 Saya melihat masih banyak potensi yang dapat dimanfaatkan dari tools RSS feed reader ini. Namun, saya hanya menggunakan sebatas untuk mengetahui update terbaru artikel dari website favorit saya.
@@ -289,12 +289,10 @@ Dokumentasi lebih lengkap dapat dilihat pada `man newsboat`. Coba periksa, banya
 Oh iya, apabila kamu punya blog juga, saya sangat mengharapkan untuk tetap mempertahankan RSS feed urlnya. Saya yakin, pasti ada yang memanfaatkan RSS feed tersebut. Seperti saya contohnya. (^_^)
 
 
-
 # Referensi
 
-1. [en.wikipedia.org/wiki/RSS](https://en.wikipedia.org/wiki/RSS){:target="_blank"}
+1. [en.wikipedia.org/wiki/RSS](https://en.wikipedia.org/wiki/RSS)
 <br>Diakses tanggal: 2018/12/12
 
-2. [wiki.archlinux.org/index.php/Newsboat](https://wiki.archlinux.org/index.php/Newsboat){:target="_blank"}
+2. [wiki.archlinux.org/index.php/Newsboat](https://wiki.archlinux.org/index.php/Newsboat)
 <br>Diakses tanggal: 2018/12/12
-

@@ -1,20 +1,17 @@
 ---
 layout: 'post'
 title: 'Mengkonfigurasi Irssi, IRC Client Berbasis Terminal'
-date: 2018-12-14 20:50
+date: '2018-12-14 20:50'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Terminal', 'Tools', 'Tips', 'Ulasan']
+tags: ['IRSSI', 'IRC']
 pin:
 description: "Jaman sekarang sudah sangat jarang orang menggunakan IRC. Namun bukan berarti IRC sudah mati. Masih ada beberapa user yang masih menggunakan IRC. Bahkan beberapa distribusi yang besar, memiliki official channel yang terpelihara, seperti #archlinux. Untuk dapat masuk ke dalam layanan IRC, kita memerlukan IRC client. Saya ingin yang simple, salah satunya adalah Irssi."
 ---
-
-<!-- BANNER OF THE POST -->
-<!-- <img class="post-body-img" src="{{ site.lazyload.logo_blank_banner }}" data-echo="#" onerror="imgError(this);" alt="banner"> -->
 
 # Prakata
 
@@ -24,14 +21,13 @@ Yup! terdengar jadul yaa?
 
 IRC client yang saya pergunakan adalah **Irssi**.
 
-<br>
 **Mengapa memilih Irssi sebagai IRC client?**
 
 Hal pertama adalah, Irssi berjalan di atas Terminal yang dibuat dengan library ncurses sehingga dapat menampilkan "GUI-like" di dalam Terminal.
 
-<!-- IMAGE CAPTION -->
-![gambar_1]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/vBxPZQ8Y/gambar-01.png" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 1 - Antarmuka dari Irssi</p>
+![Gambar 1](https://i.postimg.cc/vBxPZQ8Y/gambar-01.png)
+
+Gambar 1. Antarmuka dari Irssi
 
 Hal kedua adalah, Irssi bersifat modular. Saya kurang begitu memahami maksud dari modular ini, namun apabila tidak salah menafsirkan, modular disini berarti kita bebas mencabut-pasang fitur-fitur yang kita ingin pergunakan. Enak sekali bukan. Fitur-fitur ini dapat kita tambahkan dengan menggunakan *scripts* yang ditulis dengan bahasa Perl.
 
@@ -39,32 +35,35 @@ Sejujurnya baru beberapa bulan ini saya menggunakan Irssi. Sebelumnya, saya semp
 
 Oke, cukup dengan curhatnya. Kita langsung bahas konfigurasi Irssi.
 
+
 # Konfigurasi Irssi
 
 Mengkonfigurasi Irssi sebenarnya terbilang mudah apabila kita sudah pernah melakukannya. Untuk yang pertama kali mengkonfigurasi Irssi memang sedikit membuat frustasi. Hehehe.
 
 Saya sudah menuliskan cara-cara yang saya kumpulkan agar Irssi dapat saya pergunakan dengan nyaman. Sejujurnya mengumpulkan semua materi konfigurasi agar Irssi dapat digunakan sesuai kemauan kita, memang melelahkan. Namun, jangan khawatir, kalian dapat mengikuti dan memodifikasi konfigurasi yang sudah saya tuliskan di bawah.
 
+
 ## Instalasi
 
 Pasang paket Irssi pada distro masing-masing.
 
-{% shell_user %}
-sudo pacman -S irssi
-{% endshell_user %}
+```
+$ sudo pacman -S irssi
+```
 
 Untuk *scripts*, kita akan bahas beberapa *scripts* yang saya pergunakan pada pembahasan di bawah.
+
 
 ## Membuat App Launcher
 
 Karena Irssi adalah program untuk dijalankan di atas Terminal, biasanya belum disertakan app launchernya. Kita perlu membuatnya sendiri.
 
-{% shell_user %}
-vim ~/.local/share/applications/irssi.desktop
-{% endshell_user %}
+```
+$ vim ~/.local/share/applications/irssi.desktop
+```
 
-{% highlight_caption $HOME/.local/share/applications/irssi.desktop %}
-{% highlight lang linenos %}
+```bash
+!filename: $HOME/.local/share/applications/irssi.desktop
 [Desktop Entry]
 Name=irssi
 Comment=Chat with other people online
@@ -76,24 +75,25 @@ Type=Application
 Encoding=UTF-8
 Categories=Network;IRCClient;
 NoDisplay=false
-{% endhighlight %}
+```
 
 Pada bagian `Exec=` bagian `termite` dapat disesuaikan dengan Terminal Emulator yang teman-teman pergunakan. Perhatikan juga option `-e`. Beberpa Terminal memiliki option yang berbeda. Coba jalankan terlebih dahulu pada Terminal.
 
 Sekarang coba jalankan. Kalian akan bertemu dengan tampilan awal dari Irssi.
 
-<!-- IMAGE CAPTION -->
-![gambar_2]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/h4VsVszD/gambar-02.png" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 2 - Antarmuka Default dari Irssi</p>
+![Gambar 2](https://i.postimg.cc/h4VsVszD/gambar-02.png)
+
+Gambar 2. Antarmuka Default dari Irssi
 
 
 ## Konfigurasi Dasar
 
 Seperti kebanyakan aplikasi berbasil ncurses, kalau mau enak digunakan kita perlu melakukan konfigurasi terlebih dahulu sesuai pereserensi kita. Secara *default* Irssi akan membuat konfig directori di *home* kita `~/.irssi/`. Di dalam direktori ini terdapat file config.
 
-{% box_perhatian %}
-<p>Selama proses memasukkan perintah-perintah konfigurasi ke dalam Irssi di bawah. Sebaiknya jangan dulu membuka file <code>~/.irssi/config</code>. Karena perintah-perintah di bawah akan kita simpan ke dalam file <code>config</code> dengan perintah <code>/save</code>.</p>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> Selama proses memasukkan perintah-perintah konfigurasi ke dalam Irssi di bawah. Sebaiknya jangan dulu membuka file <code>~/.irssi/config</code>. Karena perintah-perintah di bawah akan kita simpan ke dalam file <code>config</code> dengan perintah <code>/save</code>.
+
 
 ### Registrasi Username
 
@@ -119,29 +119,30 @@ Nanti akan terbuat window baru pada window nomor 2, coba periksa dengan berpinda
 
 Perhatikan output-output yang diberikan. Apabila menampilkan seperti di bawah, maka proses registrasi terlah berhasil.
 
-<pre>
+```
 00.00 bandithijo REGISTER mukaijo bandithijo@bandithijo.com
 00.00 NickServ NickServ@services. An email containing nickname activation instructions has been sent to bandithijo@bandithijo.com.
 00.00 NickServ NickServ@services. If you do not complete registration within one day, your nickname will expire.
-00.00 NickServ NickServ@services. <mark>bandithijo is now registered to bandithijo@bandithijo.com, with the password mukaijo.</mark>
+00.00 NickServ NickServ@services. bandithijo is now registered to bandithijo@bandithijo.com, with the password mukaijo.
 00.00 NickServ NickServ@services.
 00.00 NickServ NickServ@services. For frequently-asked questions about the network, please see the
 00.00 NickServ NickServ@services. Knowledge Base page (http://freenode.net/kb/all). Should you need more
 00.00 NickServ NickServ@services. help you can /join #freenode to find network staff.
-</pre>
+```
 
 Periksa kotak masuk email kita, akan terdapat email verifikasi dari Freenode (noreply.support@freenode.net)
 
-<pre>
+```
 bandithijo,
 
 In order to complete your account registration, you must type the following
 command on IRC:
 
-    <mark>/msg NickServ VERIFY REGISTER bandithijo xfvqrfxpjxrj</mark>
+    /msg NickServ VERIFY REGISTER bandithijo xfvqrfxpjxrj
 
 Thank you for registering your account on the freenode IRC network!
-</pre>
+
+```
 
 Jalankan perintah yang diberikan di Irssi.
 
@@ -159,6 +160,7 @@ Selanjutnya, identifikasi username kamu.
 00.00 bandithijo IDENTIFY bandithijo mukaijo
 00.00 NickServ NickServ@services. You are already logged in as bandithijo.
 ```
+
 
 ### Memilih Layer Autentikasi Koneksi
 
@@ -186,6 +188,7 @@ Keluar dengan `/quit`, lalu masuk kembali `/connect chat.freenode.net`.
 
 Apabila berhasil, akan terdapat huruf kapital "**Z**" mode. Akan ada output baris baru yang kira-kira berisi `Mode change [+Zi] for user bandithijo`.
 
+
 ### Membuat Sertifikat Klien
 
 Kita dapat menggunakan autentikasi menggunakan **SSL** *certificates* sebagai alternatif plaintext password. Sehingga memungkinkan kita untuk login seolah-olah tanpa memasukkan password.
@@ -194,22 +197,23 @@ Untuk membuat sertifikat tanpa password, ikuti beberapa baris perintah di bawah 
 
 Kode *Country Name* isikan saja `ID`, apabila diminta untuk memasukkan detail seperti *State* atau *Common Name*, kalian dapat isi sesukanya.
 
-{% shell_user %}
-openssl req -newkey rsa:2048 -x509 -keyout irssi.key -out irssi.crt -nodes
-cat irssi.crt irssi.key > ~/.irssi/irssi.pem
-chmod 600 ~/.irssi/irssi.pem
-rm irssi.crt irssi.key
-{% endshell_user %}
+```
+$ openssl req -newkey rsa:2048 -x509 -keyout irssi.key -out irssi.crt -nodes
+$ cat irssi.crt irssi.key > ~/.irssi/irssi.pem
+$ chmod 600 ~/.irssi/irssi.pem
+$ rm irssi.crt irssi.key
+```
 
 Selanjutnya, menampilkan fingerprint dari `irssi.pem`.
 
-{% shell_user %}
-openssl x509 -sha1 -fingerprint -noout -in ~/.irssi/irssi.pem | sed -e 's/^.*=//;s/://g;y/ABCDEF/abcdef/'
-{% endshell_user %}
+```
+$ openssl x509 -sha1 -fingerprint -noout -in ~/.irssi/irssi.pem | sed -e 's/^.*=//;s/://g;y/ABCDEF/abcdef/'
+```
 
 ```
 386b6c1eb8efb3a3617d1ffe7e6c0489e71a63be
 ```
+
 Copy fingerprint di atas.
 
 Selanjutnya, buka Irssi dan kita akan *disconnect* lalu memasukkan SSL sertifikasi pada konfigurasi untuk terhubung ke server Freenode.
@@ -238,36 +242,42 @@ Selanjutnya jangan lupa di `/save`.
 
 Apabila teman-teman mengecek isi dari `~/.irssi/config`. Akan terdapat baris seperti di bawah.
 
-<pre>
+```
 ...
   {
     address = "chat.freenode.net";
     chatnet = "Freenode";
     port = "6697";
-    </mark>use_tls = "yes";</mark>
-    <mark>tls_cert = "~/.irssi/irssi.pem";</mark>
-    <mark>tls_verify = "yes";</mark>
-    <mark>tls_capath = "/etc/ssl/certs";</mark>
+    use_tls = "yes";
+    tls_cert = "~/.irssi/irssi.pem";
+    tls_verify = "yes";
+    tls_capath = "/etc/ssl/certs";
     autoconnect = "yes";
   },
 ...
-</pre>
+```
 
 Maka proses dari konfigurasi utama telah selesai.
 
-{% box_info %}
-<p>Apabila suatu hari, saat kalian login Irssi dan mengalami
-<pre>Irssi: warning The client certificate is expired</pre>
-Cukup mengulangi langkah pembuatan sertifikat klien di atas.</p>
-<p><b>2019/01/29</b>, Saya baru mengalami masalah ini, dan berhasil mengatasinya dengan mengulangi langkah pembuatan sertifikat klien di atas.</p>
-{% endbox_info %}
+> INFO
+> 
+> Apabila suatu hari, saat kalian login Irssi dan mengalami,
+> 
+> ```
+> Irssi: warning The client certificate is expired
+> ```
+> 
+> Cukup mengulangi langkah pembuatan sertifikat klien di atas.
+> 
+> 2019/01/29, Saya baru mengalami masalah ini, dan berhasil mengatasinya dengan mengulangi langkah pembuatan sertifikat klien di atas.
 
 
 ## Konfigurasi Tambahan
 
+
 ### Tema
 
-Untuk tema (*Theme*), teman-teman dapat melihat koleksi dari tema yang disediakan pada *official website* Irssi, [di sini](https://irssi-import.github.io/themes/){:target="_blank"}.
+Untuk tema (*Theme*), teman-teman dapat melihat koleksi dari tema yang disediakan pada *official website* Irssi, [di sini](https://irssi-import.github.io/themes/).
 
 Cara instalasinya sangat mudah, langsung saja download dan letakkan pada direktori `~/.irssi/`.
 
@@ -279,21 +289,22 @@ Selanjutnya untuk mengaktifkannya, dengan perintah.
 
 Perlu diperhatikan, terkadang tampilan yang ada pada *screenshot* tidak sesuai dengan hasil yang kita harapakan, hal tersebut dikarenakan banyak faktor yang tidak disertakan dalam bagian dari tema, seperti: *base color* dan *background color* dari Terminal, *font face*, *script* tambahan, dll.
 
-Saya menggunakan tema hasil modifikasi dari [`solarized.theme`](https://github.com/huyz/irssi-colors-solarized){:target="_blank"} dari **Huy Z**.
+Saya menggunakan tema hasil modifikasi dari [`solarized.theme`](https://github.com/huyz/irssi-colors-solarized) dari **Huy Z**.
 
-<!-- IMAGE CAPTION -->
-![gambar_3]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/Dzh0YRqZ/gambar-03.png" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 3 - Theme Solarized dari Huy Z</p>
+![Gambar 3](https://i.postimg.cc/Dzh0YRqZ/gambar-03.png)
+
+Gambar 3. Theme Solarized dari Huy Z
 
 Karena terdapat beberapa bagian yang kurang sesuai dengan selera saya, seperti indentasi pada username dan beberapa color, saya memodifikasi sesuai dengan preferensi saya.
 
-<!-- IMAGE CAPTION -->
-![gambar_4]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/P5s1T3WG/gambar-04.png" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 4 - Theme Solarized setelah dimodifikasi</p>
+![Gambar 4](https://i.postimg.cc/P5s1T3WG/gambar-04.png)
 
-Tema ini dapat diunduh [di sini](https://raw.githubusercontent.com/bandithijo/dotfiles/master/.irssi/solarized-bandit.theme){:target="_blank"}.
+Gambar 4. Theme Solarized setelah dimodifikasi
+
+Tema ini dapat diunduh [di sini](https://raw.githubusercontent.com/bandithijo/dotfiles/master/.irssi/solarized-bandit.theme).
 
 Jangan lupa disimpan, `/save`.
+
 
 ### Autojoin Channel
 
@@ -314,10 +325,10 @@ $ vim ~/.irssi/config
 
 Cari bagian seperti di bawah.
 
-<pre>
+```
 channels = (
   { name = "#lobby"; chatnet = "EsperNet"; autojoin = "No"; },
-  <mark>{ name = "#freenode"; chatnet = "Freenode"; autojoin = "yes"; },</mark>
+  { name = "#freenode"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#irssi"; chatnet = "Freenode"; autojoin = "No"; },
   { name = "#gamesurge"; chatnet = "GameSurge"; autojoin = "No"; },
   { name = "#irssi"; chatnet = "IRCNet"; autojoin = "No"; },
@@ -325,13 +336,14 @@ channels = (
   { name = "#netfuze"; chatnet = "NetFuze"; autojoin = "No"; },
   { name = "#oftc"; chatnet = "OFTC"; autojoin = "No"; },
   { name = "silc"; chatnet = "SILC"; autojoin = "No"; },
-  <mark>{ name = "#archlinux"; chatnet = "Freenode"; autojoin = "yes"; }</mark>
+  { name = "#archlinux"; chatnet = "Freenode"; autojoin = "yes"; }
 );
-</pre>
+```
 
 Perhatikan, terdapat #freenode pada urutan kedua dan #archlinux pada urutan terakhir yang memiliki nilai `autojoin= "yes"`. Teman-teman dapat merubah urutan-urutanya, sesuaikan dengan preferensi masing-masing.
 
 Jangan lupa disimpan, `/save`.
+
 
 ### Notifikasi
 
@@ -340,6 +352,7 @@ Secara *default* Irssi belum mengkonfigurasi notifikasi, baik visual maupun suar
 **Apa kegunaan notifikasi?**
 
 Di awal-awal saya menggunakan Irssi, saya belum menambahakn notifikasi. Sampai pada akhirnya saya mulai berinteraksi dengan orang-orang di channel. Saya mulai kesulitan mengetahui, apakah percakapan saya dibalas atau tidak? Akan lebih mudah apabila kita mendapatkan notifikasi saat user lain menyertakan nama kita (*mention*) pada pesan yang ia kirim.
+
 
 #### Notifikasi Visual
 
@@ -352,33 +365,33 @@ Kita akan menggunakan [`irssi-libnotify`](https://github.com/stickster/irssi-lib
 
    Sesuaikan dengan distribusi sistem operasi masing-masing. (pada Arch linux, pygobject bernama paket `pygobject-devel` untuk Python 3 dan `pygobject2-devel` untuk Pyhton 2).
 
-   {% shell_user %}
-sudo pacman -S libnotify perl-html-parser pygobject-devel pygobject2-devel
-{% endshell_user %}
+   ```
+   $ sudo pacman -S libnotify perl-html-parser pygobject-devel pygobject2-devel
+   ```
 
 2. Konfigurasi untuk file *script* `notify.pl`.
 
-   {% shell_user %}
-mkdir -p ~/.irssi/scripts/autorun
-cd ~/.irssi/scripts
-wget https://raw.githubusercontent.com/stickster/irssi-libnotify/master/notify.pl
-cd autorun
-ln -s ../notify.pl
-{% endshell_user %}
+   ```
+   $ mkdir -p ~/.irssi/scripts/autorun
+   $ cd ~/.irssi/scripts
+   $ wget https://raw.githubusercontent.com/stickster/irssi-libnotify/master/notify.pl
+   $ cd autorun
+   $ ln -s ../notify.pl
+   ```
 
 3. Lakukan sedikit modifikasi pada *path* yang mengarah ke `~/bin/irssi-notifier.sh`.
 
-   {% shell_user %}
-vim notify.pl
-{% endshell_user %}
+   ```
+   $ vim notify.pl
+   ```
 
    Cari pada sekitar baris 41 bagian `sub notify_linux {` dan sekitar baris 73 bagian `sub notify {` terdapat baris yang berisi *path* dari file `irssi-notifier.sh` yang tidak sesuai dengan konfigurasi yang akan kita sesuaikan.
 
-   <pre>
+   ```
    sub notify_linux {
        ...
        ...
-           <mark>" ~/bin/irssi-notifier.sh" .</mark>
+           " ~/bin/irssi-notifier.sh" .
            ...
        ...
    }
@@ -388,19 +401,19 @@ vim notify.pl
    sub notify {
        ...
        ...
-           <mark>" ~/bin/irssi-notifier.sh" .</mark>
+           " ~/bin/irssi-notifier.sh" .
            ...
        ...
    }
-   </pre>
+   ```
 
    Ganti menjadi.
 
-   <pre>
+   ```
    sub notify_linux {
        ...
        ...
-           <mark>" /usr/bin/irssi-notifier.sh" .</mark>
+           " /usr/bin/irssi-notifier.sh" .
            ...
        ...
    }
@@ -410,27 +423,27 @@ vim notify.pl
    sub notify {
        ...
        ...
-           <mark>" /usr/bin/irssi-notifier.sh" .</mark>
+           " /usr/bin/irssi-notifier.sh" .
            ...
        ...
    }
-   </pre>
+   ```
 
    Simpan.
 
 4. Download file `notify-listener.py` dan `irssi-notifies.sh`.
 
-   {% shell_user %}
-cd /usr/bin
-sudo wget https://raw.githubusercontent.com/stickster/irssi-libnotify/master/notify-listener.py
-sudo wget https://raw.githubusercontent.com/stickster/irssi-libnotify/master/irssi-notifier.sh
-{% endshell_user %}
+   ```
+   $ cd /usr/bin
+   $ sudo wget https://raw.githubusercontent.com/stickster/irssi-libnotify/master/notify-listener.py
+   $ sudo wget https://raw.githubusercontent.com/stickster/irssi-libnotify/master/irssi-notifier.sh
+   ```
 
 5. Modifikasi pada file `notify-listener.py`, untuk membuat penyesuaian karena Python yang digunakan masih versi 2. Sedangkan Arch sudah menggunakan Python versi 3 secara *default*.
 
-   {% shell_user %}
-sudo vim /usr/bin/notify-listener.py
-{% endshell_user %}
+   ```
+   $ sudo vim /usr/bin/notify-listener.py
+   ```
 
    Ganti *shebang*.
 
@@ -447,17 +460,19 @@ sudo vim /usr/bin/notify-listener.py
 6. Kita perlu menjalankan `notify-listener.py` saat sistem startup (memasuki desktop).
 
    Untuk i3wm sangat mudah, cukup menambahkan perintah di bawah pada file config i3wm.
+
    ```
    exec_always --no-startup-id notify-listener.py
    ```
+
    Untuk desktop manager yang lain. Bisa mengkonfigurasi pada bagian **autorun**. Biasanya sih terdapat pada direktori `~/.config/autostart/` atau `~/.config/autostart-scripts/`. Saya kurang paham. Bisa teman-teman cari sendiri yaa. Mohon maaf karena sudah lama tidak menggunkan desktop environment.
 
-<br>
 Tahap notifikasi visual telah Selesai. Coba jalankan Irssi dan lakukan pengujian. Bisa coba ngobrol di channel, atau chat dengan saya.
 
 ```
 /msg bandithijo permisi mas bandit. testing NOTIFIKASI VISUAL.
 ```
+
 
 #### Notifikasi Suara
 
@@ -465,29 +480,29 @@ Selanjutnya kita juga memerlukan notifikais dalam bentuk suara. Biar tidak sepi 
 
 1. Script ini tidak memerlukan dependensi tambahan.
 
-   {% shell_user %}
-cd ~/.irssi/scripts
-wget https://scripts.irssi.org/scripts/beep_beep.pl
-wget https://github.com/bandithijo/dotfiles/raw/master/.irssi/scripts/gnome_beep.opus
-cd autorun
-ln -s ../beep_beep.pl
-{% endshell_user %}
+   ```
+   $ cd ~/.irssi/scripts
+   $ wget https://scripts.irssi.org/scripts/beep_beep.pl
+   $ wget https://github.com/bandithijo/dotfiles/raw/master/.irssi/scripts/gnome_beep.opus
+   $ cd autorun
+   $ ln -s ../beep_beep.pl
+   ```
 
 2. Modifikasi sedikit pada bagian perintah `play`, sekitar baris 51.
 
-   {% shell_user %}
-vim beep_beep.pl
-{% endshell_user %}
+   ```
+   $ vim beep_beep.pl
+   ```
 
-   <pre>
-   Irssi::settings_add_str("lookandfeel", "beep_cmd", "<mark>play ~/.irssi/scripts/beep_beep.wav</mark> > /dev/null &");
-   </pre>
+   ```
+   Irssi::settings_add_str("lookandfeel", "beep_cmd", "play ~/.irssi/scripts/beep_beep.wav > /dev/null &");
+   ```
 
    Ganti menjadi.
 
-   <pre>
-   Irssi::settings_add_str("lookandfeel", "beep_cmd", "<mark>play -q ~/.irssi/scripts/gnome_beep.opus</mark> > /dev/null &");
-   </pre>
+   ```
+   Irssi::settings_add_str("lookandfeel", "beep_cmd", "play -q ~/.irssi/scripts/gnome_beep.opus > /dev/null &");
+   ```
 
 3. Selanjutnya tinggal memasukkan nilai dari `beep_msg_level` pada Irssi.
 
@@ -497,19 +512,19 @@ vim beep_beep.pl
    /set beep_msg_level MSGS DCC DCCMSGS HILIGHT NOTICES
    ```
 
-<br>
 Tahap notifikasi suara telah Selesai. Coba jalankan Irssi dan lakukan pengujian. Bisa coba ngobrol di channel, atau chat dengan saya.
 
 ```
 /msg bandithijo permisi mas bandit. testing NOTIFIKASI SUARA.
 ```
 
-<br>
 Konfigurasi tambahan segini dulu aja yaa. Untuk kegunaan *script* yang lain dapat dicoba sendiri.
 
-Repositori untuk *scripts* Irssi dapat dilihat [di sini](https://scripts.irssi.org/){:target="_blank"}.
+Repositori untuk *scripts* Irssi dapat dilihat [di sini](https://scripts.irssi.org/).
+
 
 # Beberapa Pemecahan Masalah
+
 
 ## Error Closing Link
 
@@ -518,13 +533,15 @@ Selama menggunakan Irssi, saya mengalami hal ini beberapa kali.
 ```
 ERROR Closing Link: 36.80.031.08 (SASL access only)
 ```
+
 Awalnya saya langsung mengutak atik file konfigurasi, googling sana sini untuk mencari kasus yang sama dengan yang saya alami. Sampai akhirnya putus asa dan mencoba jalan terakhir. <mark><b>Turn OFF then Turn ON your Router</b></mark> adalah jawaban dari permasalahan ini.
 
 Kecurigaan saya adalah, Freenode memblokir alamat IP publik saya. Karena saya selalu menyalan Irssi dan terhubung secara konstan dengan Freenode. Sepanjang hari, sepanjang minggu. Mungkin ada limitasi trafik keluar dan masuk dari sebuah IP. Mungkin...Hanya asumsi.
 
-<!-- IMAGE CAPTION -->
-![gambar_5]({{ site.lazyload.logo_blank }}){:data-echo="https://i.postimg.cc/JzqMX79N/gambar-05.png" onerror="imgError(this);"}{:class="myImg"}
-<p class="img-caption">Gambar 5 - Error Closing Link</p>
+![Gambar 5](https://i.postimg.cc/JzqMX79N/gambar-05.png)
+
+Gambar 5.  Error Closing Link
+
 
 # Pesan Penulis
 
@@ -532,7 +549,8 @@ Menggunakan IRC di jaman modern seperti saat ini tidak juga tidak berarti apa-ap
 
 Saya sendiri masih suka nongkrong di channel #archlinux dan #freenode. Sempat juga pernah bertanya di channel #ranger mengenai permasalahan tag direktori yang tidak sengaja saya aktifkan.
 
-Apabila dirasa-rasa Irssi terlalu sulit untuk dikonfigurasi, ada satu lagi alternatif IRC client di Terminal, yaitu [**WeeChat**](https://weechat.org/){:target="_blank"}.
+Apabila dirasa-rasa Irssi terlalu sulit untuk dikonfigurasi, ada satu lagi alternatif IRC client di Terminal, yaitu [**WeeChat**](https://weechat.org/).
+
 
 # Rencana Kedepan
 
@@ -549,24 +567,23 @@ Masih terdapat banyak sekali hal yang belum dapat tercover oleh tulisan ini. Beb
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/Irssi](https://wiki.archlinux.org/index.php/Irssi){:target="_blank"}
+1. [wiki.archlinux.org/index.php/Irssi](https://wiki.archlinux.org/index.php/Irssi)
 <br>Diakses tanggal: 2018/12/14
 
-2. [freenode.net/kb/answer/registration](http://freenode.net/kb/answer/registration){:target="_blank"}
+2. [freenode.net/kb/answer/registration](http://freenode.net/kb/answer/registration)
 <br>Diakses tanggal: 2018/12/14
 
-3. [irssi.org/documentation/](https://irssi.org/documentation/){:target="_blank"}
+3. [irssi.org/documentation/](https://irssi.org/documentation/)
 <br>Diakses tanggal: 2018/12/14
 
-4. [scripts.irssi.org/](https://scripts.irssi.org/){:target="_blank"}
+4. [scripts.irssi.org/](https://scripts.irssi.org/)
 <br>Diakses tanggal: 2018/12/14
 
-5. [irssi-import.github.io/themes/](https://irssi-import.github.io/themes/){:target="_blank"}
+5. [irssi-import.github.io/themes/](https://irssi-import.github.io/themes/)
 <br>Diakses tanggal: 2018/12/14
 
-6. [irssi.org/documentation/startup/](https://irssi.org/documentation/startup/){:target="_blank"}
+6. [irssi.org/documentation/startup/](https://irssi.org/documentation/startup/)
 <br>Diakses tanggal: 2018/12/14
 
-7. [askubuntu.com/questions/470944/irssi-no-terminal-notification-sound-while-pinged](https://askubuntu.com/questions/470944/irssi-no-terminal-notification-sound-while-pinged){:target="_blank"}
+7. [askubuntu.com/questions/470944/irssi-no-terminal-notification-sound-while-pinged](https://askubuntu.com/questions/470944/irssi-no-terminal-notification-sound-while-pinged)
 <br>Diakses tanggal: 2018/12/14
-

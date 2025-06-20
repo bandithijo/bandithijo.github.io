@@ -1,22 +1,19 @@
 ---
 layout: 'post'
 title: 'Menggunakan Udiskctl untuk Mount, Unmount, dan Power Off Drive'
-date: 2018-12-05 06:25
+date: '2018-12-05 06:25'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Tools', 'Tips', 'Terminal', 'Ulasan']
+tags: ['Udiskctl']
 pin:
 hot:
 contributors: []
-description:
+description: "Sudah sejak bulan Juli 2018 saya memigrasikan aplikasi-aplikasi GUI (Graphical User Interface) menjadi aplikasi CLI (Command Line Interface), maksud saya selain text editor Vim. Memang terdengar absurd. Namun, ternyata setelah saya mencoba satu aplikasi, saya pun ketagihan dan mencoba mencari-cari aplikasi mana yang dapat saya migrasikan ke CLI. Untuk cerita migrasi aplikasi ini aka saya sambung pada artikel yang lain."
 ---
-
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="" alt="banner"> -->
 
 # Prakata
 
@@ -24,13 +21,14 @@ Sudah sejak bulan Juli 2018 saya memigrasikan aplikasi-aplikasi GUI (_Graphical 
 
 Karena alasan tersebut di atas, saya sampai pada tahap memigrasikan _File Manager_. _File Manager_ yang menjadi _favorite_ saya adalah **PCManFM**. Mungkin kapan-kapan _File Manager_ ini akan saya bahas, mengapa menjadi satu-satunya _File Manager_ yang saya pasang di sistem operasi saya.
 
+
 # Permasalahan
 
 Salah satu kemampuan dari _file manager_ adalah _mounting/unmounting external drive_, seperti: _Flash Drive_, _External Hard Drive_, _SD Card_, dll. Yang menjadi permasalahan adalah aplikasi _file manager_ pengganti PCManFM yang saya gunakan, **Ranger**, tidak memiliki kemampuan ini. Tentu saja ini tidak sebanding dengan banyak kelebihan yang dimiliki oleh Ranger, maka dari itu saya tetap bersikeras menggunakan Ranger sebagai _file manager_ utama saya.
 
 # Solusi
 
-Untuk memecahkan permasalahan di atas, saya menggunakan aplikasi [**udisks2**](https://www.archlinux.org/packages/?name=udisks2){:target="_blank"}.
+Untuk memecahkan permasalahan di atas, saya menggunakan aplikasi [**udisks2**](https://www.archlinux.org/packages/?name=udisks2).
 
 Cara menggunakannya sangat mudah.
 
@@ -175,14 +173,13 @@ udiskctl power-off -b /dev/sdX
 
 Untuk penjelasan lebih lengkap dan literatur tambahan silahkan membaca dari referensi yang saya sertakan di bawah. Karena sebaik-baiknya dokumentasi adalah dokumentasi yang ditulis sendiri oleh developer yang membuat aplikasi.
 
-**udisksctl** juga dapat digunakan untuk melakukan mounting untuk file ISO image. Saya sudah pernah mencatatnya di sini,
-[**Mudah Mount & Unmount File ISO Image dengan Ruby Script (feat. udisksctl)**](/blog/mudah-mount-iso-dengan-ruby-script#alternatif-recommended){:target="_blank"}
+**udisksctl** juga dapat digunakan untuk melakukan mounting untuk file ISO image. Saya sudah pernah mencatatnya di sini, [**Mudah Mount & Unmount File ISO Image dengan Ruby Script (feat. udisksctl)**](/blog/mudah-mount-iso-dengan-ruby-script#alternatif-recommended).
 
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/Udisks](https://wiki.archlinux.org/index.php/Udisks){:target="_blank"}
+1. [wiki.archlinux.org/index.php/Udisks](https://wiki.archlinux.org/index.php/Udisks)
 <br>Diakses tanggal: 2018/11/05
 
-2. [freedesktop.org/wiki/Software/udisks/](https://www.freedesktop.org/wiki/Software/udisks/){:target="_blank"}
+2. [freedesktop.org/wiki/Software/udisks/](https://www.freedesktop.org/wiki/Software/udisks/)
 <br>Diakses tanggal: 2018/11/05

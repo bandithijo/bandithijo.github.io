@@ -1,34 +1,32 @@
 ---
 layout: 'post'
 title: 'Fan pada ThinkPad Tidak Terdeteksi Setelah Power Adapter Dicabut'
-date: 2018-12-08 22:50
+date: '2018-12-08 22:50'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['ThinkPad', 'Tips']
+tags: ['ThinkPad']
 pin:
 hot:
 contributors: []
-description:
+description: "Hari ini saya me-*ricing* tampilan Conky karena sudah merasa jenuh dengan tampilan yang lama. Sembari menyusun script Conky, saya berpindah-pindah tempat duduk. Saya mendapati, saat power adapter saya lepas, output dari fan speed monitor saya blank (tidak menampilkan output apapun). Lantas saya coba jalankan `$ sensors` dan hasilnya pun nihil."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data-echo="" onerror="imgError(this);" alt="banner"> -->
+> PERHATIAN!
+> 
+> Post ini Gagal dalam Tahap Pengujian!
+> 
+> Sebaiknya Tidak Diaplikasikan pada Sistem Anda.
 
-<!-- OUTDATED POST -->
-<p class="notif-post">Post ini Gagal dalam Tahap Pengujian!<br>
-Sebaiknya Tidak Diaplikasikan pada Sistem Anda.
-</p>
+> INFO
+> 
+> `tlp` sepertinya membuat efisiensi manajemen fan pada ThinkPad. Sehingga saya tidak lagi khawatir mengenai hasil output dari perintah `$ sensors` bernilai `0` karena mungkin memang saat bernilai `0` fan benar-benar tidak diperlukan untuk berputar. Karena sekali waktu saya melihat dari indikator fanspeed pada `Conky` yang saya pasang di desktop menunjukkan angka tertentu. (dalam keadaan tidak menggunakan paket `thinkfan`).
+> 
+> **Kesimpulannya, tulisan ini tidak benar-benar saya perlukan**.
 
-<!-- INFORMATION -->
-<div class="blockquote-blue">
-<div class="blockquote-blue-title">[ i ] Informasi</div>
-<p><code>tlp</code> sepertinya membuat efisiensi manajemen fan pada ThinkPad. Sehingga saya tidak lagi khawatir mengenai hasil output dari perintah <code>$ sensors</code> bernilai <code>0</code> karena mungkin memang saat bernilai <code>0</code> fan benar-benar tidak diperlukan untuk berputar. Karena sekali waktu saya melihat dari indikator fanspeed pada <code>Conky</code> yang saya pasang di desktop menunjukkan angka tertentu. (dalam keadaan tidak menggunakan paket <code>thinkfan</code>).</p>
-<p><strong>Kesimpulannya, tulisan ini tidak benar-benar saya perlukan.</strong></p>
-</div>
 
 # Prakata
 
@@ -38,9 +36,9 @@ Berikut ini adalah ilustrasinya.
 
 **Jika Power Adapter Terpasang**
 
-{% shell_user %}
-sensors
-{% endshell_user %}
+```
+$ sensors
+```
 
 ```
 thinkpad-isa-0000
@@ -50,15 +48,16 @@ fan1:        3076 RPM
 
 **Jika Power Adapter Dilepas**
 
-{% shell_user %}
-sensors
-{% endshell_user %}
+```
+$ sensors
+```
 
 ```
 thinkpad-isa-0000
 Adapter: ISA adapter
 fan1:
 ```
+
 
 # Solusi
 
@@ -70,17 +69,17 @@ Kemudian, saya melakukan pencarian kata spesifik "thinkpad", ternyata ketemu. Te
 
 Berikut langkah-langkahnya.
 
-1. Instalasi paket bernama [`thinkfan`](https://aur.archlinux.org/packages/thinkfan/){:target="_blank"} dari (AUR)
+1. Instalasi paket bernama [`thinkfan`](https://aur.archlinux.org/packages/thinkfan/) dari (AUR)
 
-   {% shell_user %}
-yay thinkfan
-{% endshell_user %}
+   ```
+   $ yay thinkfan
+   ```
 
 2. Kemudian periksa file yang sudah terpasang dengan cara
 
-   {% shell_user %}
-sudo pacman -Ql thinkfan
-{% endshell_user %}
+   ```
+   $ sudo pacman -Ql thinkfan
+   ```
 
    ```
    thinkfan /usr/
@@ -114,10 +113,10 @@ sudo pacman -Ql thinkfan
 
 3. Selanjutnya, me-*load* kernel module.
 
-   {% shell_user %}
-sudo modprobe thinkpad_acpi
-sudo cat /proc/acpi/ibm/fan
-{% endshell_user %}
+   ```
+   $ sudo modprobe thinkpad_acpi
+   $ sudo cat /proc/acpi/ibm/fan
+   ```
 
    ```
    status:		enabled
@@ -127,9 +126,9 @@ sudo cat /proc/acpi/ibm/fan
 
 4. Selanjutnya, tinggal mengaktifkan _service_ saat _startup_.
 
-   {% shell_user %}
-sudo vim /etc/default/thinkfan
-{% endshell_user %}
+   ```
+   $ sudo vim /etc/default/thinkfan
+   ```
 
    Isikan dengan.
 
@@ -139,17 +138,17 @@ sudo vim /etc/default/thinkfan
 
 5. Kemudian, _copy_ konfigurasi default `/usr/share/doc/thinkfan/examples/thinkfan.conf.simple` ke `/etc/thinkfan.conf`.
 
-   {% shell_user %}
-sudo cp /usr/share/doc/thinkfan/examples/thinkfan.conf.simple /etc/thinkfan.conf
-{% endshell_user %}
+   ```
+   $ sudo cp /usr/share/doc/thinkfan/examples/thinkfan.conf.simple /etc/thinkfan.conf
+   ```
 
    **Perhatian!** Langkah di atas perlu dilakukan. Apabila tidak, maka _service_ dari `thinkfan.service` akan kebingungan mencari file konfigurasi default yang diperlukan setelah _system reboot_.
 
 6. Langkah terakhir, tinggal meng-*enable*-kan *service*-nya.
 
-   {% shell_user %}
-sudo systemctl enable thinkfan
-{% endshell_user %}
+   ```
+   $ sudo systemctl enable thinkfan
+   ```
 
    ```
    Created symlink /etc/systemd/system/multi-user.target.wants/thinkfan.service → /usr/lib/systemd/system/thinkfan.service.
@@ -157,14 +156,12 @@ sudo systemctl enable thinkfan
 
    Selesai.
 
-<br>
 Nah, sekarang coba lepas _power adapter_ dan lakukan pengecekan dengan menjalankan perintah `$ sensors`.
 
 Apakah sudah berhasil terdeteksi?
 
 
-
 # Referensi
 
-1. [wiki.archlinux.org/index.php/Fan_speed_control#ThinkPad_laptops](https://wiki.archlinux.org/index.php/Fan_speed_control#ThinkPad_laptops){:target="_blank"}
+1. [wiki.archlinux.org/index.php/Fan_speed_control#ThinkPad_laptops](https://wiki.archlinux.org/index.php/Fan_speed_control#ThinkPad_laptops)
 <br>Diakses tanggal: 2018/12/08

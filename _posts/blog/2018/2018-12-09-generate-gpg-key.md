@@ -8,19 +8,16 @@ license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Security', 'Tips']
+tags: ['GnuPG', 'GPG']
 pin:
 hot:
 contributors: []
 description: "Catatan ini hanya sekedar catatan praktis tentang bagaimana cara membuat GPG key sendiri."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data-echo="" onerror="imgError(this);" alt="banner"> -->
-
 # Prakata
 
-Pada tulisan sebelumnya, saya pernah mendokumentasikan tentang ["Memperbaiki GPG: Warning: Unsafe Permissions on Homedir"](https://bandithijo.com/blog/memperbaiki-gpg-permissions-on-homedir){:target="_blank"}. Kali ini, saya akan mendokumentasikan bagaimana cara membuat atau mengenerate GPG key milik kita sendiri.
+Pada tulisan sebelumnya, saya pernah mendokumentasikan tentang ["Memperbaiki GPG: Warning: Unsafe Permissions on Homedir"](https://bandithijo.com/blog/memperbaiki-gpg-permissions-on-homedir). Kali ini, saya akan mendokumentasikan bagaimana cara membuat atau mengenerate GPG key milik kita sendiri.
 
 **Gunanya buat apa sih GPG key?**
 
@@ -28,31 +25,33 @@ Pemanfaatannya sangat beragam, misal ingin mengunci sebuah file atau direktori, 
 
 Nah, jika kamu belum memiliki GPG key sendiri, mungkin catatan ini dapat membantu kamu membuatnya.
 
+
 # Mengenerate GPG Key
 
 1. Instal `gnupg` - sesuaikan dengan distribusi GNU/Linux kalian.
 
-    {% shell_user %}
-sudo pacman -S gnupg
-{% endshell_user %}
+   ```
+   $ sudo pacman -S gnupg
+   ```
 
 2. Selanjutnya , generate private/public key pair dengan perintah berikut.
 
-   {% shell_user %}
-gpg --full-gen-key
-{% endshell_user %}
+   ```
+   $ gpg --full-gen-key
+   ```
 
    Kita akan disuguhkan bebreapa pertanyaan.
 
 3. Pertanyaan pertama mengenai algroitma apa yang akan digunakan (_default_ RSA and RSA).
 
-   <pre>
-Please select what kind of key you want:
-    (1) RSA and RSA (default)
-    (2) DSA and Elgamal
-    (3) DSA (sign only)
-    (4) RSA (sign only)
-Your selection? <span class="is-warning"><b>1</b></span></pre>
+   ```
+   Please select what kind of key you want:
+       (1) RSA and RSA (default)
+       (2) DSA and Elgamal
+       (3) DSA (sign only)
+       (4) RSA (sign only)
+   Your selection? 1
+   ```
 
 4. Pertanyaan selanjutnya mengenai panjang dari kunci. Saya merekomendasikan untuk mengisikan dengan value tertinggi, yaitu `4096`.
 
@@ -64,58 +63,63 @@ Your selection? <span class="is-warning"><b>1</b></span></pre>
 
 5. Pertanyaan selanjutnya mengenai sampai kapan private/public key pair ini bertahan. Pertanyaan ini bersifat subjektif. Apabila kamu orang yang rajin, silahkan menentukan kapan kunci gpg anda akan _expired_, namun buat kalian yang malas seperti saya, kita gunakan saja default, yaitu `0`.
 
-   <pre>
-Please specify how long the key should be valid.
-    0 = key does not expire
-    &lt;n>  = key expires in n days
-    &lt;n>w = key expires in n weeks
-    &lt;n>m = key expires in n months
-    &lt;n>y = key expires in n years
-Key is valid for? (0) <span class="is-warning"><b>0</b></span>
-Key does not expire at all</pre>
+   ```
+   Please specify how long the key should be valid.
+       0 = key does not expire
+       <n>  = key expires in n days
+       <n>w = key expires in n weeks
+       <n>m = key expires in n months
+       <n>y = key expires in n years
+   Key is valid for? (0) 0
+   Key does not expire at all
+   ```
 
 6. Pertanyaan selanjutnya mengenai mengkonfirmasi apakah semua informasi yang kita masukkan sebelumnya sudah sesuai atau belum. Jawab `y`.
 
-   <pre>
-Is this correct? (y/N) <span class="is-warning"><b>y</b></span></pre>
+   ```
+   Is this correct? (y/N) Y
+   ```
 
 7. Pertanyaan selanjutnya, gnupg akan membangun user ID dan identitas dari kunci kalian.
 
-   <pre>
-GnuPG needs to construct a user ID to identify your key.<br>
-Real name: Baba Asyong<br>
-Email address: basyong@kontrakan.com<br>
-Comment:<br>
-You selected this USER-ID:
-  "Baba Asyong <basyong@kontrakan.com>"<br>
-Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? <span class="is-warning"><b>O</b></span></pre>
+   ```
+   GnuPG needs to construct a user ID to identify your key.
+   Real name: Baba Asyong
+   Email address: basyong@kontrakan.com
+   Comment:
+   You selected this USER-ID:
+     "Baba Asyong <basyong@kontrakan.com>"
+   Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
+   ```
 
 8. Selanjutnya, kita diminta memasukkan **STRONG PASSWORD**.
 
-   <pre>
-We need to generate a lot of random bytes. It is a good idea to perform
-some other action (type on the keyboard, move the mouse, utilize the
-disks) during the prime generation; this gives the random number
-generator a better chance to gain enough entropy.</pre>
+   ```
+   We need to generate a lot of random bytes. It is a good idea to perform
+   some other action (type on the keyboard, move the mouse, utilize the
+   disks) during the prime generation; this gives the random number
+   generator a better chance to gain enough entropy.
+   ```
 
 9. Setelah memasukkan passwod dan konfirmasi password akan keluar *output* berikut ini.
 
-   <pre>
-gpg: key 1F3C927C841F10DD marked as ultimately trusted
-gpg: revocation certificate stored as '/home/bandithijo/.gnupg/openpgp-revocs.d/46AA8ADA995B2ABD2C3CE4641F3C927C841F10DD.rev'
-public and secret key created and signed.<br>
-pub   rsa4096 2018-12-09 [SC]
-      46AA8ADA995B2ABD2C3CE4641F3C927C841F10DD
-uid                      Baba Hasyong <basyong@kontrakan.com>
-sub   rsa4096 2018-12-09 [E]</pre>
+   ```
+   gpg: key 1F3C927C841F10DD marked as ultimately trusted
+   gpg: revocation certificate stored as '/home/bandithijo/.gnupg/openpgp-revocs.d/46AA8ADA995B2ABD2C3CE4641F3C927C841F10DD.rev'
+   public and secret key created and signed.<br>
+   pub   rsa4096 2018-12-09 [SC]
+         46AA8ADA995B2ABD2C3CE4641F3C927C841F10DD
+   uid                      Baba Hasyong <basyong@kontrakan.com>
+   sub   rsa4096 2018-12-09 [E]
+   ```
 
    Selesai.
 
    Dikemudian hari, apabila ingin melihat GPG Key ID yang sudah kita buat, dapat menggunakan perintah di bawah.
 
-   {% shell_user %}
-gpg --list-secret-keys --keyid-format LONG basyong@kontrakan.com
-{% endshell_user %}
+   ```
+   $ gpg --list-secret-keys --keyid-format LONG basyong@kontrakan.com
+   ```
 
    ```
    sec   rsa4096/1F3C927C841F10DD 2018-12-09 [SC]
@@ -126,6 +130,7 @@ gpg --list-secret-keys --keyid-format LONG basyong@kontrakan.com
 
    Ganti `basyong@kontrakan.com` dengan email yang kalian isikan untuk identitas dari gpg key.
 
+
 # Mengeksport Public Key
 
 Salah satu kegunannya seperti, apabila terdapat aplikasi seperti GitLab atau GitHub, dan lain sebagainya yang membutuhkan gpg public key kita, maka kita perlu melakukan export dari gpg public key yang kita miliki.
@@ -134,9 +139,9 @@ Caranya sangat mudah.
 
 1. Untuk melihat gpg public key yang kita miliki.
 
-   {% shell_user %}
-gpg --list-secret-keys --keyid-format LONG basyong@kontrakan.com
-{% endshell_user %}
+   ```
+   $ gpg --list-secret-keys --keyid-format LONG basyong@kontrakan.com
+   ```
 
    ```
    sec   rsa4096/1F3C927C841F10DD 2018-12-09 [SC]
@@ -147,9 +152,9 @@ gpg --list-secret-keys --keyid-format LONG basyong@kontrakan.com
 
 2. Kemudian, pada bagian `sec`, ambil ID dari key kita. `1F3C927C841F10DD` dan masukkan ke dalam perintah berikut ini.
 
-   {% shell_user %}
-gpg --armor --export 1F3C927C841F10DD
-{% endshell_user %}
+   ```
+   $ gpg --armor --export 1F3C927C841F10DD
+   ```
 
    ```
    -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -173,19 +178,19 @@ gpg --armor --export 1F3C927C841F10DD
 
    Selesai.
 
+
 # Pesan Penulis
 
 Catatan ini masih sangat jauh dari sempurna. Apabila mengalami kesulitan dan kegagalan, sangat saya rekomendasikan untuk melihat referensi yang saya sertakan pada akhir tulisan ini.
 
 
-
 # Referensi
 
-1. [wiki.archlinux.org/index.php/GnuPG](https://wiki.archlinux.org/index.php/GnuPG){:target="_blank"}
+1. [wiki.archlinux.org/index.php/GnuPG](https://wiki.archlinux.org/index.php/GnuPG)
 <br>Diakses tanggal: 2018/12/09
 
-2. [docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/](https://docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/){:target="_blank"}
+2. [docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/](https://docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/)
 <br>Diakses tanggal: 2018/12/09
 
-3. [help.github.com/articles/generating-a-new-gpg-key/](https://help.github.com/articles/generating-a-new-gpg-key/){:target="_blank"}
+3. [help.github.com/articles/generating-a-new-gpg-key/](https://help.github.com/articles/generating-a-new-gpg-key/)
 <br>Diakses tanggal: 2018/12/09
