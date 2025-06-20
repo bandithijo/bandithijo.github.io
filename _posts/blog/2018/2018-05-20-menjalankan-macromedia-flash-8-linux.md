@@ -12,7 +12,7 @@ tags: ['Wine']
 pin:
 hot:
 contributors: []
-description:
+description: "Kira-kira tiga minggu yang lalu, saya mendapat tugas kuliah oleh dosen saya untuk membuat 'Media Pembelajaran bagi siswa SMP atau SMA' dengan menggunakan aplikasi Macromedia Flash. Dalam hati ada sedikit rasa haru karena senang tapi tidak lama rasa senang itu langsung tertutupi kabut kenyataan bahwa saya saat ini sudah menggunakan sistem operasi GNU/Linux."
 ---
 
 ![Banner](https://s20.postimg.cc/hs0fmbvwt/banner_post_13.png)

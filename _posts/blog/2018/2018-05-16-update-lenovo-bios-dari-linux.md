@@ -12,7 +12,7 @@ tags: ['ThinkPad', 'BIOS']
 pin:
 hot:
 contributors: []
-description:
+description: "Sewaktu pertama kali memiliki laptop ini (Lenovo ThinkPad x260), saya berfikir bagaimana nantinya saya harus meng-update BIOS, apabila saya menghapus sistem operasi Windows dan hanya menggunakan satu sistem operasi GNU/Linux?"
 ---
 
 ![Banner](https://s20.postimg.cc/kcm94ki19/banner_post_12.png)
