@@ -1,7 +1,7 @@
 ---
 layout: 'post'
 title: 'Praktikum Multimedia Tugas 2'
-date: 2018-04-25 05:51
+date: '2018-04-25 05:51'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
@@ -15,14 +15,15 @@ contributors: []
 description:
 ---
 
-<!-- BANNER OF THE POST -->
-<img class="post-body-img" src="{{ site.lazyload.logo_blank_banner }}" data-echo="https://s20.postimg.cc/f7zndndq5/banner_post_06.png" onerror="imgError(this);" alt="banner">
+![Banner](https://s20.postimg.cc/f7zndndq5/banner_post_06.png)
+
 
 # Hasil
 
-{% image https://s20.postimg.cc/ev897h365/gambar_01.png | 1 %}
+![Gambar 1](https://s20.postimg.cc/ev897h365/gambar_01.png)
 
-{% image https://s20.postimg.cc/6xn0xertp/gambar_02.png | 2 %}
+![Gambar 2](https://s20.postimg.cc/6xn0xertp/gambar_02.png)
+
 
 # Video Dokumentasi
 
@@ -32,10 +33,9 @@ description:
 > | NIM | **15.01.157** |
 > | Kelas | **TI2-B** |
 
+
 # Aplikasi
 
-1. Vector Image Editor : [Inkscape](https://inkscape.org/en/){:target="_blank"}
-2. Video Editor : [Blender](https://www.blender.org/){:target="_blank"}
-3. Screen Recorder : [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenrecorder/){:target="_blank"}
-
-
+1. Vector Image Editor : [Inkscape](https://inkscape.org/en/)
+2. Video Editor : [Blender](https://www.blender.org/)
+3. Screen Recorder : [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenrecorder/)

@@ -1,22 +1,22 @@
 ---
 layout: 'post'
 title: 'Praktikum Data Warehouse'
-date: 2018-04-22 16:33
+date: '2018-04-22 16:33'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Database', 'Tools']
+tags: ['Data Warehouse']
 pin:
 hot: true
 contributors: []
 description:
 ---
 
-<!-- BANNER OF THE POST -->
-<img class="post-body-img" src="{{ site.lazyload.logo_blank_banner }}" data-echo="https://s20.postimg.cc/xv6bxotfx/banner_post_04.png" onerror="imgError(this);" alt="banner">
+![Banner](https://s20.postimg.cc/xv6bxotfx/banner_post_04.png)
+
 
 # Step 00: Persiapan
 
@@ -24,42 +24,44 @@ Pada praktikum ini, saya menggunakan **MySQL Workbench** sebagai aplikasi *datab
 
 Aplikasi dan soal dapat diunduh pada tautan di bawah.
 
-1. [MySQL Workbench](https://dev.mysql.com/downloads/workbench/){:target="_blank"}
-2. [6 Praktikum DW.pdf](https://drive.google.com/open?id=1ZQmxgNFR4uoVPP3pc3FwG5b45ipc5wg1){:target="_blank"}
+1. [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
+2. [6 Praktikum DW.pdf](https://drive.google.com/open?id=1ZQmxgNFR4uoVPP3pc3FwG5b45ipc5wg1)
 
 
-<br>
 # Step 01: Membuat ERD
 
 {% youtube fqYOZk1S8RQ %}
 
-><p class="title-quote">Resources:</p>
->1. [dw_toko_erd.sql](https://drive.google.com/open?id=1b4bFkEKAo4kPcNbkblS2tnDYyfzaJkMi){:target="_blank"}
+> Resources:
+> 
+> 1. [dw_toko_erd.sql](https://drive.google.com/open?id=1b4bFkEKAo4kPcNbkblS2tnDYyfzaJkMi)
 
-<br>
+
 # Step 02: Memasukkan Data
 
 {% youtube sSW-VXeeOXY %}
 
-><p class="title-quote">Resources:</p>
->1. [dw_toko_data.sql](https://drive.google.com/open?id=1BCNlwRDsynvgv5sQZ9qBfAqGaer_IiGA){:target="_blank"}
+> Resources:
+> 
+> 1. [dw_toko_data.sql](https://drive.google.com/open?id=1BCNlwRDsynvgv5sQZ9qBfAqGaer_IiGA)
 
-<br>
+
 # Step 03: Membuat Skema Bintang
 
 {% image https://s20.postimg.cc/4ftedv2m5/thumbnails_dw_3_ud.png | 3 %}
 
-<div style="margin-top:-10px;"></div>
-><p class="title-quote">Resources:</p>
->**ERD Skema Bintang**
->1. [dw_tokos.sql](https://drive.google.com/open?id=1oPNqIqHZO4SLSg6GY-7AmCSFqg6pyHxJ){:target="_blank"}
->
->**Jawaban Soal**
->2. [jawaban dw_tokos.txt](https://drive.google.com/open?id=19gTej3ZFxZtlKnk5oe7nKB_dMs2rWsiK){:target="_blank"}
+> Resources:
+> 
+> **ERD Skema Bintang**
+> 
+> 1. [dw_tokos.sql](https://drive.google.com/open?id=1oPNqIqHZO4SLSg6GY-7AmCSFqg6pyHxJ)
+> 
+> **Jawaban Soal**
+> 
+> 2. [jawaban dw_tokos.txt](https://drive.google.com/open?id=19gTej3ZFxZtlKnk5oe7nKB_dMs2rWsiK)
 
-<br>
+
 # Kontributor
+
 1. Yuhendy Adiyasa Aurindra
 2. ...
-
-<br>

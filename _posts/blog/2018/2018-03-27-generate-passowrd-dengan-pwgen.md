@@ -1,39 +1,42 @@
 ---
 layout: 'post'
 title: 'Generate Random Password menggunakan PWGEN'
-date: 2018-03-27
+date: '2018-03-27'
 permalink: '/blog/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'blog'
-tags: ['Security', 'Tips', 'Terminal', 'Tools', 'Ulasan']
+tags: ['Security', 'pwgen']
 pin:
 hot:
 contributors: []
 description: "pwgen adalah perkakas command line interface yang praktis digunakan untuk mengenerate password."
 ---
 
-<img class="post-body-img" src="{{ site.lazyload.logo_blank_banner }}" data-echo="https://s20.postimg.cc/t810ca5cd/banner_post_00.png" onerror="imgError(this);" alt="banner">
+![Banner](https://s20.postimg.cc/t810ca5cd/banner_post_00.png)
+
 
 # Latar Belakang
+
 _Password_ atau dalam bahasa Indonesia disebut kata sandi, merupakan hal yang penting untuk menjaga kerahasiaan sesuatu yang kita simpan di balik _password_ tersebut. Namun _password_ itu sendiri juga merupakan hal yang rahasia. Sebuah kunci rahasia untuk membuka sesuatu yang rahasia. Yang artinya, selain sesuatu yang dilindungin oleh _password_ tersebut harus aman, _password_ itu sendiri pun harus diamankan.
 
 Bisa saya katakan, tidak semua orang sudah menerapkan cara membuat _password_ yang baik. Karena memang bukan perkara yang mudah. Apakah kalian cukup yakin dengan _password_ yang telah kalian buat ?
 
-Sedikit saya akan membahas mengenai pengamanan _password_. Saya bisa mengambil satu contoh, dari [**Google Account Help**](https://support.google.com/accounts/answer/32040?hl=en){:target="_blank"}, di sana dikatakan bahwa,
+Sedikit saya akan membahas mengenai pengamanan _password_. Saya bisa mengambil satu contoh, dari [**Google Account Help**](https://support.google.com/accounts/answer/32040?hl=en), di sana dikatakan bahwa,
+
 
 # Membuat _Password_ yang Kuat
 
 Membuat _password_ yang kuat akan membantu kalian :
+
 1. Menjaga informasi pribadi tetap aman
 2. Melindungi email, files, dan konten-konten lain
 3. mencegah seseorang membobol akun kalian.
 
 Pada halaman yang berjudul **Create a strong password** tersebut juga tertulis langkah-langkah untuk mengamankan _password_. Dibagi dalam 3 langkah.
 
-<br>
 **Langkah 1, Penuhi persyaratan pembuatan _password_**
 
 Buatlah _password_ kalian dengan menggunakan **minimal 8 karakter** atau lebih. Bisa menggunakan kombinasi huruf, angka, atau simbol.
@@ -41,7 +44,6 @@ Buatlah _password_ kalian dengan menggunakan **minimal 8 karakter** atau lebih. 
 1. Sebaiknya hindari penggunaan _password_ yang sama untuk digunakan oleh banyak akun yang lain
 2. Hindari pula menggunakan _password_ yang kalian pernah gunakan sebelumnya
 
-<br>
 **Langkah 2, Ikuti Saran untuk Membuat _Password_**
 
 _Password_ yang kuat hampir tidak mungkin dapat ditebak oleh orang lain. Untuk itu, kalian dapat menggunakan kiat-kiat di bawah ini dalam membuat _password_.
@@ -50,7 +52,6 @@ _Password_ yang kuat hampir tidak mungkin dapat ditebak oleh orang lain. Untuk i
 2. Hindari menggunakan informasi pribadi dan kata-kata yang sudah umum
 3. Jangan menggunakan kembali _password_ yang sudah pernah digunakan sebelumnya
 
-<br>
 **Langkah 3, Menjaga Keamanan _Password_**
 
 Setelah kalian membuat _password_ yang kuat, selanjutnya kalian perlu mengamankannya.
@@ -58,32 +59,39 @@ Setelah kalian membuat _password_ yang kuat, selanjutnya kalian perlu mengamanka
 1. Jangan tampilkan _password_ kalian
 2. Gunakan alat bantu untuk mengelola _password_ kalian
 
-<br>
 **Plan B**
 
 Buat rencana cadangan apabila kalian lupa dengan _password_ yang telah kalian buat. Namun hati-hati jangan sampai malah orang yang tidak berhak dapat memanfaatkan kelemahan yang kalian buat pada rencana cadangan kalian ini.
 
+
 # Alat Bantu _Generate Password_
+
 Pada dokumentasi ini saya akan membahas salah satu alat bantu yang saya gunakan untuk membuat _password_ yang sangat _random_.
 
+
 ## Pwgen
+
 Dari manual yang ditulis, pwgen dirancang untuk menghasilkan _password_ yang mudah diingaat oleh manusia namun tetap seaman mungkin.
 
+
 ### Instalasi
+
 Untuk distribusi Arch Linux
 
-{% shell_term $ %}
-sudo pacman -S pwgen
-{% endshell_term %}
+```
+$ sudo pacman -S pwgen
+```
 
 Untuk distribusi sistem operasi yang lain, dapat menyesuaikan dan mencari paket yang bernama `pwgen`.
 
+
 ### Melihat Help
+
 Kita perlu mengetahui opsi apa saja yang disediakan oleh pwgen sebelum kita dapat mengenerate _password_. _Help_ dari pwgen ini sangat sederhana dan mudah dipahami.
 
-{% shell_term $ %}
-pwgen -h
-{% endshell_term %}
+```
+$ pwgen -h
+```
 
 ```
 Usage: pwgen [ OPTIONS ] [ pw_length ] [ num_pw ]
@@ -117,7 +125,9 @@ Options supported by pwgen:
 	Do not use any vowels so as to avoid accidental nasty words
 ```
 
+
 ### Penggunaan
+
 Seperti yang kalian lihat, pwgen menyediakan banyak sekali opsi untuk kita dapat meracik _password_. Kalian dapat memilih _preferensi_ opsi yang kalian perlukan. Saya biasa menggunakan opsi `-sy` dengan panjang karakter sebanyak 15.
 
 `-s` : untuk mengacak _password_ yang benar-benar _random_.
@@ -126,9 +136,9 @@ Seperti yang kalian lihat, pwgen menyediakan banyak sekali opsi untuk kita dapat
 
 Hasilnya akan seperti ini.
 
-{% shell_term $ %}
-pwgen -sy 15
-{% endshell_term %}
+```
+$ pwgen -sy 15
+```
 
 ```
 I##3DKHZCA\[S:w (3::;s2P1!ABm7' !WS2LL)Jp[/].ob !1Z%K/E=Rt?1-TC /_,p}73!k|h&pDS
@@ -153,36 +163,39 @@ ip0|bE+&\S`-XvA fv8eRE>@.BVd/v) 09TFUyqyFnHqZH/ Y>`u*O^2WfHd"[7 XPus5[&mEb0y3Oz
 [~qzByf#|/K4=g~ Lx@KlJ1&L4\5vKH lvjHx>\vq[r4WHl -GiVZ#Yio-c$8US OKFn"3QQ^L$jr(T
 ```
 
-Kemudian, saya akan pilih satu dari 100 _random password_ yang sudah berhasil di _generate_. Setelah itu saya akan simpan pada alat yang saya khususkan untuk menyimpan _password_. Untuk pembahasan alat apa yang saya gunakan untuk menyimpan _password_ ([_Password Manager_](https://wiki.archlinux.org/index.php/List_of_applications/Security#Password_managers){:target="_blank"}) akan saya bahas pada dokumentasi yang lain.
+Kemudian, saya akan pilih satu dari 100 _random password_ yang sudah berhasil di _generate_. Setelah itu saya akan simpan pada alat yang saya khususkan untuk menyimpan _password_. Untuk pembahasan alat apa yang saya gunakan untuk menyimpan _password_ ([_Password Manager_](https://wiki.archlinux.org/index.php/List_of_applications/Security#Password_managers)) akan saya bahas pada dokumentasi yang lain.
+
 
 # Tips
 
 Kalau teman-teman ingin hasil generate password langsung otomatis ditangkap oleh clipboard, dapat menggunakan cara ini.
 
-{% shell_term $ %}
-pwgen -sy 15 -1 | tr -d '\n' | xclip -sel clip
-{% endshell_term %}
+```
+$ pwgen -sy 15 -1 | tr -d '\n' | xclip -sel clip
+```
 
 Atau buatkan saja shell script nya.
 
-{% shell_term $ %}
-touch $HOME/.local/bin/pwgenskin
-chmod +x $HOME/.local/bin/pwgenskin
-{% endshell_term %}
+```
+$ touch $HOME/.local/bin/pwgenskin
+$ chmod +x $HOME/.local/bin/pwgenskin
+```
 
 Isinya seperti ini,
 
-{% highlight_caption $HOME/.local/bin/pwgenskin %}
-{% highlight sh linenos %}
+```bash
+!filename: $HOME/.local/bin/pwgenskin
 #!/bin/sh
+
 pwgen -sy 32 -1 | tr -d '\n' | xclip -sel clip
-{% endhighlight %}
+```
 
 Modifikasi sesuai keinginan kalian.
 
+
 # Referensi
-1. [support.google.com/accounts/answer/32040?hl=en](https://support.google.com/accounts/answer/32040?hl=en){:target="_blank"}
+1. [support.google.com/accounts/answer/32040?hl=en](https://support.google.com/accounts/answer/32040?hl=en)
 <br>Diakses tanggal: 2018/03/27
 
-2. [wiki.archlinux.org/index.php/Security](https://wiki.archlinux.org/index.php/Security){:target="_blank"}
+2. [wiki.archlinux.org/index.php/Security](https://wiki.archlinux.org/index.php/Security)
 <br>Diakses tanggal: 2018/03/27
