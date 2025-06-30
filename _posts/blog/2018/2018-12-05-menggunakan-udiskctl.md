@@ -26,6 +26,7 @@ Karena alasan tersebut di atas, saya sampai pada tahap memigrasikan _File Manage
 
 Salah satu kemampuan dari _file manager_ adalah _mounting/unmounting external drive_, seperti: _Flash Drive_, _External Hard Drive_, _SD Card_, dll. Yang menjadi permasalahan adalah aplikasi _file manager_ pengganti PCManFM yang saya gunakan, **Ranger**, tidak memiliki kemampuan ini. Tentu saja ini tidak sebanding dengan banyak kelebihan yang dimiliki oleh Ranger, maka dari itu saya tetap bersikeras menggunakan Ranger sebagai _file manager_ utama saya.
 
+
 # Solusi
 
 Untuk memecahkan permasalahan di atas, saya menggunakan aplikasi [**udisks2**](https://www.archlinux.org/packages/?name=udisks2).
@@ -59,31 +60,33 @@ Options:
 Use "udisksctl COMMAND --help" to get help on each command.
 ```
 
+
 ## Mounting
 
 Untuk me-*mounting* _flash drive_ atau _external hard drive_, hal yang perlu kita lakukan cukup dengan :
 
 1. Cek nama/alamat block dari _drive_ yang akan kita _mounting_ dengan `lsblk`
 
-   {% shell_user %}
-lsblk
-{% endshell_user %}
+   ```
+   $ lsblk
+   ```
 
-   <pre>
+   ```
    NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
    sda      8:0    0 447.1G  0 disk
    ├─sda1   8:1    0   511M  0 part /boot
    ├─sda2   8:2    0 444.6G  0 part /
    └─sda3   8:3    0     2G  0 part [SWAP]
-   <mark>sdX      8:16   1   7.2G  0 disk</mark></pre>
+   sdX      8:16   1   7.2G  0 disk 👈
+   ```
 
    Periksa nama/lamat block `/dev/sdX` serta size, pastikan benar-benar _drive_ yang anda inginkan
 
 2. Selanjutnya tinggal kita _mount_ menggunakan `udisksctl`
 
-   {% shell_user %}
-udiskctl mount -b /dev/sdX
-{% endshell_user %}
+   ```
+   $ udiskctl mount -b /dev/sdX
+   ```
 
    ```
    Mounted /dev/sdX at /run/media/username/AAAA-0000.
@@ -91,33 +94,35 @@ udiskctl mount -b /dev/sdX
 
    Kemudian cek lagi dengan `lsblk` apakah sudah berhasil di-*mounting*
 
-   {% shell_user %}
-lsblk
-{% endshell_user %}
+   ```
+   $ lsblk
+   ```
 
-   <pre>
+   ```
    NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
    sda      8:0    0 447.1G  0 disk
    ├─sda1   8:1    0   511M  0 part /boot
    ├─sda2   8:2    0 444.6G  0 part /
    └─sda3   8:3    0     2G  0 part [SWAP]
-   <mark>sdX      8:16   1   7.2G  0 disk /run/media/username/AAAA-0000</mark></pre>
+   sdX      8:16   1   7.2G  0 disk /run/media/username/AAAA-0000 👈
+   ```
 
    Apabila mengeluarkan tampilan seperti di atas, artinya _mounting_ berhasil.
+
 
 ## Unmounting
 
 Setelah kita selesai berurusan dengan _drive_, sebelum mencabutnya sangat direkomendasikan untuk menjalankan proses _unmounting_. Caranya sangat mudah.
 
-{% box_perhatian %}
-<p>Pastikan <i>file manager</i> tidak sedang membuka direktori yang ada di dalam <i>external drive</i> yang akan kita <i>unmount</i> karena proses <i>unmounting</i> akan gagal dikarenakan partisi yang akan kita <i>unmount</i> dianggap sibuk.</p>
-{% endbox_perhatian %}
+> PERHATIAN!
+> 
+> Pastikan *file manager* tidak sedang membuka direktori yang ada di dalam *external drive* yang akan kita *unmount* karena proses *unmounting* akan gagal dikarenakan partisi yang akan kita *unmount* dianggap sibuk.
 
 1. Jalankan `udisksctl` untuk proses _unmounting_
 
-   {% shell_user %}
-udiskctl unmount -b /dev/sdX
-{% endshell_user %}
+   ```
+   $ udiskctl unmount -b /dev/sdX
+   ```
 
    ```
    Unmounted /dev/sdX
@@ -125,19 +130,21 @@ udiskctl unmount -b /dev/sdX
 
 2. Selanjutnya lakukan pengecekan dengan `lsblk` untuk memastikan
 
-   {% shell_user %}
-lsblk
-{% endshell_user %}
+   ```
+   $ lsblk
+   ```
 
-   <pre>
+   ```
    NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
    sda      8:0    0 447.1G  0 disk
    ├─sda1   8:1    0   511M  0 part /boot
    ├─sda2   8:2    0 444.6G  0 part /
    └─sda3   8:3    0     2G  0 part [SWAP]
-   <mark>sdX      8:16   1   7.2G  0 disk</mark></pre>
+   sdX      8:16   1   7.2G  0 disk 👈
+   ```
 
    Apabila mengeluarkan tampilan seperti di atas, artinya _unmounting_ berhasil.
+
 
 ## Power Off
 
@@ -149,9 +156,9 @@ Agar lebih yakin sebaiknya kita mematikan _external drive_ tersebut, kemudian ba
 
 1. Jalankan kembali perintah `udisksctl`
 
-   {% shell_user %}
-udiskctl power-off -b /dev/sdX
-{% endshell_user %}
+   ```
+   $ udiskctl power-off -b /dev/sdX
+   ```
 
 2. Cek lagi apakah _external drive_ sudah berhasil di _power-off_
 
@@ -165,9 +172,11 @@ udiskctl power-off -b /dev/sdX
 
    Apabila mengeluarkan tampilan seperti di atas, artinya  proses _power-off_ berhasil.
 
+
 # Video Ilustrasi
 
 {% youtube nixRL8esSa8 %}
+
 
 # Akhir Kata
 
