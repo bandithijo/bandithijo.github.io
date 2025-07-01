@@ -246,9 +246,9 @@ Sebelumnya, kita samakan persepsi dulu yaa.
 
 ```
 NAME
-loop0        &lt;== disebut, <strong>block_devices</strong>
-├─loop0p1    &lt;== disebut, <strong>block_partition</strong>
-└─loop0p2    &lt;== disebut, <strong>block_partition</strong>
+loop0        ← disebut block_devices
+├─loop0p1    ← disebut block_partition
+└─loop0p2    ← disebut block_partition
 ```
 
 
