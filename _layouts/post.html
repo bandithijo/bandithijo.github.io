@@ -14,7 +14,7 @@ layout: baseof
         <div class="w-full md:w-3/4">Author by: {{ page.author }}</div>
       </div>
 
-      <div class="markdown">
+      <div class="markdown dark:text-white">
         {{ content }}
       </div>
 
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (filenameLabel) {
       const filenameElem = document.createElement("div");
       filenameElem.textContent = filenameLabel;
-      filenameElem.className = "font-semibold font-mono mb-2";
+      filenameElem.className = "font-semibold font-mono dark:text-white mb-2";
       block.parentElement.insertAdjacentElement("beforebegin", filenameElem);
     }
   });

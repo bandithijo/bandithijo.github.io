@@ -8,15 +8,15 @@ permalink: '/note/'
   <div id="search-container" class="flex items-center">
     <span class=""></span>
     <input type="text" id="search-input" placeholder="Search for topic..." autocomplete="off"
-      class="text-left rounded-lg border border-gray-300 outline-none px-3 py-2 w-full placeholder:text-base placeholder:font-thin placeholder:text-zinc-400 focus:outline-none focus:ring-0 focus:ring-dark focus:border-dark select-none">
+      class="text-left rounded-lg border border-gray-300 dark:border-zinc-700 dark:bg-zinc-900 outline-none px-3 py-2 w-full placeholder:text-base placeholder:font-thin placeholder:text-zinc-400 focus:outline-none focus:ring-0 focus:ring-dark focus:border-dark select-none">
   </div>
 
   <!-- Search Loader -->
   <div id="search-loader" class="flex items-center justify-center py-8 hidden">
     <div class="flex items-center space-x-2">
-      <div class="w-2 h-2 bg-dark rounded-full animate-pulse"></div>
-      <div class="w-2 h-2 bg-dark rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
-      <div class="w-2 h-2 bg-dark rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+      <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse"></div>
+      <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+      <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
     </div>
   </div>
 
@@ -29,9 +29,9 @@ permalink: '/note/'
 <!-- Masonry Loader -->
 <div id="masonry-loader" class="flex items-center justify-center py-4">
   <div class="flex items-center space-x-2">
-    <div class="w-2 h-2 bg-dark rounded-full animate-pulse"></div>
-    <div class="w-2 h-2 bg-dark rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
-    <div class="w-2 h-2 bg-dark rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+    <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse"></div>
+    <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+    <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
   </div>
 </div>
 
@@ -40,12 +40,12 @@ permalink: '/note/'
   <div id="post-container">
     {% assign note_posts = site.posts | where_exp: "post", "post.categories contains 'note'" %}
     {% for post in note_posts %}
-      <div class="masonry-item absolute p-4 bg-white rounded-lg border border-gray-300 hover:border-dark"
+      <div class="masonry-item absolute p-4 bg-white dark:bg-zinc-900 rounded-lg border border-gray-300 dark:border-zinc-700 hover:border-dark dark:hover:border-zinc-400"
         style="width: calc(25% - 12px);">
-        <a href="{{ post.url }}" class="text-dark">
+        <a href="{{ post.url }}" class="text-dark dark:text-white">
           <h2 class="text-md font-bold mb-4">{{ post.title }}</h2>
-          <p class="text-base text-gray-600 mb-4">{{ post.description }}</p>
-          <p class="text-sm text-gray-600 font-mono">{{ post.date | date: '%Y.%m.%d' }}</p>
+          <p class="text-base text-gray-600 dark:text-zinc-300 mb-4">{{ post.description }}</p>
+          <p class="text-sm text-gray-600 dark:text-zinc-300 font-mono">{{ post.date | date: '%Y.%m.%d' }}</p>
         </a>
       </div>
     {% endfor %}

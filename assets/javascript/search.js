@@ -157,23 +157,23 @@
   // Template definitions
   const TEMPLATES = {
     posts: `
-      <div class="masonry-item absolute p-4 opacity-0 bg-white rounded-lg border border-gray-300 hover:border-dark">
-        <a href="{url}" class="text-dark">
+      <div class="masonry-item absolute p-4 opacity-0 bg-white dark:bg-zinc-900 rounded-lg border border-gray-300 dark:border-zinc-700 hover:border-dark dark:hover:border-zinc-400">
+        <a href="{url}" class="text-dark dark:text-white">
           <h2 class="text-md font-bold mb-4">{title}</h2>
-          <p class="text-base text-gray-600 mb-4">{description}</p>
-          <p class="text-sm text-gray-600 font-mono">{date}</p>
+          <p class="text-base text-gray-600 dark:text-zinc-300 mb-4">{description}</p>
+          <p class="text-sm text-gray-600 dark:text-zinc-300 font-mono">{date}</p>
         </a>
       </div>
     `,
     dotfriends: `
-      <div class="masonry-item absolute p-4 opacity-0 bg-white rounded-lg border border-gray-300 hover:border-dark">
+      <div class="masonry-item absolute p-4 opacity-0 bg-white dark:bg-zinc-900 rounded-lg border border-gray-300 dark:border-zinc-700 hover:border-dark dark:hover:border-zinc-400">
         <div class="flex items-center space-x-4 mb-4">
           <img src="{photo}" alt="{github_username}" class="w-16 rounded-full">
           <h2 class="text-md font-bold">{name}</h2>
         </div>
-        <p class="text-base text-gray-600 mb-4">{detail}</p>
-        <p class="text-sm text-gray-600 font-mono truncate"><a href="{url1}" target="_blank">{url1}</a></p>
-        <p class="text-sm text-gray-600 font-mono truncate"><a href="{url2}" target="_blank">{url2}</a></p>
+        <p class="text-base text-gray-600 dark:text-zinc-300 mb-4">{detail}</p>
+        <p class="text-sm text-gray-600 dark:text-zinc-300 font-mono truncate"><a href="{url1}" target="_blank">{url1}</a></p>
+        <p class="text-sm text-gray-600 dark:text-zinc-300 font-mono truncate"><a href="{url2}" target="_blank">{url2}</a></p>
       </div>
     `
   };

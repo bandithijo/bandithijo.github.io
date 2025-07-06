@@ -8,15 +8,15 @@ permalink: '/dotfriends/'
   <div id="search-container" class="flex items-center">
     <span class=""></span>
     <input type="text" id="search-input" placeholder="Search for name..." autocomplete="off"
-      class="text-left rounded-lg border border-gray-300 outline-none px-3 py-2 w-full placeholder:text-base placeholder:font-thin placeholder:text-zinc-400 focus:outline-none focus:ring-0 focus:ring-dark focus:border-dark select-none">
+      class="text-left rounded-lg border border-gray-300 dark:border-zinc-700 dark:bg-zinc-900 outline-none px-3 py-2 w-full placeholder:text-base placeholder:font-thin placeholder:text-zinc-400 focus:outline-none focus:ring-0 focus:ring-dark focus:border-dark select-none">
   </div>
 
   <!-- Search Loader -->
   <div id="search-loader" class="flex items-center justify-center py-8 hidden">
     <div class="flex items-center space-x-2">
-      <div class="w-2 h-2 bg-dark rounded-full animate-pulse"></div>
-      <div class="w-2 h-2 bg-dark rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
-      <div class="w-2 h-2 bg-dark rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+      <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse"></div>
+      <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+      <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
     </div>
   </div>
 
@@ -29,9 +29,9 @@ permalink: '/dotfriends/'
 <!-- Masonry Loader -->
 <div id="masonry-loader" class="flex items-center justify-center py-4">
   <div class="flex items-center space-x-2">
-    <div class="w-2 h-2 bg-dark rounded-full animate-pulse"></div>
-    <div class="w-2 h-2 bg-dark rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
-    <div class="w-2 h-2 bg-dark rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+    <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse"></div>
+    <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+    <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
   </div>
 </div>
 
@@ -40,15 +40,15 @@ permalink: '/dotfriends/'
   <div id="post-container">
     {% for friend in site.data.dotfriends.friends %}
     {% unless friend.name contains 'Rizqi Nur Assyaufi' %}
-      <div class="masonry-item absolute p-4 bg-white rounded-lg border border-gray-300 hover:border-dark"
+      <div class="masonry-item absolute p-4 bg-white dark:bg-zinc-900 rounded-lg border border-gray-300 dark:border-zinc-700 hover:border-dark dark:hover:border-zinc-400"
         style="width: calc(25% - 12px);">
         <div class="flex items-center space-x-4 mb-4">
           <img src="{{ friend.photo }}" alt="{{ friend.github_username }}" class="w-16 rounded-full">
           <h2 class="text-md font-bold">{{ friend.name }}</h2>
         </div>
-        <p class="text-base text-gray-600 mb-4">{{ friend.detail }}</p>
-        <p class="text-sm text-gray-600 font-mono truncate"><a href="{{ friend.url1 }}" target="_blank">{{ friend.url1 }}</a></p>
-        <p class="text-sm text-gray-600 font-mono truncate"><a href="{{ friend.url2 }}" target="_blank">{{ friend.url2 }}</a></p>
+        <p class="text-base text-gray-600 dark:text-zinc-300 mb-4">{{ friend.detail }}</p>
+        <p class="text-sm text-gray-600 dark:text-zinc-300 font-mono truncate"><a href="{{ friend.url1 }}" target="_blank">{{ friend.url1 }}</a></p>
+        <p class="text-sm text-gray-600 dark:text-zinc-300 font-mono truncate"><a href="{{ friend.url2 }}" target="_blank">{{ friend.url2 }}</a></p>
       </div>
     {% endunless %}
     {% endfor %}
