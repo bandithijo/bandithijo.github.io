@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Catatan Post Installation Fedora Workstation"
-date: 2021-06-10 09:51
+date: '2021-06-10 09:51'
 permalink: '/note/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'note'
-tags: ['Tips', 'Fedora']
+tags: ['Fedora']
 wip: true
 pin:
 contributors: []
@@ -23,7 +23,9 @@ Saya memutuskan untuk mengkategorikan catatan ini sebagai "note" dan bukan sebag
 
 Selain itu, memiliki sebuah catatan "perjalanan" akan **menumbuhkan rasa percaya diri untuk terus maju ke depan**. Maksud saya, apabila terjadi kegagalan karena satu dan lain hal, kita tidak segan untuk memulai lagi dari awal. Ataupun, kita dapat dengan mudah memulai percabangan untuk awal baru yang lain.
 
+
 # Pre Install
+
 
 ## Verify your download with CHECKSUM files.
 
@@ -31,11 +33,11 @@ Setelah mengunduh file ISO, lakukan verifikasi untuk menguji keamanan dan integr
 
 Langkah awal, import Fedora's GPG key(s).
 
-{% shell_term $ %}
-curl https://getfedora.org/static/fedora.gpg | gpg --import
-{% endshell_term %}
+```
+$ curl https://getfedora.org/static/fedora.gpg | gpg --import
+```
 
-<pre>
+```
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100 12543  100 12543    0     0  10945      0  0:00:01  0:00:01 --:--:-- 10945
@@ -49,81 +51,82 @@ gpg: key 6A2FAEA2352C64E5: public key "Fedora EPEL (7) <epel@fedoraproject.org>"
 gpg: key 3B49DF2A0608B895: public key "EPEL (6) <epel@fedoraproject.org>" imported
 gpg: Total number processed: 8
 gpg:               imported: 8
-</pre>
+```
 
 Dapat dilihat, kita telah berhasil mengimport 8 public keys.
 
-Kemudian, download file **CHECKSUM** dari yang dapat kita download di halaman ini, [**di sini**](https://getfedora.org/en/security/){:target="_blank"}. Download file CHECKSUM yang sesuai dengan file ISO yang teman-teman gunakan.
+Kemudian, download file **CHECKSUM** dari yang dapat kita download di halaman ini, [**di sini**](https://getfedora.org/en/security/). Download file CHECKSUM yang sesuai dengan file ISO yang teman-teman gunakan.
 
 Kemudian, verifikasi file CHECKSUM tersebut.
 
-{% pre_url %}
+```
 $ gpg --verify-files *-CHECKSUM
-{% endpre_url %}
+```
 
-{% shell_term $ %}
-gpg --verify-files Fedora-Workstation-34-1.2-x86_64-CHECKSUM
-{% endshell_term %}
+```
+$ gpg --verify-files Fedora-Workstation-34-1.2-x86_64-CHECKSUM
+```
 
-<pre>
+```
 gpg: Signature made Sat 24 Apr 2021 03:37:01 AM WITA
 gpg:                using RSA key 8C5BA6990BDB26E19F2A1A801161AE6945719A39
 gpg: Good signature from "Fedora (34) <fedora-34-primary@fedoraproject.org>" [unknown]
 gpg: WARNING: This key is not certified with a trusted signature!
 gpg:          There is no indication that the signature belongs to the owner.
 Primary key fingerprint: 8C5B A699 0BDB 26E1 9F2A  1A80 1161 AE69 4571 9A39
-</pre>
+```
 
 CHECKSUM harus memiliki keterangan "Good signature"dari salah satu key.
 
 Letakkan file ISO (\*.iso) dengan file checksum (\*-CHECKSUM) pada direktori yang sama.
 
-<pre>
-├─ Fedora-Workstation-34-1.2-x86_64-CHECKSUM
-└─ Fedora-Workstation-Live-x86_64-34-1.2.iso
-</pre>
+```
+├─ 📄 Fedora-Workstation-34-1.2-x86_64-CHECKSUM
+└─ 📦 Fedora-Workstation-Live-x86_64-34-1.2.iso
+```
 
 Selanjutnya, lakukan pengecekan checksum terhadap file ISO yang telah kita download.
 
-{% pre_url %}
+```
 $ sha256sum -c *-CHECKSUM
-{% endpre_url %}
+```
 
-{% shell_term $ %}
-sha256sum -c Fedora-Workstation-34-1.2-x86_64-CHECKSUM
-{% endshell_term %}
+```
+$ sha256sum -c Fedora-Workstation-34-1.2-x86_64-CHECKSUM
+```
 
-<pre>
+```
 Fedora-Workstation-Live-x86_64-34-1.2.iso: OK
 sha256sum: WARNING: 19 lines are improperly formatted
-</pre>
+```
 
 \* Abaikan saja warning 19 lines are improperly formated, hal ini terjadi karena di dalam file *-CHECKSUM tersebut juga terdapat PGP Signature. Coba komentar saja baris-baris selain SHA256SUM valuenya (termasuk blankline), maka warningnya akan ~~berkurang~~ hilang.
 
+
 # NaN Packages That I Need to Install
 
+
 ## Enable fastest mirror and Delta RPM
-Sumber: [https://www.linuxsec.org/2020/03/menggunakan-fastest-mirror-di-fedora.html](https://www.linuxsec.org/2020/03/menggunakan-fastest-mirror-di-fedora.html){:target="_blank"}
+Sumber: [https://www.linuxsec.org/2020/03/menggunakan-fastest-mirror-di-fedora.html](https://www.linuxsec.org/2020/03/menggunakan-fastest-mirror-di-fedora.html)
 
 Edit file `/etc/dnf/dnf.conf`, lalu tambahkan baris,
 
-{% highlight_caption /etc/dnf/dnf.conf %}
-{% highlight shell linenos %}
-
+```bash
+!filename: /etc/dnf/dnf.conf
 [main]
 ...
 ...
 ...
 fastestmirror=True
 deltarpm=True
-{% endhighlight %}
+```
 
 Kemudian, tambahkan "kode negara" `&country=ID` di belakang meta link repository yang ada di `/etc/yum.repos.d/`.
 
 Repository utamanya adalah `fedora-updates.repo`.
 
-{% highlight_caption /etc/yum.repos.d/fedora-updates.repo %}
-{% highlight shell linenos %}
+```bash
+!filename: /etc/yum.repos.d/fedora-updates.repo
 [updates]
 ...
 metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f$releasever&arch=$basearch&country=ID
@@ -141,15 +144,16 @@ metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-
 metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-f$releasever&arch=$basearch&country=ID
 ...
 ...
-{% endhighlight %}
+```
+
 
 ## Update system
 
 Lakukan refresh dan update repository dengan perintah,
 
-{% shell_term $ %}
-sudo dnf up --ref
-{% endshell_term %}
+```
+$ sudo dnf up --ref
+```
 
 **up**, adalah *short hand* dari **upgrade**.
 
@@ -157,20 +161,22 @@ sudo dnf up --ref
 
 **dnf update** dan **dnf upgrade** sama, namun konvensi terbaru sudah menggunakan **dnf upgrade**.
 
+
 ## Enable RPMFusion Repository
-Sumber: [https://docs.fedoraproject.org/en-US/quick-docs/setup_rpmfusion/](https://docs.fedoraproject.org/en-US/quick-docs/setup_rpmfusion/){:target="_blank"}
+
+Sumber: [https://docs.fedoraproject.org/en-US/quick-docs/setup_rpmfusion/](https://docs.fedoraproject.org/en-US/quick-docs/setup_rpmfusion/)
 
 Free Repository
 
-{% shell_term $ %}
-sudo dnf in https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-{% endshell_term %}
+```
+$ sudo dnf in https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+```
 
 Nonfrere Repository
 
-{% shell_term $ %}
-sudo dnf in https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-{% endshell_term %}
+```
+$ sudo dnf in https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+```
 
 Enabling Appstream data from the RPM Fusion repositories (GNOME)
 
@@ -184,9 +190,10 @@ Prerequisites
 
 Procedure
 
-{% shell_term $ %}
-sudo dnf group update core
-{% endshell_term %}
+```
+$ sudo dnf group update core
+```
+
 
 ## Install gnome-tweaks
 
@@ -194,39 +201,43 @@ GNOME Tweaks allows adjusting advanced configuration settings in GNOME 3. This i
 
 Sebelumnya, paket ini bernama `gnome-tweak-tool`.
 
-{% shell_term $ %}
-sudo dnf in gnome-tweaks
-{% endshell_term %}
+```
+$ sudo dnf in gnome-tweaks
+```
+
 
 ## gnome-extensions-app
 
 GNOME Extensions is an application for configuring and removing GNOME Shell extensions.
 
-GNOME Shell Extension sudah dipisahkan dari GNOME Tweaks, kita perlu memasang tools tambahan untuk mengatur ekstensi2 tersebut selain menggunakan web apps [https://extensions.gnome.org/local/](https://extensions.gnome.org/local/){:target="_blank"}.
+GNOME Shell Extension sudah dipisahkan dari GNOME Tweaks, kita perlu memasang tools tambahan untuk mengatur ekstensi2 tersebut selain menggunakan web apps [https://extensions.gnome.org/local/](https://extensions.gnome.org/local/).
 
-{% shell_term $ %}
-sudo dnf in gnome-extensions-app
-{% endshell_term %}
+```
+$ sudo dnf in gnome-extensions-app
+```
+
 
 ## DConf Editor
 
 Graphical tool for editing the dconf configuration database.
 
-{% shell_term $ %}
-sudo dnf in dconf-editor
-{% endshell_term %}
+```
+$ sudo dnf in dconf-editor
+```
+
 
 ## GConf Editor
 
 gconf-editor allows you to browse and modify GConf configuration sources.
 
-{% shell_term $ %}
-sudo dnf in gconf-editor
-{% endshell_term %}
+```
+$ sudo dnf in gconf-editor
+```
+
 
 ## How to disable Gnome Software autostart
 
-Sumber: [https://forums.fedoraforum.org/showthread.php?315410-How-to-disable-Gnome-Software-autostart](https://forums.fedoraforum.org/showthread.php?315410-How-to-disable-Gnome-Software-autostart){:target="_blank"}
+Sumber: [https://forums.fedoraforum.org/showthread.php?315410-How-to-disable-Gnome-Software-autostart](https://forums.fedoraforum.org/showthread.php?315410-How-to-disable-Gnome-Software-autostart)
 
 Disable `download-updates` of Gnome Software with dcof-editor.
 
@@ -236,25 +247,26 @@ download-updates=false
 ```
 
 Disable autostart gnome-software service.
-Sumber: [https://askubuntu.com/questions/959353/disable-gnome-software-from-loading-at-startup](https://askubuntu.com/questions/959353/disable-gnome-software-from-loading-at-startup){:target="_blank"}
+
+Sumber: [https://askubuntu.com/questions/959353/disable-gnome-software-from-loading-at-startup](https://askubuntu.com/questions/959353/disable-gnome-software-from-loading-at-startup)
 
 1. Copy of the `/etc/xdg/autostart/gnome-software-service.desktop` file to the `~/.config/autostart/` directory.
-
 2. Open the copied `.desktop` file with a text editor and remove the `NoDisplay=true`
-
 3. Now GNOME Software should appear in your Startup Applications list. Disable it. Alternatively, you may append an `X-GNOME-Autostart-enabled=false`
+
 
 ## Disable Super+P on GNOME for Switch Monitor by default
 
-Sumber: [https://askubuntu.com/a/1038869/777616](https://askubuntu.com/a/1038869/777616){:target="_blank"}
+Sumber: [https://askubuntu.com/a/1038869/777616](https://askubuntu.com/a/1038869/777616)
+
 
 ## Development Group Packages
 
 These tools include general development tools such as git and CVS.
 
-{% shell_term $ %}
-sudo dnf group install "Development Tools"
-{% endshell_term %}
+```
+$ sudo dnf group install "Development Tools"
+```
 
 <details markdown="1" style="width:100%;">
 <summary style="cursor:pointer;">Detail packages</summary>
@@ -309,9 +321,10 @@ sudo dnf group install "Development Tools"
 ```
 </details>
 
+
 ## Tilix
 
-Official site: [https://github.com/gnunn1/tilix](https://github.com/gnunn1/tilix){:target="_blank"}
+Official site: [https://github.com/gnunn1/tilix](https://github.com/gnunn1/tilix)
 
 Tilix is an advanced GTK3 tiling terminal emulator that follows the Gnome Human Interface Guidelines.
 
@@ -331,9 +344,10 @@ Tilix is an advanced GTK3 tiling terminal emulator that follows the Gnome Human 
 - Supports notifications when processes are completed out of view
 </details>
 
-{% shell_term $ %}
-sudo dnf in tilix
-{% endshell_term %}
+```
+$ sudo dnf in tilix
+```
+
 
 ## NetworkManager-tui
 
@@ -341,13 +355,14 @@ Kalau tidak terbiasa menggunakan `nmcli` (command line tools yang sudah included
 
 Berbeda dengan Arch Linux, package NetworkManager menyediakan `nmcli` dan `nmtui`. Di Fedora, NetworkManager hanya menyediakan `nmcli`. Kita perlu memasang package NetworkManager-tui untuk dapat menggunakan `nmtui`.
 
-Official site: [https://networkmanager.dev/](https://networkmanager.dev/){:target="_blank"}
+Official site: [https://networkmanager.dev/](https://networkmanager.dev/)
 
 This adds a curses-based "TUI" (Text User Interface) to NetworkManager, to allow performing some of the operations supported by nm-connection-editor and nm-applet in a non-graphical environment.
 
-{% shell_term $ %}
-sudo dnf in NetworkManager-tui
-{% endshell_term %}
+```
+$ sudo dnf in NetworkManager-tui
+```
+
 
 ## Install Vim
 
@@ -355,89 +370,98 @@ Fedora Workstation sudah preinstalled `vim-mimimal` dengan file binary bernama `
 
 Karena saya lebih sering menggunakan Neovim, maka saya tidak akan memasang paket `vim`.
 
+
 ## htop
 
-Official site: [http://hisham.hm/htop/](http://hisham.hm/htop/){:target="_blank"}
+Official site: [http://hisham.hm/htop/](http://hisham.hm/htop/)
 
 htop is an interactive text-mode process viewer for Linux, similar to top.
 
-{% shell_term $ %}
-sudo dnf in htop
-{% endshell_term %}
+```
+$ sudo dnf in htop
+```
+
 
 ## iftop
 
-Official site: [http://www.ex-parrot.com/~pdw/iftop/](http://www.ex-parrot.com/~pdw/iftop/){:target="_blank"}
+Official site: [http://www.ex-parrot.com/~pdw/iftop/](http://www.ex-parrot.com/~pdw/iftop/)
 
 iftop does for network usage what top(1) does for CPU usage. It listens to network traffic on a named interface and displays a table of current bandwidth usage by pairs of hosts. Handy for answering the question "why is our ADSL link so slow?".
 
-{% shell_term $ %}
-sudo dnf in iftop
-{% endshell_term %}
+```
+$ sudo dnf in iftop
+```
+
 
 ## iperf
 
-Official site: [http://sourceforge.net/projects/iperf2](http://sourceforge.net/projects/iperf2){:target="_blank"}
+Official site: [http://sourceforge.net/projects/iperf2](http://sourceforge.net/projects/iperf2)
 
 Iperf is a tool to measure maximum TCP bandwidth, allowing the tuning of various parameters and UDP characteristics. Iperf reports bandwidth, delay jitter, datagram loss.
 
-{% shell_term $ %}
-sudo dnf in iperf
-{% endshell_term %}
+```
+$ sudo dnf in iperf
+```
+
 
 ## nmap
 
-Official site: [http://nmap.org/](http://nmap.org/){:target="_blank"}
+Official site: [http://nmap.org/](http://nmap.org/)
 
 Nmap is a utility for network exploration or security auditing. It supports ping scanning (determine which hosts are up), many port scanning techniques (determine what services the hosts are offering), and TCP/IP fingerprinting (remote host operating system identification). Nmap also offers flexible target and port specification, decoy scanning, determination of TCP sequence predictability characteristics, reverse-identd scanning, and more.
 
-{% shell_term $ %}
-sudo dnf in nmap
-{% endshell_term %}
+```
+$ sudo dnf in nmap
+```
+
 
 ## nmon
 
-Official site: [http://nmon.sourceforge.net](http://nmon.sourceforge.net){:target="_blank"}
+Official site: [http://nmon.sourceforge.net](http://nmon.sourceforge.net)
 
 nmon is a systems administrator, tuner, benchmark tool, which provides information about CPU, disks, network, etc., all in one view.
 
-{% shell_term $ %}
-sudo dnf in nmon
-{% endshell_term %}
+```
+$ sudo dnf in nmon
+```
+
 
 ## wavemon
 
-Official site: [https://github.com/uoaerg/wavemon](https://github.com/uoaerg/wavemon){:target="_blank"}
+Official site: [https://github.com/uoaerg/wavemon](https://github.com/uoaerg/wavemon)
 
 wavemon is a wireless device monitoring application that allows you to watch all important information like device configuration, encryption, and power management parameters and network information at once. Adaptive level bargraphs for link quality, signal/noise strength and signal-to-noise ratio. The customizeable "level alarm" feature that notices the user of changes in signal level strength audibly and/or visually. wavemon is able to list of access points in range and shows full-screen level histogram displaying signal/noise levels and SNR.
 
-{% shell_term $ %}
-sudo dnf in wavemon
-{% endshell_term %}
+```
+$ sudo dnf in wavemon
+```
+
 
 ## nethogs
 
-Official site: [https://github.com/raboof/nethogs/](https://github.com/raboof/nethogs/){:target="_blank"}
+Official site: [https://github.com/raboof/nethogs/](https://github.com/raboof/nethogs/)
 
 NetHogs is a small "net top" tool. Instead of breaking the traffic down per protocol or per subnet, like most such tools do, it groups bandwidth by process and does not rely on a special kernel module to be loaded. So if there's suddenly a lot of network traffic, you can fire up NetHogs and immediately see which PID is causing this, and if it's some kind of spinning process, kill it.
 
-{% shell_term $ %}
-sudo dnf in nethogs
-{% endshell_term %}
+```
+$ sudo dnf in nethogs
+```
+
 
 ## Glances
 
-Official site: [https://github.com/nicolargo/glances](https://github.com/nicolargo/glances){:target="_blank"}
+Official site: [https://github.com/nicolargo/glances](https://github.com/nicolargo/glances)
 
 Glances is a CLI curses based monitoring tool for both GNU/Linux and BSD. Glances uses the PsUtil library to get information from your system.
 
-{% shell_term $ %}
-sudo dnf in glances
-{% endshell_term %}
+```
+$ sudo dnf in glances
+```
+
 
 ## Zenith
 
-Official site: [https://github.com/bvaisvil/zenith](https://github.com/bvaisvil/zenith){:target="_blank"}
+Official site: [https://github.com/bvaisvil/zenith](https://github.com/bvaisvil/zenith)
 
 Zenith - sort of like top or htop but with zoom-able charts, CPU, GPU, network, and disk usage.
 
@@ -445,182 +469,198 @@ Zenith - sort of like top or htop but with zoom-able charts, CPU, GPU, network, 
 
 Deps,
 
-{% shell_term $ %}
-sudo dnf in rust
-sudo dnf in rust-std-static
-sudo dnf in cargo
-{% endshell_term %}
+```
+$ sudo dnf in rust
+$ sudo dnf in rust-std-static
+$ sudo dnf in cargo
+```
 
-{% shell_term $ %}
-git clone https://github.com/bvaisvil/zenith
-cd zenith
-make
-sudo make install
-{% endshell_term %}
+```
+$ git clone https://github.com/bvaisvil/zenith
+$ cd zenith
+$ make
+$ sudo make install
+```
+
 
 ## vizex
 
-Official site: [https://github.com/bexxmodd/vizex](https://github.com/bexxmodd/vizex){:target="_blank"}
+Official site: [https://github.com/bexxmodd/vizex](https://github.com/bexxmodd/vizex)
 
 Visualize disk space and disk usage in your UNIX\Linux terminal.
 
 vizex is the terminal program for the UNIX/Linux systems which helps the user to visualize the disk space usage for every partition and media on the user's machine. vizex is highly customizable and can fit any user's taste and preferences.
 
-{% shell_term $ %}
-pip install --user vizex
-{% endshell_term %}
+```
+$ pip install --user vizex
+```
+
 
 ## LM Sensors
 
-Official site: [http://github.com/lm-sensors/lm-sensors/](http://github.com/lm-sensors/lm-sensors/){:target="_blank"}
+Official site: [http://github.com/lm-sensors/lm-sensors/](http://github.com/lm-sensors/lm-sensors/)
 
 The lm_sensors package includes a collection of modules for general SMBus access and hardware monitoring.
 
-{% shell_term $ %}
-sudo dnf in lm_sensors
-{% endshell_term %}
+```
+$ sudo dnf in lm_sensors
+```
+
 
 ## Neofetch
 
-Official site: [https://github.com/dylanaraps/neofetch](https://github.com/dylanaraps/neofetch){:target="_blank"}
+Official site: [https://github.com/dylanaraps/neofetch](https://github.com/dylanaraps/neofetch)
 
 Neofetch displays information about your system next to an image, your OS logo, or any ASCII file of your choice. The main purpose of Neofetch is to be used in screenshots to show other users what OS/distribution you're running, what theme/icons you're using and more.
 
-{% shell_term $ %}
-sudo dnf in w3m-img
-{% endshell_term %}
+```
+$ sudo dnf in w3m-img
+```
 
-{% shell_term $ %}
-sudo dnf in neofetch
-{% endshell_term %}
+```
+$ sudo dnf in neofetch
+```
+
 
 ## Sound Converter
 
-Official site: [http://soundconverter.org](http://soundconverter.org){:target="_blank"}
+Official site: [http://soundconverter.org](http://soundconverter.org)
 
 SoundConverter is the leading audio file converter for the GNOME Desktop. It reads anything GStreamer can read (Ogg Vorbis, AAC, MP3, FLAC, WAV, AVI, MPEG, MOV, M4A, AC3, DTS, ALAC, MPC, Shorten, APE, SID, MOD, XM, S3M, etc...), and writes to Opus, Ogg Vorbis, FLAC, WAV, AAC, and MP3 files, or use any GNOME Audio Profile.
 
 SoundConverter aims to be simple to use, and very fast. Thanks to its multithreaded design, it will use as many cores as possible to speed up the conversion. It can also extract the audio from videos.
 
-{% shell_term $ %}
-sudo dnf in soundconverter
-{% endshell_term %}
+```
+$ sudo dnf in soundconverter
+```
+
 
 ## Audacity
 
-Official site: [https://www.audacityteam.org/](https://www.audacityteam.org/){:target="_blank"}
+Official site: [https://www.audacityteam.org/](https://www.audacityteam.org/)
 
 Audacity is a cross-platform multitrack audio editor. It allows you to record sounds directly or to import files in various formats. It features a few simple effects, all of the editing features you should need, and unlimited undo. The GUI was built with wxWidgets and the audio I/O supports PulseAudio, OSS and ALSA under Linux.
 
-{% shell_term $ %}
-sudo dnf in audacity
-{% endshell_term %}
+```
+$ sudo dnf in audacity
+```
+
 
 ##  Audacious
 
-Official site: [https://audacious-media-player.org/](https://audacious-media-player.org/){:target="_blank"}
+Official site: [https://audacious-media-player.org/](https://audacious-media-player.org/)
 
 Audacious is an advanced audio player. It is free, lightweight, currently based on GTK+ 2, runs on Linux and many other *nix platforms and is focused on audio quality and supporting a wide range of audio codecs. It still features an alternative skinned user interface (based on Winamp 2.x skins). Historically, it started as a fork of Beep Media Player (BMP), which itself forked from XMMS.
 
-{% shell_term $ %}
-sudo dnf in audacious
-{% endshell_term %}
+```
+$ sudo dnf in audacious
+```
+
 
 ## pass
 
-Official site: [http://zx2c4.com/projects/password-store/](http://zx2c4.com/projects/password-store/){:target="_blank"}
+Official site: [http://zx2c4.com/projects/password-store/](http://zx2c4.com/projects/password-store/)
 
 Stores, retrieves, generates, and synchronizes passwords securely using gpg and git.
 
-{% shell_term $ %}
-sudo dnf in pass
-{% endshell_term %}
+```
+$ sudo dnf in pass
+```
+
 
 ## pwgen
 
-Official site: [http://sf.net/projects/pwgen](http://sf.net/projects/pwgen){:target="_blank"}
+Official site: [http://sf.net/projects/pwgen](http://sf.net/projects/pwgen)
 
 pwgen generates random, meaningless but pronounceable passwords. These passwords contain either only lowercase letters, or upper and lower case, or upper case, lower case and numeric digits. Upper case letters and numeric digits are placed in a way that eases memorizing the password.
 
-{% shell_term $ %}
-sudo dnf in pwgen
-{% endshell_term %}
+```
+$ sudo dnf in pwgen
+```
+
 
 ## hashcat
 
-Official site: [https://github.com/hashcat/hashcat](https://github.com/hashcat/hashcat){:target="_blank"}
+Official site: [https://github.com/hashcat/hashcat](https://github.com/hashcat/hashcat)
 
 Hashcat is the world's fastest and most advanced password recovery utility, supporting five unique modes of attack for over 200 highly-optimized hashing algorithms. hashcat currently supports CPUs, GPUs, and other hardware accelerators on Linux, Windows, and Mac OS, and has facilities to help enable distributed password cracking.
 
-{% shell_term $ %}
-sudo dnf in hashcat
-{% endshell_term %}
+```
+$ sudo dnf in hashcat
+```
+
 
 ## FileRoller
 
-Official site: [https://wiki.gnome.org/Apps/FileRoller](https://wiki.gnome.org/Apps/FileRoller){:target="_blank"}
+Official site: [https://wiki.gnome.org/Apps/FileRoller](https://wiki.gnome.org/Apps/FileRoller)
 
 File Roller is an application for creating and viewing archives files, such as tar or zip files.
 
-{% shell_term $ %}
-sudo dnf in file-roller
-{% endshell_term %}
+```
+$ sudo dnf in file-roller
+```
+
 
 ## Bash Completion
 
-Official site: [https://github.com/scop/bash-completion](https://github.com/scop/bash-completion){:target="_blank"}
+Official site: [https://github.com/scop/bash-completion](https://github.com/scop/bash-completion)
 
 bash-completion is a collection of shell functions that take advantage of the programmable completion feature of bash.
 
-{% shell_term $ %}
-sudo dnf in bash-completion
-{% endshell_term %}
+```
+$ sudo dnf in bash-completion
+```
+
 
 ## Change ZSH to your shell
 
-Official site: [http://zsh.sourceforge.net/](http://zsh.sourceforge.net/){:target="_blank"}
+Official site: [http://zsh.sourceforge.net/](http://zsh.sourceforge.net/)
 
 The zsh shell is a command interpreter usable as an interactive login shell and as a shell script command processor. Zsh resembles the ksh shell (the Korn shell), but includes many enhancements. Zsh supports command line editing, built-in spelling correction, programmable command completion, shell functions (with autoloading), a history mechanism, and more.
 
-{% shell_term $ %}
-sudo dnf in zsh
-sudo dnf in util-linux-user
-chsh -s $(which zsh)
-{% endshell_term %}
+```
+$ sudo dnf in zsh
+$ sudo dnf in util-linux-user
+$ chsh -s $(which zsh)
+```
+
 
 ## Arandr
 
-Official site: [http://christian.amsuess.com/tools/arandr/](http://christian.amsuess.com/tools/arandr/){:target="_blank"}
+Official site: [http://christian.amsuess.com/tools/arandr/](http://christian.amsuess.com/tools/arandr/)
 
 ARandR is designed to provide a simple visual front end for XRandR 1.2/1.3. Relative monitor positions are shown graphically and can be changed in a drag-and-drop way.
 
-{% shell_term $ %}
-sudo dnf in arandr
-{% endshell_term %}
+```
+$ sudo dnf in arandr
+```
+
 
 ## xcalib
 
-Official site: [http://xcalib.sourceforge.net/](http://xcalib.sourceforge.net/){:target="_blank"}
+Official site: [http://xcalib.sourceforge.net/](http://xcalib.sourceforge.net/)
 
 Tiny monitor calibration loader for X.org.
 
-{% shell_term $ %}
-sudo dnf in xcalib
-{% endshell_term %}
+```
+$ sudo dnf in xcalib
+```
+
 
 ## GIT-SVN
 
-Official site: [https://git-scm.com/](https://git-scm.com/){:target="_blank"}
+Official site: [https://git-scm.com/](https://git-scm.com/)
 
 Git tools for interacting with Subversion repositories.
 
-{% shell_term $ %}
-sudo dnf in git-svn
-{% endshell_term %}
+```
+$ sudo dnf in git-svn
+```
+
 
 ## TIG
 
-Official site: [https://jonas.github.io/tig/](https://jonas.github.io/tig/){:target="_blank"}
+Official site: [https://jonas.github.io/tig/](https://jonas.github.io/tig/)
 
 Tig is a repository browser for the git revision control system that additionally can act as a pager for output from various git commands.
 
@@ -628,325 +668,344 @@ When browsing repositories, it uses the underlying git commands to present the u
 
 Using it as a pager, it will display input from stdin and colorize it.
 
-{% shell_term $ %}
-sudo dnf in tig
-{% endshell_term %}
+```
+$ sudo dnf in tig
+```
+
 
 ## Git-Credential-Libsecret
 
-Official site: [https://git-scm.com/](https://git-scm.com/){:target="_blank"}
+Official site: [https://git-scm.com/](https://git-scm.com/)
 
 Git helper for accessing credentials via libsecret.
 
-Sumber: [https://discussion.fedoraproject.org/t/attention-git-credential-libsecret-for-storing-git-passwords-in-the-gnome-keyring-is-now-an-extra-package/18275](https://discussion.fedoraproject.org/t/attention-git-credential-libsecret-for-storing-git-passwords-in-the-gnome-keyring-is-now-an-extra-package/18275){:target="_blank"}
+Sumber: [https://discussion.fedoraproject.org/t/attention-git-credential-libsecret-for-storing-git-passwords-in-the-gnome-keyring-is-now-an-extra-package/18275](https://discussion.fedoraproject.org/t/attention-git-credential-libsecret-for-storing-git-passwords-in-the-gnome-keyring-is-now-an-extra-package/18275)
 
-{% shell_term $ %}
-sudo dnf in git-credential-libsecret
-{% endshell_term %}
+```
+$ sudo dnf in git-credential-libsecret
+```
 
-{% highlight_caption $HOME/.gitconfig %}
-{% highlight shell linenos %}
+```bash
+!filename: $HOME/.gitconfig
 ...
 
 [credential]
 	helper = /usr/libexec/git-core/git-credential-libsecret
-{% endhighlight %}
+```
+
 
 ## SSH AskPass
 
-Official site: [http://lxqt.org/](http://lxqt.org/){:target="_blank"}
+Official site: [http://lxqt.org/](http://lxqt.org/)
 
 Askpass openssh transition dialog for LXQt desktop suite.
 
-{% shell_term $ %}
-sudo dnf in lxqt-openssh-askpass
-{% endshell_term %}
+```
+$ sudo dnf in lxqt-openssh-askpass
+```
 
 Saya memilih menggunakan versi **lxqt-openssh-askpass.x86_64**, daripada versi **openssh-askpass.x86_64** dan **x11-ssh-askpass.x86_64**.
 
+
 ## Transmission Daemon
 
-Official site: [http://www.transmissionbt.com](http://www.transmissionbt.com){:target="_blank"}
+Official site: [http://www.transmissionbt.com](http://www.transmissionbt.com)
 
 Transmission BitTorrent client daemon.
 
-{% shell_term $ %}
-sudo dnf in transmission-daemon
-{% endshell_term %}
+```
+$ sudo dnf in transmission-daemon
+```
+
 
 ## tremc
 
-Official site: [https://github.com/tremc/tremc](https://github.com/tremc/tremc){:target="_blank"}
+Official site: [https://github.com/tremc/tremc](https://github.com/tremc/tremc)
 
 Curses interface for transmission
 
-{% shell_term $ %}
-git clone https://github.com/tremc/tremc.git
-cd tremc
-sudo make install
-{% endshell_term %}
+```
+$ git clone https://github.com/tremc/tremc.git
+$ cd tremc
+$ sudo make install
+```
+
 
 ## YouTube-DL
 
-Official site: [https://yt-dl.org](https://yt-dl.org){:target="_blank"}
+Official site: [https://yt-dl.org](https://yt-dl.org)
 
 Small command-line program to download videos from YouTube and other sites.
 
-{% shell_term $ %}
-sudo dnf in youtube-dl
-{% endshell_term %}
+```
+$ sudo dnf in youtube-dl
+```
+
 
 ## yt-dlp
 
-Official site: [https://github.com/yt-dlp/yt-dlp](https://github.com/yt-dlp/yt-dlp){:target="_blank"}
+Official site: [https://github.com/yt-dlp/yt-dlp](https://github.com/yt-dlp/yt-dlp)
 
 yt-dlp is a command-line program to download videos from many different online video platforms, such as youtube.com. The project is a fork of youtube-dl with additional features and fixes.
 
-{% shell_term $ %}
-sudo dnf in yt-dlp
-{% endshell_term %}
+```
+$ sudo dnf in yt-dlp
+```
+
 
 ## Newsboat (RSS Reader)
 
-Official site: [https://www.newsboat.org](https://www.newsboat.org){:target="_blank"}
+Official site: [https://www.newsboat.org](https://www.newsboat.org)
 
 Newsboat is a fork of Newsbeuter, an RSS/Atom feed reader for the text console.
 
-{% shell_term $ %}
-sudo dnf in newsboat
-{% endshell_term %}
+```
+$ sudo dnf in newsboat
+```
+
 
 ## Ranger File Manager
 
-Official site: [https://ranger.github.io/](https://ranger.github.io/){:target="_blank"}
+Official site: [https://ranger.github.io/](https://ranger.github.io/)
 
 Ranger is a free console file manager that gives you greater flexibility and a good overview of your files without having to leave your *nix console. It visualizes the directory tree in two dimensions: the directory hierarchy on one, lists of files on the other, with a preview to the right so you know where you'll be going.
 
-{% shell_term $ %}
-sudo dnf in ranger
-sudo dnf in python3-devel
-sudo dnf in libX11-devel
-sudo dnf in libXext-devel
-pip install --user ueberzug
-{% endshell_term %}
+```
+$ sudo dnf in ranger
+$ sudo dnf in python3-devel
+$ sudo dnf in libX11-devel
+$ sudo dnf in libXext-devel
+$ pip install --user ueberzug
+```
 
 For enhanced file previews.
 
-{% shell_term $ %}
-sudo dnf in mediainfo
-sudo dnf in highlight
-sudo dnf in atool
-sudo dnf in bsdtar
-sudo dnf in unrar
-sudo dnf in p7zip
-sudo dnf in odt2txt
-{% endshell_term %}
+```
+$ sudo dnf in mediainfo
+$ sudo dnf in highlight
+$ sudo dnf in atool
+$ sudo dnf in bsdtar
+$ sudo dnf in unrar
+$ sudo dnf in p7zip
+$ sudo dnf in odt2txt
+```
+
 
 ## Samba
 
-Official site: [https://www.samba.org](https://www.samba.org){:target="_blank"}
+Official site: [https://www.samba.org](https://www.samba.org)
 
 Samba is the standard Windows interoperability suite of programs for Linux and Unix.
 
-Sumber: [https://docs.fedoraproject.org/en-US/quick-docs/samba/](https://docs.fedoraproject.org/en-US/quick-docs/samba/){:target="_blank"}
+Sumber: [https://docs.fedoraproject.org/en-US/quick-docs/samba/](https://docs.fedoraproject.org/en-US/quick-docs/samba/)
 
 Install dan enable samba service.
 
-{% shell_term $ %}
-sudo dnf in samba
-sudo systemctl enable smb --now
-firewall-cmd --get-active-zones
-sudo firewall-cmd --permanent --zone=FedoraWorkstation --add-service=samba
-sudo firewall-cmd --reload
-{% endshell_term %}
+```
+$ sudo dnf in samba
+$ sudo systemctl enable smb --now
+$ firewall-cmd --get-active-zones
+$ sudo firewall-cmd --permanent --zone=FedoraWorkstation --add-service=samba
+$ sudo firewall-cmd --reload
+```
 
 Membuat user samba.
 
-{% shell_term $ %}
-sudo smbpasswd -a bandithijo
-{% endshell_term %}
+```
+$ sudo smbpasswd -a bandithijo
+```
 
 Install samba support for file manager gui.
 
-{% shell_term $ %}
-sudo dnf in gvfs-smb
-{% endshell_term %}
+```
+$ sudo dnf in gvfs-smb
+```
+
 
 ## Install Opus Audio Codec
 
-{% shell_term $ %}
-sudo dnf in libogg
-sudo dnf in opus-tools
-{% endshell_term %}
+```
+$ sudo dnf in libogg
+$ sudo dnf in opus-tools
+```
 
 (RPMFusion - Nonfree)
 
-{% shell_term $ %}
-sudo dnf in audacious-plugins-freeworld-ffaudio
-{% endshell_term %}
+```
+$ sudo dnf in audacious-plugins-freeworld-ffaudio
+```
+
 
 ## Virt-Manager (libvirt)
 
-Official site: [https://virt-manager.org/](https://virt-manager.org/){:target="_blank"}
+Official site: [https://virt-manager.org/](https://virt-manager.org/)
 
 Virtual Machine Manager provides a graphical tool for administering virtual machines for KVM, Xen, and LXC. Start, stop, add or remove virtual devices, connect to a graphical or serial console, and see resource usage statistics for existing VMs on local or remote machines. Uses libvirt as the backend management API.
 
-Sumber: [https://fedoramagazine.org/full-virtualization-system-on-fedora-workstation-30/](https://fedoramagazine.org/full-virtualization-system-on-fedora-workstation-30/){:target="_blank"}
+Sumber: [https://fedoramagazine.org/full-virtualization-system-on-fedora-workstation-30/](https://fedoramagazine.org/full-virtualization-system-on-fedora-workstation-30/)
 
-Sumber: [https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-virtualization/](https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-virtualization/){:target="_blank"}
+Sumber: [https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-virtualization/](https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-virtualization/)
 
 Cek apakah CPU spport untuk virtualization,
 
-{% shell_term $ %}
-egrep '^flags.*(vmx|svm)' /proc/cpuinfo
-{% endshell_term %}
+```
+$ egrep '^flags.*(vmx|svm)' /proc/cpuinfo
+```
 
 Kalau tidak menampilkan apapun, berarti CPU yang kamu gunakan tidak mendukung fitur virtualization.
 
 Cek group package untuk virtualization.
 
-{% shell_term $ %}
-dnf groupinfo virtualization
-{% endshell_term %}
+```
+$ dnf groupinfo virtualization
+```
 
 Install dengan cara,
 
-{% shell_term $ %}
-sudo dnf in @virtualization
-{% endshell_term %}
+```
+$ sudo dnf in @virtualization
+```
 
 Alternatively, to install the mandatory, default, and optional packages, run:
 
-{% shell_term $ %}
-sudo dnf group install --with-optional virtualization
-{% endshell_term %}
+```
+$ sudo dnf group install --with-optional virtualization
+```
 
 Verifikasi KVM kernel module berhasil diload.
 
-{% shell_term $ %}
-lsmod | grep kvm
-{% endshell_term %}
+```
+$ lsmod | grep kvm
+```
 
 Edit file `/etc/libvirt/libvirtd.conf`
 
-{% shell_term $ %}
-sudo vi /etc/libvirt/libvirtd.conf
-{% endshell_term %}
+```
+$ sudo vi /etc/libvirt/libvirtd.conf
+```
 
 Set the domain socket group ownership to libvirt
 
-{% highlight_caption /etc/libvirt/libvirtd.conf %}
-{% highlight shell linenos %}
+```bash
+!filename: /etc/libvirt/libvirtd.conf
 ...
 unix_sock_group = "libvirt"
 ...
-{% endhighlight %}
+```
 
 Adjust the UNIX socket permissions for the R/W socket
 
-{% highlight_caption /etc/libvirt/libvirtd.conf %}
-{% highlight shell linenos %}
+```bash
+!filename: /etc/libvirt/libvirtd.conf
 ...
 unix_sock_rw_perms = "0770"
 ...
-{% endhighlight %}
+```
 
 Add user to libvirt gorup
 
-{% shell_term $ %}
-sudo usermod -a -G libvirt $(whoami)
-{% endshell_term %}
+```
+$ sudo usermod -a -G libvirt $(whoami)
+```
 
 This adds the current user to the group. You must log out and log in to apply the changes.
 
+
 ## firefox-dev
 
-Official site: [https://www.mozilla.org/en-US/firefox/developer/](https://www.mozilla.org/en-US/firefox/developer/){:target="_blank"}
+Official site: [https://www.mozilla.org/en-US/firefox/developer/](https://www.mozilla.org/en-US/firefox/developer/)
 
-copr source: [https://copr.fedorainfracloud.org/coprs/the4runner/firefox-dev/](https://copr.fedorainfracloud.org/coprs/the4runner/firefox-dev/){:target="_blank"}
+copr source: [https://copr.fedorainfracloud.org/coprs/the4runner/firefox-dev/](https://copr.fedorainfracloud.org/coprs/the4runner/firefox-dev/)
 
-{% shell_term $ %}
-sudo dnf copr enable the4runner/firefox-dev
-sudo dnf in firefox-dev
-{% endshell_term %}
+```
+$ sudo dnf copr enable the4runner/firefox-dev
+$ sudo dnf in firefox-dev
+```
+
 
 ## Chromium browser
 
-{% shell_term $ %}
-sudo dnf in chromium
-sudo dnf in chromium-libs-media-freeworld
-{% endshell_term %}
+```
+$ sudo dnf in chromium
+$ sudo dnf in chromium-libs-media-freeworld
+```
 
 If Chromium can't play video, replace chromium with chromium-freeworld by RPMFusion.
 
 chromium-freeworld is an open-source web browser, powered by WebKit (Blink).
 
-{% shell_term $ %}
-sudo dnf swap chromium chromium-freeworld
-{% endshell_term %}
+```
+$ sudo dnf swap chromium chromium-freeworld
+```
+
 
 ## Chromedriver
 
 WebDriver is an open source tool for automated testing of webapps across many browsers. It provides capabilities for navigating to web pages, user input, JavaScript execution, and more. ChromeDriver is a standalone server which implements WebDriver's wire protocol for Chromium. It is being developed by members of the Chromium and WebDriver teams.
 
-{% shell_term $ %}
-sudo dnf in chromedriver
-{% endshell_term %}
+```
+$ sudo dnf in chromedriver
+```
+
 
 ## Google Chrome
-Sumber: [https://docs.fedoraproject.org/en-US/quick-docs/installing-chromium-or-google-chrome-browsers/#installing-chrome](https://docs.fedoraproject.org/en-US/quick-docs/installing-chromium-or-google-chrome-browsers/#installing-chrome){:target="_blank"}
 
-Click the following link: [https://www.google.com/chrome/browser/desktop/index.html](https://www.google.com/chrome/browser/desktop/index.html){:target="_blank"}
+Sumber: [https://docs.fedoraproject.org/en-US/quick-docs/installing-chromium-or-google-chrome-browsers/#installing-chrome](https://docs.fedoraproject.org/en-US/quick-docs/installing-chromium-or-google-chrome-browsers/#installing-chrome)
+
+Click the following link: [https://www.google.com/chrome/browser/desktop/index.html](https://www.google.com/chrome/browser/desktop/index.html)
 
 Click on Download Chrome and select Fedora 64 or 32 bits download and install the repo.
 
-{% shell_term $ %}
-sudo dnf in google-chrome-stable_current_x86_64.rpm
-{% endshell_term %}
+```
+$ sudo dnf in google-chrome-stable_current_x86_64.rpm
+```
+
 
 ## Qutebrowser
 
-Official site: [http://www.qutebrowser.org](http://www.qutebrowser.org){:target="_blank"}
+Official site: [http://www.qutebrowser.org](http://www.qutebrowser.org)
 
 qutebrowser is a keyboard-focused browser with a minimal GUI. It’s based on Python, PyQt5 and QtWebEngine and free software, licensed under the GPL. It was inspired by other browsers/addons like dwb and Vimperator/Pentadactyl.
 
-{% shell_term $ %}
-sudo dnf in qutebrowser
-{% endshell_term %}
+```
+$ sudo dnf in qutebrowser
+```
 
 Install Breave adblock,
 
-{% shell_term $ %}
-pip install --user adblock
-{% endshell_term %}
+```
+$ pip install --user adblock
+```
 
 Kemudian, update list dengan `:adblock-update`.
 
-Additional hints, Sumber: [https://github.com/qutebrowser/qutebrowser/blob/master/doc/install.asciidoc#on-fedora](https://github.com/qutebrowser/qutebrowser/blob/master/doc/install.asciidoc#on-fedora){:target="_blank"}
+Additional hints, Sumber: [https://github.com/qutebrowser/qutebrowser/blob/master/doc/install.asciidoc#on-fedora](https://github.com/qutebrowser/qutebrowser/blob/master/doc/install.asciidoc#on-fedora)
 
 Fedora only ships free software in the repositories. To be able to play videos with proprietary codecs with QtWebEngine, you will need to install an additional package from the RPM Fusion Free repository.
 
-{% shell_term $ %}
-sudo dnf in qt5-qtwebengine-freeworld
-{% endshell_term %}
+```
+$ sudo dnf in qt5-qtwebengine-freeworld
+```
+
 
 ## lynx
 
-Official site: [http://lynx.browser.org/](http://lynx.browser.org/){:target="_blank"}
+Official site: [http://lynx.browser.org/](http://lynx.browser.org/)
 
 Lynx is a text-based Web browser. Lynx does not display any images, but it does support frames, tables, and most other HTML tags. One advantage Lynx has over graphical browsers is speed; Lynx starts and exits quickly and swiftly displays web pages.
 
-{% shell_term $ %}
-sudo dnf  in lynx
-{% endshell_term %}
+```
+$ sudo dnf  in lynx
+```
+
 
 ## Setup Default Browser
 
 Cek default browser yang digunakan saat ini.
 
-{% shell_term $ %}
-xdg-settings get default-web-browser
-{% endshell_term %}
+```
+$ xdg-settings get default-web-browser
+```
 
 ```
 google-chrome.desktop
@@ -954,99 +1013,105 @@ google-chrome.desktop
 
 Kalau mau diganti ke qutebrowser,
 
-{% shell_term $ %}
-xdg-settings set default-web-browser org.qutebrowser.qutebrowser.desktop
-{% endshell_term %}
+```
+$ xdg-settings set default-web-browser org.qutebrowser.qutebrowser.desktop
+```
+
 
 ## Codec from RPMFusion
 
-Sumber: [https://docs.fedoraproject.org/en-US/quick-docs/assembly_installing-plugins-for-playing-movies-and-music/](https://docs.fedoraproject.org/en-US/quick-docs/assembly_installing-plugins-for-playing-movies-and-music/){:target="_blank"}
+Sumber: [https://docs.fedoraproject.org/en-US/quick-docs/assembly_installing-plugins-for-playing-movies-and-music/](https://docs.fedoraproject.org/en-US/quick-docs/assembly_installing-plugins-for-playing-movies-and-music/)
 
-{% shell_term $ %}
-sudo dnf in gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
-sudo dnf in lame\* --exclude=lame-devel
-sudo dnf group upgrade --with-optional Multimedia
-{% endshell_term %}
+```
+$ sudo dnf in gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
+$ sudo dnf in lame\* --exclude=lame-devel
+$ sudo dnf group upgrade --with-optional Multimedia
+```
+
 
 ## Another audio video support
 
-{% shell_term $ %}
-sudo dnf in ffmpegthumbnailer
-sudo dnf in rpmfusion-free-obsolete-packages
-{% endshell_term %}
+```
+$ sudo dnf in ffmpegthumbnailer
+$ sudo dnf in rpmfusion-free-obsolete-packages
+```
+
 
 ## Install FFMPEG
 
-Official site: [http://ffmpeg.org/](http://ffmpeg.org/){:target="_blank"}
+Official site: [http://ffmpeg.org/](http://ffmpeg.org/)
 
 FFmpeg is a complete and free Internet live audio and video broadcasting solution for Linux/Unix. It also includes a digital VCR. It can encode in real time in many formats including MPEG1 audio and video, MPEG4, h263, ac3, asf, avi, real, mjpeg, and flash.
 
-{% shell_term $ %}
-sudo dnf in ffmpeg
-sudo dnf in ffmpeg-libs
-sudo dnf in compat-ffmpeg28
-{% endshell_term %}
+```
+$ sudo dnf in ffmpeg
+$ sudo dnf in ffmpeg-libs
+$ sudo dnf in compat-ffmpeg28
+```
+
 
 ## Tor
 
-Official site: [https://www.torproject.org](https://www.torproject.org){:target="_blank"}
+Official site: [https://www.torproject.org](https://www.torproject.org)
 
 The Tor network is a group of volunteer-operated servers that allows people to improve their privacy and security on the Internet. Tor's users employ this network by connecting through a series of virtual tunnels rather than making a direct connection, thus allowing both organizations and individuals to share information over public networks without compromising their privacy. Along the same line, Tor is an effective censorship circumvention tool, allowing its users to reach otherwise blocked destinations or content. Tor can also be used as a building block for software developers to create new communication tools with built-in privacy features.
 
 This package contains the Tor software that can act as either a server on the Tor network, or as a client to connect to the Tor network.
 
-{% shell_term $ %}
-sudo dnf in tor
-{% endshell_term %}
+```
+$ sudo dnf in tor
+```
+
 
 ## HandBrake
 
-Official site: [http://handbrake.fr/](http://handbrake.fr/){:target="_blank"}
+Official site: [http://handbrake.fr/](http://handbrake.fr/)
 
 HandBrake is a general-purpose, free, open-source, cross-platform, multithreaded video transcoder software application. It can process most common multimedia files and any DVD or Bluray sources that do not contain any kind of copy protection.
 
 This package contains the command line version of the program.
 
-{% shell_term $ %}
-sudo dnf in handbrake
-{% endshell_term %}
+```
+$ sudo dnf in handbrake
+```
+
 
 ## MPV
 
-Official site: [https://mpv.io/](https://mpv.io/){:target="_blank"}
+Official site: [https://mpv.io/](https://mpv.io/)
 
 Mpv is a movie player based on MPlayer and mplayer2. It supports a wide variety of video file formats, audio and video codecs, and subtitle types. Special input URL types are available to read input from a variety of sources other than disk files. Depending on platform, a variety of different video and audio output methods are supported.
 
 (RPMFusion - Free)
 
-{% shell_term $ %}
-sudo dnf in mpv
-sudo dnf in celluloid
-{% endshell_term %}
+```
+$ sudo dnf in mpv
+$ sudo dnf in celluloid
+```
 
 User script that may help you steroid your mpv.
 
-1. [mpv-playlistmanager](https://github.com/jonniek/mpv-playlistmanager){:target="_blank"}
-2. [mpv-youtube-download](https://github.com/cvzi/mpv-youtube-download){:target="_blank"}
-3. [mpv-youtube-quality](https://github.com/jgreco/mpv-youtube-quality){:target="_blank"}
+1. [mpv-playlistmanager](https://github.com/jonniek/mpv-playlistmanager)
+2. [mpv-youtube-download](https://github.com/cvzi/mpv-youtube-download)
+3. [mpv-youtube-quality](https://github.com/jgreco/mpv-youtube-quality)
 
-<br>
 **Manual Build**
 
-{% shell_term $ %}
-sudo dnf in ffmpeg-devel
-{% endshell_term %}
+```
+$ sudo dnf in ffmpeg-devel
+```
 
-{% shell_term $ %}
-./bootstrap.py
-./waf configure
-./waf
-sudo ./waf install
-{% endshell_term %}
+```
+$ ./bootstrap.py
+$ ./waf configure
+$ ./waf
+$ sudo ./waf install
+```
+
 
 ## DNSCrypt-Proxy
 
-Official site: [https://github.com/jedisct1/dnscrypt-proxy](https://github.com/jedisct1/dnscrypt-proxy){:target="_blank"}
+Official site: [https://github.com/jedisct1/dnscrypt-proxy](https://github.com/jedisct1/dnscrypt-proxy)
 
 A flexible DNS proxy, with support for modern encrypted DNS protocols such as DNSCrypt v2 and DNS-over-HTTP/2.
 
@@ -1073,20 +1138,20 @@ search results on Google, Yahoo and Bing.
 - Can force outgoing connections to use TCP; useful with tunnels such as Tor.
 </details>
 
-Sumber: [https://wiki.archlinux.org/title/Systemd-resolved#Manually](https://wiki.archlinux.org/title/Systemd-resolved#Manually){:target="_blank"}
+Sumber: [https://wiki.archlinux.org/title/Systemd-resolved#Manually](https://wiki.archlinux.org/title/Systemd-resolved#Manually)
 
-{% shell_term $ %}
-sudo dnf in dnscrypt-proxy
-{% endshell_term %}
+```
+$ sudo dnf in dnscrypt-proxy
+```
 
 Edit file `/etc/dnscrypt-proxy/dnscrypt-proxy.toml`.
 
-Kemudian, definisikan `server_names=` sesuai yang kalian pergunakan. Pada contoh ini, saya menggunakan cloudflare. Daftar dari public server yang menyediakan layanan dnscrypt, dapat teman-teman lihat [**di sini**](https://dnscrypt.info/public-servers/){:target="_blank"}.
+Kemudian, definisikan `server_names=` sesuai yang kalian pergunakan. Pada contoh ini, saya menggunakan cloudflare. Daftar dari public server yang menyediakan layanan dnscrypt, dapat teman-teman lihat [**di sini**](https://dnscrypt.info/public-servers/).
 
-{% highlight_caption /etc/dnscrypt-proxy/dnscrypt-proxy.toml %}
-{% highlight shell linenos %}
+```bash
+!filename: /etc/dnscrypt-proxy/dnscrypt-proxy.toml
 server_names = ['cloudflare']
-{% endhighlight %}
+```
 
 Edit file `/etc/systemd/resolved.conf`.
 
@@ -1094,80 +1159,85 @@ Cari bagian `#DNS=` dan `#Domains=`. Uncomment dan isikan seperti di bawah ini.
 
 Atau, tambahkan saja dibagian paling bawah.
 
-{% highlight_caption /etc/systemd/resolved.conf %}
-{% highlight shell linenos %}
+```bash
+!filename: /etc/systemd/resolved.conf
 [Resolve]
 #...
 #...
 DNS=127.0.0.1
 Domains=~.
-{% endhighlight %}
+```
 
 Kemudian, restart systemd-resolved service
 
-{% shell_term $ %}
-sudo systemctl restart systemd-resolved.service
-{% endshell_term %}
+```
+$ sudo systemctl restart systemd-resolved.service
+```
 
 \* Perlu restart/reboot system.
 
+
 ## Adwaita-Qt5 theme
 
-Official site: [https://github.com/FedoraQt/adwaita-qt](https://github.com/FedoraQt/adwaita-qt){:target="_blank"}
+Official site: [https://github.com/FedoraQt/adwaita-qt](https://github.com/FedoraQt/adwaita-qt)
 
 Adwaita theme variant for applications utilizing Qt5.
 
-{% shell_term $ %}
-sudo dnf in adwaita-qt5
-{% endshell_term %}
+```
+$ sudo dnf in adwaita-qt5
+```
+
 
 ## Qt5Ct
 
-Official site: [https://sourceforge.net/projects/qt5ct/](https://sourceforge.net/projects/qt5ct/){:target="_blank"}
+Official site: [https://sourceforge.net/projects/qt5ct/](https://sourceforge.net/projects/qt5ct/)
 
 qt5ct allows users to configure Qt5 settings (theme, font, icons, etc.) under DE/WM without Qt integration.
 
-{% shell_term $ %}
-sudo dnf in qt5ct
-{% endshell_term %}
+```
+$ sudo dnf in qt5ct
+```
+
 
 ## Change default cursor on lightdm
 
-ComixCursors: [https://www.gnome-look.org/p/999996](https://www.gnome-look.org/p/999996){:target="_blank"}
+ComixCursors: [https://www.gnome-look.org/p/999996](https://www.gnome-look.org/p/999996)
 
 Change value of `/usr/share/icons/default/index.theme`
 
-{% highlight_caption /usr/share/icons/default/index.theme %}
-{% highlight shell linenos %}
+```bash
+!filename: /usr/share/icons/default/index.theme
 [Icon Theme]
 Inherits=ComixCursors-Opaque-White
-{% endhighlight %}
+```
+
 
 ## Change default cursor on GDM
 
-Sumber: [https://wiki.archlinux.org/title/GDM#Changing_the_cursor_theme](https://wiki.archlinux.org/title/GDM#Changing_the_cursor_theme){:target="_blank"}
+Sumber: [https://wiki.archlinux.org/title/GDM#Changing_the_cursor_theme](https://wiki.archlinux.org/title/GDM#Changing_the_cursor_theme)
 
 GDM disregards GNOME cursor theme settings and it also ignores the cursor theme set according to the XDG specification. To change the cursor theme used in GDM, either create the following keyfile
 
-{% highlight_caption /etc/dconf/db/gdm.d/10-cursor-settings %}
-{% highlight shell linenos %}
+```bash
+!filename: /etc/dconf/db/gdm.d/10-cursor-settings
 [org/gnome/desktop/interface]
 cursor-theme='theme-name'
-{% endhighlight %}
+```
 
 and then recompile the GDM database or alternatively log in to the GDM user and execute the following:
 
-{% shell_term $ %}
-sudo gsettings set org.gnome.desktop.interface cursor-theme 'theme-name'
-{% endshell_term %}
+```
+$ sudo gsettings set org.gnome.desktop.interface cursor-theme 'theme-name'
+```
+
 
 ## Switch Between Java Versions
 
 Memeriksa versi java yang terpasang.
 
-{% shell_term $ %}
-java -version
-{% endshell_term %}
+```
+$ java -version
+```
 
 ```
 openjdk version "11.0.13" 2021-10-19
@@ -1177,9 +1247,9 @@ OpenJDK 64-Bit Server VM 18.9 (build 11.0.13+8, mixed mode, sharing)
 
 Untuk melakukan switch antara versi Java yang terpasang.
 
-{% shell_term $ %}
-sudo alternatives --config java
-{% endshell_term %}
+```
+$ sudo alternatives --config java
+```
 
 ```
 There is 1 program that provides 'java'.
@@ -1193,113 +1263,117 @@ Enter to keep the current selection[+], or type selection number: █
 
 Kebetulan saya hanya punya 1 versi Java, yaitu Java 11 dengan OpenJDK.
 
+
 ## Neovim
 
-Official site: [https://neovim.io](https://neovim.io){:target="_blank"}
+Official site: [https://neovim.io](https://neovim.io)
 
 Neovim is a refactor - and sometimes redactor - in the tradition of Vim, which itself derives from Stevie. It is not a rewrite, but a continuation and extension of Vim. Many rewrites, clones, emulators and imitators exist; some are very clever, but none are Vim. Neovim strives to be a superset of Vim, notwithstanding some intentionally removed misfeatures; excepting those few and carefully-considered excisions, Neovim is Vim. It is built for users who want the good parts of Vim, without compromise, and more.
 
-{% shell_term $ %}
-sudo dnf in neovim
-{% endshell_term %}
+```
+$ sudo dnf in neovim
+```
+
 
 ## Neovim Nightly (build)
 
-{% shell_term $ %}
-sudo dnf in cmake
-sudo dnf in gcc-c++
-sudo dnf in luajit-devel
-sudo dnf in libtool
-sudo dnf in libvterm-devel
-{% endshell_term %}
+```
+$ sudo dnf in cmake
+$ sudo dnf in gcc-c++
+$ sudo dnf in luajit-devel
+$ sudo dnf in libtool
+$ sudo dnf in libvterm-devel
+```
 
-{% shell_term $ %}
-sudo dnf in nodejs
-sudo dnf in python3-neovim
-{% endshell_term %}
+```
+$ sudo dnf in nodejs
+$ sudo dnf in python3-neovim
+```
 
-{% shell_term $ %}
-cd ~/.local/src
-git clone https://github.com/neovim/neovim.git
-cd neovim
-make CMAKE_BUILD_TYPE=RelWithDebInfo -j$(expr nproc + 1)
-sudo make install
-{% endshell_term %}
+```
+$ cd ~/.local/src
+$ git clone https://github.com/neovim/neovim.git
+$ cd neovim
+$ make CMAKE_BUILD_TYPE=RelWithDebInfo -j$(expr nproc + 1)
+$ sudo make install
+```
 
 Rebuild.
 
-{% shell_term $ %}
-make distclean
-{% endshell_term %}
+```
+$ make distclean
+```
 
 Saya menggunakan ripgrep,
 
-Official site: [https://crates.io/crates/ripgrep](https://crates.io/crates/ripgrep){:target="_blank"}
+Official site: [https://crates.io/crates/ripgrep](https://crates.io/crates/ripgrep)
 
 Line-oriented search tool that recursively searches the current directory for a regex pattern while respecting gitignore rules. ripgrep has first class support on Windows, macOS and Linux.
 
-{% shell_term $ %}
-sudo dnf in ripgrep
-{% endshell_term %}
+```
+$ sudo dnf in ripgrep
+```
+
 
 ## PostgreSQL
 
-Official site: [http://www.postgresql.org/](http://www.postgresql.org/){:target="_blank"}
+Official site: [http://www.postgresql.org/](http://www.postgresql.org/)
 
 PostgreSQL is an advanced Object-Relational database management system (DBMS). The base postgresql package contains the client programs that you'll need to access a PostgreSQL DBMS server, as well as HTML documentation for the whole system.  These client programs can be located on the same machine as the PostgreSQL server, or on a remote machine that accesses a PostgreSQL server over a network connection.  The PostgreSQL server can be found in the postgresql-server sub-package.
 
-{% box_info %}
-<p markdown=1>Saya lebih memilih menggunakan container untuk memasang PostgreSQL.</p>
-<p markdown=1>Bisa baca catatannya di sini, [Mudah Banget! PostgreSQL dengan Podman untuk Development](/blog/postgresql-dengan-podman-untuk-development){:target="_blank"}</p>
-{% endbox_info %}
+> INFO
+> 
+> Saya lebih memilih menggunakan container untuk memasang PostgreSQL.
+> 
+> Bisa baca catatannya di sini, [Mudah Banget! PostgreSQL dengan Podman untuk Development](/blog/postgresql-dengan-podman-untuk-development)
 
-{% shell_term $ %}
-sudo dnf in postgresql-server
-{% endshell_term %}
+```
+$ sudo dnf in postgresql-server
+```
 
-{% shell_term $ %}
-sudo /usr/bin/postgresql-setup --initdb
-{% endshell_term %}
+```
+$ sudo /usr/bin/postgresql-setup --initdb
+```
 
-{% shell_term $ %}
-sudo systemctl start postgresql.service
-{% endshell_term %}
+```
+$ sudo systemctl start postgresql.service
+```
 
-{% shell_term $ %}
-sudo -iu postgres
-{% endshell_term %}
+```
+$ sudo -iu postgres
+```
 
-{% shell_term [postgres@fedora-x61 ~]$ %}
-createuser --interactive
-{% endshell_term %}
+```
+[postgres@fedora-x61 ~]$ createuser --interactive
+```
 
-<pre>
+```
 Enter name of role to add: bandithijo
 Shall the new role be a superuser? (y/n) y
-</pre>
+```
 
-{% shell_term [postgres@fedora-x61 ~]$ %}
-createdb bandithijo
-{% endshell_term %}
+```
+[postgres@fedora-x61 ~]$ createdb bandithijo
+```
 
-{% shell_term [postgres@fedora-x61 ~]$ %}
-psql
-{% endshell_term %}
+```
+[postgres@fedora-x61 ~]$ psql
+```
 
-{% shell_term postgres=# %}
-ALTER DATABASE bandithijo OWNER TO bandithijo;
-{% endshell_term %}
+```
+postgres=# ALTER DATABASE bandithijo OWNER TO bandithijo;
+```
 
 Tambahkan pada file `/var/lib/pgsql/data/pg_hba.conf`.
 
-{% highlight_caption /var/lib/pgsql/data/pg_hba.conf %}
-{% highlight shell linenos %}
+```bash
+!filename: /var/lib/pgsql/data/pg_hba.conf
 # TYPE  DATABASE        USER            ADDRESS                 METHOD
 ...
 ...
 #host   all             all              127.0.0.1/32            ident
 host    all             bandithijo       127.0.0.1/32            trust
-{% endhighlight %}
+```
 
 Or, using another way with Container.
 
@@ -1307,60 +1381,63 @@ Since, Fedora has built in container utility named as **Podman**. So, I decided 
 
 I'll use **bitnami/postgresql** container image from **quay.io**.
 
-{% shell_term # %}
-podman pull quay.io/bitnami/postgresql:13.3.0
-podman run --name postgresql --net host -v /var/lib/pgsql/data/userdata:/bitnami/postgresql/data:Z -e ALLOW_EMPTY_PASSWORD=yes bitnami/postgresql:13.3.0
-{% endshell_term %}
+```
+$ podman pull quay.io/bitnami/postgresql:13.3.0
+$ podman run --name postgresql --net host -v /var/lib/pgsql/data/userdata:/bitnami/postgresql/data:Z -e ALLOW_EMPTY_PASSWORD=yes bitnami/postgresql:13.3.0
+```
 
 postgresql container imge from bitnami is set **User: 1001**. So, for convenient purposes,
 
-{% shell_term $ %}
-sudo chown -R 1001:1001 /var/lib/pgsql
-{% endshell_term %}
+```
+$ sudo chown -R 1001:1001 /var/lib/pgsql
+```
 
 \* **/var/lib/pgsql** is where Fedora put postgresql data.
 
 Generate systemd unit file.
 
-{% shell_term # %}
-podman generate systemd --new --files --name postgresql
-mv container-postgresql.service /etc/systemd/system
-systemctl daemon-reload
-{% endshell_term %}
+```
+$ podman generate systemd --new --files --name postgresql
+$ mv container-postgresql.service /etc/systemd/system
+$ systemctl daemon-reload
+```
 
 Stop and remove postgresql running container.
 
-{% shell_term # %}
-podman stop postgresql
-podman rm postgresql
-{% endshell_term %}
+```
+$ podman stop postgresql
+$ podman rm postgresql
+```
 
 That's it! Now you're able to start and check the status of running container with systemct start and status.
 
+
 ## SQLite3
 
-Official site: [http://www.sqlite.org/](http://www.sqlite.org/){:target="_blank"}
+Official site: [http://www.sqlite.org/](http://www.sqlite.org/)
 
 SQLite is a C library that implements an SQL database engine. A large subset of SQL92 is supported. A complete database is stored in a single disk file. The API is designed for convenience and ease of use. Applications that link against SQLite can enjoy the power and flexibility of an SQL database without the administrative hassles of supporting a separate database server.  Version 2 and version 3 binaries are named to permit each to be installed on a single host.
 
-{% shell_term $ %}
-sudo dnf in sqlite
-sudo dnf in sqlite-devel
-sudo dnf in libsqlite3x
-sudo dnf in libsqlite3x-devel
-{% endshell_term %}
+```
+$ sudo dnf in sqlite
+$ sudo dnf in sqlite-devel
+$ sudo dnf in libsqlite3x
+$ sudo dnf in libsqlite3x-devel
+```
 
 Saya memerlukan install juga package `-devel`.
 
+
 ## yarnpkg
 
-Official site: [https://github.com/yarnpkg/yarn](https://github.com/yarnpkg/yarn){:target="_blank"}
+Official site: [https://github.com/yarnpkg/yarn](https://github.com/yarnpkg/yarn)
 
 Fast, reliable, and secure dependency management.
 
-{% shell_term $ %}
-sudo dnf in yarnpkg
-{% endshell_term %}
+```
+$ sudo dnf in yarnpkg
+```
+
 
 ## Ruby on Rails Developer
 
@@ -1368,62 +1445,65 @@ Saya lebih suka menggunakan **rbenv** untuk mendevelop Ruby apps.
 
 Paket-paket yang diperlukan untuk rbenv-install mem-build Ruby.
 
-{% shell_term $ %}
-sudo dnf in openssl-devel
-sudo dnf in libxml2-devel
-sudo dnf in libxslt-devel
-sudo dnf in readline-devel
-{% endshell_term %}
+```
+$ sudo dnf in openssl-devel
+$ sudo dnf in libxml2-devel
+$ sudo dnf in libxslt-devel
+$ sudo dnf in readline-devel
+```
 
 Reinstall all your Ruby with rbenv (remove and install).
 
 For database support library (PostgreSQL, MySQL/MariaDB, SQLite).
 
-{% shell_term $ %}
-sudo dnf in libpq-devel
-sudo dnf in mysql++-devel
-sudo dnf in libsqlite3x-devel
-{% endshell_term %}
+```
+$ sudo dnf in libpq-devel
+$ sudo dnf in mysql++-devel
+$ sudo dnf in libsqlite3x-devel
+```
+
 
 ## pomo
 
-Official site: [https://github.com/tj/pomo](https://github.com/tj/pomo){:target="_blank"}
+Official site: [https://github.com/tj/pomo](https://github.com/tj/pomo)
 
 Command-line application for the Pomodoro time management technique, with notification and tmux status bar support.
 
 (rubygems)
 
-{% shell_term $ %}
-gem install pomo
-{% endshell_term %}
+```
+$ gem install pomo
+```
+
 
 ## Build ADVCMP
 
-Sumber: [https://github.com/jarun/advcpmv](https://github.com/jarun/advcpmv){:target="_blank"}
+Sumber: [https://github.com/jarun/advcpmv](https://github.com/jarun/advcpmv)
 
 A patch for GNU Core Utilities cp, mv to add progress bars.
 
-{% shell_term $ %}
-sudo dnf in patch
-{% endshell_term %}
+```
+$ sudo dnf in patch
+```
 
-{% shell_term $ %}
-wget http://ftp.gnu.org/gnu/coreutils/coreutils-8.32.tar.xz
-tar xvJf coreutils-8.32.tar.xz
-cd coreutils-8.32/
-wget https://raw.githubusercontent.com/jarun/advcpmv/master/advcpmv-0.8-8.32.patch
-patch -p1 -i advcpmv-0.8-8.32.patch
-./configure
-make
-{% endshell_term %}
+```
+$ wget http://ftp.gnu.org/gnu/coreutils/coreutils-8.32.tar.xz
+$ tar xvJf coreutils-8.32.tar.xz
+$ cd coreutils-8.32/
+$ wget https://raw.githubusercontent.com/jarun/advcpmv/master/advcpmv-0.8-8.32.patch
+$ patch -p1 -i advcpmv-0.8-8.32.patch
+$ ./configure
+$ make
+```
+
 
 ## TLP
 
-{% box_info %}
-<p markdown=1>Saya tidak lagi menggunakan **tlp** sejak Fedora 35 sudah menggunakan [**Power Profiles Daemon**](https://fedoraproject.org/wiki/Changes/Power_Profiles_Daemon){:target="_blank"}.</p>
-{% endbox_info %}
+> INFO
+> 
+> Saya tidak lagi menggunakan **tlp** sejak Fedora 35 sudah menggunakan [**Power Profiles Daemon**](https://fedoraproject.org/wiki/Changes/Power_Profiles_Daemon).
 
-Official site: [http://linrunner.de/en/tlp/tlp.html](http://linrunner.de/en/tlp/tlp.html){:target="_blank"}
+Official site: [http://linrunner.de/en/tlp/tlp.html](http://linrunner.de/en/tlp/tlp.html)
 
 TLP is an advanced power management tool for Linux. It comes with a default configuration already optimized for battery life. At the same time it is highly customizable to fulfill specific user requirements.
 
@@ -1433,165 +1513,174 @@ For ThinkPads it provides a unified way to configure charging thresholds and re-
 
 TLP is a pure command line tool with automated background tasks, it does not contain a GUI.
 
-{% shell_term $ %}
-sudo dnf in tlp
-{% endshell_term %}
+```
+$ sudo dnf in tlp
+```
 
 Untuk ThinkPad lama, seperti seri X61 yang saya gunakan.
 
-{% shell_term $ %}
-sudo dnf copr enable suhanc/tp_smapi
-sudo dnf in tp_smapi
-{% endshell_term %}
+```
+$ sudo dnf copr enable suhanc/tp_smapi
+$ sudo dnf in tp_smapi
+```
 
 Untuk ThinkPad baru, seperti X260 yang saya gunakan.
 
-{% shell_term $ %}
-git clone https://github.com/teleshoes/tpacpi-bat
-cd tpacpi-bat
-./install.pl
-{% endshell_term %}
+```
+$ git clone https://github.com/teleshoes/tpacpi-bat
+$ cd tpacpi-bat
+$ ./install.pl
+```
 
 Beberapa catatan tentang tlp:
 
-1. [https://linrunner.de/tlp/faq/battery.html#how-to-choose-good-battery-charge-thresholds](https://linrunner.de/tlp/faq/battery.html#how-to-choose-good-battery-charge-thresholds){:target="_blank"}
+1. [https://linrunner.de/tlp/faq/battery.html#how-to-choose-good-battery-charge-thresholds](https://linrunner.de/tlp/faq/battery.html#how-to-choose-good-battery-charge-thresholds)
 
-2. [https://forums.lenovo.com/t5/Windows-10/Power-Manager-for-Windows-10/m-p/2113645?page=3#2129075](https://forums.lenovo.com/t5/Windows-10/Power-Manager-for-Windows-10/m-p/2113645?page=3#2129075){:target="_blank"}
+2. [https://forums.lenovo.com/t5/Windows-10/Power-Manager-for-Windows-10/m-p/2113645?page=3#2129075](https://forums.lenovo.com/t5/Windows-10/Power-Manager-for-Windows-10/m-p/2113645?page=3#2129075)
+
 
 ## Cronie (Cronjob)
 
-Official site: [https://github.com/cronie-crond/cronie](https://github.com/cronie-crond/cronie){:target="_blank"}
+Official site: [https://github.com/cronie-crond/cronie](https://github.com/cronie-crond/cronie)
 
 Cronie contains the standard UNIX daemon crond that runs specified programs at scheduled times and related tools. It is a fork of the original vixie-cron and has security and configuration enhancements like the ability to use pam and SELinux.
 
-{% shell_term $ %}
-sudo dnf in cronie
-{% endshell_term %}
+```
+$ sudo dnf in cronie
+```
 
 Jalankan & enable-kan `crond.service`.
 
-{% shell_term $ %}
-sudo systemctl enable --now crond.service
-{% endshell_term %}
+```
+$ sudo systemctl enable --now crond.service
+```
+
 
 ## Email Backend
 
+
 ### imap
 
-Official site: [http://isync.sourceforge.net/](http://isync.sourceforge.net/){:target="_blank"}
+Official site: [http://isync.sourceforge.net/](http://isync.sourceforge.net/)
 
 mbsync is a command line application which synchronizes mailboxes. Currently Maildir and IMAP4 mailboxes are supported. New messages, message deletions and flag changes can be propagated both ways. mbsync is suitable for use in IMAP-disconnected mode.
 
-{% shell_term $ %}
-sudo dnf in isync
-{% endshell_term %}
+```
+$ sudo dnf in isync
+```
+
 
 ### smtp
 
-Official site: [https://marlam.de/msmtp/](https://marlam.de/msmtp/){:target="_blank"}
+Official site: [https://marlam.de/msmtp/](https://marlam.de/msmtp/)
 
 It forwards messages to an SMTP server which does the delivery.
 
-{% shell_term $ %}
-sudo dnf in msmtp
-{% endshell_term %}
+```
+$ sudo dnf in msmtp
+```
+
 
 ## Neomutt
 
-Official site: [https://neomutt.org/](https://neomutt.org/){:target="_blank"}
+Official site: [https://neomutt.org/](https://neomutt.org/)
 
 NeoMutt is a small but very powerful text-based MIME mail client. NeoMutt is highly configurable, and is well suited to the mail power user with advanced features like key bindings, keyboard macros, mail threading, regular expression searches and a powerful pattern matching language for selecting groups of messages.
 
-{% shell_term $ %}
-sudo dnf copr enable chriscowleyunix/neomutt
-sudo dnf in neomutt
-{% endshell_term %}
+```
+$ sudo dnf copr enable chriscowleyunix/neomutt
+$ sudo dnf in neomutt
+```
 
-<br>
 **Manual Build**
 
-Sumber: [https://neomutt.org/dev/build/build](https://neomutt.org/dev/build/build){:target="_blank"}
+Sumber: [https://neomutt.org/dev/build/build](https://neomutt.org/dev/build/build)
 
 Deps
 
-{% shell_term $ %}
-sudo dnf in libidn-devel
-sudo dnf in gpgme-devel
-sudo dnf in notmuch-devel
-sudo dnf in sqlite-devel
-sudo dnf in cyrus-sasl-devel
-sudo dnf in tokyocabinet-devel
-sudo dnf in tokyocabinet
-sudo dnf in urlview
-{% endshell_term %}
+```
+$ sudo dnf in libidn-devel
+$ sudo dnf in gpgme-devel
+$ sudo dnf in notmuch-devel
+$ sudo dnf in sqlite-devel
+$ sudo dnf in cyrus-sasl-devel
+$ sudo dnf in tokyocabinet-devel
+$ sudo dnf in tokyocabinet
+$ sudo dnf in urlview
+```
 
-{% shell_term $ %}
-./configure --ssl --lua --notmuch --gpgme --gss --autocrypt --sqlite --sasl --mixmaster --fmemopen --homespool --tokyocabinet --locales-fix
-make
-sudo make install
-{% endshell_term %}
+```
+$ ./configure --ssl --lua --notmuch --gpgme --gss --autocrypt --sqlite --sasl --mixmaster --fmemopen --homespool --tokyocabinet --locales-fix
+$ make
+$ sudo make install
+```
+
 
 ## FreeRDP
 
-Official site: [http://www.freerdp.com/](http://www.freerdp.com/){:target="_blank"}
+Official site: [http://www.freerdp.com/](http://www.freerdp.com/)
 
 The xfreerdp & wlfreerdp Remote Desktop Protocol (RDP) clients from the FreeRDP project.
 
 xfreerdp & wlfreerdp can connect to RDP servers such as Microsoft Windows machines, xrdp and VirtualBox.
 
-{% shell_term $ %}
-sudo dnf in freerdp
-{% endshell_term %}
+```
+$ sudo dnf in freerdp
+```
+
 
 ## x11vnc
 
-Official site: [https://github.com/LibVNC/x11vnc](https://github.com/LibVNC/x11vnc){:target="_blank"}
+Official site: [https://github.com/LibVNC/x11vnc](https://github.com/LibVNC/x11vnc)
 
 What WinVNC is to Windows x11vnc is to X Window System, i.e. a server which serves the current X Window System desktop via RFB (VNC) protocol to the user.
 
 Based on the ideas of x0rfbserver and on LibVNCServer it has evolved into a versatile and productive while still easy to use program.
 
-{% shell_term $ %}
-sudo dnf in x11vnc
-{% endshell_term %}
+```
+$ sudo dnf in x11vnc
+```
+
 
 ## Rofi
 
-Official site: [https://github.com/DaveDavenport/rofi](https://github.com/DaveDavenport/rofi){:target="_blank"}
+Official site: [https://github.com/DaveDavenport/rofi](https://github.com/DaveDavenport/rofi)
 
 Rofi is a dmenu replacement. Rofi, like dmenu, will provide the user with a textual list of options where one or more can be selected. This can either be, running an application, selecting a window or options provided by an external script.
 
-{% shell_term $ %}
-sudo dnf in rofi
-{% endshell_term %}
+```
+$ sudo dnf in rofi
+```
+
 
 ## Rofi-Calc
 
 **Manual Build**
 
-Sumber: [https://github.com/svenstaro/rofi-calc](https://github.com/svenstaro/rofi-calc){:target="_blank"}
+Sumber: [https://github.com/svenstaro/rofi-calc](https://github.com/svenstaro/rofi-calc)
 
 Deps,
 
-{% shell_term $ %}
-sudo dnf in rofi-devel
-sudo dnf in qalculate
-{% endshell_term %}
+```
+$ sudo dnf in rofi-devel
+$ sudo dnf in qalculate
+```
 
-{% shell_term $ %}
-git clone https://github.com/svenstaro/rofi-calc
-cd rofi-calc
-autoreconf -i
-mkdir build
-cd build/
-../configure
-make
-sudo make install
-{% endshell_term %}
+```
+$ git clone https://github.com/svenstaro/rofi-calc
+$ cd rofi-calc
+$ autoreconf -i
+$ mkdir build
+$ cd build/
+$ ../configure
+$ make
+$ sudo make install
+```
+
 
 ## LazyGit
 
-Official site: [https://github.com/jesseduffield/lazygit](https://github.com/jesseduffield/lazygit){:target="_blank"}
+Official site: [https://github.com/jesseduffield/lazygit](https://github.com/jesseduffield/lazygit)
 
 A simple terminal UI for git commands, written in Go with the gocui library.
 
@@ -1601,14 +1690,15 @@ A simple terminal UI for git commands, written in Go with the gocui library.
 <p>If you're a mere mortal like me and you're tired of hearing how powerful git is when in your daily life it's a powerful pain in your ass, lazygit might be for you.</p>
 </details>
 
-{% shell_term $ %}
-sudo dnf copr enable atim/lazygit
-sudo dnf in lazygit
-{% endshell_term %}
+```
+$ sudo dnf copr enable atim/lazygit
+$ sudo dnf in lazygit
+```
+
 
 ## LazyDocker
 
-Official site: [https://github.com/jesseduffield/lazydocker](https://github.com/jesseduffield/lazydocker){:target="_blank"}
+Official site: [https://github.com/jesseduffield/lazydocker](https://github.com/jesseduffield/lazydocker)
 
 A simple terminal UI for both docker and docker-compose, written in Go with the gocui library.
 
@@ -1617,84 +1707,88 @@ A simple terminal UI for both docker and docker-compose, written in Go with the 
 <p>Memorising docker commands is hard. Memorising aliases is slightly less hard. Keeping track of your containers across multiple terminal windows is near impossible. What if you had all the information you needed in one terminal window with every common command living one keypress away (and the ability to add custom commands as well). Lazydocker's goal is to make that dream a reality.</p>
 </details>
 
-{% shell_term $ %}
-sudo dnf copr enable atim/lazydocker
-sudo dnf in lazydocker
-{% endshell_term %}
+```
+$ sudo dnf copr enable atim/lazydocker
+$ sudo dnf in lazydocker
+```
+
 
 ## Seahorse
 
-Official site: [https://wiki.gnome.org/Apps/Seahorse](https://wiki.gnome.org/Apps/Seahorse){:target="_blank"}
+Official site: [https://wiki.gnome.org/Apps/Seahorse](https://wiki.gnome.org/Apps/Seahorse)
 
 Seahorse is a graphical interface for managing and using encryption keys. It also integrates with nautilus, gedit and other places for encryption operations. It is a keyring manager.
 
-{% shell_term $ %}
-sudo dnf in seahorse
-{% endshell_term %}
+```
+$ sudo dnf in seahorse
+```
+
 
 ## Crow translate
 
-Official site: [https://crow-translate.github.io/](https://crow-translate.github.io/){:target="_blank"}
+Official site: [https://crow-translate.github.io/](https://crow-translate.github.io/)
 
 A simple and lightweight translator that allows you to translate and speak text using Google, Yandex Bing, LibreTranslate and Lingva.
 
-Sumber: [https://github.com/crow-translate/crow-translate](https://github.com/crow-translate/crow-translate){:target="_blank"}
+Sumber: [https://github.com/crow-translate/crow-translate](https://github.com/crow-translate/crow-translate)
 
 Deps,
 
-{% shell_term $ %}
-sudo dnf in extra-cmake-modules
-sudo dnf in qt5-qtbase-devel
-sudo dnf in qt5-qtx11extras-devel
-sudo dnf in qt5-qtmultimedia-devel
-sudo dnf in tesseract-devel
-sudo dnf in libSM-devel
-{% endshell_term %}
+```
+$ sudo dnf in extra-cmake-modules
+$ sudo dnf in qt5-qtbase-devel
+$ sudo dnf in qt5-qtx11extras-devel
+$ sudo dnf in qt5-qtmultimedia-devel
+$ sudo dnf in tesseract-devel
+$ sudo dnf in libSM-devel
+```
 
-{% shell_term $ %}
-git clone https://github.com/crow-translate/crow-translate.git
-cd crow-translate
-mkdir build
-cd build
-cmake ..
-cmake --build .
-sudo make install
-{% endshell_term %}
+```
+$ git clone https://github.com/crow-translate/crow-translate.git
+$ cd crow-translate
+$ mkdir build
+$ cd build
+$ cmake ..
+$ cmake --build .
+$ sudo make install
+```
+
 
 ## libva-intel-driver
 
-Official site: [https://github.com/intel/intel-vaapi-driver](https://github.com/intel/intel-vaapi-driver){:target="_blank"}
+Official site: [https://github.com/intel/intel-vaapi-driver](https://github.com/intel/intel-vaapi-driver)
 
-HW video decode support for Intel integrated graphics. [https://01.org/intel-media-for-linux](https://01.org/intel-media-for-linux){:target="_blank"}
+HW video decode support for Intel integrated graphics. [https://01.org/intel-media-for-linux](https://01.org/intel-media-for-linux)
 
-{% shell_term $ %}
-sudo dnf in libva-intel-hybrid-driver
-{% endshell_term %}
+```
+$ sudo dnf in libva-intel-hybrid-driver
+```
 
-<br>
-Official site: [https://github.com/01org/intel-hybrid-driver](https://github.com/01org/intel-hybrid-driver){:target="_blank"}
+Official site: [https://github.com/01org/intel-hybrid-driver](https://github.com/01org/intel-hybrid-driver)
 
 libva-intel-hybrid-driver is the VA-API implementation for Intel G45 chipsets and Intel HD Graphics for Intel Core processor family.
 
 It allows to accelerate VP9 videos on Skylake and Kabylake architectures.
 
-{% shell_term $ %}
-sudo dnf in libva-intel-hybrid-driver
-{% endshell_term %}
+```
+$ sudo dnf in libva-intel-hybrid-driver
+```
+
 
 ## Vulkan Hardware Capability Viewer
 
-Sumber: [http://vulkan.gpuinfo.org/listdevices.php](http://vulkan.gpuinfo.org/listdevices.php){:target="_blank"}
+Sumber: [http://vulkan.gpuinfo.org/listdevices.php](http://vulkan.gpuinfo.org/listdevices.php)
 
-Download: [http://vulkan.gpuinfo.org/download.php](http://vulkan.gpuinfo.org/download.php){:target="_blank"}
+Download: [http://vulkan.gpuinfo.org/download.php](http://vulkan.gpuinfo.org/download.php)
+
 
 ## GIMP
 
 GIMP (GNU Image Manipulation Program) is a powerful image composition and editing program, which can be extremely useful for creating logos and other graphics for web pages. GIMP has many of the tools and filters you would expect to find in similar commercial offerings, and some interesting extras as well. GIMP provides a large image manipulation toolbox, including channel operations and layers, effects, sub-pixel imaging and anti-aliasing, and conversions, all with multi-level undo.
 
-{% shell_term $ %}
-sudo dnf in gimp
-{% endshell_term %}
+```
+$ sudo dnf in gimp
+```
 
 ## Inkscape
 
@@ -1702,249 +1796,264 @@ Inkscape is a vector graphics editor, with capabilities similar to Illustrator, 
 
 Inkscape supports many advanced SVG features (markers, clones, alpha blending, etc.) and great care is taken in designing a streamlined interface. It is very easy to edit nodes, perform complex path operations, trace bitmaps and much more.
 
-{% shell_term $ %}
-sudo dnf in inkscape
-{% endshell_term %}
+```
+$ sudo dnf in inkscape
+```
+
 
 ## Figma for Linux
 
-Official site: [https://github.com/Figma-Linux/figma-linux](https://github.com/Figma-Linux/figma-linux){:target="_blank"}
+Official site: [https://github.com/Figma-Linux/figma-linux](https://github.com/Figma-Linux/figma-linux)
 
 Figma is the first interface design tool based in the browser, making it easier for teams to create software.
 
 (flatpak - flathub)
 
-{% shell_term $ %}
-flatpak install flathub io.github.Figma_Linux.figma_linux
-{% endshell_term %}
+```
+$ flatpak install flathub io.github.Figma_Linux.figma_linux
+```
+
 
 ## WeeChat
 
 WeeChat (Wee Enhanced Environment for Chat) is a portable, fast, light and extensible IRC client. Everything can be done with a keyboard. It is customizable and extensible with scripts.
 
-{% shell_term $ %}
-sudo dnf in weechat
-{% endshell_term %}
+```
+$ sudo dnf in weechat
+```
 
-<br>
 **Manual Build**
 
-Sumber: [https://github.com/weechat/weechat](https://github.com/weechat/weechat){:target="_blank"}
+Sumber: [https://github.com/weechat/weechat](https://github.com/weechat/weechat)
 
-{% shell_term $ %}
-sudo dnf in gnutls-devel
-sudo dnf in perl-ExtUtils-Embed
-sudo dnf in libgcrypt-devel
-sudo dnf in libcurl-devel
-sudo dnf in ncurses-devel
-sudo dnf in aspell-devel
-sudo dnf in php-devel
-sudo dnf in lua-devel
-sudo dnf in tcl-devel
-sudo dnf in guile-devel
-{% endshell_term %}
+```
+$ sudo dnf in gnutls-devel
+$ sudo dnf in perl-ExtUtils-Embed
+$ sudo dnf in libgcrypt-devel
+$ sudo dnf in libcurl-devel
+$ sudo dnf in ncurses-devel
+$ sudo dnf in aspell-devel
+$ sudo dnf in php-devel
+$ sudo dnf in lua-devel
+$ sudo dnf in tcl-devel
+$ sudo dnf in guile-devel
+```
 
-{% shell_term $ %}
-git clone https://github.com/weechat/weechat.git
-cd weechat
-mkdir build
-cd build
-cmake ..
-make
-sudo make install
-{% endshell_term %}
+```
+$ git clone https://github.com/weechat/weechat.git
+$ cd weechat
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+$ sudo make install
+```
 
 Kalau masih ada warning error perihal language, bisa menggunakan,
 
-{% shell_term $ %}
-ccmake ..
-{% endshell_term %}
+```
+$ ccmake ..
+```
 
 Lalu set **OFF** untuk language support yang tidak ingin disertakan atau yang menyebabkan error.
 
+
 ## WeeChat-Matrix
 
-Official site: [https://github.com/poljar/weechat-matrix](https://github.com/poljar/weechat-matrix){:target="_blank"}
+Official site: [https://github.com/poljar/weechat-matrix](https://github.com/poljar/weechat-matrix)
 
 Weechat Matrix protocol script written in python
 
 Deps,
-{% shell_term $ %}
-sudo dnf in libolm-devel
-{% endshell_term %}
 
-{% shell_term $ %}
-git clone https://github.com/poljar/weechat-matrix.git
-cd weechat-matrix
-pip install -r requirements.txt
-{% endshell_term %}
+```
+$ sudo dnf in libolm-devel
+```
+
+```
+$ git clone https://github.com/poljar/weechat-matrix.git
+$ cd weechat-matrix
+$ pip install -r requirements.txt
+```
 
 Kalau kamu sudah pernah mengkonfigurasi weechat, tinggal jalankan,
 
-{% shell_term $ %}
-make install
-{% endshell_term %}
+```
+$ make install
+```
 
 Selanjutnya tinggal membuat plugin matrix menjadi autostart ketika weechat dijalankan.
 
-{% shell_term $ %}
-cd ~/.weechat/python/autoload
-ln -s ../matrix.py ~/.weechat/python/autoload
-{% endshell_term %}
+```
+$ cd ~/.weechat/python/autoload
+$ ln -s ../matrix.py ~/.weechat/python/autoload
+```
+
 
 ## WeeChat-twitch
 
-Official-site: [https://github.com/mumixam/weechat-twitch](https://github.com/mumixam/weechat-twitch){:target="_blank"}
+Official-site: [https://github.com/mumixam/weechat-twitch](https://github.com/mumixam/weechat-twitch)
 
 Checks status of streams using twitch api.
 
-{% shell_term $ %}
+```
 /server add twitch irc.twitch.tv
 /set irc.server.twitch.capabilities "twitch.tv/membership,twitch.tv/commands,twitch.tv/tags"
 /set irc.server.twitch.nicks "My Twitch Username"
 /set irc.server.twitch.password "oauth:yourauthkey"
-{% endshell_term %}
+```
 
-Where to get **oauth**? [https://twitchapps.com/tmi/](https://twitchapps.com/tmi/){:target="_blank"}
+Where to get **oauth**? [https://twitchapps.com/tmi/](https://twitchapps.com/tmi/)
 
-Referensi: [https://gist.github.com/noromanba/df3d975613713f60e6ae](https://gist.github.com/noromanba/df3d975613713f60e6ae){:target="_blank"}
+Referensi: [https://gist.github.com/noromanba/df3d975613713f60e6ae](https://gist.github.com/noromanba/df3d975613713f60e6ae)
+
 
 ## Flameshot
 
-Official site: [https://github.com/lupoDharkael/flameshot](https://github.com/lupoDharkael/flameshot){:target="_blank"}
+Official site: [https://github.com/lupoDharkael/flameshot](https://github.com/lupoDharkael/flameshot)
 
 Powerful and simple to use screenshot software with built-in editor with advanced features.
 
-{% shell_term $ %}
-sudo dnf in flameshot
-{% endshell_term %}
+```
+$ sudo dnf in flameshot
+```
+
 
 ## Optipng
 
-Official site: [http://optipng.sourceforge.net/](http://optipng.sourceforge.net/){:target="_blank"}
+Official site: [http://optipng.sourceforge.net/](http://optipng.sourceforge.net/)
 
 OptiPNG is a PNG optimizer that recompresses image files to a smaller size, without losing any information. This program also converts external formats (BMP, GIF, PNM and TIFF) to optimized PNG, and performs PNG integrity checks and corrections.
 
-{% shell_term $ %}
-sudo dnf in optipng
-{% endshell_term %}
+```
+$ sudo dnf in optipng
+```
 
 ## Scrot
 
-Official site: [https://github.com/resurrecting-open-source-projects/scrot](https://github.com/resurrecting-open-source-projects/scrot){:target="_blank"}
+Official site: [https://github.com/resurrecting-open-source-projects/scrot](https://github.com/resurrecting-open-source-projects/scrot)
 
 scrot is a simple command line screen capture utility.
 
-{% shell_term $ %}
-sudo dnf in scrot
-{% endshell_term %}
+```
+$ sudo dnf in scrot
+```
 
-<br>
 **Manual Build**
 
-Sumber: [https://github.com/resurrecting-open-source-projects/scrot](https://github.com/resurrecting-open-source-projects/scrot){:target="_blank"}
+Sumber: [https://github.com/resurrecting-open-source-projects/scrot](https://github.com/resurrecting-open-source-projects/scrot)
 
 Deps,
 
-{% shell_term $ %}
-sudo dnf in autoconf-archive
-sudo dnf in imlib2-devel
-sudo dnf in libtool
-sudo dnf in libXcomposite-devel
-sudo dnf in libXfixes-devel
-{% endshell_term %}
+```
+$ sudo dnf in autoconf-archive
+$ sudo dnf in imlib2-devel
+$ sudo dnf in libtool
+$ sudo dnf in libXcomposite-devel
+$ sudo dnf in libXfixes-devel
+```
 
-{% shell_term $ %}
-git clone https://github.com/resurrecting-open-source-projects/scrot.git
-cd scrot
-./autogen.sh
-./configure
-make
-sudo make install
-{% endshell_term %}
+```
+$ git clone https://github.com/resurrecting-open-source-projects/scrot.git
+$ cd scrot
+$ ./autogen.sh
+$ ./configure
+$ make
+$ sudo make install
+```
+
 
 ## Maim
 
-Official site: [https://github.com/naelstrof/maim](https://github.com/naelstrof/maim){:target="_blank"}
+Official site: [https://github.com/naelstrof/maim](https://github.com/naelstrof/maim)
 
 maim (make image) is a screenshot utility that provides options for capturing predetermined or user selected regions of your desktop.
 
-{% shell_term $ %}
-sudo dnf in maim
-{% endshell_term %}
+```
+$ sudo dnf in maim
+```
+
 
 ## pulseaudio-utils
 
-Official site: [http://www.freedesktop.org/wiki/Software/PulseAudio](http://www.freedesktop.org/wiki/Software/PulseAudio){:target="_blank"}
+Official site: [http://www.freedesktop.org/wiki/Software/PulseAudio](http://www.freedesktop.org/wiki/Software/PulseAudio)
 
 This package contains command line utilities for the PulseAudio sound server.
 
-{% shell_term $ %}
-sudo dnf in pulseaudio-utils
-{% endshell_term %}
+```
+$ sudo dnf in pulseaudio-utils
+```
 
-{% box_info %}
-<p markdown=1>**Change/Swap Pipewire with Pulseaudio**</p>
-<p markdown=1>Sumber: [https://fedoraproject.org/wiki/Changes/DefaultPipeWire#Upgrade.2Fcompatibility_impact](https://fedoraproject.org/wiki/Changes/DefaultPipeWire#Upgrade.2Fcompatibility_impact){:target="_blank"}</p>
-{% shell_term $ %}
-sudo dnf swap --allowerasing pipewire-pulseaudio pulseaudio
-{% endshell_term %}
-<p markdown=1>\* Sejak Fedora 35, saya sudah menetap dengan **Pipewire**.</p>
-{% endbox_info %}
+> INFO
+> 
+> **Change/Swap Pipewire with Pulseaudio**
+> 
+> Sumber: [https://fedoraproject.org/wiki/Changes/DefaultPipeWire#Upgrade.2Fcompatibility_impact](https://fedoraproject.org/wiki/Changes/DefaultPipeWire#Upgrade.2Fcompatibility_impact)
+> 
+> ```
+> $ sudo dnf swap --allowerasing pipewire-pulseaudio pulseaudio
+> ```
+> 
+> \* Sejak Fedora 35, saya sudah menetap dengan **Pipewire**.
+
 
 ## pavucontrol
 
-Official site: [http://freedesktop.org/software/pulseaudio/pavucontrol](http://freedesktop.org/software/pulseaudio/pavucontrol){:target="_blank"}
+Official site: [http://freedesktop.org/software/pulseaudio/pavucontrol](http://freedesktop.org/software/pulseaudio/pavucontrol)
 
 PulseAudio Volume Control (pavucontrol) is a simple GTK based volume control tool ("mixer") for the PulseAudio sound server. In contrast to classic mixer tools this one allows you to control both the volume of hardware devices and of each playback stream separately.
 
-{% shell_term $ %}
-sudo dnf in pavucontrol
-{% endshell_term %}
+```
+$ sudo dnf in pavucontrol
+```
+
 
 ## pulsemixer
 
-Official site: [https://github.com/GeorgeFilipkin/pulsemixer](https://github.com/GeorgeFilipkin/pulsemixer){:target="_blank"}
+Official site: [https://github.com/GeorgeFilipkin/pulsemixer](https://github.com/GeorgeFilipkin/pulsemixer)
 
 CLI and curses mixer for PulseAudio
 
-{% shell_term $ %}
-pip install --user pulsemixer
-{% endshell_term %}
+```
+$ pip install --user pulsemixer
+```
+
 
 ## pamixer
 
-Sumber: [https://github.com/cdemoulins/pamixer](https://github.com/cdemoulins/pamixer){:target="_blank"}
+Sumber: [https://github.com/cdemoulins/pamixer](https://github.com/cdemoulins/pamixer)
 
 pamixer is like amixer but for pulseaudio. It can control the volume levels of the sinks.
 
 Deps,
 
-{% shell_term $ %}
-sudo dnf in boost-devel
-{% endshell_term %}
+```
+$ sudo dnf in boost-devel
+```
 
-{% shell_term $ %}
-git clone https://github.com/cdemoulins/pamixer.git
-cd pamixer
-meson setup build
-meson compile -C build
-meson install -C build
-{% endshell_term %}
+```
+$ git clone https://github.com/cdemoulins/pamixer.git
+$ cd pamixer
+$ meson setup build
+$ meson compile -C build
+$ meson install -C build
+```
+
 
 ## easyeffects
 
-Official site: [https://github.com/wwmm/easyeffects](https://github.com/wwmm/easyeffects){:target="_blank"}
+Official site: [https://github.com/wwmm/easyeffects](https://github.com/wwmm/easyeffects)
 
 Limiters, compressor, reverberation, high-pass filter, low pass filter, equalizer many more effects for PipeWire applications.
 
-{% shell_term $ %}
-sudo dnf in easyeffects
-{% endshell_term %}
+```
+$ sudo dnf in easyeffects
+```
+
 
 ## helvum
 
-Official site: [https://gitlab.freedesktop.org/ryuukyu/helvum](https://gitlab.freedesktop.org/ryuukyu/helvum){:target="_blank"}
+Official site: [https://gitlab.freedesktop.org/ryuukyu/helvum](https://gitlab.freedesktop.org/ryuukyu/helvum)
 
 Helvum is a GTK-based patchbay for pipewire, inspired by the JACK tool catia.
 
@@ -1954,143 +2063,156 @@ The recommended way to build is using flatpak, which will take care of all depen
 
 If you don't have the flathub repo in your remote-list for flatpak you will need to add that first:
 
-{% shell_term $ %}
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-{% endshell_term %}
+```
+$ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+```
 
 Then install the required flatpak platform and SDK, if you dont have them already:
 
-{% shell_term $ %}
-flatpak install org.gnome.{Platform,Sdk}//41 org.freedesktop.Sdk.Extension.rust-stable//21.08 org.freedesktop.Sdk.Extension.llvm12//21.08
-{% endshell_term %}
+```
+$ flatpak install org.gnome.{Platform,Sdk}//41 org.freedesktop.Sdk.Extension.rust-stable//21.08 org.freedesktop.Sdk.Extension.llvm12//21.08
+```
 
 To compile and install as a flatpak, run:
 
-{% shell_term $ %}
-sudo flatpak-builder --install flatpak-build/ build-aux/org.freedesktop.ryuukyu.Helvum.json
-{% endshell_term %}
+```
+$ sudo flatpak-builder --install flatpak-build/ build-aux/org.freedesktop.ryuukyu.Helvum.json
+```
 
 You can then run the app via:
 
-{% shell_term $ %}
-flatpak run org.freedesktop.ryuukyu.Helvum
-{% endshell_term %}
+```
+$ flatpak run org.freedesktop.ryuukyu.Helvum
+```
+
 
 ## HexChat
 
-Official site: [https://hexchat.github.io](https://hexchat.github.io){:target="_blank"}
+Official site: [https://hexchat.github.io](https://hexchat.github.io)
 
 HexChat is an easy to use graphical IRC chat client for the X Window System. It allows you to join multiple IRC channels (chat rooms) at the same time, talk publicly, private one-on-one conversations etc. Even file transfers are possible.
 
-{% shell_term $ %}
-sudo dnf in hexchat
-{% endshell_term %}
+```
+$ sudo dnf in hexchat
+```
 
 Install adwaita-gtk2-theme for fix issue theme,
-Sumber: [https://bugzilla.redhat.com/show_bug.cgi?id=1963223](https://bugzilla.redhat.com/show_bug.cgi?id=1963223){:target="_blank"}
 
-{% shell_term $ %}
-sudo dnf in adwaita-gtk2-theme
-{% endshell_term %}
+Sumber: [https://bugzilla.redhat.com/show_bug.cgi?id=1963223](https://bugzilla.redhat.com/show_bug.cgi?id=1963223)
+
+```
+$ sudo dnf in adwaita-gtk2-theme
+```
+
 
 ## Gping
 
-Official site: [https://github.com/orf/gping](https://github.com/orf/gping){:target="_blank"}
+Official site: [https://github.com/orf/gping](https://github.com/orf/gping)
 
 Ping, but with a graph.
 
-Sumber: [https://github.com/orf/gping](https://github.com/orf/gping){:target="_blank"}
+Sumber: [https://github.com/orf/gping](https://github.com/orf/gping)
 
-{% shell_term $ %}
-sudo dnf copr enable atim/gping
-sudo dnf in gping
-{% endshell_term %}
+```
+$ sudo dnf copr enable atim/gping
+$ sudo dnf in gping
+```
+
 
 ## PrettyPing
 
-Official site: [http://denilson.sa.nom.br/prettyping](http://denilson.sa.nom.br/prettyping){:target="_blank"}
+Official site: [http://denilson.sa.nom.br/prettyping](http://denilson.sa.nom.br/prettyping)
 
-Sumber: [https://github.com/denilsonsa/prettyping](https://github.com/denilsonsa/prettyping){:target="_blank"}
+Sumber: [https://github.com/denilsonsa/prettyping](https://github.com/denilsonsa/prettyping)
 
 prettyping runs the standard ping in background and parses its output, showing ping responses in a graphical way at the terminal, by using colors and Unicode characters.
 
-**Don’t have support for UTF-8 in your terminal?**<br>
+**Don’t have support for UTF-8 in your terminal?**
+
 No problem, you can disable it and use standard ASCII characters instead.
 
-**Don’t have support for colors?**<br>
+**Don’t have support for colors?**
+
 No problem, you can also disable them.
 
-{% shell_term $ %}
-sudo dnf in prettyping
-{% endshell_term %}
+```
+$ sudo dnf in prettyping
+```
+
 
 ## Dunst
 
-Official site: [https://dunst-project.org](https://dunst-project.org){:target="_blank"}
+Official site: [https://dunst-project.org](https://dunst-project.org)
 
 Dunst is a lightweight replacement for the notification daemons provided by most desktop environments. It’s very customizable, isn’t dependent on any toolkits, and therefore fits into those window manager centric setups we all love to customize to perfection.
 
-{% shell_term $ %}
-sudo dnf in dunst
-{% endshell_term %}
+```
+$ sudo dnf in dunst
+```
+
 
 ## SimpleScreenRecorder
 
-Official site: [https://www.maartenbaert.be/simplescreenrecorder/](https://www.maartenbaert.be/simplescreenrecorder/){:target="_blank"}
+Official site: [https://www.maartenbaert.be/simplescreenrecorder/](https://www.maartenbaert.be/simplescreenrecorder/)
 
 It is a screen recorder for Linux. Despite the name, this program is actually quite complex. It's 'simple' in the sense that it's easier to use than ffmpeg/avconv or VLC.
 
-{% shell_term $ %}
-sudo dnf in simplescreenrecorder
-{% endshell_term %}
+```
+$ sudo dnf in simplescreenrecorder
+```
+
 
 ## Vokoscreen
 
-Official site: [https://github.com/vkohaupt/vokoscreen](https://github.com/vkohaupt/vokoscreen){:target="_blank"}
+Official site: [https://github.com/vkohaupt/vokoscreen](https://github.com/vkohaupt/vokoscreen)
 
 vokoscreen is an easy to use screencast creator to record educational videos, live recordings of browser, installation, videoconferences, etc.
 
-{% shell_term $ %}
-sudo dnf in vokoscreen
-{% endshell_term %}
+```
+$ sudo dnf in vokoscreen
+```
 
 Or -NG
 
-{% shell_term $ %}
-sudo dnf in vokoscreenNG
-{% endshell_term %}
+```
+$ sudo dnf in vokoscreenNG
+```
 
-{% shell_term $ %}
-sudo dnf in alsa-lib-devel
-{% endshell_term %}
+```
+$ sudo dnf in alsa-lib-devel
+```
+
 
 ## ps_mem
 
-Official site: [https://github.com/pixelb/ps_mem](https://github.com/pixelb/ps_mem){:target="_blank"}
+Official site: [https://github.com/pixelb/ps_mem](https://github.com/pixelb/ps_mem)
 
 The ps_mem tool reports how much core memory is used per program (not per process). In detail it reports: sum(private RAM for program processes) + sum(Shared RAM for program processes)
 
 The shared RAM is problematic to calculate, and the tool automatically selects the most accurate method available for the running kernel.
 
-{% shell_term $ %}
-sudo dnf in ps_mem
-{% endshell_term %}
+```
+$ sudo dnf in ps_mem
+```
+
 
 ## GColor2
 
-Official site: [http://gcolor2.sourceforge.net/](http://gcolor2.sourceforge.net/){:target="_blank"}
+Official site: [http://gcolor2.sourceforge.net/](http://gcolor2.sourceforge.net/)
 
 gcolor2 is a simple color selector that was originally based on gcolor, ported to use GTK+2, and now has a completely new UI.
 
-{% shell_term $ %}
-sudo dnf in gcolor2
-{% endshell_term %}
+```
+$ sudo dnf in gcolor2
+```
+
 
 ## Suckless
 
+
 ### st
 
-Official site: [http://st.suckless.org/](http://st.suckless.org/){:target="_blank"}
+Official site: [http://st.suckless.org/](http://st.suckless.org/)
 
 st is a simple terminal implementation for X.
 
@@ -2098,37 +2220,39 @@ st is a simple terminal implementation for X.
 
 Deps,
 
-{% shell_term $ %}
-sudo dnf in libXft-devel
-{% endshell_term %}
+```
+$ sudo dnf in libXft-devel
+```
 
-{% shell_term $ %}
-git clone https://git.suckless.org/st
-cd st
-make
-sudo make install
-{% endshell_term %}
+```
+$ git clone https://git.suckless.org/st
+$ cd st
+$ make
+$ sudo make install
+```
 
 For Emoji support,
 
-Sumber: [https://copr.fedorainfracloud.org/coprs/linuxredneck/libXft-bgra/](https://copr.fedorainfracloud.org/coprs/linuxredneck/libXft-bgra/){:target="_blank"}
+Sumber: [https://copr.fedorainfracloud.org/coprs/linuxredneck/libXft-bgra/](https://copr.fedorainfracloud.org/coprs/linuxredneck/libXft-bgra/)
 
-{% box_info %}
-<p markdown=1>**libxft** sudah support BGRA glyph for emoji color.</p>
-[https://gitlab.freedesktop.org/xorg/lib/libxft/-/blob/libXft-2.3.5/NEWS](https://gitlab.freedesktop.org/xorg/lib/libxft/-/blob/libXft-2.3.5/NEWS){:target="_blank"}
-{% endbox_info %}
+> INFO
+> 
+> **libxft** sudah support BGRA glyph for emoji color.
+> 
+> [https://gitlab.freedesktop.org/xorg/lib/libxft/-/blob/libXft-2.3.5/NEWS](https://gitlab.freedesktop.org/xorg/lib/libxft/-/blob/libXft-2.3.5/NEWS)
 
-{% shell_term $ %}
-sudo dnf copr enable linuxredneck/libXft-bgra
-sudo rpm -e --nodeps libXft libXft-devel
-sudo dnf in libXft-bgra libXft-bgra-devel
-{% endshell_term %}
+```
+$ sudo dnf copr enable linuxredneck/libXft-bgra
+$ sudo rpm -e --nodeps libXft libXft-devel
+$ sudo dnf in libXft-bgra libXft-bgra-devel
+```
 
 Add `libXft` to `exclude=` package on `/etc/dnf/dnf.conf`.
 
+
 ### dwm
 
-Official site: [http://dwm.suckless.org/](http://dwm.suckless.org/){:target="_blank"}
+Official site: [http://dwm.suckless.org/](http://dwm.suckless.org/)
 
 dwm is a dynamic window manager for X. It manages windows in tiled, monocle and floating layouts. All of the layouts can be applied dynamically, optimising the environment for the application in use and the task performed.
 
@@ -2136,26 +2260,26 @@ dwm is a dynamic window manager for X. It manages windows in tiled, monocle and 
 
 Deps,
 
-{% shell_term $ %}
-sudo dnf in libXinerama-devel
-sudo dnf in xsetroot
-{% endshell_term %}
+```
+$ sudo dnf in libXinerama-devel
+$ sudo dnf in xsetroot
+```
 
-{% shell_term $ %}
-git clone https://git.suckless.org/dwm
-cd dwm
-make
-sudo make install
-{% endshell_term %}
+```
+$ git clone https://git.suckless.org/dwm
+$ cd dwm
+$ make
+$ sudo make install
+```
 
 Kalau ingin mendaftarkan dwm ke dalam session list yang ada di Display Manager seperti LightDM, GDM, SDDM, dll., tinggal buat saja file Desktop Entry Spec nya saja.
 
-{% shell_term $ %}
-sudo vi /usr/share/xsessions/dwm.desktop
-{% endshell_term %}
+```
+$ sudo vi /usr/share/xsessions/dwm.desktop
+```
 
-{% highlight_caption /usr/share/xsessions/dwm.desktop %}
-{% highlight shell linenos %}
+```bash
+!filename: /usr/share/xsessions/dwm.desktop
 [Desktop Entry]
 Name=dwm
 Comment=Dynamic Window Manager
@@ -2165,11 +2289,12 @@ Type=Application
 X-LightDM-DesktopName=dwm
 Keywords=tiling;wm;windowmanager;window;manager;
 DesktopNames=dwm
-{% endhighlight %}
+```
+
 
 ### pinentry-dmenu
 
-GitHub source: [https://github.com/ritze/pinentry-dmenu](https://github.com/ritze/pinentry-dmenu){:target="_blank"}
+GitHub source: [https://github.com/ritze/pinentry-dmenu](https://github.com/ritze/pinentry-dmenu)
 
 pinentry-dmenu is a pinentry program with the charm of dmenu.
 
@@ -2179,35 +2304,36 @@ Deps,
 
 Deps,
 
-{% shell_term $ %}
-sudo dnf in libassuan-devel
-sudo dnf in libconfig-devel
-sudo dnf in gpgme-devel
-{% endshell_term %}
+```
+$ sudo dnf in libassuan-devel
+$ sudo dnf in libconfig-devel
+$ sudo dnf in gpgme-devel
+```
 
 Di Fedora, library `assuan.h` tidak berada di dalam directory `/usr/include/` tetapi masih berada di dalam satu level directory lagi, yaitu `/usr/include/libassuan2/`. Buat saja link agar proses make dapat menemukan header tersebut.
 
-{% shell_term $ %}
-sudo ln -sf /usr/include/libassuan2/assuan.h /usr/include/assuan.h
-{% endshell_term %}
+```
+$ sudo ln -sf /usr/include/libassuan2/assuan.h /usr/include/assuan.h
+```
 
-{% shell_term $ %}
-git clone https://github.com/ritze/pinentry-dmenu
-cd pinentry-dmenu
-make
-sudo make install
-{% endshell_term %}
+```
+$ git clone https://github.com/ritze/pinentry-dmenu
+$ cd pinentry-dmenu
+$ make
+$ sudo make install
+```
 
 Ubah/tambahkan/arahkan value dari variable `pinentry-program` di dalam file `~/.gnupg/gpg-agent.conf` menjadi `pinentry-dmenu`.
 
-{% highlight_caption ~/.gnupg/gpg-agent.conf %}
-{% highlight shell linenos %}
+```bash
+!filename: ~/.gnupg/gpg-agent.conf
 pinentry-program /usr/local/bin/pinentry-dmenu
-{% endhighlight %}
+```
+
 
 ### pinentry-rofi
 
-Official site: [https://github.com/plattfot/pinentry-rofi](https://github.com/plattfot/pinentry-rofi){:target="_blank"}
+Official site: [https://github.com/plattfot/pinentry-rofi](https://github.com/plattfot/pinentry-rofi)
 
 Rofi frontend to pinentry.
 
@@ -2215,19 +2341,20 @@ Rofi frontend to pinentry.
 
 Deps,
 
-{% shell_term $ %}
-sudo dnf in autoconf
-sudo dnf in autoconf-archive
-sudo dnf in automake
-sudo dnf in pkg-config
-sudo dnf in texinfo
-sudo dnf in guile
-sudo dnf in guile-devel
-{% endshell_term %}
+```
+$ sudo dnf in autoconf
+$ sudo dnf in autoconf-archive
+$ sudo dnf in automake
+$ sudo dnf in pkg-config
+$ sudo dnf in texinfo
+$ sudo dnf in guile
+$ sudo dnf in guile-devel
+```
+
 
 ### sxiv
 
-Official site: [https://github.com/muennich/sxiv](https://github.com/muennich/sxiv){:target="_blank"}
+Official site: [https://github.com/muennich/sxiv](https://github.com/muennich/sxiv)
 
 Simple X Image Viewer is a lightweight and scriptable image viewer written in C.
 
@@ -2235,41 +2362,44 @@ Simple X Image Viewer is a lightweight and scriptable image viewer written in C.
 
 Deps,
 
-{% shell_term $ %}
-sudo dnf in imlib2-devel
-sudo dnf in libexif-devel
-sudo dnf in giflib-devel
-sudo dnf in libXft-bgra-devel
-{% endshell_term %}
+```
+$ sudo dnf in imlib2-devel
+$ sudo dnf in libexif-devel
+$ sudo dnf in giflib-devel
+$ sudo dnf in libXft-bgra-devel
+```
 
-{% shell_term $ %}
-git clone https://github.com/muennich/sxiv
-cd sxiv
-make
-sudo make install
-{% endshell_term %}
+```
+$ git clone https://github.com/muennich/sxiv
+$ cd sxiv
+$ make
+$ sudo make install
+```
+
 
 ## GTK3-NOCSD
 
-Official site: [https://github.com/PCMan/gtk3-nocsd](https://github.com/PCMan/gtk3-nocsd){:target="_blank"}
+Official site: [https://github.com/PCMan/gtk3-nocsd](https://github.com/PCMan/gtk3-nocsd)
 
 gtk3-nocsd is a small module used to disable the client side decoration of Gtk+ 3.
 
-{% shell_term $ %}
-sudo dnf in gtk3-nocsd
-{% endshell_term %}
+```
+$ sudo dnf in gtk3-nocsd
+```
 
-{% highlight_caption ~/.profile %}
-{% highlight shell linenos %}
+```bash
+!filename: ~/.profile
 # A hack to disable gtk+ 3 client side decoration
 export LD_PRELOAD=/usr/lib64/libgtk3-nocsd.so.0
 export GTK_CSD=0
-{% endhighlight %}
+```
 
-{% box_info %}
-<p markdown=1>Sejak GNOME 41, beberapa aplikasi GNOME seperti `gnome-calculator` terdapat keanehan pada bagian border.</p>
-<p markdown=1>Karenanya, saya tidak lagi menggunakan cara ini.</p>
-{% endbox_info %}
+> INFO
+> 
+> Sejak GNOME 41, beberapa aplikasi GNOME seperti `gnome-calculator` terdapat keanehan pada bagian border.
+> 
+> Karenanya, saya tidak lagi menggunakan cara ini.
+
 
 ## Flatpak via Flathub Remote
 
@@ -2277,45 +2407,48 @@ Flatpak is a tool for managing applications and the runtimes they use. In the Fl
 
 Flatpak uses OSTree to distribute and deploy data. The repositories it uses are OSTree repositories and can be manipulated with the ostree utility. Installed runtimes and applications are OSTree checkouts.
 
-{% shell_term $ %}
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-{% endshell_term %}
+```
+$ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+```
+
 
 ## Gromit-MPX
 
-Official site: [https://github.com/bk138/gromit-mpx](https://github.com/bk138/gromit-mpx){:target="_blank"}
+Official site: [https://github.com/bk138/gromit-mpx](https://github.com/bk138/gromit-mpx)
 
 Gromit-MPX is an on-screen annotation tool that works with any Unix desktop environment under X11 as well as Wayland.
 
 (Flatpak - Flathub)
 
-{% shell_term $ %}
-flatpak install flathub net.christianbeier.Gromit-MPX
-{% endshell_term %}
+```
+$ flatpak install flathub net.christianbeier.Gromit-MPX
+```
+
 
 ## Telegram Desktop
 
-Official site: [https://desktop.telegram.org/](https://desktop.telegram.org/){:target="_blank"}
+Official site: [https://desktop.telegram.org/](https://desktop.telegram.org/)
 
 Fast and secure desktop app, perfectly synced with your mobile phone.
 
 (RPMFusion - Free)
 
-{% shell_term $ %}
-sudo dnf in telegram-desktop
-{% endshell_term %}
+```
+$ sudo dnf in telegram-desktop
+```
 
 Kalau ingin versi yang lebih up-to-date bisa menggunakan versi flatpak.
 
 (Flatpak - Flathub)
 
-{% shell_term $ %}
-flatpak install flathub org.telegram.desktop
-{% endshell_term %}
+```
+$ flatpak install flathub org.telegram.desktop
+```
+
 
 ## Hide desktop icon on Application List
 
-Sumber: [https://wiki.archlinux.org/title/desktop_entries#Hide_desktop_entries](https://wiki.archlinux.org/title/desktop_entries#Hide_desktop_entries){:target="_blank"}
+Sumber: [https://wiki.archlinux.org/title/desktop_entries#Hide_desktop_entries](https://wiki.archlinux.org/title/desktop_entries#Hide_desktop_entries)
 
 Firstly, copy the desktop entry file in question to `~/.local/share/applications` to avoid your changes being overwritten.
 
@@ -2327,9 +2460,10 @@ where desktop-name can be option such as `GNOME`, `Xfce`, `KDE` etc.
 
 A desktop entry can be hidden in more than desktop at once - simply separate the desktop names with a semi-colon.
 
+
 ## Center window in GNOME
 
-Sumber: [https://www.reddit.com/r/gnome/comments/aaqy2p/center_windows_in_gnome/](https://www.reddit.com/r/gnome/comments/aaqy2p/center_windows_in_gnome/){:target="_blank"}
+Sumber: [https://www.reddit.com/r/gnome/comments/aaqy2p/center_windows_in_gnome/](https://www.reddit.com/r/gnome/comments/aaqy2p/center_windows_in_gnome/)
 
 By: carmanaughty
 
@@ -2339,70 +2473,76 @@ By: [deleted]
 
 Its also in GNOME Tweaks. It is under "Windows" -> "Center New Windows".
 
+
 ## Polybar
 
-Official site: [https://polybar.github.io/](https://polybar.github.io/){:target="_blank"}
+Official site: [https://polybar.github.io/](https://polybar.github.io/)
 
 Polybar aims to help users build beautiful and highly customizable status bars for their desktop environment, without the need of having a black belt in shell scripting.
 
-{% shell_term $ %}
-sudo dnf in polybar
-{% endshell_term %}
+```
+$ sudo dnf in polybar
+```
+
 
 ## Feh
 
-Official site: [http://feh.finalrewind.org](http://feh.finalrewind.org){:target="_blank"}
+Official site: [http://feh.finalrewind.org](http://feh.finalrewind.org)
 
 feh is a versatile and fast image viewer using imlib2, the premier image file handling library. feh has many features, from simple single file viewing, to multiple file modes using a slide-show or multiple windows. feh supports the creation of montages as index prints with many user-configurable options.
 
-{% shell_term $ %}
-sudo dnf in feh
-{% endshell_term %}
+```
+$ sudo dnf in feh
+```
+
 
 ## SXHKD
 
-Official site: [https://github.com/baskerville/sxhkd](https://github.com/baskerville/sxhkd){:target="_blank"}
+Official site: [https://github.com/baskerville/sxhkd](https://github.com/baskerville/sxhkd)
 
 Simple HotKey Daemon.
 
 sxhkd is an X daemon that reacts to input events by executing commands. Its configuration file is a series of bindings that define the associations between the input events and the commands. The format of the configuration file supports a simple notation for mapping multiple shortcuts to multiple commands in parallel.
 
-{% shell_term $ %}
-sudo dnf in sxhkd
-{% endshell_term %}
+```
+$ sudo dnf in sxhkd
+```
+
 
 ## j4-dmenu-desktop (dmenu wrapper)
 
-Official site: [https://github.com/enkore/j4-dmenu-desktop](https://github.com/enkore/j4-dmenu-desktop){:target="_blank"}
+Official site: [https://github.com/enkore/j4-dmenu-desktop](https://github.com/enkore/j4-dmenu-desktop)
 
 j4-dmenu-desktop is a replacement for i3-dmenu-desktop. It's purpose is to find .desktop files and offer you a menu to start an application using dmenu. It should work just fine on about any desktop environment. You can also execute shell commands using it.
 
-{% shell_term $ %}
-sudo dnf in j4-dmenu-desktop
-{% endshell_term %}
+```
+$ sudo dnf in j4-dmenu-desktop
+```
+
 
 ## XCompmgr
 
-Official site: [https://gitlab.freedesktop.org/xorg/app/xcompmgr](https://gitlab.freedesktop.org/xorg/app/xcompmgr){:target="_blank"}
+Official site: [https://gitlab.freedesktop.org/xorg/app/xcompmgr](https://gitlab.freedesktop.org/xorg/app/xcompmgr)
 
 xcompmgr is a sample compositing manager for X servers supporting the XFIXES, DAMAGE, and COMPOSITE extensions. It enables basic eye-candy effects
 
-{% shell_term $ %}
-sudo dnf in libXcomposite-devel
-sudo dnf in libXdamage-devel
-{% endshell_term %}
+```
+$ sudo dnf in libXcomposite-devel
+$ sudo dnf in libXdamage-devel
+```
 
-{% shell_term $ %}
-sudo dnf in xcompmgr
-{% endshell_term %}
+```
+$ sudo dnf in xcompmgr
+```
 
-{% box_info %}
-<p markdown=1>Saya tidak lagi menggunakan paket ini. Sejak menggunakan x260, saya menggunakan picom.</p>
-{% endbox_info %}
+> INFO
+> 
+> Saya tidak lagi menggunakan paket ini. Sejak menggunakan x260, saya menggunakan picom.
+
 
 ## Picom
 
-Official site: [https://github.com/yshui/picom](https://github.com/yshui/picom){:target="_blank"}
+Official site: [https://github.com/yshui/picom](https://github.com/yshui/picom)
 
 This is forked from the original Compton because that seems to have become unmaintained.
 
@@ -2410,159 +2550,167 @@ The current battle plan of this fork is to refactor it to make the code possible
 
 We also try to fix bugs.
 
-{% shell_term $ %}
-sudo dnf in picom
-{% endshell_term %}
+```
+$ sudo dnf in picom
+```
 
-<br>
 **Manual Build**
 
 Deps,
 
-{% shell_term $ %}
-sudo dnf in meson
-sudo dnf in libev-devel
-sudo dnf in xcb-util-renderutil-devel
-sudo dnf in xcb-util-image-devel
-sudo dnf in pixman-devel
-sudo dnf in uthash-devel
-sudo dnf in libconfig-devel
-sudo dnf in dbus-devel
-{% endshell_term %}
+```
+$ sudo dnf in meson
+$ sudo dnf in libev-devel
+$ sudo dnf in xcb-util-renderutil-devel
+$ sudo dnf in xcb-util-image-devel
+$ sudo dnf in pixman-devel
+$ sudo dnf in uthash-devel
+$ sudo dnf in libconfig-devel
+$ sudo dnf in dbus-devel
+```
 
-I'm using picom with rounded corner by [https://github.com/ibhagwan/picom](https://github.com/ibhagwan/picom){:target="_blank"}.
+I'm using picom with rounded corner by [https://github.com/ibhagwan/picom](https://github.com/ibhagwan/picom).
 
-Sumber: [https://github.com/yshui/picom/blob/next/README.md#build](https://github.com/yshui/picom/blob/next/README.md#build){:target="_blank"}
+Sumber: [https://github.com/yshui/picom/blob/next/README.md#build](https://github.com/yshui/picom/blob/next/README.md#build)
 
-{% shell_term $ %}
-git clone https://github.com/ibhagwan/picom
-cd picom
-git submodule update --init --recursive
-meson --buildtype=release . build
-ninja -C build
-sudo ninja -C build install
-{% endshell_term %}
+```
+$ git clone https://github.com/ibhagwan/picom
+$ cd picom
+$ git submodule update --init --recursive
+$ meson --buildtype=release . build
+$ ninja -C build
+$ sudo ninja -C build install
+```
+
 
 ## xmodmap
 
-Official site: [https://www.x.org](https://www.x.org){:target="_blank"}
+Official site: [https://www.x.org](https://www.x.org)
 
 The xmodmap program is used to edit and display the keyboard modifier map and keymap table that are used by client applications to convert event keycodes into keysyms.
 
-{% shell_term $ %}
-sudo dnf in xmodmap
-{% endshell_term %}
+```
+$ sudo dnf in xmodmap
+```
+
 
 ## xcape
 
-Official site: [https://github.com/alols/xcape](https://github.com/alols/xcape){:target="_blank"}
+Official site: [https://github.com/alols/xcape](https://github.com/alols/xcape)
 
 xcape allows you to use a modifier key as another key when pressed and released on its own. Note that it is slightly slower than pressing the original key, because the pressed event does not occur until the key is released. The default behaviour is to generate the Escape key when Left Control is pressed and released on its own. (If you don't understand why anybody would want this, I'm guessing that Vim is not your favourite text editor ;)
 
 (copr - dawid/xcape )
 
-{% shell_term $ %}
-sudo dnf copr enable dawid/xcape
-sudo dnf in xcape
-{% endshell_term %}
+```
+$ sudo dnf copr enable dawid/xcape
+$ sudo dnf in xcape
+```
 
-<br>
 **Manual Build**
 
 Deps,
 
-{% shell_term $ %}
-sudo dnf in git
-sudo dnf in gcc
-sudo dnf in make
-sudo dnf in pkgconfig
-sudo dnf in libX11-devel
-sudo dnf in libXtst-devel
-sudo dnf in libXi-devel
-{% endshell_term %}
+```
+$ sudo dnf in git
+$ sudo dnf in gcc
+$ sudo dnf in make
+$ sudo dnf in pkgconfig
+$ sudo dnf in libX11-devel
+$ sudo dnf in libXtst-devel
+$ sudo dnf in libXi-devel
+```
 
-{% shell_term $ %}
-git clone https://github.com/alols/xcape.git
-cd xcape
-make
-sudo make install
-{% endshell_term %}
+```
+$ git clone https://github.com/alols/xcape.git
+$ cd xcape
+$ make
+$ sudo make install
+```
+
 
 ## xev
 
-Official site: [https://www.x.org](https://www.x.org){:target="_blank"}
+Official site: [https://www.x.org](https://www.x.org)
 
 X Event utility. xev displays the X11 protocol events sent to a given window.
 
-{% shell_term $ %}
-sudo dnf in xev
-{% endshell_term %}
+```
+$ sudo dnf in xev
+```
+
 
 ## xdotool
 
-Official site: [http://www.semicomplete.com/projects/xdotool/](http://www.semicomplete.com/projects/xdotool/){:target="_blank"}
+Official site: [http://www.semicomplete.com/projects/xdotool/](http://www.semicomplete.com/projects/xdotool/)
 
 Fake keyboard/mouse input. This tool lets you programmatically (or manually) simulate keyboard input and mouse activity, move and re-size windows, etc.
 
-{% shell_term $ %}
-sudo dnf in xdotool
-{% endshell_term %}
+```
+$ sudo dnf in xdotool
+```
+
 
 ## brightlight
 
-Official site: [https://github.com/multiplexd/brightlight](https://github.com/multiplexd/brightlight){:target="_blank"}
+Official site: [https://github.com/multiplexd/brightlight](https://github.com/multiplexd/brightlight)
 
 brightlight gets and sets the screen back-light brightness on Linux systems using the kernel sysfs interface.
 
-{% shell_term $ %}
-sudo dnf in brightlight
-{% endshell_term %}
+```
+$ sudo dnf in brightlight
+```
+
 
 ## Udiskie
 
-Official site: [https://pypi.org/project/udiskie](https://pypi.org/project/udiskie){:target="_blank"}
+Official site: [https://pypi.org/project/udiskie](https://pypi.org/project/udiskie)
 
 udiskie is a front-end for UDisks written in python. Its main purpose is automatically mounting removable media, such as CDs or flash drives. It has optional mount notifications, a GTK tray icon and user level CLIs for manual mounting and unmounting operations.
 
-{% shell_term $ %}
-sudo dnf in udiskie
-{% endshell_term %}
+```
+$ sudo dnf in udiskie
+```
+
 
 ## abduco
 
-Official site: [http://www.brain-dump.org/projects/abduco/](http://www.brain-dump.org/projects/abduco/){:target="_blank"}
+Official site: [http://www.brain-dump.org/projects/abduco/](http://www.brain-dump.org/projects/abduco/)
 
 abduco provides session management i.e. it allows programs to be run independently from its controlling terminal. That is programs can be detached - run in the background - and then later reattached. Together with dvtm it provides a simpler and cleaner alternative to tmux or screen.
 
-{% shell_term $ %}
-sudo dnf in abduco
-{% endshell_term %}
+```
+$ sudo dnf in abduco
+```
+
 
 ## dtach
 
-Official site: [https://github.com/crigler/dtach](https://github.com/crigler/dtach){:target="_blank"}
+Official site: [https://github.com/crigler/dtach](https://github.com/crigler/dtach)
 
 dtach is a program that emulates the detach feature of screen, with less overhead. It is designed to be transparent and un-intrusive; it avoids interpreting the input and output between attached terminals and the program under its control. Consequently, it works best with full-screen applications such as emacs.
 
-{% shell_term $ %}
-sudo dnf in dtach
-{% endshell_term %}
+```
+$ sudo dnf in dtach
+```
+
 
 ## LXappearance
 
-Official site: [http://lxde.org/](http://lxde.org/){:target="_blank"}
+Official site: [http://lxde.org/](http://lxde.org/)
 
 Feature-rich GTK+ theme switcher for LXDE.
 
 LXAppearance is a new GTK+ theme switcher developed for LXDE, the Lightweight X11 Desktop Environment. It is able to change GTK+ themes, icon themes, and fonts used by applications. All changes done by the users can be seen immediately in the preview area. After clicking the "Apply" button, the settings will be written to gtkrc, and all running programs will be asked to reload their themes.
 
-{% shell_term $ %}
-sudo dnf in lxappearance
-{% endshell_term %}
+```
+$ sudo dnf in lxappearance
+```
+
 
 ## unclutter-xfixes
 
-Official site: [https://github.com/Airblader/unclutter-xfixes](https://github.com/Airblader/unclutter-xfixes){:target="_blank"}
+Official site: [https://github.com/Airblader/unclutter-xfixes](https://github.com/Airblader/unclutter-xfixes)
 
 Hides the cursor on inactivity (rewrite of unclutter).
 
@@ -2570,151 +2718,162 @@ Hides the cursor on inactivity (rewrite of unclutter).
 
 Deps,
 
-{% shell_term $ %}
-sudo dnf in libXi-devel
-sudo dnf in asciidoc
-{% endshell_term %}
+```
+$ sudo dnf in libXi-devel
+$ sudo dnf in asciidoc
+```
 
-{% shell_term $ %}
-git clone https://github.com/Airblader/unclutter-xfixes.git
-cd unclutter-xfixes
-make
-sudo make install
-{% endshell_term %}
+```
+$ git clone https://github.com/Airblader/unclutter-xfixes.git
+$ cd unclutter-xfixes
+$ make
+$ sudo make install
+```
+
 
 ## Calibre
 
-Official site: [https://calibre-ebook.com/](https://calibre-ebook.com/){:target="_blank"}
+Official site: [https://calibre-ebook.com/](https://calibre-ebook.com/)
 
 Calibre is meant to be a complete e-library solution. It includes library management, format conversion, news feeds to ebook conversion as well as e-book reader sync features.
 
 Calibre is primarily a ebook cataloging program. It manages your ebook collection for you. It is designed around the concept of the logical book, i.e. a single entry in the database that may correspond to ebooks in several formats. It also supports conversion to and from a dozen different ebook formats.
 
-{% shell_term $ %}
-sudo dnf in calibre
-{% endshell_term %}
+```
+$ sudo dnf in calibre
+```
+
 
 ## System Config Printer
 
-Official site: [https://github.com/OpenPrinting/system-config-printer](https://github.com/OpenPrinting/system-config-printer){:target="_blank"}
+Official site: [https://github.com/OpenPrinting/system-config-printer](https://github.com/OpenPrinting/system-config-printer)
 
 system-config-printer is a graphical user interface that allows the user to configure a CUPS print server.
 
-{% shell_term $ %}
-sudo dnf in system-config-printer
-{% endshell_term %}
+```
+$ sudo dnf in system-config-printer
+```
+
 
 ## PPD from foomatic-db
 
-Official site: [http://www.openprinting.org](http://www.openprinting.org){:target="_blank"}
+Official site: [http://www.openprinting.org](http://www.openprinting.org)
 
 This is the database of printers, printer drivers, and driver options for Foomatic.
 
-{% shell_term $ %}
-sudo dnf in foomatic-db
-sudo dnf in foomatic-db-ppds
-{% endshell_term %}
+```
+$ sudo dnf in foomatic-db
+$ sudo dnf in foomatic-db-ppds
+```
+
 
 ## XSane (Scanner)
 
-Official site: [http://www.xsane.org/](http://www.xsane.org/){:target="_blank"}
+Official site: [http://www.xsane.org/](http://www.xsane.org/)
 
 XSane is an X based interface for the SANE (Scanner Access Now Easy) library, which provides access to scanners, digital cameras, and other capture devices. XSane is written in GTK+ and provides control for performing the scan and then manipulating the captured image.
 
-{% shell_term $ %}
-sudo dnf in xsane
-{% endshell_term %}
+```
+$ sudo dnf in xsane
+```
+
 
 ## Gparted
 
-Official site: [http://gparted.org](http://gparted.org){:target="_blank"}
+Official site: [http://gparted.org](http://gparted.org)
 
 GParted stands for Gnome Partition Editor and is a graphical frontend to libparted. Among other features it supports creating, resizing, moving and copying of partitions. Also several (optional) filesystem tools provide support for filesystems not included in libparted. These optional packages will be detected at runtime and don't require a rebuild of GParted.
 
-{% shell_term $ %}
-sudo dnf in gparted
-{% endshell_term %}
+```
+$ sudo dnf in gparted
+```
+
 
 ## Numix Solarized Theme Build
 
-Official site: [https://github.com/numixproject/numix-gtk-theme](https://github.com/numixproject/numix-gtk-theme){:target="_blank"}
+Official site: [https://github.com/numixproject/numix-gtk-theme](https://github.com/numixproject/numix-gtk-theme)
 
 A modern flat theme with a combination of light and dark elements.
 
 Install deps buat ngebuild.
 
-{% shell_term $ %}
-sudo dnf in sassc
-sudo dnf in gdk-pixbuf2-devel
-{% endshell_term %}
+```
+$ sudo dnf in sassc
+$ sudo dnf in gdk-pixbuf2-devel
+```
 
 Install deps numix theme,
 
-{% shell_term $ %}
-sudo dnf in numix-gtk-theme
-{% endshell_term %}
+```
+$ sudo dnf in numix-gtk-theme
+```
 
-{% shell_term $ %}
-git clone https://github.com/numixproject/numix-gtk-theme
-cd numix-gtk-theme
-{% endshell_term %}
+```
+$ git clone https://github.com/numixproject/numix-gtk-theme
+$ cd numix-gtk-theme
+```
 
 Saya memiliki Codedark.colors
 
-{% shell_term $ %}
-sudo make THEME=Codedark install
-{% endshell_term %}
+```
+$ sudo make THEME=Codedark install
+```
+
 
 ## Aria2
 
-Official site: [http://aria2.github.io/](http://aria2.github.io/){:target="_blank"}
+Official site: [http://aria2.github.io/](http://aria2.github.io/)
 
 aria2 is a download utility with resuming and segmented downloading. Supported protocols are HTTP/HTTPS/FTP/BitTorrent. It also supports Metalink version 3.0.
 
-{% shell_term $ %}
-sudo dnf in aria2
-{% endshell_term %}
+```
+$ sudo dnf in aria2
+```
 
 Install juga TUI nya biar nyaman.
 
-{% shell_term $ %}
-pip install --user "aria2p[tui]"
-{% endshell_term %}
+```
+$ pip install --user "aria2p[tui]"
+```
+
 
 ## Mate Polkit
 
-Official site: [http://mate-desktop.org](http://mate-desktop.org){:target="_blank"}
+Official site: [http://mate-desktop.org](http://mate-desktop.org)
 
 Integrates polkit with the MATE Desktop environment.
 
-{% shell_term $ %}
-sudo dnf in mate-polkit
-{% endshell_term %}
+```
+$ sudo dnf in mate-polkit
+```
+
 
 ## LXpolkit
 
-Official site: [http://lxde.sourceforge.net/](http://lxde.sourceforge.net/){:target="_blank"}
+Official site: [http://lxde.sourceforge.net/](http://lxde.sourceforge.net/)
 
 LXPolKit is a simple PolicyKit authentication agent developed for LXDE, the Lightweight X11 Desktop Environment.
 
-{% shell_term $ %}
-sudo dnf in lxpolkit
-{% endshell_term %}
+```
+$ sudo dnf in lxpolkit
+```
+
 
 ## p7zip
 
-Official site: [http://www.7-zip.org/](http://www.7-zip.org/){:target="_blank"}
+Official site: [http://www.7-zip.org/](http://www.7-zip.org/)
 
 p7zip is a port of 7za.exe for Unix. 7-Zip is a file archiver with a very high compression ratio.
 
-{% shell_term $ %}
-sudo dnf in p7zip
-sudo dnf in p7zip-plugins
-{% endshell_term %}
+```
+$ sudo dnf in p7zip
+$ sudo dnf in p7zip-plugins
+```
+
 
 ## Screenkey
 
-Official site: [https://www.thregr.org/~wavexx/software/screenkey](https://www.thregr.org/~wavexx/software/screenkey){:target="_blank"}
+Official site: [https://www.thregr.org/~wavexx/software/screenkey](https://www.thregr.org/~wavexx/software/screenkey)
 
 A screencast tool to display your keys.
 
@@ -2730,90 +2889,100 @@ A screencast tool to display your keys.
 * Dynamic recording control etc.
 </details>
 
-{% shell_term $ %}
-sudo dnf in screenkey
-{% endshell_term %}
+```
+$ sudo dnf in screenkey
+```
+
 
 ## Docker
 
-Sumber: [https://developer.fedoraproject.org/tools/docker/docker-installation.html](https://developer.fedoraproject.org/tools/docker/docker-installation.html){:target="_blank"}
+Sumber: [https://developer.fedoraproject.org/tools/docker/docker-installation.html](https://developer.fedoraproject.org/tools/docker/docker-installation.html)
 
 Install the `docker-ce` package using the Docker repository:
 
 To install the dnf-plugins-core package (which provides the commands to manage your DNF repositories) and set up the stable repository.
 
-{% shell_term $ %}
-sudo dnf in dnf-plugins-core
-{% endshell_term %}
+```
+$ sudo dnf in dnf-plugins-core
+```
 
 To add the `docker-ce` repository
 
-{% shell_term $ %}
-sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
-{% endshell_term %}
+```
+$ sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+```
 
 To install the docker engine. The Docker daemon relies on a OCI compliant runtime (invoked via the containerd daemon) as its interface to the Linux kernel namespaces, cgroups, and SELinux.
 
-{% shell_term $ %}
-sudo dnf in docker-ce docker-ce-cli containerd.io
-{% endshell_term %}
+```
+$ sudo dnf in docker-ce docker-ce-cli containerd.io
+```
 
 Afterwards you need to enable the backward compatability for Cgroups. Docker Engine on Linux relies on control groups (cgroups). A cgroup limits an application to a specific set of resources. Control groups allow Docker Engine to share available hardware resources to containers and optionally enforce limits and constraints.
 
-{% shell_term $ %}
-sudo grubby --update-kernel=ALL --args="systemd.unified_cgroup_hierarchy=0"
-{% endshell_term %}
+```
+$ sudo grubby --update-kernel=ALL --args="systemd.unified_cgroup_hierarchy=0"
+```
 
 You must reboot after running the command for the changes to take effect
 
 To start the Docker service use:
 
-{% shell_term $ %}
-sudo systemctl start docker
-{% endshell_term %}
+```
+$ sudo systemctl start docker
+```
 
 Now you can verify that Docker was correctly installed and is running by running the Docker hello-world image.
 
-{% shell_term $ %}
-sudo docker run hello-world
-{% endshell_term %}
+```
+$ sudo docker run hello-world
+```
 
-{% box_pertanyaan %}
-<p markdown=1><b>Why can’t I use docker command as a non root user, by default?</b></p>
-<p markdown=1>The Docker daemon binds to a Unix socket instead of a TCP port. By default that Unix socket is owned by the user `root` and other users can access it with `sudo`. For this reason, Docker daemon always runs as the `root` user.</p>
-<p markdown=1>You can either [set up sudo](http://www.projectatomic.io/blog/2015/08/why-we-dont-let-non-root-users-run-docker-in-centos-fedora-or-rhel){:target="_blank"} to give docker access to non-root users.</p>
-<p markdown=1>Or you can create a Unix group called `docker` and add users to it. When the Docker daemon starts, it makes the ownership of the Unix socket read/writable by the `docker` group.</p>
-<p markdown=1>**Warning**: The `docker` group is equivalent to the `root` user; For details on how this impacts security in your system, see [Docker Daemon Attack Surface](https://docs.docker.com/engine/security/security/#docker-daemon-attack-surface){:target="_blank"} for details.</p>
-<p markdown=1>To create the `docker` group and add your user:</p>
-{% shell_term $ %}
-sudo groupadd docker && sudo gpasswd -a ${USER} docker && sudo systemctl restart docker
-newgrp docker
-{% endshell_term %}
-<p markdown=1>You have to log out and log back in (or restart Docker daemon and use `newgrp` command as mentioned here) for these changes to take effect. Then you can verify if your changes were successful by running Docker without `sudo`.</p>
-{% endbox_pertanyaan %}
+> PERTANYAAN?
+> 
+> **Why can’t I use docker command as a non root user, by default?**
+> 
+> The Docker daemon binds to a Unix socket instead of a TCP port. By default that Unix socket is owned by the user `root` and other users can access it with `sudo`. For this reason, Docker daemon always runs as the `root` user.
+> 
+> You can either [set up sudo](http://www.projectatomic.io/blog/2015/08/why-we-dont-let-non-root-users-run-docker-in-centos-fedora-or-rhel) to give docker access to non-root users.
+> 
+> Or you can create a Unix group called `docker` and add users to it. When the Docker daemon starts, it makes the ownership of the Unix socket read/writable by the `docker` group.
+> 
+> **Warning**: The `docker` group is equivalent to the `root` user; For details on how this impacts security in your system, see [Docker Daemon Attack Surface](https://docs.docker.com/engine/security/security/#docker-daemon-attack-surface) for details.
+> 
+> To create the `docker` group and add your user:
+> 
+> ```
+> $ sudo groupadd docker && sudo gpasswd -a ${USER} docker && sudo systemctl restart docker
+> $ newgrp docker
+> ```
+> 
+> You have to log out and log back in (or restart Docker daemon and use `newgrp` command as mentioned here) for these changes to take effect. Then you can verify if your changes were successful by running Docker without `sudo`.
+
 
 ## KBBI-Qt
 
-Official site: [https://github.com/bgli/kbbi-qt](https://github.com/bgli/kbbi-qt){:target="_blank"}
+Official site: [https://github.com/bgli/kbbi-qt](https://github.com/bgli/kbbi-qt)
 
 KBBI Qt adalah aplikasi Kamus Besar Bahasa Indonesia berbasis Graphical User Interface (GUI) yang dikembangkan menggunakan bahasa pemrograman C++ dan Framework Qt. KBBI Qt memiliki antarmuka grafis yang dapat digunakan dengan mudah di desktop GNU/Linux. KBBI Qt merupakan perangkat lunak bebas (free software) berlisensi GNU GPL v3.0. Saat ini KBBI Qt siap untuk dipasang pada distribusi GNU/Linux Fedora 23/24/25/Rawhide, CentOS 7/RHEL 7, Debian dan distro-distro turunan Debian serta sistem operasi Windows.
 
-{% shell_term $ %}
-sudo dnf in qt5-qtbase-devel
-sudo dnf in qtchooser
-{% endshell_term %}
+```
+$ sudo dnf in qt5-qtbase-devel
+$ sudo dnf in qtchooser
+```
 
-{% shell_term $ %}
-git clone https://github.com/bgli/kbbi-qt.git
-cd kbbi-qt
-qmake-qt5 KBBI-Qt.pro
-make
-sudo make install
-{% endshell_term %}
+```
+$ git clone https://github.com/bgli/kbbi-qt.git
+$ cd kbbi-qt
+$ qmake-qt5 KBBI-Qt.pro
+$ make
+$ sudo make install
+```
+
 
 ## Zathura
 
-Official site: [http://pwmt.org/projects/zathura/](http://pwmt.org/projects/zathura/){:target="_blank"}
+Official site: [http://pwmt.org/projects/zathura/](http://pwmt.org/projects/zathura/)
 
 Zathura is a highly customizable and functional document viewer. It provides a minimalistic and space saving interface as well as an easy usage that mainly focuses on keyboard interaction.
 
@@ -2826,100 +2995,105 @@ Zathura requires plugins to support document formats. For instance:
 
 All of these are available as separate packages in Fedora. A zathura-plugins-all package is available should you want to install all available plugins.
 
-{% shell_term $ %}
-sudo dnf in zathura
-sudo dnf in zathura-pdf-mupdf
-{% endshell_term %}
+```
+$ sudo dnf in zathura
+$ sudo dnf in zathura-pdf-mupdf
+```
+
 
 ## Kamus
 
-Official site: [https://github.com/abihf/kamus](https://github.com/abihf/kamus){:target="_blank"}
+Official site: [https://github.com/abihf/kamus](https://github.com/abihf/kamus)
 
 Simple English <=> Indonesia Dictioanry Application.
 
-{% shell_term $ %}
-sudo dnf in vala
-sudo dnf in libvala-devel
-sudo dnf in gtk3-devel
-sudo dnf in libgee-devel
-{% endshell_term %}
+```
+$ sudo dnf in vala
+$ sudo dnf in libvala-devel
+$ sudo dnf in gtk3-devel
+$ sudo dnf in libgee-devel
+```
 
-{% shell_term $ %}
-git clone https://github.com/abihf/kamus.git
-cd kamus
-./configure
-make
-sudo make install
-{% endshell_term %}
+```
+$ git clone https://github.com/abihf/kamus.git
+$ cd kamus
+$ ./configure
+$ make
+$ sudo make install
+```
+
 
 ## Thunderbird
 
-Official site: [http://www.mozilla.org/projects/thunderbird/](http://www.mozilla.org/projects/thunderbird/){:target="_blank"}
+Official site: [http://www.mozilla.org/projects/thunderbird/](http://www.mozilla.org/projects/thunderbird/)
 
 Mozilla Thunderbird is a standalone mail and newsgroup client.
 
-{% shell_term $ %}
-sudo dnf in thunderbird
-{% endshell_term %}
+```
+$ sudo dnf in thunderbird
+```
+
 
 ## Evolution
 
-Official site: [https://wiki.gnome.org/Apps/Evolution](https://wiki.gnome.org/Apps/Evolution){:target="_blank"}
+Official site: [https://wiki.gnome.org/Apps/Evolution](https://wiki.gnome.org/Apps/Evolution)
 
 Evolution is the GNOME mailer, calendar, contact manager and communications tool. The components which make up Evolution are tightly integrated with one another and act as a seamless personal information-management tool.
 
-{% shell_term $ %}
-sudo dnf in evolution
-{% endshell_term %}
+```
+$ sudo dnf in evolution
+```
 
-<br>
 For **Tray icon**
 
-Sumber: [https://superuser.com/questions/112210/how-do-i-minimize-evolution-to-the-system-tray-in-ubuntu](https://superuser.com/questions/112210/how-do-i-minimize-evolution-to-the-system-tray-in-ubuntu){:target="_blank"}
+Sumber: [https://superuser.com/questions/112210/how-do-i-minimize-evolution-to-the-system-tray-in-ubuntu](https://superuser.com/questions/112210/how-do-i-minimize-evolution-to-the-system-tray-in-ubuntu)
 
-Sumber: [https://github.com/acidrain42/evolution-on/](https://github.com/acidrain42/evolution-on/){:target="_blank"}
+Sumber: [https://github.com/acidrain42/evolution-on/](https://github.com/acidrain42/evolution-on/)
 
-{% shell_term $ %}
-sudo dnf in evolution-devel
-sudo dnf in intltool
-sudo dnf in gettext-common-devel
-sudo dnf in gettext-devel
-sudo dnf in GConf2-devel
-{% endshell_term %}
+```
+$ sudo dnf in evolution-devel
+$ sudo dnf in intltool
+$ sudo dnf in gettext-common-devel
+$ sudo dnf in gettext-devel
+$ sudo dnf in GConf2-devel
+```
 
-{% shell_term $ %}
-git clone https://github.com/acidrain42/evolution-on.git
-cd evolution-on
-autoreconf -sivf
-./configure
-make
-sudo make install
-{% endshell_term %}
+```
+$ git clone https://github.com/acidrain42/evolution-on.git
+$ cd evolution-on
+$ autoreconf -sivf
+$ ./configure
+$ make
+$ sudo make install
+```
+
 
 ## Gucharmap (Character Map)
 
-Official site: [https://wiki.gnome.org/Apps/Gucharmap](https://wiki.gnome.org/Apps/Gucharmap){:target="_blank"}
+Official site: [https://wiki.gnome.org/Apps/Gucharmap](https://wiki.gnome.org/Apps/Gucharmap)
 
 This program allows you to browse through all the available Unicode characters and categories for the installed fonts, and to examine their detailed properties. It is an easy way to find the character you might only know by its Unicode name or code point.
 
-{% shell_term $ %}
-sudo dnf in gucharmap
-{% endshell_term %}
+```
+$ sudo dnf in gucharmap
+```
+
 
 ## Zoom Meeting Client
 
-Sumber: [https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux#h_825b50ac-ad15-44a8-9959-28c97e4803ef){:target="_blank"}
+Sumber: [https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux#h_825b50ac-ad15-44a8-9959-28c97e4803ef)
 
-Sumber: [https://tecadmin.net/install-zoom-client-on-fedora/](https://tecadmin.net/install-zoom-client-on-fedora/){:target="_blank"}
+Sumber: [https://tecadmin.net/install-zoom-client-on-fedora/](https://tecadmin.net/install-zoom-client-on-fedora/)
 
-{% shell_term $ %}
-wget https://zoom.us/client/latest/zoom_x86_64.rpm
-sudo dnf localinstall zoom_x86_64.rpm
-{% endshell_term %}
+```
+$ wget https://zoom.us/client/latest/zoom_x86_64.rpm
+$ sudo dnf localinstall zoom_x86_64.rpm
+```
+
 
 ## ffmulticonverter
 
-Official site: [https://sites.google.com/site/ffmulticonverter/home](https://sites.google.com/site/ffmulticonverter/home){:target="_blank"}
+Official site: [https://sites.google.com/site/ffmulticonverter/home](https://sites.google.com/site/ffmulticonverter/home)
 
 Graphical application which enables you to convert audio, video, image and
 document files between all popular formats using ffmpeg, unoconv, and
@@ -2935,83 +3109,90 @@ ImageMagick.
 - Recursive conversions
 </details>
 
-{% shell_term $ %}
-sudo dnf in ffmulticonverter
-{% endshell_term %}
+```
+$ sudo dnf in ffmulticonverter
+```
+
 
 ## HandBrake
 
-Official site: [http://handbrake.fr/](http://handbrake.fr/){:target="_blank"}
+Official site: [http://handbrake.fr/](http://handbrake.fr/)
 
 HandBrake is a general-purpose, free, open-source, cross-platform, multithreaded video transcoder software application. It can process most common multimedia files and any DVD or Bluray sources that do not contain any kind of copy protection.
 
 This package contains the command line version of the program.
 
-{% shell_term $ %}
-sudo dnf in HandBrake-gui
-{% endshell_term %}
+```
+$ sudo dnf in HandBrake-gui
+```
+
 
 ## Discord
 
-Official site: [https://discordapp.com/](https://discordapp.com/){:target="_blank"}
+Official site: [https://discordapp.com/](https://discordapp.com/)
 
 Linux Release for Discord, a free proprietary VoIP application designed for gaming communities.
 
 (RPMFusion - NonFree)
 
-{% shell_term $ %}
-sudo dnf in discord
-{% endshell_term %}
+```
+$ sudo dnf in discord
+```
+
 
 ## Slack
 
-Official site: [https://slack.com/intl/en-id/downloads/linux](https://slack.com/intl/en-id/downloads/linux){:target="_blank"}
+Official site: [https://slack.com/intl/en-id/downloads/linux](https://slack.com/intl/en-id/downloads/linux)
 
 Slack is the collaboration hub that brings the right people, information, and tools together to get work done.
 
-{% shell_term $ %}
-wget https://downloads.slack-edge.com/linux_releases/slack-4.17.0-0.1.fc21.x86_64.rpm
-sudo dnf localinstall slack-4.17.0-0.1.fc21.x86_64.rpm
-{% endshell_term %}
+```
+$ wget https://downloads.slack-edge.com/linux_releases/slack-4.17.0-0.1.fc21.x86_64.rpm
+$ sudo dnf localinstall slack-4.17.0-0.1.fc21.x86_64.rpm
+```
+
 
 ## PDF Arranger
 
-Official site: [https://github.com/pdfarranger/pdfarranger](https://github.com/pdfarranger/pdfarranger){:target="_blank"}
+Official site: [https://github.com/pdfarranger/pdfarranger](https://github.com/pdfarranger/pdfarranger)
 
 PDF Arranger is a small python-gtk application, which helps the user to merge or split pdf documents and rotate, crop and rearrange their pages using an interactive and intuitive graphical interface. It is a frontend for pikepdf.
 
 PDF Arranger is a fork of Konstantinos Poulios’s PDF-Shuffler.
 
-{% shell_term $ %}
-sudo dnf in pdfarranger
-{% endshell_term %}
+```
+$ sudo dnf in pdfarranger
+```
+
 
 ## Master PDF Editor 4
 
-Sumber: [https://www.linuxuprising.com/2019/04/download-master-pdf-editor-4-for-linux.html](https://www.linuxuprising.com/2019/04/download-master-pdf-editor-4-for-linux.html){:target="_blank"}
+Sumber: [https://www.linuxuprising.com/2019/04/download-master-pdf-editor-4-for-linux.html](https://www.linuxuprising.com/2019/04/download-master-pdf-editor-4-for-linux.html)
 
 Master PDF Editor is a proprietary application to edit PDF documents on Linux, Windows and macOS. It can create, edit (insert text or images), annotate, view, encrypt, and sign PDF documents.
 
-{% shell_term $ %}
-wget http://code-industry.net/public/master-pdf-editor-4.3.89_qt5.x86_64.rpm
-sudo dnf localinstall master-pdf-editor-4.3.89_qt5.x86_64.rpm
-{% endshell_term %}
+```
+$ wget http://code-industry.net/public/master-pdf-editor-4.3.89_qt5.x86_64.rpm
+$ sudo dnf localinstall master-pdf-editor-4.3.89_qt5.x86_64.rpm
+```
+
 
 ## Intel GPU Tools
 
-Official site: [https://gitlab.freedesktop.org/drm/igt-gpu-tools](https://gitlab.freedesktop.org/drm/igt-gpu-tools){:target="_blank"}
+Official site: [https://gitlab.freedesktop.org/drm/igt-gpu-tools](https://gitlab.freedesktop.org/drm/igt-gpu-tools)
 
 igt-gpu-tools (formerly known as intel-gpu-tools) is the standard for writing test cases for DRM drivers. It also includes a handful of useful tools for various drivers, such as Intel's GPU tools for i915.
 
-{% shell_term $ %}
-sudo dnf in igt-gpu-tools
-{% endshell_term %}
+```
+$ sudo dnf in igt-gpu-tools
+```
+
 
 ## Autocutsel
 
-Sumber: [http://www.nongnu.org/autocutsel/](http://www.nongnu.org/autocutsel/){:target="_blank"}
+Sumber: [http://www.nongnu.org/autocutsel/](http://www.nongnu.org/autocutsel/)
 
-Sumber: [https://github.com/sigmike/autocutsel](https://github.com/sigmike/autocutsel){:target="_blank"}
+Sumber: [https://github.com/sigmike/autocutsel](https://github.com/sigmike/autocutsel)
 
 X servers use two schemes to copy text between applications. The first one (old and deprecated) is the cutbuffer. It is a simple buffer in which any application can store text. The other scheme is the selection and works differently. There may be many selections in a single server. An application does not copy data in a selection, it "owns" it. When another application wants to retreive the content of a selection, it asks the owner.
 
@@ -3019,258 +3200,248 @@ X servers use two schemes to copy text between applications. The first one (old 
 
 Deps,
 
-{% shell_term $ %}
-sudo dnf in libXaw-devel
-{% endshell_term %}
+```
+$ sudo dnf in libXaw-devel
+```
 
-{% shell_term $ %}
-git clone https://github.com/sigmike/autocutsel
-cd autocutsel
-./bootstrap
-./configure
-make
-sudo make install
-{% endshell_term %}
+```
+$ git clone https://github.com/sigmike/autocutsel
+$ cd autocutsel
+$ ./bootstrap
+$ ./configure
+$ make
+$ sudo make install
+```
+
 
 ## XZoom
 
-Sumber: [https://copr.fedorainfracloud.org/coprs/bgstack15/stackrpms/](https://copr.fedorainfracloud.org/coprs/bgstack15/stackrpms/){:target="_blank"}
+Sumber: [https://copr.fedorainfracloud.org/coprs/bgstack15/stackrpms/](https://copr.fedorainfracloud.org/coprs/bgstack15/stackrpms/)
 
 Like xmag, xzoom magnifies a section of the X display. Xzoom is different because it will continuously update the magnified area as the display changes. It is fast enough to enlarge small animations, for example.
 
 It can also mirror or rotate a part of the screen.
 
-{% shell_term $ %}
-sudo dnf copr enable bgstack15/stackrpms
-{% endshell_term %}
+```
+$ sudo dnf copr enable bgstack15/stackrpms
+```
 
-{% shell_term $ %}
-sudo dnf in xzoom
-{% endshell_term %}
+```
+$ sudo dnf in xzoom
+```
+
 
 ## Dragon (drag and drop helper)
 
-Official site: [https://github.com/mwh/dragon.git](https://github.com/mwh/dragon.git){:target="_blank"}
+Official site: [https://github.com/mwh/dragon.git](https://github.com/mwh/dragon.git)
 
 Many programs, particularly web applications, expect files to be dragged into them now. If you don't habitually use a file manager that is a problem. dragon is a lightweight drag-and-drop source for X that solves this problem.
 
 (copr - bgstack15/stackrpms)
 
-{% shell_term $ %}
-sudo dnf copr enable bgstack15/stackrpms
-sudo dnf in dragon-drag-and-drop
-{% endshell_term %}
+```
+$ sudo dnf copr enable bgstack15/stackrpms
+$ sudo dnf in dragon-drag-and-drop
+```
 
-<br>
 **Manual Build**
 
-{% shell_term $ %}
-git clone https://github.com/mwh/dragon.git
-cd dragon
-sudo make install
-{% endshell_term %}
-
-{% comment %}
-Sumber: [https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=xzoom](https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=xzoom){:target="_blank"}
-
-{% shell_term $ %}
-sudo dnf in imake
-{% endshell_term %}
-
-{% shell_term $ %}
-wget http://webdiis.unizar.es/pub/unix/X11/xzoom-0.3.tgz
-wget ftp://ftp.acc.umu.se/mirror/cdimage/snapshot/Debian/pool/main/x/xzoom/xzoom_0.3-23.diff.gz
-{% endshell_term %}
-
-**md4sum**
-
 ```
-d3a397e24aba7025f94e264fea0906d0  xzoom_0.3-23.diff.gz
-c6ecc5fade34cf46cbe8c00b93d7ac78  xzoom-0.3.tgz
+$ git clone https://github.com/mwh/dragon.git
+$ cd dragon
+$ sudo make install
 ```
 
-{% shell_term $ %}
-gzip -f -d "xzoom_0.3-23.diff.gz"
-{% endshell_term %}
-{% endcomment %}
 
 ## Minder (mind mapping)
 
-Official site: [https://github.com/phase1geo/Minder](https://github.com/phase1geo/Minder){:target="_blank"}
+Official site: [https://github.com/phase1geo/Minder](https://github.com/phase1geo/Minder)
 
 Use the power of mind-mapping to make your ideas come to life.
 
-{% shell_term $ %}
-sudo dnf in minder
-{% endshell_term %}
+```
+$ sudo dnf in minder
+```
+
 
 ## Taskell (Kanban Board)
 
-Sumber: [https://github.com/smallhadroncollider/taskell](https://github.com/smallhadroncollider/taskell){:target="_blank"}
+Sumber: [https://github.com/smallhadroncollider/taskell](https://github.com/smallhadroncollider/taskell)
 
 Command-line Kanban board/task manager with support for Trello boards and GitHub projects.
 
-{% shell_term $ %}
-sudo dnf in ncurses-compat-libs
-{% endshell_term %}
+```
+$ sudo dnf in ncurses-compat-libs
+```
+
 
 ## Show/Hide GRUB Menu
 
-Sumber: [https://fedoraproject.org/wiki/Changes/HiddenGrubMenu](https://fedoraproject.org/wiki/Changes/HiddenGrubMenu){:target="_blank"}
+Sumber: [https://fedoraproject.org/wiki/Changes/HiddenGrubMenu](https://fedoraproject.org/wiki/Changes/HiddenGrubMenu)
 
 On systems with only a single OS installed, the grub menu does not offer any useful functionality, so we should hide it by default.
 
 This new auto-hide functionality will be automatically enabled on new Fedora Workstation installs. This can be disabled by running:
 
-{% shell_term $ %}
-sudo grub2-editenv - unset menu_auto_hide
-{% endshell_term %}
+```
+$ sudo grub2-editenv - unset menu_auto_hide
+```
+
 
 ## Zeal
 
-Official site: [https://zealdocs.org/](https://zealdocs.org/){:target="_blank"}
+Official site: [https://zealdocs.org/](https://zealdocs.org/)
 
 Zeal is a simple offline documentation browser inspired by Dash.
 
-{% shell_term $ %}
-sudo dnf in zeal
-{% endshell_term %}
+```
+$ sudo dnf in zeal
+```
+
 
 ## xinput
 
-Official site: [https://www.x.org](https://www.x.org){:target="_blank"}
+Official site: [https://www.x.org](https://www.x.org)
 
 xinput is a commandline utility to query and configure X11 X Input Extension devices. It is commonly used to change driver properties at runtime.
 
-{% shell_term $ %}
-sudo dnf in xinput
-{% endshell_term %}
+```
+$ sudo dnf in xinput
+```
+
 
 ## gThumb (image viewer, editor, organizer)
 
-Official site: [https://wiki.gnome.org/Apps/gthumb](https://wiki.gnome.org/Apps/gthumb){:target="_blank"}
+Official site: [https://wiki.gnome.org/Apps/gthumb](https://wiki.gnome.org/Apps/gthumb)
 
 gthumb is an application for viewing, editing, and organizing collections of images.
 
-{% shell_term $ %}
-sudo dnf in gthumb
-{% endshell_term %}
+```
+$ sudo dnf in gthumb
+```
+
 
 ## Speedtest CLI
 
-Official site: [https://github.com/sivel/speedtest-cli](https://github.com/sivel/speedtest-cli){:target="_blank"}
+Official site: [https://github.com/sivel/speedtest-cli](https://github.com/sivel/speedtest-cli)
 
 Command line interface for testing internet bandwidth using speedtest.net.
 
-{% shell_term $ %}
-sudo dnf in speedtest-cli
-{% endshell_term %}
+```
+$ sudo dnf in speedtest-cli
+```
+
 
 ## Spotify
 
-Official site: [https://www.spotify.com/](https://www.spotify.com/){:target="_blank"}
+Official site: [https://www.spotify.com/](https://www.spotify.com/)
 
 Online music streaming service.
 
 (Flatpak - Flathub)
 
-{% shell_term $ %}
-flatpak install flathub com.spotify.Client
-{% endshell_term %}
+```
+$ flatpak install flathub com.spotify.Client
+```
+
 
 ## rpkg
 
-Official site: [https://pagure.io/rpkg-util](https://pagure.io/rpkg-util){:target="_blank"}
+Official site: [https://pagure.io/rpkg-util](https://pagure.io/rpkg-util)
 
 This is an RPM packaging utility that can work with both DistGit and standard Git repositories and handles packed directory content as well as unpacked one.
 
-{% shell_term $ %}
-sudo dnf in rpkg
-{% endshell_term %}
+```
+$ sudo dnf in rpkg
+```
+
 
 ## asciidoc
 
-Official site: [http://asciidoc.org](http://asciidoc.org){:target="_blank"}
+Official site: [http://asciidoc.org](http://asciidoc.org)
 
 AsciiDoc is a text document format for writing short documents, articles, books and UNIX man pages. AsciiDoc files can be translated to HTML and DocBook markups using the asciidoc(1) command.
 
-{% shell_term $ %}
-sudo dnf in asciidoc
-{% endshell_term %}
+```
+$ sudo dnf in asciidoc
+```
 
 (after install rbenv)
 
-{% shell_term $ %}
-gem install asciidoctor
-gem install asciidoctor-pdf --pre
-gem install pygments.rb
-{% endshell_term %}
+```
+$ gem install asciidoctor
+$ gem install asciidoctor-pdf --pre
+$ gem install pygments.rb
+```
+
 
 ## Tmux
 
-Official site: [https://tmux.github.io/](https://tmux.github.io/){:target="_blank"}
+Official site: [https://tmux.github.io/](https://tmux.github.io/)
 
 tmux is a "terminal multiplexer."  It enables a number of terminals (or windows) to be accessed and controlled from a single terminal.  tmux is intended to be a simple, modern, BSD-licensed alternative to programs such as GNU Screen.
 
-{% shell_term $ %}
-sudo dnf in tmux
-{% endshell_term %}
+```
+$ sudo dnf in tmux
+```
 
-<br>
 **Manual Build**
 
-Sumber: [https://github.com/tmux/tmux](https://github.com/tmux/tmux){:target="_blank"}
+Sumber: [https://github.com/tmux/tmux](https://github.com/tmux/tmux)
 
-{% shell_term $ %}
-sudo dnf in libevent-devel
-{% endshell_term %}
+```
+$ sudo dnf in libevent-devel
+```
 
-{% shell_term $ %}
-git clone https://github.com/tmux/tmux.git
-cd tmux
-sh autogen.sh
-./configure
-make
-sudo make install
-{% endshell_term %}
+```
+$ git clone https://github.com/tmux/tmux.git
+$ cd tmux
+$ sh autogen.sh
+$ ./configure
+$ make
+$ sudo make install
+```
+
 
 ## Emacs
 
-Official site: [http://www.gnu.org/software/emacs/](http://www.gnu.org/software/emacs/){:target="_blank"}
+Official site: [http://www.gnu.org/software/emacs/](http://www.gnu.org/software/emacs/)
 
 Emacs is a powerful, customizable, self-documenting, modeless text editor. Emacs contains special code editing features, a scripting language (elisp), and the capability to read mail, news, and more without leaving the editor.
 
 This package provides an emacs binary with support for X windows.
 
-{% shell_term $ %}
-sudo dnf in emacs
-{% endshell_term %}
+```
+$ sudo dnf in emacs
+```
+
 
 ## Wireshark
 
-Official site: [http://www.wireshark.org/](http://www.wireshark.org/){:target="_blank"}
+Official site: [http://www.wireshark.org/](http://www.wireshark.org/)
 
 Wireshark allows you to examine protocol data stored in files or as it is captured from wired or wireless (WiFi or Bluetooth) networks, USB devices, and many other sources.  It supports dozens of protocol capture file formats and understands more than a thousand protocols.
 
 It has many powerful features including a rich display filter language and the ability to reassemble multiple protocol packets in order to, for example, view a complete TCP stream, save the contents of a file which was transferred over HTTP or CIFS, or play back an RTP audio stream.
 
-Sumber: [https://fedoramagazine.org/how-to-install-wireshark-fedora/](https://fedoramagazine.org/how-to-install-wireshark-fedora/){:target="_blank"}
+Sumber: [https://fedoramagazine.org/how-to-install-wireshark-fedora/](https://fedoramagazine.org/how-to-install-wireshark-fedora/)
 
-{% shell_term $ %}
-sudo dnf in wireshark
-{% endshell_term %}
+```
+$ sudo dnf in wireshark
+```
 
 Add user ke dalam group **wireshark**.
 
-{% shell_term $ %}
-sudo usermod -a -G wireshark bandithijo
-{% endshell_term %}
+```
+$ sudo usermod -a -G wireshark bandithijo
+```
 
 \* Perlu restart/reboot system.
 
+
 ## Scrcpy
 
-Official site: [https://github.com/Genymobile/scrcpy](https://github.com/Genymobile/scrcpy){:target="_blank"}
+Official site: [https://github.com/Genymobile/scrcpy](https://github.com/Genymobile/scrcpy)
 
 Display and control your Android device.
 
@@ -3278,93 +3449,96 @@ Display and control your Android device.
 
 Deps,
 
-{% shell_term $ %}
-sudo dnf in SDL2-devel
-sudo dnf in android-tools
-sudo dnf in meson
-sudo dnf in ffmpeg-devel
-sudo dnf in libusb-devel
-{% endshell_term %}
+```
+$ sudo dnf in SDL2-devel
+$ sudo dnf in android-tools
+$ sudo dnf in meson
+$ sudo dnf in ffmpeg-devel
+$ sudo dnf in libusb-devel
+```
 
-{% shell_term $ %}
-git clone https://github.com/Genymobile/scrcpy
-cd scrcpy
-./install_release.sh
-{% endshell_term %}
+```
+$ git clone https://github.com/Genymobile/scrcpy
+$ cd scrcpy
+$ ./install_release.sh
+```
 
 When a new release is out, update the repo and reinstall:
 
-{% shell_term $ %}
-git pull
-./install_release.sh
-{% endshell_term %}
+```
+$ git pull
+$ ./install_release.sh
+```
 
 To uninstall:
 
-{% shell_term $ %}
-sudo ninja -Cbuild-auto uninstall
-{% endshell_term %}
+```
+$ sudo ninja -Cbuild-auto uninstall
+```
+
 
 ## Faketime
 
-Official site: [https://github.com/wolfcw/libfaketime](https://github.com/wolfcw/libfaketime){:target="_blank"}
+Official site: [https://github.com/wolfcw/libfaketime](https://github.com/wolfcw/libfaketime)
 
 Manipulate system time per process for testing purposes.
 
 libfaketime intercepts various system calls which programs use to retrieve the current date and time. It can then report faked dates and times (as specified by you, the user) to these programs. This means you can modify the system time a program sees without having to change the time system- wide.
 
-{% shell_term $ %}
-sudo dnf in libfaketime
-{% endshell_term %}
+```
+$ sudo dnf in libfaketime
+```
+
 
 ## Notion
 
-Official site: [https://github.com/notion-enhancer/notion-repackaged](https://github.com/notion-enhancer/notion-repackaged){:target="_blank"}
+Official site: [https://github.com/notion-enhancer/notion-repackaged](https://github.com/notion-enhancer/notion-repackaged)
 
 Notion Desktop builds with Notion Enhancer for Windows, MacOS and Linux. Direct port of Notion is also available for Linux.
 
-{% shell_term $ %}
-sudo vi /etc/yum.repos.d/notion-repackaged.repo
-{% endshell_term %}
+```
+$ sudo vi /etc/yum.repos.d/notion-repackaged.repo
+```
 
-{% highlight_caption /etc/yum.repos.d/notion-repackaged.repo %}
-{% highlight shell linenos %}
+```bash
+!filename: /etc/yum.repos.d/notion-repackaged.repo
 [notion-repackaged]
 name=Notion Repackaged Repo
 baseurl=https://yum.fury.io/notion-repackaged/
 enabled=1
 gpgcheck=0
-{% endhighlight %}
+```
 
 With that you will be able to install `notion-app` or `notion-app-enhanced`.
 
 Silahkan pilih,
 
-{% shell_term $ %}
-sudo dnf in notion-app
-{% endshell_term %}
+```
+$ sudo dnf in notion-app
+```
 
 Atau,
 
-{% shell_term $ %}
-sudo dnf in notion-app-enhanced
-{% endshell_term %}
+```
+$ sudo dnf in notion-app-enhanced
+```
+
 
 ## Webcam
 
-{% box_info %}
-<p markdown=1>Langkah ini hanya optional.</p>
-{% endbox_info %}
+> INFO
+> 
+> Langkah ini hanya optional.
 
-{% shell_term $ %}
-sudo dnf in libwebcam
-{% endshell_term %}
+```
+$ sudo dnf in libwebcam
+```
 
 Cek apakah module **uvcvideo** sudah diload apa belum.
 
-{% shell_term $ %}
-sudo lsmod | grep uvcvideo
-{% endshell_term %}
+```
+$ sudo lsmod | grep uvcvideo
+```
 
 Seharusnya, memiliki output seperti ini.
 
@@ -3379,48 +3553,51 @@ mc                     65536  4 videodev,videobuf2_v4l2,uvcvideo,videobuf2_commo
 
 Kalau belum, jalankan,
 
-{% shell_term $ %}
-sudo modprobe uvcvideo
-{% endshell_term %}
+```
+$ sudo modprobe uvcvideo
+```
 
 Namun, menggunakan cara `modprobe` di atas, tidak permanent. Untuk membuatnya permanent, buatlah file seperti contoh di bawah ini.
 
-{% highlight_caption /etc/modules-load.d/uvcvideo.conf %}
-{% highlight shell linenos %}
+```bash
+!filename: /etc/modules-load.d/uvcvideo.conf
 uvcvideo
-{% endhighlight %}
+```
 
 Maka module uvcvideo akan diload saat booting.
 
+
 ## guvcview
 
-Official site: [http://guvcview.sourceforge.net/](http://guvcview.sourceforge.net/){:target="_blank"}
+Official site: [http://guvcview.sourceforge.net/](http://guvcview.sourceforge.net/)
 
 A simple GTK interface for capturing and viewing video from devices supported by the Linux UVC driver, although it should also work with any v4l2 compatible device.
 
-{% shell_term $ %}
-sudo dnf in guvcview
-{% endshell_term %}
+```
+$ sudo dnf in guvcview
+```
+
 
 ## Kdenlive
 
-Official site: [https://kdenlive.org/en/](https://kdenlive.org/en/){:target="_blank"}
+Official site: [https://kdenlive.org/en/](https://kdenlive.org/en/)
 
 Kdenlive is a non linear video editor. It is based on the MLT framework and accepts many audio and video formats, allows you to add effects, transitions and render into the format of your choice.
 
 Saya memilih memasang dari ~~flathub~~.
 
-{% shell_term $ %}
-flatpak install flathub org.kde.kdenlive
-{% endshell_term %}
+```
+$ flatpak install flathub org.kde.kdenlive
+```
 
 Atau dari appimage.
 
-[Download Kdenlive AppImage](https://kdenlive.org/en/download2/){:target="_blank"}.
+[Download Kdenlive AppImage](https://kdenlive.org/en/download2/).
+
 
 ## Olive
 
-Official site: [https://www.olivevideoeditor.org](https://www.olivevideoeditor.org){:target="_blank"}
+Official site: [https://www.olivevideoeditor.org](https://www.olivevideoeditor.org)
 
 olive is a free non-linear video editor aiming to provide a fully-featured
 alternative to high-end professional video editing software.
@@ -3428,94 +3605,100 @@ alternative to high-end professional video editing software.
 olive is in Alpha stage, so expect bugs/crashes and feel free to report them.
 Builds for Linux, Mac, and Windows are available.
 
-{% shell_term $ %}
-sudo dnf in olive
-{% endshell_term %}
+```
+$ sudo dnf in olive
+```
+
 
 ## Clipnotify
 
-Sumber: [https://github.com/cdown/clipnotify](https://github.com/cdown/clipnotify){:target="_blank"}
+Sumber: [https://github.com/cdown/clipnotify](https://github.com/cdown/clipnotify)
 
 clipnotify is a simple program that, using the XFIXES extension to X11, waits until a new selection is available and then exits.
 
 Install dependensi terlebih dahulu.
 
-{% shell_term $ %}
-sudo dnf in libXfixes-devel
-{% endshell_term %}
+```
+$ sudo dnf in libXfixes-devel
+```
 
-{% shell_term $ %}
-git clone https://github.com/cdown/clipnotify.git
-cd clipnotify
-sudo make install
-{% endshell_term %}
+```
+$ git clone https://github.com/cdown/clipnotify.git
+$ cd clipnotify
+$ sudo make install
+```
+
 
 ## Bash-Language-Server
 
-Official site: [https://github.com/bash-lsp/bash-language-server](https://github.com/bash-lsp/bash-language-server){:target="_blank"}
+Official site: [https://github.com/bash-lsp/bash-language-server](https://github.com/bash-lsp/bash-language-server)
 
 Bash language server implementation based on Tree Sitter and its grammar for Bash with explainshell integration.
 
-{% shell_term $ %}
-sudo dnf in nodejs-bash-language-server
-{% endshell_term %}
+```
+$ sudo dnf in nodejs-bash-language-server
+```
+
 
 ## OBS Studio
 
-Official site: [https://obsproject.com/](https://obsproject.com/){:target="_blank"}
+Official site: [https://obsproject.com/](https://obsproject.com/)
 
 Open Broadcaster Software is free and open source software for video recording and live streaming.
 
 (rpmfusion-free)
 
-{% shell_term $ %}
-sudo dnf in obs-studio
-{% endshell_term %}
+```
+$ sudo dnf in obs-studio
+```
+
 
 ## Barrier
 
-Official site: [https://github.com/debauchee/barrier/wiki](https://github.com/debauchee/barrier/wiki){:target="_blank"}
+Official site: [https://github.com/debauchee/barrier/wiki](https://github.com/debauchee/barrier/wiki)
 
 Barrier is software that mimics the functionality of a KVM switch, which historically would allow you to use a single keyboard and mouse to control multiple computers. Barrier does this in software, allowing you to tell it which machine to control by moving your mouse to the edge of the screen, or by using a key press to switch focus to a different system.
 
-{% shell_term $ %}
-sudo dnf in barrier
-{% endshell_term %}
+```
+$ sudo dnf in barrier
+```
+
 
 ## Unified Remote (urserver)
 
-Sumber: [https://www.unifiedremote.com/tutorials/how-to-install-unified-remote-server-rpm-via-terminal](https://www.unifiedremote.com/tutorials/how-to-install-unified-remote-server-rpm-via-terminal){:target="_blank"}
+Sumber: [https://www.unifiedremote.com/tutorials/how-to-install-unified-remote-server-rpm-via-terminal](https://www.unifiedremote.com/tutorials/how-to-install-unified-remote-server-rpm-via-terminal)
 
 Turn your smartphone into a universal remote control.
 
-{% shell_term $ %}
-wget -O urserver.rpm https://www.unifiedremote.com/d/linux-x64-rpm
-sudo rpm -Uhv urserver.rpm
-{% endshell_term %}
+```
+$ wget -O urserver.rpm https://www.unifiedremote.com/d/linux-x64-rpm
+$ sudo rpm -Uhv urserver.rpm
+```
 
 urserver akan diinstall di `/opt/urserver/`.
 
 Untuk menjalankan urserver secara manual,
 
-{% shell_term $ %}
-./opt/urserver/urserver-start
-{% endshell_term %}
+```
+$ ./opt/urserver/urserver-start
+```
 
 Untuk menghentikan urserver secara manual,
 
-{% shell_term $ %}
-./opt/urserver/urserver-stop
-{% endshell_term %}
+```
+$ ./opt/urserver/urserver-stop
+```
 
 Untuk uninstall,
 
-{% shell_term $ %}
-sudo rpm -e urserver
-{% endshell_term %}
+```
+$ sudo rpm -e urserver
+```
+
 
 ## Linux-Wifi-Hotspot
 
-Official site: [https://github.com/lakinduakash/linux-wifi-hotspot](https://github.com/lakinduakash/linux-wifi-hotspot){:target="_blank"}
+Official site: [https://github.com/lakinduakash/linux-wifi-hotspot](https://github.com/lakinduakash/linux-wifi-hotspot)
 
 Feature-rich wifi hotspot creator for Linux which provides both GUI and command-line interface. It is also able to create a hotspot using the same wifi card which is connected to an AP already ( Similar to Windows 10).
 
@@ -3523,273 +3706,294 @@ Feature-rich wifi hotspot creator for Linux which provides both GUI and command-
 
 Deps,
 
-{% shell_term $ %}
-sudo dnf in gtk3-devel
-sudo dnf in qrencode-devel
-sudo dnf in hostapd
-{% endshell_term %}
+```
+$ sudo dnf in gtk3-devel
+$ sudo dnf in qrencode-devel
+$ sudo dnf in hostapd
+```
 
-{% shell_term $ %}
-git clone https://github.com/lakinduakash/linux-wifi-hotspot
-cd linux-wifi-hotspot
-make
-sudo make install
-{% endshell_term %}
+```
+$ git clone https://github.com/lakinduakash/linux-wifi-hotspot
+$ cd linux-wifi-hotspot
+$ make
+$ sudo make install
+```
+
 
 ## Clang / LLVM
 
-Official site: [http://llvm.org](http://llvm.org){:target="_blank"}
+Official site: [http://llvm.org](http://llvm.org)
 
 The goal of the Clang project is to create a new C, C++, Objective C
 and Objective C++ front-end for the LLVM compiler. Its tools are built
 as libraries and designed to be loosely-coupled and extensible.
 
-{% shell_term $ %}
-sudo dnf in clang
-{% endshell_term %}
+```
+$ sudo dnf in clang
+```
+
 
 ## Cockpit
 
-Official site: [https://cockpit-project.org/](https://cockpit-project.org/){:target="_blank"}
+Official site: [https://cockpit-project.org/](https://cockpit-project.org/)
 
 The Cockpit Web Console enables users to administer GNU/Linux servers using a web browser.
 
 It offers network configuration, log inspection, diagnostic reports, SELinux troubleshooting, interactive command-line sessions, and more.
 
-Sumber: [https://www.redhat.com/sysadmin/intro-cockpit](https://www.redhat.com/sysadmin/intro-cockpit){:target="_blank"}
+Sumber: [https://www.redhat.com/sysadmin/intro-cockpit](https://www.redhat.com/sysadmin/intro-cockpit)
 
-{% shell_term $ %}
-sudo dnf in cockpit
-{% endshell_term %}
+```
+$ sudo dnf in cockpit
+```
 
 Install module-module tambahan.
 
-{% shell_term $ %}
-sudo dnf in cockpit-podman
-sudo dnf in cockpit-machines
-sudo dnf in cockpit-networkmanager
-sudo dnf in cockpit-packagekit
-sudo dnf in cockpit-storaged
-sudo dnf in cockpit-pcp
-sudo dnf in virt-viewer
-{% endshell_term %}
+```
+$ sudo dnf in cockpit-podman
+$ sudo dnf in cockpit-machines
+$ sudo dnf in cockpit-networkmanager
+$ sudo dnf in cockpit-packagekit
+$ sudo dnf in cockpit-storaged
+$ sudo dnf in cockpit-pcp
+$ sudo dnf in virt-viewer
+```
 
-{% shell_term $ %}
-sudo systemctl enable --now cockpit.socket
-sudo systemctl enable --now pmlogger.service
-{% endshell_term %}
+```
+$ sudo systemctl enable --now cockpit.socket
+$ sudo systemctl enable --now pmlogger.service
+```
 
-{% box_info %}
-<p markdown=1>Saya tidak ingin menjalankan service-service cockpit pada saat booting.</p>
-<p markdown=1>Saya hanya menyalakan service apabila saya perlukan saja.</p>
-{% endbox_info %}
+> INFO
+> 
+> Saya tidak ingin menjalankan service-service cockpit pada saat booting.
+> 
+> Saya hanya menyalakan service apabila saya perlukan saja.
+
 
 ## aircrack-ng
 
-Official site: [https://github.com/aircrack-ng/aircrack-ng](https://github.com/aircrack-ng/aircrack-ng){:target="_blank"}
+Official site: [https://github.com/aircrack-ng/aircrack-ng](https://github.com/aircrack-ng/aircrack-ng)
 
 aircrack-ng is a set of tools for auditing wireless networks. It's an enhanced/reborn version of aircrack. It consists of airodump-ng (an 802.11 packet capture program), aireplay-ng (an 802.11 packet injection program), aircrack (static WEP and WPA-PSK cracking), airdecap-ng (decrypts WEP/WPA capture files), and some tools to handle capture files (merge, convert, etc.).
 
-{% shell_term $ %}
-sudo dnf in aircrack-ng
-{% endshell_term %}
+```
+$ sudo dnf in aircrack-ng
+```
+
 
 ## heroku-cli
 
-Official site: [https://devcenter.heroku.com/articles/heroku-cli](https://devcenter.heroku.com/articles/heroku-cli){:target="_blank"}
+Official site: [https://devcenter.heroku.com/articles/heroku-cli](https://devcenter.heroku.com/articles/heroku-cli)
 
 The Heroku Command Line Interface (CLI) makes it easy to create and manage your Heroku apps directly from the terminal. It’s an essential part of using Heroku.
 
-{% shell_term $ %}
-npm install -g heroku
-{% endshell_term %}
+```
+$ npm install -g heroku
+```
+
 
 ## FreeCAD
 
-Official site: [http://freecadweb.org/](http://freecadweb.org/){:target="_blank"}
+Official site: [http://freecadweb.org/](http://freecadweb.org/)
 
 FreeCAD is a general purpose Open Source 3D CAD/MCAD/CAx/CAE/PLM modeler, aimed directly at mechanical engineering and product design but also fits a wider range of uses in engineering, such as architecture or other engineering specialties. It is a feature-based parametric modeler with a modular software architecture which makes it easy to provide additional functionality without modifying the core system.
 
-{% shell_term $ %}
-sudo dnf in freecad
-{% endshell_term %}
+```
+$ sudo dnf in freecad
+```
 
 Kalau tampilan UI nya tidak bagus. Coba mainkan env variable yang berhubungan dengan QT scaling.
 
-{% shell_term $ %}
-/usr/bin/env QT_AUTO_SCREEN_SCALE_FACTOR=0 QT_SCALE_FACTOR=1 FreeCAD
-{% endshell_term %}
+```
+$ /usr/bin/env QT_AUTO_SCREEN_SCALE_FACTOR=0 QT_SCALE_FACTOR=1 FreeCAD
+```
+
 
 ## Visual Studio Code
 
-Official site: [https://code.visualstudio.com/](https://code.visualstudio.com/){:target="_blank"}
+Official site: [https://code.visualstudio.com/](https://code.visualstudio.com/)
 
 Code editing. Redefined. Free. Built on open source. Runs everywhere.
 
-Sumber: [https://code.visualstudio.com/docs/setup/linux#_rhel-fedora-and-centos-based-distributions](https://code.visualstudio.com/docs/setup/linux#_rhel-fedora-and-centos-based-distributions){:target="_blank"}
+Sumber: [https://code.visualstudio.com/docs/setup/linux#_rhel-fedora-and-centos-based-distributions](https://code.visualstudio.com/docs/setup/linux#_rhel-fedora-and-centos-based-distributions)
 
-{% shell_term $ %}
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
-sudo dnf check-update
-sudo dnf in code
-{% endshell_term %}
+```
+$ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+$ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+$ sudo dnf check-update
+$ sudo dnf in code
+```
+
 
 ## GNOME Battery Bench
 
-Official site: [https://git.gnome.org/browse/gnome-battery-bench](https://git.gnome.org/browse/gnome-battery-bench){:target="_blank"}
+Official site: [https://git.gnome.org/browse/gnome-battery-bench](https://git.gnome.org/browse/gnome-battery-bench)
 
 This application is designed for measuring power usage. It does it by recording the reported battery statistics as it replays recorded event logs, and then using that to estimate power consumption and total battery lifetime.
 
-{% shell_term $ %}
-sudo dnf in gnome-battery-bench
-{% endshell_term %}
+```
+$ sudo dnf in gnome-battery-bench
+```
+
 
 ## GNOME Power Manager
 
-Official site: [https://projects.gnome.org/gnome-power-manager/](https://projects.gnome.org/gnome-power-manager/){:target="_blank"}
+Official site: [https://projects.gnome.org/gnome-power-manager/](https://projects.gnome.org/gnome-power-manager/)
 
 GNOME Power Manager uses the information and facilities provided by UPower displaying icons and handling user callbacks in an interactive GNOME session.
 
-{% shell_term $ %}
-sudo dnf in gnome-power-manager
-{% endshell_term %}
+```
+$ sudo dnf in gnome-power-manager
+```
+
 
 ## Systool
 
-Official site: [https://github.com/linux-ras/sysfsutils](https://github.com/linux-ras/sysfsutils){:target="_blank"}
+Official site: [https://github.com/linux-ras/sysfsutils](https://github.com/linux-ras/sysfsutils)
 
 This package's purpose is to provide a set of utilities for interfacing with sysfs.
 
-{% shell_term $ %}
-sudo dnf in sysfsutils
-{% endshell_term %}
+```
+$ sudo dnf in sysfsutils
+```
+
 
 ## inxi
 
-Official site: [http://smxi.org/docs/inxi.htm](http://smxi.org/docs/inxi.htm){:target="_blank"}
+Official site: [http://smxi.org/docs/inxi.htm](http://smxi.org/docs/inxi.htm)
 
 Inxi offers a wide range of built-in options, as well as a good number of extra features which require having the script recommends installed on the system.
 
-{% shell_term $ %}
-sudo dnf in inxi
-{% endshell_term %}
+```
+$ sudo dnf in inxi
+```
+
 
 ## lshw
 
-Official site: [http://ezix.org/project/wiki/HardwareLiSter](http://ezix.org/project/wiki/HardwareLiSter){:target="_blank"}
+Official site: [http://ezix.org/project/wiki/HardwareLiSter](http://ezix.org/project/wiki/HardwareLiSter)
 
 lshw is a small tool to provide detailed informaton on the hardware configuration of the machine. It can report exact memory configuration, firmware version, mainboard configuration, CPU version and speed, cache configuration, bus speed, etc. on DMI-capable x86 systems and on some PowerPC machines (PowerMac G4 is known to work).
 
-{% shell_term $ %}
-sudo dnf in lshw
-{% endshell_term %}
+```
+$ sudo dnf in lshw
+```
+
 
 ## smartmontools
 
-Official site: [http://smartmontools.sourceforge.net/](http://smartmontools.sourceforge.net/){:target="_blank"}
+Official site: [http://smartmontools.sourceforge.net/](http://smartmontools.sourceforge.net/)
 
 The smartmontools package contains two utility programs (smartctl and smartd) to control and monitor storage systems using the Self-Monitoring, Analysis and Reporting Technology System (SMART) built into most modern ATA and SCSI hard disks. In many cases, these utilities will provide advanced warning of disk degradation and failure.
 
-{% shell_term $ %}
-sudo dnf in smartmontools
-{% endshell_term %}
+```
+$ sudo dnf in smartmontools
+```
+
 
 ## cpupower-gui
 
-Sumber: [https://github.com/vagnum08/cpupower-gui](https://github.com/vagnum08/cpupower-gui){:target="_blank"}
+Sumber: [https://github.com/vagnum08/cpupower-gui](https://github.com/vagnum08/cpupower-gui)
 
 cpupower-gui is a graphical program that is used to change the scaling frequency limits of the cpu, similar to cpupower.
 
 You can install cpupower-gui by adding the repository from OpenSUSE build service. For example, in Fedora 32 run the following as root:
 
-{% shell_term $ %}
-sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:erigas:cpupower-gui/Fedora_32/home:erigas:cpupower-gui.repo
-sudo dnf in cpupower-gui
-{% endshell_term %}
+```
+$ sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:erigas:cpupower-gui/Fedora_32/home:erigas:cpupower-gui.repo
+$ sudo dnf in cpupower-gui
+```
+
 
 ## Klavaro
 
-Official site: [http://klavaro.sourceforge.net/en/](http://klavaro.sourceforge.net/en/){:target="_blank"}
+Official site: [http://klavaro.sourceforge.net/en/](http://klavaro.sourceforge.net/en/)
 
 Klavaro  is a touch typing tutor that is very flexible and supports customizable keyboard layouts. Users can edit and save new or unknown keyboard layouts, as the basic course provided by the program was designed to not depend on specific layouts.
 
-{% shell_term $ %}
-sudo dnf in klavaro
-{% endshell_term %}
+```
+$ sudo dnf in klavaro
+```
+
 
 ## Rust Lang
 
-Official site: [https://www.rust-lang.org](https://www.rust-lang.org){:target="_blank"}
+Official site: [https://www.rust-lang.org](https://www.rust-lang.org)
 
 Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.
 
 This package includes the Rust compiler and documentation generator.
 
-{% shell_term $ %}
-sudo dnf in rust
-{% endshell_term %}
+```
+$ sudo dnf in rust
+```
+
 
 ## XAMPP from Apachefriends
 
-Official site: [https://www.apachefriends.org/index.html](https://www.apachefriends.org/index.html){:target="_blank"}
+Official site: [https://www.apachefriends.org/index.html](https://www.apachefriends.org/index.html)
 
 XAMPP is the most popular PHP development environment.
 
 Download terlebih dahulu file **xamp-*.run**.
 
-{% shell_term $ %}
-chmod +x xampp-*
-sudo ./xampp-*
-{% endshell_term %}
+```
+$ chmod +x xampp-*
+$ sudo ./xampp-*
+```
 
 Install deps for Apache Web Server.
 
-{% shell_term $ %}
-sudo dnf in libnsl
-{% endshell_term %}
+```
+$ sudo dnf in libnsl
+```
 
 Jalankan GUI dengan,
 
-{% shell_term $ %}
-sudo /opt/lampp/manager-linux-x64.run
-{% endshell_term %}
+```
+$ sudo /opt/lampp/manager-linux-x64.run
+```
+
 
 ## live-server
 
-Sumber: [https://www.chrisatmachine.com/Neovim/20-live-server/](https://www.chrisatmachine.com/Neovim/20-live-server/){:target="_blank"}
+Sumber: [https://www.chrisatmachine.com/Neovim/20-live-server/](https://www.chrisatmachine.com/Neovim/20-live-server/)
 
 Live-server is an npm package that will allow you to see real time changes for .html files in your browser.
 
-{% shell_term $ %}
-npm install -g live-server
-{% endshell_term %}
+```
+$ npm install -g live-server
+```
+
 
 ## fd-find
 
-Official site: [https://crates.io/crates/fd-find](https://crates.io/crates/fd-find){:target="_blank"}
+Official site: [https://crates.io/crates/fd-find](https://crates.io/crates/fd-find)
 
 Fd is a simple, fast and user-friendly alternative to find.
 
-{% shell_term $ %}
-sudo dnf in fd-find
-{% endshell_term %}
+```
+$ sudo dnf in fd-find
+```
+
 
 ## strace
 
-Official site: [https://strace.io](https://strace.io){:target="_blank"}
+Official site: [https://strace.io](https://strace.io)
 
 The strace program intercepts and records the system calls called and received by a running process. Strace can print a record of each system call, its arguments and its return value. Strace is useful for diagnosing problems and debugging, as well as for instructional purposes.
 
 Install strace if you need a tool to track the system calls made and received by a process.
 
-{% shell_term $ %}
-sudo dnf in strace
-{% endshell_term %}
+```
+$ sudo dnf in strace
+```
+
 
 ## Blender
 
-Official site: [http://www.blender.org](http://www.blender.org){:target="_blank"}
+Official site: [http://www.blender.org](http://www.blender.org)
 
 Blender is the essential software solution you need for 3D, from modeling, animation, rendering and post-production to interactive creation and playback.
 
@@ -3797,44 +4001,47 @@ Professionals and novices can easily and inexpensively publish stand-alone, secu
 
 (flatpak - flathub)
 
-{% shell_term $ %}
-flatpak install org.blender.Blender
-{% endshell_term %}
+```
+$ flatpak install org.blender.Blender
+```
 
 \* **Catatan**: Saya memilih memasang Blender via Flatpak karena alasan beberapa codec seperti ffmpeg tidak terdapat di Blender versi dnf.
 
+
 ## tty-clock
 
-Official site: [https://github.com/xorg62/tty-clock](https://github.com/xorg62/tty-clock){:target="_blank"}
+Official site: [https://github.com/xorg62/tty-clock](https://github.com/xorg62/tty-clock)
 
 Clock using lib ncurses.
 
 Deps,
 
-{% shell_term $ %}
-sudo dnf in ncurses ncurses-devel
-{% endshell_term %}
+```
+$ sudo dnf in ncurses ncurses-devel
+```
 
-{% shell_term $ %}
-git clone https://github.com/xorg62/tty-clock
-cd tty-clock
-make
-sudo make install
-{% endshell_term %}
+```
+$ git clone https://github.com/xorg62/tty-clock
+$ cd tty-clock
+$ make
+$ sudo make install
+```
+
 
 ## kicad
 
-Official site: [https://www.kicad.org](https://www.kicad.org){:target="_blank"}
+Official site: [https://www.kicad.org](https://www.kicad.org)
 
 KiCad is EDA software to design electronic schematic diagrams and printed circuit board artwork of up to 32 layers.
 
-{% shell_term $ %}
-sudo dnf in kicad
-{% endshell_term %}
+```
+$ sudo dnf in kicad
+```
+
 
 ## dotnet
 
-Official site: [https://github.com/dotnet/](https://github.com/dotnet/){:target="_blank"}
+Official site: [https://github.com/dotnet/](https://github.com/dotnet/)
 
 .NET is a fast, lightweight and modular platform for creating cross platform applications that work on Linux, macOS and Windows.
 
@@ -3842,40 +4049,28 @@ It particularly focuses on creating console applications, web applications and m
 
 .NET contains a runtime conforming to .NET Standards a set of framework libraries, an SDK containing compilers and a 'dotnet' application to drive everything.
 
-{% shell_term $ %}
-sudo dnf in dotnet
-{% endshell_term %}
+```
+$ sudo dnf in dotnet
+```
+
 
 ## fontforge
 
-Official site: [http://fontforge.github.io/](http://fontforge.github.io/){:target="_blank"}
+Official site: [http://fontforge.github.io/](http://fontforge.github.io/)
 
 FontForge (former PfaEdit) is a font editor for outline and bitmap fonts. It supports a range of font formats, including PostScript (ASCII and binary Type 1, some Type 3 and Type 0), TrueType, OpenType (Type2) and CID-keyed fonts.
 
-{% shell_term $ %}
-sudo dnf in fontforge
-{% endshell_term %}
+```
+$ sudo dnf in fontforge
+```
+
 
 ## microsoft core font (mscorefont)
 
-Official site: [http://mscorefonts2.sourceforge.net/](http://mscorefonts2.sourceforge.net/){:target="_blank"}
+Official site: [http://mscorefonts2.sourceforge.net/](http://mscorefonts2.sourceforge.net/)
 
 Get Microsoft's Core Fonts for the Web and Cleartype Fonts
 
-{% shell_term $ %}
-sudo rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
-{% endshell_term %}
-
-
-
-
-
-
-
-{% comment %}
-# Referensi
-
-1. [](){:target="_blank"}
-2. [](){:target="_blank"}
-3. [](){:target="_blank"}
-{% endcomment %}
+```
+$ sudo rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
+```

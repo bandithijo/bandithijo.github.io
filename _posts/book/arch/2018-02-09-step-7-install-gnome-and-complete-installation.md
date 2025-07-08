@@ -595,7 +595,7 @@ Sumber bacaan lebih lanjut dapat kalian temuka di Arch Wiki [di sini](https://wi
 
 ## 7.12 GUI Package Manager
 
-Mungkin teman-teman bertanya, apakah Arch Linux mempunyai package manger yang tidak text mode namun mempunyai GUI seperti : `Synaptic` \(Ubuntu\), `Yumex-DNF` \(Fedora\), `YaST` \(OpenSUSE\), dan sebagainya. Jawabannya, tentu saja ada. Namun bukan merupakan official package dari Arch Linux, jadi kita dapat menginstallnya dari AUR \(_Arch User Repository_\).
+Mungkin teman-teman bertanya, apakah Arch Linux mempunyai package manger yang tidak text mode namun mempunyai GUI seperti : `Synaptic` \(Ubuntu\), `Yumex-DNF` \(Fedora\), `YaST` \(openSUSE\), dan sebagainya. Jawabannya, tentu saja ada. Namun bukan merupakan official package dari Arch Linux, jadi kita dapat menginstallnya dari AUR \(_Arch User Repository_\).
 
 ```
 $ yaourt pamac-aur

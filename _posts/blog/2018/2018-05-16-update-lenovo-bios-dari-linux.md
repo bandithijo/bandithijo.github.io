@@ -153,7 +153,7 @@ r02uj64d.iso               100%[=====================================>]  21.36M 
 
 Kita membutuhkan program bernama `geteltorito` yang akan berguna untuk mengekstrak file image dari file ISO yang baru saja kita download.
 
-Untuk distribusi linux Debian/Ubuntu/Fedora/RedHat/OpenSUSE program ini bernama `genisoimage`.
+Untuk distribusi linux Debian/Ubuntu/Fedora/RedHat/openSUSE program ini bernama `genisoimage`.
 
 **Debian/Ubuntu**
 
@@ -174,7 +174,7 @@ $ sudo dnf install genisoimage
 $ sudo yum install genisoimage
 ```
 
-**SUSE/OpenSUSE**
+**SUSE/openSUSE**
 
 ```
 $ sudo zypper install genisoimage
