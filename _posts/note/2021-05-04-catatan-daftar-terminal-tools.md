@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Catatan Daftar Terminal Tools"
-date: 2021-05-04 04:17
+date: '2021-05-04 04:17'
 permalink: '/note/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'note'
-tags: ['Tips']
+tags: ['TUI']
 wip: true
 pin:
 contributors: []
@@ -23,11 +23,13 @@ Yang sangat terkenal dan sangat serig kita lihat dipajang di setiap desktop-desk
 
 Catatan ini hadir, dari penulis untuk teman-teman, sebagai catatan untuk mengingatkan penulis akan nama-nama tools-tools tersebut. Karena, apabila tidak sering digunakan, mesti akan terlupakan, dan ketika diperlukan, perlu waktu untuk mengingatnya kembali.
 
+
 # System Monitor
+
 
 ## htop
 
-{% image https://i.postimg.cc/bwj3RHrR/gambar-htop.png | gambar-htop %}
+![gambar-htop](https://i.postimg.cc/bwj3RHrR/gambar-htop.png)
 
 An interactive process viewer
 
@@ -39,68 +41,75 @@ The information displayed is configurable through a graphical setup and can be s
 
 Tasks related to processes (e.g. killing and renicing) can be done without entering their PIDs.
 
-[https://github.com/htop-dev/htop](https://github.com/htop-dev/htop){:target="_blank"}
+[https://github.com/htop-dev/htop](https://github.com/htop-dev/htop)
+
 
 ## gotop
 
-{% image https://i.postimg.cc/15gDNgKr/gambar-gotop.png | gambar-gotop %}
+![gambar-gotop](https://i.postimg.cc/15gDNgKr/gambar-gotop.png)
 
 Another terminal based graphical activity monitor, inspired by gtop and vtop, this time written in Go!
 
-[https://github.com/xxxserxxx/gotop](https://github.com/xxxserxxx/gotop){:target="_blank"}
+[https://github.com/xxxserxxx/gotop](https://github.com/xxxserxxx/gotop)
+
 
 ## gtop
 
-{% image https://i.postimg.cc/Wbr6HFJb/gambar-gtop.png | gambar-gtop %}
+![gambar-gtop](https://i.postimg.cc/Wbr6HFJb/gambar-gtop.png)
 
 System monitoring dashboard for terminal.
 
-[https://github.com/aksakalli/gtop](https://github.com/aksakalli/gtop){:target="_blank"}
+[https://github.com/aksakalli/gtop](https://github.com/aksakalli/gtop)
+
 
 ## vtop
 
-{% image https://i.postimg.cc/yYzSWfks/gambar-vtop.png | gambar-vtop%}
+![gambar-vtop](https://i.postimg.cc/yYzSWfks/gambar-vtop.png)
 
 Wow such top. So stats. More better than regular top.
 
 A graphical activity monitor for the command line.
 
-[https://github.com/MrRio/vtop](https://github.com/MrRio/vtop){:target="_blank"}
+[https://github.com/MrRio/vtop](https://github.com/MrRio/vtop)
+
 
 ## ytop
 
-{% image https://i.postimg.cc/W4J2GvHK/gambar-ytop.png | gambar-ytop %}
+![gambar-ytop](https://i.postimg.cc/W4J2GvHK/gambar-ytop.png)
 
 A TUI system monitor written in Rust.
 
-[https://github.com/cjbassi/ytop](https://github.com/cjbassi/ytop){:target="_blank"}
+[https://github.com/cjbassi/ytop](https://github.com/cjbassi/ytop)
 
 NO LONGER MAINTAINED. For a similar program, check out.<br>
-[https://github.com/ClementTsang/bottom](https://github.com/ClementTsang/bottom){:target="_blank"}
+[https://github.com/ClementTsang/bottom](https://github.com/ClementTsang/bottom)
+
 
 ## bottom (btm)
 
-{% image https://i.postimg.cc/59mfqpsx/gambar-bottom.png | gambar-bottom %}
+![gambar-bottom](https://i.postimg.cc/59mfqpsx/gambar-bottom.png)
 
 Yet another cross-platform graphical process/system monitor.
 
 A cross-platform graphical process/system monitor with a customizable interface and a multitude of features. Supports Linux, macOS, and Windows. Inspired by both gtop and gotop.
 
-[https://github.com/ClementTsang/bottom](https://github.com/ClementTsang/bottom){:target="_blank"}
+[https://github.com/ClementTsang/bottom](https://github.com/ClementTsang/bottom)
+
 
 ## bashtop
 
-{% image https://i.postimg.cc/pL3vXSLB/gambar-bashtop.png | gambar-bashtop %}
+![gambar-bashtop](https://i.postimg.cc/pL3vXSLB/gambar-bashtop.png)
 
 Linux/OSX/FreeBSD resource monitor.
 
-Notice, python version released! ([bpytop](https://github.com/aristocratos/bpytop){:target="_blank"}) Please get this instead.
+Notice, python version released! ([bpytop](https://github.com/aristocratos/bpytop)) Please get this instead.
 
-[https://github.com/aristocratos/bashtop](https://github.com/aristocratos/bashtop){:target="_blank"}
+[https://github.com/aristocratos/bashtop](https://github.com/aristocratos/bashtop)
+
 
 ## bpytop
 
-{%image https://i.postimg.cc/nzZ6Xfbq/gambar-bpytop.png | gambar-bpytop %}
+![gambar-bpytop](https://i.postimg.cc/nzZ6Xfbq/gambar-bpytop.png)
 
 Linux/OSX/FreeBSD resource monitor.
 
@@ -108,7 +117,8 @@ Resource monitor that shows usage and stats for processor, memory, disks, networ
 
 Python port and continuation of bashtop.
 
-[https://github.com/aristocratos/bpytop](https://github.com/aristocratos/bpytop){:target="_blank"}
+[https://github.com/aristocratos/bpytop](https://github.com/aristocratos/bpytop)
+
 
 ## glances
 
@@ -118,13 +128,14 @@ Glances an Eye on your system. A top/htop alternative for GNU/Linux, BSD, Mac OS
 
 Glances is a cross-platform monitoring tool which aims to present a large amount of monitoring information through a curses or Web based interface. The information dynamically adapts depending on the size of the user interface.
 
-[https://github.com/nicolargo/glances](https://github.com/nicolargo/glances){:target="_blank"}
+[https://github.com/nicolargo/glances](https://github.com/nicolargo/glances)
+
 
 ## nmon
 
-{% image https://i.postimg.cc/cJWDm79S/gambar-nmon-01.png | gambar-nmon-01 %}
+![gambar-nmon-01](https://i.postimg.cc/cJWDm79S/gambar-nmon-01.png)
 
-{% image https://i.postimg.cc/FKxTnf8J/gambar-nmon-02.png | gambar-nmon-02 %}
+![gambar-nmon-02](https://i.postimg.cc/FKxTnf8J/gambar-nmon-02.png)
 
 nmon is short for Nigel's performance Monitor for Linux on POWER, x86, x86_64, Mainframe & now ARM (Raspberry Pi).
 
@@ -134,104 +145,109 @@ This systems administrator, tuner, benchmark tool gives you a huge amount of imp
 
 2. **Save the data to a comma separated file** for analysis and longer term data capture.
 
-[http://nmon.sourceforge.net/pmwiki.php](http://nmon.sourceforge.net/pmwiki.php){:target="_blank"}
+[http://nmon.sourceforge.net/pmwiki.php](http://nmon.sourceforge.net/pmwiki.php)
 
 
 # Disk Monitor
 
+
 ## vizex
 
-{% image https://i.postimg.cc/1zDSjKr5/gambar-vizex.png | gambar-vizex %}
+![gambar-vizex](https://i.postimg.cc/1zDSjKr5/gambar-vizex.png)
 
 Visualize disk space and disk usage in your UNIX\Linux terminal
 
 vizex is the terminal program for the UNIX/Linux systems which helps the user to visualize the disk space usage for every partition and media on the user's machine. vizex is highly customizable and can fit any user's taste and preferences.
 
-[https://github.com/bexxmodd/vizex](https://github.com/bexxmodd/vizex){:target="_blank"}
+[https://github.com/bexxmodd/vizex](https://github.com/bexxmodd/vizex)
 
 
 # Network Monitor
 
+
 ## iftop
 
-{% image https://i.postimg.cc/rmPrFhT1/gambar-iftop.png | gambar-iftop %}
+![gambar-iftop](https://i.postimg.cc/rmPrFhT1/gambar-iftop.png)
 
 Display bandwidth usage on an interface.
 
 iftop does for network usage what top(1) does for CPU usage. It listens to network traffic on a named interface and displays a table of current bandwidth usage by pairs of hosts. Handy for answering the question "why is our ADSL link so slow?".
 
-[http://www.ex-parrot.com/pdw/iftop/](http://www.ex-parrot.com/pdw/iftop/){:target="_blank"}
+[http://www.ex-parrot.com/pdw/iftop/](http://www.ex-parrot.com/pdw/iftop/)
 
-[https://code.blinkace.com/pdw/iftop](https://code.blinkace.com/pdw/iftop){:target="_blank"}
+[https://code.blinkace.com/pdw/iftop](https://code.blinkace.com/pdw/iftop)
+
 
 ## nethogs
 
-{% image https://i.postimg.cc/L6Pxf09X/gambar-nethogs.png | gmabar-htop %}
+![gambar-htop](https://i.postimg.cc/L6Pxf09X/gambar-nethogs.png)
 
 Net top tool grouping bandwidth per process.
 
 NetHogs is a small 'net top' tool. Instead of breaking the traffic down per protocol or per subnet, like most tools do, it groups bandwidth by process.
 
-[https://github.com/raboof/nethogs](https://github.com/raboof/nethogs){:target="_blank"}
+[https://github.com/raboof/nethogs](https://github.com/raboof/nethogs)
 
-{% box_info %}
-<p markdown=1>Untuk "unknown TCP" dapat dibaca di sini.</p>
+> INFO
+> 
+> Untuk "unknown TCP" dapat dibaca di sini.
+> 
+> The "Nethogs" package will always show a fake process called "unknown TCP", that corresponds to everything it can't identify. Notice that it doesn't have a process ID, and the amount of data is shown as 0, indicating that there isn't any unknown traffic.
+> 
+> Here's the line from the nethogs source code where that line gets initialised:
+> 
+> ```
+> unknowntcp = new Process (0, "", "unknown TCP");
+> ```
+> 
+> ([Source code download ](http://archive.ubuntu.com/ubuntu/pool/universe/n/nethogs/nethogs_0.8.0-1.debian.tar.gz), look in process.cpp)
 
-<p markdown=1>The "Nethogs" package will always show a fake process called "unknown TCP", that corresponds to everything it can't identify. Notice that it doesn't have a process ID, and the amount of data is shown as 0, indicating that there isn't any unknown traffic.</p>
-
-<p markdown=1>Here's the line from the nethogs source code where that line gets initialised:</p>
-
-```
-unknowntcp = new Process (0, "", "unknown TCP");
-```
-
-([Source code download ](http://archive.ubuntu.com/ubuntu/pool/universe/n/nethogs/nethogs_0.8.0-1.debian.tar.gz){:target="_blank"}, look in process.cpp)
-</p>
-{% endbox_info %}
 
 ## gping
 
-{% image https://i.postimg.cc/85sHCZXT/gambar-gping.png | gambar-gping %}
+![gambar-gping](https://i.postimg.cc/85sHCZXT/gambar-gping.png)
 
 Ping, but with a graph.
 
-[https://github.com/orf/gping](https://github.com/orf/gping){:target="_blank"}
+[https://github.com/orf/gping](https://github.com/orf/gping)
+
 
 ## prettyping
 
-{% image https://i.postimg.cc/rwqVqFR3/gambar-prettyping.png | gambar-prettyping %}
+![gambar-prettyping](https://i.postimg.cc/rwqVqFR3/gambar-prettyping.png)
 
 prettyping is a wrapper around the standard ping tool with the objective of making the output prettier, more colorful, more compact, and easier to read.
 
-[https://github.com/denilsonsa/prettyping](https://github.com/denilsonsa/prettyping){:target="_blank"}
+[https://github.com/denilsonsa/prettyping](https://github.com/denilsonsa/prettyping)
 
 
 ## wavemon
 
-{% image https://i.postimg.cc/N08h4jQK/gambar-wavemon-01.png | gambar-wavemon-01 %}
+![gambar-wavemon-01](https://i.postimg.cc/N08h4jQK/gambar-wavemon-01.png)
 
-{% image https://i.postimg.cc/k5P3KbPr/gambar-wavemon-02.png | gambar-wavemon-02 %}
+![gambar-wavemon-02](https://i.postimg.cc/k5P3KbPr/gambar-wavemon-02.png)
 
-{% image https://i.postimg.cc/9Mc6NHfJ/gambar-wavemon-03.png | gambar-wavemon-03 %}
+![gambar-wavemon-03](https://i.postimg.cc/9Mc6NHfJ/gambar-wavemon-03.png)
 
 wavemon is an ncurses-based monitoring application for wireless network devices on Linux.
 
 wavemon is a wireless device monitoring application that allows you to watch signal and noise levels, packet statistics, device configuration and network parameters of your wireless network hardware. It should work (though with varying features) with all devices supported by the Linux kernel.
 
-[https://github.com/uoaerg/wavemon](https://github.com/uoaerg/wavemon){:target="_blank"}
+[https://github.com/uoaerg/wavemon](https://github.com/uoaerg/wavemon)
 
 
 # Torrent Client
 
+
 ## tremc
 
-{% image https://i.postimg.cc/13xYj1Cw/gambar-tremc-01.png | gambar-tremc-01 %}
+![gambar-tremc-01](https://i.postimg.cc/13xYj1Cw/gambar-tremc-01.png)
 
-{% image https://i.postimg.cc/K8nsXpwV/gambar-tremc-02.png | gambar-tremc-02 %}
+![gambar-tremc-02](https://i.postimg.cc/K8nsXpwV/gambar-tremc-02.png)
 
-{% image https://i.postimg.cc/rpjns08N/gambar-tremc-03.png | gambar-tremc-03 %}
+![gambar-tremc-03](https://i.postimg.cc/rpjns08N/gambar-tremc-03.png)
 
-{% image https://i.postimg.cc/Dznp7dKz/gambar-tremc-04.png | gambar-tremc-04 %}
+![gambar-tremc-04](https://i.postimg.cc/Dznp7dKz/gambar-tremc-04.png)
 
 Curses interface for transmission
 
@@ -239,117 +255,139 @@ A console client for the BitTorrent client Transmission.
 
 tremc is the python3 fork of transmission-remote-cli.
 
-[https://github.com/tremc/tremc](https://github.com/tremc/tremc){:target="_blank"}
+[https://github.com/tremc/tremc](https://github.com/tremc/tremc)
 
 
 # Git Client
 
+
 ## lazygit
 
-{% image https://i.postimg.cc/prwk4KZR/gambar-lazygit.png | gambar-lazygit %}
+![gambar-lazygit](https://i.postimg.cc/prwk4KZR/gambar-lazygit.png)
 
 A simple terminal UI for git commands, written in Go with the gocui library.
 
-[https://github.com/jesseduffield/lazygit](https://github.com/jesseduffield/lazygit){:target="_blank"}
+[https://github.com/jesseduffield/lazygit](https://github.com/jesseduffield/lazygit)
+
 
 ## tig
 
-{% image https://i.postimg.cc/ZRg1YBcD/gambar-tig-01.png | gambar-tig-01 %}
+![gambar-tig-01](https://i.postimg.cc/ZRg1YBcD/gambar-tig-01.png)
 
-{% image https://i.postimg.cc/qRgPdX83/gambar-tig-02.png | gambar-tig-02 %}
+![gambar-tig-02](https://i.postimg.cc/qRgPdX83/gambar-tig-02.png)
 
 Text-mode interface for git
 
 Tig is an ncurses-based text-mode interface for git. It functions mainly as a Git repository browser, but can also assist in staging changes for commit at chunk level and act as a pager for output from various Git commands.
 
-[https://github.com/jonas/tig](https://github.com/jonas/tig){:target="_blank"}
+[https://github.com/jonas/tig](https://github.com/jonas/tig)
 
 
 # Docker Client
+
 
 ## lazydocker
 
 
 # Font
 
+
 ## fontpreview-ueberzug
 
 
 # Science
 
+
 ## periodic-table-tui
 
-{% image https://i.postimg.cc/5NqptQ9K/gambar-periodic-table-tui.png | gambar-periodic-table %}
+![gambar-periodic-table](https://i.postimg.cc/5NqptQ9K/gambar-periodic-table-tui.png)
 
 A periodic table for the command line.
 
-[https://github.com/pryme-svg/periodic-table-tui](https://github.com/pryme-svg/periodic-table-tui){:target="_blank"}
+[https://github.com/pryme-svg/periodic-table-tui](https://github.com/pryme-svg/periodic-table-tui)
 
 
 # Messaging
 
+
 ## Weechat (IRC Client)
 
-{% image https://i.postimg.cc/J0bw07t3/gambar-weechat-01.png | gambar-weechat-01 %}
+![gambar-weechat-01](https://i.postimg.cc/J0bw07t3/gambar-weechat-01.png)
 
-{% image https://i.postimg.cc/RCfxXdG3/gambar-weechat-02.png | gambar-weechat-02 %}
+![gambar-weechat-02](https://i.postimg.cc/RCfxXdG3/gambar-weechat-02.png)
 
 WeeChat (Wee Enhanced Environment for Chat) is a free chat client, fast and light, designed for many operating systems. It is highly customizable and extensible with scripts.
 
-[https://weechat.org](https://weechat.org){:target="_blank"}
+[https://weechat.org](https://weechat.org)
 
-[https://github.com/weechat/weechat](https://github.com/weechat/weechat){:target="_blank"}
+[https://github.com/weechat/weechat](https://github.com/weechat/weechat)
+
 
 # Audio Mixer
 
+
 ## ncpamixer
+
+An ncurses mixer for PulseAudio inspired by pavucontrol.
+
+[https://github.com/fulhax/ncpamixer](https://github.com/fulhax/ncpamixer)
+
 
 ## pulsemixer
 
-[https://github.com/GeorgeFilipkin/pulsemixer](https://github.com/GeorgeFilipkin/pulsemixer){:target="_blank"}
+[https://github.com/GeorgeFilipkin/pulsemixer](https://github.com/GeorgeFilipkin/pulsemixer)
 
 
 # Audio Player
 
+
 ## cmus
 
+
 ## ncmpcpp
+
 
 ## mpd
 
 
 # Video Player
 
+
 ## youtube-dl
 
+
 ## youtube-viewer
+
 
 ## ytfzf
 
 
 # Battery Monitor
 
+
 ## battop
 
 
 # RSS Reader
 
+
 ## newsboat
 
-{% image https://i.postimg.cc/ryKZJNGB/gambar-newsboat.png | gambar-newsboat %}
+![gambar-newsboat](https://i.postimg.cc/ryKZJNGB/gambar-newsboat.png)
 
 Newsboat is an RSS/Atom feed reader for the text console. It's an actively maintained fork of Newsbeuter.
 
-A feed reader pulls updates directly from sites like blogs and news agencies, and lets you review them in a single interface. Many times, the feed includes the full text of the update, so you don't even need to start a web browser! You can learn more about feed readers [on Wikipedia](https://en.wikipedia.org/wiki/News_aggregator){:target="_blank"}.
+A feed reader pulls updates directly from sites like blogs and news agencies, and lets you review them in a single interface. Many times, the feed includes the full text of the update, so you don't even need to start a web browser! You can learn more about feed readers [on Wikipedia](https://en.wikipedia.org/wiki/News_aggregator).
 
-[https://github.com/newsboat/newsboat](https://github.com/newsboat/newsboat){:target="_blank"}
+[https://github.com/newsboat/newsboat](https://github.com/newsboat/newsboat)
 
 
 # Email Client
 
+
 ## neomutt
 
-{% image https://i.postimg.cc/vHSQKzC5/gambar-neomutt.png | gambar-neomutt %}
+![gambar-neomutt](https://i.postimg.cc/vHSQKzC5/gambar-neomutt.png)
 
 Teaching an Old Dog New Tricks
 
@@ -363,42 +401,26 @@ Hopefully this will build the community and reduce duplicated effort.
 
 NeoMutt was created when Richard Russon (@FlatCap) took all the old Mutt patches, sorted through them, fixed them up and documented them.
 
-[https://neomutt.org/](https://neomutt.org/){:target="_blank"}
+[https://neomutt.org/](https://neomutt.org/)
 
-[https://github.com/neomutt/neomutt](https://github.com/neomutt/neomutt){:target="_blank"}
+[https://github.com/neomutt/neomutt](https://github.com/neomutt/neomutt)
 
 
 # File Manager
 
+
 ## ranger
 
-{% image https://i.postimg.cc/ryfcdjV7/gambar-ranger.png | gambar-ranger %}
+![gambar-ranger](https://i.postimg.cc/ryfcdjV7/gambar-ranger.png)
 
 ranger is a console file manager with VI key bindings. It provides a minimalistic and nice curses interface with a view on the directory hierarchy. It ships with rifle, a file launcher that is good at automatically finding out which program to use for what file type.
 
-[https://ranger.github.io/](https://ranger.github.io/){:target="_blank"}
+[https://ranger.github.io/](https://ranger.github.io/)
 
-[https://github.com/ranger/ranger](https://github.com/ranger/ranger){:target="_blank"}
+[https://github.com/ranger/ranger](https://github.com/ranger/ranger)
+
 
 ## lf
 
+
 ## nnn
-
-
-
-
-
-
-
-
-
-
-
-
-{% comment %}
-# Referensi
-
-1. [](){:target="_blank"}
-2. [](){:target="_blank"}
-3. [](){:target="_blank"}
-{% endcomment %}

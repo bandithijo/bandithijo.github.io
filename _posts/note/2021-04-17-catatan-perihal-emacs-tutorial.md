@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Catatan dalam Berinteraksi dengan Emacs Tutorial"
-date: 2021-04-17 10:24
+date: '2021-04-17 10:24'
 permalink: '/note/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'note'
-tags: ['Tips']
+tags: ['Emacs']
 wip: true
 pin:
 contributors: []
@@ -23,79 +23,75 @@ Karena Emacs Tutorial berbentuk narasi, sehingga tidak mudah bagi saya untuk men
 
 Namun, demikian, saya teteap ingin menuliskan catatan perihal Emacs Tutorial di sini. Mudah-mudahan dapat mempermudah teman-teman apabila mengalami kesulitan yang sama.
 
+
 # Keyboard Shortcut
+
 
 ## Penyamaan Persepsi
 
-CONTROL atau CTRL atau CTL, diwakilkan sebagai **C**.
+CONTROL atau CTRL atau CTL, diwakilkan sebagai <kbd>C</kbd>.
 
-ALT atau EDIT atau META, diwakilkan sebagai **M**.
+ALT atau EDIT atau META, diwakilkan sebagai <kbd>M</kbd>.
 
-<br>
 Bila keduanya berkombinasi dengan key yang lain, maka akan ditampilkan seperti ini:
 
-**C-x**, artinya tekan dan tahan CONTROL, lalu tekan x.
+<kbd>C-x</kbd>, artinya tekan dan tahan CONTROL, lalu tekan x.
 
-**M-x**, artinya tekan dan tahan ALT, lalu tekan x.
+<kbd>M-x</kbd>, artinya tekan dan tahan ALT, lalu tekan x.
 
-**C-x C-c**, artinya tekan dan tahan CONTROL, lalu tekan x, masih tekan CONTROL, lalu tekan c.
+<kbd>C-x</kbd> <kbd>C-c</kbd>, artinya tekan dan tahan CONTROL, lalu tekan x, masih tekan CONTROL, lalu tekan c.
 
-**C-x k**, artinya tekan dan tahan CONTROL, lalu tekan x, lepas semua tombol sebelumnya, lalu tekan k.
+<kbd>C-x</kbd> <kbd>k</kbd>, artinya tekan dan tahan CONTROL, lalu tekan x, lepas semua tombol sebelumnya, lalu tekan k.
 
-<br>
-SPACE, akan diwakilkan sebagai &lt;SPC&gt;.
+SPACE, akan diwakilkan sebagai <kbd>&lt;SPC&gt;</kbd>.
 
-DELETE, akan diwakilkan sebagai &lt;DEL&gt;.
+DELETE, akan diwakilkan sebagai <kbd>&lt;DEL&gt;</kbd>.
 
-RETURN atau ENTER, akan diwakilkan sebagai &lt;RET&gt;
+RETURN atau ENTER, akan diwakilkan sebagai <kbd>&lt;RET&gt;</kbd>.
+
 
 ## Keluar dari Emacs Tutorial
 
 Dapat pula digunakan sebagai "kill buffer", karena buffer yang sedang terbuka adalah Emacs Tutorial.
 
-{% keymap %}
-C-x k
-{% endkeymap %}
+<kbd>C-x</kbd> <kbd>k</kbd>
 
 Command ini akan memberikan kita pertanyaan,
 
 Apakah ingin menyimpan posisi cursor di Tutorial? Jawab saja **y**.
 
+
 ## Mengakhiri Emacs Session
 
-{% keymap %}
-C-x C-c
-{% endkeymap %}
+<kbd>C-x</kbd> <kbd>C-c</kbd>
+
 
 ## View Next/Previous Screen
 
 **Next screen / Page down**
 
-{% keymap %}
-C-v
-{% endkeymap %}
+<kbd>C-v</kbd>
 
 **Previous screen / Page up**
 
-{% keymap %}
-M-v
-{% endkeymap %}
+<kbd>M-v</kbd>
+
 
 ## Positioning Cursor on Center/Top/Bottom
 
 Kita dapat melakukan scrolling pada screen tanpa memindahkan cursor berfokus pada baris tertentu.
 
-{% keymap %}
-C-l
-{% endkeymap %}
+<kbd>C-l</kbd>
 
 Akan dimulai dari tengah screen, kemudian atas, lalu bawah.
 
+
 ## Basic Cursor Control (Basic Movement)
+
 
 ### Memindahkan cursor per character
 
-{% pre_whiteboard %}
+```
                       Previous line, C-p
                              :
                              :
@@ -103,111 +99,90 @@ Backward, C-b .... Current cursor position .... Forward, C-f
                              :
                              :
                         Next line, C-n
-{% endpre_whiteboard %}
+```
 
 **Forward 1 character**
 
-{% keymap %}
-C-f
-{% endkeymap %}
+<kbd>C-f</kbd>
 
 **Backward 1 character**
 
-{% keymap %}
-C-b
-{% endkeymap %}
+<kbd>C-b</kbd>
 
 **Next 1 line**
 
-{% keymap %}
-C-n
-{% endkeymap %}
+<kbd>C-n</kbd>
 
 **Previous 1 line**
 
-{% keymap %}
-C-p
-{% endkeymap %}
+<kbd>C-p</kbd>
+
 
 ### Memindahkan cursor perkata
 
 **Forward 1 word**
 
-{% keymap %}
-M-f
-{% endkeymap %}
+<kbd>M-f</kbd>
 
 **Backward 1 word**
 
-{% keymap %}
-M-b
-{% endkeymap %}
+<kbd>M-b</kbd>
+
 
 ### Memindahkan cursor ke awal baris
 
-{% keymap %}
-C-a
-{% endkeymap %}
+<kbd>C-a</kbd>
+
 
 ### Memindahkan cursor ke akhir baris
 
-{% keymap %}
-C-e
-{% endkeymap %}
+<kbd>C-e</kbd>
+
 
 ### Memindahkan cursor ke awal kalimat
 
-{% keymap %}
-M-a
-{% endkeymap %}
+<kbd>M-a</kbd>
 
 Dapat diteruskan untuk berpindah ke kalimat selanjutnya.
 
+
 ### Memindahkan cursor ke akhir kalimat
 
-{% keymap %}
-M-e
-{% endkeymap %}
+<kbd>M-e</kbd>
 
 Dapat diteruskan untuk berpindah ke kalimat sebelumnya.
 
+
 ### Memindahkan cursor ke baris pertama
 
-{% keymap %}
-M-&lt;
-{% endkeymap %}
+<kbd>M-&lt;</kbd>
+
 
 ### Memindahkan cursor ke baris terakhir
 
-{% keymap %}
-M-&gt;
-{% endkeymap %}
+<kbd>M-&gt;</kbd>
+
 
 ### Jump to
 
 Perintah-perintah movement di atas, juga dapat kita berikan argument berupa angka.
 
-Kita dapat menggunakan prefix **C-u**, diikutin dengan **n** (jumlah) lompatan dalam angka, kemudian **arahnya**.
+Kita dapat menggunakan prefix <kbd>C-u</kbd>, diikuti dengan **n** (jumlah) lompatan dalam angka, kemudian **arahnya**.
 
 **n jumlah lompatan**, disebut dengan **repeat count**
 
 **arah**, disebut dengan **direction**.
 
-<br>
 Misal, kita ingin bergerak 10 baris ke bawah.
 
-{% keymap %}
-C-u 10 C-n
-{% endkeymap %}
+<kbd>C-u</kbd> <kbd>10</kbd> <kbd>C-n</kbd>
 
-<br>
-Cara lain, selain menggunakan prefix **C-u**, dapat pula menggunakan **ALT-&lt;repeat count&gt;**
+Cara lain, selain menggunakan prefix <kbd>C-u</kbd>, dapat pula menggunakan <kbd>ALT-&lt;repeat count&gt;</kbd>
 
 Misal, kita ingin bergerak 20 character ke depan.
 
-{% keymap %}
-M-20 C-f
-{% endkeymap %}
+<kbd>M-20</kbd> <kbd>C-f</kbd>
+
 
 ## Jika Emacs Berhenti Merespon
 
@@ -219,31 +194,30 @@ Beberapa hal yang dapat menyebabkan Emacs berhenti merespon:
 
 Dapat kita atasi dengan,
 
-{% keymap %}
-C-g
-{% endkeymap %}
+<kbd>C-g</kbd>
+
 
 ## Disabled Commands
 
-{% keymap %}
-C-g
-{% endkeymap %}
+<kbd>C-g</kbd>
 
 Pda command display mode, Emacs akan menampilkan **Quit**.
 
+
 ## Manipulation Windows
+
 
 ### Delete other windows
 
 Saya asumsikan sebagai *maximize current focused selected window*.
 
-{% keymap %}
-C-x 1
-{% endkeymap %}
+<kbd>C-x</kbd> <kbd>1</kbd>
 
 Command ini akan membuat current focuses selected window akan menjadi maximize.
 
+
 ## Inserting
+
 
 ### Insert repeating character with repeat count
 
@@ -251,73 +225,47 @@ Sama sepertin repeat count pada movement, kita dapat menggunakannya untuk memasu
 
 Misal, kita ingin memasukkan karakter "+" (tambah) sebanyak 20.
 
-{% keymap %}
-C-u 20 +
-{% endkeymap %}
+<kbd>C-u</kbd> <kbd>20</kbd> <kbd>+</kbd>
 
 Maka, hasilnya akan menjadi,
 
-{% pre_whiteboard %}
+```
 ++++++++++++++++++++
-{% endpre_whiteboard %}
+```
+
 
 ## Deleting
 
+
 ### Delete 1 karakter di depan cursor
 
-{% keymap %}
-C-d
-{% endkeymap %}
+<kbd>C-d</kbd>
+
 
 ### Delete 1 kata sebelum cursor
 
-{% keymap %}
-M-&lt;DEL&gt;
-{% endkeymap %}
+<kbd>M-&lt;DEL&gt;</kbd>
+
 
 ### Delete 1 kata setelah cursor
 
-{% keymap %}
-M-d
-{% endkeymap %}
+<kbd>M-d</kbd>
+
 
 ### Hapus seluruh karakter mulai dari posisi cursor sampai akhir baris
 
-{% keymap %}
-C-k
-{% endkeymap %}
+<kbd>C-k</kbd>
+
 
 ### Hapus 1 paragraf mulai dari posisi cursor sampai akhir paragraph
 
-{% keymap %}
-M-k
-{% endkeymap %}
+<kbd>M-k</kbd>
+
 
 ## Text Selection
 
 Akan melakukan selection dimulai dari posisi cursor berada.
 
-{% keymap %}
-C-&lt;SPC&gt;
-{% endkeymap %}
+<kbd>C-&lt;SPC&gt;</kbd>
 
 Pada command display mode, Emacs akan menampilkan tulisan **Mark set**.
-
-
-
-
-
-
-
-
-
-
-
-
-{% comment %}
-# Referensi
-
-1. [](){:target="_blank"}
-2. [](){:target="_blank"}
-3. [](){:target="_blank"}
-{% endcomment %}

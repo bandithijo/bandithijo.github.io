@@ -103,7 +103,7 @@ sha256sum: WARNING: 19 lines are improperly formatted
 \* Abaikan saja warning 19 lines are improperly formated, hal ini terjadi karena di dalam file *-CHECKSUM tersebut juga terdapat PGP Signature. Coba komentar saja baris-baris selain SHA256SUM valuenya (termasuk blankline), maka warningnya akan ~~berkurang~~ hilang.
 
 
-# NaN Packages That I Need to Install
+# Packages That I Need to Install
 
 
 ## Enable fastest mirror and Delta RPM

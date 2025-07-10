@@ -1,14 +1,14 @@
 ---
 layout: 'post'
 title: "Catatan dalam Berinteraksi dengan Disk dan Partition"
-date: 2021-03-03 13:38
+date: '2021-03-03 13:38'
 permalink: '/note/:title'
 author: 'BanditHijo'
 license: true
 comments: true
 toc: true
 category: 'note'
-tags: ['Tips']
+tags: ['Disk', 'Partition', 'Udisksctl']
 wip: true
 pin:
 contributors: []
@@ -21,167 +21,159 @@ Berinteraksi dengan disk dan partition mungkin merupakan pekerjaan harian bagi s
 
 Catatan ini hadir untuk menyimpan beberapa "best practice" yang dapat kita gunakan, apabila kita memerlukannya saat akan berurusan dengan disk dan partition.
 
+
 # Perbedaan Disk dan Partition
 
 Saya lihat banyak sekali teman-teman yang masih suka tertukar-tukar dalam membedakan dan mengidentifikasi sebuah block termasuk disk atau partition.
 
 Sederhananya seperti ini,
 
-{% pre_whiteboard %}
+```
 NAME
-sda       &lt;== disebut, <strong>disk</strong>,      biasanya ditulis <strong>/dev/sda</strong>
-├─sda1    &lt;== disebut, <strong>partition</strong>, biasanya ditulis <strong>/dev/sda1</strong>
-└─sda2    &lt;== disebut, <strong>partition</strong>  biasanya ditulis <strong>/dev/sda2</strong>
-{% endpre_whiteboard %}
+sda      ← disebut, disk,      biasanya ditulis /dev/sda
+├─sda1   ← disebut, partition, biasanya ditulis /dev/sda1
+└─sda2   ← disebut, partition  biasanya ditulis /dev/sda2
+```
 
 
 # Tips & Tricks
+
 
 ## Melihat list block disk
 
 Atau dapat kita artikan mengecek struktur dari partisi.
 
-{% shell_term $ %}
+```
 lsblk
-{% endshell_term %}
+```
 
 Kita juga dapat memformat tampilan output untuk menampilkan field apa saya yang ingin kita tampilkan.
 
-{% shell_term $ %}
-lsblk --output=NAME,FSTYPE,SIZE,TYPE,LABEL,MOUNTPOINT
-{% endshell_term %}
+```
+$ lsblk --output=NAME,FSTYPE,SIZE,TYPE,LABEL,MOUNTPOINT
+```
 
 Teman-teman tinggal mendefinisikan aliasnya saja biar praktis.
 
-<br>
+
 ## Mounting file ISO dengan Udisks
 
 Terdapat 2 tahap:
 
 **1. Setup loop block disk**
 
-{% pre_url %}
-<span class="cmd">$ </span><b>udisksctl loop-setup -f file_image.iso</b>
-{% endpre_url %}
+```
+$ udisksctl loop-setup -f file_image.iso
+```
 
-{% shell_term $ %}
-udisksctl loop-mount -f archlinux.iso
-{% endshell_term %}
+```
+$ udisksctl loop-mount -f archlinux.iso
+```
 
 Kalau berhasil, fileiso akan terpasang ke loop block disk.
 
-<pre>
+```
 $ lsblk
 NAME      FSTYPE    SIZE TYPE LABEL       MOUNTPOINT
 loop0     iso9660   681M loop ARCH_202010
 ├─loop0p1 iso9660   681M part ARCH_202010
 └─loop0p2 vfat       56M part ARCHISO_EFI
-</pre>
+```
 
 Tinggal dimounting.
 
 **2. Mounting loop block disk**
 
-{% pre_url %}
-<span class="cmd">$ </span><b>udisksctl mount -p block_disk/block_partition</b>
-{% endpre_url %}
+```
+$ udisksctl mount -p /dev/block_partition
+```
 
-{% shell_term $ %}
-udisksctl mount -p block_disk/loop0p1
-{% endshell_term %}
+```
+$ udisksctl mount -p /dev/loop0p1
+```
 
-<pre>
+```
 $ lsblk
 NAME      FSTYPE    SIZE TYPE LABEL       MOUNTPOINT
 loop0     iso9660   681M loop ARCH_202010
-├─loop0p1 iso9660   681M part ARCH_202010 <mark>/run/media/bandithijo/ARCH_202010</mark>
+├─loop0p1 iso9660   681M part ARCH_202010 /run/media/bandithijo/ARCH_202010 👈
 └─loop0p2 vfat       56M part ARCHISO_EFI
-</pre>
+```
 
 Secara otomatis **udisks** akan membuat mount point ke path $XDG_RUNTIME_USER.
 
-<br>
+
 ## Unmounting file ISO dengan Udisks
 
 Sekenarionya tinggal dibalik dari proses mounting di atas.
 
 **1. Unmounting loop block disk**
 
-{% pre_url %}
-udisksctl unmount -p block_disk/block_partition
-{% endpre_url %}
+```
+$ udisksctl unmount -p /dev/block_partition
+```
 
-{% shell_term $ %}
-udisksctl unmount -p block_disk/loop0p1
-{% endshell_term %}
+```
+$ udisksctl unmount -p /dev/loop0p1
+```
 
-<pre>
+```
 $ lsblk
 NAME      FSTYPE    SIZE TYPE LABEL       MOUNTPOINT
 loop0     iso9660   681M loop ARCH_202010
 ├─loop0p1 iso9660   681M part ARCH_202010
 └─loop0p2 vfat       56M part ARCHISO_EFI
-</pre>
+```
 
 **2. Delete loop block disk**
 
-{% pre_url %}
-udisksctl loop-delete -b block_disk/block_partition
-{% endpre_url %}
+```
+$ udisksctl loop-delete -b /dev/block_partition
+```
 
-{% shell_term $ %}
-udisksctl loop-delete -b block_disk/loop0
-{% endshell_term %}
+```
+$ udisksctl loop-delete -b /dev/loop0
+```
 
-<br>
+
 ## Membuat bootable flash drive dengan dd
 
 Kita dapat menggunakan tools yang bernama **dd** untuk membuat bootable flash drive dari file ISO.
 
 Misal, kita memiliki file ISO dari Arch Linux yang berlokasi di **$HOME/iso/archlinux.iso** dan sebuah flash drive yang apabila di pasangkan ke laptop, akan beralamat di **/dev/sdb**.
 
-{% box_info %}
-<p markdown=1>Kita dapat mengetahui alamat blok dari flashdrive dengan perintah **lsblk**.</p>
-{% endbox_info %}
+> INFO
+> 
+> Kita dapat mengetahui alamat blok dari flashdrive dengan perintah **lsblk**.
 
 Selanjutnya tinggal kita ekseskusi.
 
-{% pre_url %}
-<span class="cmd">$ </span><b>sudo dd if=/path/source of=/path/target</b>
-{% endpre_url %}
+```
+$ sudo dd if=/path/source of=/path/target
+```
 
-{% shell_term $ %}
-sudo dd if=~/iso/archlinux.iso of=/dev/sdb
-{% endshell_term %}
+```
+$ sudo dd if=~/iso/archlinux.iso of=/dev/sdb
+```
 
 Kita juga dapat menambahkan beberapa parameter seperti `bs=BYTES` atay `status=LEVEL`.
 
 Seringnya, saya gunakan seperti ini:
 
-{% shell_term $ %}
-sudo dd if=~/iso/archlinux.iso of=/dev/sdb bs=1M status=progress
-{% endshell_term %}
+```
+$ sudo dd if=~/iso/archlinux.iso of=/dev/sdb bs=1M status=progress
+```
 
-Untuk penjelasan mengenai parameter lebih lengkapnya, teman-teman dapat membaca sendiri di [**man dd**](https://man.archlinux.org/man/dd.1){:target="_blank"}.
+Untuk penjelasan mengenai parameter lebih lengkapnya, teman-teman dapat membaca sendiri di [**man dd**](https://man.archlinux.org/man/dd.1).
 
-
-
-
-
-{% box_perhatian %}
-<p markdown=1>Jangan tambahkan nomor atau partition number, seperti: **/dev/sdb1**.</p>
-<p markdown=1>Tapi, gunakan block disk, seperti: **/dev/sdX**, di mana **X** merupakan abjad yang nilainya berbeda-beda (kondisional), sesuai dengan banyaknya external drive yang terhubung dengan sistem kita.</p>
-<hr>
-<p markdown=1>Kesalahan mendefinisikan **if=** dan **of=** dapat berakibat fatal.</p>
-<p markdown=1>Telitilah sebelum mengeksekusi.</p>
-{% endbox_perhatian %}
-
-
-
-
-{% comment %}
-# Referensi
-
-1. [https://wiki.archlinux.org/index.php/USB_flash_installation_medium](https://wiki.archlinux.org/index.php/USB_flash_installation_medium){:target="_blank"}
-2. [](){:target="_blank"}
-{% endcomment %}
+> PERHATIAN!
+> 
+> Jangan tambahkan nomor atau partition number, seperti: **/dev/sdb1**.
+> 
+> Tapi, gunakan block disk, seperti: **/dev/sdX**, di mana **X** merupakan abjad yang nilainya berbeda-beda (kondisional), sesuai dengan banyaknya external drive yang terhubung dengan sistem kita.
+> 
+> ---
+> 
+> Kesalahan mendefinisikan **if=** dan **of=** dapat berakibat fatal.
+> 
+> Telitilah sebelum mengeksekusi.
