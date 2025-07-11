@@ -52,8 +52,6 @@ nav_top:
     url: /blog/
   - title: Note
     url: /note/
-  - title: Book
-    url: /book/
   - title: Portfolio
     url: /portfolio/
   - title: About
@@ -67,7 +65,6 @@ nav_bottom:
     url: /contact/
   - title: Stat
     url: /stat/
-
 
 
 # Build settings
