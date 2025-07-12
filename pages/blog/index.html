@@ -8,7 +8,7 @@ permalink: '/blog/'
   <div id="search-container" class="flex items-center">
     <span class=""></span>
     <input type="text" id="search-input" placeholder="Search for topic..." autocomplete="off"
-      class="text-left rounded-lg border border-gray-300 dark:border-zinc-700 dark:bg-zinc-900 outline-none px-3 py-2 w-full placeholder:text-base placeholder:font-thin placeholder:text-zinc-400 focus:outline-none focus:ring-0 focus:ring-dark focus:border-dark select-none">
+      class="text-left rounded-lg border border-gray-300 dark:border-neutral-700 dark:bg-neutral-900 outline-none px-3 py-2 w-full placeholder:text-base placeholder:font-thin placeholder:text-neutral-400 focus:outline-none focus:ring-0 focus:ring-dark focus:border-dark select-none">
   </div>
 
   <!-- Search Loader -->
@@ -40,12 +40,12 @@ permalink: '/blog/'
   <div id="post-container">
     {% assign blog_posts = site.posts | where_exp: "post", "post.categories contains 'blog'" %}
     {% for post in blog_posts %}
-      <div class="masonry-item absolute p-4 bg-white dark:bg-zinc-900 rounded-lg border border-gray-300 dark:border-zinc-700 hover:border-dark dark:hover:border-zinc-400"
+      <div class="masonry-item absolute p-4 bg-white dark:bg-neutral-900 rounded-lg border border-gray-300 dark:border-neutral-700 hover:border-dark dark:hover:border-neutral-400"
         style="width: calc(25% - 12px);">
         <a href="{{ post.url }}" class="text-dark dark:text-white">
           <h2 class="text-md font-bold mb-4">{{ post.title }}</h2>
-          <p class="text-base text-gray-600 dark:text-zinc-300 mb-4">{{ post.description }}</p>
-          <p class="text-sm text-gray-600 dark:text-zinc-300 font-mono">{{ post.date | date: '%Y.%m.%d' }}</p>
+          <p class="text-base text-gray-600 dark:text-neutral-300 mb-4">{{ post.description }}</p>
+          <p class="text-sm text-gray-600 dark:text-neutral-300 font-mono">{{ post.date | date: '%Y.%m.%d' }}</p>
         </a>
       </div>
     {% endfor %}
