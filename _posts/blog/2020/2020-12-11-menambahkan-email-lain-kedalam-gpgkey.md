@@ -197,10 +197,10 @@ $ gpg --keyid-format 0xshort -K
 ```
 /home/bandithijo/.gnupg/pubring.kbx
 -----------------------------------
-sec   rsa4096/<mark>0x66666666</mark> 2018-08-11 [SC] [expires: 2021-12-30]
+sec   rsa4096/0x66666666 2018-08-11 [SC] [expires: 2021-12-30]
       AE706A616B252A6822635041560691E942A02F91
 uid           [ultimate] Rizqi Nur Assyaufi <bandithijo@gmail.com>
-ssb   rsa4096/<mark>0x99999999</mark> 2018-08-11 [E] [expires: 2021-12-30]
+ssb   rsa4096/0x99999999 2018-08-11 [E] [expires: 2021-12-30]
 
 ```
 
@@ -224,10 +224,10 @@ $ gpg --keyid-format 0xshort -K --fingerprint
 ```
 /home/bandithijo/.gnupg/pubring.kbx
 -----------------------------------
-sec   rsa4096/<mark>0x66666666</mark> 2018-08-11 [SC] [expires: 2021-12-30]
-      Key fingerprint = <mark>AE70 6A61 6B25 2A68 2263  5041 5606 91E9 42A0 2F91</mark>
+sec   rsa4096/0x66666666 2018-08-11 [SC] [expires: 2021-12-30]
+      Key fingerprint = AE70 6A61 6B25 2A68 2263  5041 5606 91E9 42A0 2F91
 uid           [ultimate] Rizqi Nur Assyaufi <bandithijo@gmail.com>
-ssb   rsa4096/<mark>0x99999999</mark> 2018-08-11 [E] [expires: 2021-12-30]
+ssb   rsa4096/0x99999999 2018-08-11 [E] [expires: 2021-12-30]
 
 ```
 

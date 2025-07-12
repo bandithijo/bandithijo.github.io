@@ -127,7 +127,7 @@ After=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=<mark>/usr/bin/reflector --protocol https --latest 30 --number 20 --sort rate --save /etc/pacman.d/mirrorlist</mark>
+ExecStart=/usr/bin/reflector --protocol https --latest 30 --number 20 --sort rate --save /etc/pacman.d/mirrorlist
 
 [Install]
 RequiredBy=multi-user.target

@@ -68,7 +68,7 @@ $ vim ~/.local/share/applications/irssi.desktop
 Name=irssi
 Comment=Chat with other people online
 Keywords=IM;Chat;
-<mark>Exec=termite -e irssi</mark>
+Exec=termite -e irssi
 Icon=hexchat
 Terminal=false
 Type=Application
@@ -534,7 +534,7 @@ Selama menggunakan Irssi, saya mengalami hal ini beberapa kali.
 ERROR Closing Link: 36.80.031.08 (SASL access only)
 ```
 
-Awalnya saya langsung mengutak atik file konfigurasi, googling sana sini untuk mencari kasus yang sama dengan yang saya alami. Sampai akhirnya putus asa dan mencoba jalan terakhir. <mark><b>Turn OFF then Turn ON your Router</b></mark> adalah jawaban dari permasalahan ini.
+Awalnya saya langsung mengutak atik file konfigurasi, googling sana sini untuk mencari kasus yang sama dengan yang saya alami. Sampai akhirnya putus asa dan mencoba jalan terakhir. **Turn OFF then Turn ON your Router** adalah jawaban dari permasalahan ini.
 
 Kecurigaan saya adalah, Freenode memblokir alamat IP publik saya. Karena saya selalu menyalan Irssi dan terhubung secara konstan dengan Freenode. Sepanjang hari, sepanjang minggu. Mungkin ada limitasi trafik keluar dan masuk dari sebuah IP. Mungkin...Hanya asumsi.
 

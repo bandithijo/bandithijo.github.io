@@ -643,7 +643,7 @@ If not success, **some users reported success with this one**
 Untuk **BIOS**.
 
 ```
-# grub-install <mark>/dev/sdX</mark>
+# grub-install /dev/sdX
 ```
 
 Ganti **sdX** dengan disk name yang teman-teman miliki.

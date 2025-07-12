@@ -79,7 +79,7 @@ Untuk dapat mengaktifkan _fingerprint login_, kalian perlu membuka kunci dari Se
 > Dengan cara,
 > 
 > ```
-> $ sudo usermod -aG input <mark>username</mark>
+> $ sudo usermod -aG input username
 > ```
 > 
 > Ganti username dengan nama username kalian.
@@ -138,7 +138,7 @@ $ fprintd-delete username
 Selanjutnya, langkah memasukkan _signature_ untuk semua jari,
 
 ```
-$ for finger in {left,right}-{thumb,{index,middle,ring,little}-finger}; do fprintd-enroll -f $finger <mark>username</mark>; done
+$ for finger in {left,right}-{thumb,{index,middle,ring,little}-finger}; do fprintd-enroll -f $finger username; done
 ```
 
 \* Ganti `username` dengan nama username kamu.

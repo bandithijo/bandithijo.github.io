@@ -187,7 +187,7 @@ Setelah kita melakukan enkripsi Home direktori, tentunya kita ingin melakukan pe
 3. Sekarang coba lakukan pengetesan dengan perintas `ls`.
 
    ```
-   $ ls -la /home/<mark>bandithijo</mark>
+   $ ls -la /home/bandithijo
    ```
 
    Jangan lupa mengganti `bandithijo` dengan nama username kalian.

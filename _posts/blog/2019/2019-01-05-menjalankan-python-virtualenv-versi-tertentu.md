@@ -51,7 +51,7 @@ Bagaimana caranya agar di dalam Python Environment yang saya buat dapat mengguna
 2. Buat virtualenv dari versi python 3.6
 
    ```
-   $ virtualenv -p python3.6 <mark>venv</mark>
+   $ virtualenv -p python3.6 venv
    ```
 
    `venv` adalah nama dari virtual environment.

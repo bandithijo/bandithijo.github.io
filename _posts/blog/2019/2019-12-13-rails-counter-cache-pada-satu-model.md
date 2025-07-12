@@ -135,8 +135,8 @@ end
 | created_at             | timestamp without time zone |  not null                                           |
 | updated_at             | timestamp without time zone |  not null                                           |
 | full_name              | character varying           |                                                     |
-| <mark>inviting_user_id       | integer</mark>                     |                                                     |
-| <mark>inviting_users_count   | integer                     |  not null default 0</mark>                                 |
+| inviting_user_id       | integer                     |                                                     |
+| inviting_users_count   | integer                     |  not null default 0                                 |
 +------------------------+-----------------------------+-----------------------------------------------------+
 </pre>
 

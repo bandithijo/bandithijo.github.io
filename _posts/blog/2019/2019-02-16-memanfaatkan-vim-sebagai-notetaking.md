@@ -181,7 +181,7 @@ Seperti itu saja. Sederhana bukan?
    [Desktop Entry]
    Name=Notetaking
    Comment=Script for Calling Vim to open Note-Taking Directory
-   <mark>Exec=st -e '/home/bandithijo/.local/bin/notetaking'</mark>
+   Exec=st -e '/home/bandithijo/.local/bin/notetaking'
    Icon=tomboy
    Categories=Documents;
    ```

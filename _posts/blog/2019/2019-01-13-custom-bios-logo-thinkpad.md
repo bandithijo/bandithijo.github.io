@@ -47,7 +47,7 @@ Ini adalah langkah yang penting, agar kita dapat fleksibel untuk mengupdate dan 
 1. Masuk ke BIOS Firmware Setup (ThinkPad Setup)
 2. Pindah ke tab **Security**
 3. Pergi ke bagian **UEFI BIOS Update Option**
-4. Pada option **Secure RollBack Prevention** ubah valuenya menjadi <mark><b>Disabled</b></mark>
+4. Pada option **Secure RollBack Prevention** ubah valuenya menjadi **Disabled**
 
 
 ## Racik Bahan-bahan

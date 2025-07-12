@@ -402,7 +402,7 @@ Atau dengan cara mengkombinasikan dengan perintah wpa_supplicant.
 > Pastikan **wpa_supplicant belum berjalan** di process maupun di service.
 
 ```
-$ sudo wpa_supplicant -B -i <mark>interface</mark> -c <(wpa_passphrase <mark>MYSSID</mark> <mark>passphrase</mark>)
+$ sudo wpa_supplicant -B -i interface -c <(wpa_passphrase MYSSID passphrase)
 ```
 
 ```

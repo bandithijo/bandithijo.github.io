@@ -99,7 +99,7 @@ Sebenarnya langkah ini tidak diperlukan. Ini hanya preferensi saya saja.
    # ...
 
    [remote "origin"]
-    url = git@github.com:bandithijo/<mark>bandithijo.com</mark>.git
+    url = git@github.com:bandithijo/bandithijo.com.git
     fetch = +refs/heads/*:refs/remotes/origin/*
 
    # ...

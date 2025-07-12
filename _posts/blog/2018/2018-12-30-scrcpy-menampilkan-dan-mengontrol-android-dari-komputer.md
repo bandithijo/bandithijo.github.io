@@ -173,7 +173,7 @@ Untuk menghubungkan *smartphone* Android dengan laptop/komputer menggukanan kone
 4. Sekarang, coba hubungkan laptop dengan *smartphone* Android kita dengan perintah di bawah.
 
    ```
-   $ adb connect <mark>192.168.1.2</mark>:5555
+   $ adb connect 192.168.1.2:5555
    ```
 
    Ganti IP address dengan yang IP address dari *smartphone* yang kalian miliki.

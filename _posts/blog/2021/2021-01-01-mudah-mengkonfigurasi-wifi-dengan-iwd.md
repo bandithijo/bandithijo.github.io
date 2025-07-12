@@ -342,7 +342,7 @@ $ ip a s wlan0
 ```
 3: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
     link/ether 08:11:96:00:00:00 brd ff:ff:ff:ff:ff:ff
-    inet <mark>192.168.1.7/24</mark> brd 192.168.1.255 scope global dynamic noprefixroute wlan0
+    inet 192.168.1.7/24 brd 192.168.1.255 scope global dynamic noprefixroute wlan0
        valid_lft 86050sec preferred_lft 75250sec
     inet6 fe80::9373:975b:0000:0000/64 scope link
        valid_lft forever preferred_lft forever

@@ -193,7 +193,7 @@ Ada beberapa hal yang perlu dipersiapkan sebelum kita dapat menggunakan konektif
    > ```
    > 
    > ```
-   > Masukkan username kamu: <mark>bandithijo</mark>
+   > Masukkan username kamu: bandithijo
    > &nbsp;
    > [ DONE ] Adding compatibility mode to Bluez5
    > [ DONE ] Daemon Reloaded and Bluetooth Service Restarted

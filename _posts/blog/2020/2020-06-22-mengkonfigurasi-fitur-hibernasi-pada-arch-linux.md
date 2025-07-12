@@ -100,7 +100,7 @@ Kita perlu menambahkan `resume` dan `resume_offset`. Karena saya menggunakan Gru
 GRUB_DEFAULT=saved
 GRUB_TIMEOUT=0
 GRUB_DISTRIBUTOR="Arch"
-GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 <mark>resume=/dev/sda1 resume_offset=7049216</mark>"
+GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 resume=/dev/sda1 resume_offset=7049216"
 GRUB_CMDLINE_LINUX=""
 ```
 
@@ -153,7 +153,7 @@ Edit file `/etc/mkinitcpio.conf` dan cari baris berawalan `HOOKS="base ... "`.
 # help on a given hook.
 ...
 ...
-HOOKS=(base systemd <mark>resume</mark> autodetect modconf block filesystems keyboard fsck)
+HOOKS=(base systemd resume autodetect modconf block filesystems keyboard fsck)
 ```
 
 Saya mengganti `udev` hook dengan `systemd` hook. Jadi jangan binggung. Tambahkan saja setelah `udev` atau `systemd` -- sebelum `autodetect` hook.
@@ -161,7 +161,7 @@ Saya mengganti `udev` hook dengan `systemd` hook. Jadi jangan binggung. Tambahka
 Setelah kita memodifikasi mkinitcpio, kita perlu mengenerate ulang kembali.
 
 ```
-$ sudo mkinitcpio -p <mark>linux</mark>
+$ sudo mkinitcpio -p linux
 ```
 
 `linux` sesuaikan dengan image kernel yang teman-teman pergunakan. Misalkan menggunakan kernel `linux-lts` maka gunakan `-p linux-lts`.

@@ -76,7 +76,7 @@ Aplikasi yang saya rekomendasikan adalah [`newsboat`](https://www.archlinux.org/
    [Desktop Entry]
    Name=newsboat
    Comment=Newsbeuter is an open-source RSS/Atom feed reader for text terminals.
-   <mark>Exec=urxvt -e newsboat</mark>
+   Exec=urxvt -e newsboat
    Icon=liferea
    Terminal=false
    Type=Application

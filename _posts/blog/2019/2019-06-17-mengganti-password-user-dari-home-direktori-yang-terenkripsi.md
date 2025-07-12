@@ -73,7 +73,7 @@ Namun, **saya sangat merekomendasikan untuk *logout* terlebh dahulu, dan menggun
 4. Jalankan perintah di bawah ini untuk mengganti *password* Home direktori yang terenkripsi dengan eCryptfs.
 
    ```
-   $ ecryptfs-rewrap-passphrase /home/.ecryptfs/<mark>bandithijo</mark>/.ecryptfs/wrapped-passphrase
+   $ ecryptfs-rewrap-passphrase /home/.ecryptfs/bandithijo/.ecryptfs/wrapped-passphrase
    ```
 
    Jangan lupa mengganti `bandithijo`, dengan username yang teman-teman gunakan.
