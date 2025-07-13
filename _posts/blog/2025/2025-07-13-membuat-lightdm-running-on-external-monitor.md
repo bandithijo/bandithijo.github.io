@@ -129,7 +129,7 @@ Dengan begini, tidak perlu membuka lid laptop untuk login.
 
 ## Post Login
 
-Proses ini adalah proses setelah login dan akan memasuki desktop. Saya perlu mengarahkan desktop perlu ditampilkan pada external monitor.
+Proses ini adalah proses setelah login dan akan memasuki desktop. Saya perlu mengarahkan desktop agar menampilkan gambar pada external monitor.
 
 
 ## 1. Tambahkan command xrandr pada .xprofile
