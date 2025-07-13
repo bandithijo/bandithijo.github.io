@@ -19,9 +19,22 @@ description: "Setup laptop ThinkPad saya sekarang lebih banyak dalam keadaan lid
 
 {{ page.description }}
 
+
 # Solusi
 
 Saya menggunakan *display manager* atau *session manager* seperti LightDM, yang masih mendukung Xorg. Xorg diperlukan karena saya akan menjalankan script yang berisi perintah Xrandr untuk memodifikasi *display output* antar monitor. Karena pada LightDM sendiri tidak terdapat pengaturan *display output*.
+
+# Strategi
+
+Saya membagi proses login menjadi dua tahap.
+
+1. pre-login, adalah proses dimana LightDM akan ditampilkan.
+2. post-login, adalah proses setelah login dan masuk ke desktop.
+
+
+# Pre-login
+
+Proses ini adalah proses dimana LightDM perlu dikonfigurasi untuk diarahkan mau dikeluarkan di external monitor.
 
 
 ## 1. Daftarkan script pada konfigurasi LightDM
@@ -47,7 +60,7 @@ display-setup-script=/etc/lightdm/display-setup.sh
 Saya akan membuat script pada direktori `/etc/lightdm/` dengan nama `display-setup.sh`.
 
 
-## Pastikan nama interface output
+## 2. Pastikan nama interface output
 
 Sebelum membuat script `display-setup.sh`, pastikan terlebih dahulu nama interface external monitor yang akan digunakan. Apakah mengandung simbol *dash* atau tidak? `HDMI-1` atau `HDMI1`.
 
@@ -72,7 +85,7 @@ Saya memiliki 2 buah monitor.
 Setelah mengetahui nama interface dari external monitor, saatnya membuat script.
 
 
-## Buat script display-setup.sh
+## 3. Buat script display-setup.sh
 
 Masuk ke direktori `/etc/lightdm`.
 
@@ -112,6 +125,33 @@ Pada script di atas,
 Selesai.
 
 Dengan begini, tidak perlu membuka lid laptop untuk login.
+
+
+## Post Login
+
+Proses ini adalah proses setelah login dan akan memasuki desktop. Saya perlu mengarahkan desktop perlu ditampilkan pada external monitor.
+
+
+## 1. Tambahkan command xrandr pada .xprofile
+
+Pada LightDM command pada post-login akan dibaca dari `$HOME/.xprofile`. Maka dari itu, saya akan menambahkan command xrandr yang mengatur tampilan external monitor.
+
+```bash
+!filename: $HOME/.xprofile
+...
+...
+
+# external monitor
+EXTERNAL=$(xrandr | grep " connected" | grep -E "DVI-I|HDMI|DisplayLink" | cut -d" " -f1 | head -n1)
+if [ -n "$EXTERNAL" ]; then
+    sleep 5
+    xrandr --output "$EXTERNAL" --primary --auto --output eDP1 --off
+fi
+```
+
+Dengan begini, setelah login dari LightDM, ketika masuk desktop akan dibawa ke external monitor.
+
+Selesai.
 
 
 # Opsional: Cara mencegah jika laptop jatuh pada kondisi standby saat lid-closed pada waktu login
