@@ -157,9 +157,12 @@
   // Template definitions
   const TEMPLATES = {
     posts: `
-      <div class="masonry-item absolute p-4 opacity-0 bg-white dark:bg-neutral-900 rounded-lg border border-gray-300 dark:border-neutral-700 hover:border-dark dark:hover:border-neutral-400">
+      <div class="masonry-item absolute p-4 opacity-0 bg-white dark:bg-neutral-900 rounded-lg border border-gray-300 dark:border-neutral-700 hover:border-dark dark:hover:border-neutral-400 group">
         <a href="{url}" class="text-dark dark:text-white">
-          <h2 class="text-md font-bold mb-4">{title}</h2>
+          <div class="flex flex-row mb-3">
+            <span class="px-1 py-0 mr-3 rounded-full bg-neutral-300 dark:bg-neutral-700 group-hover:bg-neutral-700 group-hover:dark:bg-neutral-300"></span>
+            <h2 class="text-md font-bold mb-4">{title}</h2>
+          </div>
           <p class="text-base text-gray-600 dark:text-neutral-300 mb-4">{description}</p>
           <p class="text-sm text-gray-600 dark:text-neutral-300 font-mono">{date}</p>
         </a>
