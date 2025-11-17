@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Export Data ke CSV pada Rails"
-date: '2020-07-09 10:07'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2020-07-09 10:07"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-07-09-export-data-ke-csv-pada-rails"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Saya memeiliki sejumlah data yang ingin saya eksport ke dalam bentuk CSV. Apakah saya dapat melakukannya pada Ruby on Rails?"
 ---
 
@@ -132,11 +127,11 @@ Terima kasih.
 
 # Referensi
 
-1. [dev.to/victorhazbun/export-records-to-csv-files-with-rails-2778](https://dev.to/victorhazbun/export-records-to-csv-files-with-rails-2778)
-<br>Diakses tanggal: 2020/07/09
+1. [dev.to/victorhazbun/export-records-to-csv-files-with-rails-2778](https://dev.to/victorhazbun/export-records-to-csv-files-with-rails-2778) \
+   Diakses tanggal: 2020-07-09
 
-2. [ruby-doc.org/stdlib-2.6.1/libdoc/csv/rdoc/CSV.html](https://ruby-doc.org/stdlib-2.6.1/libdoc/csv/rdoc/CSV.html)
-<br>Diakses tanggal: 2020/07/09
+1. [ruby-doc.org/stdlib-2.6.1/libdoc/csv/rdoc/CSV.html](https://ruby-doc.org/stdlib-2.6.1/libdoc/csv/rdoc/CSV.html) \
+   Diakses tanggal: 2020-07-09
 
-3. [github.com/ruby/csv](https://github.com/ruby/csv)
-<br>Diakses tanggal: 2020/07/09
+1. [github.com/ruby/csv](https://github.com/ruby/csv) \
+   Diakses tanggal: 2020-07-09

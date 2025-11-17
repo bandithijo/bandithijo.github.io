@@ -1,22 +1,14 @@
 ---
-layout: 'post'
-title: 'i3WM, Window Manager yang Taktis namun Praktis'
-date: 2019-02-26 20:45
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['I3WM', 'Ulasan', 'Tips']
-pin:
-hot: true
-contributors: []
+layout: "post"
+title: "i3WM, Window Manager yang Taktis namun Praktis"
+date: "2019-02-26 20:45"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-02-26-i3wm-window-manager-yang-taktis-namun-praktis"
+author: "BanditHijo"
+category: "blog"
+tags: ["i3wm", "ulasan", "tips"]
 description: "i3WM disebut-sebut sebagai Window Manager yang cocok untuk kalian yang baru ingin memulai mengenal dan menggunakan Window Manager. Hal tersebut tidak lain karena i3wm memiliki file configurasi dalam bentuk plain text, sehingga dapat dimengerti meski tanpa pengetahuan tentang bahasa pemrograman. Selain itu, i3wm juga memiliki dokumentasi yang sangat lengkap yang berada di website resminya. Catatan kali ini, saya ingin mencoba membagikan, bagaimana cara saya mengkonfigurasi i3wm."
 ---
-
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
 
 # Prakata
 
@@ -1685,21 +1677,20 @@ Terima kasih.
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/Window_manager](https://wiki.archlinux.org/index.php/Window_manager){:target="_blank"}
-<br>Diakses tanggal: 2019/02/26
+1. [wiki.archlinux.org/index.php/Window_manager](https://wiki.archlinux.org/index.php/Window_manager) \
+   Diakses tanggal: 2019/02/26
 
-2. [wiki.archlinux.org/index.php/Desktop_environment](https://wiki.archlinux.org/index.php/Desktop_environment){:target="_blank"}
-<br>Diakses tanggal: 2019/02/26
+1. [wiki.archlinux.org/index.php/Desktop_environment](https://wiki.archlinux.org/index.php/Desktop_environment) \
+   Diakses tanggal: 2019/02/26
 
-3. [www.youtube.com/watch?v=j1I63wGcvU4&list=PL5ze0DjYv5DbCv9vNEzFmP6sU7ZmkGzcf](https://www.youtube.com/watch?v=j1I63wGcvU4&list=PL5ze0DjYv5DbCv9vNEzFmP6sU7ZmkGzcf){:target="_blank"}
-<br>Diakses tanggal: 2019/02/26
+1. [www.youtube.com/watch?v=j1I63wGcvU4&list=PL5ze0DjYv5DbCv9vNEzFmP6sU7ZmkGzcf](https://www.youtube.com/watch?v=j1I63wGcvU4&list=PL5ze0DjYv5DbCv9vNEzFmP6sU7ZmkGzcf) \
+   Diakses tanggal: 2019/02/26
 
-4. [i3wm.org/docs/](https://i3wm.org/docs/){:target="_blank"}
-<br>Diakses tanggal: 2019/02/26
+1. [i3wm.org/docs/](https://i3wm.org/docs/) \
+   Diakses tanggal: 2019/02/26
 
-5. [i3wm.org/docs/userguide.html](https://i3wm.org/docs/userguide.html){:target="_blank"}
-<br>Diakses tanggal: 2019/02/26
+1. [i3wm.org/docs/userguide.html](https://i3wm.org/docs/userguide.html) \
+   Diakses tanggal: 2019/02/26
 
-6. [github.com/Airblader/i3](https://github.com/Airblader/i3){:target="_blank"}
-<br>Diakses tanggal: 2019/02/26
-
+1. [github.com/Airblader/i3](https://github.com/Airblader/i3) \
+   Diakses tanggal: 2019/02/26

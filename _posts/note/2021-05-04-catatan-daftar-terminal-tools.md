@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Catatan Daftar Terminal Tools"
-date: '2021-05-04 04:17'
-permalink: '/note/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'note'
-tags: ['TUI']
-wip: true
-pin:
-contributors: []
+date: "2021-05-04 04:17"
+permalink: "/note/:title"
+assets: "/assets/images/notes/2021-05-04-catatan-daftar-terminal-tools"
+author: "BanditHijo"
+category: "note"
+tags: ["tui"]
 description: "Catatan ini merupakan kumpulan dari daftar nama-nama CLI dan TUI tools yang dapat memudahkan pekerjaan kita sehari-hari."
 ---
 

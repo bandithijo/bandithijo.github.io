@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'SLiM, Display Manager yang Sudah Lama Ditinggalkan'
-date: '2019-02-28 17:47'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['SLiM']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "SLiM, Display Manager yang Sudah Lama Ditinggalkan"
+date: "2019-02-28 17:47"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-02-28-slim-display-manager-yang-sudah-ditinggalkan"
+author: "BanditHijo"
+category: "blog"
+tags: ["slim"]
 description: "SLiM Display Manager termasuk display manager favorit yang banyak digunkan oleh para ricer. Karena sangat mudah untuk dimofifikasi. Catatan kali ini, saya ingin berbagi bagaimana cara saya dalam mengkonfigurasi SLiM."
 ---
 
@@ -425,14 +420,14 @@ Terima kasih, Bro **Harry Kurn**.
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/SLiM](https://wiki.archlinux.org/index.php/SLiM)
-<br>Diakses tanggal: 2019/02/28
+1. [wiki.archlinux.org/index.php/SLiM](https://wiki.archlinux.org/index.php/SLiM) \
+   Diakses tanggal: 2019-02-28
 
-2. [github.com/data-modul/slim](https://github.com/data-modul/slim)
-<br>Diakses tanggal: 2019/02/28
+1. [github.com/data-modul/slim](https://github.com/data-modul/slim) \
+   Diakses tanggal: 2019-02-28
 
-3. [www.slant.co/topics/2053/~best-linux-display-manager](https://www.slant.co/topics/2053/~best-linux-display-manager)
-<br>Diakses tanggal: 2019/02/28
+1. [www.slant.co/topics/2053/~best-linux-display-manager](https://www.slant.co/topics/2053/~best-linux-display-manager) \
+   Diakses tanggal: 2019-02-28
 
-4. [wiki.archlinux.org/index.php/GNOME/Keyring#Using_the_keyring_outside_GNOME](https://wiki.archlinux.org/index.php/GNOME/Keyring#Using_the_keyring_outside_GNOME)
-<br>Diakses tanggal: 2019/02/28
+1. [wiki.archlinux.org/index.php/GNOME/Keyring#Using_the_keyring_outside_GNOME](https://wiki.archlinux.org/index.php/GNOME/Keyring#Using_the_keyring_outside_GNOME) \
+   Diakses tanggal: 2019-02-28

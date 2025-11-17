@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Membuat Multiple User pada GNU/Linux dengan Python Script'
-date: '2019-03-18 20:40'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Python']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Membuat Multiple User pada GNU/Linux dengan Python Script"
+date: "2019-03-18 20:40"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-03-18-membuat-multiple-user-dengan-python-script"
+author: "BanditHijo"
+category: "blog"
+tags: ["python"]
 description: "Catatan ini mengenai cara membuat user dalam jumlah banyak sekaligus menggunakan Python script."
 ---
 
@@ -151,5 +146,5 @@ Terima kasih.
 
 # Referensi
 
-1. [BanditHijo.Com/Arch - Step 6: Create User, Password, and Hostname]({{ site.url }}/arch/step-6-create-user-password-and-hostname#61-user-and-password)
-<br>Diakses tanggal: 2019/03/18
+1. [BanditHijo.Com/Arch - Step 6: Create User, Password, and Hostname]({{ site.url }}/arch/step-6-create-user-password-and-hostname#61-user-and-password) \
+   Diakses tanggal: 2019-03-18

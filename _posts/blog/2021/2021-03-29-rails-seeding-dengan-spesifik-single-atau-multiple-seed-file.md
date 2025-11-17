@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Rails Seeding dengan Spesifik Single atau Multiple Seed File (Modularisasi Seeds)"
-date: '2021-03-29 19:00'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2021-03-29 19:00"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-03-29-rails-seeding-dengan-spesifik-single-atau-multiple-seed-file"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Catatan kali ini, saya akan mencatatat tentang bagaimana mendiferensiasi seeds sesuai kategori tertentu dan juga menjalankan rails db:seed untuk single ataupun multiple spesifik file."
 ---
 
@@ -268,5 +263,5 @@ Terima kasih.
 
 # Referensi
 
-1. [https://stackoverflow.com/a/31815032/4862516](https://stackoverflow.com/a/31815032/4862516)
-<br>Diakses tanggal: 2021/03/29
+1. [https://stackoverflow.com/a/31815032/4862516](https://stackoverflow.com/a/31815032/4862516) \
+   Diakses tanggal: 2021-03-29

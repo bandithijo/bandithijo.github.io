@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Lightline, Alternatif Vim Statusline selain Vim-Airline'
-date: '2019-01-26 14:34'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Vim', 'Lightline']
-pin:
-hot: true
-contributors: []
+layout: "post"
+title: "Lightline, Alternatif Vim Statusline selain Vim-Airline"
+date: "2019-01-26 14:34"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-01-26-lightline-alternatif-vim-statusline"
+author: "BanditHijo"
+category: "blog"
+tags: ["vim", "lightline"]
 description: "Sudah mulai merasakan kalau vim-airline terasa berat atau terasa bloated? Hihihi, mungkin ini saatnya kamu mencoba mencicipi Lightline."
 ---
 
@@ -438,8 +433,8 @@ Sebaik-baik dokumentasi adalah yang ditulis oleh developer pengembang dari masin
 
 # Referensi
 
-1. [github.com/itchyny/lightline.vim](https://github.com/itchyny/lightline.vim)
-<br>Diakses tanggal: 2019/01/26
+1. [github.com/itchyny/lightline.vim](https://github.com/itchyny/lightline.vim) \
+   Diakses tanggal: 2019-01-26
 
-2. [github.com/mengelbrecht/lightline-bufferline](https://github.com/mengelbrecht/lightline-bufferline)
-<br>Diakses tanggal: 2019/01/26
+1. [github.com/mengelbrecht/lightline-bufferline](https://github.com/mengelbrecht/lightline-bufferline) \
+   Diakses tanggal: 2019-01-26

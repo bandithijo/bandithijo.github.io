@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Catatan Post Installation Fedora Workstation"
-date: '2021-06-10 09:51'
-permalink: '/note/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'note'
-tags: ['Fedora']
-wip: true
-pin:
-contributors: []
+date: "2021-06-10 09:51"
+permalink: "/note/:title"
+assets: "/assets/images/notes/2021-06-10-catatan-post-installation-fedora-workstation"
+author: "BanditHijo"
+category: "note"
+tags: ["fedora"]
 description: "Catatan ini merupakan kumpulan packages dan beberapa konfigurasi yang saya lakukan setelah melakukan proses instalasi Fedora Workstation."
 ---
 

@@ -1,15 +1,12 @@
 ---
-layout: 'post'
-title: 'Mengkonfigurasi Irssi, IRC Client Berbasis Terminal'
-date: '2018-12-14 20:50'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['IRSSI', 'IRC']
-pin:
+layout: "post"
+title: "Mengkonfigurasi Irssi, IRC Client Berbasis Terminal"
+date: "2018-12-14 20:50"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-12-14-konfigurasi-irssi"
+author: "BanditHijo"
+category: "blog"
+tags: ["irssi", "irc"]
 description: "Jaman sekarang sudah sangat jarang orang menggunakan IRC. Namun bukan berarti IRC sudah mati. Masih ada beberapa user yang masih menggunakan IRC. Bahkan beberapa distribusi yang besar, memiliki official channel yang terpelihara, seperti #archlinux. Untuk dapat masuk ke dalam layanan IRC, kita memerlukan IRC client. Saya ingin yang simple, salah satunya adalah Irssi."
 ---
 
@@ -567,23 +564,23 @@ Masih terdapat banyak sekali hal yang belum dapat tercover oleh tulisan ini. Beb
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/Irssi](https://wiki.archlinux.org/index.php/Irssi)
-<br>Diakses tanggal: 2018/12/14
+1. [wiki.archlinux.org/index.php/Irssi](https://wiki.archlinux.org/index.php/Irssi) \
+   Diakses tanggal: 2018-12-14
 
-2. [freenode.net/kb/answer/registration](http://freenode.net/kb/answer/registration)
-<br>Diakses tanggal: 2018/12/14
+1. [freenode.net/kb/answer/registration](http://freenode.net/kb/answer/registration) \
+   Diakses tanggal: 2018-12-14
 
-3. [irssi.org/documentation/](https://irssi.org/documentation/)
-<br>Diakses tanggal: 2018/12/14
+1. [irssi.org/documentation/](https://irssi.org/documentation/) \
+   Diakses tanggal: 2018-12-14
 
-4. [scripts.irssi.org/](https://scripts.irssi.org/)
-<br>Diakses tanggal: 2018/12/14
+1. [scripts.irssi.org/](https://scripts.irssi.org/) \
+   Diakses tanggal: 2018-12-14
 
-5. [irssi-import.github.io/themes/](https://irssi-import.github.io/themes/)
-<br>Diakses tanggal: 2018/12/14
+1. [irssi-import.github.io/themes/](https://irssi-import.github.io/themes/) \
+   Diakses tanggal: 2018-12-14
 
-6. [irssi.org/documentation/startup/](https://irssi.org/documentation/startup/)
-<br>Diakses tanggal: 2018/12/14
+1. [irssi.org/documentation/startup/](https://irssi.org/documentation/startup/) \
+   Diakses tanggal: 2018-12-14
 
-7. [askubuntu.com/questions/470944/irssi-no-terminal-notification-sound-while-pinged](https://askubuntu.com/questions/470944/irssi-no-terminal-notification-sound-while-pinged)
-<br>Diakses tanggal: 2018/12/14
+1. [askubuntu.com/questions/470944/irssi-no-terminal-notification-sound-while-pinged](https://askubuntu.com/questions/470944/irssi-no-terminal-notification-sound-while-pinged) \
+   Diakses tanggal: 2018-12-14

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Merubah Nama-nama Direktori pada Home'
-date: '2019-01-12 08:40'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['XDG-USER-DIRS']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Merubah Nama-nama Direktori pada Home"
+date: "2019-01-12 08:40"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-01-12-merubah-nama-direktori-pada-home"
+author: "BanditHijo"
+category: "blog"
+tags: ["xdg-user-dirs"]
 description: "Apabila kamu merasa nama-nama direktori yang kamu miliki di Home terlalu panjang, seperti Documents, Desktop, Pictures, Vidoes, Sound, dll. Kita dapat merubahnya menjadi lebih singkat. Saya lebih senang dengan 3 huruf."
 ---
 
@@ -114,5 +109,5 @@ Kemudian jangan lupa untuk merubah **Destination** direktori dari semua aplikasi
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/XDG_user_directories](https://wiki.archlinux.org/index.php/XDG_user_directories)
-<br>Diakses tanggal: 2019/01/12
+1. [wiki.archlinux.org/index.php/XDG_user_directories](https://wiki.archlinux.org/index.php/XDG_user_directories) \
+   Diakses tanggal: 2019-01-12

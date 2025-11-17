@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Comprehensive Network Manager yang Saya Pergunakan pada Arch Linux'
-date: '2019-02-09 05:52'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Network Manager', 'Tool']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Comprehensive Network Manager yang Saya Pergunakan pada Arch Linux"
+date: "2019-02-09 05:52"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-02-09-pilihan-network-manager-pada-arch-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["network manager"]
 description: "Terdapat banyak sekali tools yang dapat kita gunakan untuk mengatur jaringan di GNU/Linux. Perkakas-perkakas ini sering diistilahkan dengan Comprehensive Network Manager, atau Network Manager saja. Tapi jangan salah paham yaa, karena salah satu Network Manager tersebut ada yang bernama NetworkManager."
 ---
 
@@ -188,8 +183,8 @@ Sepertinya ini saja yang dapat saya tulisakan. Mudah-mudahan dapat bermanfaat ba
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/Network_configuration#Network_managers](https://wiki.archlinux.org/index.php/Network_configuration#Network_managers)
-<br>Diakses tanggal: 2019/02/09
+1. [wiki.archlinux.org/index.php/Network_configuration#Network_managers](https://wiki.archlinux.org/index.php/Network_configuration#Network_managers) \
+   Diakses tanggal: 2019-02-09
 
-2. [wiki.archlinux.org/index.php/NetworkManager](https://wiki.archlinux.org/index.php/NetworkManager)
-<br>Diakses tanggal: 2019/02/09
+1. [wiki.archlinux.org/index.php/NetworkManager](https://wiki.archlinux.org/index.php/NetworkManager) \
+   Diakses tanggal: 2019-02-09

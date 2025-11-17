@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Memasang Bootstrap 4 pada Rails 6 dengan Yarn"
-date: '2020-12-20 07:52'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails', 'Bootstrap']
-pin:
-hot:
-contributors: []
+date: "2020-12-20 07:52"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-12-20-memasang-bootstrap-pada-rails-menggunakan-yarn"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails", "bootstrap"]
 description: "Mungkin belum ada gem yang menyediakan integrasi Bootstrap 4 dengan Rails 6. Jangan khawatir, karena kita tetap dapat memasang Bootstrap 4 dengan menggunakan Yarn. Caranya juga sangat mudah sekali!"
 ---
 
@@ -170,8 +165,8 @@ Terima kasih.
 
 # Referensi
 
-1. [mashrurhossain.com/blog/rails6bootstrap4](https://www.mashrurhossain.com/blog/rails6bootstrap4)
-<br>Diakses tanggal: 2020/12/20
+1. [mashrurhossain.com/blog/rails6bootstrap4](https://www.mashrurhossain.com/blog/rails6bootstrap4) \
+   Diakses tanggal: 2020-12-20
 
-2. [dev.to/somnathpaul/add-bootstrap-4-to-your-ruby-on-rails-6-application-ole](https://dev.to/somnathpaul/add-bootstrap-4-to-your-ruby-on-rails-6-application-ole)
-<br>Diakses tanggal: 2020/12/20
+1. [dev.to/somnathpaul/add-bootstrap-4-to-your-ruby-on-rails-6-application-ole](https://dev.to/somnathpaul/add-bootstrap-4-to-your-ruby-on-rails-6-application-ole) \
+   Diakses tanggal: 2020-12-20

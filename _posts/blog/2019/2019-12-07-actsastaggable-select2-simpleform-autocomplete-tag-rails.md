@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Autcomplete Tag dengan ActsAsTaggable, Select2, dan simple_form pada Rails"
-date: '2019-12-07 11:47'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails', 'JavaScript']
-pin:
-hot:
-contributors: []
+date: "2019-12-07 11:47"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-12-07-actsastaggable-select2-simpleform-autocomplete-tag-rails"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails", "javascript"]
 description: "Catatan ini mengenai cara membuat autocomplete tag dengan ActsAsTaggable, Select2, dan SimpleForm pada Ruby on Rails."
 ---
 
@@ -380,20 +375,20 @@ Terima kasih.
 
 # Referensi
 
-1. [github.com/mbleigh/acts-as-taggable-on](https://github.com/mbleigh/acts-as-taggable-on)
-<br>Diakses tanggal: 2019/12/07
+1. [github.com/mbleigh/acts-as-taggable-on](https://github.com/mbleigh/acts-as-taggable-on) \
+   Diakses tanggal: 2019-12-07
 
-2. [github.com/plataformatec/simple_form](https://github.com/plataformatec/simple_form)
-<br>Diakses tanggal: 2019/12/07
+1. [github.com/plataformatec/simple_form](https://github.com/plataformatec/simple_form) \
+   Diakses tanggal: 2019-12-07
 
-3. [github.com/argerim/select2-rails](https://github.com/argerim/select2-rails)
-<br>Diakses tanggal: 2019/12/07
+1. [github.com/argerim/select2-rails](https://github.com/argerim/select2-rails) \
+   Diakses tanggal: 2019-12-07
 
-4. [select2.org/](https://select2.org/)
-<br>Diakses tanggal: 2019/12/07
+1. [select2.org/](https://select2.org/) \
+   Diakses tanggal: 2019-12-07
 
-5. [select2.github.io/select2/](https://select2.github.io/select2/)
-<br>Diakses tanggal: 2019/12/07
+1. [select2.github.io/select2/](https://select2.github.io/select2/) \
+   Diakses tanggal: 2019-12-07
 
-6. [select2.github.io/select2-bootstrap-theme/4.0.3.html](https://select2.github.io/select2-bootstrap-theme/4.0.3.html)
-<br>Diakses tanggal: 2019/12/07
+1. [select2.github.io/select2-bootstrap-theme/4.0.3.html](https://select2.github.io/select2-bootstrap-theme/4.0.3.html) \
+   Diakses tanggal: 2019-12-07

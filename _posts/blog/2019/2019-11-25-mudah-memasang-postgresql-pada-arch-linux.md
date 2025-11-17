@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mudah Memasang PostgreSQL pada Arch Linux"
-date: '2019-11-25 06:45'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Arch Linux', 'PostgreSQL']
-pin:
-hot:
-contributors: []
+date: "2019-11-25 06:45"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-11-25-mudah-memasang-postgresql-pada-arch-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["arch linux", "postgresql"]
 description: "Mengkonfigurasi database mungkin cukup menjadi momok sebagian orang. Termasuk saya. Rasanya sangat mengerikan kalau harus kembali mengknfigurasi database dari awal. Catatan ini saya buat agar saya tidak lupa, bagaimana cara untuk mengkonfigurasi database di Arch Linux untuk keperluan development (bukan production)."
 ---
 
@@ -431,8 +426,8 @@ Terima kasih.
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/PostgreSQL](https://wiki.archlinux.org/index.php/PostgreSQL)
-<br>Diakses tanggal: 2019/11/25
+1. [wiki.archlinux.org/index.php/PostgreSQL](https://wiki.archlinux.org/index.php/PostgreSQL) \
+   Diakses tanggal: 2019-11-25
 
-2. [postgresqltutorial.com/postgresql-alter-database](http://www.postgresqltutorial.com/postgresql-alter-database/)
-<br>Diakses tanggal: 2019/11/25
+1. [postgresqltutorial.com/postgresql-alter-database](http://www.postgresqltutorial.com/postgresql-alter-database/) \
+   Diakses tanggal: 2019-11-25

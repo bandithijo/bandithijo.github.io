@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Checkbox dengan Multiple Selection pada Rails"
-date: '2019-12-10 09:07'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails', 'JavaScript']
-pin:
-hot:
-contributors: []
+date: "2019-12-10 09:07"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-12-10-checkbox-multiple-selection-rails"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails", "javascript"]
 description: "Catatan kali ini mengenai cara membuat checkbox dengan multiple selection pada Ruby on Rails."
 ---
 
@@ -283,5 +278,5 @@ Terima kasih.
 
 # Referensi
 
-1. [apidock.com/rails/v4.0.2/ActionView/Helpers/FormOptionsHelper/collection_check_boxes](https://apidock.com/rails/v4.0.2/ActionView/Helpers/FormOptionsHelper/collection_check_boxes)
-<br>Diakses tanggal: 2019/12/10
+1. [apidock.com/rails/v4.0.2/ActionView/Helpers/FormOptionsHelper/collection_check_boxes](https://apidock.com/rails/v4.0.2/ActionView/Helpers/FormOptionsHelper/collection_check_boxes) \
+   Diakses tanggal: 2019-12-10

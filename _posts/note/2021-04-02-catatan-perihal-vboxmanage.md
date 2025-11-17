@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Catatan dalam Berinteraksi dengan VBoxManage"
-date: '2021-04-02 18:38'
-permalink: '/note/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'note'
-tags: ['VBoxManage']
-wip: true
-pin:
-contributors: []
+date: "2021-04-02 18:38"
+permalink: "/note/:title"
+assets: "/assets/images/notes/2021-04-02-catatan-perihal-vboxmanage"
+author: "BanditHijo"
+category: "note"
+tags: ["vboxmanage"]
 description: "Hal-hal terkait command line memang sering terlupakan apabila tidak selalu digunakan. Catatan ini hadir untuk mempermudah teman-teman apabila sedang berkepentigan dengan vboxmanage."
 ---
 

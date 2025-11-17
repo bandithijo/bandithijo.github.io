@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mudah! Downgrade Ubuntu 22.04 ke 20.04"
-date: '2023-05-26 20:25'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Ubuntu']
-pin:
-hot:
-contributors: []
+date: "2023-05-26 20:25"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2023/2023-05-26-mudah-downgrade-ubuntu"
+author: "BanditHijo"
+category: "blog"
+tags: ["ubuntu"]
 description: "Catatan kali ini, saya akan mendokumentasikan proses <i>downgrade</i> yang secara tidak terencana saya lakukan untuk menurunkan versi distribusi sistem operasi di salah satu komputer di Laboratorium Mikrobiologi Universitas Mulawarman, dari Ubuntu versi 22.04, turun ke versi 20.04, secara remote (jarak jauh) via TeamViewer."
 ---
 
@@ -273,8 +268,8 @@ Terima kasih sudah mampir yaa.
 
 # Referensi
 
-1. [OMER CAKMAK, Downgrade Ubuntu to previous version? (100% Working)](https://www.golinuxcloud.com/downgrade-ubuntu/)
-<br>Diakses tanggal: 2023/05/26
+1. [OMER CAKMAK, Downgrade Ubuntu to previous version? (100% Working)](https://www.golinuxcloud.com/downgrade-ubuntu/) \
+   Diakses tanggal: 2023-05-26
 
-1. [Wikipedia, Everything is a file](https://en.wikipedia.org/wiki/Everything_is_a_file)
-<br>Diakses tanggal: 2023/05/26
+1. [Wikipedia, Everything is a file](https://en.wikipedia.org/wiki/Everything_is_a_file) \
+   Diakses tanggal: 2023-05-26

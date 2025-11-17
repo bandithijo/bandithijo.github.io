@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Scrcpy, Menampilkan dan Mengontrol Android Device dari Komputer'
-date: '2018-12-30 10:41'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['scrcpy']
-pin:
-hot: true
-contributors: []
+layout: "post"
+title: "Scrcpy, Menampilkan dan Mengontrol Android Device dari Komputer"
+date: "2018-12-30 10:41"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-12-30-scrcpy-menampilkan-dan-mengontrol-android-dari-komputer"
+author: "BanditHijo"
+category: "blog"
+tags: ["scrcpy"]
 description: "Dengan menggunakan Scrcpy, kita dengan mudah dapat mengendalikan smartphone dari komputer."
 ---
 
@@ -241,14 +236,14 @@ Masih banyak fitur-fitur dari Scrcpy yang belum sempat saya tuliskan di sini. Si
 
 # Referensi
 
-1. [github.com/Genymobile/scrcpy](https://github.com/Genymobile/scrcpy)
-<br>Diakses tanggal: 2018/12/30
+1. [github.com/Genymobile/scrcpy](https://github.com/Genymobile/scrcpy) \
+   Diakses tanggal: 2018-12-30
 
-2. [blog.rom1v.com/2018/03/introducing-scrcpy/](https://blog.rom1v.com/2018/03/introducing-scrcpy/)
-<br>Diakses tanggal: 2018/12/30
+1. [blog.rom1v.com/2018/03/introducing-scrcpy/](https://blog.rom1v.com/2018/03/introducing-scrcpy/) \
+   Diakses tanggal: 2018-12-30
 
-3. [www.genymotion.com/blog/open-source-project-scrcpy-now-works-wirelessly/](https://www.genymotion.com/blog/open-source-project-scrcpy-now-works-wirelessly/)
-<br>Diakses tanggal: 2018/12/30
+1. [www.genymotion.com/blog/open-source-project-scrcpy-now-works-wirelessly/](https://www.genymotion.com/blog/open-source-project-scrcpy-now-works-wirelessly/) \
+   Diakses tanggal: 2018-12-30
 
-4. [wiki.archlinux.org/index.php/Android_Debug_Bridge](https://wiki.archlinux.org/index.php/Android_Debug_Bridge)
-<br>Diakses tanggal: 2018/12/30
+1. [wiki.archlinux.org/index.php/Android_Debug_Bridge](https://wiki.archlinux.org/index.php/Android_Debug_Bridge)
+   Diakses tanggal: 2018-12-30

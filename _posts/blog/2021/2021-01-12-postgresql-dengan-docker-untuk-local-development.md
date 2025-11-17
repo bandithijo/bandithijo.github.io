@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Memasang PostgreSQL dengan Docker untuk Local Development"
-date: '2021-01-12 09:29'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Docker', 'PostgreSQL']
-pin:
-hot:
-contributors: []
+date: "2021-01-12 09:29"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-01-12-postgresql-dengan-docker-untuk-local-development"
+author: "BanditHijo"
+category: "blog"
+tags: ["docker", "postgresql"]
 description: "Saya sedang memanfaatkan docker untuk memasang beberapa komponen-komponen pendukuk web development. Kali ini, yang saya coba pasang adalah PostgreSQL."
 ---
 
@@ -413,11 +408,11 @@ Terima kasih.
 
 # Referensi
 
-1. [hub.docker.com/\_/postgres](https://hub.docker.com/_/postgres)
-<br>Diakses tanggal: 2021/01/12
+1. [hub.docker.com/\_/postgres](https://hub.docker.com/_/postgres) \
+   Diakses tanggal: 2021-01-12
 
-2. [wiki.archlinux.org/index.php/PostgreSQL](https://wiki.archlinux.org/index.php/PostgreSQL)
-<br>Diakses tanggal: 2021/01/12
+1. [wiki.archlinux.org/index.php/PostgreSQL](https://wiki.archlinux.org/index.php/PostgreSQL) \
+   Diakses tanggal: 2021-01-12
 
-3. [digitalocean.com/community/tutorials/how-to-move-a-postgresql-data-directory-to-a-new-location-on-ubuntu-16-04](https://www.digitalocean.com/community/tutorials/how-to-move-a-postgresql-data-directory-to-a-new-location-on-ubuntu-16-04)
-<br>Diakses tanggal: 2021/01/13
+1. [digitalocean.com/community/tutorials/how-to-move-a-postgresql-data-directory-to-a-new-location-on-ubuntu-16-04](https://www.digitalocean.com/community/tutorials/how-to-move-a-postgresql-data-directory-to-a-new-location-on-ubuntu-16-04) \
+   Diakses tanggal: 2021-01-13

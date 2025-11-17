@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Vim Mengingat Posisi Terakhir Cursor"
-date: '2020-03-27 16:38'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Vim']
-pin:
-hot:
-contributors: []
+date: "2020-03-27 16:38"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-03-27-membuat-vim-mengingat-posisi-terakhir-cursor"
+author: "BanditHijo"
+category: "blog"
+tags: ["vim"]
 description: "Ketika kita mengerjakan sebuah proyek, akan sangat membantu apabila cursor dapat tersimpan di posisi terakhir kita meninggalkannya. Apakah ini mungkin dilakukan oleh Vim? Tentu saja!"
 ---
 
@@ -86,14 +81,14 @@ Gambar 2. Data disimpan pada ShaDa file di NeoVim (kiri), Data disimpan pada .vi
 
 # Referensi
 
-1. [github.com/mhinz/vim-galore#restore-cursor-position-when-opening-file](https://github.com/mhinz/vim-galore#restore-cursor-position-when-opening-file)
-<br>Diakses tanggal: 2020/03/27
+1. [github.com/mhinz/vim-galore#restore-cursor-position-when-opening-file](https://github.com/mhinz/vim-galore#restore-cursor-position-when-opening-file) \
+   Diakses tanggal: 2020-03-27
 
-2. [StackOverflow - How to make vim restore last cursor position for CURRENT buffer?](https://stackoverflow.com/a/57261040/4862516)
-<br>Diakses tanggal: 2020/07/11
+1. [StackOverflow - How to make vim restore last cursor position for CURRENT buffer?](https://stackoverflow.com/a/57261040/4862516) \
+   Diakses tanggal: 2020-07-11
 
-3. [neovim.io/doc/user/starting.html#shada](https://neovim.io/doc/user/starting.html#shada)
-<br>Diakses tanggal: 2020/07/11
+1. [neovim.io/doc/user/starting.html#shada](https://neovim.io/doc/user/starting.html#shada) \
+   Diakses tanggal: 2020-07-11
 
-4. [vim.fandom.com/wiki/Using_marks](https://vim.fandom.com/wiki/Using_marks)
-<br>Diakses tanggal: 2020/07/11
+1. [vim.fandom.com/wiki/Using_marks](https://vim.fandom.com/wiki/Using_marks) \
+   Diakses tanggal: 2020-07-11

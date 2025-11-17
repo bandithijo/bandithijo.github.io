@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Merubah Nama Attribute yang Panjang pada Collection of Object di Rails"
-date: '2023-09-17 20:24'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2023-09-17 20:24"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2023/2023-09-17-merubah-nama-attribute-pada-object-collection-di-rails"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Pada catatan kali ini saya ingin memodifikasi output dari nama attribute yang terlalu panjang menjadi lebih pendek di Ruby on Rails."
 ---
 

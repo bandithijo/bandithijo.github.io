@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Selected Menu Item pada Rails View Template"
-date: '2021-02-09 18:13'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2021-02-09 18:13"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-02-09-selected-menu-item-pada-rails-view-template"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Membuat menu item untuk menampilkan menu yang aktif dan yang tidak mungkin akan menjadi hal yang sedikit menyulitkan. Catatan kali ini, saya akan sedikit mencatat berbagai macam cara yang pernah saya lakukan untuk membuat fitur menu item yang dapat menampilkan indikator aktif (selected)."
 ---
 
@@ -234,11 +229,11 @@ Terima kasih.
 
 # Referensi
 
-1. [How TO - Collapsibles/Accordion](https://www.w3schools.com/howto/howto_js_accordion.asp)
-<br>Diakses tanggal: 2021/02/09
+1. [How TO - Collapsibles/Accordion](https://www.w3schools.com/howto/howto_js_accordion.asp) \
+   Diakses tanggal: 2021-02-09
 
-2. [gist.github.com/pelted/5dac756f690a61f698145dc9495a9633](https://gist.github.com/pelted/5dac756f690a61f698145dc9495a9633)
-<br>Diakses tanggal: 2021/02/09
+1. [gist.github.com/pelted/5dac756f690a61f698145dc9495a9633](https://gist.github.com/pelted/5dac756f690a61f698145dc9495a9633) \
+   Diakses tanggal: 2021-02-09
 
-3. [**pelted/application_helper.rb**](https://gist.github.com/pelted/5dac756f690a61f698145dc9495a9633).
-<br>Diakses tanggal: 2021/02/09
+1. [**pelted/application_helper.rb**](https://gist.github.com/pelted/5dac756f690a61f698145dc9495a9633) \
+   Diakses tanggal: 2021-02-09

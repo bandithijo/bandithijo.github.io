@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Menghandle Pengarsipan pada FreeBSD dengan 7-Zip"
-date: '2020-03-09 16:41'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['FreeBSD']
-pin:
-hot:
-contributors: []
+date: "2020-03-09 16:41"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-03-09-menghandle-pengarsipan-pada-freebsd-dengan-7-zip"
+author: "BanditHijo"
+category: "blog"
+tags: ["freebsd"]
 description: "Selama ini, saya selalu menggunkan tools pengarsipan GUI. Ternyata dengan 7zip, pengarsipan di Terminal juga jadi lebih mudah. Ada banyak sekali option dan parameter yang dapat kita gunakan. Tapi saya hanya mencatat sebagian kecil yang saya perlukan."
 ---
 
@@ -216,8 +211,8 @@ Terima kasih.
 
 # Referensi
 
-1. [www.2daygeek.com/zip-7zip-encrypt-decrypt-password-protect-files-folders-linux/](https://www.2daygeek.com/zip-7zip-encrypt-decrypt-password-protect-files-folders-linux/)
-<br>Diakses tanggal: 2020/03/09
+1. [www.2daygeek.com/zip-7zip-encrypt-decrypt-password-protect-files-folders-linux/](https://www.2daygeek.com/zip-7zip-encrypt-decrypt-password-protect-files-folders-linux/) \
+   Diakses tanggal: 2020-03-09
 
-2. [www.7-zip.org/](https://www.7-zip.org/)
-<br>Diakses tanggal: 2020/03/09
+1. [www.7-zip.org/](https://www.7-zip.org/) \
+   Diakses tanggal: 2020-03-09

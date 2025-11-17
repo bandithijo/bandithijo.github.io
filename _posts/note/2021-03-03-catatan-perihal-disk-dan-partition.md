@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Catatan dalam Berinteraksi dengan Disk dan Partition"
-date: '2021-03-03 13:38'
-permalink: '/note/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'note'
-tags: ['Disk', 'Partition', 'Udisksctl']
-wip: true
-pin:
-contributors: []
+date: "2021-03-03 13:38"
+permalink: "/note/:title"
+assets: "/assets/images/notes/2021-03-03-catatan-perihal-disk-dan-partition"
+author: "BanditHijo"
+category: "note"
+tags: ["disk", "partition", "udisksctl"]
 description: "Berinteraksi dengan disk partition mungkin merupakan pekerjaan harian bagi sebagian teman-teman, namun tidak dengan saya dan sebagian teman-teman yang lain. Catatan ini hadir untuk menyimpan beberapa 'Best Practice' yang dapat kita gunakan, apabila sewaktu-waktu kita berurusan dengan partition."
 ---
 

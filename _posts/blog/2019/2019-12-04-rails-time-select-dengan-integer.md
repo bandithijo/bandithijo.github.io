@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Rails time_select dengan Integer"
-date: '2019-12-04 08:00'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2019-12-04 08:00"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-12-04-rails-time-select-dengan-integer"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Catatan kali ini mengenai cara menggunakan input time_select namun dengan tupe data integer pada Ruby on Rails."
 ---
 
@@ -237,8 +232,8 @@ Terima kasih (^_^)v
 
 # Referensi
 
-1. [api.rubyonrails.org/v5.2.1/classes/ActionView/Helpers/DateHelper.html](https://api.rubyonrails.org/v5.2.1/classes/ActionView/Helpers/DateHelper.html)
-<br>Diakses tanggal: 2019/12/04
+1. [api.rubyonrails.org/v5.2.1/classes/ActionView/Helpers/DateHelper.html](https://api.rubyonrails.org/v5.2.1/classes/ActionView/Helpers/DateHelper.html) \
+   Diakses tanggal: 2019-12-04
 
-2. [guides.rubyonrails.org/form_helpers.html#using-date-and-time-form-helpers](https://guides.rubyonrails.org/form_helpers.html#using-date-and-time-form-helpers)
-<br>Diakses tanggal: 2019/12/04
+1. [guides.rubyonrails.org/form_helpers.html#using-date-and-time-form-helpers](https://guides.rubyonrails.org/form_helpers.html#using-date-and-time-form-helpers) \
+   Diakses tanggal: 2019-12-04

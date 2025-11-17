@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Cara Mudah Merotasi Video pada GNU/Linux'
-date: '2018-01-03'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Tools', 'Tips']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Cara Mudah Merotasi Video pada GNU/Linux"
+date: "2018-01-03"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-01-03-merotasi-video-pada-gnu-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["tools", "tips"]
 description: "Merotasi video mungkin menjadi hal yang cukup memusingkan apabila kita tidak terbiasa menggunakan perkakas GUI. Namun, cukup dengan ffmpeg, kita dapat merotasi video sesuai dengan parameter yang tersedia. Caranya mudah sekali!"
 ---
 
@@ -52,5 +47,5 @@ Ganti `in.mp4` dengan nama file dari video kalian, dan berikan sembarang nama pa
 
 # Referensi
 
-1. [archlinux.org/packages/extra/x86_64/ffmpeg/](https://www.archlinux.org/packages/extra/x86_64/ffmpeg/)
-<br>Diakses tanggal: 2018/01/19
+1. [archlinux.org/packages/extra/x86_64/ffmpeg/](https://www.archlinux.org/packages/extra/x86_64/ffmpeg/) \
+   Diakses tanggal: 2018-01-19

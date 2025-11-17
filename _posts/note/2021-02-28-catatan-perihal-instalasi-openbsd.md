@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Catatan Instalasi OpenBSD"
-date: '2021-02-28 05:54'
-permalink: '/note/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'note'
-tags: ['OpenBSD']
-wip:
-pin:
-contributors: []
+date: "2021-02-28 05:54"
+permalink: "/note/:title"
+assets: "/assets/images/notes/2021-02-28-catatan-perihal-instalasi-openbsd"
+author: "BanditHijo"
+category: "note"
+tags: ["openbsd"]
 description: "Migrasi ke OpenBSD mungkin akan menjadi perjalaan yang panjang dan penuh persiapan. Karena proses pengerjaannya diwaktu luang dan tidak sekali waktu langsung selesai, saya merasa perlu untuk mendokumentasikan catatan, agar tidak lupa begitu saja."
 ---
 

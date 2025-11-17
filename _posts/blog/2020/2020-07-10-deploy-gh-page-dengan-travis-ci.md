@@ -1,21 +1,15 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mendeploy Jekyll ke GitHub Pages dengan Travis CI"
-date: '2020-07-10 11:00'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Jekyll', 'GitHub Pages', 'Travis CI']
-pin:
-hot:
-contributors: []
+date: "2020-07-10 11:00"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-07-10-deploy-gh-page-dengan-travis-ci"
+author: "BanditHijo"
+category: "blog"
+tags: ["jekyll", "githubpages", "travisci"]
 description: "Terdapat whitelist plugin yang dapat digunakan apabila kita hanya menggunakan GitHub Pages untuk membuild Jekyll blog. Maka, saya memanfaatkan Travis-CI agar dapat bebas menggunakan Jekyll plugin sesuka hati. Termasuk plugin yang saya buat sendiri untuk membantu proses penulisan artikel."
 ---
 
-<!-- BANNER OF THE POST -->
 ![Gambar 1](https://i.postimg.cc/9MKp2vsR/banner-2020-07-10-deploy-gh-page-dengan-travis-ci.png)
 
 > PERHATIAN!
@@ -387,20 +381,20 @@ Terima kasih.
 
 # Referensi
 
-1. [joshfrankel.me/blog/deploying-a-jekyll-blog-to-github-pages-with-custom-plugins-and-travisci](http://joshfrankel.me/blog/deploying-a-jekyll-blog-to-github-pages-with-custom-plugins-and-travisci/)
-<br>Diakses tanggal: 2020/07/10
+1. [joshfrankel.me/blog/deploying-a-jekyll-blog-to-github-pages-with-custom-plugins-and-travisci](http://joshfrankel.me/blog/deploying-a-jekyll-blog-to-github-pages-with-custom-plugins-and-travisci/) \
+   Diakses tanggal: 2020-07-10
 
-2. [docs.github.com/en/enterprise/2.14/user/articles/configuring-jekyll-plugins](https://docs.github.com/en/enterprise/2.14/user/articles/configuring-jekyll-plugins)
-<br>Diakses tanggal: 2020/07/10
+1. [docs.github.com/en/enterprise/2.14/user/articles/configuring-jekyll-plugins](https://docs.github.com/en/enterprise/2.14/user/articles/configuring-jekyll-plugins) \
+   Diakses tanggal: 2020-07-10
 
-3. [Travis CI - GitHub Pages Deployment](https://docs.travis-ci.com/user/deployment/pages/)
-<br>Diakses tanggal: 2020/07/10
+1. [Travis CI - GitHub Pages Deployment](https://docs.travis-ci.com/user/deployment/pages/) \
+   Diakses tanggal: 2020-07-10
 
-4. [Travis CI - Building a Ruby Project](https://docs.travis-ci.com/user/languages/ruby/)
-<br>Diakses tanggal: 2020/07/10
+1. [Travis CI - Building a Ruby Project](https://docs.travis-ci.com/user/languages/ruby/) \
+   Diakses tanggal: 2020-07-10
 
-5. [pages.github.com](https://pages.github.com/)
-<br>Diakses tanggal: 2020/07/10
+1. [pages.github.com](https://pages.github.com/) \
+   Diakses tanggal: 2020-07-10
 
-6. [jekyllrb.com](https://jekyllrb.com/)
-<br>Diakses tanggal: 2020/07/10
+1. [jekyllrb.com](https://jekyllrb.com/) \
+   Diakses tanggal: 2020-07-10

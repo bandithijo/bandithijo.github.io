@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Mengganti Password User dari Home Direktori yang Terenkripsi'
-date: '2019-06-17 13:18'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['eCryptfs', 'Encryption']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Mengganti Password User dari Home Direktori yang Terenkripsi"
+date: "2019-06-17 13:18"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-06-17-mengganti-password-user-dari-home-direktori-yang-terenkripsi"
+author: "BanditHijo"
+category: "blog"
+tags: ["ecryptfs", "encryption"]
 description: "Memiliki Home direktori yang terenkripsi bukan berarti kita hanya dapat mengeset password hanya pada saat pertama kali enkripsi dibuat dan tidak dapat menggantinya. Tentu saja kita dapat menggantinya. Catatan berikut ini mudah-mudahan dapat membantu kalian memberikan gambaran, tentang bagaimana mengganti password terhadap home direktori yang terenkripsi."
 ---
 
@@ -123,5 +118,5 @@ Terima Kasih.
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/ECryptfs#Mounting_2](https://wiki.archlinux.org/index.php/ECryptfs#Mounting_2)
-<br>Diakses tanggal: 2019/06/17
+1. [wiki.archlinux.org/index.php/ECryptfs#Mounting_2](https://wiki.archlinux.org/index.php/ECryptfs#Mounting_2) \
+   Diakses tanggal: 2019-06-17

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Flash, Unlock Bootloader, dan Pasang TWRP Recovery XiaoMi pada GNU/Linux'
-date: '2018-04-28 22:21'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Bootloader', 'XiaoMi']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Flash, Unlock Bootloader, dan Pasang TWRP Recovery XiaoMi pada GNU/Linux"
+date: "2018-04-28 22:21"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-04-28-flash-unlock-recovery-xiaomi"
+author: "BanditHijo"
+category: "blog"
+tags: ["bootloader", "xiaomi"]
 description: "Punya smartphone XiaoMi dan cuman punya komputer atau laptop yang sistem operasinya GNU/Linux? Tidak perlu repot-repot meminjam laptop teman atau memasang Windows pada VirtualBox. Karena semua pekerjaan untuk memasang Custom ROM pada smartphone XiaoMi dapat dengan mudah kita lakukan dengan bermodalkan Terminal."
 ---
 
@@ -412,11 +407,11 @@ Saya rasa cukup seperti ini saja proses *flash*, *unlock bootloader*, *install c
 
 # Referensi
 
-1. [en.miui.com/thread-285121-1-1.html](http://en.miui.com/thread-285121-1-1.html)
-<br>Diakses tanggal: 2018/04/28
+1. [en.miui.com/thread-285121-1-1.html](http://en.miui.com/thread-285121-1-1.html) \
+   Diakses tanggal: 2018-04-28
 
-2. [forum.xda-developers.com/mi-4c/general/guide-unlocking-mi4c-bl-verification-t3336779/page18](https://forum.xda-developers.com/mi-4c/general/guide-unlocking-mi4c-bl-verification-t3336779/page18)
-<br>Diakses tanggal: 2018/04/28
+1. [forum.xda-developers.com/mi-4c/general/guide-unlocking-mi4c-bl-verification-t3336779/page18](https://forum.xda-developers.com/mi-4c/general/guide-unlocking-mi4c-bl-verification-t3336779/page18) \
+   Diakses tanggal: 2018-04-28
 
-3. [wiki.lineageos.org/devices/libra/install](https://wiki.lineageos.org/devices/libra/install)
-<br>Diakses tanggal: 2018/04/28
+1. [wiki.lineageos.org/devices/libra/install](https://wiki.lineageos.org/devices/libra/install) \
+   Diakses tanggal: 2018-04-28

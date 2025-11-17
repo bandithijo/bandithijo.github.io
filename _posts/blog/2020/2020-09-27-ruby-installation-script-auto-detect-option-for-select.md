@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Ruby Installation Script dengan Auto Create Option for Selection"
-date: '2020-09-27 12:53'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Ruby', 'CLI']
-pin:
-hot:
-contributors: []
+date: "2020-09-27 12:53"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-09-27-ruby-installation-script-auto-detect-option-for-select"
+author: "BanditHijo"
+category: "blog"
+tags: ["ruby", "cli"]
 description: "Saya membuat sebuah Ruby script untuk shell wraper dalam memudahkan proses copy paste asset modifikasi dari user direktori ke root direktori. Isi dari menu akan otomatis berubah (bertambah/berkurang) sesuai dengan isi dari direktori."
 ---
 

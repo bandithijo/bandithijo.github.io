@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat LightDM Berjalan pada External Monitor"
-date: '2025-07-13 16:40'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['LightDM']
-pin:
-hot:
-contributors: []
+date: "2025-07-13 16:40"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2025/2025-07-13-membuat-lightdm-running-on-external-monitor"
+author: "BanditHijo"
+category: "blog"
+tags: ["lightdm"]
 description: "Setup laptop ThinkPad saya sekarang lebih banyak dalam keadaan lid-closed (layar tertutup). Secara default, LightDM akan ditampilkan pada primary monitor, karena laptop saya dalam keadaan tertutup, saya ingin menampilkannya pada external monitor. Sehingga lid akan tetap menutup ketika login."
 ---
 

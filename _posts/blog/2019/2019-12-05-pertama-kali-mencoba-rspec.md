@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Pertama Kali Mencoba RSpec"
-date: '2019-12-05 07:10'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails', 'RSpec']
-pin:
-hot:
-contributors: []
+date: "2019-12-05 07:10"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-12-05-pertama-kali-mencoba-rspec"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails", "rspec"]
 description: "Catatan kali ini mengenai pertama kalinya mencoba RSpec."
 ---
 
@@ -531,11 +526,11 @@ Terima kasih.
 
 # Referensi
 
-1. [github.com/rspec/rspec-rails](https://github.com/rspec/rspec-rails)
-<br>Diakses tanggal: 2019/12/05
+1. [github.com/rspec/rspec-rails](https://github.com/rspec/rspec-rails) \
+   Diakses tanggal: 2019-12-05
 
-2. [Everyday Rails Testing with RSpec : A practical approach to test-driven development by Aaron Sumner](http://leanpub.com/everydayrailsrspec)
-<br>Diakses tanggal: 2019/12/05
+1. [Everyday Rails Testing with RSpec : A practical approach to test-driven development by Aaron Sumner](http://leanpub.com/everydayrailsrspec) \
+   Diakses tanggal: 2019-12-05
 
-3. [relishapp.com/rspec/rspec-rails/docs](https://relishapp.com/rspec/rspec-rails/docs)
-<br>Diakses tanggal: 2019/12/05
+1. [relishapp.com/rspec/rspec-rails/docs](https://relishapp.com/rspec/rspec-rails/docs) \
+   Diakses tanggal: 2019-12-05

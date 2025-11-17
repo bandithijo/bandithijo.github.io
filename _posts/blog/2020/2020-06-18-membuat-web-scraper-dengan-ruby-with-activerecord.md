@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Web Scraper dengan Ruby (Output: POSTGRESQL: ACTIVERECORD)"
-date: '2020-06-18 11:06'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Ruby', 'PostgreSQL', 'Active Record']
-pin:
-hot:
-contributors: []
+date: "2020-06-18 11:06"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-06-18-membuat-web-scraper-dengan-ruby-with-activerecord"
+author: "BanditHijo"
+category: "blog"
+tags: ["ruby", "postgresql", "active record"]
 description: "Web scraping adalah teknik mengambil atau mengekstrak sebagian data dari suatu website secara spesifik secara otomatis."
 ---
 
@@ -533,20 +528,20 @@ Selesai!
 
 # Referensi
 
-1. [It's Time To HTTParty!](https://blog.teamtreehouse.com/its-time-to-httparty)
-<br>Diakses tanggal: 2020/06/18
+1. [It's Time To HTTParty!](https://blog.teamtreehouse.com/its-time-to-httparty) \
+   Diakses tanggal: 2020-06-18
 
-2. [nokogiri.org](https://nokogiri.org/)
-<br>Diakses tanggal: 2020/06/18
+1. [nokogiri.org](https://nokogiri.org/) \
+   Diakses tanggal: 2020-06-18
 
-3. [pgcli](https://www.pgcli.com/)
-<br>Diakses tanggal: 2020/06/18
+1. [pgcli](https://www.pgcli.com/) \
+   Diakses tanggal: 2020-06-18
 
-4. [Active Record Basics](https://guides.rubyonrails.org/active_record_basics.html)
-<br>Diakses tanggal: 2020/06/18
+1. [Active Record Basics](https://guides.rubyonrails.org/active_record_basics.html) \
+   Diakses tanggal: 2020-06-18
 
-5. [Active Record Validations](https://guides.rubyonrails.org/active_record_validations.html)
-<br>Diakses tanggal: 2020/06/18
+1. [Active Record Validations](https://guides.rubyonrails.org/active_record_validations.html) \
+   Diakses tanggal: 2020-06-18
 
-6. [thuss/standalone-migrations](https://github.com/thuss/standalone-migrations/)
-<br>Diakses tanggal: 2020/06/18
+1. [thuss/standalone-migrations](https://github.com/thuss/standalone-migrations/) \
+   Diakses tanggal: 2020-06-18

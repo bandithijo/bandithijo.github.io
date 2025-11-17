@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mudah Banget! Pasang MySQL dengan Podman untuk Development"
-date: '2021-11-30 14:22'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Database', 'MySQL', 'Podman', 'Container']
-pin:
-hot:
-contributors: []
+date: "2021-11-30 14:22"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-11-30-mysql-dengan-podman-untuk-development"
+author: "BanditHijo"
+category: "blog"
+tags: ["database", "mysql", "podman", "container"]
 description: "Memasang service database seperti MySQL merupakan sebuah tantangan tersendiri di setiap distribusi sistem operasi GNU/Linux. Yang merepotkan, terkadang cara yang sebelumnya kita lakukan berhasil, namun tidak berhasil pada versi distribusi yang terbaru. Sudah saatnya kita gunakan cara modern, khususnya untuk development, yaitu menggunakan kontainerisasi. Catatan kali ini, kita akan menjalankan MySQL service dari container dengan bantuan Podman."
 ---
 
@@ -281,5 +276,5 @@ Terima kasih.
 
 # Referensi
 
-1. [https://hub.docker.com/\_/mysql](https://hub.docker.com/_/mysql)
-<br>Diakses tanggal: 2021/11/30
+1. [https://hub.docker.com/\_/mysql](https://hub.docker.com/_/mysql) \
+   Diakses tanggal: 2021-11-30

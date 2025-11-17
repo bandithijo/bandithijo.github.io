@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Input Select yang Berbasis Rentang pada Rails"
-date: '2020-01-27 11:46'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2020-01-27 11:46"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-01-27-rails-input-select-based-on-range"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Catatan kali ini mengenai cara membuat input selection yang berbasis rentang (range) pada web aplikasi yang dibangun dengan Ruby on Rails."
 ---
 
@@ -231,8 +226,8 @@ Terima kasih
 
 # Referensi
 
-1. [apidock.com/rails/v4.2.7/ActionView/Helpers/FormOptionsHelper/options_for_select](https://apidock.com/rails/v4.2.7/ActionView/Helpers/FormOptionsHelper/options_for_select)
-<br>Diakses tanggal: 2020/01/27
+1. [apidock.com/rails/v4.2.7/ActionView/Helpers/FormOptionsHelper/options_for_select](https://apidock.com/rails/v4.2.7/ActionView/Helpers/FormOptionsHelper/options_for_select) \
+   Diakses tanggal: 2020-01-27
 
-2. [github.com/activerecord-hackery/ransack/wiki/Basic-Searching#in](https://github.com/activerecord-hackery/ransack/wiki/Basic-Searching#in)
-<br>Diakses tanggal: 2020/01/27
+1. [github.com/activerecord-hackery/ransack/wiki/Basic-Searching#in](https://github.com/activerecord-hackery/ransack/wiki/Basic-Searching#in) \
+   Diakses tanggal: 2020-01-27

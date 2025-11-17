@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Barrier, Mengoperasikan Banyak Komputer hanya dengan Sebuah Mouse dan Keyboard"
-date: '2020-01-05 18:22'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Barrier']
-pin:
-hot:
-contributors: []
+date: "2020-01-05 18:22"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-01-05-berbagi-mouse-keyboard-dengan-barrier"
+author: "BanditHijo"
+category: "blog"
+tags: ["barrier"]
 description: "Mungkin gak sih mengoperasikan banyak komputer hanya dengan satu keyboard dan mouse? Sangat mungkin! Kita dapat menggunakan tools bernama Barrier. Barrier ini mirip dengan aplikasi berbayar Synergy. Kita dapat membuat 1 komputer menjadi server dan komputer-komputer lain sebagai client. Dengan begini, kita dapat mengontrol kursor dan keyboard hanya dari komputer server."
 ---
 
@@ -119,8 +114,8 @@ Terima kasih.
 
 # Referensi
 
-1. [symless.com/synergy](https://symless.com/synergy)
-<br>Diakses tanggal: 2020/01/05
+1. [symless.com/synergy](https://symless.com/synergy) \
+   Diakses tanggal: 2020-01-05
 
-2. [github.com/debauchee/barrier](https://github.com/debauchee/barrier)
-<br>Diakses tanggal: 2020/01/05
+1. [github.com/debauchee/barrier](https://github.com/debauchee/barrier) \
+   Diakses tanggal: 2020-01-05

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Berkontribusi di Fedora Kernel Test Days 5.15"
-date: '2021-11-24 06:07'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Fedora']
-pin:
-hot:
-contributors: []
+date: "2021-11-24 06:07"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-11-24-fedora-kernel-test-days-5-15-event"
+author: "BanditHijo"
+category: "blog"
+tags: ["fedora"]
 description: "Serunya menggunakan distribusi sistem operasi GNU/Linux, kita dapat kesempatan untuk dapat berkontribusi. Terdapat cukup banyak ruang untuk berkontribusi. Fedora adalah salah satu distribusi yang memberikan ruang yang cukup banyak untuk berkontribusi serta dipandu dengan dokumentasi yang sangat baik. Salah satu bentuk kontribusi yang dapat kamu berikan adalah mengikuti Kernel Test Days event. Berikut ini adalah catatan saya dalam mengukuti kegiatan ini."
 ---
 
@@ -796,14 +791,14 @@ Terima kasih.
 
 # Referensi
 
-1. [https://fedoramagazine.org/contribute-at-the-fedora-linux-36-test-week-for-kernel-5-15/](https://fedoramagazine.org/contribute-at-the-fedora-linux-36-test-week-for-kernel-5-15/)
-<br>Diakses tanggal: 2021/11/24
+1. [https://fedoramagazine.org/contribute-at-the-fedora-linux-36-test-week-for-kernel-5-15/](https://fedoramagazine.org/contribute-at-the-fedora-linux-36-test-week-for-kernel-5-15/) \
+   Diakses tanggal: 2021-11-24
 
-2. [https://fedoraproject.org/wiki/Test_Day:2021-11-14_Kernel_5.15_Test_Week](https://fedoraproject.org/wiki/Test_Day:2021-11-14_Kernel_5.15_Test_Week)
-<br>Diakses tanggal: 2021/11/24
+1. [https://fedoraproject.org/wiki/Test_Day:2021-11-14_Kernel_5.15_Test_Week](https://fedoraproject.org/wiki/Test_Day:2021-11-14_Kernel_5.15_Test_Week) \
+   Diakses tanggal: 2021-11-24
 
-3. [https://fedoraproject.org/wiki/QA:Testcase_kernel_regression](https://fedoraproject.org/wiki/QA:Testcase_kernel_regression)
-<br>Diakses tanggal: 2021/11/24
+1. [https://fedoraproject.org/wiki/QA:Testcase_kernel_regression](https://fedoraproject.org/wiki/QA:Testcase_kernel_regression) \
+   Diakses tanggal: 2021-11-24
 
-4. [https://docs.fedoraproject.org/en-US/quick-docs/kernel/howto-kernel-testday/](https://docs.fedoraproject.org/en-US/quick-docs/kernel/howto-kernel-testday/)
-<br>Diakses tanggal: 2021/11/24
+1. [https://docs.fedoraproject.org/en-US/quick-docs/kernel/howto-kernel-testday/](https://docs.fedoraproject.org/en-US/quick-docs/kernel/howto-kernel-testday/) \
+   Diakses tanggal: 2021-11-24

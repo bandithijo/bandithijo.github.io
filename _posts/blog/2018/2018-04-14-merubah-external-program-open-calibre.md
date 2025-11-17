@@ -1,18 +1,13 @@
 ---
-layout: 'post'
-title: 'Merubah Default External Program Open Files pada Calibre'
-date: '2018-04-14 00:45'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Calibre']
-pin:
-hot:
-contributors: []
-description:
+layout: "post"
+title: "Merubah Default External Program Open Files pada Calibre"
+date: "2018-04-14 00:45"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-04-14-merubah-external-program-open-calibre"
+author: "BanditHijo"
+category: "blog"
+tags: ["calibre"]
+description: "Untuk mengelola ebook yang saya kumpulkan, karena jumlahnya tidak sedikit, saya tidak menggunakan manajemen direktori untuk mengatur dan mengkategorikan koleksi ebook yang saya miliki. Karena, akan sangat merepotkan apabila kita ingin mencari dan menelusuri semua ebook yang kita miliki dalam satu waktu. Lebih mudah apabila kita menggunakan aplikasi yang menampilkan koleksi ebook yang kita miliki layaknya sebuah galeri foto atau rak buku di toko buku. Sehingga dapat memudahkan kita dalam memilih ebook apa yang akan kita baca, dan masih banyak segudang kemudahan lainnya yang bisa kita nikmati apabila kita menggunakan aplikasi untuk memanajemen koleksi ebook yang kita miliki. Karena latar belakang tersebut, saya menggunakan aplikasi ebook management yang bernama, Calibre."
 ---
 
 ![Banner](https://s20.postimg.cc/q966nyg5p/banner_post_02.png)
@@ -82,5 +77,5 @@ Gambar 4. Konfigurasi Open With
 
 # Referensi
 
-1. [jb-blog.readthedocs.io/en/latest/posts/0016-how-to-change-what-program-calibre-uses-to-open-stuff.html](http://jb-blog.readthedocs.io/en/latest/posts/0016-how-to-change-what-program-calibre-uses-to-open-stuff.html)
-<br>Diakses tanggal: 2018/04/14
+1. [jb-blog.readthedocs.io/en/latest/posts/0016-how-to-change-what-program-calibre-uses-to-open-stuff.html](http://jb-blog.readthedocs.io/en/latest/posts/0016-how-to-change-what-program-calibre-uses-to-open-stuff.html) \
+   Diakses tanggal: 2018-04-14

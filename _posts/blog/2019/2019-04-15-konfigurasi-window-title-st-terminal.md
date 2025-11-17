@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Konfigurasi Window Title untuk Simple/Suckless Terminal'
-date: '2019-04-15 06:35'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Simple Terminal', 'Terminal Emulator']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Konfigurasi Window Title untuk Simple/Suckless Terminal"
+date: "2019-04-15 06:35"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-04-15-konfigurasi-window-title-st-terminal"
+author: "BanditHijo"
+category: "blog"
+tags: ["simple terminal", "terminal emulator"]
 description: "Simple Terminal (ST) adalah terminal yang sangat minimalis. Sampai-sampai untuk membuat window title menampilkan isi dari ST, kita perlu mengkonfigurasinya sendiri. Ya, memang beginilah tujuan dari ST. Apabila ada fitur lain yang ingin digunakan, user perlu menambahkan sendiri. Karena kebutuhan masing-masing user dapat berbeda satu dengan yang lain."
 ---
 
@@ -97,5 +92,5 @@ Terima kasih.
 
 # Referensi
 
-1. [www.faqs.org/docs/Linux-mini/Xterm-Title.html#s5](http://www.faqs.org/docs/Linux-mini/Xterm-Title.html#s5)
-<br>Diakses tanggal: 2019/04/15
+1. [www.faqs.org/docs/Linux-mini/Xterm-Title.html#s5](http://www.faqs.org/docs/Linux-mini/Xterm-Title.html#s5) \
+   Diakses tanggal: 2019-04-15

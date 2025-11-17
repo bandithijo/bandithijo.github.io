@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Memberikan Label Temperature pada ThinkPad Sensors"
-date: '2021-02-26 07:19'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['ThinkPad']
-pin:
-hot:
-contributors: []
+date: "2021-02-26 07:19"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-02-26-memberikan-label-temperature-pada-thinkpad-sensors"
+author: "BanditHijo"
+category: "blog"
+tags: ["thinkpad"]
 description: "Kalau kita mengecek temperature ThinkPad laptop dengan menggunakan perintah sensors, kita akan mendapati label-label seperti temp1, temp2, temp3, dst. Bagaimana kita tahu, kalau label-label tersebut menujuk pada objek-objek seperti CPU, GPU, dll? Nah, catatan kali ini, kita akan memberikan label terhadap sensor-sensor tersebut."
 ---
 
@@ -195,5 +190,5 @@ Terima kasih.
 
 # Referensi
 
-1. [http://www.thinkwiki.org/wiki/Thermal_Sensors](http://www.thinkwiki.org/wiki/Thermal_Sensors)
-<br>Diakses tanggal: 2021/02/26
+1. [http://www.thinkwiki.org/wiki/Thermal_Sensors](http://www.thinkwiki.org/wiki/Thermal_Sensors) \
+   Diakses tanggal: 2021-02-26

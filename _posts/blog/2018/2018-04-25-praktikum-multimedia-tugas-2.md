@@ -1,18 +1,13 @@
 ---
-layout: 'post'
-title: 'Praktikum Multimedia Tugas 2'
-date: '2018-04-25 05:51'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags:
-pin:
-hot:
-contributors: []
-description:
+layout: "post"
+title: "Praktikum Multimedia Tugas 2"
+date: "2018-04-25 05:51"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-04-25-praktikum-multimedia-tugas-2"
+author: "BanditHijo"
+category: "blog"
+tags: ["multimedia"]
+description: ""
 ---
 
 ![Banner](https://s20.postimg.cc/f7zndndq5/banner_post_06.png)

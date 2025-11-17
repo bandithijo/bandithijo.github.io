@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Sharing Direktori Antara Host Linux dan Guest Windows pada Virt-Manager/KVM/Qemu"
-date: '2021-05-06 00:40'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Virt-Manager', 'KVM', 'Qemu', 'Samba']
-pin:
-hot:
-contributors: []
+date: "2021-05-06 00:40"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-05-06-sharing-direktori-antara-host-dan-guest-pada-virt-manager"
+author: "BanditHijo"
+category: "blog"
+tags: ["virt-manager", "kvm", "qemu", "samba"]
 description: "Memiliki akses Home direktori yang dimiliki oleh Host dari dalam Guest, sangat memudahkan sekali untuk proses tukar menukar data. Tidak perlu repot-repot harus menggunakan aplikasi semacam Filezilla, scp, atau semacamnya. Semuanya cukup dilakukan dengan File Explorer di Linux dan Explorer Guest Windows."
 ---
 
@@ -316,5 +311,5 @@ Terima kasih.
 
 # Referensi
 
-1. [wiki.archlinux.org/title/Samba](https://wiki.archlinux.org/title/Samba)
-<br>Diakses tanggal: 2021/05/06
+1. [wiki.archlinux.org/title/Samba](https://wiki.archlinux.org/title/Samba) \
+   Diakses tanggal: 2021-05-06

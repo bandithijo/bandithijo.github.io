@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Memperbaiki Authentication is Required for Suspending the System XFCE'
-date: '2018-05-04 21:56'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['XFCE']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Memperbaiki Authentication is Required for Suspending the System XFCE"
+date: "2018-05-04 21:56"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-05-04-memperbaiki-authentication-required-suspending-system"
+author: "BanditHijo"
+category: "blog"
+tags: ["xfce"]
 description: "Saya baru saja berpindah desktop environment kembali menggunakan XFCE4. Permasalahan yang dulu pernah muncul salah satunya setiap kali sistem baru bangkit dari kondisi *sleep* terdapat sebuah popup window yang bertuliskan 'Authentication is required for suspending the system'."
 ---
 
@@ -121,8 +116,8 @@ Maka setelah kita rubah, keseluruhan kodenya kan tampak seperti ini.
 
 
 # Referensi
-1. [askubuntu.com/questions/543921/authentication-required-before-suspend](https://askubuntu.com/questions/543921/authentication-required-before-suspend)
-<br>Diakses tanggal: 2018/04/28
+1. [askubuntu.com/questions/543921/authentication-required-before-suspend](https://askubuntu.com/questions/543921/authentication-required-before-suspend) \
+   Diakses tanggal: 2018-04-28
 
-2. [ubuntuforums.org/showthread.php?t=2276864](https://ubuntuforums.org/showthread.php?t=2276864<Paste>)
-<br>Diakses tanggal: 2018/04/28
+1. [ubuntuforums.org/showthread.php?t=2276864](https://ubuntuforums.org/showthread.php?t=2276864) \
+   Diakses tanggal: 2018-04-28

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Web Scraper dengan Ruby (Output: POSTGRESQL: INSERT INTO)"
-date: '2020-06-15 18:49'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Ruby', 'PostgreSQL']
-pin:
-hot:
-contributors: []
+date: "2020-06-15 18:49"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-06-15-membuat-web-scraper-dengan-ruby-insert-into"
+author: "BanditHijo"
+category: "blog"
+tags: ["ruby", "postgresql"]
 description: "Web scraping adalah teknik mengambil atau mengekstrak sebagian data dari suatu website secara spesifik secara otomatis."
 ---
 
@@ -263,14 +258,14 @@ Selesai!
 
 # Referensi
 
-1. [It's Time To HTTParty!](https://blog.teamtreehouse.com/its-time-to-httparty)
-<br>Diakses tanggal: 2020/06/16
+1. [It's Time To HTTParty!](https://blog.teamtreehouse.com/its-time-to-httparty) \
+   Diakses tanggal: 2020-06-16
 
-2. [nokogiri.org](https://nokogiri.org/)
-<br>Diakses tanggal: 2020/06/16
+1. [nokogiri.org](https://nokogiri.org/) \
+   Diakses tanggal: 2020-06-16
 
-3. [pg documentation](https://deveiate.org/code/pg/)
-<br>Diakses tanggal: 2020/06/16
+1. [pg documentation](https://deveiate.org/code/pg/) \
+   Diakses tanggal: 2020-06-16
 
-4. [pgcli](https://www.pgcli.com/)
-<br>Diakses tanggal: 2020/06/16
+1. [pgcli](https://www.pgcli.com/) \
+   Diakses tanggal: 2020-06-16

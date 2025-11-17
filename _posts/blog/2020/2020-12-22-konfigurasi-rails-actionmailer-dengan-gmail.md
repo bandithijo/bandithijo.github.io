@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Konfigurasi Ruby on Rails ActionMailer dengan Gmail"
-date: '2020-12-22 08:13'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2020-12-22 08:13"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-12-22-konfigurasi-rails-actionmailer-dengan-gmail"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Pada umumnya, tutorial ActionMailer pasti mendemonstrasikan penggunaan SendGrid dengan Heroku. Sudah terlalu mainstream, dan juga sejak SendGrid diakuisisi, jadi lebih sering gagal. Catatan kali ini mungkin dapat membantu teman-teman agar dapat menggunakan layanan Gmail saja. Hari gini, siapa yang gak pakai Gmail?"
 ---
 
@@ -222,5 +217,5 @@ Terima kasih.
 
 # Referensi
 
-1. [hixonrails.com/ruby-on-rails-tutorials/ruby-on-rails-action-mailer-configuration](https://hixonrails.com/ruby-on-rails-tutorials/ruby-on-rails-action-mailer-configuration/)
-<br>Diakses tanggal: 2020/12/22
+1. [hixonrails.com/ruby-on-rails-tutorials/ruby-on-rails-action-mailer-configuration](https://hixonrails.com/ruby-on-rails-tutorials/ruby-on-rails-action-mailer-configuration/) \
+   Diakses tanggal: 2020-12-22

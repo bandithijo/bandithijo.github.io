@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Beberapa Color Picker yang Pernah Saya Gunakan di GNU/Linux"
-date: '2020-10-31 17:28'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Color Picker', 'Tool']
-pin:
-hot:
-contributors: []
+date: "2020-10-31 17:28"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-10-31-beberapa-color-picker-yang-pernah-saya-gunakan-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["colorpicker"]
 description: "Mengetahui sebuah warna yang ada pada objek merupakan kebutuhan seorang desainer. Tidak juga graphic desainer, seorang ricer juga memerlukannya. Berikut ini adalah beberapa color picker tools yang pernah saya cicipi sepanjang menggunakan GNU/Linux."
 ---
 

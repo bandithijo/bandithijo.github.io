@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Image Derivatives dengan Shrine pada Rails"
-date: '2020-02-19 14:22'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails', 'Shrine']
-pin:
-hot:
-contributors: []
+date: "2020-02-19 14:22"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-02-19-rails-image-derivatives-with-shrine"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails", "shrine"]
 description: "Membuat turunan dari original image dapat mempermudah kita membuat diferensiasi terhadap ukuran image yang akan kita gunakan pada masing-msing kebutuhan yang berbeda pada sis frontend. Misalkan, ukuran image untuk thumbnails, menggunakan image dengan ukuran yang lebih kecil dari pada image untuk gallery. Catatan kali ini, akan membahas bagaimana cara membuat image derivatives dengan Shrine gem pada Ruby on Rails."
 ---
 
@@ -518,14 +513,14 @@ Terima kasih.
 
 # Referensi
 
-1. [github.com/shrinerb/shrine](https://github.com/shrinerb/shrine)
-<br>Diakses tanggal: 2020/02/19
+1. [github.com/shrinerb/shrine](https://github.com/shrinerb/shrine) \
+   Diakses tanggal: 2020-02-19
 
-2. [github.com/janko/image_processing](https://github.com/janko/image_processing)
-<br>Diakses tanggal: 2020/02/19
+1. [github.com/janko/image_processing](https://github.com/janko/image_processing) \
+   Diakses tanggal: 2020-02-19
 
-3. [shrinerb.com/docs/processing](https://shrinerb.com/docs/processing)
-<br>Diakses tanggal: 2020/02/19
+1. [shrinerb.com/docs/processing](https://shrinerb.com/docs/processing) \
+   Diakses tanggal: 2020-02-19
 
-4. [shrinerb.com/docs/changing-derivatives](https://shrinerb.com/docs/changing-derivatives)
-<br>Diakses tanggal: 2020/02/19
+1. [shrinerb.com/docs/changing-derivatives](https://shrinerb.com/docs/changing-derivatives) \
+   Diakses tanggal: 2020-02-19

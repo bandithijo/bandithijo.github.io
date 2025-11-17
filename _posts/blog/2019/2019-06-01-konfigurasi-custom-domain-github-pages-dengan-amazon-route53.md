@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Konfigurasi Custom Domain GitHub Pages dengan Amazon Route 53'
-date: '2019-06-01 10:10'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['GitHub Pages', 'AWS', 'Route 53']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Konfigurasi Custom Domain GitHub Pages dengan Amazon Route 53"
+date: "2019-06-01 10:10"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-06-01-konfigurasi-custom-domain-github-pages-dengan-amazon-route53"
+author: "BanditHijo"
+category: "blog"
+tags: ["github pages", "aws", "route53"]
 description: "Catatan ini mengenai cara mengkonfigurasi custom domain dengan GitHub Pages dan Amazon Route 53."
 ---
 
@@ -288,14 +283,14 @@ Alhamdulillah, Final Submission saya telah dinyatakan lulus.
 
 # Referensi
 
-1. [help.github.com/en/articles/using-a-custom-domain-with-github-pages](https://help.github.com/en/articles/using-a-custom-domain-with-github-pages)
-<br>Diakses tanggal: 2019/06/01
+1. [help.github.com/en/articles/using-a-custom-domain-with-github-pages](https://help.github.com/en/articles/using-a-custom-domain-with-github-pages) \
+   Diakses tanggal: 2019-06-01
 
-2. [help.github.com/en/articles/securing-your-github-pages-site-with-https](https://help.github.com/en/articles/securing-your-github-pages-site-with-https)
-<br>Diakses tanggal: 2019/06/01
+1. [help.github.com/en/articles/securing-your-github-pages-site-with-https](https://help.github.com/en/articles/securing-your-github-pages-site-with-https) \
+   Diakses tanggal: 2019-06-01
 
-3. [help.github.com/en/articles/troubleshooting-custom-domains](https://help.github.com/en/articles/troubleshooting-custom-domains)
-<br>Diakses tanggal: 2019/06/01
+1. [help.github.com/en/articles/troubleshooting-custom-domains](https://help.github.com/en/articles/troubleshooting-custom-domains) \
+   Diakses tanggal: 2019-06-01
 
-4. [sophiafeng.com/technical/2015/02/12/setting-up-custom-domain-name-with-github-pages-and-amazon-route-53/](http://sophiafeng.com/technical/2015/02/12/setting-up-custom-domain-name-with-github-pages-and-amazon-route-53/)
-<br>Diakses tanggal: 2019/06/01
+1. [sophiafeng.com/technical/2015/02/12/setting-up-custom-domain-name-with-github-pages-and-amazon-route-53/](http://sophiafeng.com/technical/2015/02/12/setting-up-custom-domain-name-with-github-pages-and-amazon-route-53/) \
+   Diakses tanggal: 2019-06-01

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Memasang Pagination dengan Pagy pada Rails"
-date: 2020-02-20 07:27
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Tips', 'Rails']
-pin:
-hot:
-contributors: []
+date: '2020-02-20 07:27'
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-02-20-rails-pagination-dengan-pagy"
+author: "BanditHijo"
+category: "blog"
+tags: ["tips", "rails"]
 description: "Bagaimana memasangkan pagination pada web aplikasi yang dibangun menggunakan Ruby on Rails. Kali ini, saya akan menggunakan gem yang mengklaim dirinya sebagai salah satu gem tercepat dan teringan diantara gem-gem pagination yang lain. yaitu, Pagy."
 ---
 
@@ -461,14 +456,14 @@ Terima kasih.
 
 # Referensi
 
-1. [ddnexus.github.io/pagination-comparison/gems.html](https://ddnexus.github.io/pagination-comparison/gems.html)
-<br>Diakses tanggal: 2020/02/20
+1. [ddnexus.github.io/pagination-comparison/gems.html](https://ddnexus.github.io/pagination-comparison/gems.html) \
+   Diakses tanggal: 2020-02-20
 
-2. [ddnexus.github.io/pagy/migration-guide](https://ddnexus.github.io/pagy/migration-guide)
-<br>Diakses tanggal: 2020/02/20
+1. [ddnexus.github.io/pagy/migration-guide](https://ddnexus.github.io/pagy/migration-guide) \
+   Diakses tanggal: 2020-02-20
 
-3. [ddnexus.github.io/pagy/](https://ddnexus.github.io/pagy/)
-<br>Diakses tanggal: 2020/02/20
+1. [ddnexus.github.io/pagy/](https://ddnexus.github.io/pagy/) \
+   Diakses tanggal: 2020-02-20
 
-4. [github.com/ddnexus/pagy](https://github.com/ddnexus/pagy)
-<br>Diakses tanggal: 2020/02/20
+1. [github.com/ddnexus/pagy](https://github.com/ddnexus/pagy) \
+   Diakses tanggal: 2020-02-20

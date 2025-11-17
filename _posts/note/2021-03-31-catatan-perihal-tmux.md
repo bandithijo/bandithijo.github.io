@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Catatan dalam Berinteraksi dengan Tmux"
-date: '2021-03-31 06:26'
-permalink: '/note/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'note'
-tags: ['Tmux']
-wip: true
-pin:
-contributors: []
+date: "2021-03-31 06:26"
+permalink: "/note/:title"
+assets: "/assets/images/notes/2021-03-31-catatan-perihal-tmux"
+author: "BanditHijo"
+category: "note"
+tags: ["tmux"]
 description: "Hal-hal terkait Tmux, cukup banyak sekali yang saya lupakan. Seperti beberapa kombinasi keyboard dan command tertentu. Apabila diperlukan, saya harus Googling kembali. Agar tidak membuang waktu mencari kembali, saya akan mencatatnya saja di sini."
 ---
 

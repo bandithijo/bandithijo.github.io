@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Lazygit, Terminal User Interface untuk Git Commands"
-date: '2021-12-15 05:57'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Lazygit', 'Git', 'TUI', 'Tool']
-pin:
-hot:
-contributors: []
+date: "2021-12-15 05:57"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-12-15-lazygit-terminal-user-interface-untuk-git"
+author: "BanditHijo"
+category: "blog"
+tags: ["lazygit", "git", "tui", "tool"]
 description: "Lazygit adalah Git Tools berupa Terminal User Interface yang dapat kita manfaatkan sebagai alat bantu yang mempermudah kita dalam berinteraksi dengan perintah-perintah Git. Saya lebih prefer menggunakan veri TUI ketimbang Git Tools lain yang menggunakan GUI karena dengan menggunakan TUI, saya masih dapat memanfaatkan keyboard shortcut untuk mengoperasikan tools tersebut."
 ---
 
@@ -327,5 +322,5 @@ Terima kasih.
 
 # Referensi
 
-1. [https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase)
-<br>Diakses tanggal: 2021/12/15
+1. [https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase) \
+   Diakses tanggal: 2021-12-15

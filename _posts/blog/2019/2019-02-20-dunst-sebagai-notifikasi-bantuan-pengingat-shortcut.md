@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Memanfaatkan Dunst Sebagai PopUp Notifikasi Bantuan Keyboard Shortcut'
-date: '2019-02-20 10:45'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['dunst']
-pin:
-hot: true
-contributors: []
+layout: "post"
+title: "Memanfaatkan Dunst Sebagai PopUp Notifikasi Bantuan Keyboard Shortcut"
+date: "2019-02-20 10:45"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-02-20-dunst-sebagai-notifikasi-bantuan-pengingat-shortcut"
+author: "BanditHijo"
+category: "blog"
+tags: ["dunst"]
 description: "Dunst adalah replacement untuk standalone notification daemon yang ringan. Biasanya digunakan oleh pengguna Window Manager. Catatan kali ini, saya akan memanfaatkan dunst untuk menampilkan daftar keybind keymap."
 ---
 

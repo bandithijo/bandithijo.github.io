@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Merubah State UP vboxnet0 Interface pada VirtualBox di Arch Linux"
-date: '2024-09-15 19:05'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['VirtualBox']
-pin:
-hot:
-contributors: []
+date: "2024-09-15 19:05"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2024/2024-09-15-merubah-state-up-vboxnet0-interface-pada-virtualbox"
+author: "BanditHijo"
+category: "blog"
+tags: ["virtualbox"]
 description: "Ketika baru memasang Oracle VirtualBox di Arch Linux, saya tidak dapat terhubung dengan instance yang baru saya buat, padahal saya sudah menggunakan Host-only network adapter. Ternyata interface vboxnet0 belum diberikan permission untuk UP state."
 ---
 

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Generate Random Password menggunakan PWGEN'
-date: '2018-03-27'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Security', 'pwgen']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Generate Random Password menggunakan PWGEN"
+date: "2018-03-27"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-03-27-generate-passowrd-dengan-pwgen"
+author: "BanditHijo"
+category: "blog"
+tags: ["security", "pwgen"]
 description: "pwgen adalah perkakas command line interface yang praktis digunakan untuk mengenerate password."
 ---
 
@@ -194,8 +189,8 @@ Modifikasi sesuai keinginan kalian.
 
 
 # Referensi
-1. [support.google.com/accounts/answer/32040?hl=en](https://support.google.com/accounts/answer/32040?hl=en)
-<br>Diakses tanggal: 2018/03/27
+1. [support.google.com/accounts/answer/32040?hl=en](https://support.google.com/accounts/answer/32040?hl=en) \
+   Diakses tanggal: 2018-03-27
 
-2. [wiki.archlinux.org/index.php/Security](https://wiki.archlinux.org/index.php/Security)
-<br>Diakses tanggal: 2018/03/27
+1. [wiki.archlinux.org/index.php/Security](https://wiki.archlinux.org/index.php/Security) \
+   Diakses tanggal: 2018-03-27

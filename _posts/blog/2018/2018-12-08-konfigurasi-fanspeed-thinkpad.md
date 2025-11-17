@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Fan pada ThinkPad Tidak Terdeteksi Setelah Power Adapter Dicabut'
-date: '2018-12-08 22:50'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['ThinkPad']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Fan pada ThinkPad Tidak Terdeteksi Setelah Power Adapter Dicabut"
+date: "2018-12-08 22:50"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-12-08-konfigurasi-fanspeed-thinkpad"
+author: "BanditHijo"
+category: "blog"
+tags: ["thinkpad"]
 description: "Hari ini saya me-*ricing* tampilan Conky karena sudah merasa jenuh dengan tampilan yang lama. Sembari menyusun script Conky, saya berpindah-pindah tempat duduk. Saya mendapati, saat power adapter saya lepas, output dari fan speed monitor saya blank (tidak menampilkan output apapun). Lantas saya coba jalankan `$ sensors` dan hasilnya pun nihil."
 ---
 
@@ -163,5 +158,5 @@ Apakah sudah berhasil terdeteksi?
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/Fan_speed_control#ThinkPad_laptops](https://wiki.archlinux.org/index.php/Fan_speed_control#ThinkPad_laptops)
-<br>Diakses tanggal: 2018/12/08
+1. [wiki.archlinux.org/index.php/Fan_speed_control#ThinkPad_laptops](https://wiki.archlinux.org/index.php/Fan_speed_control#ThinkPad_laptops) \
+   Diakses tanggal: 2018-12-08

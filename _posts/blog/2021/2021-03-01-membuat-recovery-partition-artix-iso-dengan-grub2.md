@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Recovery Partition Artix Linux ISO dengan GRUB2"
-date: '2021-03-01 09:14'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Artix Linux', 'Recovery Partition']
-pin:
-hot:
-contributors: []
+date: "2021-03-01 09:14"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-03-01-membuat-recovery-partition-artix-iso-dengan-grub2"
+author: "BanditHijo"
+category: "blog"
+tags: ["artix linux", "recovery partition"]
 description: "Sebelumnya, saya sudah pernah mencatat tentang bagaimana booting ke ISO Linux dari GRUB2, ternyata, terdapat keterbatasan, karena ISO berada pada partisi yang sama dengan partisi sistem yang akan direcovery, sehingga kita tidak dapat melakukan intervansi terhadap sistem. Catatan ini adalah modifikasi, ISO diletakkan pada partisi berbeda."
 ---
 
@@ -212,5 +207,5 @@ Terima kasih.
 
 # Referensi
 
-1. [forum.artixlinux.org/index.php/topic,1669.0.html](https://forum.artixlinux.org/index.php/topic,1669.0.html)
-<br>Diakses tanggal: 2021/03/01
+1. [forum.artixlinux.org/index.php/topic,1669.0.html](https://forum.artixlinux.org/index.php/topic,1669.0.html) \
+   Diakses tanggal: 2021-03-01

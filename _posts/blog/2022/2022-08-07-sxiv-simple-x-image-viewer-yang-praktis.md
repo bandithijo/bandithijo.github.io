@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "sxiv, Simple X Image Viewer (sxiv) yang Praktis namun Powerfull"
-date: '2022-08-07 15:53'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['sxiv']
-pin:
-hot:
-contributors: []
+date: "2022-08-07 15:53"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2022/2022-08-07-sxiv-simple-x-image-viewer-yang-praktis"
+author: "BanditHijo"
+category: "blog"
+tags: ["sxiv"]
 description: "Simple or Small or Suckless, X Image Viewer (sxiv), adalah aplikasi image viewer yang sudah saya pergunakan sejak sekitar Maret 2019. Catatan ini adalah tentang review singkat dari sxiv dan kenapa saya memutuskan untuk migrasi ke nsxiv."
 ---
 
@@ -164,14 +159,14 @@ Terima kasih sudah mampir yaa.
 
 # Referensi
 
-1. [https://github.com/muennich/sxiv](https://github.com/muennich/sxiv)
-<br>Diakses tanggal: 2022/08/07
+1. [https://github.com/muennich/sxiv](https://github.com/muennich/sxiv) \
+   Diakses tanggal: 2022-08-07
 
-1. [https://github.com/nsxiv/nsxiv](https://github.com/nsxiv/nsxiv)
-<br>Diakses tanggal: 2022/08/07
+1. [https://github.com/nsxiv/nsxiv](https://github.com/nsxiv/nsxiv) \
+   Diakses tanggal: 2022-08-07
 
-1. [https://codeberg.org/nsxiv/nsxiv](https://codeberg.org/nsxiv/nsxiv)
-<br>Diakses tanggal: 2022/08/07
+1. [https://codeberg.org/nsxiv/nsxiv](https://codeberg.org/nsxiv/nsxiv) \
+   Diakses tanggal: 2022-08-07
 
-1. [https://wiki.archlinux.org/title/Sxiv](https://wiki.archlinux.org/title/Sxiv)
-<br>Diakses tanggal: 2022/08/07
+1. [https://wiki.archlinux.org/title/Sxiv](https://wiki.archlinux.org/title/Sxiv) \
+   Diakses tanggal: 2022-08-07

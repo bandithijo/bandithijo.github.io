@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Jekyll Server Dapat Diakses oleh Perangkat dalam Satu LAN"
-date: '2020-07-09 14:56'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Jekyll']
-pin:
-hot:
-contributors: []
+date: "2020-07-09 14:56"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-07-09-jekyll-server-diakses-dalam-satu-lan"
+author: "BanditHijo"
+category: "blog"
+tags: ["jekyll"]
 description: "Kita dapat membuat Jekyll blog yang kita bangun di local environment sistem kita, membuka akes broadcast ke local network. Sehingga, semua perangkat yang berada pada satu network yang sama, dapat mengakses Jekyll blog yang ada di local sistem kita."
 ---
 
@@ -157,11 +152,11 @@ Terima kasih.
 
 # Referensi
 
-1. [jekyllrb.com/news/2018/01/02/jekyll-3-7-0-released/](https://jekyllrb.com/news/2018/01/02/jekyll-3-7-0-released/)
-<br>Diakses tanggal: 2020/07/09
+1. [jekyllrb.com/news/2018/01/02/jekyll-3-7-0-released/](https://jekyllrb.com/news/2018/01/02/jekyll-3-7-0-released/) \
+   Diakses tanggal: 2020-07-09
 
-2. [jekyllrb.com/docs/configuration/incremental-regeneration/](https://jekyllrb.com/docs/configuration/incremental-regeneration/)
-<br>Diakses tanggal: 2020/07/09
+1. [jekyllrb.com/docs/configuration/incremental-regeneration/](https://jekyllrb.com/docs/configuration/incremental-regeneration/) \
+   Diakses tanggal: 2020-07-09
 
-3. [jekyllrb.com/docs/configuration/options/#serve-command-options](https://jekyllrb.com/docs/configuration/options/#serve-command-options)
-<br>Diakses tanggal: 2020/07/09
+1. [jekyllrb.com/docs/configuration/options/#serve-command-options](https://jekyllrb.com/docs/configuration/options/#serve-command-options) \
+   Diakses tanggal: 2020-07-09

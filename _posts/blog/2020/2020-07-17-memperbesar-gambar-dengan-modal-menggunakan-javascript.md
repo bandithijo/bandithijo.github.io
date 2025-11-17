@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Memperbesar Gambar dengan Modal Menggunakan JavaScript (Tanpa JQuery)"
-date: '2020-07-17 21:42'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['JavaScript']
-pin:
-hot:
-contributors: []
+date: "2020-07-17 21:42"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-07-17-memperbesar-gambar-dengan-modal-menggunakan-javascript"
+author: "BanditHijo"
+category: "blog"
+tags: ["javascript"]
 description: "Membuat fitur image fullscreen apabila diklik, dengan element modal menggunakan JavaScript, tanpa JQuery."
 ---
 
@@ -366,8 +361,8 @@ Terima kasih.
 
 # Referensi
 
-1. [How to create a modal image gallery with CSS and JavaScript?](https://www.tutorialspoint.com/how-to-create-a-modal-image-gallery-with-css-and-javascript)
-<br>Diakses tanggal: 2020/07/17
+1. [How to create a modal image gallery with CSS and JavaScript?](https://www.tutorialspoint.com/how-to-create-a-modal-image-gallery-with-css-and-javascript) \
+   Diakses tanggal: 2020-07-17
 
-2. [w3schools - How TO - Modal Images](https://www.w3schools.com/howto/howto_css_modal_images.asp)
-<br>Diakses tanggal: 2020/07/17
+1. [w3schools - How TO - Modal Images](https://www.w3schools.com/howto/howto_css_modal_images.asp) \
+   Diakses tanggal: 2020-07-17

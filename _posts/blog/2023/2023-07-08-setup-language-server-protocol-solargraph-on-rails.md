@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Setup LSP Solargraph untuk Rails di Neovim"
-date: '2023-07-08 20:34'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2023-07-08 20:34"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2023/2023-07-08-setup-language-server-protocol-solargraph-on-rails"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Language Server Protocol sangat membantu developer saat proses membangun aplikasi. Solargraph adalah salah satu LSP yang populer digunakan dikalangan Ruby programmer dan Rails developer. Catatan ini akan mendokumentasikan cara saya melakukan setup terhadap Solargraph pada Rails project di Neovim."
 ---
 
@@ -173,11 +168,11 @@ Terima kasih sudah mampir yaa.
 
 # Referensi
 
-1. [https://solargraph.org/](https://solargraph.org/)
-<br>Diakses tanggal: 2023/07/08
+1. [https://solargraph.org/](https://solargraph.org/) \
+   Diakses tanggal: 2023-07-08
 
-1. [https://github.com/castwide/solargraph](https://github.com/castwide/solargraph)
-<br>Diakses tanggal: 2023/07/08
+1. [https://github.com/castwide/solargraph](https://github.com/castwide/solargraph) \
+   Diakses tanggal: 2023-07-08
 
-1. [https://github.com/iftheshoefritz/solargraph-rails](https://github.com/iftheshoefritz/solargraph-rails)
-<br>Diakses tanggal: 2023/07/08
+1. [https://github.com/iftheshoefritz/solargraph-rails](https://github.com/iftheshoefritz/solargraph-rails) \
+   Diakses tanggal: 2023-07-08

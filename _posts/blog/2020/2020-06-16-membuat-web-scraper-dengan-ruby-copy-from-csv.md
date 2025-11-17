@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Web Scraper dengan Ruby (Output: POSTGRESQL: COPY FROM CSV)"
-date: '2020-06-16 18:49'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Ruby', 'PostgreSQL']
-pin:
-hot:
-contributors: []
+date: "2020-06-16 18:49"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-06-16-membuat-web-scraper-dengan-ruby-copy-from-csv"
+author: "BanditHijo"
+category: "blog"
+tags: ["ruby", "postgresql"]
 description: "Web scraping adalah teknik mengambil atau mengekstrak sebagian data dari suatu website secara spesifik secara otomatis."
 ---
 
@@ -310,17 +305,17 @@ Selesai!
 
 # Referensi
 
-1. [It's Time To HTTParty!](https://blog.teamtreehouse.com/its-time-to-httparty)
-<br>Diakses tanggal: 2020/06/16
+1. [It's Time To HTTParty!](https://blog.teamtreehouse.com/its-time-to-httparty) \
+   Diakses tanggal: 2020-06-16
 
-2. [nokogiri.org](https://nokogiri.org/)
-<br>Diakses tanggal: 2020/06/16
+1. [nokogiri.org](https://nokogiri.org/) \
+   Diakses tanggal: 2020-06-16
 
-3. [pg documentation](https://deveiate.org/code/pg/)
-<br>Diakses tanggal: 2020/06/16
+1. [pg documentation](https://deveiate.org/code/pg/) \
+   Diakses tanggal: 2020-06-16
 
-4. [pgcli](https://www.pgcli.com/)
-<br>Diakses tanggal: 2020/06/16
+1. [pgcli](https://www.pgcli.com/) \
+   Diakses tanggal: 2020-06-16
 
-5. [Cannot read from /tmp with PostgreSQL COPY, but able to read the same file from another directory with the exact same permissions](https://dba.stackexchange.com/questions/114568/cannot-read-from-tmp-with-postgresql-copy-but-able-to-read-the-same-file-from)
-<br>Diakses tanggal: 2020/06/16
+1. [Cannot read from /tmp with PostgreSQL COPY, but able to read the same file from another directory with the exact same permissions](https://dba.stackexchange.com/questions/114568/cannot-read-from-tmp-with-postgresql-copy-but-able-to-read-the-same-file-from) \
+   Diakses tanggal: 2020-06-16

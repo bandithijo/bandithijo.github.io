@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Vokoscreen, Aplikasi Screen Recorder yang Praktis'
-date: '2018-10-28 20:00'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Vokoscreen', 'Screen Recorder']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Vokoscreen, Aplikasi Screen Recorder yang Praktis"
+date: "2018-10-28 20:00"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-10-28-vokoscreen-aplikasi-perekam-desktop-yang-praktis"
+author: "BanditHijo"
+category: "blog"
+tags: ["vokoscreen", "screen recorder"]
 description: "Aplikasi yang membantu mempermudah pekerjaan saya ini adalah Vokoscreen. Saya sudah pernah mencicipi beberapa dari aplikasi *screen recorder* seperti: Simple Screen Recorder (SSR), Open Boradcaster Studio (OBS), dan Kazam. Namun, selera saya jatuh pada Vokoscreen."
 ---
 
@@ -210,8 +205,8 @@ Saat ini Vokoscreen 2.5.8-beta sudah tidak lagi dilanjutkan pengembangannya. Vok
 
 # Referensi
 
-1. [linuxecke.volkoh.de/vokoscreen/vokoscreen.html](http://linuxecke.volkoh.de/vokoscreen/vokoscreen.html)
-<br>Diakses tanggal: 2018/10/28
+1. [linuxecke.volkoh.de/vokoscreen/vokoscreen.html](http://linuxecke.volkoh.de/vokoscreen/vokoscreen.html) \
+   Diakses tanggal: 2018-10-28
 
-2. [github.com/vkohaupt/vokoscreen](https://github.com/vkohaupt/vokoscreen)
-<br>Diakses tanggal: 2018/10/28
+1. [github.com/vkohaupt/vokoscreen](https://github.com/vkohaupt/vokoscreen) \
+   Diakses tanggal: 2018-10-28

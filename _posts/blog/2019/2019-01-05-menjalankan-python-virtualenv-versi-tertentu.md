@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Menjalankan Python Virtualenv Versi Python yang Spesifik pada Arch Linux'
-date: '2019-01-05 12:07'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Python']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Menjalankan Python Virtualenv Versi Python yang Spesifik pada Arch Linux"
+date: "2019-01-05 12:07"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-01-05-menjalankan-python-virtualenv-versi-tertentu"
+author: "BanditHijo"
+category: "blog"
+tags: ["python"]
 description: "Catatan ini mengenai trik membuat dan menjalankan Python Virtualenv dengan versi yang spesifik pada Arch Linux."
 ---
 
@@ -112,8 +107,7 @@ Silahkan bereksplorasi sendiri untuk yang menggunakan distribusi sistem opeasi G
 Terima kasih.
 
 
-
 # Referensi
 
-1. [reddit.com/r/archlinux/comments/7ozxtx/how_to_manage_python_versions/](https://www.reddit.com/r/archlinux/comments/7ozxtx/how_to_manage_python_versions/)
-<br>Diakses tanggal: 2019/01/05
+1. [reddit.com/r/archlinux/comments/7ozxtx/how_to_manage_python_versions/](https://www.reddit.com/r/archlinux/comments/7ozxtx/how_to_manage_python_versions/) \
+   Diakses tanggal: 2019-01-05

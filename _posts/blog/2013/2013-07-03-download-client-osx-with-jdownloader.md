@@ -1,18 +1,13 @@
 ---
-layout: 'post'
-title: 'Aplikasi Download Alternatif untuk OSX dengan JDownloader'
-date: '2013-07-03'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['OSX', 'JDownloader']
-pin:
-hot:
-contributors: []
-description:
+layout: "post"
+title: "Aplikasi Download Alternatif untuk OSX dengan JDownloader"
+date: "2013-07-03"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2013/2013-07-03-download-client-osx-with-jdownloader"
+author: "BanditHijo"
+category: "blog"
+tags: ["osx", "jdownloader"]
+description: "Sudah beralih ke OS X dan masih berharap bisa download video di Youtube, donwload kontent-kontetn di website yang tidak terdapat menu download, download dari situs-situs yang membutuhkan account premium, ketergantungan dengan IDM (Internet Download Manager) di Windows ? Tapi sudah benar-benar terpojok dengan OS X ? Jangan khawatir. Saya akan memperkenalkan sebuah software sebagai alternatif bagi anda sebagai pengganti IDM di Windows."
 ---
 
 ![Banner](https://3.bp.blogspot.com/-Rwnz4BKPMJA/UdMVgTfGWeI/AAAAAAAABAM/8QDqK8DfU08/s1600/Default+Header+Template+Post+10.jpg)
@@ -113,5 +108,5 @@ Demikian tutorial mengenai cara penggunaan aplikasi JDownloader ini. Yaa tentu s
 
 # Referensi
 
-1. [jdownloader.org/](http://jdownloader.org/)
-<br>Diakses tanggal: 2013/07/03
+1. [jdownloader.org/](http://jdownloader.org/) \
+   Diakses tanggal: 2013-07-03

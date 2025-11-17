@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Perbedaan Ruby Class Method dengan Instance Method"
-date: '2019-10-12 23:02'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Ruby', 'Rails']
-pin:
-hot:
-contributors: []
+date: "2019-10-12 23:02"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-10-12-perbedaan-ruby-class-method-dengan-instance-method"
+author: "BanditHijo"
+category: "blog"
+tags: ["ruby", "rails"]
 description: "Catatan kali ini mengenai perbedaan antara Method class dengan Instance class pada bahasa pemrograman Ruby."
 ---
 
@@ -129,5 +124,5 @@ Terima kasih (^_^)v
 
 # Referensi
 
-1. [RailsTips - Class and Instance Methods in Ruby](http://www.railstips.org/blog/archives/2009/05/11/class-and-instance-methods-in-ruby/)
-<br>Diakses tanggal: 2019/10/12
+1. [RailsTips - Class and Instance Methods in Ruby](http://www.railstips.org/blog/archives/2009/05/11/class-and-instance-methods-in-ruby/) \
+   Diakses tanggal: 2019-10-12

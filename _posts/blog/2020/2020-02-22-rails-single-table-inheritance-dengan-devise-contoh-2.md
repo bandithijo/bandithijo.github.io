@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mengenal Single Table Inheritance dengan Devise pada Rails (Contoh 2)"
-date: '2020-02-22 06:46'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails', 'Single Table Inheritance', 'Devise']
-pin:
-hot:
-contributors: []
+date: "2020-02-22 06:46"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-02-22-rails-single-table-inheritance-dengan-devise-contoh-2"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails", "singletableinheritance", "devise"]
 description: "Mengimplementasikan Single Table Inheritance pada web apps yang menggunakan Device gem."
 ---
 
@@ -356,11 +351,11 @@ Terima kasih.
 
 # Referensi
 
-1. [vsmedia.co.uk/single-table-inheritance-sti-devise/](https://vsmedia.co.uk/single-table-inheritance-sti-devise/)
-<br>Diakses tanggal: 2020/02/21
+1. [vsmedia.co.uk/single-table-inheritance-sti-devise/](https://vsmedia.co.uk/single-table-inheritance-sti-devise/) \
+   Diakses tanggal: 2020-02-21
 
-2. [guides.rubyonrails.org/routing.html#controller-namespaces-and-routing](https://guides.rubyonrails.org/routing.html#controller-namespaces-and-routing)
-<br>Diakses tanggal: 2020/02/21
+1. [guides.rubyonrails.org/routing.html#controller-namespaces-and-routing](https://guides.rubyonrails.org/routing.html#controller-namespaces-and-routing) \
+   Diakses tanggal: 2020-02-21
 
-3. [api.rubyonrails.org/classes/ActiveRecord/Inheritance.html](https://api.rubyonrails.org/classes/ActiveRecord/Inheritance.html)
-<br>Diakses tanggal: 2020/02/21
+1. [api.rubyonrails.org/classes/ActiveRecord/Inheritance.html](https://api.rubyonrails.org/classes/ActiveRecord/Inheritance.html) \
+   Diakses tanggal: 2020-02-21

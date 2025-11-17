@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Crow-translate, Translator Online yang Dapat Menerjemahkan Di Mana Saja"
-date: '2020-10-27 05:41'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Tool', 'Crow']
-pin:
-hot:
-contributors: []
+date: "2020-10-27 05:41"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-10-27-crow-translate-translator-yang-menerjemahkan-dimana-saja"
+author: "BanditHijo"
+category: "blog"
+tags: ["Crow", "translator"]
 description: "Aplikasi translator ini sangat convenient untuk digunakan. Karena kita dapat menerjemahkan kata/kalimat apa saja yang kita temui di desktop, selama kata/kalimat tersebut dapat diseleksi."
 ---
 
@@ -116,5 +111,5 @@ Terima kasih.
 
 # Referensi
 
-1. [github.com/crow-translate/crow-translate](https://github.com/crow-translate/crow-translate)
-<br>Diakses tanggal: 2020/10/27
+1. [github.com/crow-translate/crow-translate](https://github.com/crow-translate/crow-translate) \
+   Diakses tanggal: 2020-10-27

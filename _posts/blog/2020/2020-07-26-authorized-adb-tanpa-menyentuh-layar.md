@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mendapatkan ADB Authorized pada Layar Android yang Rusak (TWRP) di GNU/Linux & Windows"
-date: '2020-07-26 15:08'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Android', 'ADB', 'TWRP']
-pin:
-hot:
-contributors: []
+date: "2020-07-26 15:08"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-07-26-authorized-adb-tanpa-menyentuh-layar"
+author: "BanditHijo"
+category: "blog"
+tags: ["android", "adb", "twrp"]
 description: "Ide tulisan ini, bermula dari keinginan saya untuk menggambil data yang ada di dalam Smartphone Android yang telah rusak layarnya."
 ---
 
@@ -139,8 +134,8 @@ Terima kasih.
 
 # Referensi
 
-1. [stackoverflow.com/a/36507541/4862516](https://stackoverflow.com/a/36507541/4862516)
-<br>Diakses tanggal: 2020/07/26
+1. [stackoverflow.com/a/36507541/4862516](https://stackoverflow.com/a/36507541/4862516) \
+   Diakses tanggal: 2020-07-26
 
-2. [wiki.archlinux.org/index.php/Android_Debug_Bridge](https://wiki.archlinux.org/index.php/Android_Debug_Bridge)
-<br>Diakses tanggal: 2020/07/26
+1. [wiki.archlinux.org/index.php/Android_Debug_Bridge](https://wiki.archlinux.org/index.php/Android_Debug_Bridge) \
+   Diakses tanggal: 2020-07-26

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Menangani Redirect ke Website Lain pada Jekyll"
-date: '2020-07-06 15:08'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Jekyll']
-pin:
-hot:
-contributors: []
+date: "2020-07-06 15:08"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-07-06-menangani-redirect-ke-website-lain-pada-jekyll"
+author: "BanditHijo"
+category: "blog"
+tags: ["jekyll"]
 description: "Cara ini, biasa saya gunakan untuk mempercantik alamat URL yang kurang ramah untuk diingat."
 ---
 
@@ -157,8 +152,8 @@ Terima kasih (^_^)
 
 # Referensi
 
-1. [docs.github.com/en/enterprise/2.13/user/articles/redirects-on-github-pages](https://docs.github.com/en/enterprise/2.13/user/articles/redirects-on-github-pages)
-<br>Diakses tanggal: 2020/07/06
+1. [docs.github.com/en/enterprise/2.13/user/articles/redirects-on-github-pages](https://docs.github.com/en/enterprise/2.13/user/articles/redirects-on-github-pages) \
+   Diakses tanggal: 2020-07-06
 
-2. [github.com/jekyll/jekyll-redirect-from](https://github.com/jekyll/jekyll-redirect-from)
-<br>Diakses tanggal: 2020/07/06
+1. [github.com/jekyll/jekyll-redirect-from](https://github.com/jekyll/jekyll-redirect-from) \
+   Diakses tanggal: 2020-07-06

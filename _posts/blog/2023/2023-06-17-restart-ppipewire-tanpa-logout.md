@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Restart PipeWire Tanpa Perlu Logout"
-date: '2023-06-17 03:51'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['PipeWire']
-pin:
-hot:
-contributors: []
+date: "2023-06-17 03:51"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2023/2023-06-17-restart-ppipewire-tanpa-logout"
+author: "BanditHijo"
+category: "blog"
+tags: ["pipewire"]
 description: "Sistem tiba-tiba tidak terdengar suara. Jangan panik, segera jalankan protokol pertolongan pertama untuk mengatasi audio yang hilang pada PipeWire!"
 ---
 
@@ -42,5 +37,5 @@ $ systemctl restart --user wireplumber.service
 
 # Referensi
 
-1. [Arch Wiki - PipeWire](https://wiki.archlinux.org/title/PipeWire)
-<br>Diakses tanggal: 2023/06/17
+1. [Arch Wiki - PipeWire](https://wiki.archlinux.org/title/PipeWire) \
+   Diakses tanggal: 2023-06-17

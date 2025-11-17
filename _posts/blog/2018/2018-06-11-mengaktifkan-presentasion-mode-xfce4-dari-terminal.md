@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Mengaktifkan Presentation Mode XFCE4 dari Terminal'
-date: '2018-06-11 17:58'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['XFCE']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Mengaktifkan Presentation Mode XFCE4 dari Terminal"
+date: "2018-06-11 17:58"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-06-11-mengaktifkan-presentasion-mode-xfce4-dari-terminal"
+author: "BanditHijo"
+category: "blog"
+tags: ["xfce"]
 description: "Presentation Mode adalah mode dimana laptop kita tidak akan jatuh pada kondisi blank screen, standby, atau sleep saat sistem dalam keadaan idle atau tidak digunakan. Contoh penerapannya seperti saat presentasi atau saat menonton film dengan durasi yang panjang."
 ---
 
@@ -208,5 +203,5 @@ Saya rasa cukup seperti ini saja.
 
 # Referensi
 
-1. [askubuntu.com/questions/407287/change-xfce4-power-manager-option-from-terminal/407298#407298](https://askubuntu.com/questions/407287/change-xfce4-power-manager-option-from-terminal/407298#407298)
-<br>Diakses tanggal: 18/06/11
+1. [askubuntu.com/questions/407287/change-xfce4-power-manager-option-from-terminal/407298#407298](https://askubuntu.com/questions/407287/change-xfce4-power-manager-option-from-terminal/407298#407298) \
+   Diakses tanggal: 2018-06-11

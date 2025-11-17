@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mengedit dengan Vim pada Nautilus dan Thunar pada Window Manager"
-date: '2020-08-11 02:51'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Nautilus', 'Thunar', 'Vim']
-pin:
-hot:
-contributors: []
+date: "2020-08-11 02:51"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-08-11-mengedit-dengan-vim-pada-nautilus-thunar"
+author: "BanditHijo"
+category: "blog"
+tags: ["nautilus", "thunar", "vim"]
 description: "Bukan berarti Vim hanya dapat dipanggil dari dalam Terminal saja. Tapi Vim juga dapat dipanggil untuk melakukan 'Open with...' dari dalam File Manager GUI seperti Nautilus dan Thunar."
 ---
 
@@ -75,5 +70,5 @@ Terima kasih.
 
 # Referensi
 
-1. [Open Vim in Xfce4 Terminal from Thunar](https://askubuntu.com/a/789541/777616)
-<br>Diakses tanggal: 2020/08/11
+1. [Open Vim in Xfce4 Terminal from Thunar](https://askubuntu.com/a/789541/777616) \
+   Diakses tanggal: 2020-08.11

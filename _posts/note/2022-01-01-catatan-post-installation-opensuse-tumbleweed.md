@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Catatan Post Installation openSUSE Tumbleweed"
-date: '2022-01-01 05:50'
-permalink: '/note/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'note'
-tags: ['openSUSE']
-wip: true
-pin:
-contributors: []
+date: "2022-01-01 05:50"
+permalink: "/note/:title"
+assets: "/assets/images/notes/2022-01-01-catatan-post-installation-opensuse-tumbleweed"
+author: "BanditHijo"
+category: "note"
+tags: ["opensuse"]
 description: "Catatan ini merupakan kumpulan packages dan beberapa konfigurasi yang saya lakukan setelah melakukan proses instalasi openSUSE Tumbleweed."
 ---
 

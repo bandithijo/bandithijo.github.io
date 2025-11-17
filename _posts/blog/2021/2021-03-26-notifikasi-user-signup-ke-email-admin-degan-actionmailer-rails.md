@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Notifikasi User Sign Up ke Email Admin dengan ActionMailer Rails"
-date: '2021-03-26 19:00'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2021-03-26 19:00"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-03-26-notifikasi-user-signup-ke-email-admin-degan-actionmailer-rails"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Catatan kali ini, saya akan mencatatat tentang bagaimana membuat email notifikasi yang dikirimakan ke email admin, apabila terdapat user yang baru mendaftar (signup) ke web aplikasi yang kita develop. Kita dapat menggunakan Rails ActionMailer untuk fitur ini."
 ---
 
@@ -162,11 +157,11 @@ Terima kasih.
 
 # Referensi
 
-1. [Rails Guides - Action Mailer Basics](https://guides.rubyonrails.org/action_mailer_basics.html)
-<br>Diakses tanggal: 2021/03/26
+1. [Rails Guides - Action Mailer Basics](https://guides.rubyonrails.org/action_mailer_basics.html) \
+   Diakses tanggal: 2021-03-26
 
-2. [github.com/rails/rails/](https://github.com/rails/rails/)
-<br>Diakses tanggal: 2021/03/26
+1. [github.com/rails/rails/](https://github.com/rails/rails/) \
+   Diakses tanggal: 2021-03-26
 
-3. [GoRails - Sending Emails in Rails with Mandrill](https://youtu.be/LcO5BuyFFAk)
-<br>Diakses tanggal: 2021/03/26
+1. [GoRails - Sending Emails in Rails with Mandrill](https://youtu.be/LcO5BuyFFAk) \
+   Diakses tanggal: 2021-03-26

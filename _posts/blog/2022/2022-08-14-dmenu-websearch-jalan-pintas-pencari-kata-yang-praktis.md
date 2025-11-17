@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "dmenu-websearch, Jalan Pintas Pencari Kata yang Praktis"
-date: '2022-08-14 08:47'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['dmenu']
-pin:
-hot:
-contributors: []
+date: "2022-08-14 08:47"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2022/2022-08-14-dmenu-websearch-jalan-pintas-pencari-kata-yang-praktis"
+author: "BanditHijo"
+category: "blog"
+tags: ["dmenu"]
 description: "dmenu-websearch ini saya buat karena kemalasan saya dalam melakukan pencarian kata/frasa tertentu namun harus membuka website terkait. Tidak praktis. Saya ingin kata/frasa tersebut cukup saya inputkan dari menu di desktop kemudian browser akan menuntun saya ke halaman hasil pencarian di website terkait."
 ---
 
@@ -166,8 +161,8 @@ Terima kasih sudah mampir yaa.
 
 # Referensi
 
-1. [http://kb.mozillazine.org/Using_keyword_searches](http://kb.mozillazine.org/Using_keyword_searches)
-<br>Diakses tanggal: 2022/08/14
+1. [http://kb.mozillazine.org/Using_keyword_searches](http://kb.mozillazine.org/Using_keyword_searches) \
+   Diakses tanggal: 2022-08-14
 
-1. [https://github.com/bandithijo/dmenu-websearch](https://github.com/bandithijo/dmenu-websearch)
-<br>Diakses tanggal: 2022/08/14
+1. [https://github.com/bandithijo/dmenu-websearch](https://github.com/bandithijo/dmenu-websearch) \
+   Diakses tanggal: 2022-08-14

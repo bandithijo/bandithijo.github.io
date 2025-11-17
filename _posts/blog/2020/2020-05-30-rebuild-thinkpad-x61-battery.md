@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Rebuild ThinkPad X61 Battery"
-date: '2020-05-30 17:49'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['ThinkPad', 'Battery']
-pin:
-hot:
-contributors: []
+date: "2020-05-30 17:49"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-05-30-rebuild-thinkpad-x61-battery"
+author: "BanditHijo"
+category: "blog"
+tags: ["thinkpad", "battery"]
 description: "Dalam project ini, saya iseng merakit battery untuk ThinkPad X61. Tujuannya agar saya dapat terbebas dari cekikan vendor jualan ThinkPad Battery. Dengan begini, saya tetap dapat menggunakan ThinkPad X61 dalam waktu yang lama tanpa khawatir tercekik dengan biaya battery replacement."
 ---
 
@@ -257,17 +252,17 @@ Saya menyertakan beberapa referensi yang belum sempat saya baca-baca. Mungkin te
 
 # Referensi
 
-1. [IBM Thinkpad Battery Re-Celling Battery Rebuild Tutorial](https://forum.thinkpads.com/viewtopic.php?t=121516)
-<br>Diakses tanggal: 2020/05/30
+1. [IBM Thinkpad Battery Re-Celling Battery Rebuild Tutorial](https://forum.thinkpads.com/viewtopic.php?t=121516) \
+   Diakses tanggal: 2020-05-30
 
-2. [Rebuilding batteries](https://www.reddit.com/r/thinkpad/comments/79q22o/rebuilding_batteries/)
-<br>Diakses tanggal: 2020/05/30
+1. [Rebuilding batteries](https://www.reddit.com/r/thinkpad/comments/79q22o/rebuilding_batteries/) \
+   Diakses tanggal: 2020-05-30
 
-3. [Replacing Lenovo laptop lithium batteries](https://hackaday.io/page/247-replacing-lenovo-laptop-lithium-batteries)
-<br>Diakses tanggal: 2020/05/30
+1. [Replacing Lenovo laptop lithium batteries](https://hackaday.io/page/247-replacing-lenovo-laptop-lithium-batteries) \
+   Diakses tanggal: 2020-05-30
 
-4. [SMBusb - Hacking smart batteries](http://www.karosium.com/2016/08/smbusb-hacking-smart-batteries.html)
-<br>Diakses tanggal: 2020/05/30
+1. [SMBusb - Hacking smart batteries](http://www.karosium.com/2016/08/smbusb-hacking-smart-batteries.html) \
+   Diakses tanggal: 2020-05-30
 
-5. [Will China's 18650 Battery Beat LG, Samsung, Sony & Panasonic? Let's find out!](https://www.youtube.com/watch?v=qMZuHMlRw_0)
-<br>Diakses tanggal: 2020/05/30
+1. [Will China's 18650 Battery Beat LG, Samsung, Sony & Panasonic? Let's find out!](https://www.youtube.com/watch?v=qMZuHMlRw_0) \
+   Diakses tanggal: 2020-05-30

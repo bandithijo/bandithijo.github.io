@@ -1,12 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mengenal XFCE Desktop Environment"
-date: '2025-11-15 07:55'
-permalink: '/blog/:title'
+date: "2025-11-15 07:55"
+permalink: "/blog/:title"
 assets: "/assets/images/posts/2025/2025-11-15-mengenal-xfce-desktop-environment"
-author: 'BanditHijo'
-category: 'blog'
-tags: ['xfce', 'desktop environment']
+author: "BanditHijo"
+category: "blog"
+tags: ["xfce", "desktop environment"]
 description: "XFCE bukan desktop environment yang populer seperti GNOME dan KDE Plasma. Namun, namanya selalu punya tempat tersendiri di hati penggunanya."
 ---
 
@@ -188,9 +188,12 @@ Gambar 10. Baobab
 
 1. [XFCE Official Website](https://xfce.org/) \
    Diakses tanggal: 2025-11-15
+
 1. [XFCE FAQ](https://docs.xfce.org/faq) \
    Diakses tanggal: 2025-11-15
+
 1. [XFCE Projects](https://xfce.org/projects) \
    Diakses tanggal: 2025-11-15
+
 1. [XFCE External Plugins](https://docs.xfce.org/#external_plugins) \
    Diakses tanggal: 2025-11-15

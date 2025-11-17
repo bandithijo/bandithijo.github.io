@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Memperbaiki Font Rendering pada Jitsi - VoIP dan IM Client pada GNU/Linux'
-date: '2019-04-22 14:11'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Jitsi']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Memperbaiki Font Rendering pada Jitsi - VoIP dan IM Client pada GNU/Linux"
+date: "2019-04-22 14:11"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-04-22-memperbaiki-font-rendering-jitsi"
+author: "BanditHijo"
+category: "blog"
+tags: ["jitsi"]
 description: "Catatan kali ini mengenai cara memperbaiki font rendering yang jelek pada aplikasi Jitsi di GNU/Linux."
 ---
 
@@ -62,5 +57,5 @@ Sekian, mudah-mudahan bermanfaat.
 
 # Referensi
 
-1. [lists.jitsi.org/pipermail/dev/2013-November/018919.html](http://lists.jitsi.org/pipermail/dev/2013-November/018919.html)
-<br>Diakses tanggal: 2019/04/22
+1. [lists.jitsi.org/pipermail/dev/2013-November/018919.html](http://lists.jitsi.org/pipermail/dev/2013-November/018919.html) \
+   Diakses tanggal: 2019-04-22

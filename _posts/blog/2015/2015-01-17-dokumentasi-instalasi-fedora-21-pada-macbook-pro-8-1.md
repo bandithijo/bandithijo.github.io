@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Dokumentasi Instalasi Fedora 21 pada Macbook Pro 8.1'
-date: '2015-01-17'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Fedora']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Dokumentasi Instalasi Fedora 21 pada Macbook Pro 8.1"
+date: "2015-01-17"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2015/2015-01-17-dokumentasi-instalasi-fedora-21-pada-macbook-pro-8-1"
+author: "BanditHijo"
+category: "blog"
+tags: ["fedora"]
 description: "Tujuan dari penulisan dokumentasi ini untuk memudahkan pengguna mesin Apple khususnya Macbook Pro 8.1 (Late 2011) dalam menginstalasi sistem operasi Fedora 21. Untuk itu, saya mendokumentasikan proses setup Fedora 21 ini agar memudahkan pengguna Apple yang ingin beralih menggunakan sistem operasi Fedora 21."
 ---
 
@@ -345,9 +340,20 @@ Saya merekomendasikan untuk menginstal aplikasi dan paket-paket yang anda ingink
 
 # Referensi
 
-1. [www.denniskanbier.nl/blog/fedora/fedora-20-on-a-macbook-82/](http://www.denniskanbier.nl/blog/fedora/fedora-20-on-a-macbook-82/)
-2. [id.fedoracommunity.org/2013/12/instal-fedora.html](http://id.fedoracommunity.org/2013/12/instal-fedora.html)
-3. [askubuntu.com/questions/283908/how-can-i-install-and-use-powerline-plugin](http://askubuntu.com/questions/283908/how-can-i-install-and-use-powerline-plugin)
-4. [forums.fedoraforum.org/showpost.php?p=1686425&postcount=3](http://forums.fedoraforum.org/showpost.php?p=1686425&postcount=3)
-5. [satya164.github.io/fedy/](http://satya164.github.io/fedy/)
-6. [techblog.tthu.net/2015/01/apple-trackpadtouchpad-sensitivity-under-linux/#more-7](http://techblog.tthu.net/2015/01/apple-trackpadtouchpad-sensitivity-under-linux/#more-7)
+1. [www.denniskanbier.nl/blog/fedora/fedora-20-on-a-macbook-82/](http://www.denniskanbier.nl/blog/fedora/fedora-20-on-a-macbook-82/) \
+   Diakses tanggal: 2015-01-17
+
+1. [id.fedoracommunity.org/2013/12/instal-fedora.html](http://id.fedoracommunity.org/2013/12/instal-fedora.html) \
+   Diakses tanggal: 2015-01-17
+
+1. [askubuntu.com/questions/283908/how-can-i-install-and-use-powerline-plugin](http://askubuntu.com/questions/283908/how-can-i-install-and-use-powerline-plugin) \
+   Diakses tanggal: 2015-01-17
+
+1. [forums.fedoraforum.org/showpost.php?p=1686425&postcount=3](http://forums.fedoraforum.org/showpost.php?p=1686425&postcount=3) \
+   Diakses tanggal: 2015-01-17
+
+1. [satya164.github.io/fedy/](http://satya164.github.io/fedy/) \
+   Diakses tanggal: 2015-01-17
+
+1. [techblog.tthu.net/2015/01/apple-trackpadtouchpad-sensitivity-under-linux/#more-7](http://techblog.tthu.net/2015/01/apple-trackpadtouchpad-sensitivity-under-linux/#more-7) \
+   Diakses tanggal: 2015-01-17

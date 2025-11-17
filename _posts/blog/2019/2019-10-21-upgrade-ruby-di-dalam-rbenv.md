@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mengupgrade Versi Ruby di dalam Rbenv"
-date: '2019-10-21 09:25'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Ruby']
-pin:
-hot:
-contributors: []
+date: "2019-10-21 09:25"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-10-21-upgrade-ruby-di-dalam-rbenv"
+author: "BanditHijo"
+category: "blog"
+tags: ["ruby"]
 description: "Versi Ruby sudah mencapai versi tertentu, tapi kenapa saya tidak mendapat pembaharuan? Bagaimana cara mengupgrade versi Ruby yang ada di dalam Rbenv? Catatan kali ini, saya akan membahas tentang hal itu."
 ---
 
@@ -167,8 +162,8 @@ Terima kasih (^_^)v
 
 # Referensi
 
-1. [github.com/rbenv/rbenv](https://github.com/rbenv/rbenv)
-<br>Diakses tanggal: 2019/10/21
+1. [github.com/rbenv/rbenv](https://github.com/rbenv/rbenv) ] \
+   Diakses tanggal: 2019-10-21
 
-2. [rvm.io](https://rvm.io)
-<br>Diakses tanggal: 2019/10/21
+1. [rvm.io](https://rvm.io) \
+   Diakses tanggal: 2019-10-21

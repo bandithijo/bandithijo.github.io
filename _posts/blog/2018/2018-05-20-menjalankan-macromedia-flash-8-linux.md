@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Menjalankan Macromedia Flash 8 di GNU/Linux'
-date: 2018-05-20 10:51
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Wine']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Menjalankan Macromedia Flash 8 di GNU/Linux"
+date: '2018-05-20 10:51'
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-05-20-menjalankan-macromedia-flash-8-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["wine"]
 description: "Kira-kira tiga minggu yang lalu, saya mendapat tugas kuliah oleh dosen saya untuk membuat 'Media Pembelajaran bagi siswa SMP atau SMA' dengan menggunakan aplikasi Macromedia Flash. Dalam hati ada sedikit rasa haru karena senang tapi tidak lama rasa senang itu langsung tertutupi kabut kenyataan bahwa saya saat ini sudah menggunakan sistem operasi GNU/Linux."
 ---
 
@@ -118,5 +113,5 @@ Setelah menggunakan Macromedia Flash 8 menggunakan Wine pada sistem operasi GNU/
 
 # Referensi
 
-1. [appdb.winehq.org/objectManager.php?sClass=version&iId=3673&iTestingId=57604](https://appdb.winehq.org/objectManager.php?sClass=version&iId=3673&iTestingId=57604)
-<br>Diakses tanggal: 2018/05/20
+1. [appdb.winehq.org/objectManager.php?sClass=version&iId=3673&iTestingId=57604](https://appdb.winehq.org/objectManager.php?sClass=version&iId=3673&iTestingId=57604) \
+   Diakses tanggal: 2018-05-20

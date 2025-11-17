@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Bluetooth Headset Battery Status"
-date: '2022-05-23 20:49'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['UPower']
-pin:
-hot:
-contributors: []
+date: "2022-05-23 20:49"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2022/2022-05-23-bluetooth-headset-battery-status"
+author: "BanditHijo"
+category: "blog"
+tags: ["upower"]
 description: "Selama menggunakan Bluetooth Headset di Linux, saya tidak mengetahui berapa persentase battery yang tersisa. Ternyata kita perlu mengaktifkan flag experimental pada bluetoothd service agar status bluetooth headset battery dapat dibaca oleh UPower API"
 ---
 
@@ -159,5 +154,5 @@ Terima kasih sudah mampir yaa.
 
 # Referensi
 
-1. [https://stackoverflow.com/a/70460138/4862516](https://stackoverflow.com/a/70460138/4862516)
-<br>Diakses tanggal: 2022/05/22
+1. [https://stackoverflow.com/a/70460138/4862516](https://stackoverflow.com/a/70460138/4862516) \
+   Diakses tanggal: 2022-05-22

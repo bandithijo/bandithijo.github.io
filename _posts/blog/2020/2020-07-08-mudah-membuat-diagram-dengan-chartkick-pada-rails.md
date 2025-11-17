@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mudah Membuat JavaScript Diagram dengan ChartKick pada Rails"
-date: '2020-07-08 11:32'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails', 'JavaScript', 'ChartKick']
-pin:
-hot:
-contributors: []
+date: "2020-07-08 11:32"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-07-08-mudah-membuat-diagram-dengan-chartkick-pada-rails"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails", "javascript", "chartkick"]
 description: "Mudah membuat grafik diagram pada Ruby on Rails dengan menggunakan ChartKick gem."
 ---
 
@@ -223,11 +218,11 @@ Terima kasih.
 
 # Referensi
 
-1. [chartkick.com/](https://chartkick.com/)
-<br>Diakses tanggal: 2020/07/08
+1. [chartkick.com/](https://chartkick.com/) \
+   Diakses tanggal: 2020-07-08
 
-2. [github.com/ankane/chartkick](https://github.com/ankane/chartkick)
-<br>Diakses tanggal: 2020/07/08
+1. [github.com/ankane/chartkick](https://github.com/ankane/chartkick) \
+   Diakses tanggal: 2020-07-08
 
-3. [chartjs.org/](https://www.chartjs.org/)
-<br>Diakses tanggal: 2020/07/08
+1. [chartjs.org/](https://www.chartjs.org/) \
+   Diakses tanggal: 2020-07-08

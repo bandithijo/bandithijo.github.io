@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Memasang Heroku-CLI pada FreeBSD"
-date: '2020-04-03 19:31'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['FreeBSD', 'Heroku']
-pin:
-hot:
-contributors: []
+date: "2020-04-03 19:31"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-04-03-memasang-heroku-cli-pada-freebsd"
+author: "BanditHijo"
+category: "blog"
+tags: ["freebsd", "heroku"]
 description: "Heroku adalah Cloud Application Platform (PAAS - Platform as a Service) dimana kita sebagai web developer dapat dengan mudah mengkonfigurasi aplikasi yang kita buat agar dapat diakses di internet. Apakah CLI yang disediakan, dapat digunakan pada FreeBSD?"
 ---
 
@@ -104,8 +99,8 @@ Terima kasih.
 
 # Referensi
 
-1. [devcenter.heroku.com/articles/heroku-cli](https://devcenter.heroku.com/articles/heroku-cli)
-<br>Diakses tanggal: 2020/04/03
+1. [devcenter.heroku.com/articles/heroku-cli](https://devcenter.heroku.com/articles/heroku-cli) \
+   Diakses tanggal: 2020-04-03
 
-2. [github.com/heroku/cli/issues/57#issuecomment-394142666](https://github.com/heroku/cli/issues/57#issuecomment-394142666)
-<br>Diakses tanggal: 2020/04/03
+1. [github.com/heroku/cli/issues/57#issuecomment-394142666](https://github.com/heroku/cli/issues/57#issuecomment-394142666) \
+   Diakses tanggal: 2020-04-03

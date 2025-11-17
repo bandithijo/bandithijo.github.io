@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Reflector, Python Script untuk Memfilter Pacman Mirrorlist Arch Linux'
-date: '2018-12-11 01:59'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Arch Linux', 'Reflector']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Reflector, Python Script untuk Memfilter Pacman Mirrorlist Arch Linux"
+date: "2018-12-11 01:59"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-12-11-reflector-tools-rankmirror-archlinux"
+author: "BanditHijo"
+category: "blog"
+tags: ["arch linux", "reflector"]
 description: "Masih ribet memilih-milih mirror yang cepat sesuai dengan network yang kita gunakan? Saya lebih memilih menggunakan script yang dapat melakukan profiling (penilaian) mana-mana saja mirror yang cepat untuk network saya. Reflector adalah salah satu tools yang dapat kita gunakan untuk menentukan mana saja mirror yang cepat untuk kita."
 ---
 
@@ -174,11 +169,11 @@ Apabila menemukan kesalahan dan kegagalan sekali lagi saya berpesan, tulisan ini
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/Reflector](https://wiki.archlinux.org/index.php/Reflector)
-<br>Diakses tanggal: 2018/12/11
+1. [wiki.archlinux.org/index.php/Reflector](https://wiki.archlinux.org/index.php/Reflector) \
+   Diakses tanggal: 2018-12-11
 
-2. [xyne.archlinux.ca/projects/reflector/](https://xyne.archlinux.ca/projects/reflector/)
-<br>Diakses tanggal: 2018/12/11
+1. [xyne.archlinux.ca/projects/reflector/](https://xyne.archlinux.ca/projects/reflector/) \
+   Diakses tanggal: 2018-12-11
 
-3. [archlinux.org/packages/community/any/reflector/](https://www.archlinux.org/packages/community/any/reflector/)
-<br>Diakses tanggal: 2018/12/11
+1. [archlinux.org/packages/community/any/reflector/](https://www.archlinux.org/packages/community/any/reflector/) \
+   Diakses tanggal: 2018-12-11

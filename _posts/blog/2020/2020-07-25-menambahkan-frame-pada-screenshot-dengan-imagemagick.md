@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Menambahkan Frame pada Hasil ScreenShot dengan ImageMagick"
-date: '2020-07-25 11:45'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Ruby', 'ImageMagick']
-pin:
-hot:
-contributors: []
+date: "2020-07-25 11:45"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-07-25-menambahkan-frame-pada-screenshot-dengan-imagemagick"
+author: "BanditHijo"
+category: "blog"
+tags: ["ruby", "imagemagick"]
 description: "Ide untuk memberikan framing ini muncul saat saya ingin membuat thumbnails di YouTube untuk video dengan resolusi layar saya yang berukuran 4:3, sedangkan thumbnail setidaknya memiliki resolusi berukuran 16:9."
 ---
 
@@ -139,8 +134,8 @@ Terima kasih.
 
 # Referensi
 
-1. [imagemagick.org/script/command-line-processing.php#geometry](https://imagemagick.org/script/command-line-processing.php#geometry)
-<br>Diakses tanggal: 2020/07/25
+1. [imagemagick.org/script/command-line-processing.php#geometry](https://imagemagick.org/script/command-line-processing.php#geometry) \
+   Diakses tanggal: 2020-07-25
 
-2. [PNG image becomes too bright](https://www.imagemagick.org/discourse-server/viewtopic.php?t=27131)
-<br>Diakses tanggal: 2020/08/03
+1. [PNG image becomes too bright](https://www.imagemagick.org/discourse-server/viewtopic.php?t=27131) \
+   Diakses tanggal: 2020-08-03

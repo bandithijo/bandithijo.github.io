@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Mulai Bermain-main dengan Ruby'
-date: '2019-05-02 00:29'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Ruby']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Mulai Bermain-main dengan Ruby"
+date: "2019-05-02 00:29"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-05-02-mulai-bermain-main-dengan-ruby"
+author: "BanditHijo"
+category: "blog"
+tags: ["ruby"]
 description: "Catatan ini adalah awal pertama kali saya mulai menekuni bahasa pemrograman Ruby."
 ---
 
@@ -142,8 +137,8 @@ Terima kasih yang sudah mampir yaa.
 
 # Referensi
 
-1. [ruby-doc.org/core-2.4.0/Kernel.html#method-i-system](https://ruby-doc.org/core-2.4.0/Kernel.html#method-i-system)
-<br>Diakses tanggal: 2019/05/02
+1. [ruby-doc.org/core-2.4.0/Kernel.html#method-i-system](https://ruby-doc.org/core-2.4.0/Kernel.html#method-i-system) \
+   Diakses tanggal: 2019-05-02
 
-2. [ruby-doc.org/core-2.4.0/ARGF.html](https://ruby-doc.org/core-2.4.0/ARGF.html)
-<br>Diakses tanggal: 2019/05/02
+1. [ruby-doc.org/core-2.4.0/ARGF.html](https://ruby-doc.org/core-2.4.0/ARGF.html) \
+   Diakses tanggal: 2019-05-02

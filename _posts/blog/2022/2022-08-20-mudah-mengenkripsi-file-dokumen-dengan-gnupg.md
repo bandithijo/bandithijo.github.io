@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mudah Mengenkripsi File dan Dokumen dengan GnuPG (GPG)"
-date: '2022-08-20 06:46'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['GPG', 'GnuPG', 'PGP', 'Security']
-pin:
-hot:
-contributors: []
+date: "2022-08-20 06:46"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2022/2022-08-20-mudah-mengenkripsi-file-dokumen-dengan-gnupg"
+author: "BanditHijo"
+category: "blog"
+tags: ["gpg", "gnupg", "pgp", "security"]
 description: "GnuPG adalah implementasi dari OpenPGP Standard (PGP) yang juga dikenal dengan nama GPG, yang dapat kita gunakan untuk melakukan enkripsi dan menandatangani data. Kita akan menggunakan GnuPG untuk mengenkripsi file atau dokumen."
 ---
 
@@ -233,8 +228,8 @@ Saya juga pernah menulis terkait GnuPG di catatan sebelumnya.
 
 # Referensi
 
-1. [https://www.gnupg.org/](https://www.gnupg.org/)
-<br>Diakses tanggal: 2022/08/20
+1. [https://www.gnupg.org/](https://www.gnupg.org/) \
+   Diakses tanggal: 2022-08-20
 
-1. [https://www.gnupg.org/gph/en/manual/x110.html](https://www.gnupg.org/gph/en/manual/x110.html)
-<br>Diakses tanggal: 2022/08/20
+1. [https://www.gnupg.org/gph/en/manual/x110.html](https://www.gnupg.org/gph/en/manual/x110.html) \
+   Diakses tanggal: 2022-08-20

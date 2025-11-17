@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mudah Manajemen Service dengan OpenRC"
-date: '2021-01-06 06:45'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Artix Linux', 'OpenRC']
-pin:
-hot:
-contributors: []
+date: "2021-01-06 06:45"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-01-06-mudah-manajemen-service-dengan-openrc"
+author: "BanditHijo"
+category: "blog"
+tags: ["artix linux", "openrc"]
 description: "Sedikit catatan-catatan kecil dalam memanajemen service dengan OpenRC. Mungkin cukup membantu untuk teman-teman yang baru bermigrasi ke init system OpenRC."
 ---
 
@@ -506,18 +501,16 @@ Terima kasih.
 (^_^)
 
 
-
-
 # Referensi
 
-1. [Gentoo Wiki: OpenRC](https://wiki.gentoo.org/wiki/OpenRC)
-<br>Diakses tanggal: 2021/01/06
+1. [Gentoo Wiki: OpenRC](https://wiki.gentoo.org/wiki/OpenRC) \
+   Diakses tanggal: 2021-01-06
 
-2. [Artix Wiki: OpenRC](https://wiki.artixlinux.org/Main/OpenRC)
-<br>Diakses tanggal: 2021/01/06
+1. [Artix Wiki: OpenRC](https://wiki.artixlinux.org/Main/OpenRC) \
+   Diakses tanggal: 2021-01-06
 
-3. [Arch Wiki: OpenRC](https://wiki.archlinux.org/index.php/OpenRC)
-<br>Diakses tanggal: 2021/01/06
+1. [Arch Wiki: OpenRC](https://wiki.archlinux.org/index.php/OpenRC) \
+   Diakses tanggal: 2021-01-06
 
-4. [GitHub/OpenRC/openrc: OpenRC Users Guide](https://github.com/OpenRC/openrc/blob/master/user-guide.md)
-<br>Diakses tanggal: 2021/01/06
+1. [GitHub/OpenRC/openrc: OpenRC Users Guide](https://github.com/OpenRC/openrc/blob/master/user-guide.md) \
+   Diakses tanggal: 2021-01-06

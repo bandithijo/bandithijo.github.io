@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Memigrasikan Arch Linux ke Artix Linux (OpenRC)"
-date: '2021-01-02 07:45'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Arch Linux', 'Artix Linux']
-pin:
-hot: true
-contributors: []
+date: "2021-01-02 07:45"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-01-02-memigrasikan-arch-ke-artix-openrc"
+author: "BanditHijo"
+category: "blog"
+tags: ["arch linux", "artix linux"]
 description: "Saya sudah hampir menyerah dengan ThinkPad X61, si laptop tua produksi tahun 2007 silam yang menggunakan Arch Linux dengan systemd yang terkadang temperature CPU sudah sering mencapai rata-rata 70-80°C. Hingga akhirnya saya memigrasikan ke Artix Linux dengan OpenRC. Ternyata sangat signifikan perbedaan temperaturenya. Lebih adem!"
 ---
 
@@ -702,11 +697,11 @@ Terima kasih.
 
 # Referensi
 
-1. [wiki.artixlinux.org/Main/Migration](https://wiki.artixlinux.org/Main/Migration)
-<br>Diakses tanggal: 2021/01/02
+1. [wiki.artixlinux.org/Main/Migration](https://wiki.artixlinux.org/Main/Migration) \
+   Diakses tanggal: 2021-01-02
 
-2. [en.wikipedia.org/wiki/Systemd](https://en.wikipedia.org/wiki/Systemd)
-<br>Diakses tanggal: 2021/01/02
+1. [en.wikipedia.org/wiki/Systemd](https://en.wikipedia.org/wiki/Systemd) \
+   Diakses tanggal: 2021-01-02
 
-3. [wiki.gentoo.org/wiki/Netifrc](https://wiki.gentoo.org/wiki/Netifrc)
-<br>Diakses tanggal: 2021/01/02
+1. [wiki.gentoo.org/wiki/Netifrc](https://wiki.gentoo.org/wiki/Netifrc) \
+   Diakses tanggal: 2021-01-02

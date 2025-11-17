@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Memasang Cisco Packet Tracer 7.1.1 pada Arch Linux'
-date: '2018-01-12'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Cisco Packet Tracer']
-pin:
-hot: true
-contributors: []
+layout: "post"
+title: "Memasang Cisco Packet Tracer 7.1.1 pada Arch Linux"
+date: "2018-01-12"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-01-12-memasang-packet-tracer-7-1-1-arch-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["cisco packet tracer"]
 description: "Catatan untuk memasang Packet Tracer dari AUR"
 ---
 
@@ -107,11 +102,11 @@ Proses upgrade 7.1.1 ke 7.2 tidak sempat di dokumentasikan. Sebagai gantinya pad
 
 
 # Referensi
-1. [aur.archlinux.org/packages/packettracer](https://aur.archlinux.org/packages/packettracer)
-<br>Diakses tanggal: 2018/01/19
+1. [aur.archlinux.org/packages/packettracer](https://aur.archlinux.org/packages/packettracer) \
+   Diakses tanggal: 2018-01-19
 
-2. [netacad.com/courses/packet-tracer-download](https://www.netacad.com/courses/packet-tracer-download/)
-<br>Diakses tanggal: 2018/01/19
+1. [netacad.com/courses/packet-tracer-download](https://www.netacad.com/courses/packet-tracer-download/) \
+   Diakses tanggal: 2018-01-19
 
-3. [ngonfig.net/akun-netacad.html](https://ngonfig.net/akun-netacad.html)
-<br>Diakses tanggal: 2018/08/20
+1. [ngonfig.net/akun-netacad.html](https://ngonfig.net/akun-netacad.html) \
+   Diakses tanggal: 2018-08-20

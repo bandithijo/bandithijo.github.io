@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Collection of Checkbox yang Berbasis Rentang pada Rails"
-date: '2020-02-05 06:09'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails', 'jQuery']
-pin:
-hot:
-contributors: []
+date: "2020-02-05 06:09"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-02-05-rails-collection-of-checkboxes-based-on-range"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails", "jquery"]
 description: "Catatan kali ini mengenai cara membuat daftar checkbox yang berbasis rentang (range) pada web aplikasi yang dibabgun dengan Ruby on Rails."
 ---
 
@@ -300,8 +295,8 @@ Terima kasih.
 
 # Referensi
 
-1. [apidock.com/rails/v4.0.2/ActionView/Helpers/FormOptionsHelper/collection_check_boxes](https://apidock.com/rails/v4.0.2/ActionView/Helpers/FormOptionsHelper/collection_check_boxes)
-<br>Diakses tanggal: 2020/02/05
+1. [apidock.com/rails/v4.0.2/ActionView/Helpers/FormOptionsHelper/collection_check_boxes](https://apidock.com/rails/v4.0.2/ActionView/Helpers/FormOptionsHelper/collection_check_boxes) \
+   Diakses tanggal: 2020-02-05
 
-2. [github.com/activerecord-hackery/ransack/wiki/Basic-Searching#in](https://github.com/activerecord-hackery/ransack/wiki/Basic-Searching#in)
-<br>Diakses tanggal: 2020/02/05
+1. [github.com/activerecord-hackery/ransack/wiki/Basic-Searching#in](https://github.com/activerecord-hackery/ransack/wiki/Basic-Searching#in) \
+   Diakses tanggal: 2020-02-05

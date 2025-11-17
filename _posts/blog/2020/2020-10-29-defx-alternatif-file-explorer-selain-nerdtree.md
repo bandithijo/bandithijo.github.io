@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Defx, Alternatif Vim File Explorer selain NERDTree"
-date: '2020-10-27 05:41'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Vim', 'Defx']
-pin:
-hot:
-contributors: []
+date: "2020-10-27 05:41"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-10-29-defx-alternatif-file-explorer-selain-nerdtree"
+author: "BanditHijo"
+category: "blog"
+tags: ["vim", "defx"]
 description: "Alternatif Vim file explorer selain NERDTree yang dapat teman-teman jadikan pilihan untuk memanajemen file saat menggunakan Vim."
 ---
 
@@ -381,5 +376,5 @@ Terima kasih.
 
 # Referensi
 
-1. [github.com/crow-translate/crow-translate](https://github.com/crow-translate/crow-translate)
-<br>Diakses tanggal: 2020/10/27
+1. [github.com/crow-translate/crow-translate](https://github.com/crow-translate/crow-translate) \
+   Diakses tanggal: 2020-10-27

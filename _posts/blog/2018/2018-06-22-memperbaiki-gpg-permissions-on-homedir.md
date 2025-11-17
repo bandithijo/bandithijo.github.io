@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Memperbaiki GPG: Warning: Unsafe Permissions on Homedir'
-date: '2018-06-22 17:58'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
+layout: "post"
+title: "Memperbaiki GPG: Warning: Unsafe Permissions on Homedir"
+date: "2018-06-22 17:58"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-06-22-memperbaiki-gpg-permissions-on-homedir"
+author: "BanditHijo"
 category: 'blog'
-tags: ['GnuPG', 'GPG']
-pin:
-hot:
-contributors: []
+tags: ['gnupg', 'gpg']
 description: "Masalah yang ingin saya angkat pada dokumentasi ini adalah adanya *warning* yang muncul setiap kali saya menjalankan perintah gpg di Terminal."
 ---
 
@@ -64,14 +59,14 @@ Saya rasa cukup seperti ini saja.
 
 # Referensi
 
-1. [gnupg.org/](https://gnupg.org/)
-<br>Diakses tanggal: 18/06/22
+1. [gnupg.org/](https://gnupg.org/) \
+   Diakses tanggal: 2018-06-22
 
-2. [superuser.com/questions/954509/what-are-the-correct-permissions-for-the-gnupg-enclosing-folder-gpg-warning](https://superuser.com/questions/954509/what-are-the-correct-permissions-for-the-gnupg-enclosing-folder-gpg-warning)
-<br>Diakses tanggal: 18/06/22
+1. [superuser.com/questions/954509/what-are-the-correct-permissions-for-the-gnupg-enclosing-folder-gpg-warning](https://superuser.com/questions/954509/what-are-the-correct-permissions-for-the-gnupg-enclosing-folder-gpg-warning) \
+<br>Diakses tanggal: 2018-06-22
 
-3. [en.wikipedia.org/wiki/File_system_permissions#Notation_of_traditional_Unix_permissions](https://en.wikipedia.org/wiki/File_system_permissions#Notation_of_traditional_Unix_permissions)
-<br>Diakses tanggal: 18/06/22
+1. [en.wikipedia.org/wiki/File_system_permissions#Notation_of_traditional_Unix_permissions](https://en.wikipedia.org/wiki/File_system_permissions#Notation_of_traditional_Unix_permissions) \
+<br>Diakses tanggal: 2018-06-22
 
-4. [lists.gnupg.org/pipermail/gnupg-users/2003-October/020342.html](https://lists.gnupg.org/pipermail/gnupg-users/2003-October/020342.html)
-<br>Diakses tanggal: 18/06/22
+1. [lists.gnupg.org/pipermail/gnupg-users/2003-October/020342.html](https://lists.gnupg.org/pipermail/gnupg-users/2003-October/020342.html) \
+   Diakses tanggal: 2018-06-22

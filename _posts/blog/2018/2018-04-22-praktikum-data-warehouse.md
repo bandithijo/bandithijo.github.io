@@ -1,18 +1,13 @@
 ---
-layout: 'post'
-title: 'Praktikum Data Warehouse'
-date: '2018-04-22 16:33'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Data Warehouse']
-pin:
-hot: true
-contributors: []
-description:
+layout: "post"
+title: "Praktikum Data Warehouse"
+date: "2018-04-22 16:33"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-04-22-praktikum-data-warehouse"
+author: "BanditHijo"
+category: "blog"
+tags: ["data warehouse"]
+description: "Pada praktikum ini, saya menggunakan MySQL Workbench sebagai aplikasi database management. Dapat juga menggunakan aplikasi sejenis yang lain seperti PhpMyAdmin, PGAdmin4, dll."
 ---
 
 ![Banner](https://s20.postimg.cc/xv6bxotfx/banner_post_04.png)

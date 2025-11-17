@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Footer Stay on Bottom but Not Fixed pada Bootstrap"
-date: '2020-12-05 14:41'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Bootstrap', 'CSS', 'HTML']
-pin:
-hot:
-contributors: []
+date: "2020-12-05 14:41"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-12-05-footer-stay-on-bottom-but-not-fixed-bootstrap"
+author: "BanditHijo"
+category: "blog"
+tags: ["bootstrap", "css", "html"]
 description: "Footer yang menempel pada body content memang mengesalkan. Terutama bila content masih sedikit. Maka footer akan menempel pada body dengan sangat manja. Catatan ini adalah solusi bagaimana agar footer tetap berada di bagian paling bawah dari halaman meskipun content yang tersedia masih sedikit."
 ---
 

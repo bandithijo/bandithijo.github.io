@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Mengenkripsi Home Direktori pada GNU/Linux'
-date: '2019-06-14 15:41'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['eCryptfs']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Mengenkripsi Home Direktori pada GNU/Linux"
+date: "2019-06-14 15:41"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-06-14-mengenkripsi-home-direktori-pada-gnu-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["ecryptfs"]
 description: "Home direktori merupakan direktori yang sangat personal untuk kita. Ketika laptop saya hilang, mungkin orang lain akan dapat mengakses home direktori tersebut. Maka dari itu, saya memutuskan untuk mengenkripsi home direktori. Dan membuat proses decrypt dan encrypt berjalan secara otomatis saat session login. Sehingga, kita hanya perlu memasukkan password sekali saat login, dan enkripsi dari home direktori akan terbuka."
 ---
 
@@ -333,8 +328,8 @@ Sepertinya seperti ini saja.
 
 # Referensi
 
-1. [bandithijo.com/arch/step-7-install-gnome-and-complete-installation#710-encrypt-home-directory](https://bandithijo.com/arch/step-7-install-gnome-and-complete-installation#710-encrypt-home-directory)
-<br>Diakses tanggal: 2019/06/14
+1. [bandithijo.com/arch/step-7-install-gnome-and-complete-installation#710-encrypt-home-directory](https://bandithijo.com/arch/step-7-install-gnome-and-complete-installation#710-encrypt-home-directory) \
+   Diakses tanggal: 2019-06-14
 
-2. [wiki.archlinux.org/index.php/ECryptfs](https://wiki.archlinux.org/index.php/ECryptfs)
-<br>Diakses tanggal: 2019/06/14
+1. [wiki.archlinux.org/index.php/ECryptfs](https://wiki.archlinux.org/index.php/ECryptfs) \
+   Diakses tanggal: 2019-06-14

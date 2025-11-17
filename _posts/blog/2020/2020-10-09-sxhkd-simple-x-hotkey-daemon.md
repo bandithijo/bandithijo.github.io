@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "SXHKD, Simple X Hotkey Daemon"
-date: '2020-10-09 21:37'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['SXHKD', 'Tool']
-pin:
-hot:
-contributors: []
+date: "2020-10-09 21:37"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-10-09-sxhkd-simple-x-hotkey-daemon"
+author: "BanditHijo"
+category: "blog"
+tags: ["sxhkd", "hotkey"]
 description: "Tools untuk mengatur kombinasi keyboard (keybind) yang independent. Dapat kita gunakan pada Window Manager atau Desktop Environment apa pun. Konfigurasinya juga menggunakan Bash, dan sangat mudah untuk dikonfigurasi. Cukup fleksibel untuk bermain-main dengan berbagai macam bentuk kombinasi keyboard shortcut. Dengan begini, kita tidak perlu lagi pusing dengan keybind apabila kita ingin mencoba-coba Window Manager yang berbeda."
 ---
 
@@ -330,5 +325,5 @@ Terima kasih.
 
 # Referensi
 
-1. [baskerville/sxhkd](https://github.com/baskerville/sxhkd)
-<br>Diakses tanggal: 2020/10/12
+1. [baskerville/sxhkd](https://github.com/baskerville/sxhkd) \
+   Diakses tanggal: 2020-10-12

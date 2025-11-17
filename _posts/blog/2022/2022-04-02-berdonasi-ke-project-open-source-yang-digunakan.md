@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Hanya dengan 100 Ribu Rupiah, Bisa Berdonasi ke 6 Open Source Project!"
-date: '2022-04-02 22:55'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Donate', 'Open Source']
-pin:
-hot:
-contributors: []
+date: "2022-04-02 22:55"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2022/2022-04-02-berdonasi-ke-project-open-source-yang-digunakan"
+author: "BanditHijo"
+category: "blog"
+tags: ["donate", "open source"]
 description: "Catatan kali ini, saya ingin membagikan pengalaman berdonasi ke beberapa project open source yang saya pergunakan. Mudah-mudahan pengalaman ini dapat memberikan informasi dan semangat kepada teman-teman untuk dapat ikut berdonasi juga."
 ---
 
@@ -161,7 +156,6 @@ Kerennya, di Arch Linux, setelah berdonasi meski USD$ 1, nama kita akan langsung
 ![Gambar 10](/assets/images/posts/2022/2022-04-02-01-gambar-10.png)
 
 Gambar 10. Nama saya di halaman Arch Linux Donors
-
 
 
 # Pesan Penulis

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Mereset Launchpad Icon Sesuai Abjad pada OSX Yosemite'
-date: '2015-01-03'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['OSX']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Mereset Launchpad Icon Sesuai Abjad pada OSX Yosemite"
+date: "2015-01-03"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2015/2015-01-03-reset-launchpad-icon-yosemite"
+author: "BanditHijo"
+category: "blog"
+tags: ["osx"]
 description: "Launchpad pada OS X Yosemite ini benar-benar sangat memudah kita sebagai user OS X untuk mencari aplikasi yang akan kita gunakan. Dibandingakan dengan tidak menggunakan Launchpad, kita harus membuka folder 'Applications' dan mencari aplikasi yang akan kita butuhkan. Sungguh merepotkan mencari diantara banyak icon aplikasi dalam folder Applications."
 ---
 

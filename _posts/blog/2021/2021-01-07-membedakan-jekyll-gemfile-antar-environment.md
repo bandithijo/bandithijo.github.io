@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membedakan Jekyll Gemfile antar Level Environment (Production atau Development)"
-date: '2021-01-07 19:54'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Jekyll']
-pin:
-hot:
-contributors: []
+date: "2021-01-07 19:54"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-01-07-membedakan-jekyll-gemfile-antar-environment"
+author: "BanditHijo"
+category: "blog"
+tags: ["jekyll"]
 description: "Semakin bertambahnya jumlah artikel di BanditHijo blog, mungkin akan memperlambat proses generate static blog ini. Maka dari itu, saya memilih untuk memisahkan beberapa gem yang hanya akan saya gunakan saat di local development, sebagiannya saya jalankan hanya di level production."
 ---
 
@@ -300,5 +295,5 @@ Terima kasih.
 
 # Referensi
 
-1. [stackoverflow.com/a/59762252/4862516](https://stackoverflow.com/a/59762252/4862516)
-<br>Diakses tanggal: 2021/01/07
+1. [stackoverflow.com/a/59762252/4862516](https://stackoverflow.com/a/59762252/4862516) \
+   Diakses tanggal: 2021-01-07

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Menampilkan Code Block Tertentu Hanya di Environment Production pada Rails"
-date: '2020-07-05 08:14'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2020-07-05 08:14"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-07-05-menampilkan-code-block-tertentu-hanya-di-rails-production"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Saya ingin menampilkan code block tertentu hanya pada environment tertentu. Misalkan, code block tersebut hanya akan dijalankan pada environment production. Dan tidak akan dijalankan pada environment development. Bagaimana saya melakukannya pada web aplikasi yang dibangun dengan Ruby on Rails?"
 ---
 
@@ -46,5 +41,5 @@ Terima kasih (^_^)
 
 # Referensi
 
-1. [stackoverflow.com/questions/4632747/rails-best-way-to-display-code-only-in-production](https://stackoverflow.com/questions/4632747/rails-best-way-to-display-code-only-in-production)
-<br>Diakses tanggal: 2020/07/05
+1. [stackoverflow.com/questions/4632747/rails-best-way-to-display-code-only-in-production](https://stackoverflow.com/questions/4632747/rails-best-way-to-display-code-only-in-production) \
+   Diakses tanggal: 2020-07-05

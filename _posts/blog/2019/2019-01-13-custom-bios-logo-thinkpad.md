@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Mengganti BIOS Logo ThinkPad pada GNU/Linux'
-date: '2019-01-13 10:59'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['ThinkPad', 'BIOS']
-pin:
-hot: true
-contributors: []
+layout: "post"
+title: "Mengganti BIOS Logo ThinkPad pada GNU/Linux"
+date: "2019-01-13 10:59"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-01-13-custom-bios-logo-thinkpad"
+author: "BanditHijo"
+category: "blog"
+tags: ["thinkpad", "bios"]
 description: "Saya kurang menyukai tampilan BIOS logo ThinkPad X260 bawaan. Karena hanya bertuliskan kata 'Lenovo' di dalam kota merah. Beda dengan ThinkPad generasi sebelumnya, yang memiliki Tulisan 'ThinkPad' dengan desain logo BIOS khas ThinkPad generasi awal. Apakah gambar BIOS tersebut bisa diganti? Tentu saja! Mudah sekali! Catatan kali ini, saya akan mendemonstrasikan cara untuk memodifikasi gambar untuk BIOS ThinkPad."
 ---
 
@@ -260,8 +255,8 @@ Meskipun demikian, apabila berhasil, ada kepuasan tersendiri karena laptop akan 
 
 # Referensi
 
-1. [reddit.com/r/unixporn/comments/84tdtm/bios_custom_bios_bootscreen_on_my_thinkpad_t440s/](https://www.reddit.com/r/unixporn/comments/84tdtm/bios_custom_bios_bootscreen_on_my_thinkpad_t440s/)
-<br>Diakses tanggal: 2019/01/13
+1. [reddit.com/r/unixporn/comments/84tdtm/bios_custom_bios_bootscreen_on_my_thinkpad_t440s/](https://www.reddit.com/r/unixporn/comments/84tdtm/bios_custom_bios_bootscreen_on_my_thinkpad_t440s/) \
+   Diakses tanggal: 2019-01-13
 
-2. [iBSD - How to flash ThinkPad BIOS with a custom logo](https://www.youtube.com/watch?v=HfaJVyM1y-c)
-<br>Diakses tanggal: 2019/01/13
+1. [iBSD - How to flash ThinkPad BIOS with a custom logo](https://www.youtube.com/watch?v=HfaJVyM1y-c) \
+   Diakses tanggal: 2019-01-13

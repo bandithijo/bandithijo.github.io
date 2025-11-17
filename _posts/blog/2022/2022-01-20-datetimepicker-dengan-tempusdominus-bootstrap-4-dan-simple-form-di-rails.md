@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Date Time Picker dengan Tempus Dominus Bootstrap 4 dan simple_form di Ruby on Rails 6"
-date: '2022-01-20 05:54'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails', 'JavaScript']
-pin:
-hot:
-contributors: []
+date: "2022-01-20 05:54"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2022/2022-01-20-datetimepicker-dengan-tempusdominus-bootstrap-4-dan-simple-form-di-rails"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails", "javascript"]
 description: "Konsistensi UI di setiap browser yang digunakan oleh user untuk membuka web aplikasi yang kita bangun, merupakan hal yang penting. Date time picker sudah disediakan oleh browser modern, namun baik Google Chrome maupun Firefox memiliki tampilan yang berbeda. Kita perlu menyeragamkannya dengan menggunakan date time picker pihak ketiga. Kita akan gunakan Javascript library yang bernama Tempus Dominus Bootstrap 4 pada web aplikasi yang dibangun dengan Ruby on Rails 6. Dan juga mengunakan simple_form gem untuk mempermudah membuat form."
 ---
 
@@ -363,14 +358,14 @@ Terima kasih.
 
 # Referensi
 
-1. [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date)
-<br>Diakses tanggal: 2022/01/20
+1. [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date) \
+   Diakses tanggal: 2022-01-20
 
-1. [https://blog.nightly.mozilla.org/2017/06/12/datetime-inputs-enabled-on-nightly/](https://blog.nightly.mozilla.org/2017/06/12/datetime-inputs-enabled-on-nightly/)
-<br>Diakses tanggal: 2022/01/20
+1. [https://blog.nightly.mozilla.org/2017/06/12/datetime-inputs-enabled-on-nightly/](https://blog.nightly.mozilla.org/2017/06/12/datetime-inputs-enabled-on-nightly/) \
+   Diakses tanggal: 2022-01-20
 
-1. [https://getdatepicker.com/5-4/Usage/](https://getdatepicker.com/5-4/Usage/)
-<br>Diakses tanggal: 2022/01/20
+1. [https://getdatepicker.com/5-4/Usage/](https://getdatepicker.com/5-4/Usage/) \
+   Diakses tanggal: 2022-01-20
 
-1. [https://github.com/heartcombo/simple_form](https://github.com/heartcombo/simple_form)
-<br>Diakses tanggal: 2022/01/20
+1. [https://github.com/heartcombo/simple_form](https://github.com/heartcombo/simple_form) \
+   Diakses tanggal: 2022-01-20

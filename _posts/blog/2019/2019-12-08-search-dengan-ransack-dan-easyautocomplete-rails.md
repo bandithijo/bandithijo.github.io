@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Fitur Search dengan Ransack dan EasyAutocomplete pada Rails"
-date: '2019-12-08 17:02'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails', 'JavaScript', 'Ransack']
-pin:
-hot:
-contributors: []
+date: "2019-12-08 17:02"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-12-08-search-dengan-ransack-dan-easyautocomplete-rails"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails", "javascript", "ransack"]
 description: "Catatan kali ini mengenai cara membuat fitur pencari dengan memanfaatkan Rasack gem dan EasyAutocomplete javascript library pada Ruby on Rails."
 ---
 
@@ -344,8 +339,8 @@ Terima kasih.
 
 # Referensi
 
-1. [easyautocomplete.com/](http://easyautocomplete.com/)
-<br>Diakses tanggal: 2019/12/07
+1. [easyautocomplete.com/](http://easyautocomplete.com/) \
+   Diakses tanggal: 2019-12-07
 
-2. [github.com/activerecord-hackery/ransack](https://github.com/activerecord-hackery/ransack)
-<br>Diakses tanggal: 2019/12/07
+1. [github.com/activerecord-hackery/ransack](https://github.com/activerecord-hackery/ransack) \
+   Diakses tanggal: 2019-12-07

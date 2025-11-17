@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Custom Template GitHub Page untuk GitHub Repositori dengan Jekyll"
-date: '2020-09-12 17:37'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Jekyll', 'GitHub Pages']
-pin:
-hot:
-contributors: []
+date: "2020-09-12 17:37"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-09-12-custom-template-github-page-untuk-github-repositori-jekyll"
+author: "BanditHijo"
+category: "blog"
+tags: ["jekyll", "github pages"]
 description: "Saat membuat repositori di GitHub kita dapat membuat GitHub Pages dari repositori tersebut. Sayangnya theme yang disediakan mungkin tidak cocok dengan kemauan kita. Dan sejauh yang saya tahu, belum ada fitur untuk membuat theme sendiri. Catatan kali ini mungkin dapat membantu teman-teman untuk merancang GitHub Pages themes sendiri."
 ---
 

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Presentation Mode tanpa XFCE4 Power Manager di GNU/Linux (Bonus! dmenu-presentationmode)"
-date: '2022-07-31 08:38'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['dmenu', 'DPMS']
-pin:
-hot:
-contributors: []
+date: "2022-07-31 08:38"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2022/2022-07-31-presentation-mode-dengan-dpms-di-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["dmenu", "dpms"]
 description: "Presentation Mode. Beberapa teman-teman yang menggunakan XFCE pasti pernah menggunakan fitur ini. Fitur yang membuat system kita tidak bisa melakukan sleep/standby. Biasanya kita gunakan ditengah presentasi atau sedang menonton film. Pada catatan kali ini, kita akan meniru Presentation Mode tersebut tanpa menggunakan xfce4-power-manager, melainkan menggunakan DPMS (Display Power Management Signal) yang dapat kita on dan off kan melalui xset."
 ---
 
@@ -136,5 +131,5 @@ Terima kasih sudah mampir yaa.
 
 # Referensi
 
-1. [https://wiki.archlinux.org/title/Display_Power_Management_Signaling](https://wiki.archlinux.org/title/Display_Power_Management_Signaling)
-<br>Diakses tanggal: 2022/07/31
+1. [https://wiki.archlinux.org/title/Display_Power_Management_Signaling](https://wiki.archlinux.org/title/Display_Power_Management_Signaling) \
+   Diakses tanggal: 2022-07-31

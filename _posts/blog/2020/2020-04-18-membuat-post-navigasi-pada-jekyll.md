@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Navigasi Post (Next Prev) pada Jekyll"
-date: '2020-04-18 13:20'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Jekyll']
-pin:
-hot:
-contributors: []
+date: "2020-04-18 13:20"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-04-18-membuat-post-navigasi-pada-jekyll"
+author: "BanditHijo"
+category: "blog"
+tags: ["jekyll"]
 description: "Navigasi next & previouse dalam sebuah post mungkin diperlukan untuk memudahkan pengunjung menelusuri blog."
 ---
 
@@ -92,8 +87,8 @@ Terima kasih.
 
 # Referensi
 
-1. [blog.webjeda.com/related-post-jekyll/](https://blog.webjeda.com/related-post-jekyll/)
-<br>Diakses tanggal: 2020/04/18
+1. [blog.webjeda.com/related-post-jekyll/](https://blog.webjeda.com/related-post-jekyll/) \
+   Diakses tanggal: 2020-04-18
 
-2. [talk.jekyllrb.com/t/how-to-link-to-next-and-previous-posts-for-same-blog-category/629](https://talk.jekyllrb.com/t/how-to-link-to-next-and-previous-posts-for-same-blog-category/629)
-<br>Diakses tanggal: 2020/04/18
+1. [talk.jekyllrb.com/t/how-to-link-to-next-and-previous-posts-for-same-blog-category/629](https://talk.jekyllrb.com/t/how-to-link-to-next-and-previous-posts-for-same-blog-category/629) \
+   Diakses tanggal: 2020-04-18

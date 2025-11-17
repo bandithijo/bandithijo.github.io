@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Select Menu dengan Short Description Menggunakan jQuery pada Rails"
-date: '2019-12-14 01:44'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails', 'JavaScript', 'jQuery']
-pin:
-hot:
-contributors: []
+date: "2019-12-14 01:44"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-12-14-select-menu-short-description-dengan-jquery"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails", "javascript", "jquery"]
 description: "Catatan kali ini mengenai cara membuat select menu dengan keterangan kecil yang berada di bagian bawah dari menu menggunaka jQuery pada Ruby on Rails."
 ---
 
@@ -146,5 +141,5 @@ Terima kasih.
 
 # Referensi
 
-1. [www.w3schools.com/jquery/jquery_hide_show.asp](https://www.w3schools.com/jquery/jquery_hide_show.asp)
-<br>Diakses tanggal: 2019/12/14
+1. [www.w3schools.com/jquery/jquery_hide_show.asp](https://www.w3schools.com/jquery/jquery_hide_show.asp) \
+   Diakses tanggal: 2019-12-14

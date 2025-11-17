@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Ubuntu: the following signatures were invalid: EXPKEYSIG"
-date: '2023-08-10 01:41'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Ubuntu']
-pin:
-hot:
-contributors: []
+date: "2023-08-10 01:41"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2023/2023-08-10-ubuntu-following-signature-were-invalid"
+author: "BanditHijo"
+category: "blog"
+tags: ["ubuntu"]
 description: "Catatan kali ini, saya akan mendokumentasikan proses troubleshooting pada Ubuntu Server yang mengalami expired signature key saat melakukan apt update."
 ---
 
@@ -47,5 +42,5 @@ Terima kasih sudah mampir yaa.
 
 # Referensi
 
-1. [https://github.com/yarnpkg/yarn/issues/7866](https://github.com/yarnpkg/yarn/issues/7866)
-<br>Diakses tanggal: 2023/08/10
+1. [https://github.com/yarnpkg/yarn/issues/7866](https://github.com/yarnpkg/yarn/issues/7866) \
+   Diakses tanggal: 2023-08-10

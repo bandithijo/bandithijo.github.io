@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mudah Setup Odoo untuk Development dengan Docker"
-date: '2024-06-13 07:52'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Docker', 'Odoo']
-pin:
-hot:
-contributors: []
+date: "2024-06-13 07:52"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2024/2024-06-13-mudah-setup-odoo-untuk-development-dengan-docker"
+author: "BanditHijo"
+category: "blog"
+tags: ["docker", "odoo"]
 description: "Catatan kali ini saya mendemonstrasikan proses pemasangan Odoo dengan Docker untuk proses development. Docker dipilih karena membuat proses pemasangan Odoo menjadi lebih praktis."
 ---
 
@@ -172,10 +167,12 @@ Terima kasih sudah mampir yaa.
 
 1. Odoo tutorials \
    <https://www.odoo.com/slides/all/tag/odoo-tutorials-9> \
-   Diakses tanggal: 2024/06/13
+   Diakses tanggal: 2024-06-13
+
 1. Define modue data \
    <https://www.odoo.com/documentation/17.0/developer/tutorials/define_module_data.html> \
-   Diakses tanggal: 2024/06/13
+   Diakses tanggal: 2024-06-13
+
 1. Coding guidelines (Module structure, XML files, Python, JavaScript, CSS, and SCSS) \
    <https://www.odoo.com/documentation/17.0/contributing/development/coding_guidelines.html> \
-   Diakses tanggal: 2024/06/13
+   Diakses tanggal: 2024-06-13

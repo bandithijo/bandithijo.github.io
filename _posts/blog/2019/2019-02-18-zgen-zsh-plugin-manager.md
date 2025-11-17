@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Zgen, ZSH Plugin Manager'
-date: '2019-02-18 12:15'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['zsh', 'zgen']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Zgen, ZSH Plugin Manager"
+date: "2019-02-18 12:15"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-02-18-zgen-zsh-plugin-manager"
+author: "BanditHijo"
+category: "blog"
+tags: ["zsh", "zgen"]
 description: "Z Shell juga memiliki plugin-plugin yang dapat kita manfaatkan untuk menambah fitur yang ingin kita gunakan. Untuk memanajemen plugin-plugin tersebut, saya memilih untuk menggunakan plugin manager yang bernama Zgen."
 ---
 
@@ -333,8 +328,8 @@ Sepertinya ini saja. Mudah-mudahan dapat bermanfaat untuk teman-teman.
 
 # Referensi
 
-1. [github.com/tarjoilija/zgen](https://github.com/tarjoilija/zgen)
-<br>Diakses tanggal: 2019/02/18
+1. [github.com/tarjoilija/zgen](https://github.com/tarjoilija/zgen) \
+   Diakses tanggal: 2019-02-18
 
-2. [github.com/subnixr/minimal](https://github.com/subnixr/minimal)
-<br>Diakses tanggal: 2019/02/18
+1. [github.com/subnixr/minimal](https://github.com/subnixr/minimal) \
+   Diakses tanggal: 2019-02-18

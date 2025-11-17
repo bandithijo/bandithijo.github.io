@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Menonaktifkan URL Escaping di ZSH (Oh-My-ZSH)"
-date: '2020-10-25 00:20'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['ZSH', 'Shell']
-pin:
-hot:
-contributors: []
+date: "2020-10-25 00:20"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-10-25-menonaktifkan-url-escaping-zsh"
+author: "BanditHijo"
+category: "blog"
+tags: ["zsh", "shell"]
 description: "Backslash yang tersisipi apabila kita mempaste URL di Terminal dengan Z Shell, cukup mengganggu. Catatan kali ini mungkin dapat dijadikan solusi untuk mengatasi hal tersebut."
 ---
 
@@ -153,5 +148,5 @@ Terima kasih.
 
 # Referensi
 
-1. [github.com/ohmyzsh/ohmyzsh/issues/7632 - Disable url escaping in quotes strings](https://github.com/ohmyzsh/ohmyzsh/issues/7632)
-<br>Diakses tanggal: 2020/10/25
+1. [github.com/ohmyzsh/ohmyzsh/issues/7632 - Disable url escaping in quotes strings](https://github.com/ohmyzsh/ohmyzsh/issues/7632) \
+   Diakses tanggal: 2020-10-25

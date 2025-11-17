@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Web Scraper dengan Ruby (Output: HTML) Level 2"
-date: '2020-08-20 21:24'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Tips', 'Ruby']
-pin:
-hot:
-contributors: []
+date: "2020-08-20 21:24"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-08-20-membuat-web-scraper-dengan-ruby-html-level-2"
+author: "BanditHijo"
+category: "blog"
+tags: ["ruby"]
 description: "Catatan ini adalah modifikasi untuk tulisan sebelumnya, dimana script sebelumnya sudah tidak dapat digunakan kembali, karea web target belajar merubah layout dari web mereka."
 ---
 
@@ -457,8 +452,8 @@ Terima kasih sudah mampir.
 
 # Referensi
 
-1. [It's Time To HTTParty!](https://blog.teamtreehouse.com/its-time-to-httparty)
-<br>Diakses tanggal: 2020/08/20
+1. [It's Time To HTTParty!](https://blog.teamtreehouse.com/its-time-to-httparty) \
+   Diakses tanggal: 2020-08-20
 
-2. [nokogiri.org](https://nokogiri.org/)
-<br>Diakses tanggal: 2020/08/20
+1. [nokogiri.org](https://nokogiri.org/) \
+   Diakses tanggal: 2020-08-20

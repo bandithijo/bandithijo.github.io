@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Menggunakan Udiskctl untuk Mount, Unmount, dan Power Off Drive'
-date: '2018-12-05 06:25'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Udiskctl']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Menggunakan Udiskctl untuk Mount, Unmount, dan Power Off Drive"
+date: "2018-12-05 06:25"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-12-05-menggunakan-udiskctl"
+author: "BanditHijo"
+category: "blog"
+tags: ["udiskctl"]
 description: "Sudah sejak bulan Juli 2018 saya memigrasikan aplikasi-aplikasi GUI (Graphical User Interface) menjadi aplikasi CLI (Command Line Interface), maksud saya selain text editor Vim. Memang terdengar absurd. Namun, ternyata setelah saya mencoba satu aplikasi, saya pun ketagihan dan mencoba mencari-cari aplikasi mana yang dapat saya migrasikan ke CLI. Untuk cerita migrasi aplikasi ini aka saya sambung pada artikel yang lain."
 ---
 
@@ -187,8 +182,8 @@ Untuk penjelasan lebih lengkap dan literatur tambahan silahkan membaca dari refe
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/Udisks](https://wiki.archlinux.org/index.php/Udisks)
-<br>Diakses tanggal: 2018/11/05
+1. [wiki.archlinux.org/index.php/Udisks](https://wiki.archlinux.org/index.php/Udisks) \
+   Diakses tanggal: 2018-11-05
 
-2. [freedesktop.org/wiki/Software/udisks/](https://www.freedesktop.org/wiki/Software/udisks/)
-<br>Diakses tanggal: 2018/11/05
+1. [freedesktop.org/wiki/Software/udisks/](https://www.freedesktop.org/wiki/Software/udisks/) \
+   Diakses tanggal: 2018-11-05

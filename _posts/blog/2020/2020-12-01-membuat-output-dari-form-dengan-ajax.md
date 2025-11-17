@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Form's Output dengan AJAX"
-date: '2020-12-01 20:43'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails', 'AJAX']
-pin:
-hot:
-contributors: []
+date: "2020-12-01 20:43"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-12-01-membuat-output-dari-form-dengan-ajax"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails", "ajax"]
 description: "Membuat output hasil akan ditampilkan tanpa perlu merefresh halaman. Tentu saja di Ruby on Rails juga dapat mengimplementasikan ini. Kita dapat menggunakan AJAX."
 ---
 

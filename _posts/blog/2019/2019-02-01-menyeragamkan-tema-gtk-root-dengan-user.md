@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Menyeragamkan Tema GTK Root dengan Tema User'
-date: '2019-02-01 01:30'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Tips']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Menyeragamkan Tema GTK Root dengan Tema User"
+date: "2019-02-01 01:30"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-02-01-menyeragamkan-tema-gtk-root-dengan-user"
+author: "BanditHijo"
+category: "blog"
+tags: ["tips"]
 description: "Bicara tentang tampilan desktop, setidaknya terdapat 2 library yang banyak digunakna oleh aplikasi-aplikasi GUI di lingkungan GNU/Linux, yaitu GTK+ dan Qt. Kedua library ini mungkin memiliki default theme mereka sendiri. Mungkin gak kalau kita seragamkan? Sangat mungkin! Beberapa teman-teman yang sering melihat screenshot atau video-video pendek yang sering saya share di Telegram mungkin pernah melihat dan memperhatikan."
 ---
 

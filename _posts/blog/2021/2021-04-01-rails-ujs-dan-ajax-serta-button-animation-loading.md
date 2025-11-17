@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Rails UJS dan AJAX, serta Button Animation Loading"
-date: '2021-04-01 14:00'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2021-04-01 14:00"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-04-01-rails-ujs-dan-ajax-serta-button-animation-loading"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Catatan kali ini tentang bagaimana membuat sebuah fitur update value pada sebuah halaman tanpa perlu refresh halaman. Sekaligus membuat animasi loading pada link/button tersebut."
 ---
 
@@ -339,11 +334,11 @@ Terima kasih.
 
 # Referensi
 
-1. [Rails Guides - Working with JavaScript in Rails: Unobtrusive JavaScript](https://guides.rubyonrails.org/working_with_javascript_in_rails.html#unobtrusive-javascript)
-<br>Diakses tanggal: 2021/04/01
+1. [Rails Guides - Working with JavaScript in Rails: Unobtrusive JavaScript](https://guides.rubyonrails.org/working_with_javascript_in_rails.html#unobtrusive-javascript) \
+   Diakses tanggal: 2021-04-01
 
-2. [GoRails - jQuery UJS and AJAX](https://gorails.com/episodes/jquery-ujs-and-ajax)
-<br>Diakses tanggal: 2021/04/01
+1. [GoRails - jQuery UJS and AJAX](https://gorails.com/episodes/jquery-ujs-and-ajax) \
+   Diakses tanggal: 2021-04-01
 
-3. [GoRails - Button Loading Animations with jQuery UJS](https://gorails.com/episodes/button-loading-animations-with-jquery-ujs)
-<br>Diakses tanggal: 2021/04/01
+1. [GoRails - Button Loading Animations with jQuery UJS](https://gorails.com/episodes/button-loading-animations-with-jquery-ujs) \
+   Diakses tanggal: 2021-04-01

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mengkonfigurasi Fitur Hibernasi pada Arch Linux"
-date: '2020-06-22 07:20'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Arch Linux']
-pin:
-hot:
-contributors: []
+date: "2020-06-22 07:20"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-06-22-mengkonfigurasi-fitur-hibernasi-pada-arch-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["arch linux"]
 description: "Hibernasi terkadang memang tidak langsung berjalan out of the box, kita perlu untuk mengaturnya sendiri. Catatan ini mungkin dapat membantu teman-teman mengkonfigurasi hibernasi di Arch Linux."
 ---
 
@@ -182,11 +177,11 @@ Selesai.
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/Swap](https://wiki.archlinux.org/index.php/Swap)
-<br>Diakses tanggal: 2020/06/22
+1. [wiki.archlinux.org/index.php/Swap](https://wiki.archlinux.org/index.php/Swap) \
+   Diakses tanggal: 2020-06-22
 
-2. [All about Linux swap space](https://www.linux.com/news/all-about-linux-swap-space/)
-<br>Diakses tanggal: 2020/06/22
+1. [All about Linux swap space](https://www.linux.com/news/all-about-linux-swap-space/) \
+   Diakses tanggal: 2020-06-22
 
-2. [Archlinux enabling hibernation](http://blog.programmableproduction.com/2016/02/22/ArchLinux-Powermanagement-Setting-Hibernate/)
-<br>Diakses tanggal: 2020/06/22
+1. [Archlinux enabling hibernation](http://blog.programmableproduction.com/2016/02/22/ArchLinux-Powermanagement-Setting-Hibernate/) \
+   Diakses tanggal: 2020-06-22

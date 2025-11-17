@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mudah Downgrade Paket di Artix Linux"
-date: '2021-05-12 22:13'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Artix Linux']
-pin:
-hot:
-contributors: []
+date: "2021-05-12 22:13"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-05-12-mudah-downgrade-paket-di-artix-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["artix linux"]
 description: "Menggunakan distribusi yang menggunakan metode rilis 'rolling' mungkin merupakan kekhawatiran bagi sebagian besar GNU/Linux user. Mereka sering menyebut distro yang memiliki paket-paket yang tidak stabil. Apakah benar? Saya senyumin aja. Apakah saya pernah memiliki masalah dengan paket terbaru? Tentu. Bagaimana cara saya mengatasinya? Downgrade. Catatan ini adalah tips menggunakan tool yang bernama 'downgrade' yang defaultnya untuk Arch Linux pada Artix Linux."
 ---
 
@@ -172,11 +167,11 @@ Terima kasih.
 
 # Referensi
 
-1. [wiki.archlinux.org/title/Downgrading_packages](https://wiki.archlinux.org/title/Downgrading_packages)
-<br>Diakses tanggal: 2021/05/12
+1. [wiki.archlinux.org/title/Downgrading_packages](https://wiki.archlinux.org/title/Downgrading_packages) \
+   Diakses tanggal: 2021-05-12
 
-2. [wiki.archlinux.org/title/Downgrading_packages](https://wiki.archlinux.org/title/Downgrading_packages)
-<br>Diakses tanggal: 2021/05/12
+1. [wiki.archlinux.org/title/Downgrading_packages](https://wiki.archlinux.org/title/Downgrading_packages) \
+   Diakses tanggal: 2021-05-12
 
-3. [archive.artixlinux.org/](https://archive.artixlinux.org/)
-<br>Diakses tanggal: 2021/05/12
+1. [archive.artixlinux.org/](https://archive.artixlinux.org/) \
+   Diakses tanggal: 2021-05-12

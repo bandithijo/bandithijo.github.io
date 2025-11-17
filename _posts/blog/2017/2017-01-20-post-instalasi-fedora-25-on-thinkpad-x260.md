@@ -1,18 +1,13 @@
 ---
-layout: 'post'
-title: 'Setelah Memasang Fedora 25 pada ThinkPad x260'
-date: '2017-01-20'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['ThinkPad', 'Fedora']
-pin:
-hot:
-contributors: []
-description:
+layout: "post"
+title: "Setelah Memasang Fedora 25 pada ThinkPad x260"
+date: "2017-01-20"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2017/2017-01-20-post-instalasi-fedora-25-on-thinkpad-x260"
+author: "BanditHijo"
+category: "blog"
+tags: ["thinkpad", "fedora"]
+description: "Sudah banyak yang membuat artikel semacam ini, 'Apa yang dilakukan setelah menginstal Ubuntu, Linux Mint, Fedora, Debian, Kali Linux, Arch Linux' di Internet. Pada artikel kali ini saya akan membuat hal yang sama. Sebenarnya artikel ini lebih baik saya sebut sebagai 'dokumentasi'."
 ---
 
 ![Banner](https://2.bp.blogspot.com/-x_2guEqX7Gc/WINOrVRgocI/AAAAAAAAEI0/bWUuprh3yaI4c_Z755uTIfZqsMKnx-2XgCLcB/s1600/Default%2BHeader%2BTemplate%2BPost%2B22.png)
@@ -192,8 +187,8 @@ Kesan setelah melakukan instalasi Fedora 25 Workstation pada mesin Lenovo ThinkP
 
 # Daftar Referensi
 
-1. [rpmfusion.org/Configuration](https://rpmfusion.org/Configuration)
-<br>Diakses tanggal: 2017/01/20
+1. [rpmfusion.org/Configuration](https://rpmfusion.org/Configuration) \
+   Diakses tanggal: 2017-01-20
 
-2. [folkswithhats.org/](https://folkswithhats.org/)
-<br>Diakses tanggal: 2017/01/20
+1. [folkswithhats.org/](https://folkswithhats.org/) \
+   Diakses tanggal: 2017-01-20

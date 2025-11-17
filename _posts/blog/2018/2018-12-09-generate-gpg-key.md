@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Generate Private dan Public GPG Key Sendiri'
-date: 2018-12-09 07:43
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['GnuPG', 'GPG']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Generate Private dan Public GPG Key Sendiri"
+date: '2018-12-09 07:43'
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-12-09-generate-gpg-key"
+author: "BanditHijo"
+category: "blog"
+tags: ["gnupg", "gpg"]
 description: "Catatan ini hanya sekedar catatan praktis tentang bagaimana cara membuat GPG key sendiri."
 ---
 
@@ -186,11 +181,11 @@ Catatan ini masih sangat jauh dari sempurna. Apabila mengalami kesulitan dan keg
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/GnuPG](https://wiki.archlinux.org/index.php/GnuPG)
-<br>Diakses tanggal: 2018/12/09
+1. [wiki.archlinux.org/index.php/GnuPG](https://wiki.archlinux.org/index.php/GnuPG) \
+   Diakses tanggal: 2018-12-09
 
-2. [docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/](https://docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/)
-<br>Diakses tanggal: 2018/12/09
+1. [docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/](https://docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/) ]
+   Diakses tanggal: 2018-12-09
 
-3. [help.github.com/articles/generating-a-new-gpg-key/](https://help.github.com/articles/generating-a-new-gpg-key/)
-<br>Diakses tanggal: 2018/12/09
+1. [help.github.com/articles/generating-a-new-gpg-key/](https://help.github.com/articles/generating-a-new-gpg-key/) \
+   Diakses tanggal: 2018-12-09

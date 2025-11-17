@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Polybar, Bar yang Mudah Dikonfig, Praktis, dan Mudah Dikustomisasi'
-date: '2019-05-05 11:18'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Polybar']
-pin:
-hot: true
-contributors: []
+layout: "post"
+title: "Polybar, Bar yang Mudah Dikonfig, Praktis, dan Mudah Dikustomisasi"
+date: "2019-05-05 11:18"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-05-05-polybar-mudah-dikonfig-dan-praktis"
+author: "BanditHijo"
+category: "blog"
+tags: ["polybar"]
 description: "Polybar adalah salah satu standalone bar yang cukup banyak difavoritkan oleh pengguna Window Manager termasuk saya. Catatan kali ini, saya akan berbagi, bagaimana cara saya mengkonfigurasi Polybar yang saya pergunakan."
 ---
 
@@ -1762,8 +1757,8 @@ Terima kasih.
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/List_of_applications#Taskbars](https://wiki.archlinux.org/index.php/List_of_applications#Taskbars)
-<br>Diakses tanggal: 2019/05/05
+1. [wiki.archlinux.org/index.php/List_of_applications#Taskbars](https://wiki.archlinux.org/index.php/List_of_applications#Taskbars) \
+   Diakses tanggal: 2019-05-05
 
-2. [github.com/jaagr/polybar](https://github.com/jaagr/polybar)
-<br>Diakses tanggal: 2019/05/05
+1. [github.com/jaagr/polybar](https://github.com/jaagr/polybar) \
+   Diakses tanggal: 2019-05-05

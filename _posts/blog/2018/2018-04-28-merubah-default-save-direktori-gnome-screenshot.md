@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Merubah Default Save Direktori pada GNOME-Screenshot'
-date: '2018-04-28 06:09'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['GNOME']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Merubah Default Save Direktori pada GNOME-Screenshot"
+date: "2018-04-28 06:09"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-04-28-merubah-default-save-direktori-gnome-screenshot"
+author: "BanditHijo"
+category: "blog"
+tags: ["gnome"]
 description: "GNOME-ScreenShot adalah aplikasi untuk mengambil gambar layar monitor yang sudah tersedia secara native pada GNOME desktop environment. Saya sudah menggunakan aplikasi ini sejak masih GNOME versi 2. Saat ini saya sedang menggunakan XFCE4, namun saya kurang menyukai aplikasi screenshot milik XFCE4 karena terlalu sederhana."
 ---
 
@@ -59,5 +54,5 @@ Pada contoh di atas, saya meletakkan hasil *screenshot* pada direktori `file:///
 
 # Referensi
 
-1. [askubuntu.com/questions/114429/default-save-directory-for-gnome-screenshot](https://askubuntu.com/questions/114429/default-save-directory-for-gnome-screenshot)
-<br>Diakses tanggal: 2018/04/28
+1. [askubuntu.com/questions/114429/default-save-directory-for-gnome-screenshot](https://askubuntu.com/questions/114429/default-save-directory-for-gnome-screenshot) \
+   Diakses tanggal: 2018-04-28

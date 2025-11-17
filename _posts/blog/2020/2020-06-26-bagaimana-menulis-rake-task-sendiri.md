@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Bagaimana Menulis Rake Task Buatan Sendiri"
-date: '2020-06-26 16:38'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Ruby', 'Rake']
-pin:
-hot:
-contributors: []
+date: "2020-06-26 16:38"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-06-26-bagaimana-menulis-rake-task-sendiri"
+author: "BanditHijo"
+category: "blog"
+tags: ["ruby", "rake"]
 description: "Rake dapat kita manfaatkan untuk menggabungkan beberapa baris perintah menjadi satu baris perintah. Sehingga membuat proses developing kita menjadi lebih efisien."
 ---
 
@@ -425,14 +420,14 @@ Terima kasih.
 
 # Referensi
 
-1. [cobwwweb.com/how-to-write-a-custom-rake-task](https://cobwwweb.com/how-to-write-a-custom-rake-task)
-<br>Diakses tanggal: 2020/06/26
+1. [cobwwweb.com/how-to-write-a-custom-rake-task](https://cobwwweb.com/how-to-write-a-custom-rake-task) \
+   Diakses tanggal: 2020-06-26
 
-2. [cobwwweb.com/4-ways-to-pass-arguments-to-a-rake-task](https://cobwwweb.com/4-ways-to-pass-arguments-to-a-rake-task)
-<br>Diakses tanggal: 2020/06/26
+1. [cobwwweb.com/4-ways-to-pass-arguments-to-a-rake-task](https://cobwwweb.com/4-ways-to-pass-arguments-to-a-rake-task) \
+   Diakses tanggal: 2020-06-26
 
-3. [www.rubyguides.com/2019/02/ruby-rake](https://www.rubyguides.com/2019/02/ruby-rake/)
-<br>Diakses tanggal: 2020/06/26
+1. [www.rubyguides.com/2019/02/ruby-rake](https://www.rubyguides.com/2019/02/ruby-rake/) \
+   Diakses tanggal: 2020-06-26
 
-4. [ruby-doc.org/stdlib-2.7.1/libdoc/optparse/rdoc/OptionParser.html](https://ruby-doc.org/stdlib-2.7.1/libdoc/optparse/rdoc/OptionParser.html)
-<br>Diakses tanggal: 2020/06/26
+1. [ruby-doc.org/stdlib-2.7.1/libdoc/optparse/rdoc/OptionParser.html](https://ruby-doc.org/stdlib-2.7.1/libdoc/optparse/rdoc/OptionParser.html) \
+   Diakses tanggal: 2020-06-26

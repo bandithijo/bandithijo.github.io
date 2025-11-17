@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Menyimpan Unfinished Modification dengan Git Stash"
-date: '2023-09-17 11:07'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Git']
-pin:
-hot:
-contributors: []
+date: "2023-09-17 11:07"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2023/2023-09-17-menyimpan-unfinished-modification-dengan-git-stash"
+author: "BanditHijo"
+category: "blog"
+tags: ["git"]
 description: "Pada catatan kali ini saya akan mendokumentasikan salah satu feature dari Git yang cukup sering saya pergunakan di kerjaan, yaitu Git-stash."
 ---
 

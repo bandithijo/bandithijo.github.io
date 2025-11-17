@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mempertahankan Data pada Form ketika User Belum Melakukan Authentication"
-date: '2020-01-01 11:36'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2020-01-01 11:36"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-01-01-persistent-form-data-saat-user-belum-login"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Catatan ini mengenai cara memperhankan data (persistent) pada sebuah form ketika user belum melakukan authentication atau registration pada Ruby on Rails."
 ---
 
@@ -187,11 +182,11 @@ Terima kasih.
 
 # Referensi
 
-1. [How To: Redirect back to current page after sign in, sign out, sign up, update](https://github.com/plataformatec/devise/wiki/How-To:-Redirect-back-to-current-page-after-sign-in,-sign-out,-sign-up,-update)
-<br>Diakses tanggal: 2020/01/01
+1. [How To: Redirect back to current page after sign in, sign out, sign up, update](https://github.com/plataformatec/devise/wiki/How-To:-Redirect-back-to-current-page-after-sign-in,-sign-out,-sign-up,-update) \
+   Diakses tanggal: 2020-01-01
 
-2. [Action Controller Overview > Session](https://guides.rubyonrails.org/action_controller_overview.html#session)
-<br>Diakses tanggal: 2020/01/01
+1. [Action Controller Overview > Session](https://guides.rubyonrails.org/action_controller_overview.html#session) \
+   Diakses tanggal: 2020-01-01
 
-3. [blog.justinthiele.com/retaining-form-data-through-a-login-process-a](https://blog.justinthiele.com/retaining-form-data-through-a-login-process-a)
-<br>Diakses tanggal: 2020/01/01
+1. [blog.justinthiele.com/retaining-form-data-through-a-login-process-a](https://blog.justinthiele.com/retaining-form-data-through-a-login-process-a) \
+   Diakses tanggal: 2020-01-01

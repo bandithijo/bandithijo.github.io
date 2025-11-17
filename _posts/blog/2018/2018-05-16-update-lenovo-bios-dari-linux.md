@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Update BIOS Lenovo di GNU/Linux Tanpa Menggunakan Windows'
-date: '2018-05-16 18:41'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['ThinkPad', 'BIOS']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Update BIOS Lenovo di GNU/Linux Tanpa Menggunakan Windows"
+date: "2018-05-16 18:41"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-05-16-update-lenovo-bios-dari-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["thinkpad", "bios"]
 description: "Sewaktu pertama kali memiliki laptop ini (Lenovo ThinkPad x260), saya berfikir bagaimana nantinya saya harus meng-update BIOS, apabila saya menghapus sistem operasi Windows dan hanya menggunakan satu sistem operasi GNU/Linux?"
 ---
 
@@ -265,5 +260,5 @@ Berikut ini adalah video proses update BIOS Lenovo. Mohon maaf apabila video ini
 
 # Referensi
 
-1. [cyberciti.biz/faq/update-lenovo-bios-from-linux-usb-stick-pen/](https://www.cyberciti.biz/faq/update-lenovo-bios-from-linux-usb-stick-pen/)
-<br>Diakses tanggal: 2018/05/16
+1. [cyberciti.biz/faq/update-lenovo-bios-from-linux-usb-stick-pen/](https://www.cyberciti.biz/faq/update-lenovo-bios-from-linux-usb-stick-pen/) \
+   Diakses tanggal: 2018-05-16

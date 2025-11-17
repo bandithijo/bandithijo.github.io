@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Cara Aman Menyimpan Credentials di Rails"
-date: '2020-11-26 11:59'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2020-11-26 11:59"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-11-26-cara-aman-menyimpan-credentials-di-rails"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Menyimpan credentials merupakan hal yang wajib sebagai seorang developer atau sistem administrator. Ada banyak sekali cara yang dapat diimplementasikan. Catatan kali ini mungkin hanya salah satu cara yang mungkin dapat teman-teman gunakan."
 ---
 
@@ -226,5 +221,5 @@ Terima kasih.
 
 # Referensi
 
-1. [https://edgeguides.rubyonrails.org/security.html#custom-credentials](https://edgeguides.rubyonrails.org/security.html#custom-credentials)
-<br>Diakses tanggal: 2020/11/26
+1. [https://edgeguides.rubyonrails.org/security.html#custom-credentials](https://edgeguides.rubyonrails.org/security.html#custom-credentials) \
+   Diakses tanggal: 2020-11-26

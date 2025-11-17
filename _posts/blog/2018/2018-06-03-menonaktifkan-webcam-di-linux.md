@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Menonaktifkan WebCam di GNU/Linux'
-date: '2018-06-03 13:23'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['WebCam']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Menonaktifkan WebCam di GNU/Linux"
+date: "2018-06-03 13:23"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-06-03-menonaktifkan-webcam-di-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["webcam"]
 description: "Privacy adalah kata yang menjadi perhatian banyak pihak. Biasanya pengguna sistem operasi GNU/Linux juga cukup memperhatikan hal-hal seperti ini. Salah satu yang menjadi perhatian adalah informasi yang mengabarkan bahwa malware dapat dengan mudah mengakses penggunaan webcam yang terdapat di laptop kita. Kemungkinan seperti ini dapat terjadi pada laptop kita, tulisan kali ini akan mendokumentasikan bagaimana cara melakukan disable dan enable pada webcam pada tingkat driver."
 ---
 
@@ -125,5 +120,5 @@ Saya sendiri belum tahu, apakah cara ini efektif dan benar dapat menangkal penyu
 
 # Referensi
 
-1. [ostechnix.com/how-to-disable-built-in-webcam-in-ubuntu/](https://www.ostechnix.com/how-to-disable-built-in-webcam-in-ubuntu/)
-<br>Diakses tanggal: 2018/06/03
+1. [ostechnix.com/how-to-disable-built-in-webcam-in-ubuntu/](https://www.ostechnix.com/how-to-disable-built-in-webcam-in-ubuntu/) \
+   Diakses tanggal: 2018-06-03

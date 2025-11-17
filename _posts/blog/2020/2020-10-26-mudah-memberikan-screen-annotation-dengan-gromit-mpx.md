@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mudah Memberikan Screen Annotation di Mana Saja dengan Gromit-MPX"
-date: '2020-10-26 15:44'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Tips', 'Ulasan']
-pin:
-hot:
-contributors: []
+date: "2020-10-26 15:44"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-10-26-mudah-memberikan-screen-annotation-dengan-gromit-mpx"
+author: "BanditHijo"
+category: "blog"
+tags: ["screenannotation"]
 description: "Mencoret-coret layar untuk memberikan atensi kepada lawan bicara, kini sudah tidak lagi sulit. Dengan Gromit-MPX kita dapat mencoret-coret di mana saja."
 ---
 
@@ -179,5 +174,5 @@ Terima kasih.
 
 # Referensi
 
-1. [github.com/bk138/gromit-mpx](https://github.com/bk138/gromit-mpx)
-<br>Diakses tanggal: 2020/10/26
+1. [github.com/bk138/gromit-mpx](https://github.com/bk138/gromit-mpx) \
+   Diakses tanggal: 2020-10-26

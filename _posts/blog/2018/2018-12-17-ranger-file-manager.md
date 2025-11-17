@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Ranger, Terminal Based File Manager yang Ternyata Sangat Memudahkan'
-date: '2018-12-17 09:18'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Ranger', 'TUI']
-pin:
-hot: true
-contributors: []
+layout: "post"
+title: "Ranger, Terminal Based File Manager yang Ternyata Sangat Memudahkan"
+date: "2018-12-17 09:18"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-12-17-ranger-file-manager"
+author: "BanditHijo"
+category: "blog"
+tags: ["ranger", "tui"]
 description: "Ranger adalah TUI (*Terminal User Interface*) file manager yang ditulis dengan bahasa pemrograman Python. Kalau yang pernah tahu MC (Midnight Commander), nah serupa, sama-sama file manager. Menggunakian ranger sangat mendongkrak efektifitas saya dalam melakukan eksplorasi terhadap file-file yang terdapat di sistem saya."
 ---
 
@@ -520,8 +515,8 @@ Masih terdapat beberapa hal yang belum sempat saya tuliskan. Seperti:
 
 # Referensi
 
-1. [github.com/ranger/ranger](https://github.com/ranger/ranger)
-<br>Diakses tanggal: 2018/12/17
+1. [github.com/ranger/ranger](https://github.com/ranger/ranger) \
+   Diakses tanggal: 2018-12-17
 
-2. [wiki.archlinux.org/index.php/Ranger](https://wiki.archlinux.org/index.php/Ranger)
-<br>Diakses tanggal: 2018/12/17
+1. [wiki.archlinux.org/index.php/Ranger](https://wiki.archlinux.org/index.php/Ranger) \
+   Diakses tanggal: 2018-12-17

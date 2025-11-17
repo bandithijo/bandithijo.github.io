@@ -1,23 +1,19 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mudah Banget! Pasang PostgreSQL dengan Podman untuk Development"
-date: '2021-11-21 15:06'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Database', 'PostgreSQL', 'Podman', 'Container']
-pin:
-hot:
-contributors: []
+date: "2021-11-21 15:06"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-11-21-postgresql-dengan-podman-untuk-development"
+author: "BanditHijo"
+category: "blog"
+tags: ["database", "postgresql", "podman", "container"]
 description: "Memasang service database seperti PostgreSQL merupakan sebuah tantangan tersendiri di setiap distribusi sistem operasi GNU/Linux. Yang merepotkan, terkadang cara yang sebelumnya kita lakukan berhasil, namun tidak berhasil pada versi distribusi yang terbaru. Sudah saatnya kita gunakan cara modern, khususnya untuk development, yaitu menggunakan kontainerisasi. Catatan kali ini, kita akan menjalankan PostgreSQL service dari container dengan bantuan Podman."
 ---
 
 # Latar Belakang Masalah
 
 Memasang service database seperti PostgreSQL merupakan sebuah tantangan tersendiri di setiap distribusi sistem operasi GNU/Linux. Karena, setiap distribusi memiliki cara yang berbeda-beda untuk menjalankan PostgreSQL service karena pilihan stack yang digunakan pada masing-masing distribusi biasanya berbeda. Yang merepotkan adalah apabila cara yang sebelumnya kita lakukan berhasil, namun tidak berhasil pada versi distribusi yang terbaru.
+
 
 # Pemecahan Masalah
 
@@ -32,7 +28,9 @@ Dengan menggunakan container, kita akan mendapatkan kemudahan-kemudahan, diantar
 3. Mudah untuk menjalankan dua container dengan service yang sama
 4. dan masih banyak lagi
 
+
 # Instalasi
+
 
 ## Siapkan Podman
 
@@ -126,6 +124,7 @@ Saya akan simpan pada direktori `$HOME/Podman/postgresql/data/`.
     └ 📁 data/
 ```
 
+
 ## Buat PostgreSQL Container
 
 Untuk membuat PostgreSQL container dengan praktis, saya menggunakan perintah,
@@ -169,6 +168,7 @@ Lihat pada kolom STATUS, **Up 4 seconds ago**, berarti sudah berhasil *running*.
 
 Tahap pembuatan container sudah berhasil.
 
+
 ## Akses PostgreSQL Shell
 
 Biasanya, untuk mengakses PostgreSQL shell, kita memerlukan tools yang bernama `psql`. Namun, karena host sistem yang kita gunakan tidak perlu memasang paket PostgreSQL client/server, maka kita tidak akan menemukan `psql`.
@@ -197,6 +197,7 @@ Type "help" for help.
 
 postgres=# _
 ```
+
 
 ## Buat PostgreSQL user untuk host username
 
@@ -276,7 +277,9 @@ Type "help" for help.
 bandithijo=# █
 ```
 
+
 # Troubleshooting
+
 
 ## 1. Connection on Unix Domain Socket
 
@@ -316,6 +319,7 @@ Kemudian restart shell,
 $ exec $SHELL
 ```
 
+
 # Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
@@ -328,13 +332,14 @@ Terima kasih.
 
 (^_^)
 
+
 # Referensi
 
-1. [Memasang PostgreSQL dengan Docker untuk Local Development](https://bandithijo.github.io/blog/postgresql-dengan-docker-untuk-local-development)
-<br>Diakses tanggal: 2021/11/21
+1. [Memasang PostgreSQL dengan Docker untuk Local Development](https://bandithijo.github.io/blog/postgresql-dengan-docker-untuk-local-development) \
+   Diakses tanggal: 2021-11-21
 
-2. [https://docs.podman.io/en/latest/Introduction.html](https://docs.podman.io/en/latest/Introduction.html)
-<br>Diakses tanggal: 2021/11/21
+1. [https://docs.podman.io/en/latest/Introduction.html](https://docs.podman.io/en/latest/Introduction.html) \
+   Diakses tanggal: 2021-11-21
 
-3. [Mencoba Bermain Container dengan Podman di Fedora (Bitnami/Postgresql)](https://bandithijo.github.io/v2/blog/mencoba-bermain-container-dengan-podman-di-fedora-bitnami-postgresql)
-<br>Diakses tanggal: 2021/11/21
+1. [Mencoba Bermain Container dengan Podman di Fedora (Bitnami/Postgresql)](https://bandithijo.github.io/v2/blog/mencoba-bermain-container-dengan-podman-di-fedora-bitnami-postgresql) \
+   Diakses tanggal: 2021-11-21

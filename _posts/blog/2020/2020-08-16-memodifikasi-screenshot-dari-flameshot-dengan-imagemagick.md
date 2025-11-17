@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Memodifikasi Hasil ScreenShot dari Flameshot dengan ImageMagick"
-date: '2020-08-16 10:13'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Ruby', 'ImageMagick']
-pin:
-hot: true
-contributors: []
+date: "2020-08-16 10:13"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-08-16-memodifikasi-screenshot-dari-flameshot-dengan-imagemagick"
+author: "BanditHijo"
+category: "blog"
+tags: ["ruby", "imagemagick"]
 description: "Ide untuk mempercantik hasil screenshot dari Flameshot ini terinspirasi dari gambar-gambar hasil screenshot yang diproduksi oleh sistem operasi OSX. Jangan khawatir, di GNU/Linux, kita juga dapat membuat hal serupa, malah bisa lebih keren karena kita dapat dengan bebas memodifikasinya. Dengan begini, hasil screenshot setiap orang, akan jadi unik dan khas, sesuai dengan karakter masing-masing."
 ---
 
@@ -516,5 +511,5 @@ if size == '0' or size <= '20':
 
 # Referensi
 
-1. [Membuat Hasil ScreenShot pada GNU/Linux seperti Milik macOS](/blog/membuat-hasil-screenshot-linux-seperti-pada-macos)
-<br>Diakses tanggal: 2020/08/16
+1. [Membuat Hasil ScreenShot pada GNU/Linux seperti Milik macOS](/blog/membuat-hasil-screenshot-linux-seperti-pada-macos) \
+   Diakses tanggal: 2020-08-16

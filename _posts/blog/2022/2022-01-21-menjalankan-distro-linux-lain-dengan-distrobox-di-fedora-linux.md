@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Menjalankan Distro Linux yang Lain dengan Distrobox di Fedora Linux"
-date: '2022-01-21 17:41'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Distrobox', 'Container']
-pin:
-hot:
-contributors: []
+date: "2022-01-21 17:41"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2022/2022-01-21-menjalankan-distro-linux-lain-dengan-distrobox-di-fedora-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["distrobox", "container"]
 description: "Dengan adanya teknologi container, untuk menggunakan distribusi lain langsung dari dalam Terminal Emulator distro yang kita gunakan tidak lagi rumit. Mudahnya seperti berpindah shell dengan SSH. Distrobox adalah tool yang akan menjembatani kita masuk ke dalam distribusi lain dalam bentuk container. Cara ini, dapat saya manfaatkan untuk memasang paket yang tidak tersedia di distro yang saya gunakan."
 ---
 
@@ -774,11 +769,11 @@ Terima kasih.
 
 # Referensi
 
-1. [https://twitter.com/LucaDiMaio11](https://twitter.com/LucaDiMaio11)
-<br>Diakses tanggal: 2022/01/22
+1. [https://twitter.com/LucaDiMaio11](https://twitter.com/LucaDiMaio11) \
+   Diakses tanggal: 2022-01-22
 
-1. [https://github.com/89luca89/distrobox](https://github.com/89luca89/distrobox)
-<br>Diakses tanggal: 2022/01/22
+1. [https://github.com/89luca89/distrobox](https://github.com/89luca89/distrobox) \
+   Diakses tanggal: 2022-01-22
 
-1. [https://fedoramagazine.org/run-distrobox-on-fedora-linux/](https://fedoramagazine.org/run-distrobox-on-fedora-linux/)
-<br>Diakses tanggal: 2022/01/22
+1. [https://fedoramagazine.org/run-distrobox-on-fedora-linux/](https://fedoramagazine.org/run-distrobox-on-fedora-linux/) \
+   Diakses tanggal: 2022-01-22

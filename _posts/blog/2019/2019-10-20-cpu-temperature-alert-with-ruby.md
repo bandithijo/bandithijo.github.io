@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat CPU Temperature Alert dengan Ruby"
-date: '2019-10-20 21:29'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Ruby']
-pin:
-hot:
-contributors: []
+date: "2019-10-20 21:29"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-10-20-cpu-temperature-alert-with-ruby"
+author: "BanditHijo"
+category: "blog"
+tags: ["ruby"]
 description: "Kadang saya memerlukan sebuah pananda yang benar-benar dapat menarik perhatian saya saat CPU temperature mencapai suhu tinggi. Tujuannya agar saya dapat mengambil tindakan antisipasi. Saya memang sudah memiliki status indikator. Namun, masih belum cukup menarik perhatian saya, terutama saat saya tidak sedang berada di depan laptop dan laptop sedang digunakan untuk mengcompile."
 ---
 
@@ -253,8 +248,8 @@ Tapi tidak saya rekomendasikan karena mungkin dapat menyebabkan serangan panik, 
 
 # Referensi
 
-1. [github.com/floriandejonckheere/thinkalert](https://github.com/floriandejonckheere/thinkalert)
-<br>Diakses tanggal: 2020/05/06
+1. [github.com/floriandejonckheere/thinkalert](https://github.com/floriandejonckheere/thinkalert) \
+   Diakses tanggal: 2020-05-06
 
-2. [aur.archlinux.org/packages/thinkalert](https://aur.archlinux.org/packages/thinkalert)
-<br>Diakses tanggal: 2020/05/06
+1. [aur.archlinux.org/packages/thinkalert](https://aur.archlinux.org/packages/thinkalert) \
+   Diakses tanggal: 2020-05-06

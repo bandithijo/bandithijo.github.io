@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Melokalisasi File .lnk yang Dihasilkan oleh Microsoft Office pada Arch Linux'
-date: '2019-03-28 08:33'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Wine', 'Arch Linux', 'Microsoft Office']
-pin:
-hot: true
-contributors: []
+layout: "post"
+title: "Melokalisasi File .lnk yang Dihasilkan oleh Microsoft Office pada Arch Linux"
+date: "2019-03-28 08:33"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-03-28-melokalisasi-file-lnk-dari-microsoft-office-pada-gnu-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["wine", "arch linux", "microsoft office"]
 description: "File .lnk dapat benar-benar membuat kotor direktori home kalian apabila tidak dilokalisasi dengan benar."
 ---
 
@@ -273,8 +268,8 @@ Sekarang file berekstensi `.lnk` yang dihasilkan oleh Microsoft Office sudah tid
 
 # Referensi
 
-1. [Office 2010 and .lnk files ](https://www.codeweavers.com/support/forums/general/?t=26;msg=128936)
-<br>Diakses tanggal: 2019/03/27
+1. [Office 2010 and .lnk files ](https://www.codeweavers.com/support/forums/general/?t=26;msg=128936) \
+   Diakses tanggal: 2019-03-27
 
-2. [Microsoft Office under Linux: .lnk files, WINE, Crossover, and you](http://www.efficientsoftware.co.nz/microsoft-office-linux-lnk-wine/)
-<br>Diakses tanggal: 2019/03/27
+1. [Microsoft Office under Linux: .lnk files, WINE, Crossover, and you](http://www.efficientsoftware.co.nz/microsoft-office-linux-lnk-wine/) \
+   Diakses tanggal: 2019-03-27

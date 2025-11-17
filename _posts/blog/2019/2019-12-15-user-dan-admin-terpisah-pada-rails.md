@@ -1,22 +1,14 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat User dan Admin Terpisah pada Rails yang menggunakan Devise"
-date: 2019-12-15 20:18
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Tips', 'Rails']
-pin:
-hot:
-contributors: []
+date: "2019-12-15 20:18"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-12-15-user-dan-admin-terpisah-pada-rails"
+author: "BanditHijo"
+category: "blog"
+tags: ["tips", "rails"]
 description: "Catatan kali ini tentang cara membuat user dan admin yang memiliki tabel terpisah pada Rails yang menggunakan Devise gem."
 ---
-
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
 
 # Prerequisite
 
@@ -872,20 +864,13 @@ Terima kasih.
 (^_^)
 
 
-
-
-
-
-
-
-
 # Referensi
 
-1. [github.com/plataformatec/devise](https://github.com/plataformatec/devise){:target="_blank"}
-<br>Diakses tanggal: 2019/12/15
+1. [github.com/plataformatec/devise](https://github.com/plataformatec/devise) \
+   Diakses tanggal: 2019-12-15
 
-2. [guides.rubyonrails.org/routing.html#controller-namespaces-and-routing](https://guides.rubyonrails.org/routing.html#controller-namespaces-and-routing){:target="_blank"}
-<br>Diakses tanggal: 2019/12/15
+1. [guides.rubyonrails.org/routing.html#controller-namespaces-and-routing](https://guides.rubyonrails.org/routing.html#controller-namespaces-and-routing) \
+   Diakses tanggal: 2019-12-15
 
-3. [github.com/plataformatec/devise/wiki/How-To:-Create-custom-layouts](https://github.com/plataformatec/devise/wiki/How-To:-Create-custom-layouts){:target="_blank"}
-<br>Diakses tanggal: 2019/12/15
+1. [github.com/plataformatec/devise/wiki/How-To:-Create-custom-layouts](https://github.com/plataformatec/devise/wiki/How-To:-Create-custom-layouts) \
+   Diakses tanggal: 2019-12-15

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Memperbaiki Blank Putih pada Aplikasi Berbasis Java di GNU/Linux"
-date: '2020-05-11 08:14'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Java']
-pin:
-hot:
-contributors: []
+date: "2020-05-11 08:14"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-05-11-blank-putih-pada-aplikasi-java-di-gnu-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["java"]
 description: "Saya mendapati beberapa aplikasi berbasis Java, apabila dibuka, hanya menampilkan *canvas* putih dan tidak merender *asset* seperti form, menu, button, text, gambar dan lain-lain."
 ---
 
@@ -57,5 +52,5 @@ Terima kasih.
 
 # Referensi
 
-1. [bbs.archlinux.org/viewtopic.php?id=159016](https://bbs.archlinux.org/viewtopic.php?id=159016)
-<br>Diakses tanggal: 2020/05/11
+1. [bbs.archlinux.org/viewtopic.php?id=159016](https://bbs.archlinux.org/viewtopic.php?id=159016) \
+   Diakses tanggal: 2020-05-11

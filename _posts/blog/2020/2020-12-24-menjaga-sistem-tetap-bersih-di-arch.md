@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Menjaga Sistem Tetap Bersih di Arch Linux"
-date: '2020-12-24 12:23'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Pacman']
-pin:
-hot:
-contributors: []
+date: "2020-12-24 12:23"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-12-24-menjaga-sistem-tetap-bersih-di-arch"
+author: "BanditHijo"
+category: "blog"
+tags: ["pacman"]
 description: "Kita mungkin gak sadar, kalau banyak cache yang menumpuk di sistem kita. Apalagi kalau kita tidak pernah membersihkannya, bisa mencapai ukuran Giga, loh! Berikut ini catatan yang mungkin dapat membantu teman-teman membersihkan cache agar sistem kita tetap bersih dan masih banyak space yang dapat kita gunakan. Sayang kan, kalau space bergiga-giga hanya untuk cache yang beberapa diantaranya mungkin sudah tidak kita perlukan."
 ---
 
@@ -295,5 +290,5 @@ Terima kasih.
 
 # Referensi
 
-1. [Average Linux User - How to clean Arch Linux (Manjaro)](https://youtu.be/3OoMvyHYWDY)
-<br>Diakses tanggal: 2020/12/24
+1. [Average Linux User - How to clean Arch Linux (Manjaro)](https://youtu.be/3OoMvyHYWDY) \
+   Diakses tanggal: 2020-12-24

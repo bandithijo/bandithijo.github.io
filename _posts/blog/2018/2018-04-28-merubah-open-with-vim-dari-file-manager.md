@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Merubah Open With Vim dari File Manager'
-date: '2018-04-28 09:58'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Vim', 'Tips', 'Tools']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Merubah Open With Vim dari File Manager"
+date: "2018-04-28 09:58"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-04-28-merubah-open-with-vim-dari-file-manager"
+author: "BanditHijo"
+category: "blog"
+tags: ['vim', 'tips', 'tools']
 description: "Saat ini saya sudah tidak lagi menggunakan Vim, karena beberapa alasan yang salah satunya adalah dukungan terhadap clipboard -- salah satu kegunannya adalah copy paste dari Vim ke dalam sistem dan sebaliknya. Sehingga saya lebih memilih turunan dari Vim yang membawa lebih banyak fitur, yaitu NeoVim."
 ---
 
@@ -74,5 +69,5 @@ Gambar 1. Open With Text Format pada PCMANFM File Manager
 
 # Referensi
 
-1. [askubuntu.com/questions/788736/open-vim-in-xfce4-terminal-from-thunar](https://askubuntu.com/questions/788736/open-vim-in-xfce4-terminal-from-thunar)
-<br>Diakses tanggal: 2018/04/28
+1. [askubuntu.com/questions/788736/open-vim-in-xfce4-terminal-from-thunar](https://askubuntu.com/questions/788736/open-vim-in-xfce4-terminal-from-thunar) \
+   Diakses tanggal: 2018-04-28

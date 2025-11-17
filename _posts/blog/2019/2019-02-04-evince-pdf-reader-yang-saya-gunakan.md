@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Evince, PDF Reader yang Menjadi Favorit Saya Sejak Lama'
-date: '2019-02-04 23:24'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Evince', 'Tool']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Evince, PDF Reader yang Menjadi Favorit Saya Sejak Lama"
+date: "2019-02-04 23:24"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-02-04-evince-pdf-reader-yang-saya-gunakan"
+author: "BanditHijo"
+category: "blog"
+tags: ["evince"]
 description: "Saya adalah Gnome user sejak GNOME2. Sayangnya, laptop saya saat ini sudah tidak dapat menggunakan GNOME3. Namun, meski demikian, keuntungan dari GNU/Linux adalah kita bebas menggunakan komponen aplikasi yang ada di dalamnya. Evince adalah salah PDF reader yang menjadi default PDF reader di GNOME yang meski saat ini saya sudah menggunakan Window Manager, namun masih tetap saya gunakan. Apa alasannya? Simak catatan dan ulasannya pada artikel ini."
 ---
 
@@ -176,14 +171,14 @@ Sepertinya segini dulu, mudah-mudahan bermanfaat.
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/GNOME/Document_viewer](https://wiki.archlinux.org/index.php/GNOME/Document_viewer)
-<br>Diakses tanggal: 2019/02/04
+1. [wiki.archlinux.org/index.php/GNOME/Document_viewer](https://wiki.archlinux.org/index.php/GNOME/Document_viewer) \
+   Diakses tanggal: 2019-02-04
 
-2. [wiki.gnome.org/Apps/Evince](https://wiki.gnome.org/Apps/Evince)
-<br>Diakses tanggal: 2019/02/04
+1. [wiki.gnome.org/Apps/Evince](https://wiki.gnome.org/Apps/Evince) \
+   Diakses tanggal: 2019-02-04
 
-3. [wiki.gnome.org/Apps/Evince/SupportedDocumentFormats](https://wiki.gnome.org/Apps/Evince/SupportedDocumentFormats)
-<br>Diakses tanggal: 2019/02/04
+1. [wiki.gnome.org/Apps/Evince/SupportedDocumentFormats](https://wiki.gnome.org/Apps/Evince/SupportedDocumentFormats) \
+   Diakses tanggal: 2019-02-04
 
-4. [poppler.freedesktop.org/](https://poppler.freedesktop.org/)
-<br>Diakses tanggal: 2019/02/04
+1. [poppler.freedesktop.org/](https://poppler.freedesktop.org/) \
+   Diakses tanggal: 2019-02-04

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Instal dan Konfigurasi GNS3 pada Arch Linux'
-date: '2018-04-16 04:22'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['GNS3']
-pin:
-hot: true
-contributors: []
+layout: "post"
+title: "Instal dan Konfigurasi GNS3 pada Arch Linux"
+date: "2018-04-16 04:22"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-04-16-gns3-arch-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["gns3"]
 description: "Panduan dan catatan untuk memasang GNS3 mungkin lebih banyak untuk distribusi turunan Debian atau Ubuntu. Apakah tidak dapat dipasang di Arch Linux? Tentu saja bisa."
 ---
 
@@ -450,11 +445,11 @@ Saya rasa cukup seperti ini saja proses instal dan konfigurasi GNS3 pada distrib
 
 # Referensi
 
-1. [binarynature.blogspot.com/2015/11/install-configure-gns3-arch-linux.html](http://binarynature.blogspot.com/2015/11/install-configure-gns3-arch-linux.html)
-<br>Diakses tanggal: 2018/04/16
+1. [binarynature.blogspot.com/2015/11/install-configure-gns3-arch-linux.html](http://binarynature.blogspot.com/2015/11/install-configure-gns3-arch-linux.html) \
+   Diakses tanggal: 2018-04-16
 
-2. [sourceforge.net/projects/vpcs/](http://sourceforge.net/projects/vpcs/)
-<br>Diakses tanggal: 2018/04/16
+1. [sourceforge.net/projects/vpcs/](http://sourceforge.net/projects/vpcs/) \
+   Diakses tanggal: 2018-04-16
 
-3. [wiki.archlinux.org/index.php/VirtualBox](https://wiki.archlinux.org/index.php/VirtualBox)
-<br>Diakses tanggal: 2018/04/19
+1. [wiki.archlinux.org/index.php/VirtualBox](https://wiki.archlinux.org/index.php/VirtualBox) \
+   Diakses tanggal: 2018-04-19

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "DWM, Window Manager yang Gak Pake Ribet"
-date: '2020-04-24 14:23'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['dwm']
-pin:
-hot: true
-contributors: []
+date: "2020-04-24 14:23"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-04-24-dwm-window-manager-anti-ribet"
+author: "BanditHijo"
+category: "blog"
+tags: ["dwm"]
 description: "Saya memulai perjalanan ke dunia Window Manager mulai dari i3WM. Namun, sebenarnya Window Manager yang pertama kali membuat saya semakin gregetan ingin menggunakan Window Manager adalah DWM. Memang bukan yang paling fancy."
 ---
 
@@ -1067,8 +1062,8 @@ Untuk mendapatkan versi update terbaru, kalian dapat langsung mengunjungi bebera
 
 # Referensi
 
-1. [suckless.org/](http://suckless.org/)
-<br>Diakses tanggal: 2020/04/24
+1. [suckless.org/](http://suckless.org/) \
+   Diakses tanggal: 2020-04-24
 
-2. [dwm.suckless.org/](https://dwm.suckless.org/)
-<br>Diakses tanggal: 2020/04/24
+1. [dwm.suckless.org/](https://dwm.suckless.org/) \
+   Diakses tanggal: 2020-04-24

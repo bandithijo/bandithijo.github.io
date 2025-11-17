@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'MPV, Bukan Pemutar Video Biasa'
-date: '2019-01-11 17:45'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['MPV']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "MPV, Bukan Pemutar Video Biasa"
+date: "2019-01-11 17:45"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-01-11-mpv-bukan-video-player-biasa"
+author: "BanditHijo"
+category: "blog"
+tags: ["mpv"]
 description: "Sebelum mengenal MPV, saya selalu merasa bahwa QuickTime (OSX Video Player) adalah Video Player Favorit saya. Sampai saya mengetahui MPV. Keyakinan sayapun goyah dan berubah. Catatan kali ini, saya akan bercerita ulasan dan bagaimana cara saya mengkonfigurasi MPV."
 ---
 
@@ -492,11 +487,11 @@ Masih banyak fitur-fitur keren dari MPV yang mungkin belum tercover oleh tulisan
 
 # Referensi
 
-1. [mpv.io](https://mpv.io/)
-<br>Diakses tanggal: 2019/01/11
+1. [mpv.io](https://mpv.io/) \
+   Diakses tanggal: 2019-01-11
 
-2. [github.com/mpv-player/mpv](https://github.com/mpv-player/mpv)
-<br>Diakses tanggal: 2019/01/11
+1. [github.com/mpv-player/mpv](https://github.com/mpv-player/mpv) \
+   Diakses tanggal: 2019-01-11
 
-3. [wiki.archlinux.org/index.php/mpv](https://wiki.archlinux.org/index.php/mpv)
-<br>Diakses tanggal: 2019/01/11
+1. [wiki.archlinux.org/index.php/mpv](https://wiki.archlinux.org/index.php/mpv) \
+   Diakses tanggal: 2019-01-11

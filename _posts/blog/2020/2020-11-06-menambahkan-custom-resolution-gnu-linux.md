@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Menambahkan Custom Resolution pada GNU/Linux"
-date: '2020-11-06 13:16'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Custom Screen Resolution']
-pin:
-hot:
-contributors: []
+date: "2020-11-06 13:16"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-11-06-menambahkan-custom-resolution-gnu-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ['screenresolution']
 description: "Saya tidak menyangka, kalau di GNU/Linux, kita dapat dengan bebas membuat dan mengatur resolusi dari monitor. Baik external maupun internal. Kalau di sistem operasi lain, mungkin harus menggunakan tools yang berbayar."
 ---
 

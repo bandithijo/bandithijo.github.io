@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Rails Project tanpa Database"
-date: '2019-10-09 18:57'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2019-10-09 18:57"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-10-09-rails-project-tanpa-database"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Catatan kali ini mengenai cara membuat Ruby on Rails project tanpa menggunakan database."
 ---
 
@@ -68,8 +63,8 @@ Terima kasih. (^_^)v
 
 # Referensi
 
-1. [Ruby on Rails 5.2 Release Notes (edgeguides)](https://edgeguides.rubyonrails.org/5_2_release_notes.html)
-<br>Diakses tanggal: 2019/10/09
+1. [Ruby on Rails 5.2 Release Notes (edgeguides)](https://edgeguides.rubyonrails.org/5_2_release_notes.html) \
+   Diakses tanggal: 2019-10-09
 
-2. [The Rails Command Line (edgeguides)](https://edgeguides.rubyonrails.org/command_line.html)
-<br>Diakses tanggal: 2019/10/09
+1. [The Rails Command Line (edgeguides)](https://edgeguides.rubyonrails.org/command_line.html) \
+   Diakses tanggal: 2019-10-09

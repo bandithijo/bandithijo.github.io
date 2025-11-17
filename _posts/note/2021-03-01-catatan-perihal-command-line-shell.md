@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Catatan dalam Menggunakan Command Line Shell"
-date: '2021-03-01 00:35'
-permalink: '/note/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'note'
-tags: ['CMD']
-wip: true
-pin:
-contributors: []
+date: "2021-03-01 00:35"
+permalink: "/note/:title"
+assets: "/assets/images/notes/2021-03-01-catatan-perihal-command-line-shell"
+author: "BanditHijo"
+category: "note"
+tags: ["cmd"]
 description: "Menggunakan command line shell, mungkin merupakan mimpi buruk bagi sebagian orang. Jangan khawatir, terkadang memang terasa mengerikan memasuki dunia baru yang kita belum mengenalnya. Belum terbiasa. Saya pun, terkadang masih sering lupa perintah-perintah yang akan digunakan. Untuk itulah catatan ini saya dokumentasikan."
 ---
 

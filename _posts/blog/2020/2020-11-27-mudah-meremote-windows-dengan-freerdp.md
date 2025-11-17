@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mudah Meremote Windows dengan FreeRDP"
-date: 2020-11-27 09:17
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['FreeRDP', 'Remote Desktop']
-pin:
-hot:
-contributors: []
+date: "2020-11-27 09:17"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-11-27-mudah-meremote-windows-dengan-freerdp"
+author: "BanditHijo"
+category: "blog"
+tags: ["freerdp", "remotedesktop"]
 description: "Meremote desktop bukan lagi hal asing kalau kita menggunakan GNU/Linux. Saya pun juga sering menggunakan remote desktop untuk mengakses laptop Windows yang ada di ruangan lain. Dengan cara ini, saya tidak perlu repot-repot membawa dan memindahkan laptop tersebut ke ruangan saya. Cukup akses secara remote dengan RDP."
 ---
 
@@ -132,11 +127,11 @@ Terima kasih.
 
 # Referensi
 
-1. [freerdp.com](https://www.freerdp.com)
-<br>Diakses tanggal: 2020/11/27
+1. [freerdp.com](https://www.freerdp.com) \
+   Diakses tanggal: 2020-11-27
 
-2. [github.com/FreeRDP/FreeRDP](https://github.com/FreeRDP/FreeRDP)
-<br>Diakses tanggal: 2020/11/27
+1. [github.com/FreeRDP/FreeRDP](https://github.com/FreeRDP/FreeRDP) \
+   Diakses tanggal: 2020-11-27
 
-3. [https://github.com/FreeRDP/FreeRDP/issues/931#issuecomment-340802163](https://github.com/FreeRDP/FreeRDP/issues/931#issuecomment-340802163)
-<br>Diakses tanggal: 2020/11/27
+1. [https://github.com/FreeRDP/FreeRDP/issues/931#issuecomment-340802163](https://github.com/FreeRDP/FreeRDP/issues/931#issuecomment-340802163) \
+   Diakses tanggal: 2020-11-27

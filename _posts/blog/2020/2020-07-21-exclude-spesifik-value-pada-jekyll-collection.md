@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Exclude Spesifik Value pada Jekyll Collection"
-date: '2020-07-21 20:30'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Jekyll', 'Liquid']
-pin:
-hot:
-contributors: []
+date: "2020-07-21 20:30"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-07-21-exclude-spesifik-value-pada-jekyll-collection"
+author: "BanditHijo"
+category: "blog"
+tags: ["jekyll", "liquid"]
 description: "Mengecualikan value tertentu dari sebuah data collection."
 ---
 
@@ -120,8 +115,8 @@ Terima kasih.
 
 # Referensi
 
-1. [How can I exclude a specific Collection in "related-products.liquid"?](https://community.shopify.com/c/Shopify-Design/How-can-I-exclude-a-specific-Collection-in-quot-related-products/td-p/238708)
-<br>Diakses tanggal: 2020/07/21
+1. [How can I exclude a specific Collection in "related-products.liquid"?](https://community.shopify.com/c/Shopify-Design/How-can-I-exclude-a-specific-Collection-in-quot-related-products/td-p/238708) \
+   Diakses tanggal: 2020-07-21
 
-2. [shopify.github.io/liquid/tags/iteration/](https://shopify.github.io/liquid/tags/iteration/)
-<br>Diakses tanggal: 2020/07/21
+1. [shopify.github.io/liquid/tags/iteration/](https://shopify.github.io/liquid/tags/iteration/) \
+   Diakses tanggal: 2020-07-21

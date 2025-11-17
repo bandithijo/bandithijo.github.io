@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Memasang WhatsApp Desktop pada GNU/Linux'
-date: '2018-04-25 21:11'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['WhatsApp']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Memasang WhatsApp Desktop pada GNU/Linux"
+date: "2018-04-25 21:11"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-04-25-memasang-whatsapp-desktop-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["whatsapp"]
 description: "Memegang *smartphone* adalah hal yang jarang sekali saya lakukan. Tangan saya setiap saat selalu berada di atas keyboard. Dampaknya, setiap pesan yang masuk melalui aplikasi messenger tidak segera dapat saya baca dan balas. Waktu-waktu dimana saya baru akan memegang *smartphone* adalah ketika urusan saya di atas keyboard telah selesai. Hahaha."
 ---
 
@@ -184,8 +179,8 @@ Perhatikan pada bagian `Exec=`, berisi lokasi dimana file `WhatsApp` tersimpan. 
 
 # Referensi
 
-1. [github.com/Enrico204/Whatsapp-Desktop/blob/master/readme.md](https://github.com/Enrico204/Whatsapp-Desktop/blob/master/readme.md)
-<br>Diakses tanggal: 2018/04/25
+1. [github.com/Enrico204/Whatsapp-Desktop/blob/master/readme.md](https://github.com/Enrico204/Whatsapp-Desktop/blob/master/readme.md) \
+   Diakses tanggal: 2018-04-25
 
-2. [yarnpkg.com/en/docs](https://yarnpkg.com/en/docs)
-<br>Diakses tanggal: 2018/04/25
+1. [yarnpkg.com/en/docs](https://yarnpkg.com/en/docs) \
+   Diakses tanggal: 2018-04-25

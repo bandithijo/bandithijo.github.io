@@ -3,14 +3,14 @@ layout: 'page'
 title: 'Tentang Blog dan Penulis'
 author: 'BanditHijo'
 permalink: '/about/'
-toc: true
+assets: "/assets/images/pages/about"
 ---
 
-![Banner](/pages/about/assets/images/contact.png)
+![Banner]({{ page.assets }}/banner.png)
 
 **BanditHijo**, tidak seperti yang anda pahami, Bandit (kata ganti orang untuk konotasi yang bersifat negatif) dan Hijo (kata plesetan dari warna hijau).
 
->**BanditHijo adalah sebuah frase yang tidak memiliki arti selain "nama" itu sendiri.**
+> **BanditHijo adalah sebuah frase yang tidak memiliki arti selain "nama" itu sendiri.**
 
 Dapat dikatakan **BanditHijo** adalah nama pena saya -- meminjam istilah keren para penulis buku,  meskipun saya masih sangat terlampau jauh untuk dapat menyebut diri saya sebagai seorang penulis.
 
@@ -131,27 +131,27 @@ Catatan tentang bagaimana cara untuk berdonasi, dapat teman-teman baca di sini, 
 
 # Bagimana workflow dalam menggunakan Linux?
 
-![Gambar 1](/pages/about/assets/images/gambar-01.png)
+![Gambar 1]({{ page.assets }}/01.png)
 
 Gambar 1. i3 Window Manger + Polybar + Conky + Solarized Dark = My Perfect Desktop
 
-![Gambar 7](/pages/about/assets/images/gambar-07.png)
+![Gambar 7]({{ page.assets }}/07.png)
 
 Gambar 7. Another Desktop with Wallpaper and Vim
 
-![Gambar 2](/pages/about/assets/images/gambar-02.png)
+![Gambar 2]({{ page.assets }}/02.png)
 
 Gambar 2. Tools yang saya pergunakan untuk menulis, Vim + Tmux
 
-![Gambar 3](/pages/about/assets/images/gambar-03.png)
+![Gambar 3]({{ page.assets }}/03.png)
 
 Gambar 3. Tools yang saya pergunakan untuk membuat vector image, Inkscape
 
-![Gambar 4](/pages/about/assets/images/gambar-04.png)
+![Gambar 4]({{ page.assets }}/04.png)
 
 Gambar 4. Tools yang saya pergunakan untuk membuat banner image, GIMP
 
-![Gambar 5](/pages/about/assets/images/gambar-05.png)
+![Gambar 5]({{ page.assets }}/05.png)
 
 Gambar 5. Tools yang saya pergunakan untuk image croping, gThumb
 

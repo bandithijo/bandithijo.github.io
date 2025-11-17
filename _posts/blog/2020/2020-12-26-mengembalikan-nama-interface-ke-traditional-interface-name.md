@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mengembalikan Nama Interface Menjadi Traditional Interface Name (eth0, wlan0, etc.)"
-date: '2020-12-26 08:48'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Network']
-pin:
-hot:
-contributors: []
+date: "2020-12-26 08:48"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-12-26-mengembalikan-nama-interface-ke-traditional-interface-name"
+author: "BanditHijo"
+category: "blog"
+tags: ["network"]
 description: "Saya ingin kembali menggunakan traditional network interface name, seperti sebelumnya eth0 & wlan0. Toh juga ini laptop sendiri. Biar gak ribet aja. Hehehe."
 ---
 
@@ -141,8 +136,8 @@ Terima kasih.
 
 # Referensi
 
-1. [Arch Wiki - Network configuration: Revert to traditional interface names](https://wiki.archlinux.org/index.php/Network_configuration#Revert_to_traditional_interface_names)
-<br>Diakses tanggal: 2020/12/26
+1. [Arch Wiki - Network configuration: Revert to traditional interface names](https://wiki.archlinux.org/index.php/Network_configuration#Revert_to_traditional_interface_names) \
+   Diakses tanggal: 2020-12-26
 
-2. [Artix Wiki - Migrtaion: Configure Networking](https://wiki.artixlinux.org/Main/Migration#Configure_networking)
-<br>Diakses tanggal: 2020/12/27
+1. [Artix Wiki - Migrtaion: Configure Networking](https://wiki.artixlinux.org/Main/Migration#Configure_networking) \
+   Diakses tanggal: 2020-12-27

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Relasi dengan Hanya Salah Satu Type pada Single Table Inheritance Model di Rails"
-date: '2021-02-17 20:52'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2021-02-17 20:52"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-02-17-relasi-dengan-salah-satu-type-pada-sti-pada-rails"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Menyambung catatan tentang Single Table Inheritance, namun kali ini mengenai relasi salah satu type dari model yang dipasang STI."
 ---
 
@@ -188,5 +183,5 @@ Terima kasih.
 
 # Referensi
 
-1. [guides.rubyonrails.org/association_basics.html#single-table-inheritance-sti](https://guides.rubyonrails.org/association_basics.html#single-table-inheritance-sti)
-<br>Diakses tanggal: 2021/02/17
+1. [guides.rubyonrails.org/association_basics.html#single-table-inheritance-sti](https://guides.rubyonrails.org/association_basics.html#single-table-inheritance-sti) \
+   Diakses tanggal: 2021-02-17

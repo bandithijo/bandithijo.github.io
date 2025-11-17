@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Memanfaatkan Vim Sebagai Note-Taking'
-date: '2019-02-16 12:22'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Vim', 'Note-Taking']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Memanfaatkan Vim Sebagai Note-Taking"
+date: "2019-02-16 12:22"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-02-16-memanfaatkan-vim-sebagai-notetaking"
+author: "BanditHijo"
+category: "blog"
+tags: ["vim", "note-taking"]
 description: "Sebagai seorang vimers tentu saja lebih senang menulis di atas Vim. Catatan kali ini saya ingin berbagi pengalaman saya dalam memanajeman Vim untuk digunakan sebagai note-taking."
 ---
 

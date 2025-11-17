@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat IP Address Static pada KVM libvirt (virt-manager)"
-date: '2020-07-19 13:04'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Virt Manager', 'libvirt', 'Network']
-pin:
-hot:
-contributors: []
+date: "2020-07-19 13:04"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-07-19-static-ip-address-pada-kvm-libvrit"
+author: "BanditHijo"
+category: "blog"
+tags: ["virtmanager", "libvirt", "network"]
 description: "IP address yang dimiliki guest instance selalu berubah-ubah. Akibatnya, setiap ingin melakukan ssh session, kita harus mengubah tujuan dari IP address yang dimiliki oleh guest instance. Permasalahan ini dapat diatasi dengan membuat IP address yang dimiliki oleh setiap guest instance menjadi static."
 ---
 
@@ -343,14 +338,14 @@ Terima kasih.
 
 # Referensi
 
-1. [KVM libvirt assign static guest IP addresses using DHCP on the virtual machine](https://www.cyberciti.biz/faq/linux-kvm-libvirt-dnsmasq-dhcp-static-ip-address-configuration-for-guest-os/)
-<br>Diakses tanggal: 2020/07/19
+1. [KVM libvirt assign static guest IP addresses using DHCP on the virtual machine](https://www.cyberciti.biz/faq/linux-kvm-libvirt-dnsmasq-dhcp-static-ip-address-configuration-for-guest-os/) \
+   Diakses tanggal: 2020-07-19
 
-2. [20.36. Displaying Per-guest Virtual Machine Information](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/virtualization_deployment_and_administration_guide/sect-managing_guest_virtual_machines_with_virsh-displaying_per_guest_virtual_machine_information)
-<br>Diakses tanggal: 2020/07/19
+1. [20.36. Displaying Per-guest Virtual Machine Information](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/virtualization_deployment_and_administration_guide/sect-managing_guest_virtual_machines_with_virsh-displaying_per_guest_virtual_machine_information) \
+   Diakses tanggal: 2020-07-19
 
-3. [14.22.6. Editing a Virtual Network's XML Configuration File](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/virtualization_administration_guide/sub-sect-virtual_networking_commands-eding_a_virtual_networks_xml_configuration_file)
-<br>Diakses tanggal: 2020/07/19
+1. [14.22.6. Editing a Virtual Network's XML Configuration File](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/virtualization_administration_guide/sub-sect-virtual_networking_commands-eding_a_virtual_networks_xml_configuration_file) \
+   Diakses tanggal: 2020-07-19
 
-4. [libvirt - 2.61. net-edit](https://libvirt.org/sources/virshcmdref/html/sect-net-edit.html)
-<br>Diakses tanggal: 2020/07/19
+1. [libvirt - 2.61. net-edit](https://libvirt.org/sources/virshcmdref/html/sect-net-edit.html) \
+   Diakses tanggal: 2020-07-19

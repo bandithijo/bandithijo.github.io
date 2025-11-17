@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Menambahkan Database pada Rails Project"
-date: '2019-10-09 21:30'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2019-10-09 21:30"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-10-09-menambahkan-database-pada-rails-project"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Catatan kali ini mengenai cara menambahkan atau mengganti database pada Ruby on Rails project yang sudah ada."
 ---
 
@@ -187,5 +182,5 @@ Terima kasih (^_^)v
 
 # Referensi
 
-1. [How to add a Postgre Database to an existing Rails project](https://stackoverflow.com/a/48025954/4862516)
-<br>Diakses tanggal: 2019/10/09
+1. [How to add a Postgre Database to an existing Rails project](https://stackoverflow.com/a/48025954/4862516) \
+   Diakses tanggal: 2019-10-09

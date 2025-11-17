@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Penjadwalan Tasks dengan Cron Menggunakan Whenever Gem pada Ruby/Rails"
-date: '2020-07-07 14:47'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Ruby', 'Rails']
-pin:
-hot:
-contributors: []
+date: "2020-07-07 14:47"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-07-07-penjadwalan-tasks-dengan-whenever-gem-pada-rails"
+author: "BanditHijo"
+category: "blog"
+tags: ["ruby", "rails"]
 description: "Saya memiliki sebuah rake task atau ruby script yang ingin saya jalankan secara otomatis di belakang layar tanpa perlu saya harus panggil terlebih dahulu. Bagaimana cara saya melakukannya pada Ruby on Rails?"
 ---
 
@@ -300,11 +295,11 @@ Terima kasih.
 
 # Referensi
 
-1. [Scheduling tasks in Rails with Cron and using the Whenever Gem](https://medium.com/@pawlkris/scheduling-tasks-in-rails-with-cron-and-using-the-whenever-gem-34aa68b992e3)
-<br>Diakses tanggal: 2020/07/07
+1. [Scheduling tasks in Rails with Cron and using the Whenever Gem](https://medium.com/@pawlkris/scheduling-tasks-in-rails-with-cron-and-using-the-whenever-gem-34aa68b992e3) \
+   Diakses tanggal: 2020-07-07
 
-2. [How to Schedule Cron Jobs in Ruby With the Whenever Gem](https://www.rubyguides.com/2019/04/ruby-whenever-gem/)
-<br>Diakses tanggal: 2020/07/07
+1. [How to Schedule Cron Jobs in Ruby With the Whenever Gem](https://www.rubyguides.com/2019/04/ruby-whenever-gem/) \
+   Diakses tanggal: 2020-07-07
 
-3. [github.com/javan/whenever](https://github.com/javan/whenever)
-<br>Diakses tanggal: 2020/07/07
+1. [github.com/javan/whenever](https://github.com/javan/whenever) \
+   Diakses tanggal: 2020-07-07

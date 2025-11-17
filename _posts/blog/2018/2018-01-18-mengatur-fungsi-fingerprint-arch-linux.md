@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Mengatur Fungsi dari Fingerprint pada Arch Linux'
-date: '2018-01-18'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['ThinkPad', 'Fingerprint']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Mengatur Fungsi dari Fingerprint pada Arch Linux"
+date: "2018-01-18"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-01-18-mengatur-fungsi-fingerprint-arch-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["thinkpad", "fingerprint"]
 description: "Kelebihan memiliki ThinkPad adalah terdapat fingerprint scanner module. Apakah di GNU/Linux fingerprint scanner dapat kita gunakan? Tentu saja! Saya menggunakannya setiap hari untuk authentication sudo dan unlock screenlock."
 ---
 
@@ -281,8 +276,8 @@ Untuk dapat menggunakannya, saat i3lock sudah aktif, terlebih dahulu kita harus 
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/Fprint](https://wiki.archlinux.org/index.php/Fprint)
-<br>Diakses tanggal: 2018/01/18
+1. [wiki.archlinux.org/index.php/Fprint](https://wiki.archlinux.org/index.php/Fprint) \
+   Diakses tanggal: 2018-01-18
 
-2. [bbs.archlinux.org/viewtopic.php?id=176181](https://bbs.archlinux.org/viewtopic.php?id=176181)
-<br>Diakses tanggal: 2018/01/18
+1. [bbs.archlinux.org/viewtopic.php?id=176181](https://bbs.archlinux.org/viewtopic.php?id=176181) \
+   Diakses tanggal: 2018-01-18

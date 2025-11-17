@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Memperbaiki Font Rendering Netbeans pada Arch Linux'
-date: '2018-01-16'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Netbeans']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Memperbaiki Font Rendering Netbeans pada Arch Linux"
+date: "2018-01-16"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-01-16-fix-font-rendering-netbeans-arch-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["netbeans"]
 description: "Netbeans merupakan aplikasi yang dibangun dengan bahasa Java. Java GUI Toolkit biasanya belum terkonfigurasi dengan baik agar memiliki tampilan yang mulus. Maka kita perlu untuk mengkonfigurasi agar tampilan Netbeans kita terlihat mulus."
 ---
 
@@ -85,5 +80,5 @@ Apakah _font rendering_ sudah lebih bagus dan _smooth_ ?
 
 # Referensi
 
-1. [thomashunter.name/blog/enabling-anti-aliasing-in-the-netbeans-editor/](https://thomashunter.name/blog/enabling-anti-aliasing-in-the-netbeans-editor/)
-<br>Diakses tanggal: 2018/01/16
+1. [thomashunter.name/blog/enabling-anti-aliasing-in-the-netbeans-editor/](https://thomashunter.name/blog/enabling-anti-aliasing-in-the-netbeans-editor/) \
+   Diakses tanggal: 2018-01-16

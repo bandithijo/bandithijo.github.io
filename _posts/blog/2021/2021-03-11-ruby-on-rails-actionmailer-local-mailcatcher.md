@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Konfigurasi Ruby on Rails ActionMailer pada Local Environment dengan MailCatcher"
-date: '2021-03-11 17:01'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2021-03-11 17:01"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-03-11-ruby-on-rails-actionmailer-local-mailcatcher"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Sebelumnya, saya sudah pernah mencatat tentang konfigurasi ActionMailer dengan memanfaatkan Gmail SMTP protokol untuk mengirimkan email confirmation. Untuk testing di lokal, kita dapat memanfaatkan tools MailCatcher."
 ---
 
@@ -154,5 +149,5 @@ Terima kasih.
 
 # Referensi
 
-1. [mailcatcher.me](https://mailcatcher.me/)
-<br>Diakses tanggal: 2021/03/11
+1. [mailcatcher.me](https://mailcatcher.me/) \
+   Diakses tanggal: 2021-03-11

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Bootstrap 4 Custom File Input dengan bs-custom-file-input Javascript pada Rails 6"
-date: '2021-02-05 01:19'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails', 'Bootstrap']
-pin:
-hot:
-contributors: []
+date: "2021-02-05 01:19"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-02-05-bootstrap-4-custom-file-inpu-pada-rails-6"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails", "bootstrap"]
 description: "Bootstrap 4 menyediakan component untuk custom file input, namun component ini memiliki dependensi Javascript library yang bernama bs-custom-file-input. Catatan kali ini, saya akan membahas bagaimana cara memasang bs-custom-file-input pada Rails 6 yang menggunakan Webpacker."
 ---
 
@@ -114,8 +109,8 @@ Terima kasih.
 
 # Referensi
 
-1. [getbootstrap.com/docs/4.6/components/input-group/](https://getbootstrap.com/docs/4.6/components/input-group/)
-<br>Diakses tanggal: 2021/02/05
+1. [getbootstrap.com/docs/4.6/components/input-group/](https://getbootstrap.com/docs/4.6/components/input-group/) \
+   Diakses tanggal: 2021-02-05
 
-2. [www.npmjs.com/package/bs-custom-file-input](https://www.npmjs.com/package/bs-custom-file-input)
-<br>Diakses tanggal: 2021/02/05
+1. [www.npmjs.com/package/bs-custom-file-input](https://www.npmjs.com/package/bs-custom-file-input) \
+   Diakses tanggal: 2021-02-05

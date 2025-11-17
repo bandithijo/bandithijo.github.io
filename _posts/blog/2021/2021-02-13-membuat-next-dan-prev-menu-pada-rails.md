@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Go To Next dan Previous Post Menu pada Blog Post yang Dibangun dengan Rails"
-date: '2021-02-13 18:07'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2021-02-13 18:07"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-02-13-membuat-next-dan-prev-menu-pada-rails"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Mungkin teman-teman pernah melihat sebuah blog yang memiliki fitur go to next dan previous post? Nah, kita akan membuat fitur yang sama seperti itu, apabila teman-teman memiliki web aplikasi dalam bentuk blog yang dibangun menggunakan Ruby on Rails."
 ---
 
@@ -171,8 +166,8 @@ Terima kasih.
 
 # Referensi
 
-1. [stackoverflow.com/questions/1275963/rails-next-post-and-previous-post-links-in-my-show-view-how-to](https://stackoverflow.com/questions/1275963/rails-next-post-and-previous-post-links-in-my-show-view-how-to)
-<br>Diakses tanggal: 2021/02/13
+1. [stackoverflow.com/questions/1275963/rails-next-post-and-previous-post-links-in-my-show-view-how-to](https://stackoverflow.com/questions/1275963/rails-next-post-and-previous-post-links-in-my-show-view-how-to) \
+   Diakses tanggal: 2021-02-13
 
-2. [gorails.com/forum/setting-up-next-post-and-previous-post](https://gorails.com/forum/setting-up-next-post-and-previous-post)
-<br>Diakses tanggal: 2021/02/13
+1. [gorails.com/forum/setting-up-next-post-and-previous-post](https://gorails.com/forum/setting-up-next-post-and-previous-post) \
+   Diakses tanggal: 2021-02-13

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Beberapa Command untuk Mengecek Kondisi Battery Laptop pada GNU/Linux'
-date: '2018-10-14 18:38'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Battery', 'Upower', 'ACPI']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Beberapa Command untuk Mengecek Kondisi Battery Laptop pada GNU/Linux"
+date: "2018-10-14 18:38"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-10-14-beberapa-command-mengecek-laptop-battery"
+author: "BanditHijo"
+category: "blog"
+tags: ["battery", "upower", "acpi"]
 description: "Karena tidak memiliki PC dan keseharian saya menggunakan laptop dalam menyelesaikan pekerjaan, saya merasa butuh untuk mencatat beberapa hal penting terkait dengan perintah-perintah yang biasa digunakan untuk membantu menegakkan diagnosis dalam pemeriksaan kondisi laptop."
 ---
 
@@ -243,5 +238,5 @@ Semoga bermanfaat buat yang membutuhkan.
 
 # Referensi
 
-1. [ostechnix.com/how-to-check-laptop-battery-status-in-terminal-in-linux/](https://www.ostechnix.com/how-to-check-laptop-battery-status-in-terminal-in-linux/)
-<br>Diakses tanggal: 2018/10/17
+1. [ostechnix.com/how-to-check-laptop-battery-status-in-terminal-in-linux/](https://www.ostechnix.com/how-to-check-laptop-battery-status-in-terminal-in-linux/) \
+   Diakses tanggal: 2018-10-17

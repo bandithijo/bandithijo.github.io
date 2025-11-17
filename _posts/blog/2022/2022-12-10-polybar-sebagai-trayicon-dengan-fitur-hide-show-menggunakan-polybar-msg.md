@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Polybar sebagai Trayicon dengan Fitur Hide/Show Menggunakan polybar-msg"
-date: '2022-12-10 19:52'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Polybar']
-pin:
-hot:
-contributors: []
+date: "2022-12-10 19:52"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2022/2022-12-10-polybar-sebagai-trayicon-dengan-fitur-hide-show-menggunakan-polybar-msg"
+author: "BanditHijo"
+category: "blog"
+tags: ["polybar"]
 description: "Tidak dipungkiri, beberapa aplikasi masih memerlukan trayicon. Bahkan ada beberapa aplikasi yang tidak dapat berjalan apabila tidak terdapat tempat untuk meletakkan trayicon. Untuk beberapa Window Manager yang tidak memiliki Bar yang menyediakan trayicon, kita dapat memanfaatkan Polybar sebagai tempat menyimpan trayicon."
 ---
 
@@ -198,8 +193,8 @@ Terima kasih sudah mampir yaa.
 
 # Referensi
 
-1. [https://www.reddit.com/r/Polybar/comments/ak246w/polybar_hide_show_on_key_press_release_bspwmsxhkd/](https://www.reddit.com/r/Polybar/comments/ak246w/polybar_hide_show_on_key_press_release_bspwmsxhkd/)
-<br>Diakses tanggal: 2022/12/10
+1. [https://www.reddit.com/r/Polybar/comments/ak246w/polybar_hide_show_on_key_press_release_bspwmsxhkd/](https://www.reddit.com/r/Polybar/comments/ak246w/polybar_hide_show_on_key_press_release_bspwmsxhkd/) \
+   Diakses tanggal: 2022-12-10
 
-1. [https://github.com/polybar/polybar/wiki#launching-the-bar-in-your-wms-bootstrap-routine](https://github.com/polybar/polybar/wiki#launching-the-bar-in-your-wms-bootstrap-routine)
-<br>Diakses tanggal: 2022/12/10
+1. [https://github.com/polybar/polybar/wiki#launching-the-bar-in-your-wms-bootstrap-routine](https://github.com/polybar/polybar/wiki#launching-the-bar-in-your-wms-bootstrap-routine) \
+   Diakses tanggal: 2022-12-10

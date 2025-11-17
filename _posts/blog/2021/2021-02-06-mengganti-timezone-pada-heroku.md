@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mengganti Zona Waktu pada Heroku"
-date: '2021-02-06 00:15'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Heroku']
-pin:
-hot:
-contributors: []
+date: "2021-02-06 00:15"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-02-06-mengganti-timezone-pada-heroku"
+author: "BanditHijo"
+category: "blog"
+tags: ["heroku"]
 description: "Kamu punya web aplikasi yang dideploy di Heroku? Dan tarnyata zona waktu Heroku berbeda dengan zona waktu konsumen dari web aplikasi kamu. Pada catatan kali ini, saya akan menunjukkan bagaimana cara mengganti zona waktu pada Heroku."
 ---
 
@@ -116,5 +111,5 @@ Terima kasih.
 
 # Referensi
 
-1. [dev.to/paulasantamaria/change-the-timezone-on-a-heroku-app-2b4](https://dev.to/paulasantamaria/change-the-timezone-on-a-heroku-app-2b4)
-<br>Diakses tanggal: 2021/02/06
+1. [dev.to/paulasantamaria/change-the-timezone-on-a-heroku-app-2b4](https://dev.to/paulasantamaria/change-the-timezone-on-a-heroku-app-2b4) \
+   Diakses tanggal: 2021-02-06

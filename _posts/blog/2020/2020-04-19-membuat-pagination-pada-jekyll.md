@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Pagination pada Jekyll"
-date: '2020-04-19 07:39'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Jekyll']
-pin:
-hot:
-contributors: []
+date: "2020-04-19 07:39"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-04-19-membuat-pagination-pada-jekyll"
+author: "BanditHijo"
+category: "blog"
+tags: ["jekyll"]
 description: "Kalau kita memiliki banyak sekali posting, rasanya kurang pas secara user experience jika menampilkan semua posting dalam satu halaman. Apabila ada ribuan posting akan sangat panjang sekali halamannya. Solusinya adalah membatasi jumlah post dalam satu halaman dengan pagination."
 ---
 
@@ -216,8 +211,8 @@ Terima kasih.
 
 # Referensi
 
-1. [jekyllrb.com/docs/pagination/](https://jekyllrb.com/docs/pagination/)
-<br>Diakses tanggal: 2020/04/19
+1. [jekyllrb.com/docs/pagination/](https://jekyllrb.com/docs/pagination/) \
+   Diakses tanggal: 2020-04-19
 
-2. [blog.webjeda.com/jekyll-pagination/](https://blog.webjeda.com/jekyll-pagination/)
-<br>Diakses tanggal: 2020/04/19
+1. [blog.webjeda.com/jekyll-pagination/](https://blog.webjeda.com/jekyll-pagination/) \
+   Diakses tanggal: 2020-04-19

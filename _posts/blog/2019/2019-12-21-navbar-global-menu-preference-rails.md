@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Navigation Bar Global Menu Preferences pada Rails"
-date: '2019-12-21 10:23'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2019-12-21 10:23"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-12-21-navbar-global-menu-preference-rails"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Catatan kali ini mengenai cara membuat navbar yang memiliki menu yang pilihannya hanya terdapat pada controller tertentu, namun menjadi dapat digunakan pada semua halaman."
 ---
 
@@ -553,8 +548,8 @@ Terima kasih.
 
 # Referensi
 
-1. [guides.rubyonrails.org/routing.html#controller-namespaces-and-routing](https://guides.rubyonrails.org/routing.html#controller-namespaces-and-routing)
-<br>Diakses tanggal: 2019/12/21
+1. [guides.rubyonrails.org/routing.html#controller-namespaces-and-routing](https://guides.rubyonrails.org/routing.html#controller-namespaces-and-routing) \
+   Diakses tanggal: 2019-12-21
 
-2. [guides.rubyonrails.org/i18n.html](https://guides.rubyonrails.org/i18n.html)
-<br>Diakses tanggal: 2019/12/21
+1. [guides.rubyonrails.org/i18n.html](https://guides.rubyonrails.org/i18n.html) \
+   Diakses tanggal: 2019-12-21

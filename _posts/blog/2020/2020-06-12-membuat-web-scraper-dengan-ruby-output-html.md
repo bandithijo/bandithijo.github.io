@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Web Scraper dengan Ruby (Output: HTML)"
-date: '2020-06-12 16:41'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Ruby']
-pin:
-hot:
-contributors: []
+date: "2020-06-12 16:41"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-06-12-membuat-web-scraper-dengan-ruby-output-html"
+author: "BanditHijo"
+category: "blog"
+tags: ["ruby"]
 description: "Web scraping adalah teknik mengambil atau mengekstrak sebagian data dari suatu website secara spesifik secara otomatis."
 ---
 
@@ -160,8 +155,8 @@ Selesai!
 
 # Referensi
 
-1. [It's Time To HTTParty!](https://blog.teamtreehouse.com/its-time-to-httparty)
-<br>Diakses tanggal: 2020/06/12
+1. [It's Time To HTTParty!](https://blog.teamtreehouse.com/its-time-to-httparty) \
+   Diakses tanggal: 2020-06-12
 
-2. [nokogiri.org](https://nokogiri.org/)
-<br>Diakses tanggal: 2020/06/12
+1. [nokogiri.org](https://nokogiri.org/) \
+   Diakses tanggal: 2020-06-12

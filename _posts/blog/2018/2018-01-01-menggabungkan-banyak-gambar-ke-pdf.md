@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Menggabungkan Banyak Gambar Menjadi Satu PDF dengan ImageMagick'
-date: '2018-01-01 03:20:58'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['ImageMagick']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Menggabungkan Banyak Gambar Menjadi Satu PDF dengan ImageMagick"
+date: "2018-01-01 03:20:58"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-01-01-menggabungkan-banyak-gambar-ke-pdf"
+author: "BanditHijo"
+category: "blog"
+tags: ["imagemagick"]
 description: "Tidak perlu perkakas GUI untuk menggabungkan banyak file PDF menjadi satu. Cukup dengan ImageMagick. Caranya pun sangat mudah!"
 ---
 
@@ -48,5 +43,5 @@ Arti dari tanda bintang (`*`) adalah semua file yang ada di dalam direktori ters
 
 # Referensi
 
-1. [archlinux.org/packages/extra/x86_64/imagemagick/](https://www.archlinux.org/packages/extra/x86_64/imagemagick/)
-<br>Diakses tanggal: 2018/01/20
+1. [archlinux.org/packages/extra/x86_64/imagemagick/](https://www.archlinux.org/packages/extra/x86_64/imagemagick/) \
+   Diakses tanggal: 2018-01-20

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Restart PulseAudio Dummy Output Tanpa Perlu Logout"
-date: '2020-06-21 12:27'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['PulseAudio']
-pin:
-hot:
-contributors: []
+date: "2020-06-21 12:27"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-06-21-restart-pulseaudio-dummy-output-tanpa-logout"
+author: "BanditHijo"
+category: "blog"
+tags: ["pulseaudio"]
 description: "Sistem tiba-tiba tidak terdengar suara. Jangan panik, segera jalankan protokol pertolongan pertama untuk mengatasi audio yang hilang pada pulseaudio!"
 ---
 
@@ -45,5 +40,5 @@ $ pulseaudio --check; pulseaudio --kill; pulseaudio --start
 
 # Referensi
 
-1. [How can I restart pulseaudio without having to logout?](https://askubuntu.com/questions/15223/how-can-i-restart-pulseaudio-without-having-to-logout/15224#15224)
-<br>Diakses tanggal: 2020/06/21
+1. [How can I restart pulseaudio without having to logout?](https://askubuntu.com/questions/15223/how-can-i-restart-pulseaudio-without-having-to-logout/15224#15224) \
+   Diakses tanggal: 2020-06-21

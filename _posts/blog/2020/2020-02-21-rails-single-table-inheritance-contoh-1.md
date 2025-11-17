@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mengenal Single Table Inheritance pada Rails (Contoh 1)"
-date: '2020-02-21 18:58'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails', 'Single Table Inheritance']
-pin:
-hot:
-contributors: []
+date: "2020-02-21 18:58"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-02-21-rails-single-table-inheritance-contoh-1"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails", "singletableinheritance"]
 description: "Mengimplementasikan Single Table Inheritance pada web apps yang dibangun dengan Ruby on Rails."
 ---
 
@@ -437,11 +432,11 @@ Terima kasih.
 
 # Referensi
 
-1. [www.driftingruby.com/episodes/single-table-inheritance](https://www.driftingruby.com/episodes/single-table-inheritance)
-<br>Diakses tanggal: 2020/02/21
+1. [www.driftingruby.com/episodes/single-table-inheritance](https://www.driftingruby.com/episodes/single-table-inheritance) \
+   Diakses tanggal: 2020-02-21
 
-2. [guides.rubyonrails.org/routing.html#controller-namespaces-and-routing](https://guides.rubyonrails.org/routing.html#controller-namespaces-and-routing)
-<br>Diakses tanggal: 2020/02/21
+1. [guides.rubyonrails.org/routing.html#controller-namespaces-and-routing](https://guides.rubyonrails.org/routing.html#controller-namespaces-and-routing) \
+   Diakses tanggal: 2020-02-21
 
-3. [api.rubyonrails.org/classes/ActiveRecord/Inheritance.html](https://api.rubyonrails.org/classes/ActiveRecord/Inheritance.html)
-<br>Diakses tanggal: 2020/02/21
+1. [api.rubyonrails.org/classes/ActiveRecord/Inheritance.html](https://api.rubyonrails.org/classes/ActiveRecord/Inheritance.html) \
+   Diakses tanggal: 2020-02-21

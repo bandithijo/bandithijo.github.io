@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Visualisasi Data Wilayah dengan Datamaps pada Rails"
-date: '2021-02-07 23:48'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['JavaScript', 'Rails']
-pin:
-hot:
-contributors: []
+date: "2021-02-07 23:48"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-02-07-visualisasi-data-wilayah-dengan-datamaps-pada-rails"
+author: "BanditHijo"
+category: "blog"
+tags: ["javascript", "rails"]
 description: "Mungkin teman-teman pernah melihat interaktif peta yang memvisualisasikan data tertentu, misal data jumlah penduduk setiap provinsi yang ditampilkan dalam bentuk peta. Catatan kali ini saya akan membahas bagaimana cara membuat hal tersebut dengan datamaps Javascript library pada Rails."
 ---
 
@@ -516,14 +511,14 @@ Terima kasih.
 
 # Referensi
 
-1. [github.com/markmarkoh/datamaps](https://github.com/markmarkoh/datamaps)
-<br>Diakses tanggal: 2021/02/07
+1. [github.com/markmarkoh/datamaps](https://github.com/markmarkoh/datamaps) \
+   Diakses tanggal: 2021-02-07
 
-2. [http://datamaps.github.io/](http://datamaps.github.io/)
-<br>Diakses tanggal: 2021/02/07
+1. [http://datamaps.github.io/](http://datamaps.github.io/) \
+   Diakses tanggal: 2021-02-07
 
-3. [github.com/d3/d3](https://github.com/d3/d3)
-<br>Diakses tanggal: 2021/02/07
+1. [github.com/d3/d3](https://github.com/d3/d3) \
+   Diakses tanggal: 2021-02-07
 
-4. [api.rubyonrails.org/classes/ActionView/Helpers/NumberHelper.html#method-i-number_with_delimiter](https://api.rubyonrails.org/classes/ActionView/Helpers/NumberHelper.html#method-i-number_with_delimiter)
-<br>Diakses tanggal: 2021/02/07
+1. [api.rubyonrails.org/classes/ActionView/Helpers/NumberHelper.html#method-i-number_with_delimiter](https://api.rubyonrails.org/classes/ActionView/Helpers/NumberHelper.html#method-i-number_with_delimiter) \
+   Diakses tanggal: 2021-02-07

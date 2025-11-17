@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Booting ke Linux ISO menggunakan GRUB2 (Tanpa Bootable FlashDrive) a.k.a RecoveryHD"
-date: '2020-08-30 19:47'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Tips', 'Arch Linux']
-pin:
-hot:
-contributors: []
+date: "2020-08-30 19:47"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-08-30-booting-ke-iso-linux-menggunakan-grub"
+author: "BanditHijo"
+category: "blog"
+tags: ["arch linux"]
 description: "Kita dapat memanfatkan GRUB untuk melakukan booting ke dalam ISO yang berada di dalam HardDrive. Dengan begini, kita dapat memanfaatkannya sebagai recovery sistem, apabila sewaktu-waktu sistem kita error dan kita memerlukan ISO dari distribusi yang kita gunakan untuk melakukan chroot. Jadi, tidak perlu lagi menggunakan FlashDrive."
 ---
 
@@ -196,17 +191,17 @@ Terima kasih.
 
 # Referensi
 
-1. [en.wikipedia.org/wiki/Chroot](https://en.wikipedia.org/wiki/Chroot)
-<br>Diakses tanggal: 2020/08/30
+1. [en.wikipedia.org/wiki/Chroot](https://en.wikipedia.org/wiki/Chroot) \
+   Diakses tanggal: 2020-08-30
 
-2. [wiki.archlinux.org/index.php/GRUB](https://wiki.archlinux.org/index.php/GRUB)
-<br>Diakses tanggal: 2020/08/30
+1. [wiki.archlinux.org/index.php/GRUB](https://wiki.archlinux.org/index.php/GRUB) \
+   Diakses tanggal: 2020-08-30
 
-3. [linoxide.com/linux-how-to/boot-linux-iso-images-directly-hard-drive/](https://linoxide.com/linux-how-to/boot-linux-iso-images-directly-hard-drive/)
-<br>Diakses tanggal: 2020/08/30
+1. [linoxide.com/linux-how-to/boot-linux-iso-images-directly-hard-drive/](https://linoxide.com/linux-how-to/boot-linux-iso-images-directly-hard-drive/) \
+   Diakses tanggal: 2020-08-30
 
-4. [archcraft-os.github.io/blog/grub.html](https://archcraft-os.github.io/blog/grub.html)
-<br>Diakses tanggal: 2020/08/30
+1. [archcraft-os.github.io/blog/grub.html](https://archcraft-os.github.io/blog/grub.html) \
+   Diakses tanggal: 2020-08-30
 
-5. [krisko210.blogspot.com/2019/12/boot-archlinux-cd-iso-from-local-disk.html?m=1](http://krisko210.blogspot.com/2019/12/boot-archlinux-cd-iso-from-local-disk.html?m=1)
-<br>Diakses tanggal: 2020/09/20
+1. [krisko210.blogspot.com/2019/12/boot-archlinux-cd-iso-from-local-disk.html?m=1](http://krisko210.blogspot.com/2019/12/boot-archlinux-cd-iso-from-local-disk.html?m=1) \
+   Diakses tanggal: 2020-09-20

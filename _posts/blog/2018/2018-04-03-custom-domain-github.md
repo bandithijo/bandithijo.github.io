@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Konfigurasi Custom Domain GitHub Page dengan Cloudflare dan Dewaweb'
-date: '2018-04-03'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Cloudflare']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Konfigurasi Custom Domain GitHub Page dengan Cloudflare dan Dewaweb"
+date: "2018-04-03"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-04-03-custom-domain-github"
+author: "BanditHijo"
+category: "blog"
+tags: ["cloudflare"]
 description: "Menggunakan GitHub Pages bukan berarti tidak dapat menggunakan Custom Domain seperti .com, .net, .org. Tentu saja bisa. Berikut ini saya memberikan salah satu cara, yaitu dengan menggunakan layanan Cloudflare. Caranya mudah sekali!"
 ---
 
@@ -372,8 +367,8 @@ Terima kasih saya ucapkan kepada kang [Sucipto](https://sucipto.net/) yang telah
 
 # Referensi
 
-1. [help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider](https://help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider)
-<br>DiaksesTanggal: 2018/04/08
+1. [help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider](https://help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider) \
+   DiaksesTanggal: 2018-04-08
 
-2. [blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/](https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/)
-<br>DiaksesTanggal: 2018/04/08
+1. [blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/](https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/) \
+   DiaksesTanggal: 2018-04-08

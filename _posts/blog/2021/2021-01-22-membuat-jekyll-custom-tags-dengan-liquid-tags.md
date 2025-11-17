@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Jekyll Custom Tags dengan Liquid Tags"
-date: '2021-01-22 09:53'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Jekyll']
-pin:
-hot:
-contributors: []
+date: "2021-01-22 09:53"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-01-22-membuat-jekyll-custom-tags-dengan-liquid-tags"
+author: "BanditHijo"
+category: "blog"
+tags: ["jekyll"]
 description: "Menulis teknikal blog cukup merepotkan apabila kita tidak menghandle dengan baik cara untuk memasukkan command prompt, karena akan banyak sekali command prompt yang akan digunakan pada teknikal blog. Catatan ini akan membahas bagaimana BanditHijo dalam menghandle command prompt di blog."
 ---
 
@@ -458,11 +453,11 @@ Terima kasih.
 
 # Referensi
 
-1. [jekyllrb.com/docs/liquid/tags/](https://jekyllrb.com/docs/liquid/tags/)
-<br>Diakses tanggal: 2021/01/22
+1. [jekyllrb.com/docs/liquid/tags/](https://jekyllrb.com/docs/liquid/tags/) \
+   Diakses tanggal: 2021-01-22
 
-2. [jekyllrb.com/docs/plugins/your-first-plugin/](https://jekyllrb.com/docs/plugins/your-first-plugin/)
-<br>Diakses tanggal: 2021/01/22
+1. [jekyllrb.com/docs/plugins/your-first-plugin/](https://jekyllrb.com/docs/plugins/your-first-plugin/) \
+   Diakses tanggal: 2021-01-22
 
-3. [blog.sverrirs.com/2016/04/custom-jekyll-tags.html](https://blog.sverrirs.com/2016/04/custom-jekyll-tags.html)
-<br>Diakses tanggal: 2021/01/25
+1. [blog.sverrirs.com/2016/04/custom-jekyll-tags.html](https://blog.sverrirs.com/2016/04/custom-jekyll-tags.html) \
+   Diakses tanggal: 2021-01-25

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Kesenangan Dalam Menggunakan Arch Linux Pt. 1'
-date: '2019-01-27 08:56'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc:
-category: 'blog'
-tags: ['Arch Linux']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Kesenangan Dalam Menggunakan Arch Linux Pt. 1"
+date: "2019-01-27 08:56"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-01-27-kesenangan-menggunakan-arch-linux-pt-1"
+author: "BanditHijo"
+category: "blog"
+tags: ["arch linux"]
 description: "Pada catatan ini saya sedikit bercerita kemudahan dalam menelusuri sebuah paket di repositori Arch Linux."
 ---
 
@@ -66,14 +61,14 @@ Sesuai janji, saya sudah menuliskan catatan mengenai hal ini, [di sini]({{ site.
 
 # Referensi
 
-1. [twitter.com/bandithijo/status/1088634885286199296](https://twitter.com/bandithijo/status/1088634885286199296)
-<br>Diakses tanggal: 2019/01/27
+1. [twitter.com/bandithijo/status/1088634885286199296](https://twitter.com/bandithijo/status/1088634885286199296) \
+   Diakses tanggal: 2019-01-27
 
-2. [twitter.com/bandithijo/status/1088636816498905088](https://twitter.com/bandithijo/status/1088636816498905088)
-<br>Diakses tanggal: 2019/01/27
+1. [twitter.com/bandithijo/status/1088636816498905088](https://twitter.com/bandithijo/status/1088636816498905088) \
+   Diakses tanggal: 2019-01-27
 
-3. [twitter.com/bandithijo/status/1088639007368474624](https://twitter.com/bandithijo/status/1088639007368474624)
-<br>Diakses tanggal: 2019/01/27
+1. [twitter.com/bandithijo/status/1088639007368474624](https://twitter.com/bandithijo/status/1088639007368474624) \
+   Diakses tanggal: 2019-01-27
 
-4. [wiki.archlinux.org/index.php/Dunst](https://wiki.archlinux.org/index.php/Dunst)
-<br>Diakses tanggal: 2019/01/27
+1. [wiki.archlinux.org/index.php/Dunst](https://wiki.archlinux.org/index.php/Dunst) \
+   Diakses tanggal: 2019-01-27

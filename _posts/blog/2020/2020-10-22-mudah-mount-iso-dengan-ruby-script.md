@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mudah Mount & Unmount File ISO Image dengan Ruby Script (feat. udisksctl)"
-date: '2020-10-22 06:52'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Ruby', 'udisksctl']
-pin:
-hot:
-contributors: []
+date: "2020-10-22 06:52"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-10-22-mudah-mount-iso-dengan-ruby-script"
+author: "BanditHijo"
+category: "blog"
+tags: ["ruby", "udisksctl"]
 description: "Mount file ISO mungkin merupakan hal yang sangat mudah kalau kita menggunakan File Manager GUI seperti Nautilus, Dolphin dan Thunar apabila kita telah memasang tools tambahan seperti disk mounter. Namun, bagaimana kalau kita ingin melakukan mounting hanya lewat Terminal? Ternyata caranya sangat mudah!"
 ---
 
@@ -396,5 +391,5 @@ Terima kasih.
 
 # Referensi
 
-1. [linuxize.com/post/how-to-mount-iso-file-on-linux/](https://linuxize.com/post/how-to-mount-iso-file-on-linux/)
-<br>Diakses tanggal: 2020/10/22
+1. [linuxize.com/post/how-to-mount-iso-file-on-linux/](https://linuxize.com/post/how-to-mount-iso-file-on-linux/) \
+   Diakses tanggal: 2020-10-22

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'BanditHijo.com, Bermigrasi dari Cloudflare ke Netlify'
-date: '2019-01-28 01:18'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Jekyll']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "BanditHijo.com, Bermigrasi dari Cloudflare ke Netlify"
+date: "2019-01-28 01:18"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-01-28-bermigrasi-dari-cloudflare-ke-netlify"
+author: "BanditHijo"
+category: "blog"
+tags: ["jekyll"]
 description: "Awalmula bandithijo berpindah domain ke .com menggunakan CLoudflare sebagai DNS resolver. Kali ini, kita akan coba menggunakan Netlify yang bertugas dsebagai CI dan juga DNS resolver."
 ---
 
@@ -417,20 +412,20 @@ Ini adalah catatan yang sangat panjang. Mudah-mudahan pengalaman saya dapat berm
 
 # Referensi
 
-1. [www.netlify.com/docs/continuous-deployment/](https://www.netlify.com/docs/continuous-deployment/)
-<br>Diakses tanggal: 2019/01/28
+1. [www.netlify.com/docs/continuous-deployment/](https://www.netlify.com/docs/continuous-deployment/) \
+   Diakses tanggal: 2019-01-28
 
-2. [www.netlify.com/docs/custom-domains/](https://www.netlify.com/docs/custom-domains/)
-<br>Diakses tanggal: 2019/01/28
+1. [www.netlify.com/docs/custom-domains/](https://www.netlify.com/docs/custom-domains/) \
+   Diakses tanggal: 2019-01-28
 
-3. [www.netlify.com/docs/dns/](https://www.netlify.com/docs/dns/)
-<br>Diakses tanggal: 2019/01/28
+1. [www.netlify.com/docs/dns/](https://www.netlify.com/docs/dns/) \
+   Diakses tanggal: 2019-01-28
 
-4. [www.netlify.com/docs/redirects/](https://www.netlify.com/docs/redirects/)
-<br>Diakses tanggal: 2019/01/28
+1. [www.netlify.com/docs/redirects/](https://www.netlify.com/docs/redirects/) \
+   Diakses tanggal: 2019-01-28
 
-5. [www.netlify.com/docs/netlify-toml-reference/](https://www.netlify.com/docs/netlify-toml-reference/)
-<br>Diakses tanggal: 2019/01/28
+1. [www.netlify.com/docs/netlify-toml-reference/](https://www.netlify.com/docs/netlify-toml-reference/) \
+   Diakses tanggal: 2019-01-28
 
-6. [github.com/jayvdb/jekyll-netlify](https://github.com/jayvdb/jekyll-netlify)
-<br>Diakses tanggal: 2019/01/28
+1. [github.com/jayvdb/jekyll-netlify](https://github.com/jayvdb/jekyll-netlify) \
+   Diakses tanggal: 2019-01-28

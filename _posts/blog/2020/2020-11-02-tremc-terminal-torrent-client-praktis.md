@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Tremc, Terminal Torrent Client yang Praktis dan Mudah Digunakan"
-date: '2020-11-02 19:00'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
+date: "2020-11-02 19:00"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-11-02-tremc-terminal-torrent-client-praktis"
+author: "BanditHijo"
 category: 'blog'
-tags: ['Torrent', 'TUI', 'Tool']
-pin:
-hot:
-contributors: []
+tags: ["torrent", "tui"]
 description: "Sebelumnya, saya sering menggunakan torrent client favorit saya sejak masih menggunakan OSX, yaitu Transmission. Namun, ternyata transmission memiliki daemon yang berjalan di background, lantas saya terpikir, kenapa tidak menggunakan user interface yang lebih sederhana, bukan dengan GUI melainkan dengan TUI. Tremc adalah salah satu user interface alternatif untuk transmission daemon yang dapat kita operasikan cukup menggunakan Terminal."
 ---
 
@@ -211,5 +206,5 @@ Terima kasih.
 
 # Referensi
 
-1. [github.com/tremc/tremc](https://github.com/tremc/tremc)
-<br>Diakses tanggal: 2020/11/02
+1. [github.com/tremc/tremc](https://github.com/tremc/tremc) \
+   Diakses tanggal: 2020-11-02

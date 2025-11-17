@@ -1,18 +1,13 @@
 ---
-layout: 'post'
-title: 'Upgrade Fedora 21 ke Fedora 22 dengan Fedup'
-date: '2015-06-15'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Fedora']
-pin:
-hot:
-contributors: []
-description:
+layout: "post"
+title: "Upgrade Fedora 21 ke Fedora 22 dengan Fedup"
+date: "2015-06-15"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2015/2015-06-15-upgrade-fedora-dengan-fedup"
+author: "BanditHijo"
+category: "blog"
+tags: ["fedora"]
+description: "Ini pertama kali bagi saya melakukan upgrade sistem operasi Fedora dengan menggunakan tool. Karena sebelumnya saya adalah pengguna Ubuntu. Dan upgrade sistem operasi pada lingkungan Ubuntu benar-benar sangat mudah. Karena developer sudah menyediakan aplikasi GUI (Graphic User Interface)."
 ---
 
 ![Banner](https://4.bp.blogspot.com/-YjUgk-I-xV8/VXstgLAFV_I/AAAAAAAABpk/YFOiY8VCCt0/s1600/Default%2BHeader%2BTemplate%2BPost%2B19.jpg)

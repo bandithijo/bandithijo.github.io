@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Menambahkan Email Kedua ke dalam GPG Key"
-date: '2020-12-11 10:43'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['GPG', 'GnuPG']
-pin:
-hot:
-contributors: []
+date: "2020-12-11 10:43"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-12-11-menambahkan-email-lain-kedalam-gpgkey"
+author: "BanditHijo"
+category: "blog"
+tags: ["gpg", "gnupg"]
 description: "Memiliki email yang banyak tidak berarti juga memiliki GPG key yang banyak. Kita dapat membuat alias untuk masing-masing email agar menggunakan GPG key kita yang sudah ada. Simak caranya di catatan berikut ini. Mudah banget!"
 ---
 
@@ -495,5 +490,5 @@ Terima kasih.
 
 # Referensi
 
-1. [Redmine - Adding Secondary Email Addresses to GPG Keys](https://redmine.dicelab.net/projects/instructibels/wiki/Adding_Secondary_Email_Addresses_to_GPG_Keys)
-<br>Diakses tanggal: 2020/12/11
+1. [Redmine - Adding Secondary Email Addresses to GPG Keys](https://redmine.dicelab.net/projects/instructibels/wiki/Adding_Secondary_Email_Addresses_to_GPG_Keys) \
+   Diakses tanggal: 2020-12-11

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Reclaim Old Username di SUSE Community Account (openSUSE)"
-date: '2023-09-19 23:40'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['openSUSE']
-pin:
-hot:
-contributors: []
+date: "2023-09-19 23:40"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2023/2023-09-19-reclaim-username-on-suse-community-account"
+author: "BanditHijo"
+category: "blog"
+tags: ["opensuse"]
 description: "Pada catatan ini saya ingin mendokumentasikan proses reclaim username SUSE Community Account saya yang tidak ikut migrasi pada Juli 2020 dan telah dibekukan."
 ---
 

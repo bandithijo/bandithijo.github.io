@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Konfigurasi DNSCrypt-proxy di FreeBSD"
-date: '2020-03-22 20:29'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['FreeBSD']
-pin:
-hot:
-contributors: []
+date: "2020-03-22 20:29"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-03-22-konfigurasi-dnscrypt-proxy-freebsd"
+author: "BanditHijo"
+category: "blog"
+tags: ["freebsd"]
 description: "Kali ini adalah catatan mengenai konfigurasi dnscrypt-proxy pada lingkungan FreeBSD."
 ---
 
@@ -458,14 +453,14 @@ Mungkin beberapa hari lagi akan saya update hasil ekperimen menjalankan DNSCrypt
 
 # Referensi
 
-1. [dnscrypt.info/](https://dnscrypt.info/)
-<br>Diakses tanggal: 2020/03/22
+1. [dnscrypt.info/](https://dnscrypt.info/) \
+   Diakses tanggal: 2020-03-22
 
-2. [dnscrypt.org/](https://www.dnscrypt.org/)
-<br>Diakses tanggal: 2020/03/22
+1. [dnscrypt.org/](https://www.dnscrypt.org/) \
+   Diakses tanggal: 2020-03-22
 
-3. [en.wikipedia.org/wiki/DNSCrypt](https://en.wikipedia.org/wiki/DNSCrypt)
-<br>Diakses tanggal: 2020/03/22
+1. [en.wikipedia.org/wiki/DNSCrypt](https://en.wikipedia.org/wiki/DNSCrypt) \
+   Diakses tanggal: 2020-03-22
 
-4. [github.com/DNSCrypt/dnscrypt-proxy](https://github.com/DNSCrypt/dnscrypt-proxy)
-<br>Diakses tanggal: 2020/03/22
+1. [github.com/DNSCrypt/dnscrypt-proxy](https://github.com/DNSCrypt/dnscrypt-proxy) \
+   Diakses tanggal: 2020-03-22

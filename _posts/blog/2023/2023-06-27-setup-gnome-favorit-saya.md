@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "GNOME Desktop dan Setup Favorit Saya"
-date: '2023-06-27 20:32'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['GNOME']
-pin:
-hot:
-contributors: []
+date: "2023-06-27 20:32"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2023/2023-06-27-setup-gnome-favorit-saya"
+author: "BanditHijo"
+category: "blog"
+tags: ["gnome"]
 description: "GNOME memang terkenal Desktop Environment yang berat dan membutuhkan banyak resource. Namun, saya tidak bisa tidak suka dengan GNOME. Mungkin karena saya cukup lama dengan OSX yang menjadi rujukan UI/UX design dari GNOME, sehingga saya merasa cukup nyaman menggunakan GNOME. Di catatan kali ini, saya akan mencatat tips ketika saya menggunakan GNOME di Arch Linux."
 ---
 
@@ -165,17 +160,17 @@ Terima kasih sudah mampir yaa.
 
 # Referensi
 
-1. [Arch Wiki: GDM > Login Screen Logo](https://wiki.archlinux.org/title/GDM#Login_screen_logo)
-<br>Diakses tanggal: 2023/06/27
+1. [Arch Wiki: GDM > Login Screen Logo](https://wiki.archlinux.org/title/GDM#Login_screen_logo) \
+   Diakses tanggal: 2023-06-27
 
-1. [Arch Wiki: GDM > Change Cursor Theme](https://wiki.archlinux.org/title/GDM#Changing_the_cursor_theme)
-<br>Diakses tanggal: 2023/06/27
+1. [Arch Wiki: GDM > Change Cursor Theme](https://wiki.archlinux.org/title/GDM#Changing_the_cursor_theme) \
+   Diakses tanggal: 2023-06-27
 
-1. [Disable the default app key (super+num) functionality on Ubuntu 17.10 and later](https://askubuntu.com/a/1425621/777616)
-<br>Diakses tanggal: 2023/06/27
+1. [Disable the default app key (super+num) functionality on Ubuntu 17.10 and later](https://askubuntu.com/a/1425621/777616) \
+   Diakses tanggal: 2023-06-27
 
-1. [wiki.archlinux.org: _Cursor themes_](https://wiki.archlinux.org/title/Cursor_themes#GNOME)
-<br>Diakses tanggal: 2023/10/07
+1. [wiki.archlinux.org: _Cursor themes_](https://wiki.archlinux.org/title/Cursor_themes#GNOME) \
+   Diakses tanggal: 2023-10-07
 
-1. [github.com/telegramdesktop/tdesktop: _Big cursor in GNOME Wayland #16920_](https://github.com/telegramdesktop/tdesktop/issues/16920#issuecomment-915085406)
-<br>Diakses tanggal: 2023/10/07
+1. [github.com/telegramdesktop/tdesktop: _Big cursor in GNOME Wayland #16920_](https://github.com/telegramdesktop/tdesktop/issues/16920#issuecomment-915085406) \
+   Diakses tanggal: 2023-10-07

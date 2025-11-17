@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Berbagi WiFi Tethering dengan create_ap pada GNU/Linux"
-date: '2019-12-22 09:51'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['create_ap']
-pin:
-hot:
-contributors: []
+date: "2019-12-22 09:51"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-12-22-wifi-tethering-dengan-create-ap-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["create_ap"]
 description: "Fitur tethering Wi-Fi mungkin mudah didapatkan apabila menggunakan Desktop Environment tertentu. Karena biasanya sudah menyediakan menu untuk berbagi network dengan Wi-Fi. Namun, bagaimana apabila kita menggunakan Window Manager? comprehensive network manager seperti NetworkManager sejauh yang saya tahu, belum memiliki fitur ini, namun ConnMan sudah memiliki fitur Wi-F- tethering. Namun, jangan khawatir, sudah ada tools yang standalone yang dapat menyediakan layanan Wi-Fi tethering, yaitu create_ap."
 ---
 
@@ -317,5 +312,5 @@ Untuk dokumentasi lebih lengkap dapat mengunjungi halaman GitHb repo dari **crea
 
 # Referensi
 
-1. [github.com/oblique/create_ap](https://github.com/oblique/create_ap)
-<br>Diakses tanggal: 2019/12/22
+1. [github.com/oblique/create_ap](https://github.com/oblique/create_ap) \
+   Diakses tanggal: 2019-12-22

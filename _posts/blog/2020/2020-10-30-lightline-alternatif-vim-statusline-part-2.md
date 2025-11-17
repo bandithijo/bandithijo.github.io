@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Lightline, Alternatif Vim Statusline Bagian 2 (feat. Defx, Tagbar)"
-date: '2020-10-30 09:26'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Vim', 'Lightline']
-pin:
-hot:
-contributors: []
+date: "2020-10-30 09:26"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-10-30-lightline-alternatif-vim-statusline-part-2"
+author: "BanditHijo"
+category: "blog"
+tags: ["vim", "lightline", "statusline"]
 description: "Pembaharuan konfig dari catatan sebelumnya. Kali ini dengan perubahan beberapa komponen untuk Defx dan juga Tagbar."
 ---
 
@@ -271,8 +266,8 @@ Terima kasih.
 
 # Referensi
 
-1. [github.com/itchyny/lightline.vim](https://github.com/itchyny/lightline.vim)
-<br>Diakses tanggal: 2020/10/30
+1. [github.com/itchyny/lightline.vim](https://github.com/itchyny/lightline.vim) \
+   Diakses tanggal: 2020-10-30
 
-2. [hagen.dev/kristoffer/dotfiles - [nvim] Lightline config](https://hagen.dev/kristoffer/dotfiles/commit/c833b54013c7a3522315da362b548595be098a6b)
-<br>Diakses tanggal: 2020/10/30
+1. [hagen.dev/kristoffer/dotfiles - [nvim] Lightline config](https://hagen.dev/kristoffer/dotfiles/commit/c833b54013c7a3522315da362b548595be098a6b) \
+   Diakses tanggal: 2020-10-30

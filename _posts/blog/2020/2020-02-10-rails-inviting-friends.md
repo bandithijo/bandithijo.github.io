@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Fitur Pertemanan dengan Referral Link pada Rails"
-date: '2020-02-10 15:10'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2020-02-10 15:10"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-02-10-rails-inviting-friends"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Catatan kali ini adalah mengenai cara membuat fitur pertemanan sederhana dengan menggunakan referral link saat melakukan invitation pada web aplikasi yang dibangun dengan Ruby on Rails."
 ---
 
@@ -493,8 +488,8 @@ Terima kasih
 
 # Referensi
 
-1. [guides.rubyonrails.org/association_basics.html](https://guides.rubyonrails.org/association_basics.html)
-<br>Diakses tanggal: 2020/02/10
+1. [guides.rubyonrails.org/association_basics.html](https://guides.rubyonrails.org/association_basics.html) \
+   Diakses tanggal: 2020-02-10
 
-2. [medium.com/@carlescliment/about-rails-concerns-a6b2f1776d7d](https://medium.com/@carlescliment/about-rails-concerns-a6b2f1776d7d)
-<br>Diakses tanggal: 2020/02/10
+1. [medium.com/@carlescliment/about-rails-concerns-a6b2f1776d7d](https://medium.com/@carlescliment/about-rails-concerns-a6b2f1776d7d) \
+   Diakses tanggal: 2020-02-10

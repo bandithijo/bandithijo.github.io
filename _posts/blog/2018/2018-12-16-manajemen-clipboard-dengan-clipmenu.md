@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Manajemen Clipboard dengan Clipmenu pada i3wm'
-date: '2018-12-16 11:42'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Clipmenu']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Manajemen Clipboard dengan Clipmenu pada i3wm"
+date: "2018-12-16 11:42"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-12-16-manajemen-clipboard-dengan-clipmenu"
+author: "BanditHijo"
+category: "blog"
+tags: ["clipmenu"]
 description: "Clipboard manajemen mungkin merupakan kebutuhan sebagian temen-temen. Saya pun juga menggunakannya. Ternyata sangat praktis sekali, kalau kita menggunakan clipboard manajemen, tidak perlu melakukan copy paste berulang-ulang perihal yang sama. Clipmenu adalah salah satu clipboard manajemen yang simple. Karena kebanyakan kebutuhan clipboard saya adalah text, saya merasa clipmenu sudah lebih dari cukup untuk memenuhi kebutuhan saya."
 ---
 
@@ -270,8 +265,8 @@ Karena keterbatasan pengetahuan, Saya masih mengalami kegagalan dalam menjalanka
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/Clipboard](https://wiki.archlinux.org/index.php/Clipboard)
-<br>Diakses tanggal: 2018/12/16
+1. [wiki.archlinux.org/index.php/Clipboard](https://wiki.archlinux.org/index.php/Clipboard) \
+   Diakses tanggal: 2018-12-16
 
-2. [github.com/cdown/clipmenu](https://github.com/cdown/clipmenu)
-<br>Diakses tanggal: 2018/12/16
+1. [github.com/cdown/clipmenu](https://github.com/cdown/clipmenu) \
+   Diakses tanggal: 2018-12-16

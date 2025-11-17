@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Konfigurasi DNSCrypt di Arch Linux'
-date: '2018-08-22 12:52'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['DNSCrypt']
-pin:
-hot: true
-contributors: []
+layout: "post"
+title: "Konfigurasi DNSCrypt di Arch Linux"
+date: "2018-08-22 12:52"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-08-22-konfigurasi-dnscrypt-proxy-arch-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["dnscrypt"]
 description: "Kesulitan dalam mengakses beberapa portal informasi membuat saya gerah. Pasalnya saya kehilangan beberapa bahan bacaan dan sumber informasi yang bagus sekali dari internet berskala global. Ada banyak cara, ini cara yang saya pergunakan untuk lolos dari pembatasan yang dilakukan pemerintah."
 ---
 
@@ -333,23 +328,23 @@ Yang dibutuhkan untuk dapat mennggunakan `dnscrypt-proxy` adalah :
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/DNSCrypt](https://wiki.archlinux.org/index.php/DNSCrypt)
-<br>Diakses tanggal: 2018/09/22
+1. [wiki.archlinux.org/index.php/DNSCrypt](https://wiki.archlinux.org/index.php/DNSCrypt) \
+   Diakses tanggal: 2018-09-22
 
-2. [wiki.archlinux.org/index.php/Domain_name_resolution#Conditional_forwarding](https://wiki.archlinux.org/index.php/Domain_name_resolution#Conditional_forwarding)
-<br>Diakses tanggal: 2020/06/26
+1. [wiki.archlinux.org/index.php/Domain_name_resolution#Conditional_forwarding](https://wiki.archlinux.org/index.php/Domain_name_resolution#Conditional_forwarding) \
+   Diakses tanggal: 2020-06-26
 
-3. [wiki.archlinux.org/index.php/NetworkManager#Use_openresolv](https://wiki.archlinux.org/index.php/NetworkManager#Use_openresolv)
-<br>Diakses tanggal: 2020/06/26
+1. [wiki.archlinux.org/index.php/NetworkManager#Use_openresolv](https://wiki.archlinux.org/index.php/NetworkManager#Use_openresolv) \
+   Diakses tanggal: 2020-06-26
 
-4. [wiki.archlinux.org/index.php/Openresolv](https://wiki.archlinux.org/index.php/Openresolv)
-<br>Diakses tanggal: 2020/06/26
+1. [wiki.archlinux.org/index.php/Openresolv](https://wiki.archlinux.org/index.php/Openresolv) \
+   Diakses tanggal: 2020-06-26
 
-5. [superuser.com/questions/442096/change-default-dns-server-in-arch-linux](https://superuser.com/questions/442096/change-default-dns-server-in-arch-linux)
-<br>Diakses tanggal: 2018/09/22
+1. [superuser.com/questions/442096/change-default-dns-server-in-arch-linux](https://superuser.com/questions/442096/change-default-dns-server-in-arch-linux) \
+   Diakses tanggal: 2018-09-22
 
-6. [github.com/jedisct1/dnscrypt-proxy](https://github.com/jedisct1/dnscrypt-proxy)
-<br>Diakses tanggal: 2018/09/22
+1. [github.com/jedisct1/dnscrypt-proxy](https://github.com/jedisct1/dnscrypt-proxy) \
+   Diakses tanggal: 2018-09-22
 
-7. [www.privacytools.io/providers/dns/](https://www.privacytools.io/providers/dns/)
-<br>Diakses tanggal: 2020/07/26
+1. [www.privacytools.io/providers/dns/](https://www.privacytools.io/providers/dns/) \
+   Diakses tanggal: 2020-07-26

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Desktop Entry untuk Aplikasi Terminal (TUI)"
-date: '2025-07-12 11:48'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['TUI', 'Desktop Entry']
-pin:
-hot:
-contributors: []
+date: "2025-07-12 11:48"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2025/2025-07-12-membuat-desktop-entry-untuk-aplikasi-terminal"
+author: "BanditHijo"
+category: "blog"
+tags: ["tui", "desktop entry"]
 description: "Hampir semua app TUI (Terminal User Interface) ketika dipasang, belum memiliki desktop entry atau application shortcut agar dapat dipanggil dari application launcher. Berikut ini cara saya membuatnya."
 ---
 
@@ -287,7 +282,9 @@ Comment=Property displayer for X
 
 1. [freedesktop.org - Desktop Entry Specification](https://specifications.freedesktop.org/desktop-entry-spec/latest/) \
    Diakses tanggal: 2025-07-12
+
 1. [freedesktop.org - Desktop Entry Specification - recognized-keys](https://specifications.freedesktop.org/desktop-entry-spec/latest/recognized-keys.html) \
    Diakses tanggal: 2025-07-12
+
 1. [Arch Linux Wiki - Desktop entries](https://wiki.archlinux.org/title/Desktop_entries) \
    Diakses tanggal: 2025-07-12

@@ -1,18 +1,13 @@
 ---
-layout: 'post'
-title: 'Memperbaiki Trash OSX'
-date: '2013-07-16'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['OSX', 'Tips']
-pin:
-hot:
-contributors: []
-description:
+layout: "post"
+title: "Memperbaiki Trash OSX"
+date: "2013-07-16"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2013/2013-07-16-memperbaiki-trash-osx"
+author: "BanditHijo"
+category: "blog"
+tags: ["osx", "tips"]
+description: "Beberapa hari yang lalu, teman saya yang bernama Ichsan mengalami permasalahan pada Trash OS X nya. Trash tidak berfungsi sebagaimana mestinya. Setiap mendelete file / folder selalu diminta untuk memasukkan password dan setelah itu file / folder tidak muncul pada folder Trash."
 ---
 
 ![Banner](https://1.bp.blogspot.com/-Jrz4qxlN9JQ/UeVCPh-mUCI/AAAAAAAABOs/XXW6t3UxH-s/s1600/Default+Header+Template+Post+14.jpg)
@@ -21,6 +16,7 @@ description:
 # Latar Belakang
 
 Beberapa hari yang lalu, teman saya yang bernama Ichsan mengalami permasalahan pada Trash OS X nya. Trash tidak berfungsi sebagaimana mestinya. Setiap mendelete file / folder selalu diminta untuk memasukkan password dan setelah itu file / folder tidak muncul pada folder Trash.
+
 Apabila anda mempunyai permasalahan yang sama, saya akan mencoba memberikan tutorial bagaimana cara memperbaikinya.
 
 

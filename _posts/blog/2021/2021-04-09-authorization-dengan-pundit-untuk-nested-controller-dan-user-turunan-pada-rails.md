@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Authorization dengan Pundit untuk Nested Controller dan User Turunan pada Rails"
-date: '2021-04-09 05:40'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails', 'Pundit', 'Authorization']
-pin:
-hot:
-contributors: []
+date: "2021-04-09 05:40"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-04-09-authorization-dengan-pundit-untuk-nested-controller-dan-user-turunan-pada-rails"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails", "pundit", "authorization"]
 description: "Catatan ini mengenai bagaimana cara membuat authorization dengan bantuan gem Pundit pada controller bertingkat, misal Authors::Articles. Author merupakan turunan dari User, karena User memiliki lebih dari satu user type. Tujuannya adalah untuk membatasi Author hanya dapat mengedit & menghapus Article miliknya saja."
 ---
 
@@ -357,5 +352,5 @@ Terima kasih.
 
 # Referensi
 
-1. [github.com/varvet/pundit](https://github.com/varvet/pundit)
-<br>Diakses tanggal: 2021/04/09
+1. [github.com/varvet/pundit](https://github.com/varvet/pundit) \
+   Diakses tanggal: 2021-04-09

@@ -1,14 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Translate-shell, Translator CLI Online yang Praktis"
-date: '2020-10-16 22:05'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['CLI', 'Tool']
+date: "2020-10-16 22:05"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-10-16-translate-shell-translator-cli-mudah"
+author: "BanditHijo"
+category: "blog"
+tags: ["cli", "translator"]
 pin:
 hot:
 contributors: []
@@ -432,14 +430,14 @@ Terima kasih.
 
 # Referensi
 
-1. [github.com/soimort/translate-shell](https://github.com/soimort/translate-shell)
-<br>Diakses tanggal: 2020/10/16
+1. [github.com/soimort/translate-shell](https://github.com/soimort/translate-shell) \
+   Diakses tanggal: 2020-10-16
 
-2. [github.com/soimort/translate-shell/wiki/Configuration](https://github.com/soimort/translate-shell/wiki/Configuration)
-<br>Diakses tanggal: 2020/10/16
+1. [github.com/soimort/translate-shell/wiki/Configuration](https://github.com/soimort/translate-shell/wiki/Configuration) \
+   Diakses tanggal: 2020-10-16
 
-3. [github.com/soimort/translate-shell/wiki/REPL](https://github.com/soimort/translate-shell/wiki/REPL)
-<br>Diakses tanggal: 2020/10/16
+1. [github.com/soimort/translate-shell/wiki/REPL](https://github.com/soimort/translate-shell/wiki/REPL) \
+   Diakses tanggal: 2020-10-16
 
-4. [github.com/VincentCordobes/vim-translate](https://github.com/VincentCordobes/vim-translate)
-<br>Diakses tanggal: 2020/10/16
+1. [github.com/VincentCordobes/vim-translate](https://github.com/VincentCordobes/vim-translate) \
+   Diakses tanggal: 2020-10-16

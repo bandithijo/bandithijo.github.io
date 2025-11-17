@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mudah Melacak IP Provider dan Location dengan Geocoder Gem"
-date: '2024-09-14 08:34'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Ruby', 'Geocoding']
-pin:
-hot:
-contributors: []
+date: "2024-09-14 08:34"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2024/2024-09-14-mudah-melacak-ip-provider-dan-location-dengan-geocoder-gem"
+author: "BanditHijo"
+category: "blog"
+tags: ["ruby", "geocoding"]
 description: "Sebelum menggunakan Geocoder Gem, saya menggunakan infosniper.net untuk mengetahui IP provider dan location. Repotnya, saya harus membuka browser. Dengan Geocoder Gem, saya hanya perlu menggunakan Terminal. Praktis."
 ---
 
@@ -19,7 +14,7 @@ description: "Sebelum menggunakan Geocoder Gem, saya menggunakan infosniper.net 
 
 {{ page.description }}
 
-![Gambar 1](/assets/images/posts/2024/2024-09-14-01-infosniper.png)
+![Gambar 1]({{ page.assets }}/01.png)
 
 Gambar 1. Tampilan Website infosniper.net
 
@@ -104,8 +99,8 @@ Terima kasih sudah mampir yaa.
 
 1. infosniper.net \
    <https://infosniper.net/> \
-   Diakses tanggal: 2024/09/14
+   Diakses tanggal: 2024-09-14
 
-2. alexreisner/geocoder \
+1. alexreisner/geocoder \
    <https://github.com/alexreisner/geocoder> \
-   Diakses tanggal: 2024/09/14
+   Diakses tanggal: 2024-09-14

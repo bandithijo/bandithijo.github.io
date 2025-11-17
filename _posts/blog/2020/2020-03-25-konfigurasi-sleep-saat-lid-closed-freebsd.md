@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Konfigurasi Sleep/Standby Ketika Lid Laptop Ditutup pada FreeBSD"
-date: '2020-03-25 08:26'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['FreeBSD']
-pin:
-hot:
-contributors: []
+date: "2020-03-25 08:26"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-03-25-konfigurasi-sleep-saat-lid-closed-freebsd"
+author: "BanditHijo"
+category: "blog"
+tags: ["freebsd"]
 description: "Apakah kita dapat mengkonfigurasi FreeBSD untuk melakukan sleep/standby ketika lid laptop di tutup?"
 ---
 
@@ -165,8 +160,8 @@ Terima kasih.
 
 # Referensi
 
-1. [freebsd.org/doc/en_US.ISO8859-1/articles/linux-users/startup.html](https://www.freebsd.org/doc/en_US.ISO8859-1/articles/linux-users/startup.html)
-<br>Diakses tanggal: 2020/03/25
+1. [freebsd.org/doc/en_US.ISO8859-1/articles/linux-users/startup.html](https://www.freebsd.org/doc/en_US.ISO8859-1/articles/linux-users/startup.html) \
+   Diakses tanggal: 2020-03-25
 
-2. [FreeBSD Handkbook - Power and Resource Management](https://docs.freebsd.org/en/books/handbook/config/#acpi-overview)
-<br>Diakses tanggal: 2021/04/23
+1. [FreeBSD Handkbook - Power and Resource Management](https://docs.freebsd.org/en/books/handbook/config/#acpi-overview) \
+   Diakses tanggal: 2021-04-23

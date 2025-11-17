@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Module Sederhana untuk Status Bar GNU/Linux dan FreeBSD"
-date: '2020-05-11 23:47'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['FreeBSD', 'Linux', 'Bash']
-pin:
-hot:
-contributors: []
+date: "2020-05-11 23:47"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-05-11-module-sederhana-untuk-status-bar"
+author: "BanditHijo"
+category: "blog"
+tags: ["freebsd", "linux", "bash"]
 description: "Module-module bash script ini dapat digunakan untuk status bar. Saya menggunakannya untuk dwm status saya. Bukan yang terbaik tapi cukup untuk memenuhi kebutuhan saya akan status indikator."
 ---
 

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'St, Simple/Suckless Terminal yang Sudah Lama Saya Dambakan'
-date: '2019-02-08 17:08'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Terminal Emulator', 'Simple Terminal']
-pin:
-hot: true
-contributors: []
+layout: "post"
+title: "St, Simple/Suckless Terminal yang Sudah Lama Saya Dambakan"
+date: "2019-02-08 17:08"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-02-08-st-simple-terminal-dari-suckless"
+author: "BanditHijo"
+category: "blog"
+tags: ["terminal emulator", "simple terminal", "st"]
 description: "ST sangat saya inginkan karena kesederhanannya. Karena minimalisnya inilah saya ingin menjadikannya basis untuk meracik terminal yang sesuai dengan yang saya inginkan."
 ---
 
@@ -263,8 +258,8 @@ Gampang kan?
 
 # Referensi
 
-1. [st.suckless.org/](https://st.suckless.org/)
-<br>Diakses tanggal: 2019/02/08
+1. [st.suckless.org/](https://st.suckless.org/) \
+   Diakses tanggal: 2019-02-08
 
-2. [wiki.archlinux.org/index.php/St](https://wiki.archlinux.org/index.php/St)
-<br>Diakses tanggal: 2019/02/08
+1. [wiki.archlinux.org/index.php/St](https://wiki.archlinux.org/index.php/St) \
+   Diakses tanggal: 2019-02-08

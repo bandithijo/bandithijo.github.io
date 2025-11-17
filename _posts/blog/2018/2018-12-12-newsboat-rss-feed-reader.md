@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Newsboat, Mendapatkan Info Update Artikel Terbaru Blog/Website'
-date: '2018-12-12 06:44'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Newsboat']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Newsboat, Mendapatkan Info Update Artikel Terbaru Blog/Website"
+date: "2018-12-12 06:44"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-12-12-newsboat-rss-feed-reader"
+author: "BanditHijo"
+category: "blog"
+tags: ["newsboat"]
 description: "Newsboat adalah salah satu RSS feed reader yang sederhana dan berjalan dengan Terminal User Interface. Sangat cocok untuk teman-teman yang lebih sering berinteraksi dengan Terminal."
 ---
 
@@ -291,8 +286,8 @@ Oh iya, apabila kamu punya blog juga, saya sangat mengharapkan untuk tetap mempe
 
 # Referensi
 
-1. [en.wikipedia.org/wiki/RSS](https://en.wikipedia.org/wiki/RSS)
-<br>Diakses tanggal: 2018/12/12
+1. [en.wikipedia.org/wiki/RSS](https://en.wikipedia.org/wiki/RSS) \
+   Diakses tanggal: 2018-12-12
 
-2. [wiki.archlinux.org/index.php/Newsboat](https://wiki.archlinux.org/index.php/Newsboat)
-<br>Diakses tanggal: 2018/12/12
+1. [wiki.archlinux.org/index.php/Newsboat](https://wiki.archlinux.org/index.php/Newsboat) \
+   Diakses tanggal: 2018-12-12

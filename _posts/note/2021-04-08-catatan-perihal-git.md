@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Catatan dalam Berinteraksi dengan Git"
-date: '2021-04-08 15:09'
-permalink: '/note/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'note'
-tags: ['Git']
-wip: true
-pin:
-contributors: []
+date: "2021-04-08 15:09"
+permalink: "/note/:title"
+assets: "/assets/images/notes/2021-04-08-catatan-perihal-git"
+author: "BanditHijo"
+category: "note"
+tags: ["git"]
 description: "Catatan ini berisi hal-hal terkait dengan Git. Beberapa hal mungkin terlupakan karena tidak terlalu sering digunakan. Saya merasa perlu untuk menyimpan dan merangkumnya pada sebuah catatan."
 ---
 

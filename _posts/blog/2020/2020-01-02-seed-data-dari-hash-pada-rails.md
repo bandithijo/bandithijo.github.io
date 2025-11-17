@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Seed Data dari Hash pada Rails"
-date: '2020-01-02 07:46'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2020-01-02 07:46"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-01-02-seed-data-dari-hash-pada-rails"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Catatan kali ini tentang cara membuat seed data dari data yang berbentuk hash pada Ruby on Rails."
 ---
 
@@ -159,8 +154,8 @@ Terima kasih.
 
 # Referensi
 
-1. [docs.ruby-lang.org/en/2.0.0/Hash.html](https://docs.ruby-lang.org/en/2.0.0/Hash.html)
-<br>Diakses tanggal: 2020/01/02
+1. [docs.ruby-lang.org/en/2.0.0/Hash.html](https://docs.ruby-lang.org/en/2.0.0/Hash.html) \
+   Diakses tanggal: 2020-01-02
 
-2. [launchschool.com/books/ruby/read/hashes](https://launchschool.com/books/ruby/read/hashes)
-<br>Diakses tanggal: 2020/01/02
+1. [launchschool.com/books/ruby/read/hashes](https://launchschool.com/books/ruby/read/hashes) \
+   Diakses tanggal: 2020-01-02

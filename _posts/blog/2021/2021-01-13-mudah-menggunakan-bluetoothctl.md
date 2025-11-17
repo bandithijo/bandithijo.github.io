@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mudah Menggunakan Bluetoothctl"
-date: '2021-01-13 15:28'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Bluetooth', 'Bluetoothctl']
-pin:
-hot:
-contributors: []
+date: "2021-01-13 15:28"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-01-13-mudah-menggunakan-bluetoothctl"
+author: "BanditHijo"
+category: "blog"
+tags: ["bluetooth", "bluetoothctl"]
 description: "Bluetoothctl adalah interaktif shell yang dapat kita gunakan untuk berinteraksi dengan bluetooth device tanpa perlu menggunakan GUI tool seperti Blueman Manager atau Blueman applet (trayicon). Cukup dengan bermodalkan Terminal, kita dapat melakukan power on, scan on, pairing, connecting dan disconnecting."
 ---
 
@@ -432,5 +427,5 @@ Terima kasih.
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/Bluetooth](https://wiki.archlinux.org/index.php/Bluetooth)
-<br>Diakses tanggal: 2021/01/13
+1. [wiki.archlinux.org/index.php/Bluetooth](https://wiki.archlinux.org/index.php/Bluetooth) \
+   Diakses tanggal: 2021-01-13

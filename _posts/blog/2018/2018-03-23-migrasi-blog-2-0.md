@@ -1,21 +1,18 @@
 ---
-layout: 'post'
-title: 'Migrasi Blog 2.0'
-date: '2018-03-23'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Jekyll']
-pin:
-hot: true
-contributors: []
+layout: "post"
+title: "Migrasi Blog 2.0"
+date: "2018-03-23"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-03-23-migrasi-blog-2-0"
+author: "BanditHijo"
+category: "blog"
+tags: ["Jekyll"]
 description: "Memilih platform untuk ngeblog memang mumet-mumet asik. Ini adalah catatan perjalanan BanditHijo (R)-Chive hingga akhirnya menggunakan Jekyll."
 ---
 
 # Latar Belakang
+
+{{ page.description }}
 
 
 ## CMS
@@ -263,6 +260,11 @@ Terima kasih, untuk teman-teman yang sudah mampir dan membaca sepenggal kisah me
 
 Berikut ini adalah nama-nama yang telah menginspirasi saya untuk bermigrasi menggunakan _static site generator_ :
 
-1. [sucipto.net](https://sucipto.net/)
-2. [epsi-rns.github.io](http://epsi-rns.github.io)
-3. [raniaamina.github.io](https://raniaamina.github.io/)
+1. [sucipto.net](https://sucipto.net/) \
+   Diakses tanggal: 2018-03-23
+
+1. [epsi-rns.github.io](http://epsi-rns.github.io) \
+   Diakses tanggal: 2018-03-23
+
+1. [raniaamina.github.io](https://raniaamina.github.io/) \
+   Diakses tanggal: 2018-03-23

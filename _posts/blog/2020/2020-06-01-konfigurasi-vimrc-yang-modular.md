@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Konfigurasi Vimrc yang Modular"
-date: '2020-06-01 21:15'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Vim']
-pin:
-hot:
-contributors: []
+date: "2020-06-01 21:15"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-06-01-konfigurasi-vimrc-yang-modular"
+author: "BanditHijo"
+category: "blog"
+tags: ["vim"]
 description: "Mengelola dan mengkonfigurasi vimrc yang sudah sangat panjang (ribuan baris) mungkin akan membingungkan. Kita bisa membuat vimrc yang modular untuk memisahkan beberapa komponen-komponen sesuai dengan fungsinya. Dengan begini, diharapkan akan lebih mudah untuk dikelola."
 ---
 
@@ -165,8 +160,8 @@ Terima kasih.
 
 # Referensi
 
-1. [gist.github.com/mnabila/112d8770475bb3cb6ce59b076fb1d123](https://gist.github.com/mnabila/112d8770475bb3cb6ce59b076fb1d123)
-<br>Diakses tanggal: 2020/06/01
+1. [gist.github.com/mnabila/112d8770475bb3cb6ce59b076fb1d123](https://gist.github.com/mnabila/112d8770475bb3cb6ce59b076fb1d123) \
+   Diakses tanggal: 2020-06-01
 
-2. [www.sthu.org/code/codesnippets/vimconf.html](https://www.sthu.org/code/codesnippets/vimconf.html)
-<br>Diakses tanggal: 2020/06/01
+1. [www.sthu.org/code/codesnippets/vimconf.html](https://www.sthu.org/code/codesnippets/vimconf.html) \
+   Diakses tanggal: 2020-06-01

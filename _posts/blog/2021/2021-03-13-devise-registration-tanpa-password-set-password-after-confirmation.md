@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Devise Registration Tanpa Password, Set Password Setelah Confirmation"
-date: '2021-03-13 14:00'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2021-03-13 14:00"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-03-13-devise-registration-tanpa-password-set-password-after-confirmation"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Catatan kali ini tentang pemanfaatan Devise gem untuk registration tanpa menginputkan password, password akan diminta setelah user membuka link konfirmasi yang dikirimkan via email."
 ---
 
@@ -528,8 +523,8 @@ Terima kasih.
 
 # Referensi
 
-1. [mailcatcher.me](https://mailcatcher.me/)
-<br>Diakses tanggal: 2021/03/13
+1. [mailcatcher.me](https://mailcatcher.me/) \
+   Diakses tanggal: 2021-03-13
 
-2. [Let's Build: With Ruby on Rails - Project Management App - Part 2](https://youtu.be/RpyzUdxZolY)
-<br>Diakses tanggal: 2021/03/13
+1. [Let's Build: With Ruby on Rails - Project Management App - Part 2](https://youtu.be/RpyzUdxZolY) \
+   Diakses tanggal: 2021-03-13

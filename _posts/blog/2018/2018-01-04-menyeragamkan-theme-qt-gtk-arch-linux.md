@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Menyeragamkan Theme Qt dan GTK+ pada Arch Linux'
-date: '2018-01-04'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Qt', 'GTK']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Menyeragamkan Theme Qt dan GTK+ pada Arch Linux"
+date: "2018-01-04"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-01-04-menyeragamkan-theme-qt-gtk-arch-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["qt", "gtk"]
 description: "Setidaknya terdapat dua library yang mengatur tampilan GUI di GNU/Linux, Gtk dan Qt. Masing-masing memiliki theme yang berbeda. Apakah mungkin untuk diseragamkan?"
 ---
 
@@ -263,5 +258,5 @@ Kebebasan seperti ini yang membuat saya betah menggunakan sistem operasi GNU/Lin
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications](https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications)
-<br>Diakses tanggal: 2018/01/22
+1. [wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications](https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications) \
+   Diakses tanggal: 2018-01-22

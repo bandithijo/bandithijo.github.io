@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Unified Remote, Mengontrol Mouse Cursor GNU/Linux dari Android'
-date: '2019-01-14 19:35'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Unified Remote', 'Tool']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Unified Remote, Mengontrol Mouse Cursor GNU/Linux dari Android"
+date: "2019-01-14 19:35"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-01-14-unified-remote-mengontrol-cursor-linux-dari-android"
+author: "BanditHijo"
+category: "blog"
+tags: ["unified remote", "tool"]
 description: "Siapa yang tidak kagum dengan remote control? Menggerakkan benda jarak jauh? Keren sekali yaa! Catatan kali ini saya akan membahasa dan mengulas tentang sebuah perkakas untuk mengontrol mouse cursor GNU/Linux dari Smartphone Android."
 ---
 
@@ -364,8 +359,8 @@ Sedap!
 
 # Referensi
 
-1. [unifiedremote.com/tutorials](https://www.unifiedremote.com/tutorials)
-<br>Diakses tanggal: 2019/01/14
+1. [unifiedremote.com/tutorials](https://www.unifiedremote.com/tutorials) \
+   Diakses tanggal: 2019-01-14
 
-2. [unifiedremote.com/features](https://www.unifiedremote.com/features)
-<br>Diakses tanggal: 2019/01/14
+1. [unifiedremote.com/features](https://www.unifiedremote.com/features) \
+   Diakses tanggal: 2019-01-14

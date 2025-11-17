@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Memasang Rubocop (Ruby linter) pada Vim"
-date: '2020-08-25 05:17'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Vim', 'Ruby', 'Rubocop']
-pin:
-hot:
-contributors: []
+date: "2020-08-25 05:17"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-08-25-memasang-rubocop-pada-vim"
+author: "BanditHijo"
+category: "blog"
+tags: ["vim", "ruby", "rubocop"]
 description: "Linter merupakan tools untuk mengecek aturan menulis kode program dari bahasa yang kita pergunakan. Menggunakan linter sudah menjadi kewajiban kalau kita membangun program secara kolaborasi. Agar baris kode yang kita tulis dapat seragam dengan programer yang lain. Ruby memiliki salah satunya linter yang cukup banyak digunakan yaitu Rubocop. Catatan kali ini mungin dapat membantu teman-teman untuk mengkonfigurasi Rubocop dengan Vim text editor."
 ---
 
@@ -391,14 +386,14 @@ Terima kasih.
 
 # Referensi
 
-1. [github.com/rubocop-hq/rubocop](https://github.com/rubocop-hq/rubocop)
-<br>Diakses tanggal: 2020/08/25
+1. [github.com/rubocop-hq/rubocop](https://github.com/rubocop-hq/rubocop) \
+   Diakses tanggal: 2020-08-25
 
-2. [github.com/ngmy/vim-rubocop](https://github.com/ngmy/vim-rubocop)
-<br>Diakses tanggal: 2020/08/25
+1. [github.com/ngmy/vim-rubocop](https://github.com/ngmy/vim-rubocop) \
+   Diakses tanggal: 2020-08-25
 
-3. [Vim for Ruby and Rails in 2019](https://www.vimfromscratch.com/articles/vim-for-ruby-and-rails-in-2019/)
-<br>Diakses tanggal: 2020/08/25
+1. [Vim for Ruby and Rails in 2019](https://www.vimfromscratch.com/articles/vim-for-ruby-and-rails-in-2019/) \
+   Diakses tanggal: 2020-08-25
 
-4. [github.com/dense-analysis/ale](https://github.com/dense-analysis/ale)
-<br>Diakses tanggal: 2020/08/25
+1. [github.com/dense-analysis/ale](https://github.com/dense-analysis/ale) \
+   Diakses tanggal: 2020-08-25

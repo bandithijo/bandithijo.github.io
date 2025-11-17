@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Instal dan Konfigurasi WinBox pada GNU/Linux'
-date: '2018-04-24 00:59'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Wine']
-pin:
-hot: true
-contributors: []
+layout: "post"
+title: "Instal dan Konfigurasi WinBox pada GNU/Linux"
+date: "2018-04-24 00:59"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-04-24-instal-dan-konfigurasi-winbox-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["wine"]
 description: "Semester ini saya mengikuti mata kuliah Sekuriti Jaringan. Pada salah satu pembahasan, terdapat praktik membuat dan mengkonfigurasi VPN (Virtual Private Network). Perangkat yang digunakan adalah perangkat dari MikroTik yang membutuhkan aplikasi WinBox untuk mempermudah proses konfigurasi. Dapat lebih memudahkan karena konfigurasi dilakukan dengan menggunakan GUI (Graphical User Interface)."
 ---
 
@@ -141,5 +136,5 @@ Dengan demikian proses instalasi dan konfigurasi WinBox pada GNU/Linux saya rasa
 
 # Referensi
 
-1. [https://wiki.archlinux.org/index.php/wine](https://wiki.archlinux.org/index.php/wine)
-<br>Diakses tanggal: 2018/04/24
+1. [https://wiki.archlinux.org/index.php/wine](https://wiki.archlinux.org/index.php/wine) \
+   Diakses tanggal: 2018-04-24

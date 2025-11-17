@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Export Data ke XLSX (SpreadSheet) pada Rails"
-date: '2020-07-09 00:56'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2020-07-09 00:56"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-07-09-export-data-ke-xlsx-spreadsheet-pada-rails"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Saya memeiliki sejumlah data yang ingin saya eksport ke dalam bentuk spreadshet dengan format XLSX. Apakah saya dapat melakukannya dengan Ruby on Rails?"
 ---
 
@@ -150,17 +145,17 @@ Terima kasih.
 
 # Referensi
 
-1. [github.com/randym/axlsx](https://github.com/randym/axlsx)
-<br>Diakses tanggal: 2020/07/09
+1. [github.com/randym/axlsx](https://github.com/randym/axlsx) \
+   Diakses tanggal: 2020-07-09
 
-2. [github.com/caxlsx/caxlsx_rails](https://github.com/caxlsx/caxlsx_rails)
-<br>Diakses tanggal: 2020/07/09
+1. [github.com/caxlsx/caxlsx_rails](https://github.com/caxlsx/caxlsx_rails) \
+   Diakses tanggal: 2020-07-09
 
-3. [github.com/caxlsx/caxlsx](https://github.com/caxlsx/caxlsx)
-<br>Diakses tanggal: 2020/07/09
+1. [github.com/caxlsx/caxlsx](https://github.com/caxlsx/caxlsx) \
+   Diakses tanggal: 2020-07-09
 
-4. [github.com/caxlsx/caxlsx_rails](https://github.com/caxlsx/caxlsx_rails)
-<br>Diakses tanggal: 2020/07/09
+1. [github.com/caxlsx/caxlsx_rails](https://github.com/caxlsx/caxlsx_rails) \
+   Diakses tanggal: 2020-07-09
 
-5. [%Q, %q, %W, %w, %x, %r, %s](https://simpleror.wordpress.com/2009/03/15/q-q-w-w-x-r-s/)
-<br>Diakses tanggal: 2020/07/09
+1. [%Q, %q, %W, %w, %x, %r, %s](https://simpleror.wordpress.com/2009/03/15/q-q-w-w-x-r-s/) \
+   Diakses tanggal: 2020-07-09

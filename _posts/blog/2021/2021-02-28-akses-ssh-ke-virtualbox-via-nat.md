@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mengakses VirtualBox Instance dengan SSH via NAT"
-date: '2021-02-28 06:17'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['VirtualBox']
-pin:
-hot:
-contributors: []
+date: "2021-02-28 06:17"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-02-28-akses-ssh-ke-virtualbox-via-nat"
+author: "BanditHijo"
+category: "blog"
+tags: ["virtualbox"]
 description: "Apabila kita memasang sistem operasi server yang hanya menjalankan CLI pada VirtualBox, saya lebih memilih untuk mengaksesnya menggunakan SSH ketimbang harus menggunakan UI dari VirtualBox. Alasannya karena, saya lebih familiar dengan Terminal Emulator yang saya gunakan."
 ---
 
@@ -110,5 +105,5 @@ Terima kasih.
 
 # Referensi
 
-1. [https://bobcares.com/blog/virtualbox-ssh-nat](https://bobcares.com/blog/virtualbox-ssh-nat)
-<br>Diakses tanggal: 2021/02/28
+1. [https://bobcares.com/blog/virtualbox-ssh-nat](https://bobcares.com/blog/virtualbox-ssh-nat) \
+   Diakses tanggal: 2021-02-28

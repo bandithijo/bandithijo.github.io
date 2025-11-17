@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Kustomisasi IRB Prompt (Pry)"
-date: '2020-09-13 09:43'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Ruby', 'IRB', 'Pry']
-pin:
-hot:
-contributors: []
+date: "2020-09-13 09:43"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-09-13-custom-irb-prompt"
+author: "BanditHijo"
+category: "blog"
+tags: ["ruby", "irb", "pry"]
 description: "Mengkonstumisasi IRB prompt agar menjadi lebih sederhana (sesuai degan yang kita inginkan)."
 ---
 
@@ -225,17 +220,17 @@ Terima kasih.
 
 # Referensi
 
-1. [stackoverflow.com/a/6041003/4862516](https://stackoverflow.com/a/6041003/4862516)
-<br>Diakses tanggal: 2020/09/13
+1. [stackoverflow.com/a/6041003/4862516](https://stackoverflow.com/a/6041003/4862516) \
+   Diakses tanggal: 2020/09/13
 
-2. [ruby-doc.org/stdlib-2.7.1/libdoc/irb/rdoc/IRB.html](https://ruby-doc.org/stdlib-2.7.1/libdoc/irb/rdoc/IRB.html)
-<br>Diakses tanggal: 2020/09/13
+1. [ruby-doc.org/stdlib-2.7.1/libdoc/irb/rdoc/IRB.html](https://ruby-doc.org/stdlib-2.7.1/libdoc/irb/rdoc/IRB.html) \
+   Diakses tanggal: 2020/09/13
 
-3. [rubyguides.com/2018/12/what-is-a-repl-in-ruby/](https://www.rubyguides.com/2018/12/what-is-a-repl-in-ruby/)
-<br>Diakses tanggal: 2020/09/13
+1. [rubyguides.com/2018/12/what-is-a-repl-in-ruby/](https://www.rubyguides.com/2018/12/what-is-a-repl-in-ruby/) \
+   Diakses tanggal: 2020/09/13
 
-4. [blog.joshsoftware.com/2020/01/20/making-your-rails-console-interesting/](https://blog.joshsoftware.com/2020/01/20/making-your-rails-console-interesting/)
-<br>Diakses tanggal: 2020/09/13
+1. [blog.joshsoftware.com/2020/01/20/making-your-rails-console-interesting/](https://blog.joshsoftware.com/2020/01/20/making-your-rails-console-interesting/) \
+   Diakses tanggal: 2020/09/13
 
-5. [github.com/pry/pry](https://github.com/pry/pry)
-<br>Diakses tanggal: 2020/09/13
+1. [github.com/pry/pry](https://github.com/pry/pry) \
+   Diakses tanggal: 2020/09/13

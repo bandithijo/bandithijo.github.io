@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Menonaktifkan Tombol Keyboard Tertentu di GNU/Linux'
-date: '2018-08-02 12:07'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Tips']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Menonaktifkan Tombol Keyboard Tertentu di GNU/Linux"
+date: "2018-08-02 12:07"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-08-02-menonaktifkan-tombol-keyboard-tertentu-di-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["tips"]
 description: "Terkadang kita ingin membuat tombol tertentu pada keyboard untuk tidak aktif atau mengganti fungsinya menjadi fungsi yang lain. Misal, menonaktifkan tombol PrtSc pada keyboard ThinkPad keluaran 2014 ke atas karena letaknya yang diapit dua tombol lain, Right Alt + PrtSc + Right Ctrl, sehingga lebih sering salah pencet saat akan menekan Alt atau Ctrl."
 ---
 
@@ -151,5 +146,5 @@ Saya rasa cukup seperti ini dulu.
 
 # Referensi
 
-1. [unix.stackexchange.com/questions/74151/fully-disable-prntscr-key](https://unix.stackexchange.com/questions/74151/fully-disable-prntscr-key)
-<br>Diakses tanggal: 18/08/02
+1. [unix.stackexchange.com/questions/74151/fully-disable-prntscr-key](https://unix.stackexchange.com/questions/74151/fully-disable-prntscr-key) \
+   Diakses tanggal: 2018-08-02

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Tab Filter by Category dengan Ransack pada Rails"
-date: '2019-12-07 17:45'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails', 'Ransack']
-pin:
-hot:
-contributors: []
+date: "2019-12-07 17:45"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-12-07-tab-filter-by-category-dengan-ransack-rails"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails", "ransack"]
 description: "Catatan ini mengenai cara membuat filter by category menggunakan Ransack gem pada Ruby on Rails."
 ---
 
@@ -346,14 +341,14 @@ Terima kasih.
 
 # Referensi
 
-1. [github.com/activerecord-hackery/ransack](https://github.com/activerecord-hackery/ransack)
-<br>Diakses tanggal: 2019/12/07
+1. [github.com/activerecord-hackery/ransack](https://github.com/activerecord-hackery/ransack) \
+   Diakses tanggal: 2019-12-07
 
-2. [github.com/activerecord-hackery/meta_search](https://github.com/activerecord-hackery/meta_search)
-<br>Diakses tanggal: 2019/12/07
+1. [github.com/activerecord-hackery/meta_search](https://github.com/activerecord-hackery/meta_search) \
+   Diakses tanggal: 2019-12-07
 
-3. [ransack-demo.herokuapp.com/](http://ransack-demo.herokuapp.com/)
-<br>Diakses tanggal: 2019/12/07
+1. [ransack-demo.herokuapp.com/](http://ransack-demo.herokuapp.com/) \
+   Diakses tanggal: 2019-12-07
 
-4. [ransack-demo.herokuapp.com/users/advanced_search](http://ransack-demo.herokuapp.com/users/advanced_search)
-<br>Diakses tanggal: 2019/12/07
+1. [ransack-demo.herokuapp.com/users/advanced_search](http://ransack-demo.herokuapp.com/users/advanced_search) \
+   Diakses tanggal: 2019-12-07

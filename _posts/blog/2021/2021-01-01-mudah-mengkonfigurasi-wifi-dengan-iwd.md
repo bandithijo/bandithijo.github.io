@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mudah Mengkonfigurasi Wi-Fi dengan iwd (iwctl)"
-date: '2021-01-01 00:00'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['iwctl']
-pin:
-hot:
-contributors: []
+date: "2021-01-01 00:00"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2021/2021-01-01-mudah-mengkonfigurasi-wifi-dengan-iwd"
+author: "BanditHijo"
+category: "blog"
+tags: ["iwctl"]
 description: "iwd adalah perkakas wireless daemon yang dikembangkan oleh Intel. Digadang-gadang akan menjadi replacement bagi wpa_supplicant. Arch installer pun sudah menggunakan iwd secara default. Catatan ini mungkin bisa memandu teman-teman dalam menggunakan iwd dengan interaktif shell yang bernama iwctl."
 ---
 
@@ -476,11 +471,11 @@ Terima kasih.
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/Iwd](https://wiki.archlinux.org/index.php/Iwd)
-<br>Diakses tanggal: 2021/01/01
+1. [wiki.archlinux.org/index.php/Iwd](https://wiki.archlinux.org/index.php/Iwd) \
+   Diakses tanggal: 2021-01-01
 
-2. [iwd.wiki.kernel.org/gettingstarted](https://iwd.wiki.kernel.org/gettingstarted)
-<br>Diakses tanggal: 2021/01/01
+1. [iwd.wiki.kernel.org/gettingstarted](https://iwd.wiki.kernel.org/gettingstarted) \
+   Diakses tanggal: 2021-01-01
 
-3. [jlk.fjfi.cvut.cz/arch/manpages/man/iwd.config.5](https://jlk.fjfi.cvut.cz/arch/manpages/man/iwd.config.5)
-<br>Diakses tanggal: 2021/01/01
+1. [jlk.fjfi.cvut.cz/arch/manpages/man/iwd.config.5](https://jlk.fjfi.cvut.cz/arch/manpages/man/iwd.config.5) \
+   Diakses tanggal: 2021-01-01

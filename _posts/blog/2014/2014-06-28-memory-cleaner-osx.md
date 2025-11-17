@@ -1,18 +1,13 @@
 ---
-layout: 'post'
-title: 'Memory Cleaner untuk OSX'
-date: '2014-05-28'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: false
-category: 'blog'
-tags: ['OSX']
-pin:
-hot:
-contributors: []
-description:
+layout: "post"
+title: "Memory Cleaner untuk OSX"
+date: "2014-05-28"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2014/2014-06-28-memory-cleaner-osx"
+author: "BanditHijo"
+category: "blog"
+tags: ["osx"]
+description: "Menggunakan komputer dalam waktu lama dan merasa sistem sudah terasa semakin berat ? Bisa jadi dikarenakan chache dan log yang menumpuk, bisa juga dikarenakan aplikasi-aplikasi yang berjalan di  belakang layar (backgroudn process)."
 ---
 
 ![Banner](https://3.bp.blogspot.com/-OLcnhF6woME/U635xta9JRI/AAAAAAAABXs/zlzwJ12VoVg/w425-h114-no/Default+Header+Template+Post+15.jpg)

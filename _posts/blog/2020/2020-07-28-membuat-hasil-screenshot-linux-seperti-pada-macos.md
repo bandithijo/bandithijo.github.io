@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Membuat Hasil ScreenShot pada GNU/Linux seperti Milik macOS"
-date: '2020-07-28 18:57'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Ruby', 'ImageMagick']
-pin:
-hot:
-contributors: []
+date: "2020-07-28 18:57"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-07-28-membuat-hasil-screenshot-linux-seperti-pada-macos"
+author: "BanditHijo"
+category: "blog"
+tags: ["ruby", "imagemagick"]
 description: "Ide untuk mempercantik hasil screenshot ini terinspirasi dari gambar-gambar hasil screenshot yang diproduksi oleh sistem operasi OSX. Jangan khawatir, di GNU/Linux, kita juga dapat membuat hal serupa, malah bisa lebih keren karena kita dapat dengan bebas memodifikasinya. Dengan begini, hasil screenshot setiap orang, akan jadi unik dan khas, sesuai dengan karakter masing-masing."
 ---
 
@@ -259,11 +254,11 @@ FRAMING SUCCESS!""")
 
 # Referensi
 
-1. [Create MacOS style screenshots with drop shadow using Imagemagick](https://apple.stackexchange.com/questions/384323/create-macos-style-screenshots-with-drop-shadow-using-imagemagick)
-<br>Diakses tanggal: 2020/07/28
+1. [Create MacOS style screenshots with drop shadow using Imagemagick](https://apple.stackexchange.com/questions/384323/create-macos-style-screenshots-with-drop-shadow-using-imagemagick) \
+   Diakses tanggal: 2020-07-28
 
-2. [imagemagick.org/script/command-line-options.php#shadow](https://imagemagick.org/script/command-line-options.php#shadow)
-<br>Diakses tanggal: 2020/07/28
+1. [imagemagick.org/script/command-line-options.php#shadow](https://imagemagick.org/script/command-line-options.php#shadow) \
+   Diakses tanggal: 2020-07-28
 
-3. [PNG image becomes too bright](https://www.imagemagick.org/discourse-server/viewtopic.php?t=27131)
-<br>Diakses tanggal: 2020/08/03
+1. [PNG image becomes too bright](https://www.imagemagick.org/discourse-server/viewtopic.php?t=27131) \
+   Diakses tanggal: 2020-08-03

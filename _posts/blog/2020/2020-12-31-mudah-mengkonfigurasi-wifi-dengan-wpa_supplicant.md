@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mudah Mengkonfigurasi Wi-Fi dengan wpa_supplicant"
-date: '2020-12-31 07:31'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['WPA Supplicant']
-pin:
-hot:
-contributors: []
+date: "2020-12-31 07:31"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-12-31-mudah-mengkonfigurasi-wifi-dengan-wpa_supplicant"
+author: "BanditHijo"
+category: "blog"
+tags: ["wpasupplicant"]
 description: "Saya jarang sekali menggunakan comprehensive network manager seperti NetworkManager atau ConnMan. Terhubung ke jaringan juga hanya lewat Wi-Fi. Maka saya putuskan untuk menghapus NetworkManager dan hanya menggunakan wpa_supplicant. Ternyata tidak semengerikan yang saya bayangkan. wpa_supplicant juga memiliki interaktif shell yang bernama wpa_cli. Sangat memudahkan untuk digunakan memanajemen jaringan konektifitas Wi-Fi di sistem kita."
 ---
 
@@ -599,8 +594,8 @@ Terima kasih.
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/Wpa_supplicant](https://wiki.archlinux.org/index.php/Wpa_supplicant)
-<br>Diakses tanggal: 2020/12/31
+1. [wiki.archlinux.org/index.php/Wpa_supplicant](https://wiki.archlinux.org/index.php/Wpa_supplicant) \
+   Diakses tanggal: 2020-12-31
 
-2. [wiki.archlinux.org/index.php/Network_configuration/Wireless#Utilities](https://wiki.archlinux.org/index.php/Network_configuration/Wireless#Utilities)
-<br>Diakses tanggal: 2020/12/31
+1. [wiki.archlinux.org/index.php/Network_configuration/Wireless#Utilities](https://wiki.archlinux.org/index.php/Network_configuration/Wireless#Utilities) \
+   Diakses tanggal: 2020-12-31

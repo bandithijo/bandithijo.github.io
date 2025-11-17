@@ -1,18 +1,13 @@
 ---
-layout: 'post'
-title: 'Melakukan Extract & Transform dari .CSV ke dalam Tabel Operasional ERD'
-date: '2018-03-20'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Database', 'CSV', 'MySQL']
-pin:
-hot: true
-contributors: []
-description:
+layout: "post"
+title: "Melakukan Extract & Transform dari .CSV ke dalam Tabel Operasional ERD"
+date: "2018-03-20"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2018/2018-03-20-database-extract-transform-dari-csv"
+author: "BanditHijo"
+category: "blog"
+tags: ["database", "csv", "mysql"]
+description: "Pada tulisan ini saya menggunakan aplikasi manajemen database berbasis GUI yang bernama MySQL Workbench untuk melakukan extract dan transform dari data CSV ke dalam tabel operasional dalam bentuk ERD."
 ---
 
 # TUGAS 1

@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Mudah Mengupgrade Jekyll 4"
-date: '2019-10-16 07:12'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Jekyll']
-pin:
-hot:
-contributors: []
+date: "2019-10-16 07:12"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-10-16-upgrade-jekyll-4"
+author: "BanditHijo"
+category: "blog"
+tags: ["jekyll"]
 description: "Cerita proses upgrde Jekyll 3.8.6 ke 4.0.0 dari BanditHijo (R)-Chive."
 ---
 
@@ -141,8 +136,8 @@ Terima kasih (^_^)v
 
 # Referensi
 
-1. [Upgrading from 3.x to 4.x](https://jekyllrb.com/docs/upgrading/3-to-4/)
-<br>Diakses tanggal: 2019/10/16
+1. [Upgrading from 3.x to 4.x](https://jekyllrb.com/docs/upgrading/3-to-4/) \
+   Diakses tanggal: 2019-10-16
 
-2. [Jekyll 4.0.0 Released](https://jekyllrb.com/news/2019/08/20/jekyll-4-0-0-released/)
-<br>Diakses tanggal: 2019/10/16
+1. [Jekyll 4.0.0 Released](https://jekyllrb.com/news/2019/08/20/jekyll-4-0-0-released/) \
+   Diakses tanggal: 2019-10-16

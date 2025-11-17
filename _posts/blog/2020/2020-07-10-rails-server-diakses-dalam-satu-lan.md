@@ -1,17 +1,12 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Rails Server Dapat Diakses oleh Perangkat dalam Satu LAN"
-date: '2020-07-10 01:03'
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Rails']
-pin:
-hot:
-contributors: []
+date: "2020-07-10 01:03"
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2020/2020-07-10-rails-server-diakses-dalam-satu-lan"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Kita dapat membuat Rails aplikasi yang kita bangun di local environment sistem kita membuka akes broadcast ke local network. Sehingga, semua perangkat yang berada pada satu network yang sama, dapat mengakses Rails aplikasi yang ada di local sistem kita."
 ---
 
@@ -78,8 +73,8 @@ Terima kasih.
 
 # Referensi
 
-1. [guides.rubyonrails.org/command_line.html](https://guides.rubyonrails.org/command_line.html)
-<br>Diakses tanggal: 2020/07/10
+1. [guides.rubyonrails.org/command_line.html](https://guides.rubyonrails.org/command_line.html) \
+   Diakses tanggal: 2020-07-10
 
-2. [github.com/thoughtbot - Binding to 0.0.0.0 in Rails](https://github.com/thoughtbot/til/blob/master/docker/binding-to-0-0-0-0-in-rails.md)
-<br>Diakses tanggal: 2020/07/10
+1. [github.com/thoughtbot - Binding to 0.0.0.0 in Rails](https://github.com/thoughtbot/til/blob/master/docker/binding-to-0-0-0-0-in-rails.md) \
+   Diakses tanggal: 2020-07-10

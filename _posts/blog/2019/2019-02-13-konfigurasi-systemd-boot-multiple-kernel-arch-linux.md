@@ -1,17 +1,12 @@
 ---
-layout: 'post'
-title: 'Konfigurasi systemd-boot untuk Multiple Kernel pada Arch Linux'
-date: 2019-02-13 23:30
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['systemd-boot']
-pin:
-hot:
-contributors: []
+layout: "post"
+title: "Konfigurasi systemd-boot untuk Multiple Kernel pada Arch Linux"
+date: '2019-02-13 23:30'
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-02-13-konfigurasi-systemd-boot-multiple-kernel-arch-linux"
+author: "BanditHijo"
+category: "blog"
+tags: ["systemd-boot"]
 description: "Saya memilih menggunakan systemd-boot untuk laptop EFI saya. Saya sudah menggunakan systemd-boot sejak masih menggunakan MacbookPro. Namun, selama ini saya hanya memiliki satu buat pilihan untuk memilih sistem operasi yang ingin digunakan. Dengan catatan ini, saya akan memanfaatkan systemd-boot untuk manampilkan pilihan kernel yang akan digunakan."
 ---
 
@@ -208,8 +203,8 @@ Mudah-mudahan dapat bermanfaat bagi teman-teman yang memerlukan.
 
 # Referensi
 
-1. [wiki.archlinux.org/index.php/Arch_boot_process#Boot_loader](https://wiki.archlinux.org/index.php/Arch_boot_process#Boot_loader)
-<br>Diakses tanggal: 2019/02/13
+1. [wiki.archlinux.org/index.php/Arch_boot_process#Boot_loader](https://wiki.archlinux.org/index.php/Arch_boot_process#Boot_loader) \
+   Diakses tanggal: 2019-02-13
 
-2. [wiki.archlinux.org/index.php/Systemd-boot](https://wiki.archlinux.org/index.php/Systemd-boot)
-<br>Diakses tanggal: 2019/02/13
+1. [wiki.archlinux.org/index.php/Systemd-boot](https://wiki.archlinux.org/index.php/Systemd-boot) \
+   Diakses tanggal: 2019-02-13
