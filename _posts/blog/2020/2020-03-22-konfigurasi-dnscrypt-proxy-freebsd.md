@@ -6,7 +6,7 @@ permalink: "/blog/:title"
 assets: "/assets/images/posts/2020/2020-03-22-konfigurasi-dnscrypt-proxy-freebsd"
 author: "BanditHijo"
 category: "blog"
-tags: ["freebsd"]
+tags: ["dnscrypt"]
 description: "Kali ini adalah catatan mengenai konfigurasi dnscrypt-proxy pada lingkungan FreeBSD."
 ---
 
