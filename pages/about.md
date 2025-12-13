@@ -51,7 +51,7 @@ Ceritanya dapat teman-teman baca [**Migrasi BLog 2.0**]({{ site.url }}/blog/migr
 # Sistem Operasi yang digunakan?
 
 {% assign date0 = site.time | date: '%Y' | integer %}
-{% assign date1 = 2016 %}
+{% assign date1 = 2025 %}
 {% assign date2 = date0 | minus: date1 %}
 |-----------------------------------------------------|----------------------------------|-------------------------|
 | <center>Sistem Operasi</center>                     | <center>Tahun Digunakan</center> | <center>Durasi</center> |
@@ -59,13 +59,14 @@ Ceritanya dapat teman-teman baca [**Migrasi BLog 2.0**]({{ site.url }}/blog/migr
 |-----------------------------------------------------|----------------------------------|-------------------------|
 | **Microsoft Windows ME, XP, Vista**                 | 2002 - 2008                      | 6 tahun                 |
 | **OS X 10.5, 10.6, 10.7, 10.8, 10.9, 10.10, 10.11** | 2009 - 2015                      | 7 tahun                 |
-| **Linux**                                           | 2016 - Sekarang                  | ± {{ date2 }} tahun     |
+| **Linux**                                           | 2016 - Nov 2025                  | 9 tahun 10 bulan        |
+| **macOS 15**                                        | Nov 2025 - Sekarang              | ± {{ date2 }} tahun     |
 |-----------------------------------------------------|----------------------------------|-------------------------|
 
 
 # Mesin ketik yang digunakan?
 
-{% assign date3 = 2022 %}
+{% assign date3 = 2025 %}
 {% assign date4 = date0 | minus: date3 %}
 
 Berikut ini adalah spesifikasi mesin maupun aplikasi yang pernah atau hingga saat ini saya gunakan untuk berkomputasi ataupun untuk mengukir tulisan di blog ini.
@@ -78,7 +79,8 @@ Berikut ini adalah spesifikasi mesin maupun aplikasi yang pernah atau hingga saa
 | **Apple Macbook Pro 8.1** | 2011                            | 2012 - 2016                      | 5 tahun                 |
 | **Lenovo ThinkPad X260**  | 2016                            | 2017 - 2018                      | 2 tahun                 |
 | **Lenovo ThinkPad X61**   | 2007                            | 2019 - Nov 2021                  | 3 tahun                 |
-| **Lenovo ThinkPad X260**  | 2016                            | Dec 2021 - Sekarang              | ± {{ date4 }} tahun     |
+| **Lenovo ThinkPad X260**  | 2016                            | Dec 2021 - Nov 2025              | 3 tahun 11 bulan        |
+| **Apple Macbook Air M4**  | 2025                            | Nov 2025 - Sekarang              | ± {{ date4 }} tahun     |
 |---------------------------|---------------------------------|----------------------------------|-------------------------|
 
 # Aplikasi favorit yang digunakan di Linux?
@@ -203,6 +205,17 @@ Hal ini sangat sesuai dengan keinginan saya untuk dapat menggunakan laptop yang 
 # Apakah sudah kembali menggunakan ThinkPad anyar?
 
 Akhir 2021, saya sudah kembali menggunakan ThinkPad X260, karena tuntutan pekerjaan saya sebagai Backend Software Engineer di perusahaan swasta yang berlokasi Jakarta secara remote.
+
+# Kenapa kembali menggunakan macOS?
+
+Akhir 2025, saya kembali menggunakan macOS dengan mesin MacBook Air M4.
+
+Keputusan ini saya ambil karena beberapa alasan, diantaranya adalah:
+
+1. Performa MacBook Air M4 yang sangat luar biasa meskipun berukuran laptop tipis dan ringan. Karena sudah menggunakan Apple Silicon dengan arsitektur ARM.
+1. Daya tahan baterai yang sangat lama, sehingga saya dapat bekerja lebih lama tanpa perlu sering-sering mengisi daya baterai.
+
+Saya tidak terlalu tertarik dengan ekosistem Apple, karena yang saya butuhkan hanya sebuah mesin yang *powerfull* yang dapat menunjang produktivitas saya dalam bekerja.
 
 # Akhir Kata
 
