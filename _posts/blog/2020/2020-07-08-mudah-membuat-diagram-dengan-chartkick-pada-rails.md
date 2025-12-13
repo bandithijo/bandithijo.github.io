@@ -10,14 +10,14 @@ tags: ["rails", "javascript", "chartkick"]
 description: "Mudah membuat grafik diagram pada Ruby on Rails dengan menggunakan ChartKick gem."
 ---
 
-# Sekenario Masalah
+## Sekenario Masalah
 
 Saya membuat sebuah *side project* untuk melakukan *scraping* data dan dicatat perhari.
 
 Ketika data sudah mulai berkembang, maka diperlukan grafik untuk mempermudah dalam melakukan penilaian terhadap data yang telah dikumpulkan.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Untuk membuat atau menambahkan grafik, JavaScript library yang terkenal adalah **Chart.JS**.
 
@@ -26,7 +26,7 @@ Nah, pada Ruby on Rails, sudah ada yang membuatkan librarynya bernama **ChartKic
 Dengan menggunakan ChartKick, kita hanya perlu memanggil dengan satu baris sintaks saja. Enak banget kan!
 
 
-# Instalasi ChartKick
+## Instalasi ChartKick
 
 Pasang gem di `Gemfile`.
 
@@ -47,7 +47,7 @@ $ bundle install
 ```
 
 
-# Konfigurasi
+## Konfigurasi
 
 **Rails 6 / Webpacker**
 
@@ -80,7 +80,7 @@ Apabila teman-teman ingin menggunakan JavaScript chart library yang lain, sepert
 Sekarang tinggal implementasi.
 
 
-# Contoh-contoh Chart
+## Contoh-contoh Chart
 
 Kita dapat langsung membuat chart dengan cara seperti ini.
 
@@ -127,7 +127,7 @@ Kita dapat langsung membuat chart dengan cara seperti ini.
 Dan masih banyak lagi chart yang tidak dapat saya tampilkan di blog ini, silahkan teman-teman mengunjungi halaman depan dari **ChartKick**.
 
 
-# Options
+## Options
 
 Kita juga dapat menambahkan option-option lain agar grafik yang kita tampilkan lebih informatif.
 
@@ -155,7 +155,7 @@ Contohnya seperti ini.
 Dan masih banyak lagi option-option yang dapat digunakan, silahkan teman-teman mengunjungi dokumentasi dari ChartKick.
 
 
-# Implementasi
+## Implementasi
 
 Nah, setelah teman-teman mengenal bentuk-bentuk dari chart dan option-option yang dapat digunakan, selanjutnya kita akan memasangkan dengan data yang ada di database kita.
 
@@ -164,7 +164,7 @@ Untuk implementasi ke dalam Rails, ada bermacam-macam.
 Sekenarionya, saya memiliki model `Case`. Saya mau mengambil data total `:positif_covid` setiap harinya berdasarkan tanggal `:fetched_at`.
 
 
-## Langsung diletakkan di view template
+### Langsung diletakkan di view template
 
 ```eruby
 !filename: app/views/cases/index.rb
@@ -172,7 +172,7 @@ Sekenarionya, saya memiliki model `Case`. Saya mau mengambil data total `:positi
 ```
 
 
-## Melalui Controller
+### Melalui Controller
 
 Definisikan instance variable di controller.
 
@@ -199,7 +199,7 @@ Kemudian, tinggal dipakai di view template.
 Nah, contoh-contoh lain, mengenai bagaimana cara mengambil data yang kita miliki, dapat teman-teman lihat pada dokumentasi **ChartKick**, baik di official websitenya maupun dari halaman README GitHubnya.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Catatan ini bukan merupakan tutorial, saya hanya ingin memberikan gambaran betapa mudahnya memasang grafik ke dalam Rails menggunakan ChartKick gem.
 
@@ -216,7 +216,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [chartkick.com/](https://chartkick.com/) \
    Diakses tanggal: 2020-07-08

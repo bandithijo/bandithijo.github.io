@@ -10,13 +10,13 @@ tags: ["database", "mysql", "podman", "container"]
 description: "Memasang service database seperti MySQL merupakan sebuah tantangan tersendiri di setiap distribusi sistem operasi GNU/Linux. Yang merepotkan, terkadang cara yang sebelumnya kita lakukan berhasil, namun tidak berhasil pada versi distribusi yang terbaru. Sudah saatnya kita gunakan cara modern, khususnya untuk development, yaitu menggunakan kontainerisasi. Catatan kali ini, kita akan menjalankan MySQL service dari container dengan bantuan Podman."
 ---
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Kalau kemarin kita sudah membahas [**Mudah Banget! Pasang PostgreSQL dengan Podman untuk Development**](/blog/postgresql-dengan-podman-untuk-development), kali ini kita akan bahasa untuk MySQL.
 
 Memasang service database seperti MySQL merupakan sebuah tantangan tersendiri di setiap distribusi sistem operasi GNU/Linux. Karena, setiap distribusi memiliki cara yang berbeda-beda untuk menjalankan MySQL service karena pilihan stack yang digunakan pada masing-masing distribusi biasanya berbeda. Yang merepotkan adalah apabila cara yang sebelumnya kita lakukan berhasil, namun tidak berhasil pada versi distribusi yang terbaru.
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Sudah saatnya kita gunakan cara modern, khususnya untuk development, yaitu menggunakan kontainerisasi.
 
@@ -29,16 +29,16 @@ Dengan menggunakan container, kita akan mendapatkan kemudahan-kemudahan, diantar
 3. Mudah untuk menjalankan dua container dengan service yang sama
 4. dan masih banyak lagi
 
-# Instalasi
+## Instalasi
 
-## Siapkan Podman
+### Siapkan Podman
 
 Untuk teman-teman yang menggunakan Fedora (saat tulisan ini dibuat, Fedora 35) sudah tersedia Podman secara default.
 
 Untuk yang belum memasang Podman, silahkan merujuk pada [dokumentasi pemasangan Podman](https://podman.io/getting-started/installation).
 
 
-## Persiapkan MySQL Image
+### Persiapkan MySQL Image
 
 Sebelum mebuat MySQL container, kita perlu mengunduh MySQL image terlebih dahulu.
 
@@ -110,7 +110,7 @@ docker.io/library/mysql     8           b05128b000dd  12 days ago  521 MB
 > 
 > Pastikan sudah tidak ada container yang menggunakan image yang ingin dihapus. Karena proses image remove akan gagal apabila masih ada container yang menggunakan image tersebut.
 
-## Persiapkan Direktori untuk Mounted Volume
+### Persiapkan Direktori untuk Mounted Volume
 
 Saya ingin membuat data yang ada di dalam container dapat terus digunakan. Maka, saya memilih menggunakan mounted volume agar data yang ada di dalam container dapat disimpan di system.
 
@@ -123,7 +123,7 @@ Saya akan simpan pada direktori `$HOME/Podman/mysql/data/`.
     └ 📁 data/
 ```
 
-## Buat MySQL Container
+### Buat MySQL Container
 
 Untuk membuat MySQL container dengan praktis, saya menggunakan perintah,
 
@@ -166,7 +166,7 @@ Lihat pada kolom STATUS, **Up 3 seconds ago**, berarti sudah berhasil *running*.
 
 Tahap pembuatan container sudah berhasil.
 
-## Akses MySQL Shell
+### Akses MySQL Shell
 
 Biasanya, untuk mengakses MySQL shell, kita memerlukan tools yang bernama `mysql`. Namun, karena host sistem yang kita gunakan tidak perlu memasang paket MySQL client/server, maka kita tidak akan menemukan `mysql`.
 
@@ -205,7 +205,7 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 mysql> _
 ```
 
-## Perlu membuat MySQL user?
+### Perlu membuat MySQL user?
 
 Tidak perlu.
 
@@ -245,7 +245,7 @@ Perhatikan pada baris ke 16, **username** secara default digenerate menggunakan 
 
 Karena catatan ini ditujukan untuk development environment, pembuatan user selain root tidak akan saya bahas.
 
-# Ganti nilai host localhost jadi 127.0.0.1
+## Ganti nilai host localhost jadi 127.0.0.1
 
 Apabila terdapat variable **host** bernilai **localhost**, ganti dengan **127.0.0.1**
 
@@ -261,7 +261,7 @@ Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (
 Selesai!
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -274,7 +274,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [https://hub.docker.com/\_/mysql](https://hub.docker.com/_/mysql) \
    Diakses tanggal: 2021-11-30

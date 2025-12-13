@@ -10,12 +10,12 @@ tags: ["git"]
 description: "Pada catatan kali ini saya akan mendokumentasikan salah satu feature dari Git yang cukup sering saya pergunakan di kerjaan, yaitu Git-stash."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 {{ page.description }}
 
 
-# Masalah
+## Masalah
 
 Dalam sebuah project yang menggunakan Git, terkadang saya memiliki beberapa perubahan terhadap file-file project yang tidak ingin saya commit dulu.
 
@@ -28,12 +28,12 @@ Beberapa alasan diantaranya:
 1. Alasan-alasan lain, yang menyebabkan saya harus mengabaikan perubahan yang sedang saya kerjakan saat ini
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Alasan-alasan tersebut di atas, dapat terselesaikan dengan **Git-stash**. [^1]
 
 
-## 1. Membuat Stash
+### 1. Membuat Stash
 
 Dengan Git-stash, saya bisa menyimpan segelondongan perubahan file yang tidak ingin saya commit, namun saya simpan terlebih dahulu, untuk saya kerjakan (panggil) lagi nanti, di waktu yang lain.
 
@@ -52,12 +52,12 @@ $ git stash save 'fix: bug on create product ver.1' -u
 Kita dapat menyimpan lebih dari 1 stash.
 
 
-## 2. Melihat Daftar Stash
+### 2. Melihat Daftar Stash
 
 Ada 3 cara untuk melihat daftar stash.
 
 
-### 2.1 Git-stash list
+#### 2.1 Git-stash list
 
 ```
 $ git stash list
@@ -81,7 +81,7 @@ stash@{4}: On feature/admin-xxxxxxx-xxxx: Update ver.1
 > 1. Dengan kekurangan yang ada di nomor 1, artinya tidak ada navigasi untuk melihat detail dari isi stash
 
 
-### 2.2 Git-log
+#### 2.2 Git-log
 
 ```
 $ git log -g stash
@@ -141,7 +141,7 @@ Date:   Tue Mar 28 17:57:42 2023 +0800
 Pada bagian `Reflog:`, adalah identitas stash dengan format `stash@{Nth}`, untuk `{Nth}` adalah index dari stash yang dimulai dari 0. Dengan order (urutan), stash dengan index ke 0 adalah stash yang paling terakhir ditambahkan ke dalam stash.
 
 
-### 2.3 Git-reflog
+#### 2.3 Git-reflog
 
 Dengan menggunakan Git-reflog show, kita dapat melihat detail dari stash. [^3]
 
@@ -197,7 +197,7 @@ Untuk, kembali ke stash list, dapat menggunakan tombol <kbd>Ctrl</kbd>+<kbd>^</k
 Kekurangannya adalah tidak dapat melihat *untracked files* (file yang baru dibuat). Untuk case ini, dapat menggunakan Git-stash show.
 
 
-## 3. Melihat Detail dari Stash dengan Git-stash show
+### 3. Melihat Detail dari Stash dengan Git-stash show
 
 Untuk melihat detail dari stash dalam bentuk patch diff, gunakan perintah ini, [^1]
 
@@ -220,14 +220,14 @@ $ git stash show -p 0 -u
 > Jika tanpa `-u` maka file yang baru dibuat, tidak akan ditampilkan.
 
 
-## 4. Mengeluarkan Stash
+### 4. Mengeluarkan Stash
 
 Sekarang cara mengeluarkan dari stash, apabila stash yang telah disimpan, ingin digunakan kembali, yaitu dengan perintah, [^1]
 
 Ada 2 cara untuk mengeluarkan stash:
 
 
-### 4.1 Mengeluarkan tanpa menghapus stash
+#### 4.1 Mengeluarkan tanpa menghapus stash
 
 ```
 $ git stash apply stash@{Nth}
@@ -248,7 +248,7 @@ Artinya, kita akan melakukan apply pada stash dengan index ke `0`.
 > Perintah `git stash apply` ini tidak akan menghilangkan stash dengan index terpilih dari dalam stash list. Stash tersebut masih akan tetap ada. Untuk mengeluarkan sekaligus melakukan apply terhadap stash terpilih, dapat menggunakan Git-stash pop.
 
 
-### 4.2 Mengeluarkan sambil menghapus stash
+#### 4.2 Mengeluarkan sambil menghapus stash
 
 Jika stash terpilih sudah tidak diperlukan lagi, kita bisa menerapkan stash sambil menghapus stash dari daftar list.
 
@@ -265,10 +265,10 @@ $ git stash pop 0
 ```
 
 
-## 5. Menghapus Stash
+### 5. Menghapus Stash
 
 
-### 5.1 Menhapus Selected Stash
+#### 5.1 Menhapus Selected Stash
 
 Jika stash yang ada dalam daftar stash list sudah tidak digunakan lagi, kita dapat langsung menghapusnya dengan perintah Git-stash drop, [^1]
 
@@ -285,7 +285,7 @@ $ git stash drop 0
 ```
 
 
-### 5.2 Menghapus Seluruh Daftar Stash
+#### 5.2 Menghapus Seluruh Daftar Stash
 
 Untuk menghapus seluruh stash atau mengosongkan seluruh stash dari list, kita dapat menggunakan Git-stash clear. [^1]
 
@@ -298,7 +298,7 @@ $ git stash clear
 > Perintah ini akan menghapus seluruh stash dari daftar list. Dan mungkin akan tidak mungin dapat di-recover.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Terima kasih sudah mampir yaa.
 

@@ -10,24 +10,24 @@ tags: ["ruby", "udisksctl"]
 description: "Mount file ISO mungkin merupakan hal yang sangat mudah kalau kita menggunakan File Manager GUI seperti Nautilus, Dolphin dan Thunar apabila kita telah memasang tools tambahan seperti disk mounter. Namun, bagaimana kalau kita ingin melakukan mounting hanya lewat Terminal? Ternyata caranya sangat mudah!"
 ---
 
-# Latar Belakang
+## Latar Belakang
 
 Sejak 2018 hingga saat ini (2020), saya sudah jarang sekali memanfaatkan file manager GUI, seperti Thunar, PCMANFM, ataupun Nautlius untuk mengurusi pekerjaan manajemen file. Hal-hal seperti explorasi file dokumen, file gambar, video, audio, semuanya dapat saya lakukan di **ranger** --[baca tentang ranger](/blog/ranger-file-manager).
 
 
-# Masalah
+## Masalah
 
 Namun, ada beberapa hal yang salah satunya masih saya kerjakan menggunakan file manager GUI, yaitu **mount & unmount file ISO image**.
 
 Kadang saya perlu untuk melakukan inspeksi terhadap file ISO yang akan saya jalankan di Virt-Manager. Untuk melihat apakah terdapat hal-hal yang janggal atau tidak.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Pada catatan ini, saya akan menunjukkan 2 cara.
 
 
-## 1. Manual dengan mount & umount command
+### 1. Manual dengan mount & umount command
 
 Cara ini adalah cara yang menjadi hal dasar sebagai pengguna sistem operasi GNU/Linux atau Unix like.
 
@@ -98,7 +98,7 @@ $ sudo umount archlinux.iso
 > Bukan `unmount` tapi `umount`.
 
 
-## 2. Otomatis dengan Ruby script
+### 2. Otomatis dengan Ruby script
 
 Kalau teman-teman perhatikan, proses mount & unmount menggunakan file manager GUI, akan memberikan path dengan nama label sebagai akhirnya.
 
@@ -221,17 +221,17 @@ Options:
 ```
 
 
-# Kekurangan
+## Kekurangan
 
 Kekurangan terbesar dari Ruby wrapper script ini adalah proses dari script ini memerlukan hak akses root.
 
 Karena terdapat perintah `mkdir` untuk membuat direktori di alamat `/run/media/<username>/`, serta `mount` ke alamat tersebut juga memerlukan hak akses root sehingga mau tidak mau, kita harus menggunakan sudo.
 
 
-# Alternatif (Recommended)
+## Alternatif (Recommended)
 
 
-## 1. Memanfaatkan Udisks2
+### 1. Memanfaatkan Udisks2
 
 Kalau proses mount memerlukan hak akses root, kita dapat memanfaatkan **udisks2** (**udisksctl**) --[baca tentang **udisks**](https://bandithijo.github.io/blog/menggunakan-udiskctl).
 
@@ -247,7 +247,7 @@ loop0        ← disebut block_devices
 ```
 
 
-### Mount file ISO
+#### Mount file ISO
 
 Sekenario untuk proses mount dengan udiskctl, adalah:
 
@@ -255,7 +255,7 @@ Sekenario untuk proses mount dengan udiskctl, adalah:
 2. Mounting block partition dengan `mount -p`
 
 
-#### 1. Setup loop block device dengan loop-setup
+##### 1. Setup loop block device dengan loop-setup
 
 ```
 $ udisksctl loop-setup -f file_image.iso
@@ -285,7 +285,7 @@ Proses ini mirip saat kita melakukan, klik kanan pada ISO image dan memilih menu
 Bisa langsung diklik untuk mount.
 
 
-#### 2. Mounting block partition dengan mount
+##### 2. Mounting block partition dengan mount
 
 Atau, kalau kita tidak ingin membuka file manager, atau tidak memiliki aplikasi file manager GUI, kita juga dapat menggunakan udisksctl saja untuk melakukan proses mounting.
 
@@ -311,7 +311,7 @@ loop0     iso9660   681M loop ARCH_202010
 Maka, udisks secara otomatis membuat mount point ke path tersebut.
 
 
-### Unmount File ISO
+#### Unmount File ISO
 
 Sekenario yang sama berlaku untuk proses unount, namun kebalikan dari proses mount.
 
@@ -319,7 +319,7 @@ Sekenario yang sama berlaku untuk proses unount, namun kebalikan dari proses mou
 2. Delete loop block device dengan `loop-delete -b`
 
 
-#### 1. Unmounting block partition dengan unmount
+##### 1. Unmounting block partition dengan unmount
 
 ```
 $ udisksctl unmount -p block_devices/block_partition
@@ -345,7 +345,7 @@ loop0     iso9660   681M loop ARCH_202010
 Terlihat bahwa `loop0p1` sudah tidak lagi memiliki mount point.
 
 
-#### 2. Delete loop block device dengan loop-delete
+##### 2. Delete loop block device dengan loop-delete
 
 Sekarang tinggal melepaskan block device `loop0`.
 
@@ -360,7 +360,7 @@ $ udisksctl loop-delete -b block_devices/loop0
 ```
 
 
-## 2. Memanfaatkan Udiskie
+### 2. Memanfaatkan Udiskie
 
 Udiskie adalah udisks2 front-end yang ditulis dengan bahasa Python.
 
@@ -371,14 +371,14 @@ Saat ini, udiskie belum dapat digunakan untuk memounting file ISO.
 Link repo: [**coldfix/udiskie**](https://github.com/coldfix/udiskie).
 
 
-## 3. Memanfaatkan udiskie-dmenu
+### 3. Memanfaatkan udiskie-dmenu
 
 **Udiskie-dmenu** adalah front-end dari udiskie yang menggunakan dmenu sebagai interfacenya.
 
 Link repo: [**fogine/udiskie-dmenu**](https://github.com/fogine/udiskie-dmenu).
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -389,7 +389,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [linuxize.com/post/how-to-mount-iso-file-on-linux/](https://linuxize.com/post/how-to-mount-iso-file-on-linux/) \
    Diakses tanggal: 2020-10-22

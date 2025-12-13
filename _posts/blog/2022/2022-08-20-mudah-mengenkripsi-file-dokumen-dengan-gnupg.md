@@ -10,12 +10,12 @@ tags: ["gpg", "gnupg", "pgp", "security"]
 description: "GnuPG adalah implementasi dari OpenPGP Standard (PGP) yang juga dikenal dengan nama GPG, yang dapat kita gunakan untuk melakukan enkripsi dan menandatangani data. Kita akan menggunakan GnuPG untuk mengenkripsi file atau dokumen."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 {{ page.description }}
 
 
-# Tujuan
+## Tujuan
 
 Kenapa kita perlu mengenkripsi file atau dokumen?
 
@@ -24,12 +24,12 @@ Kenapa kita perlu mengenkripsi file atau dokumen?
 1. dst.
 
 
-# Penggunaan
+## Penggunaan
 
 Penggunaan dari GPG sangat kompleks sekali. Di catatan kali ini, saya hanya akan menunjukkan beberapa perintah-perintah yang sering saya pergunakan.
 
 
-## Tentukan target file yang akan dienkripsi
+### Tentukan target file yang akan dienkripsi
 
 Target file bisa apa saja, misal: gambar, video, file dari Miscrosoft Word, archive (zip, tar, dst.), dll.
 
@@ -54,7 +54,7 @@ Sebagai contoh file atau dokumen yang akan saya enkripsi adalah sebuah file bert
 Setelah menentukan target file, kita lanjut ke tahap enkripsi.
 
 
-## Enkripsi
+### Enkripsi
 
 Ada banyak sekali cara metode enkripsi yang dapat kita lakukan dengan gpg.
 
@@ -63,7 +63,7 @@ Di catatan ini saya membatasi hanya menulis cara yang sering saya gunakan saja.
 Untuk metode-metode lain, teman-teman dapat membaca sendiri di `man gpg`.
 
 
-### Enkripsi dengan default secret GPG key
+#### Enkripsi dengan default secret GPG key
 
 Syarat: Kita sudah memiliki default secret gpg key.
 
@@ -99,7 +99,7 @@ tabel_users.md tabel_users.md.gpg
 ```
 
 
-### Enkripsi dengan symmetric key
+#### Enkripsi dengan symmetric key
 
 Ketika membuat gpg key, kita akan membuat 2 kunci, public key & secret key. Inilah yang disebut assymmetric key, karena key yang digunakan untuk menguncinya tidak sama dengan kunci yang digunakan untuk membuka.
 
@@ -122,7 +122,7 @@ tabel_users.md tabel_users.md.gpg
 ```
 
 
-### Enkripsi dengan gpg public key si penerima
+#### Enkripsi dengan gpg public key si penerima
 
 Metode enkripsi ini saya gunakan untuk berkirim file kepada orang yang gpg public key nya saya simpan.
 
@@ -171,29 +171,29 @@ Nah, sudah jadi. Tinggal dikirim ke om Linus.
 Hanya om Linus yang dapat membuka file terenkripsi tersebut dengan gpg secret key milik om Linus, karena file tersebut dienkripsi dengan gpg public key miliknya.
 
 
-## Dekripsi
+### Dekripsi
 
 Cara untuk mendekrip file atau dokumen yang dienkripsi dengan gpg, biasanya, saya menggunakan 2 flow.
 
 
-### Mengintip isi file yang terenkripsi dengan less
+#### Mengintip isi file yang terenkripsi dengan less
 
 ```
 $ gpg --decrypt tabel_users.md.gpg | less
 ```
 
 
-### Membuka file yang terenkripsi dalam bentuk file
+#### Membuka file yang terenkripsi dalam bentuk file
 
 ```
 $ gpg --output tabel_users.md --decrypt tabel_users.md.gpg
 ```
 
 
-# Tips & Trick
+## Tips & Trick
 
 
-## Mudah mengintip file terenkripsi dari Ranger
+### Mudah mengintip file terenkripsi dari Ranger
 
 Tambahkan baris di bawah ini pada salah satu file configurasi ranger `~/.config/ranger/rifle.conf`.
 
@@ -213,7 +213,7 @@ Arti dari baris di atas:
 Saya menggunakan `less` untuk mengintip file terenkripsi tersebut.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Penggunaan lebih lanjut saya serahkan pada imajinasi dan kreatifitas teman-teman.
 
@@ -226,7 +226,7 @@ Saya juga pernah menulis terkait GnuPG di catatan sebelumnya.
 1. [Menambahkan Email Kedua ke dalam GPG Key](/blog/menambahkan-email-lain-kedalam-gpgkey)
 
 
-# Referensi
+## Referensi
 
 1. [https://www.gnupg.org/](https://www.gnupg.org/) \
    Diakses tanggal: 2022-08-20

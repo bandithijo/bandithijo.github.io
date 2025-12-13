@@ -19,7 +19,7 @@ description: "Home direktori merupakan direktori yang sangat personal untuk kita
 > *Do with Your Own Risk!*
 
 
-# Prakata
+## Prakata
 
 Saya tidak akan berbasa-basi mengenai *privacy* di sini.
 
@@ -30,7 +30,7 @@ Sebenarnya, saya sudah pernah menuliskan mengenai topik ini, namun terletak pada
 Karena tidak aksesible banget, jadi saya memutuskan untuk membuat post tersendiri.
 
 
-# Mengenkripsi Home Direktori
+## Mengenkripsi Home Direktori
 
 > PERHATIAN!
 > 
@@ -47,7 +47,7 @@ Proses mengenkripsi Home direktori ini akan saya bagi dalam beberapa tahapan, ag
 Oke, berikut ini adalah sekenarionya.
 
 
-## Instalasi Paket-paket yang Diperlukan
+### Instalasi Paket-paket yang Diperlukan
 
 Kita memerlukan paket tambahan yang wajib dipasang untk melakukan proses enkripsi.
 
@@ -76,7 +76,7 @@ Tahap selanjutnya kita akan masuk ke dalam TTY shell.
 Oke, langsung saja kita eksekusi.
 
 
-## Login Root dengan TTY Shell
+### Login Root dengan TTY Shell
 
 1. Langkah pertama, kita perlu **logout** dari sistem.
 
@@ -114,7 +114,7 @@ Oke, langsung saja kita eksekusi.
    Dengan begini, kita dapat lanjut ke tahap berikutnya.
 
 
-## Migrasi Home dengan Enkripsi
+### Migrasi Home dengan Enkripsi
 
 1. Perintah di bawah ini akan memigrasikan atau membuat salinan (*cloning*) dari Home direktori kalian namun dalam bentuk yang sudah terenkripsi.
 
@@ -152,7 +152,7 @@ Oke, langsung saja kita eksekusi.
    ```
 
 
-## Pengetesan Dekrip Home Direktori
+### Pengetesan Dekrip Home Direktori
 
 Setelah kita melakukan enkripsi Home direktori, tentunya kita ingin melakukan pengetesan apakah proses enkripsi terhadap Home direktori yang kita lakukan telah berhasil.
 
@@ -230,7 +230,7 @@ Setelah kita melakukan enkripsi Home direktori, tentunya kita ingin melakukan pe
    Direktori ini merupakan *symbolic link* dari `/home/.ecryptfs/bandithijo/.ecryptfs/`
 
 
-## Memberikan eCryptfs Akses PAM
+### Memberikan eCryptfs Akses PAM
 
 Pada langkah sebelumnya kita sudah berhasil men-dekripsi Home direktori kita.
 
@@ -282,7 +282,7 @@ Untuk mengatasi masalah ini sangat mudah. Tinggal kita tambahkan beberapa baris 
 4. Apabila berhasil, tinggal periksa, apakah isi dari Home direktori kita berhasil di-*mouting* atau tidak.
 
 
-## Menghapus Direktori Home Backup
+### Menghapus Direktori Home Backup
 
 Saat kita melakukan tahap pertama, yaitu tahap migrasi atau mengenkripsi Home direktori, proses yang terjadi adalah Home direktori kita akan disalin dalam bentuk terenkripsi ke dalam direktori `/home/.ecryptfs/bandithijo/.Private` dan Home direktori lama kita akan di-*rename* menjadi `/home/bandithijo.p7o6p7R2`. Sedangkan direktori `/home/bandithijo` akan menjadi direktori kosong sebagai tempat untuk *mounting* pada saat proses dekripsi.
 
@@ -317,7 +317,7 @@ Dengan begini, proses enkripsi Home direktori kita telah selesai.
 Apabila teman-teman ingin mengganti *password* dari user yang berarti juga harus mengganti *passphrase* dari Home direktori yang terenkripsi, silahkan mengunjungi tulisan saya yang ini, "[Mengganti Password User dari Home Direktori yang Terenkripsi]({{ site.url }}/blog/mengganti-password-user-dari-home-direktori-yang-terenkripsi)".
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Tulisan ini bukan merupakan tandingan dari dokumentasi eCryptfs. Silahkan merujuk pada dokumentasi eCryptfs resmi yang sudah saya sertakan pada bagian referensi di bawah.
 
@@ -326,7 +326,7 @@ Dapat pula teman-teman yang menggunakan Arch Linux, merujuk pada Arch Wiki eCryp
 Sepertinya seperti ini saja.
 
 
-# Referensi
+## Referensi
 
 1. [bandithijo.com/arch/step-7-install-gnome-and-complete-installation#710-encrypt-home-directory](https://bandithijo.com/arch/step-7-install-gnome-and-complete-installation#710-encrypt-home-directory) \
    Diakses tanggal: 2019-06-14

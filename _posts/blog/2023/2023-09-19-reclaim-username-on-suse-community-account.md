@@ -10,12 +10,12 @@ tags: ["opensuse"]
 description: "Pada catatan ini saya ingin mendokumentasikan proses reclaim username SUSE Community Account saya yang tidak ikut migrasi pada Juli 2020 dan telah dibekukan."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 {{ page.description }}
 
 
-# Disclaimer
+## Disclaimer
 
 > Keberhasilan dari proses re-claim old username ini karena, **email yang saya daftarkan pada username yang telah dibekukan, masih aktif saya pergunakan.**
 >
@@ -23,7 +23,7 @@ description: "Pada catatan ini saya ingin mendokumentasikan proses reclaim usern
 > ***The account reactivation needs access to the registered e-mail address***
 
 
-# Masalah
+## Masalah
 
 Pada 1 Januari 2022, saya berencana ingin memasang distro openSUSE sebagai distro utama. Sambil menelusuri openSUSE Wiki [^1], saya mencoba untuk login ke akun SUSE Community Account yang sudah pernah saya buat.
 
@@ -63,7 +63,7 @@ Urutan tidak berdasarkan waktu pemakaian, karena yang paling lama saya pergunaka
 Dari daftar tersebut, saya belum menggunakan SUSE yang sekarang menjadi openSUSE.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 September 2023, tepatnya tanggal 17, saya tiba-tiba tertarik lagi dengan openSUSE.
 
@@ -74,7 +74,7 @@ Karena berdasarkan FAQ di atas, asalakan email yang terdaftar masih aktif, masih
 Sayangnya, tidak disebutkan alamat email yang akan digunakan untuk mengajukan issue.
 
 
-## Email #1
+### Email #1
 
 Saya pun mencoba mengirimkan email ke alamat `admin@opensuse.org`, dengan isi sebagai berikut,
 
@@ -123,7 +123,7 @@ TZ=Asia/Makassar (GMT +0800)
 Saya tidak terlalu berharap banyak karena alamat dari email tersebut juga saya dapatkan dari hasil menebak-nebak saja. Saya berasumsi bahwa, mungkin ada orang yang menghandle email `admin@opensuse.org`. Kalau nanti salah topik, mudah-mudahan diarahkan ke alamat yang benar.
 
 
-## Email Re: #1 (P1)
+### Email Re: #1 (P1)
 
 Ternyata ada balasan.
 
@@ -158,7 +158,7 @@ Dari pesan di atas, terlihat kalau **@malcolmlewis** memberikan assignment issue
 Kalau sudah mendapat nomor tiket, artinya tinggal menunggu antrian kalau tiket kita akan dikerjakan.
 
 
-## Email Re: #1 (P2)
+### Email Re: #1 (P2)
 
 Kali ini, email dibalas oleh **@crameleon**.
 
@@ -182,7 +182,7 @@ https://progress.opensuse.org/issues/135857#change-674906
 Tentang perubahan satus tiket ke **(In Progress)**.
 
 
-## Email Re: #1 (P3)
+### Email Re: #1 (P3)
 
 Kemudian, **@crameleon**, membalas email dan memberikan arahan.
 
@@ -219,7 +219,7 @@ Dari arahan tersebut, saya diarahkan untuk melakukan 2 hal:
 1. setelah password berhasil direset, lakukan **email validation** di alamat [ini](https://idp-portal.suse.com/univention/self-service/#page=verifyaccount)
 
 
-## Email #2
+### Email #2
 
 Setelah mencoba, langkah 1, ternyata masih gagal. Saya pun membalas email sebelumnya dengan menyertakan screenshot.
 
@@ -259,7 +259,7 @@ TZ=Asia/Makassar (GMT +0800)
 **"No contact information is stored for this user."**
 
 
-## Email Re: #2
+### Email Re: #2
 
 ```email
 Date: Tue, 19 Sep 2023 13:56:19 +0000
@@ -284,7 +284,7 @@ Screenshot yang saya berikan, diapresiasi oleh. Dan dari email balasan ini, saya
 Setelah saya coba lagi langkah 1 (password reset), ternyata berhasil! 🎉
 
 
-### 1. Reset Password
+#### 1. Reset Password
 
 ![Gambar 2](/assets/images/posts/2023/2023-09-19-01-gambar-02.png)
 
@@ -335,7 +335,7 @@ Kemudian tekan **CHANGE PASSWORD**.
 Gambar 4. Popup ketika berhasil memperbahrui password
 
 
-### 2. Email Validation
+#### 2. Email Validation
 
 Selanjutnya, lakukan email validation melalui link yang diberikan [di sini](https://idp-portal.suse.com/univention/self-service/#page=verifyaccount).
 
@@ -374,7 +374,7 @@ Gambar 5. Berhasil Memvalidasi Email
 Alhamdulillah, dengan ini username `bandithijo` berhasil saya dapatkan kembali di SUSE Community Account.
 
 
-## Email #3
+### Email #3
 
 Setelah berhasil, tak lupa saya mengabarkan (mengkonfirmasi).
 
@@ -414,7 +414,7 @@ TZ=Asia/Makassar (GMT +0800)
 `[image: Screenshot_2023-09-19_22-01-20.png]` adalah attachment dari Gambar 5.
 
 
-## Email Re: #3
+### Email Re: #3
 
 **@crameleon** pun menutup tiket dan membalas.
 
@@ -443,7 +443,7 @@ https://progress.opensuse.org/issues/135857#change-675014
 That's it!
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Itu tadi pengalaman saya melakukan klaim terhadap old username saya di SUSE Community Account yang dibekukan karena tertinggal tidak ikut migrasi pada July 2020.
 

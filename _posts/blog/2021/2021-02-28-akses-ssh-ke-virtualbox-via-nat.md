@@ -10,7 +10,7 @@ tags: ["virtualbox"]
 description: "Apabila kita memasang sistem operasi server yang hanya menjalankan CLI pada VirtualBox, saya lebih memilih untuk mengaksesnya menggunakan SSH ketimbang harus menggunakan UI dari VirtualBox. Alasannya karena, saya lebih familiar dengan Terminal Emulator yang saya gunakan."
 ---
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Ketika kita memasang sistem operasi server degan VirtualBox, saya secara pribadi tidak begitu menyukai berinteraksi degan VirtualBox secara Command Line way.
 
@@ -23,7 +23,7 @@ Selain itu, saya merasa kurang praktis untuk berpindah-pindah antara Guest dan H
 Nah, biasanya karena ingin praktis, saya menggunakan konfigurasi NAT agar Guest mendapatkan akses internet dari Host. Karena itu, saya tidak dapat melakukan SSH dengan cara biasa.
 
 
-# Peyelesaian Masalah
+## Peyelesaian Masalah
 
 Karena saya menggunakan NAT untuk memberikan akses internet Guest dengan Host, saya perlu mengkonfigurasi **Port Forwarding** agar saya dapat mengakses Guest dengan SSH dari Host.
 
@@ -90,7 +90,7 @@ Mantap!
 > Pengaturan **Port Forwarding** ini, dapat dilakukan meski instance sedang berjalan.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -103,7 +103,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [https://bobcares.com/blog/virtualbox-ssh-nat](https://bobcares.com/blog/virtualbox-ssh-nat) \
    Diakses tanggal: 2021-02-28

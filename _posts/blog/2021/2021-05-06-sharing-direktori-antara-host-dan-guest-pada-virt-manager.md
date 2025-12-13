@@ -10,7 +10,7 @@ tags: ["virt-manager", "kvm", "qemu", "samba"]
 description: "Memiliki akses Home direktori yang dimiliki oleh Host dari dalam Guest, sangat memudahkan sekali untuk proses tukar menukar data. Tidak perlu repot-repot harus menggunakan aplikasi semacam Filezilla, scp, atau semacamnya. Semuanya cukup dilakukan dengan File Explorer di Linux dan Explorer Guest Windows."
 ---
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Saat membuat VM baru pada virt-manager, biasanya sharing Home direktori antara Host OS --dalam hal ini adalah GNU/Linux-- dan Guest OS --dalam hal ini adalah Windows-- tidak langsung tersedia. Kita perlu mengkonfigurasi secara manual.
 
@@ -25,7 +25,7 @@ Bisa dilihat di **My Computer**, pada kategori **Network Location** seperti yang
 Kalau kita buka, isinya adalah Home direktori dari Host OS.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Untu memecahkan masalah di atas, teradapat beberapa prasyarat yang harus terpenuhi, diantaranya:
 
@@ -36,7 +36,7 @@ Untu memecahkan masalah di atas, teradapat beberapa prasyarat yang harus terpenu
 Oke, saya akan jabarkan langkah-langkah di atas.
 
 
-## Pasang Samba
+### Pasang Samba
 
 Pasang Samba dulu apabila belum terinstal.
 
@@ -51,7 +51,7 @@ $ sudo pacman -S samba samba-openrc
 ```
 
 
-## Jalankan Samba Service
+### Jalankan Samba Service
 
 Sebelum dapat digunakan, tentunya Samba service harus dijalankan terlebih dahulu.
 
@@ -68,7 +68,7 @@ $ sudo rc-service smb start
 ```
 
 
-## Buat Samba User
+### Buat Samba User
 
 Buat Samba user terlebih dahulu, saya merekomendasikan, agar mudah diingat, buat Samba user dengan credential yang sama dengan Guest OS yang digunakan.
 
@@ -106,7 +106,7 @@ Retype new SMB password:
 > ```
 
 
-## Membuat Virtual Network
+### Membuat Virtual Network
 
 > PERHATIAN!
 > 
@@ -154,7 +154,7 @@ Dapat dilihat pada Gambar 3 di atas, kita mendapatkan network 192.168.1.96/28, d
 Jadi, nanti ketika kita membuat Vitual Machine, IP address yang akan diambil dari rentang tersebut apabila kita gunakan Virtual Network **network-bridge**.
 
 
-## Attach VM dengan Virtual Network
+### Attach VM dengan Virtual Network
 
 Anggaplah kita sudah memiliki Virtual Machine yang berisi Windows.
 
@@ -223,7 +223,7 @@ Approximate round trip times in milli-seconds:
 Oke, kita sudah punya network yang sesuai dengan prasyarat yang ditentukan.
 
 
-## Buat Network Location di Guest OS
+### Buat Network Location di Guest OS
 
 Buka Guest OS --dalam hal ini adalah Windows, kemudian buka **My Computer**.
 
@@ -284,14 +284,14 @@ Hasilnya,
 Gambar 9. Contoh network location selain Home Directory
 
 
-# Demo
+## Demo
 
 ![Gambar 10](https://i.postimg.cc/NfCPpGDp/gambar-09.gif)
 
 Gambar 10. Demo menambhakn network location
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -304,12 +304,12 @@ Terima kasih.
 (^_^)
 
 
-# Terima Kasih
+## Terima Kasih
 
 1. Arya Pramudika, atas informasi membuat Virtual Network Bridge.
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/title/Samba](https://wiki.archlinux.org/title/Samba) \
    Diakses tanggal: 2021-05-06

@@ -10,19 +10,19 @@ tags: ["lazygit", "git", "tui", "tool"]
 description: "Lazygit adalah Git Tools berupa Terminal User Interface yang dapat kita manfaatkan sebagai alat bantu yang mempermudah kita dalam berinteraksi dengan perintah-perintah Git. Saya lebih prefer menggunakan veri TUI ketimbang Git Tools lain yang menggunakan GUI karena dengan menggunakan TUI, saya masih dapat memanfaatkan keyboard shortcut untuk mengoperasikan tools tersebut."
 ---
 
-# Tentang Lazygit
+## Tentang Lazygit
 
 Lazygit adalah Terminal User Interface ~~sederhana~~ yang digunakan untuk mempermudah kita dalam menggunakan perintah-perintah Git. Ditulis dengan bahasa pemrograman Go oleh [Jesse Duffield](https://github.com/jesseduffield).
 
 ![Gambar 1](https://i.postimg.cc/g01HkB1L/gambar-01.png)
 
 
-# Skenario
+## Skenario
 
 Pada catatan kali ini, saya akan mendokumentasikan secara tertulis pemaparan tentang 15 fitur dari Lazygit yang dibawakan oleh Jesse Duffield dalam videonya yang diunggah ke YouTube dengan judul [15 Lazygit Features In Under 15 Minutes](https://www.youtube.com/watch?v=CPLdltN7wgE).
 
 
-# Navigasi
+## Navigasi
 
 | Key | Deskripsi |
 | --- + --- |
@@ -31,10 +31,10 @@ Pada catatan kali ini, saya akan mendokumentasikan secara tertulis pemaparan ten
 | <span class="nobr"><kbd>x</kbd> & <kbd>?</kbd></span> | Keybind help |
 
 
-# Features
+## Features
 
 
-## 1. Staging files fast
+### 1. Staging files fast
 
 ![Gambar 2](https://i.postimg.cc/yxjR9fpP/gambar-02.png)
 
@@ -54,14 +54,14 @@ Keterangan,
 | M | Modified file |
 
 
-### 1.1. Untuk membuat commit message
+#### 1.1. Untuk membuat commit message
 
 | Key | Deskripsi |
 | --- + --- |
 | <kbd>c</kbd> | Membuat commit message |
 
 
-### 1.2. Untuk melakukan reset last commit (membatalkan commit terakhir)
+#### 1.2. Untuk melakukan reset last commit (membatalkan commit terakhir)
 
 Letakkan cursor (highlight cursor) pada commit hash setelah last commit (setelah commit terakhir) (Lihat Gambar 3 di bawah).
 
@@ -84,7 +84,7 @@ Kalau berhasil, stagging files yang berada di last commit kita akan muncul di se
 ![Gambar 5](https://i.postimg.cc/t43zC5pB/gambar-05.png)
 
 
-## 2. Staging Lines
+### 2. Staging Lines
 
 Pada section Files, pilih file yang ingin dilakukan commit pada baris tertentu saja.
 
@@ -93,26 +93,26 @@ Kemudian tekan <kbd>Enter</kbd>. Focus akan berpindah ke section Unstaged Change
 ![Gambar 6](https://i.postimg.cc/28w4s5wt/gambar-06.png)
 
 
-### 2.1. Single line
+#### 2.1. Single line
 
 Pada section Unstaged Changes, tekan <kbd>Space</kbd> untuk memasukkan baris yang terseleksi (selected line) ke dalam secton Staged Changes.
 
 ![Gambar 7](https://i.postimg.cc/Bnnx4G7n/gambar-07.png)
 
 
-### 2.2. Multiline dengan Visual Block
+#### 2.2. Multiline dengan Visual Block
 
 Bisa juga gunakan Visual Block dengan menekan <kbd>v</kbd> (untuk mengaktifkan mode visual block), lalu tekan <kbd>j</kbd> (untuk memilih rentang line). Kalau sudah, tinggal tekan <kbd>Space</kbd> (untuk memasukkan rentang baris yang terlpilih ke dalam secton Staged Changes).
 
 ![Gambar 8](https://i.postimg.cc/43KVHQgC/gambar-08.png)
 
 
-### 2.3. Melakukan commit
+#### 2.3. Melakukan commit
 
 untuk membuat commit, sama seperti pada feature no. 1 di atas, yaitu menggunakan tombol <kbd>c</kbd> untuk membuat commit message.
 
 
-### 2.4. Undo staged changes
+#### 2.4. Undo staged changes
 
 Untuk melakukan undo terhadap baris yang sudah terlanjur di-staging, kita perlu berpindah section ke secton Staged Changes dengan menekan <kbd>Tab</kbd> (toggle on/off).
 
@@ -121,12 +121,12 @@ Untuk melakukan undo terhadap baris yang sudah terlanjur di-staging, kita perlu 
 Kemudian gunakan <kbd>d</kbd> atau <kbd>Space</kbd> untuk mengembalikan baris atau rentang baris yang tidak jadi di-staging ke section Unstaged Changes.
 
 
-### 2.5. Delete unstaged changes
+#### 2.5. Delete unstaged changes
 
 Pada section Unstaged Changes, kita dapat membatalkan perubahan pada baris yang terseleksi dengan menggunakan <kbd>d</kbd>.
 
 
-## 3. Cherry Picking
+### 3. Cherry Picking
 
 Misalkan saat ini kita berada pada branch Master. Pada section Commits, tekan <kbd>c</kbd> (toggle on/off) pada commit yang ingin dilakukan *cherry picking*.
 
@@ -151,10 +151,10 @@ Hasilnya akan seperti ini,
 Gambar 12. 3 commit hash yang telah dipindahkan dari branch master ke branch status2d
 
 
-## 4. Nuking Working Tree
+### 4. Nuking Working Tree
 
 
-### 4.1. Nuke single file
+#### 4.1. Nuke single file
 
 Pada section Files, misalkan kita ingin mengembalikan file atau menghapus perubahan yang ada di dalam suatu file seperti keadaan sebelum dilakukan perubahan, kita dapat menggunakan <kbd>d</kbd>.
 
@@ -167,7 +167,7 @@ Pilih **discard all changes**, untuk mengembalikan file seperti semula (sebelum 
 Cara ini **tidak menghapus file** namun hanya mengembalikan file ke dalam keadaan semula sebelum dilakukan perubahan.
 
 
-### 4.1. Nuke all files
+#### 4.1. Nuke all files
 
 Pada section Files, misalkan kita ingin membersihkan semua unstaging files dari daftar working tree, kita dapat menggunakan <span class="nobr"><kbd>Shift</kbd>+<kbd>d</kbd></span>.
 
@@ -182,7 +182,7 @@ Pilih "**nuke working tree**". Maka, semua unstaged files akan hilang dari dafta
 Cara ini **tidak menghapus file-file tersebut** namun hanya mengembalikan file ke dalam keadaan semula sebelum dilakukan perubahan.
 
 
-## 5. Interactive rebasing
+### 5. Interactive rebasing
 
 Pada section Commits, kita ingin melakukan rebase dari commit yang saya kotakin merah di bawah.
 
@@ -193,7 +193,7 @@ Untuk melakukan rebase, tekan <kbd>e</kbd>. Maka akan masuk ke dalam mode intera
 ![Gambar 17](https://i.postimg.cc/QCYg98Mm/gambar-17.png)
 
 
-### 5.1. Beberapa rebase commands
+#### 5.1. Beberapa rebase commands
 
 Terdapat beberapa command yang dapat digunakan, seperti:
 
@@ -206,7 +206,7 @@ Terdapat beberapa command yang dapat digunakan, seperti:
 | <kbd>d</kbd> | Delete/Drop commit |
 
 
-### 5.2. Bertukar posisi commit (swap commit position)
+#### 5.2. Bertukar posisi commit (swap commit position)
 
 Bertukar posisi/swap commit menggunakan,
 
@@ -222,7 +222,7 @@ Kalau sudah, tekan <kbd>m</kbd>, dan akan muncul popum window.
 Pilih **continue** jika ingin melakukan proses rebase. Pilih **abort** jika tidak ingin melakukan rebase.
 
 
-## 6. Amending old commits
+### 6. Amending old commits
 
 Pada section Files, sudah harus ada file yang masuk staging area.
 
@@ -237,14 +237,14 @@ Akan ada popup window,
 Tekan <kbd>Enter</kbd> untuk menyetujui.
 
 
-## 7. Open pull request
+### 7. Open pull request
 
 Pada section Local Branches, tekan <kbd>o</kbd>, untuk melakukan **Open a pull request** dari branch yang terseleksi.
 
 Nanti akan dibukakan halaman GitHub Open Pull Request di Browser.
 
 
-## 8. Revert commit
+### 8. Revert commit
 
 Pada section Commits, pilih commit yang ingin dilakukan *revert*. Kemudian tekan <kbd>t</kbd>, maka akan dibuatkan revert commit (commit kebalikan) dari commit yang dipilih. Revert commit tersebut akan dibuatkan commit message dengan prefix "Revert",
 
@@ -255,10 +255,10 @@ Revert "bla bla commit message bla bla"
 ![Gambar 20](https://i.postimg.cc/0N9CBHhp/gambar-20.png)
 
 
-## 9. Stash selected files
+### 9. Stash selected files
 
 
-### 9.1. Membuat stash
+#### 9.1. Membuat stash
 
 Pada section Files, apabila ingin melakukan stash pada working tree, tekan <kbd>s</kbd> untuk stash changes, atau <kbd>Shift</kbd>+<kbd>s</kbd> untuk stash staged changes.
 
@@ -269,47 +269,47 @@ Maka, file yang di-stash akan masuk ke dalam section Stash.
 ![Gambar 21](https://i.postimg.cc/TYXQbwQ7/gambar-21.png)
 
 
-### 9.2. Menggunakan stash
+#### 9.2. Menggunakan stash
 
 Pada section Stash, pilih stash yang ingin digunakan. Untuk menggunakannya, ketik <kbd>Space</kbd> untuk mengeluarkan dari stash tanpa menghapus, atau ketik <kbd>g</kbd> untuk mengeluarkan dari stash sekaligus menghapus dari stash.
 
 
-## 10. Moving code between old commits
+### 10. Moving code between old commits
 
 [https://www.youtube.com/watch?v=CPLdltN7wgE&t=442s](https://www.youtube.com/watch?v=CPLdltN7wgE&t=442s)
 
 
-## 11. Deleting code from old commits
+### 11. Deleting code from old commits
 
 [https://www.youtube.com/watch?v=CPLdltN7wgE&t=512s](https://www.youtube.com/watch?v=CPLdltN7wgE&t=512s)
 
 
-## 12. Fixing merge conflicts
+### 12. Fixing merge conflicts
 
 [https://www.youtube.com/watch?v=CPLdltN7wgE&t=547s](https://www.youtube.com/watch?v=CPLdltN7wgE&t=547s)
 
 
-## 13. Easy rebase onto origin/master
+### 13. Easy rebase onto origin/master
 
 [https://www.youtube.com/watch?v=CPLdltN7wgE&t=565s](https://www.youtube.com/watch?v=CPLdltN7wgE&t=565s)
 
 
-## 14. Branch checkout without stashing changes
+### 14. Branch checkout without stashing changes
 
 [https://www.youtube.com/watch?v=CPLdltN7wgE&t=613s](https://www.youtube.com/watch?v=CPLdltN7wgE&t=613s)
 
 
-## 15. Theme customisation
+### 15. Theme customisation
 
 [https://www.youtube.com/watch?v=CPLdltN7wgE&t=671s](https://www.youtube.com/watch?v=CPLdltN7wgE&t=671s)
 
 
-# Thanks
+## Thanks
 
 Trima kasih kepada Jesse Duffield karena telah membuat Lazygit.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -320,7 +320,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase) \
    Diakses tanggal: 2021-12-15

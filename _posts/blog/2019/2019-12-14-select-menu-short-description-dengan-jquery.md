@@ -10,12 +10,12 @@ tags: ["rails", "javascript", "jquery"]
 description: "Catatan kali ini mengenai cara membuat select menu dengan keterangan kecil yang berada di bagian bawah dari menu menggunaka jQuery pada Ruby on Rails."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 2.6.3` `rails 5.2.3` `postgresql 11.5`
 
 
-# Prakata
+## Prakata
 
 Pernah membuat menu select atau dropdown menu, namun merasa keterngan nama yang tertulis di menu tersebut tidak dapat menjelaskan secara detail karena keterbatasan tempat.
 
@@ -30,12 +30,12 @@ Lihat, tidak ada informasi yang lebih detail mengenail masing-masing menu.
 Kalau seperti ini, tentunya kita akan bingung, mana menu yang pas untuk kita pilih.
 
 
-# Permasalahan
+## Permasalahan
 
 Pada umumnya, memang menu select tidak terdapat penjelasan singkat. Hanya tertulis nama dari value yang dijadikan menu selection.
 
 
-# Sekenario
+## Sekenario
 
 Untuk mengatasi hal ini, saya menggunakan bantuan jQuery untuk menampilkan dan menyembunyikan element pada template.
 
@@ -46,7 +46,7 @@ Data text diambil dari tabel yang menampung data-data Cancellation Policy.
 Data yang ditampilkan akan mengikuti menu select yang sedang dipilih (*selected*).
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Pada view template, pada bagian form, seperti ini yang saya lakukan.
 
@@ -139,7 +139,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [www.w3schools.com/jquery/jquery_hide_show.asp](https://www.w3schools.com/jquery/jquery_hide_show.asp) \
    Diakses tanggal: 2019-12-14

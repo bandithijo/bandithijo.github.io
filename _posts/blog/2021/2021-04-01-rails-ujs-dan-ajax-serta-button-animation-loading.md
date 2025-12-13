@@ -10,12 +10,12 @@ tags: ["rails"]
 description: "Catatan kali ini tentang bagaimana membuat sebuah fitur update value pada sebuah halaman tanpa perlu refresh halaman. Sekaligus membuat animasi loading pada link/button tersebut."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 3.0.0` `rails 6.1.3.1`
 
 
-# Target
+## Target
 
 Memberikan informasi kepada pengguna melalui button atau link bahwa aplikasi sedang memproses inputan dari user.
 
@@ -24,7 +24,7 @@ Informasi yang diberikan dapat berupa tulisan "Processing..." atau icon dengan a
 Sekaligus kita akan menggunakan AJAX, agar data yang baru langsung diload ke bagian yang tertentu dari halaman tanpa perlu refresh.
 
 
-## Sedikit tentang Rails UJS
+### Sedikit tentang Rails UJS
 
 UJS adalah kependekan dari Unobtursive Javascript. Rails menggunakan UJS untuk menghandle Javascript ke DOM (*Document Object Model*).
 
@@ -52,10 +52,10 @@ require("@rails/ujs").start()
 Oke, langsung saja yaa. Kalau masih perlu penjelasan mengenai UJS bisa dicari-cari sendiri.
 
 
-# Achievment
+## Achievment
 
 
-## Membuat Project Baru
+### Membuat Project Baru
 
 Saya akan membuat project baru dengan nama **demo_rails_ujs**.
 
@@ -66,21 +66,21 @@ $ rails new demo_rails_ujs
 ```
 
 
-## Generate scaffold book
+### Generate scaffold book
 
 ```
 $ rails g scaffold Book name:string description:text published_at:datetime
 ```
 
 
-## Run migration
+### Run migration
 
 ```
 $ rails db:migrate
 ```
 
 
-## Run server
+### Run server
 
 ```
 $ rails s
@@ -95,7 +95,7 @@ http://localhost:3000/books
 Inputkan buku baru. Masukkan data asal saja.
 
 
-## Buat link publish
+### Buat link publish
 
 Buka **app/views/books/show.html.erb**.
 
@@ -128,7 +128,7 @@ Tambahkan **link_to 'Publish'**, seperti pada baris 18.
 Nantinya, apabila kita meng-klik link **Publish**, value dari **published_at** akan terupdate sesuai jam saat ini. Tapi tanpa perlu me-refresh halaman.
 
 
-## Buat routes untuk publish
+### Buat routes untuk publish
 
 ```ruby
 !filename: config/routes.rb
@@ -142,7 +142,7 @@ end
 ```
 
 
-## Modifikasi link publish
+### Modifikasi link publish
 
 Kalau kita klik link publish saat ini, maka akan muncul pesan error,
 
@@ -164,7 +164,7 @@ Modifikasi lagi link_to publish tersebut.
 Tambahkan attribute **method: :patch**. Attribute ini disediakan oleh Rails yang disebut dengan "Unobtrusive JavaScript" (UJS).
 
 
-## Buat publish action pada books_controller
+### Buat publish action pada books_controller
 
 Kalau kita klik link publish lagi, maka akan muncul pesan,
 
@@ -218,7 +218,7 @@ Update berhasil, tapi,
 Tidak ada template untuk menampilkan hasilnya.
 
 
-## Siapkan area tampilan
+### Siapkan area tampilan
 
 Buka lagi **app/views/books/show.html.erb** dan modifikasi pada bagian output value dari published_at.
 
@@ -240,7 +240,7 @@ Tambahkan tag span dengan attribute ID seperti pada baris ke 4.
 Tambahkan attribute **remote: true** pada **link_to 'Publish'**.
 
 
-## Buat file template javascript
+### Buat file template javascript
 
 Karena kita akan menggunakan AJAX, kita akan membuat file view dengan format **.js.erb**.
 
@@ -271,7 +271,7 @@ Jadinya akan seperti ini.
 Gambar 1. Demo Rails UJS & AJAX pada button
 
 
-## Animation loading pada link/button
+### Animation loading pada link/button
 
 Pada gambar animasi di atas, dapat dilihat ketika link ditekan, tidak ada jeda waktu.
 
@@ -319,7 +319,7 @@ Gambar 2. Demo Rails UJS & AJAX pada button dengan animation loading
 Selesai!
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -332,7 +332,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [Rails Guides - Working with JavaScript in Rails: Unobtrusive JavaScript](https://guides.rubyonrails.org/working_with_javascript_in_rails.html#unobtrusive-javascript) \
    Diakses tanggal: 2021-04-01

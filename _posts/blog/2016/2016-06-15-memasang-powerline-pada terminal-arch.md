@@ -17,7 +17,7 @@ description: "Powerline adalah plugin vim yang menyediakan statusline dan prompt
 > – diterjemahkan secara bebas oleh penulis dari [https://github.com/powerline/powerline](https://github.com/powerline/powerline)
 
 
-# Pendahuluan
+## Pendahuluan
 
 Dalam keseharian saya menggunakan Linux tentunya saya tidak akan pernah bisa lepas menggunakan Terminal. Oleh karena itu saya berusaha untuk membuat aktifitas pada Terminal saya menjadi menarik (bagi saya) dan terlihat menarik (bagi orang lain yang melihat).
 
@@ -28,15 +28,15 @@ Yang saya suka dari tampilan Powerline ini adalah model seperti “_Breadcums_�
 Selain dengan Powerline, saya juga memadukannya dengan [**zsh**](https://wiki.archlinux.org/index.php/Zsh) shell. Zsh adalah salah satu jenis Shell di Linux selain bash shell. Menurut saya zsh lebih mudah dalam hal pemakaian karena mempunyai fitur _auto completion_ yang lebih baik.
 
 
-# Info
+## Info
 
 Terdapat banyak cara untuk dapat memasang Poerline pada Terminal kita. Mulai dari memasang menggunakan _package manager_ dari masing-masing distribusi sistem operasi GNU/Linux, sampai dengan cara yang lebih universal. Namun pada dokumentasi saya hanya akan menuliskan cara yang lebih universal dan bisa diterapkan pada distribusi apa saja.
 
 
-# Step by Step
+## Step by Step
 
 
-## Instalasi Pip dan Git
+### Instalasi Pip dan Git
 
 Pasang paket bernama `python-pip` dan `git`. Pip adalah salah satu _package manager Python_ untuk memasang paket-pake Python secara online. Penggunaannya sangat mudah dan memudahkan.
 
@@ -49,7 +49,7 @@ $ sudo pacman -S python-pip git
 Untuk teman-teman yang menggunakan distribusi lain, bisa menyesuaikan dengan _package manager_ sesuai distribusi yang digunakan. Saya rasa nama paketnya tidak terlalu jauh berbeda.
 
 
-## Unduh Powerline Font dan Powerline Symbols
+### Unduh Powerline Font dan Powerline Symbols
 
 Setelah itu kita perlu mengunduh **Powerline** dari repositori GitHub sekaligus melakukan instalasi.
 
@@ -110,7 +110,7 @@ $ python -c "import sys; print(sys.path[4])"
 Informasi yang kita dapatkan, akan kita pakai untuk tahap selanjutnya. Sesuaikan _command line_ yang saya contohkan di bawah dengan informasi yang kalian dapatkan dari _script_ di atas.
 
 
-## BASH Prompt Shell
+### BASH Prompt Shell
 
 Tambahkan _script_ di bawah pada file `~/.bashrc`.
 
@@ -123,7 +123,7 @@ fi
 ```
 
 
-## ZSH Prompt Shell
+### ZSH Prompt Shell
 
 Tambahkan _script_ di bawah pada `~/.zshrc`.
 
@@ -136,7 +136,7 @@ fi
 ```
 
 
-## Vim Statusline
+### Vim Statusline
 
 Tambahkan _script_ di bawah pada `~/.vimrc`.
 
@@ -154,7 +154,7 @@ set t_Co=256
 ```
 
 
-## Tmux Statusline
+### Tmux Statusline
 
 Tambahkan _script_ di bawah pada `~/.tmux.conf`.
 
@@ -165,12 +165,12 @@ source /usr/lib/python3.6/site-packages/powerline/bindings/tmux/powerline.conf
 ```
 
 
-# Kesimpulan
+## Kesimpulan
 
 Cara yang saya tuliskan di atas, telah saya gunakan saat saya masih pada masa-masa dimana saya mencari distribusi yang cocok dengan prinsip saya. Fedora, Debian, Manjaro, dan terakhir Arch Linux.
 
 
-# Referensi
+## Referensi
 
 1. [askubuntu.com/questions/283908/how-can-i-install-and-use-powerline-plugin](http://askubuntu.com/questions/283908/how-can-i-install-and-use-powerline-plugin) \
    Diakses tanggal: 2016-07-12

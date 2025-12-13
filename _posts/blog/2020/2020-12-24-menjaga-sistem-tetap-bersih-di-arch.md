@@ -10,7 +10,7 @@ tags: ["pacman"]
 description: "Kita mungkin gak sadar, kalau banyak cache yang menumpuk di sistem kita. Apalagi kalau kita tidak pernah membersihkannya, bisa mencapai ukuran Giga, loh! Berikut ini catatan yang mungkin dapat membantu teman-teman membersihkan cache agar sistem kita tetap bersih dan masih banyak space yang dapat kita gunakan. Sayang kan, kalau space bergiga-giga hanya untuk cache yang beberapa diantaranya mungkin sudah tidak kita perlukan."
 ---
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Seiring berjalannya waktu, sistem yang kita gunakan pasti akan penuh dengan file-file cache dan log.
 
@@ -21,7 +21,7 @@ Apabila dibiarkan, tentu saja hal ini akan menumpuk sedikit-demi sedikit lama-la
 Sistem komputer bukanlah sebuah makhluk yang pintar, tentu saja kita perlu untuk memprogramkan terlebih dahulu agar sistem komputer dapat melakukan hal-hal sesuai dengan yang kita programkan. Termasuk membersihkan sampah-sampah yang sudah tidak terpakai.
 
 
-# 1. Clean Package Cache (Pacman)
+## 1. Clean Package Cache (Pacman)
 
 Secara default Arch akan menyimpan cache package hasil proses unduhan dari repositori. Tentu dengan maksud dan tujuan tertentu.
 
@@ -48,7 +48,7 @@ Lihat, ini adalah besarnya cache dari package-package pacman yang ada di sistem 
 Kapasitas sebesar itu saya dapatkan dari proses migrasi Arch ke Artix, dimana saya memilih untuk mengunduh ulang semua pakcages kurang lebih sebanyak 2000an packages. 😄
 
 
-## a. Clean Manually
+### a. Clean Manually
 
 ```
 $ sudo pacman -Sc
@@ -106,7 +106,7 @@ Nah, sudah benar-benar bersih.
 > Selain menggunaka **pacman**, untuk teman-teman yang menggunakan AUR Helper **yay**, dapat mengganti pacman dengan yay agar package cache dari yay yang terdapat pada direktori Home, ikut dibersihkan.
 
 
-## b. Clean Automatically
+### b. Clean Automatically
 
 Kita akan memasang script untuk membantu kita membersikan sistem secara otomatis.
 
@@ -131,7 +131,8 @@ Kalau outputnya seperti ini,
 Artinya, sudah tidak ada lagi package yang perlu dibersihkan dari sistem.
 
 
-### b.1. paccache dengan Systemd Timer
+#### b.1. paccache dengan Systemd Timer
+
 Kalau yang mau dihapus otomatis secara berkala (periode tertentu) bisa menggunakan systemd timer.
 
 Misal untuk sekali dalam sebulan.
@@ -166,7 +167,7 @@ $ sudo systemctl status paccache.timer
 ```
 
 
-## c. Clean After Run Pacman
+### c. Clean After Run Pacman
 
 ```
 $ sudoedit /usr/share/libalpm/hooks/paccache.hook
@@ -221,7 +222,7 @@ Total Removed Size:  0.04 MiB
 ```
 
 
-# 2. Clean Cache on Home
+## 2. Clean Cache on Home
 
 Besar cache yang berada di home bisa cukup gila-gilaan kalau kita tidak pernah membersihkannya.
 
@@ -246,7 +247,7 @@ $ rm -rvf ~/.cache/*
 Nah, sekarang Home cache kita sudah bersih.
 
 
-# 3. Mencari Direktori Tergemuk
+## 3. Mencari Direktori Tergemuk
 
 Kita dapat menggunakan program bernama **ncdu** untuk mendeteksi direktori mana yang paling obesitas.
 
@@ -275,7 +276,7 @@ Masih ada tools-tools dengan fungsi yang sama, yang teman-teman dapat gunakan un
 Teman-teman dapat melihat daftarnya di Arch Wiki, [di sini](https://wiki.archlinux.org/index.php/List_of_applications#Disk_usage_display).
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Catatan ini terinspirasi dari YouTube video [**Average Linux User - How to clean Arch Linux (Manjaro)**](https://youtu.be/3OoMvyHYWDY). Namun, saya hanya mengambil langkah-langkah yang saya butuhkan. Apabila teman-teman tertarik melihat langkah-langkah yang lebih lengkap, saya merekomendasikan untuk mengunjungin video tersebut.
 
@@ -288,7 +289,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [Average Linux User - How to clean Arch Linux (Manjaro)](https://youtu.be/3OoMvyHYWDY) \
    Diakses tanggal: 2020-12-24

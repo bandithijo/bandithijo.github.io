@@ -10,22 +10,22 @@ tags: ["tui", "desktop entry"]
 description: "Hampir semua app TUI (Terminal User Interface) ketika dipasang, belum memiliki desktop entry atau application shortcut agar dapat dipanggil dari application launcher. Berikut ini cara saya membuatnya."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 {{ page.description }}
 
 
-# Problem
+## Problem
 
 Karena tidak terbaca atau terdaftar di Application Launcher, saya harus membuka terminal emulator terlebih dahulu untuk memanggil applikasi TUI tersebut. Tidak praktis.
 
 
-# Solusi
+## Solusi
 
 Saya perlu mendaftarkan aplikasi TUI tersebut dengan cara membuat desktop entry file agar dikenali oleh application launcher.
 
 
-## Lokasi Desktop Entry
+### Lokasi Desktop Entry
 
 Lokasi dari Desktop Entry disimpan secara umum terdapat di dua tempat.
 
@@ -37,7 +37,7 @@ Lokasi dari Desktop Entry disimpan secara umum terdapat di dua tempat.
 Di dalam direktori ini, kita dapat melihat file desktop entry yang tersedia. Biasanya desktop entry file sudah tersedia ketika aplikasi di pasang. Namun, umumnya untuk aplikasi berbasis GUI. Aplikasi TUI hampir sangat jarang menyertakan file desktop entry. Maka dari itu, saya sering membuat sendiri file desktop entry untuk aplikasi TUI yang saya gunakan, dan saya simpan di local.
 
 
-## File Desktop Entry
+### File Desktop Entry
 
 Ciri dari desktop entry file adalah memiliki ekstension `.desktop`.
 
@@ -61,7 +61,7 @@ Keywords=system;process;task
 Berdasarkan referensi dari website freedesktop.org > desktop-entry-spec > recognized-keys, terdapat key wajib yang minimal harus ada. Seperti `Type` dan `Name`. Namun, untuk dapat memanggil aplikasi harus juga memiliki key `Exec` (executable). Value dari key `Exec` inilah yang akan digunakan untuk memanggil aplikasi.
 
 
-## Modifikasi File Desktop Entry
+### Modifikasi File Desktop Entry
 
 Terkadang saya ingin memodifikasi isinya sesuai dengan preferensi saya. Jangan langsung memodifikasi dekstop entry file yang ada di global. Lebih baik di copy ke local.
 
@@ -80,7 +80,7 @@ $ cp /usr/share/applications/htop.desktop ~/.local/share/applications/
 ```
 
 
-## Contoh Exec untuk Aplikasi TUI
+### Contoh Exec untuk Aplikasi TUI
 
 Sejauh pengalaman saya menggunakan Linux, saya menggunakan 2 jenis pendekatan untuk memanggil aplikasi TUI menggunakan desktop entry.
 
@@ -90,7 +90,7 @@ Sejauh pengalaman saya menggunakan Linux, saya menggunakan 2 jenis pendekatan un
 Perbedaan dari keduanya terletak pada key `Terminal`.
 
 
-## Direct Executable
+### Direct Executable
 
 Pada pendekatan diret executable, artinya kita menggunakan terminal emulator default yang kita define pada Desktop Environment atau Window Manager dengan configurasi default. Seperti window geometri dari terminal emulatornya.
 
@@ -102,7 +102,7 @@ Terminal=true
 Dengan begini, `htop` akan dipanggil menggunakan default terminal emulator dengan geometri default dari terminal emulatornya.
 
 
-## Indirect Executable
+### Indirect Executable
 
 Pada pendekatan indirect executable, artinya kita dapat menggunakan terminal emulator sesuai yang kita inginkan yang kita panggil dari `Exec` key dan tidak menggunakan terminal emulator default. Dengan begini, kita dapat menggunakan parameter yang disediakan oleh terminal emulator tersebut termasuk window geometri dari aplikasi terminal yang kita panggil.
 
@@ -124,12 +124,12 @@ Penjelasan parameter pada **st** terminal yang saya gunakan.
 Setiap terminal emulator memiliki parameter yang berbeda-beda.
 
 
-## Contoh Desktop Entry untuk Beberapa Aplikasi TUI
+### Contoh Desktop Entry untuk Beberapa Aplikasi TUI
 
 Berikut ini adalah beberapa desktop entry file yang saya buat untuk memanggil aplikasi TUI yang saya gunakan.
 
 
-### Neomutt - email client
+#### Neomutt - email client
 
 ```bash
 !filename: $HOME/.local/share/applications/neomutt.desktop
@@ -145,7 +145,7 @@ Comment=A version of mutt with added features
 ```
 
 
-### Newsboat - RSS feed reader
+#### Newsboat - RSS feed reader
 
 ```bash
 !filename: $HOME/.local/share/applications/newsboat.desktop
@@ -161,7 +161,7 @@ Comment=RSS/Atom feed reader for text terminals
 ```
 
 
-## Irssi - IRC client
+### Irssi - IRC client
 
 ```bash
 !filename: $HOME/.local/share/applications/irssi.desktop
@@ -177,7 +177,7 @@ Comment=Modular text mode IRC client with Perl scripting
 ```
 
 
-## St - Simple terminal
+### St - Simple terminal
 
 ```bash
 !filename: $HOME/.local/share/applications/st.desktop
@@ -195,7 +195,7 @@ StartupWMClass=st-256color
 ```
 
 
-## Nvim - Neovim text editor
+### Nvim - Neovim text editor
 
 ```bash
 !filename: $HOME/.local/share/applications/nvim.desktop
@@ -215,7 +215,7 @@ MimeType=text/english;text/plain;text/x-makefile;text/x-c++hdr;text/x-c++src;tex
 ```
 
 
-## Pulsemixer - PulseAudio mixer
+### Pulsemixer - PulseAudio mixer
 
 ```bash
 !filenme: $HOME/.local/share/applications/pulsemixer.desktop
@@ -230,7 +230,7 @@ Terminal=false
 ```
 
 
-## Ncpamixer - Ncurse PulseAudio mixer
+### Ncpamixer - Ncurse PulseAudio mixer
 
 ```bash
 !filename: $HOME/.local/share/applications/ncpamixer.desktop
@@ -245,7 +245,7 @@ Terminal=false
 ```
 
 
-## Ranger - Terminal File Manager
+### Ranger - Terminal File Manager
 
 ```bash
 !filename: $HOME/.local/share/applications/ranger.desktop
@@ -263,7 +263,7 @@ Keywords=File;Manager;Browser;Explorer;Launcher;Vi;Vim;Python
 ```
 
 
-## XProp - Property display for X
+### XProp - Property display for X
 
 ```bash
 [Desktop Entry]
@@ -278,7 +278,7 @@ Comment=Property displayer for X
 ```
 
 
-# Referensi
+## Referensi
 
 1. [freedesktop.org - Desktop Entry Specification](https://specifications.freedesktop.org/desktop-entry-spec/latest/) \
    Diakses tanggal: 2025-07-12

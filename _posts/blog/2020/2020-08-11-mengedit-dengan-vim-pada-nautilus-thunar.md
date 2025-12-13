@@ -10,7 +10,7 @@ tags: ["nautilus", "thunar", "vim"]
 description: "Bukan berarti Vim hanya dapat dipanggil dari dalam Terminal saja. Tapi Vim juga dapat dipanggil untuk melakukan 'Open with...' dari dalam File Manager GUI seperti Nautilus dan Thunar."
 ---
 
-# Sekenario Masalah
+## Sekenario Masalah
 
 Ini bukan pertama kalinya saya mengkonfigurasi "Membuka vim/neovim pada Nautilus atau Thunar pada Window Manager".
 
@@ -21,7 +21,7 @@ Karena tidak memiliki catatan, saya harus mencari-cari bagaimana konfigurasi yan
 Sangat merepotkan. 😅
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 1. Copy file `vim.desktop` atau `nvim.desktop`
    yang berlokasi di `/usr/local/share/applications/`
@@ -51,7 +51,7 @@ Sangat merepotkan. 😅
    `Terminal=false`, ini juga bagian terpenting. Pastikan bernilai **false**. Karena kita sudah menjalankan instance Terminal pada bagian `Exec=` di atas. Perlakuan ini hanya pada Window Manager, mungkin akan berbeda dengan Desktop Environment.
 
 
-# Hasilnya
+## Hasilnya
 
 Kalau sudah diset, sekarang coba buka salah satu plain text, dengan klik kanan "Open With Vim/NeoVim". Seperti yang saya demokan di bawah.
 
@@ -68,7 +68,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [Open Vim in Xfce4 Terminal from Thunar](https://askubuntu.com/a/789541/777616) \
    Diakses tanggal: 2020-08.11

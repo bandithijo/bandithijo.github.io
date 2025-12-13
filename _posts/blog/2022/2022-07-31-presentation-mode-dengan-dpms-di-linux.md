@@ -10,7 +10,7 @@ tags: ["dmenu", "dpms"]
 description: "Presentation Mode. Beberapa teman-teman yang menggunakan XFCE pasti pernah menggunakan fitur ini. Fitur yang membuat system kita tidak bisa melakukan sleep/standby. Biasanya kita gunakan ditengah presentasi atau sedang menonton film. Pada catatan kali ini, kita akan meniru Presentation Mode tersebut tanpa menggunakan xfce4-power-manager, melainkan menggunakan DPMS (Display Power Management Signal) yang dapat kita on dan off kan melalui xset."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 Presentation Mode. Beberapa teman-teman yang menggunakan XFCE pasti pernah menggunakan fitur ini. Fitur yang membuat system kita tidak bisa melakukan sleep/standby. Biasanya kita gunakan ditengah presentasi atau sedang menonton film.
 
@@ -21,7 +21,7 @@ Pada catatan kali ini, kita akan meniru Presentation Mode tersebut tanpa menggun
 > [Arch Wiki - Display Power Management Signal](https://wiki.archlinux.org/title/Display_Power_Management_Signaling)
 
 
-# Paket yang Diperlukan
+## Paket yang Diperlukan
 
 Pastikan paket **xorg-xset** sudah terpasang.
 
@@ -31,10 +31,10 @@ extra/xorg-xset 1.2.4-3 (19.0 KiB 39.8 KiB) [xorg-apps xorg]
 ```
 
 
-# Cara Penggunaan
+## Cara Penggunaan
 
 
-## Melihat value dari DPMS
+### Melihat value dari DPMS
 
 Secara *default*, DPMS sudah dalam keadaan aktif. Kita dapat melihat query parameter apa saja yang tersedia dengan perintah:
 
@@ -53,7 +53,7 @@ DPMS (Energy Star):
 ````
 
 
-## Presentation Mode ON atau OFF
+### Presentation Mode ON atau OFF
 
 **Presentation Mode ON**
 
@@ -68,10 +68,10 @@ $ xset +dpms
 ```
 
 
-# Bonus!
+## Bonus!
 
 
-## dmenu-presentationmode
+### dmenu-presentationmode
 
 ```bash
 !filename: ~/.local/bin/dmenu-presentationmode
@@ -122,14 +122,14 @@ main
 ```
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Penggunaan lebih lanjut saya serahkan pada imajinasi dan kreatifitas teman-teman.
 
 Terima kasih sudah mampir yaa.
 
 
-# Referensi
+## Referensi
 
 1. [https://wiki.archlinux.org/title/Display_Power_Management_Signaling](https://wiki.archlinux.org/title/Display_Power_Management_Signaling) \
    Diakses tanggal: 2022-07-31

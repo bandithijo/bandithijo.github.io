@@ -10,7 +10,7 @@ tags: ["ruby"]
 description: "Catatan ini adalah awal pertama kali saya mulai menekuni bahasa pemrograman Ruby."
 ---
 
-# Prakata
+## Prakata
 
 Awal saya bertemu dengan bahasa Ruby adalah saat mengikuti "[*Online Course Ruby on Rails*](https://www.idrails.com/training-ruby-on-rails)" yang dibawakan oleh mas [Agung Setiawan](http://agung-setiawan.com/) pada Agustus 2017.
 
@@ -53,7 +53,7 @@ Sensasi seperti ini bukan yang pertama kali saya dapat. Saya pernah mengalami se
 Saya menafsirkan, maksud dari sensasi ini adalah, saya sudah mulai "klik" dan tidak ada lagi rasa takut.
 
 
-# Pembahasan
+## Pembahasan
 
 Maksud dari blog post kali ini adalah, saya ingin menampilkan kebiasaan saya saat mempelajari bahasa pemrograman yang baru.
 
@@ -72,7 +72,7 @@ Saat mempelajari bahasa Python, saya membuat beberapa Python script untuk menyel
 Nah, karena saat ini sedang belajar Ruby, saya akan mulai mengkonfersikan Python script yang saya buat menjadi Ruby script, wkwkwkwk.
 
 
-## Contoh 1
+### Contoh 1
 
 Di bawah ini adalah contoh Python script sederhana yang saya gunakan untuk membuat multiple user pada sistem operasi GNU/Linux.
 
@@ -122,7 +122,7 @@ Gimana? Mirip bukan?
 Secara struktur sintaks, sama-sama mudah untuk dibaca dan ndak bikin ngebong.
 
 
-## Contoh 2
+### Contoh 2
 
 {% youtube jr43cIer1Fw %}
 
@@ -135,7 +135,7 @@ Sepertinya segini dulu ceritanya.
 Terima kasih yang sudah mampir yaa.
 
 
-# Referensi
+## Referensi
 
 1. [ruby-doc.org/core-2.4.0/Kernel.html#method-i-system](https://ruby-doc.org/core-2.4.0/Kernel.html#method-i-system) \
    Diakses tanggal: 2019-05-02

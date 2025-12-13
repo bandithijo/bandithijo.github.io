@@ -10,20 +10,20 @@ tags: ["rails"]
 description: "Catatan kali ini, saya akan mencatatat tentang bagaimana membuat email notifikasi yang dikirimakan ke email admin, apabila terdapat user yang baru mendaftar (signup) ke web aplikasi yang kita develop. Kita dapat menggunakan Rails ActionMailer untuk fitur ini."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 3.0.0` `rails 6.1.3`
 
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Membuat fitur email notifikasi ke email admin apabila terdapat user baru yang mendaftar (*signup*) ke web aplikasi yang kita develop.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 
-## Generate Mailer
+### Generate Mailer
 
 Saya akan memberikan nama **AdminMailer** untuk fitur mailer yang akan dibuat.
 
@@ -56,7 +56,7 @@ Perintah ini akan mengenerate file mailers dan juga directory views yang bernama
 ```
 
 
-## Konfigurasi Mailer
+### Konfigurasi Mailer
 
 Modifikasi alamat **from**,
 
@@ -93,7 +93,7 @@ end
 Saya membuat instance variable `@user` yang akan saya gunakan pada view template.
 
 
-## Mailer Views Template
+### Mailer Views Template
 
 Pada file **app/mailers/admin_mailer.rb**, kita sudah mendefinisikan sebuah method yang bernama **new_user()**.
 
@@ -113,7 +113,7 @@ Template di atas, dapat teman-teman buat sesuai preferensi masing-masing.
 Yang saya catat di atas, hanya contoh sederhana saja.
 
 
-## Models
+### Models
 
 Karena kita akan memberikan notifikasi email apabila terdapat user baru yang mendaftar, maka logika bisnis untuk mengirimkan notifikasi akan kita letakkan pada **user** model.
 
@@ -131,7 +131,7 @@ end
 Selesai!
 
 
-# Hasilnya
+## Hasilnya
 
 Apabila terdapat user baru yang mendaftarkan account, admin akan mendapatkan email seperti ini.
 
@@ -142,7 +142,7 @@ Gambar 1. Email yang dikirimkan ke admin jika ada user baru yang mendaftar
 Template email ini, sesuai dengan template yang kita didefinisikan pada **app/views/admin_mailer/new_user.html.erb**.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -155,7 +155,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [Rails Guides - Action Mailer Basics](https://guides.rubyonrails.org/action_mailer_basics.html) \
    Diakses tanggal: 2021-03-26

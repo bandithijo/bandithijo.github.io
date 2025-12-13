@@ -10,7 +10,7 @@ tags: ["mpv"]
 description: "Sebelum mengenal MPV, saya selalu merasa bahwa QuickTime (OSX Video Player) adalah Video Player Favorit saya. Sampai saya mengetahui MPV. Keyakinan sayapun goyah dan berubah. Catatan kali ini, saya akan bercerita ulasan dan bagaimana cara saya mengkonfigurasi MPV."
 ---
 
-# Prakata
+## Prakata
 
 Teman-teman pasti memiliki pemutar video favorit masing-masing. Begitupun saya, **MPV** adalah pemutar video favorit sepanjang 2016 sampai saat tulisan ini dibuat. (2016 - 2019).
 
@@ -19,7 +19,7 @@ Selama menggunakan MPV tidak habis-habisnya saya menemukan fitur-fitur yang berg
 Namun, seiring berjalannya waktu, ternyata banyak sekali fitur-fitur yang dimiliki oleh MPV, dengan fitur yang hampir menyerupai VLC. Malah beberapa fitur pada MPV, saya belum pernah menggunakannya pada saat menggunakan VLC, karena belum adanya kebutuhan akan hal tersebut saat masih menggunakan VLC.
 
 
-# Sekilas Tentang MPV
+## Sekilas Tentang MPV
 
 MPV adalah fork dari MPlayer dan mplayer2. Memiliki banyak dukungan terhadap hampir semua format file video dan audio codecs dan subtitle.
 
@@ -33,7 +33,7 @@ Kelebihan-kelebihan yang dimiliki oleh MPV:
 6. **Free, open source dan multi platform**
 
 
-# Instalasi
+## Instalasi
 
 Untuk distribusi Arch Linux, langsung saja pasang dari repository.
 
@@ -44,7 +44,7 @@ $ sudo pacman -S mpv
 Untuk distribusi lain, silahkan menyesuaikan.
 
 
-# Konfigurasi
+## Konfigurasi
 
 Secara *default*, MPV akan membaca file konfigurasi yang terdapat pada direktori `/etc/mpv` (untuk *system wide*) atau `~/.config/mpv/` (untuk *user*).
 
@@ -62,7 +62,7 @@ Saat ini saya hanya menggunakan 2 file yang ada pada direktori config ini, yaitu
 Saya akan mulai dari file `mpv.conf` terlebih dahulu.
 
 
-## Konfigurasi mpv.conf
+### Konfigurasi mpv.conf
 
 Buka Terminal dan edit file `mpv.conf`.
 
@@ -191,7 +191,7 @@ volume=100                                # default volume, 100 = unchanged
 Berikut ini adalah penjelasan dari beberapa option yang saya gunakan. Saya tidak dapat menjelaskan semuanya secara detail.
 
 
-### Save Position on Quit
+#### Save Position on Quit
 
 ```
 save-position-on-quit=no
@@ -200,7 +200,7 @@ save-position-on-quit=no
 Option di atas digunakan untuk menyimpan posisi terakhir dari *seek bar*. Sehingga memungkinkan kita saat membuka file video yang sama, akan kembali dimulai pada menit sebelum mpv di-*quit*.
 
 
-### Display Progress Bar on Terminal
+#### Display Progress Bar on Terminal
 
 ```
 term-osd-bar
@@ -209,7 +209,7 @@ term-osd-bar
 Karena terkadang saya menjalankan mpv juga dari Terminal, misalkan menonton video melalui url youtube, saya membutuhkan progress bar untuk memberikan saya referensi di mana posisi saya saat ini (sudah berapa menit).
 
 
-### Keep Open After Video End
+#### Keep Open After Video End
 
 ```
 keep-open
@@ -218,7 +218,7 @@ keep-open
 Option ini digunakan agar mpv tidak otomatis keluar saat selesai menjalankan video/audio.
 
 
-### Default Window Size
+#### Default Window Size
 
 ```
 autofit-larger=90%x90%
@@ -227,7 +227,7 @@ autofit-larger=90%x90%
 Option ini saya pergunakan agar saat membuka mpv, video tidak lebih besar dari resolusi layar yang saya gunakan.
 
 
-### ScreenShot Format
+#### ScreenShot Format
 
 ```
 screenshot-format=png
@@ -238,7 +238,7 @@ screenshot-template='~/pix/ScreenShot/%F (%P) %n'
 Option ini saya pergunakan untuk mengatur screenshot file type dan lokasi dimana hasil screenshot disimpan beserta format namanya.
 
 
-### youtube-dl Format
+#### youtube-dl Format
 
 ```
 [ytdl-desktop]
@@ -253,7 +253,7 @@ ytdl-format=bestvideo[height<=?720][fps<=?30][vcodec!=?vp9][protocol!=http_dash_
 Option di atas saya pergunakan untuk mengatur format video yang akan dipilih pada saat menonton streaming YouTube. Saya menggunakan fiber optik internet, sehingga tidak ada masalah untuk mengeset pada resoulsi 720.
 
 
-## Konfigurasi input.conf
+### Konfigurasi input.conf
 
 Untuk file konfigurasi `input.conf` saya tidak menambahkan banyak pengaturan *keyboard shortcuts*.
 
@@ -275,10 +275,10 @@ Option di atas bertujuan untuk:
 3. Tombol <kbd>\</kbd> untuk membuat color dari video menjadi negatif (inverted/reversed)
 
 
-# Contoh Pemanfaatan MPV
+## Contoh Pemanfaatan MPV
 
 
-## Menonton YouTube
+### Menonton YouTube
 Sangat praktis sekali untuk dapat menonton video YouTube di MPV.
 
 Caranya pun sangat mudah. Hanya perlu mengcopy paste url video YouTube setelah perintah mpv.
@@ -302,7 +302,8 @@ $ mpv https://www.youtube.com/watch?v=Jju_lt5f0Zo
 > 1. dll.
 
 
-## WebCam Viewer
+### WebCam Viewer
+
 Selain dapat memutar video, MPV juga saya pergunakan untuk menampilkan output dari kamera WebCam.
 
 Tidak seperti aplikasi WebCam pada umumnya yang harus bergantian dalam menampilkan output dari kamera. MPV dapat melakukannya secara bersamaan. Yaa jelas, karena mpv memanggil alamat dari masing-masing WebCam.
@@ -371,7 +372,7 @@ Gambar 1. MPV menampilkan output dari banyak WebCam
 Gambar 2. Demonstrasi Horizontal Flip dan Rotate menggunakan keyboard Shortcut
 
 
-## Subtitle
+### Subtitle
 
 Pada konfigurasi yang saya buat, saya menghidden visibility dari subtitle.
 
@@ -397,7 +398,7 @@ Cara menggunakannya,
 2. Apabila terdapat lebih dari 1 subtitle, kita dapat berpindah antar subtitle menggunakan <kbd>J</kbd> untuk Next Subtitle dan <kbd>SHIFT</kbd> + <kbd>J</kbd> untuk Previous Subtitle.
 
 
-## Dual Subtitle
+### Dual Subtitle
 
 MPV juga dapat menampilkan dual subtitle.
 
@@ -408,7 +409,7 @@ $ mpv video.mp4 --sub-file=subtitle1.srt --sub-file=subtitle2.srt --secondary-si
 ![Gambar 3](https://i.postimg.cc/tTtgmqnz/gambar-03.png)
 
 
-# Keyboard Shortcuts
+## Keyboard Shortcuts
 
 Default Keyboard Shortcuts berdasarkan file `input.conf`.
 
@@ -480,12 +481,12 @@ Keyboard Shortcuts yang saya tambahkan.
 | <kbd> = </kbd> | horizontal flip |
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Masih banyak fitur-fitur keren dari MPV yang mungkin belum tercover oleh tulisan ini. Mudah-mudahan dapat saya tambahkan lagi dilain waktu apabila menemukan penerapan lain dari penggunaan MPV.
 
 
-# Referensi
+## Referensi
 
 1. [mpv.io](https://mpv.io/) \
    Diakses tanggal: 2019-01-11

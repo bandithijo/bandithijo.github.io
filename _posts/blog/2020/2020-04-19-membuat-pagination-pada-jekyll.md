@@ -10,7 +10,7 @@ tags: ["jekyll"]
 description: "Kalau kita memiliki banyak sekali posting, rasanya kurang pas secara user experience jika menampilkan semua posting dalam satu halaman. Apabila ada ribuan posting akan sangat panjang sekali halamannya. Solusinya adalah membatasi jumlah post dalam satu halaman dengan pagination."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 *Pagination* mungkin menjadi fitur yang diperlukan apabila kita memiliki koleksi post yang sangat banyak.
 
@@ -21,7 +21,7 @@ Namun, seperti yang teman-teman ketahui, di blog ini saya tidak memasang *pagina
 Nah, sekedar mencatat dan *sharing*, saya akan berbagi catatan mengenai "Bagaimana memasang *pagination* pada Jekyll".
 
 
-# Penerapan
+## Penerapan
 
 *Pagination* biasanya akan dipasangkan pada halaman yang menampilkan sebuah *collection*. *Collection* dalam hal ini adalah *posts*.
 
@@ -209,7 +209,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [jekyllrb.com/docs/pagination/](https://jekyllrb.com/docs/pagination/) \
    Diakses tanggal: 2020-04-19

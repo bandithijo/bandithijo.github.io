@@ -10,7 +10,7 @@ tags: ["ruby", "cli"]
 description: "Saya membuat sebuah Ruby script untuk shell wraper dalam memudahkan proses copy paste asset modifikasi dari user direktori ke root direktori. Isi dari menu akan otomatis berubah (bertambah/berkurang) sesuai dengan isi dari direktori."
 ---
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Saya membuat sebuah Ruby script untuk shell wraper dalam memudahkan proses copy paste asset modifikasi dari user direktori ke root direktori.
 
@@ -40,7 +40,7 @@ Maka dari itu, saya berinisiatif untuk membuatkan Ruby installation script agar 
 Selain itu juga karena saya mengharapkan apabila saya menambahkan direktori theme lain, dan juga style yang lain, saya tidak perlu mengubah-ubah script untk memberikan option atau pilihan lagi. Karena pilihan-pilihan theme dan style sudah ditangani oleh script.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Secara sederhana, algoritma dari script ini adalah:
 
@@ -223,7 +223,7 @@ Saya akan menjelaskan perbagian kecil, agar teman-teman yang teratarik dengan ba
 
 15. Selesai
 
-# Full Script
+## Full Script
 
 ```ruby
 !filename: install.rb
@@ -298,7 +298,7 @@ end
 ```
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Untuk versi lebih update dapat dilihat pada repositori [di sini](https://github.com/bandithijo/key-mon-meta-mod/blob/master/install.rb)
 

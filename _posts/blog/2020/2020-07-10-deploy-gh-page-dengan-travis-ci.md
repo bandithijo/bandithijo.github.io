@@ -21,7 +21,7 @@ description: "Terdapat whitelist plugin yang dapat digunakan apabila kita hanya 
 > Ini adalah jalan yang saya pilih untuk memulai. Silahkan teman-teman untuk menentukan pilihan.
 
 
-# Sekenario Masalah
+## Sekenario Masalah
 
 Kenapa kok sudah pakai Jekyll tapi malah pakai Travis CI untuk mendeploy ke GitHub Pages. Bukankan GitHub Pages sangat support dengan Jekll?
 
@@ -67,7 +67,7 @@ Di blog ini saja (sejak tulisan ini dibuat), saya baru mencoba 4 plugin teratas 
 Sumber: [Configuring Jekyll plugins](https://docs.github.com/en/enterprise/2.14/user/articles/configuring-jekyll-plugins)
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Sesuai judul catatan kali ini, permasalahan di atas akan kita selesaikan dengan menggunakan Travis CI.
 
@@ -78,7 +78,7 @@ Sesuai judul catatan kali ini, permasalahan di atas akan kita selesaikan dengan 
 Dengan begitu, kita mengintegrasikan GitHub repository kita dengan Travis CI, agar proses Jekyll build untuk merender static file (public file) akan ditangani oleh Travis CI, bukan oleh GitHub Pages.
 
 
-## Gambaran Umum Proses Travis CI
+### Gambaran Umum Proses Travis CI
 
 Kita akan mengkonfigurasi Travis CI untuk aktif melakukan proses `jekyll build` pada saat terdapat commit terbaru yang masuk ke GitHub repositori.
 
@@ -87,7 +87,7 @@ Setelah proses build selesai dan berhasil, hasilnya berupa static site (public f
 Ini adalah proses yang mudah, namun akan menjadi sangat membosankan apabila kita melakukannya berulang-ulang setiap kali kita membuat post baru. Maka dari itu, kita buat proses ini berjalan otomatis dengan memanfaatkan Travis CI.
 
 
-## Membagi Branch
+### Membagi Branch
 
 Seperti yang saya jelaskan pada ilustrasi di atas, saya akan membagi project repository menjadi 2.
 
@@ -109,12 +109,12 @@ $ _
 ```
 
 
-## Konfigurasi Branch: Source
+### Konfigurasi Branch: Source
 
 Setelah kita berada pada branch source, kita akan melakukan beberapa pemasangan gem dan konfigurasi untuk terhubung dengan Travis CI.
 
 
-### Memasang Gem yang Dibutuhkan
+#### Memasang Gem yang Dibutuhkan
 
 Buka `Gemfile` dan pasang gem-gem yang teman-teman perlukan.
 
@@ -140,7 +140,7 @@ end
 Sesuaikan versi gem dengan yang teman-teman perlukan.
 
 
-### Pendefinisian Plugin & Exclude File/Direktori
+#### Pendefinisian Plugin & Exclude File/Direktori
 
 Untuk plugin gem yang didaftakan pada `:jekyll_plugins`, kita juga perlu mendifinisikan pada file `_config.yml`.
 
@@ -176,7 +176,7 @@ exclude:
 ```
 
 
-### Gitignore _site/ Direktori
+#### Gitignore _site/ Direktori
 
 Karena kita menggunakan branch **master** untuk menampung file-file static site yang sudah di-generate, kita akan membuat pengecualian terhadap direktori `_site/` --yang ada di branch **source**-- ke dalam file `.gitignore` agar tidak masuk ke dalam git tracking.
 
@@ -189,7 +189,7 @@ _site
 ```
 
 
-### Konfigurasi travis.yml
+#### Konfigurasi travis.yml
 
 Kita perlu membuat file bernama `.tavis.yml` di root project direktori kita.
 
@@ -240,7 +240,7 @@ deploy:
 Sumber: [GitHub Pages Deployment](https://docs.travis-ci.com/user/deployment/pages/)
 
 
-### Membuat Build Task di Rakefile
+#### Membuat Build Task di Rakefile
 
 Proses build yang berlangsung di Travis CI akan memerlukan **rake**.
 
@@ -266,7 +266,7 @@ File `Rakefile` tersebut akan dijalankan setiap build.
 Proses konfigurasi di branch **source** telah selesai.
 
 
-## Konfigurasi GitHub PAT (Personal Access Token)
+### Konfigurasi GitHub PAT (Personal Access Token)
 
 Kita memerlukan GitHub PAT (*Personal Access Token*) yang akan kita letakkan pada Travis CI environment.
 
@@ -299,7 +299,7 @@ Token tersebut akan kita daftarkan ke environment variable GITHUB_TOKEN di Travi
 Dengan begini, konfigurasi pada GitHub sudah selesai.
 
 
-## Konfigurasi Travis CI
+### Konfigurasi Travis CI
 
 Buka situs [Travis-CI.Org](https://travis-ci.org/) dan login dan nanti akan muncul repositori yang akan kita gunakan. Pilih repository dari Jekyll blog yang teman-teman miliki.
 
@@ -364,7 +364,7 @@ Selesai!
 Selamat nge-Jekyll!!!
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Catatan ini bukan merupakan tutorial, saya hanya ingin sharing tentang informasi yang saya dapat dan saya pergunakan selama membangun dan menulis Blog menggunakan Jekyll.
 
@@ -379,7 +379,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [joshfrankel.me/blog/deploying-a-jekyll-blog-to-github-pages-with-custom-plugins-and-travisci](http://joshfrankel.me/blog/deploying-a-jekyll-blog-to-github-pages-with-custom-plugins-and-travisci/) \
    Diakses tanggal: 2020-07-10

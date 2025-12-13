@@ -10,7 +10,7 @@ tags: ["ruby"]
 description: "Kadang saya memerlukan sebuah pananda yang benar-benar dapat menarik perhatian saya saat CPU temperature mencapai suhu tinggi. Tujuannya agar saya dapat mengambil tindakan antisipasi. Saya memang sudah memiliki status indikator. Namun, masih belum cukup menarik perhatian saya, terutama saat saya tidak sedang berada di depan laptop dan laptop sedang digunakan untuk mengcompile."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 Sejak sekitar Maret 2019, saya menggunakan ThinkPad X61. Laptop yang dirilis tahun 2007 silam ini, masih dapat saya pergunakan untuk menunjang pekerjaan saya sehari-hari, sebagai Junior Backend Rails Developer.
 
@@ -39,7 +39,7 @@ Gambar 1. Tampilan notifikasi Peringatan Hot CPU Temperature
 Langsung saja saya tuliskan script ~~sederhana~~ cupu, yang saya tulis menggunakan bahasa Ruby.
 
 
-# Script
+## Script
 
 ```ruby
 !filename: $HOME/.local/bin/notify-hightemp
@@ -115,7 +115,7 @@ Copykan ke direktori `/usr/bin/` untuk dieksekusi semua user atau `~/.local/bin/
 Selanjutnya tinggal meletakkan pada autorun.
 
 
-# Autorun
+## Autorun
 
 Bagian ini akan tergantung dari DE atau WM yang teman-teman pergunakan.
 
@@ -152,10 +152,10 @@ $0="notify-hightemp"
 Namun, terlihat seperti kurang Ruby banget, hehe.
 
 
-# Tambahan
+## Tambahan
 
 
-## ThinkAlert
+### ThinkAlert
 
 Untuk pengguna ThinkPad jadul seperti saya (ThinkPad X61), saya menambahkan `thinkalert` bagi pengguna ThinkPad yang masih memiliki ThinkLight sebagai indikator tambahan.
 
@@ -231,7 +231,7 @@ $ thinkalert 5
 Kalau berhasil, thinklight akan berkedip 5 kali. Keren!
 
 
-# Akhir Kata
+## Akhir Kata
 
 Kira-kira seperti ini saja Ruby script yang ~~sederhana~~ cupu ini.
 
@@ -246,7 +246,7 @@ Oh ya, kalo mau audio `aircraftalarm.wav`, dapat diunduh [di sini](https://frees
 Tapi tidak saya rekomendasikan karena mungkin dapat menyebabkan serangan panik, hehe.
 
 
-# Referensi
+## Referensi
 
 1. [github.com/floriandejonckheere/thinkalert](https://github.com/floriandejonckheere/thinkalert) \
    Diakses tanggal: 2020-05-06

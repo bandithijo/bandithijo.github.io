@@ -10,14 +10,14 @@ tags: ["freebsd", "linux", "bash"]
 description: "Module-module bash script ini dapat digunakan untuk status bar. Saya menggunakannya untuk dwm status saya. Bukan yang terbaik tapi cukup untuk memenuhi kebutuhan saya akan status indikator."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 Bagi teman-teman yang menggunakan Window Manager pasti sudah sangat familiar dengan status bar. Ada bermacam-macam nama status bar yang dapat digunakan. Salah satu yang saya gunakan terakhir kali adalah Polybar. Saya sudah pernah membahas tentang Polybar [di sini: Polybar, Bar yang Mudah Dikonfig, Praktis, dan Mudah Dikustomisasi](/blog/polybar-mudah-dikonfig-dan-praktis)
 
 Catatan kali ini, saya ingin membahas tentang status bar yang kita racik sendiri, dan tidak tergantung dengan status-status bar yang sudah ada.
 
 
-# Permasalahan
+## Permasalahan
 
 Saya tidak menggunakan alasan bahwa status-status bar tersebut *bloated*, karena tidak semua module kita gunakan. Namun, saya ingin lebih tidak tergantung terhadap status-status bar tersebut yang bisa jadi hanya spesifik untuk sistem operasi tertentu saja. Misal untuk Polybar, sebagian besar module-module yang disediakan, tidak dapat berjalan dengan baik pada FreeBSD.
 
@@ -26,7 +26,7 @@ Kalau hal tersebut terjadi, maka saya yang repot. Karena harus meluangkan waktu 
 Selain itu, apabila saya menggunakan dwm, saya lebih baik meracik status bar saya sendiri.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Saya sudah membuatkan beberapa module yang dapat digunakan untuk membangun status bar sendiri atau digunakan oleh Polybar
 
@@ -35,10 +35,10 @@ Saya sudah membuatkan beberapa module yang dapat digunakan untuk membangun statu
 > Saya tidak banyak pengalaman dalam menulis Bash Script. Apabila ada logika yang kurang baik, boleh sekali loh dikasih saran dan dibenerin. Saya sangat terbuka dan senang sekali. Terima kasih (^_^).
 
 
-# Module
+## Module
 
 
-## CPU Temperature
+### CPU Temperature
 
 ```bash
 !filename: cpu_temp
@@ -50,7 +50,7 @@ echo "" $temp_cpu0"°C"
 ```
 
 
-## Memory
+### Memory
 
 ```bash
 !filename: memory
@@ -64,7 +64,7 @@ echo " "$mem_usage"%"
 ```
 
 
-## File System
+### File System
 
 ```bash
 !filename: filesystem
@@ -75,7 +75,7 @@ echo ""$cap_percentage
 ```
 
 
-## Volume
+### Volume
 
 ```bash
 !filename: volume
@@ -119,7 +119,7 @@ pacmd list-sinks | grep 'Headphones' | awk '{print $10}' | tr -d ')'
 ```
 
 
-## Backlight
+### Backlight
 
 ```bash
 !filename: backlight
@@ -130,7 +130,7 @@ echo "" $backlight"%"
 ```
 
 
-## Network Traffic (Wifi)
+### Network Traffic (Wifi)
 
 ```bash
 !filename: network_traf_wlan
@@ -167,7 +167,7 @@ fi
 ```
 
 
-## Battery Capacity
+### Battery Capacity
 
 ```bash
 !filename: batt_capacity
@@ -200,7 +200,7 @@ fi
 ```
 
 
-## Battery Status
+### Battery Status
 
 ```bash
 !filename: batt_state

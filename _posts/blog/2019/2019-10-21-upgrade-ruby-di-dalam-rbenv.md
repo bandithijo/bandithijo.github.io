@@ -10,7 +10,7 @@ tags: ["ruby"]
 description: "Versi Ruby sudah mencapai versi tertentu, tapi kenapa saya tidak mendapat pembaharuan? Bagaimana cara mengupgrade versi Ruby yang ada di dalam Rbenv? Catatan kali ini, saya akan membahas tentang hal itu."
 ---
 
-# Prakata
+## Prakata
 
 Mulai 2019 ini saya masuk ke dalam dunia bahasa pemrograman yang baru saya kenal, yaitu Ruby.
 
@@ -21,7 +21,7 @@ Ya, Rails adalah sebuah Web Framework yang dapat kita gunakan untuk membuat WebA
 Untuk memudahkan kita dalam bekerja di dalam Ruby environment yang nyaman di sistem yang kita gunakan, dapat menggunakan [Rbenv](https://github.com/rbenv/rbenv). Ada juga [RVM](https://rvm.io), namun saya tidak familiar.
 
 
-# Permasalahan
+## Permasalahan
 
 Akhir-akhir ini, saya memperhatikan pada beberapa project yang saya temui di GitHub, sudah menggunakan Ruby versi yang lebih baru. Saat tulisan ini dibuat Ruby 2.6.5
 
@@ -32,7 +32,7 @@ Saat saya check dengan `$ ruby install 2.6.` + <kbd>TAB</kbd>, tidak ada versi R
 Disinilah baru saya menyadari, ada sesuatu yang kurang.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Selama ini yang saya lakukan untuk mengupgrade Ruby pada Rbenv ternyata keliru. Karena saya tidak benar-benar membaca petunjuk yang sudah sangat jelas disertakan pada REAMDE.md di halaman GitHub dari Rbenv.
 
@@ -50,7 +50,7 @@ Nah, kalo sudah begini, tinggal kita jalankan secara berurutan saja.
 Sebenarnya Rbenv tidak harus diupgrade sih, tapi yaa siapa yang tidak senang dengan upgrade, hihihi.
 
 
-## Upgrade Rbenv
+### Upgrade Rbenv
 
 Saya memasang Rbenv menggunakan Git, maka proses upgrade tinggal melakukan git pull saja di dalam direktori dari Rbenv.
 
@@ -62,7 +62,7 @@ $ cd ~/.rbenv
 $ git pull
 ```
 
-## Update List of Available Ruby Versions
+### Update List of Available Ruby Versions
 
 Setelah kita selesai mengupgrade Rbenv. Selanjutnya kita perlu meng-update daftar versi Ruby yang terbaru. Anggep aja ini semacam update metafile gitu deh kalo di repositori distro.
 
@@ -135,7 +135,7 @@ $ rbenv install 2.7.2
 Tunggu prosesnya hingga selesai.
 
 
-# Migrasi Semua Gem dari Ruby lama ke Ruby Baru
+## Migrasi Semua Gem dari Ruby lama ke Ruby Baru
 
 Rbenv menyediakan fitur yang bernama **migrate** untuk memudahkan kita memigrasikan semua gem yang terdapat pada Ruby versi sebelumnya ke veri yang terbaru.
 
@@ -160,7 +160,7 @@ Mudah-mudahan bermanfaat buat teman-teman.
 Terima kasih (^_^)v
 
 
-# Referensi
+## Referensi
 
 1. [github.com/rbenv/rbenv](https://github.com/rbenv/rbenv) ] \
    Diakses tanggal: 2019-10-21

@@ -10,7 +10,7 @@ tags: ["python"]
 description: "Catatan ini mengenai trik membuat dan menjalankan Python Virtualenv dengan versi yang spesifik pada Arch Linux."
 ---
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Saya kesulitan saat akan menjalankan Python versi tertentu pada Python Virtual Environment.
 
@@ -35,7 +35,7 @@ Python 3.7.2
 Bagaimana caranya agar di dalam Python Environment yang saya buat dapat menggunakan Python 3.6?
 
 
-# Solusi
+## Solusi
 
 1. Install Python 3.6 dari AUR
 
@@ -98,7 +98,7 @@ Bagaimana caranya agar di dalam Python Environment yang saya buat dapat mengguna
    Kalau sudah begini tinggal kita sikat miring.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Seperti judul tulisan ini, saya membuatnya spesifik untuk distribusi Arch Linux, karena bisa saja proses instalasi yang berbeda, nama paket binary yang berbeda dan lokasi PATH yang berbeda.
 
@@ -107,7 +107,7 @@ Silahkan bereksplorasi sendiri untuk yang menggunakan distribusi sistem opeasi G
 Terima kasih.
 
 
-# Referensi
+## Referensi
 
 1. [reddit.com/r/archlinux/comments/7ozxtx/how_to_manage_python_versions/](https://www.reddit.com/r/archlinux/comments/7ozxtx/how_to_manage_python_versions/) \
    Diakses tanggal: 2019-01-05

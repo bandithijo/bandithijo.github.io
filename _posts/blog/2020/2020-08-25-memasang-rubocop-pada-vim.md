@@ -10,7 +10,7 @@ tags: ["vim", "ruby", "rubocop"]
 description: "Linter merupakan tools untuk mengecek aturan menulis kode program dari bahasa yang kita pergunakan. Menggunakan linter sudah menjadi kewajiban kalau kita membangun program secara kolaborasi. Agar baris kode yang kita tulis dapat seragam dengan programer yang lain. Ruby memiliki salah satunya linter yang cukup banyak digunakan yaitu Rubocop. Catatan kali ini mungin dapat membantu teman-teman untuk mengkonfigurasi Rubocop dengan Vim text editor."
 ---
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Sejak 2019 saya memulai memprogram menggunakan bahasa Ruby, baru sekarang saya merasa perlu untuk menerapkan *code formater*. Tujuannya agar code yang kita tulis minim dari kesalahan akibat dari kesalahan penulisan stuktur dari sintaks sekaligus untuk menyeragamkan format code yang ditulis oleh tim member yang lain yang juga menggunakan *code formater*.
 
@@ -21,17 +21,17 @@ Dalam bahasa Python, saya mengenal beberapa linter diantaranya: pylint, pylama, 
 Maka, pada kesempatan kali ini, saya merasa sudah waktunya untuk menulis kode Ruby menggunakan *code formater* agar format penulisan kode lebih rapi. *Code formater* yang akan saya pergunakan adalah **Rubocop**.
 
 
-# Apa itu Rubocop?
+## Apa itu Rubocop?
 
 Secara sederhana, Rubocop adalah *static code analyzer* (linter) dan juga *code formater* untuk bahasa pemrograman Ruby. Apabila kita menggunakan Rubocop, secara otomatis, Rubocop akan memaksa kita untuk menulis sintaks Ruby dengan mengikuti kaidah-kaidah penulisan Ruby code yang ada di dalam [Ruby Style Guide](https://rubystyle.guide/).
 
 
-# Instalasi
+## Instalasi
 
 Tanpa berlama-lama, saya akan langsung saya *to the point* pada hal-hal teknik yang perlu dilakukan.
 
 
-## Pasang Rubocop Gem
+### Pasang Rubocop Gem
 
 Sebelum memasang Rubocop pada Vim, kita perlu memasang Rubocop pada Ruby environment kita. Kenapa saya katakan Ruby environment? Karena biasanya sebagai programmer Ruby, kita sangat direkomendasikan untuk menggunakan Ruby environment seperti RVM atau Rbenv. Saya sendiri menggunakan Rbenv.
 
@@ -56,14 +56,14 @@ Tunggu proses instalasinya hingga selesai.
 Apabila telah selesai, artinya kita telah berhasil memasang Rubocop pada versi Ruby 2.7.1. Jika kita memiliki project dengan versi Ruby yang berbeda, kita perlu memasang Rubocop kembali pada versi Ruby tersebut.
 
 
-## ALE
+### ALE
 
 Saya juga menggunakan [**ALE**](https://github.com/dense-analysis/ale) (Asynchronous Lint Engine) adalah Vim plugin yang menyediakan linting (syntax checking dan semantic errors) untuk NeoVim 0.2.0+ dan Vim 8 saat kita mengedit text dan berperilaku seperti Vim Language Server Protocol client.
 
 ALE mendukung cukup banyak language dan linter. Nantinya, kita akan mengkonfigurasi ALE agar menggunakan Rubocop sebagai linter saat kita mengerjakan file Ruby.
 
 
-## Pasang vim-rubocop & ALE
+### Pasang vim-rubocop & ALE
 
 Saya menggunakan **vim-plug** sebagai plugin manager.
 
@@ -97,7 +97,7 @@ Lalu instal vim-rubocop yang baru saja kita tambahkan, dengan menggunakan perint
 Tunggu proses instalasinya sampai selesai.
 
 
-## Konfigurasi vim-rubocop
+### Konfigurasi vim-rubocop
 
 Untuk mengkonfigurasi vim-rubocop, yang paling penting adalah kita perlu mendefinisikan dimana letak file `rubocop.yml` berada.
 
@@ -130,7 +130,7 @@ Pada konfigurasi kali ini saya akan menggunakan yang global karena saya tidak se
 Saya menggunakan nomor 6 dan akan membuat symbolic link untuk nomor 5. 😁
 
 
-### Pembuatan File rubocop.yml
+#### Pembuatan File rubocop.yml
 
 Pertama buat dahulu direktori config untuk Rubocop dan masuk ke dalam direktori tersebut.
 
@@ -253,7 +253,7 @@ Dengan begini, saya memiliki file `~/.rubocop.yml` yang isinya akan sama dengan 
 Agar path yang digunakan lebih pendek. 😁
 
 
-### Definisikan File rubocop.yml yang Digunakan
+#### Definisikan File rubocop.yml yang Digunakan
 
 Setelah kita mendifinikan aturan-aturan apa saja, kita perlu mendifinisikan file aturan mana yang akan kita pergunakan.
 
@@ -267,7 +267,7 @@ let g:vimrubocop_config = '~/.rubocop.yml'
 Saya mendefinisikan file `~/.rubocop.yml` yang merupakan symbolic link dari file `~/.config/rubocop/config.yml`.
 
 
-## Konfigurasi ALE
+### Konfigurasi ALE
 
 Setelah kita mengkonfigurasi vim-rubocop, kita juga perlu mengkonfigurasi ALE untuk mendifinisikan linter apa yang akan kita gunakan.
 
@@ -373,7 +373,7 @@ Meskipun saat ini, saya hanya berhasil menjalankan fixer untuk `remove_trailing_
 ~~Saya masih akan terus mencoba-coba agar fungsi fixer secara otomatis benar-benar dapat digunakan.~~
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang saya tuliskan.
 
@@ -384,7 +384,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [github.com/rubocop-hq/rubocop](https://github.com/rubocop-hq/rubocop) \
    Diakses tanggal: 2020-08-25

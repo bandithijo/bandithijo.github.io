@@ -10,7 +10,7 @@ tags: ["jekyll", "github pages"]
 description: "Saat membuat repositori di GitHub kita dapat membuat GitHub Pages dari repositori tersebut. Sayangnya theme yang disediakan mungkin tidak cocok dengan kemauan kita. Dan sejauh yang saya tahu, belum ada fitur untuk membuat theme sendiri. Catatan kali ini mungkin dapat membantu teman-teman untuk merancang GitHub Pages themes sendiri."
 ---
 
-# Latar Belakang
+## Latar Belakang
 
 Kalau teman-teman berkunjung ke ["HelloDev Online Meetup: 💎 Ruby for Beginner"](https://bandithijo.github.io/hellodev_ruby_meetup/).
 
@@ -47,7 +47,7 @@ Namun, terkadang, theme yang disediakan kurang sesuai "feel"-nya dengan konten y
 ![Gambar 4](https://i.postimg.cc/BZXN0sWV/gambar-03.png)
 
 
-# Solusinya
+## Solusinya
 
 Kita dapat membuat custom template sendiri untuk GitHub Page dari repositori project.
 
@@ -79,7 +79,7 @@ Nah, GitHub Page dengan Jekyll yang akan kita buat ini akan membaca konten dari 
 Sehingga, isi yang ada pada GitHub repo README dengan single page yang kita buat akan sama.
 
 
-## 1. Inisialisasi Gemfile
+### 1. Inisialisasi Gemfile
 
 Buat file bernama **Gemfile**.
 
@@ -90,7 +90,7 @@ $ touch Gemfile
 File Gemfile ini yang akan kita gunakan untuk memberikan spesifikasi gem apa saja yang akan kita gunakan. Kita akan mendefinisikan gem Jekyll pada file Gemfile ini.
 
 
-## 2. Definisikan Gem yang Diperlukan
+### 2. Definisikan Gem yang Diperlukan
 
 Buka **Gemfile** dan isikan seperti di bawah ini saja.
 
@@ -109,7 +109,7 @@ $ bundle install
 ```
 
 
-## 3. Definisikan _config.yml
+### 3. Definisikan _config.yml
 
 Selanjutnya adalah mendifinisikan isi dari file **_config.yml**.
 
@@ -147,7 +147,7 @@ Isikan `title:` sesuai kepentingan kalian.
 Scope `defaults:` adalah bagian yang penting, yang akan membaca file **README.md** kita dan akan dikenali sebagai file **index.html**. Sehingga kita tidak perlu membuat file **index.html** di project repositori kita. Cukup file **README.md** saja yang juga akan dibaca oleh GitHub.
 
 
-## 4. Buat Default Template
+### 4. Buat Default Template
 
 **_layouts** direktori ini akan berisi template **default.html**. Template yang akan kita gunakan sebagai tampilan dari single page yang akan kita buat.
 
@@ -204,7 +204,7 @@ Bagian `{{ "{{ content " }}}}`, adalah bagian yang akan dijadikan tempat untuk m
 Bagian `{{ "{{ site.title " }}}}`, nilainya akan diambil dari `title` yang kita isikan pada file **_config.yml**.
 
 
-## 5. Buat Direktori Assets
+### 5. Buat Direktori Assets
 
 Direktori **assets** akan kita gunakan untuk menyimpan stylesheet dan javascript.
 
@@ -226,7 +226,7 @@ Nah, sekarang mau seperti apa tampilan dari single page, tinggal kita atur di da
 Kalau ingin mengikuti style seperti yang yang saya buat, pada gambar di atas, teman-teman dapat mendownload **style.css** tersebut [**di sini**](https://raw.githubusercontent.com/bandithijo/hellodev_ruby_meetup/master/assets/css/style.css).
 
 
-## 6. Inisialisasi Gitignore
+### 6. Inisialisasi Gitignore
 
 Jangan lupa untuk membuat file **.gitignore**.
 
@@ -246,7 +246,7 @@ _site/
 Silahkan tambahkan sesuai kebutuhan kalian.
 
 
-# Let's Run!
+## Let's Run!
 
 Semua kebutuhan di atas sudah dibuat dan dipenuhi, selanjutnya tinggal menjalankan Jekyll server.
 
@@ -267,7 +267,7 @@ Kalau konfigurasinya sudah benar, maka akan menampilkan isi dari halaman **READM
 ![Gambar 5](https://i.postimg.cc/NfGdzTsR/gambar-04.png)
 
 
-# Let's Push
+## Let's Push
 
 Setelah semua sudah dikonfigurasi di lokal, saatnya kita deploy ke GitHub repositori.
 
@@ -290,10 +290,10 @@ Your site is published at ...
 Nah, selesai!
 
 
-# Tips
+## Tips
 
 
-## Membuat Collapsible
+### Membuat Collapsible
 
 Kalau teman-teman ke bagian TOPICS, akan melihat bagian yang dapat "collapsible", seperti di bawah ini.
 
@@ -338,7 +338,7 @@ Contohnya seperti ini.
 **Penting!** Untuk memberikan 1 baris kosong tepat di atas `</details>`.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sebagai catatan, Jekyll menggunakan bahasa template yang bernama **Liquid**.
 

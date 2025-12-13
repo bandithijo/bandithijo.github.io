@@ -13,16 +13,16 @@ description: "Menggunakan GitHub Pages bukan berarti tidak dapat menggunakan Cus
 ![Banner](https://s20.postimg.cc/6w9qd7o2l/banner_post_01.png)
 
 
-# Latar Belakang
+## Latar Belakang
 Tepat tiga minggu yang lalu, [saya memigrasikan blog ini dari .blogspot.com ke .github.io](http://bandithijo.com/blog/migrasi-blog-2-0). Saya pikir, saya tidak akan tertarik untuk membeli _custom domain_ .com untuk blog ini, karena menurut saya .github.io sudah sangat keren.
 
 Beberapa alasan yang mendorong saya akhirnya membeli _custom domain_ untuk blog ini salah satunya berangkat dari belum familiarnya .github.io dikalangan teman-teman saya. Sedangkan target pembaca dari blog ini adalah mereka, karena blog ini sekaligus akan saya jadikan tempat untuk mengambil bahan-bahan perkuliahan yang sebelumnya harus susah-susah diambil di Google Drive kelas.
 
 
-# Pelaksanaan
+## Pelaksanaan
 
 
-## Pemilihan Layanan
+### Pemilihan Layanan
 
 Langkah awal yang perlu dilakukan adalah mencari penyedia layanan _custom domain_. Sebenarnya, saya pernah beberapa kali membeli _custom domain_ di owned-host, namun untuk kali ini saya memutuskan mencoba layanan dari penyedia _custom domain_ yang lain. Sekalian mencari suasana baru.
 
@@ -31,7 +31,7 @@ Saya pikir akan lebih baik apabila saya memilih penyedia layanan _custom domain_
 Selanjutnya saya akan melakukan order.
 
 
-## Order Custom Domain
+### Order Custom Domain
 
 ![Gambar 1](https://s20.postimg.cc/zfnikq5t9/gambar_01.png)
 
@@ -122,7 +122,7 @@ Setelah dipastikan kembali tidak ada yang kurang atau yang lebih dari daftar ite
 
 Setelah kita menyelesaikan pembayaran dan _custom domain_ yang kita inginkan sudah di tangan kita. Langkah selanjutnya adalah konfigurasi _custom domain_ pada GitHub.
 
-## Konfigurasi GitHub
+### Konfigurasi GitHub
 
 Untuk membuat GitHub dapat menerima _traffic_ dari _custom domain_ yang sudah kita buat, kita perlu membuat `CNAME` records di dalam repositori milik kita.
 
@@ -182,7 +182,7 @@ Pilih **Save**.
 Pada tahap ini konfigurasi GitHub hanya seperti ini saja. Namun, _custom domain_ yang kita konfigurasi belum selesai dan belum dapat kita panggil di _browser_. Kita perlu melakukan konfigurasi **nameserver** pada **Cloudflare**.
 
 
-## Konfigurasi Nameserver Cloudflare
+### Konfigurasi Nameserver Cloudflare
 
 Buka [cloudflare.com](https://www.cloudflare.com/). Apabila belum memiliki akun, sebaiknya buat akun terlebih dahulu. Kemudian Login dan tambahkan website kamu. **+ Add site**.
 
@@ -235,7 +235,7 @@ Kemudian, pilih tombol **Ubah Nameserver**.
 Sekarang coba lakukan pemanggilan domain kita pada Browser. Apabila belum dapat dipanggil, mungkin ~~perlu menunggu 5-30 menit~~, sampai konfigurasi yang kita atur dapat diterapkan.
 
 
-## Konfigurasi HTTPS
+### Konfigurasi HTTPS
 
 Karena kita menggunakan _custom domain_, maka pengaturan HTTPS pada GitHub Pages tidak dapat kita gunakan.
 
@@ -244,7 +244,7 @@ Karena kita menggunakan _custom domain_, maka pengaturan HTTPS pada GitHub Pages
 Untuk mengakali ini kita perlu melakukan pengaturan HTTPS pada Cloudflare.
 
 
-### SSL
+#### SSL
 
 Buka tab **Crypto** dan pada bagian SSL, pilih **Full**.
 
@@ -255,7 +255,7 @@ Setelah mengaktifkan SSL ini kita perlu menunggu 24 jam setelah situs aktif di C
 Sampai nanti status **Active Certificate** sudah tersedia, seperti pada gambar di atas.
 
 
-### Page Rules
+#### Page Rules
 
 Selanjutnya, buka tab **Page Rules**.
 
@@ -352,7 +352,7 @@ Dikarenakan kita menggunakan **Free Plan**, maka kita hanya dapat membuat 3 _pag
 > **Tentunya teman-teman harus melakukan konfigurasi SSH dengan GitHub terlebih dahulu** ([Connecting to GitHub with SSH](https://help.github.com/articles/connecting-to-github-with-ssh/)
 
 
-# Akhir Kata
+## Akhir Kata
 
 Demikian, pengalaman saya melakukan konfigurasi terhadap _custom domain_ untuk GitHub Page, Cloudflare dan DewaWeb yang dapat saya dokumentasikan pada tulisan ini.
 
@@ -365,7 +365,7 @@ Terima kasih saya ucapkan kepada kang [Sucipto](https://sucipto.net/) yang telah
 > Ceritanya, dapat teman-teman baca di sini, "[BanditHijo.com, Bermigrasi dari Cloudflare ke Netlify]({{ site.url }}/blog/bermigrasi-dari-cloudflare-ke-netlify)".
 
 
-# Referensi
+## Referensi
 
 1. [help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider](https://help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider) \
    DiaksesTanggal: 2018-04-08

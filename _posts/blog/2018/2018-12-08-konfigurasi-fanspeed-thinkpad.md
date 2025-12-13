@@ -23,7 +23,7 @@ description: "Hari ini saya me-*ricing* tampilan Conky karena sudah merasa jenuh
 > **Kesimpulannya, tulisan ini tidak benar-benar saya perlukan**.
 
 
-# Prakata
+### Prakata
 
 Hari ini saya me-*ricing* tampilan Conky karena sudah merasa jenuh dengan tampilan yang lama. Sembari menyusun _script_ Conky, saya berpindah-pindah tempat duduk. Saya mendapati, saat _power adapter_ saya lepas, _output_ dari _fan speed monitor_ saya _blank_ (tidak menampilkan _output_ apapun). Lantas saya coba jalankan `$ sensors` dan hasilnya pun _nihil_.
 
@@ -54,7 +54,7 @@ fan1:
 ```
 
 
-# Solusi
+## Solusi
 
 Tentu saja untuk permasalahan-permasalahan terkait Arch Linux, yang menjadi bahan rujukan pertama kali adalah Arch Wiki.
 
@@ -156,7 +156,7 @@ Nah, sekarang coba lepas _power adapter_ dan lakukan pengecekan dengan menjalank
 Apakah sudah berhasil terdeteksi?
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/index.php/Fan_speed_control#ThinkPad_laptops](https://wiki.archlinux.org/index.php/Fan_speed_control#ThinkPad_laptops) \
    Diakses tanggal: 2018-12-08

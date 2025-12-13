@@ -10,21 +10,21 @@ tags: ["donate", "open source"]
 description: "Catatan kali ini, saya ingin membagikan pengalaman berdonasi ke beberapa project open source yang saya pergunakan. Mudah-mudahan pengalaman ini dapat memberikan informasi dan semangat kepada teman-teman untuk dapat ikut berdonasi juga."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 > **Hanya dengan 100 Ribu Rupiah, sudah bisa berdonasi ke 6 Project Open Source!**
 
 Catatan kali ini, saya ingin membagikan pengalaman berdonasi ke beberapa project **free and open source software** yang saya pergunakan sehari-hari. Mudah-mudahan pengalaman ini dapat memberikan informasi dan semangat kepada teman-teman untuk dapat ikut berdonasi juga.
 
-# Disclaimer
+## Disclaimer
 
 > Saya tidak berafiliasi dengan PayPal dan Bank Jago.
 
-# Alat Pembayaran
+## Alat Pembayaran
 
 Untuk dapat melakukan donasi, tentu saja kita memerlukan media untuk dapat melakukan pembayaran.
 
-# Strategi dan Target Donasi
+## Strategi dan Target Donasi
 
 | <center>Step</center> | <center>Description</center> | <center>In</center> | <center>Out</center> |
 | :--: | :-- | --: | --: |
@@ -45,9 +45,9 @@ Untuk dapat melakukan donasi, tentu saja kita memerlukan media untuk dapat melak
 
 \* Kurs EUR€ 1 ke IDR tanggal 2 April 2022 adalah Rp 16.854,-
 
-# Persiapan Sebelum Berdonasi
+## Persiapan Sebelum Berdonasi
 
-## Buat Akun PayPal
+### Buat Akun PayPal
 
 Kita dapat menggunakan PayPal untuk melakukan pembayaran internasional. Beberapa project *free and open source* menyediakan pembayaran via PayPal.
 
@@ -63,7 +63,7 @@ Untuk membuat dan memverifikasi akun PayPal tidak diperlukan saldo sama sekali.
 
 Gambar 1. Saldo PayPal saya USD$ 0.00
 
-## Buat Akun Bank Jago
+### Buat Akun Bank Jago
 
 Teman-teman juga perlu membuat akun di Bank Jago.
 
@@ -89,7 +89,7 @@ Ada biaya tambahan untuk mendaftarkan **Virtual Debit Card** Bank Jago ke PayPal
 > 
 > Kalau saldo tidak mencukupi, proses mendaftarkan **Virtual Debit Card** Bank Jago ke PayPayl akan ditolak (gagal).
 
-## Hubungkan Virtual Debit Card Bank Jago dengan PayPal Wallet
+### Hubungkan Virtual Debit Card Bank Jago dengan PayPal Wallet
 
 Pergi ke menu **Wallet** di PayPal, [https://www.paypal.com/myaccount/money/](https://www.paypal.com/myaccount/money/).
 
@@ -109,7 +109,7 @@ Virtual Debit Card Bank Jago akan terbaca sebagai Visa Card.
 > 
 > Gambar 5. Pastikan sudah mengaktifkan "International Payment" di pengaturan Virtual Debit Card Bank Jago
 
-## Jadikan Virtual Debit Card Bank Jago sebagai Alat Pembayaran Utama di PayPal Wallet
+### Jadikan Virtual Debit Card Bank Jago sebagai Alat Pembayaran Utama di PayPal Wallet
 
 Untuk mempermudah proses transaksi dengan merchan-merchant PayPal, kita perlu mengatur Virtual Debit Card Bank Jago sebagai **Preferensi utama saat membayar daring** di PayPal Wallet.
 
@@ -119,13 +119,13 @@ Dengan begini, kita sama sekali tidak memerlukan/mengisi saldo PayPal sama sekal
 
 Gambar 6. Virtual Debit Card Bank Jago sudah terdaftar di PayPal
 
-# Ayo Berdonasi!
+## Ayo Berdonasi!
 
 Sekarang persiapan kita sudah siap.
 
 Pada tahap ini, teman-teman sudah bisa melakukan donasi ke **Free and Open Source Project** yang menyediakan PayPal.
 
-## Suckless Project
+### Suckless Project
 
 Penjelasan mengenai donasi dapat dibaca di [https://suckless.org/donations/](https://suckless.org/donations/).
 
@@ -139,7 +139,7 @@ Gambar 7. Email dari PayPal setelah melakukan donasi ke Suckless Project
 
 Gambar 8. 1-2 bulan kemudian, nama saya masuk ke dalam daftar donatur di halaman [https://suckless.org/donations/](https://suckless.org/donations/)
 
-## Arch Linux
+### Arch Linux
 
 Penjelasan mengenai donasi dapat dibaca di [https://archlinux.org/donate/](https://archlinux.org/donate/).
 
@@ -158,7 +158,7 @@ Kerennya, di Arch Linux, setelah berdonasi meski USD$ 1, nama kita akan langsung
 Gambar 10. Nama saya di halaman Arch Linux Donors
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Gimana? Sangat mudah bukan?
 

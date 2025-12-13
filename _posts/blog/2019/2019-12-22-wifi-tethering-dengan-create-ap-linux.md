@@ -10,7 +10,7 @@ tags: ["create_ap"]
 description: "Fitur tethering Wi-Fi mungkin mudah didapatkan apabila menggunakan Desktop Environment tertentu. Karena biasanya sudah menyediakan menu untuk berbagi network dengan Wi-Fi. Namun, bagaimana apabila kita menggunakan Window Manager? comprehensive network manager seperti NetworkManager sejauh yang saya tahu, belum memiliki fitur ini, namun ConnMan sudah memiliki fitur Wi-F- tethering. Namun, jangan khawatir, sudah ada tools yang standalone yang dapat menyediakan layanan Wi-Fi tethering, yaitu create_ap."
 ---
 
-# Prakata
+## Prakata
 
 Catatan ini juga sebagai ulasan dari script **create_ap**.
 
@@ -21,12 +21,12 @@ Bahasa awamnya WiFi Tethering, atau berbagi koneksi internet lewat WiFi. Nah.
 Kira-kira seperti itu.
 
 
-# Ulasan
+## Ulasan
 
 Bagi pengguna GNU/Linux seperti saya yang hanya menggunakan Window Manager, script seperti ini sangat membantu dan nyaman digunakan. Karena tidak harus membuka aplikasi GUI.
 
 
-## Fitur yang diberikan
+### Fitur yang diberikan
 
 Beberapa fitur yang diberikan oleh **create_ap** adalah:
 
@@ -41,12 +41,12 @@ Beberapa fitur yang diberikan oleh **create_ap** adalah:
 1. Dapat membuat SSID dengan pipe atau dengan argument
 
 
-## Dependensi
+### Dependensi
 
 Paket-paket berikut ini perlu dipasang, agar dapat menggunakan **create_ap**.
 
 
-### General
+#### General
 
 1. `bash`/`zsh`/dst.
 1. `util-linux` (untuk getopt)
@@ -58,16 +58,16 @@ Paket-paket berikut ini perlu dipasang, agar dapat menggunakan **create_ap**.
 1. `haveged` (optional)
 
 
-### Untuk NATed atau None
+#### Untuk NATed atau None
 
 1. `dnsmasq`
 1. `iptables`
 
 
-## Instalasi
+### Instalasi
 
 
-### Arch Linux
+#### Arch Linux
 
 Beruntungnya saya menggunakan Arch Linux. Paket **create_ap** sudah terdapat pada official repo.
 
@@ -76,7 +76,7 @@ $ sudo pacman -S create_ap
 ```
 
 
-### Distribusi lain
+#### Distribusi lain
 
 Untuk yang menggunakan distribusi lain, dapat membuild sendiri dari source.
 
@@ -87,7 +87,7 @@ $ make install
 ```
 
 
-## Penggunaan
+### Penggunaan
 
 Sekarang, coba saya jalankan dulu **create_ap**.
 
@@ -179,7 +179,7 @@ $ create_ap [options] &lt;wifi-interface> [&lt;interface-with-internet>] [&lt;ac
 ```
 
 
-### Tanpa passphrase (open network)
+#### Tanpa passphrase (open network)
 
 ```
 $ create_ap wlan0 eth0 MyAccessPoint
@@ -190,35 +190,35 @@ Berarti, kita mendapatkan internet dari interface `eth0` dan akan kita sharing m
 Mudah dimengerti kan?
 
 
-### WPA + WPA2 passphrase
+#### WPA + WPA2 passphrase
 
 ```
 $ create_ap wlan0 eth0 MyAccessPoint MyPassPhrase
 ```
 
 
-### Access Point tanpa internet
+#### Access Point tanpa internet
 
 ```
 $ create_ap -n wlan0 MyAccessPoint MyPassPhrase
 ```
 
 
-### Bridged internet sharing
+#### Bridged internet sharing
 
 ```
 $ create_ap -m bridge wlan0 eth0 MyAccessPoint MyPassPhrase
 ```
 
 
-### Bridged Internet sharing (pre-configured bridge interface)
+#### Bridged Internet sharing (pre-configured bridge interface)
 
 ```
 $ create_ap -m bridge wlan0 br0 MyAccessPoint MyPassPhrase
 ```
 
 
-### Internet sharing sharing dari WiFi interface yang sama
+#### Internet sharing sharing dari WiFi interface yang sama
 
 Ini yang paling sering saya pergunakan.
 
@@ -227,14 +227,14 @@ $ create_ap wlan0 wlan0 MyAccessPoint MyPassPhrase
 ```
 
 
-### Menggunakan WiFi adapter driver yang berbeda
+#### Menggunakan WiFi adapter driver yang berbeda
 
 ```
 $ create_ap --driver rtl871xdrv wlan0 eth0 MyAccessPoint MyPassPhrase
 ```
 
 
-### Tanpa passphrase (open network) menggunakan pipe
+#### Tanpa passphrase (open network) menggunakan pipe
 
 Nah, ini adalah fitur yang dimention pada poin nomor 9 di atas.
 
@@ -243,21 +243,21 @@ $ echo -e "MyAccessPoint" | create_ap wlan0 eth0
 ```
 
 
-### WPA + WPA2 passphrase menggunakan pipe
+#### WPA + WPA2 passphrase menggunakan pipe
 
 ```
 $ echo -e "MyAccessPoint\nMyPassPhrase" | create_ap wlan0 eth0
 ```
 
 
-### Enable IEEE 802.11n
+#### Enable IEEE 802.11n
 
 ```
 $ create_ap --ieee80211n --ht_capab '[HT40+]' wlan0 eth0 MyAccessPoint MyPassPhrase
 ```
 
 
-### Client Isolation
+#### Client Isolation
 
 Ini adalah contoh penggunaan fitur nomor 4 di atas.
 
@@ -266,29 +266,29 @@ $ create_ap --isolate-clients wlan0 eth0 MyAccessPoint MyPassPhrase
 ```
 
 
-## Systemd Service
+### Systemd Service
 
 Kita juga dapat memanfaatkan systemd service untuk membuat konfigurasi yang persisten.
 
 
-### Menjalankan service
+#### Menjalankan service
 
 ```
 $ sudo systemctl start create_ap
 ```
 
 
-### Menjalankan service saat proses booting
+#### Menjalankan service saat proses booting
 
 ```
 $ sudo systemctl enable create_ap
 ```
 
 
-# Troubleshooting
+## Troubleshooting
 
 
-## ERROR: Failed to initialize lock
+### ERROR: Failed to initialize lock
 
 Apabila saat menjalankan `create_ap` muncul pesan seperti di atas, maka cukup hapus file `.lock` yang tersimpan pada direktori `/tmp`.
 
@@ -297,7 +297,7 @@ $ rm /tmp/create_ap.all.lock
 ```
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Gimana?
 
@@ -310,7 +310,7 @@ Apalagi saya yang hanya user biasa ini.
 Untuk dokumentasi lebih lengkap dapat mengunjungi halaman GitHb repo dari **create_ap**.
 
 
-# Referensi
+## Referensi
 
 1. [github.com/oblique/create_ap](https://github.com/oblique/create_ap) \
    Diakses tanggal: 2019-12-22

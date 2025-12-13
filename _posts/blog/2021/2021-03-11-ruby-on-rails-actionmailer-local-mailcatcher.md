@@ -10,19 +10,19 @@ tags: ["rails"]
 description: "Sebelumnya, saya sudah pernah mencatat tentang konfigurasi ActionMailer dengan memanfaatkan Gmail SMTP protokol untuk mengirimkan email confirmation. Untuk testing di lokal, kita dapat memanfaatkan tools MailCatcher."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 3.0.0` `rails 6.1.3` `postgresql 12.5` `rspec 4.0.0`
 
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Mungkin teman-teman pernah dalam situasi harus mendevelop fitur email di web aplikasi yang teman-teman bangun, tapi tidak ada internet.
 
 Hahaha jarang sekali yaa. Tapi, misalkan kita sedang apes dan terjebak dalam situasi seperti itu.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Kita akan menggunakan MailCatcher.
 
@@ -39,7 +39,7 @@ Gambar 1. Interface dari MailCatcher
 Sebenarnya, kita dapat membaca email dari log yang ditampilkan pada Rails server log. Namun, tentu saja kita tidak dapat melihat view template dari email.
 
 
-# Instalasi
+## Instalasi
 
 Proses instalasi sangat mudah, selayaknya memasan gem.
 
@@ -48,7 +48,7 @@ $ gem install mailcatcher
 ```
 
 
-# Jalankan MailCatcher Daemon
+## Jalankan MailCatcher Daemon
 
 Setelah proses instalasi selesai, jalankan MailCatcher daemon.
 
@@ -72,7 +72,7 @@ http://127.0.0.1:1080
 ```
 
 
-# Rails Config
+## Rails Config
 
 ```ruby
 !filename: config/environments/development.rb
@@ -125,7 +125,7 @@ end
 Selesai!
 
 
-# Demonstrasi
+## Demonstrasi
 
 ![Gambar 2](https://i.postimg.cc/W3cmXqyt/gambar-02.gif)
 
@@ -134,7 +134,7 @@ Gambar 2. Demo registration dan get confirmation email dengan MailCatcher
 Dengan begini, kita dapat menguji fitur email dengan berbagai macam alamat email yang akan langsung ditangkap oleh MailCatcher.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -147,7 +147,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [mailcatcher.me](https://mailcatcher.me/) \
    Diakses tanggal: 2021-03-11

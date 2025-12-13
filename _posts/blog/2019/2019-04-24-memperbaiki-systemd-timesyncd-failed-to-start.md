@@ -10,7 +10,7 @@ tags: ["arch linux"]
 description: "Catatan ini mengenai memperbaiki systemd-timesyncd yang mengalami kegagalan saat proses booting."
 ---
 
-# Prakata
+## Prakata
 
 Melakukan *restart* pada sistem operasi Arch Linux di laptop saya adalah hal yang sangat jarang saya lakukan. Apalagi *shutdown*.
 
@@ -19,7 +19,7 @@ Melakukan *restart* pada sistem operasi Arch Linux di laptop saya adalah hal yan
 *Shutdown* pun saya sudah lupa kapan terakhir kali saya mematikan laptop ini (Lenovo ThinkPad X260).
 
 
-# Permasalahan
+## Permasalahan
 
 Saat melakukan *restart* malam tadi (2019/04/24), saya mendapati kegagalan pada service yang bernama `systemd-timesyncd.service`.
 
@@ -30,7 +30,7 @@ systemd-timesyncd.service: Failed at step STATE_DIRECTORY spawning /usr/lib/syst
 ```
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 **DWYOR (*Do with Your Own Risk*) !**
 
@@ -47,7 +47,7 @@ Setelah dihapus, jangan lupa *restart* dulu, bosku!
 Selesai.
 
 
-# Referensi
+## Referensi
 
 1. [bbs.archlinux.org/viewtopic.php?id=245916](https://bbs.archlinux.org/viewtopic.php?id=245916) \
    Diakses tanggal: 2019-04-24

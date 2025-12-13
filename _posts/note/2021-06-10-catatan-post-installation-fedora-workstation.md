@@ -10,7 +10,7 @@ tags: ["fedora"]
 description: "Catatan ini merupakan kumpulan packages dan beberapa konfigurasi yang saya lakukan setelah melakukan proses instalasi Fedora Workstation."
 ---
 
-# Prakata
+## Prakata
 
 Catatan ini merupakan kumpulan packages dan beberapa konfigurasi yang saya lakukan setelah melakukan proses instalasi Fedora Workstation.
 
@@ -19,10 +19,10 @@ Saya memutuskan untuk mengkategorikan catatan ini sebagai "note" dan bukan sebag
 Selain itu, memiliki sebuah catatan "perjalanan" akan **menumbuhkan rasa percaya diri untuk terus maju ke depan**. Maksud saya, apabila terjadi kegagalan karena satu dan lain hal, kita tidak segan untuk memulai lagi dari awal. Ataupun, kita dapat dengan mudah memulai percabangan untuk awal baru yang lain.
 
 
-# Pre Install
+## Pre Install
 
 
-## Verify your download with CHECKSUM files.
+### Verify your download with CHECKSUM files.
 
 Setelah mengunduh file ISO, lakukan verifikasi untuk menguji keamanan dan integritas file ISO yang telah didownload.
 
@@ -98,10 +98,10 @@ sha256sum: WARNING: 19 lines are improperly formatted
 \* Abaikan saja warning 19 lines are improperly formated, hal ini terjadi karena di dalam file *-CHECKSUM tersebut juga terdapat PGP Signature. Coba komentar saja baris-baris selain SHA256SUM valuenya (termasuk blankline), maka warningnya akan ~~berkurang~~ hilang.
 
 
-# Packages That I Need to Install
+## Packages That I Need to Install
 
 
-## Enable fastest mirror and Delta RPM
+### Enable fastest mirror and Delta RPM
 Sumber: [https://www.linuxsec.org/2020/03/menggunakan-fastest-mirror-di-fedora.html](https://www.linuxsec.org/2020/03/menggunakan-fastest-mirror-di-fedora.html)
 
 Edit file `/etc/dnf/dnf.conf`, lalu tambahkan baris,
@@ -142,7 +142,7 @@ metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-
 ```
 
 
-## Update system
+### Update system
 
 Lakukan refresh dan update repository dengan perintah,
 
@@ -157,7 +157,7 @@ $ sudo dnf up --ref
 **dnf update** dan **dnf upgrade** sama, namun konvensi terbaru sudah menggunakan **dnf upgrade**.
 
 
-## Enable RPMFusion Repository
+### Enable RPMFusion Repository
 
 Sumber: [https://docs.fedoraproject.org/en-US/quick-docs/setup_rpmfusion/](https://docs.fedoraproject.org/en-US/quick-docs/setup_rpmfusion/)
 
@@ -190,7 +190,7 @@ $ sudo dnf group update core
 ```
 
 
-## Install gnome-tweaks
+### Install gnome-tweaks
 
 GNOME Tweaks allows adjusting advanced configuration settings in GNOME 3. This includes things like the fonts used in user interface elements, alternative user interface themes, changes in window management behavior, GNOME Shell appearance and extension, etc.
 
@@ -201,7 +201,7 @@ $ sudo dnf in gnome-tweaks
 ```
 
 
-## gnome-extensions-app
+### gnome-extensions-app
 
 GNOME Extensions is an application for configuring and removing GNOME Shell extensions.
 
@@ -212,7 +212,7 @@ $ sudo dnf in gnome-extensions-app
 ```
 
 
-## DConf Editor
+### DConf Editor
 
 Graphical tool for editing the dconf configuration database.
 
@@ -221,7 +221,7 @@ $ sudo dnf in dconf-editor
 ```
 
 
-## GConf Editor
+### GConf Editor
 
 gconf-editor allows you to browse and modify GConf configuration sources.
 
@@ -230,7 +230,7 @@ $ sudo dnf in gconf-editor
 ```
 
 
-## How to disable Gnome Software autostart
+### How to disable Gnome Software autostart
 
 Sumber: [https://forums.fedoraforum.org/showthread.php?315410-How-to-disable-Gnome-Software-autostart](https://forums.fedoraforum.org/showthread.php?315410-How-to-disable-Gnome-Software-autostart)
 
@@ -250,12 +250,12 @@ Sumber: [https://askubuntu.com/questions/959353/disable-gnome-software-from-load
 3. Now GNOME Software should appear in your Startup Applications list. Disable it. Alternatively, you may append an `X-GNOME-Autostart-enabled=false`
 
 
-## Disable Super+P on GNOME for Switch Monitor by default
+### Disable Super+P on GNOME for Switch Monitor by default
 
 Sumber: [https://askubuntu.com/a/1038869/777616](https://askubuntu.com/a/1038869/777616)
 
 
-## Development Group Packages
+### Development Group Packages
 
 These tools include general development tools such as git and CVS.
 
@@ -317,7 +317,7 @@ $ sudo dnf group install "Development Tools"
 </details>
 
 
-## Tilix
+### Tilix
 
 Official site: [https://github.com/gnunn1/tilix](https://github.com/gnunn1/tilix)
 
@@ -344,7 +344,7 @@ $ sudo dnf in tilix
 ```
 
 
-## NetworkManager-tui
+### NetworkManager-tui
 
 Kalau tidak terbiasa menggunakan `nmcli` (command line tools yang sudah included dengan NetworkManager), bisa menggunakan `nmtui`.
 
@@ -359,14 +359,14 @@ $ sudo dnf in NetworkManager-tui
 ```
 
 
-## Install Vim
+### Install Vim
 
 Fedora Workstation sudah preinstalled `vim-mimimal` dengan file binary bernama `vi`.
 
 Karena saya lebih sering menggunakan Neovim, maka saya tidak akan memasang paket `vim`.
 
 
-## htop
+### htop
 
 Official site: [http://hisham.hm/htop/](http://hisham.hm/htop/)
 
@@ -377,7 +377,7 @@ $ sudo dnf in htop
 ```
 
 
-## iftop
+### iftop
 
 Official site: [http://www.ex-parrot.com/~pdw/iftop/](http://www.ex-parrot.com/~pdw/iftop/)
 
@@ -388,7 +388,7 @@ $ sudo dnf in iftop
 ```
 
 
-## iperf
+### iperf
 
 Official site: [http://sourceforge.net/projects/iperf2](http://sourceforge.net/projects/iperf2)
 
@@ -399,7 +399,7 @@ $ sudo dnf in iperf
 ```
 
 
-## nmap
+### nmap
 
 Official site: [http://nmap.org/](http://nmap.org/)
 
@@ -410,7 +410,7 @@ $ sudo dnf in nmap
 ```
 
 
-## nmon
+### nmon
 
 Official site: [http://nmon.sourceforge.net](http://nmon.sourceforge.net)
 
@@ -421,7 +421,7 @@ $ sudo dnf in nmon
 ```
 
 
-## wavemon
+### wavemon
 
 Official site: [https://github.com/uoaerg/wavemon](https://github.com/uoaerg/wavemon)
 
@@ -432,7 +432,7 @@ $ sudo dnf in wavemon
 ```
 
 
-## nethogs
+### nethogs
 
 Official site: [https://github.com/raboof/nethogs/](https://github.com/raboof/nethogs/)
 
@@ -443,7 +443,7 @@ $ sudo dnf in nethogs
 ```
 
 
-## Glances
+### Glances
 
 Official site: [https://github.com/nicolargo/glances](https://github.com/nicolargo/glances)
 
@@ -454,7 +454,7 @@ $ sudo dnf in glances
 ```
 
 
-## Zenith
+### Zenith
 
 Official site: [https://github.com/bvaisvil/zenith](https://github.com/bvaisvil/zenith)
 
@@ -478,7 +478,7 @@ $ sudo make install
 ```
 
 
-## vizex
+### vizex
 
 Official site: [https://github.com/bexxmodd/vizex](https://github.com/bexxmodd/vizex)
 
@@ -491,7 +491,7 @@ $ pip install --user vizex
 ```
 
 
-## LM Sensors
+### LM Sensors
 
 Official site: [http://github.com/lm-sensors/lm-sensors/](http://github.com/lm-sensors/lm-sensors/)
 
@@ -502,7 +502,7 @@ $ sudo dnf in lm_sensors
 ```
 
 
-## Neofetch
+### Neofetch
 
 Official site: [https://github.com/dylanaraps/neofetch](https://github.com/dylanaraps/neofetch)
 
@@ -517,7 +517,7 @@ $ sudo dnf in neofetch
 ```
 
 
-## Sound Converter
+### Sound Converter
 
 Official site: [http://soundconverter.org](http://soundconverter.org)
 
@@ -530,7 +530,7 @@ $ sudo dnf in soundconverter
 ```
 
 
-## Audacity
+### Audacity
 
 Official site: [https://www.audacityteam.org/](https://www.audacityteam.org/)
 
@@ -541,7 +541,7 @@ $ sudo dnf in audacity
 ```
 
 
-##  Audacious
+###  Audacious
 
 Official site: [https://audacious-media-player.org/](https://audacious-media-player.org/)
 
@@ -552,7 +552,7 @@ $ sudo dnf in audacious
 ```
 
 
-## pass
+### pass
 
 Official site: [http://zx2c4.com/projects/password-store/](http://zx2c4.com/projects/password-store/)
 
@@ -563,7 +563,7 @@ $ sudo dnf in pass
 ```
 
 
-## pwgen
+### pwgen
 
 Official site: [http://sf.net/projects/pwgen](http://sf.net/projects/pwgen)
 
@@ -574,7 +574,7 @@ $ sudo dnf in pwgen
 ```
 
 
-## hashcat
+### hashcat
 
 Official site: [https://github.com/hashcat/hashcat](https://github.com/hashcat/hashcat)
 
@@ -585,7 +585,7 @@ $ sudo dnf in hashcat
 ```
 
 
-## FileRoller
+### FileRoller
 
 Official site: [https://wiki.gnome.org/Apps/FileRoller](https://wiki.gnome.org/Apps/FileRoller)
 
@@ -596,7 +596,7 @@ $ sudo dnf in file-roller
 ```
 
 
-## Bash Completion
+### Bash Completion
 
 Official site: [https://github.com/scop/bash-completion](https://github.com/scop/bash-completion)
 
@@ -607,7 +607,7 @@ $ sudo dnf in bash-completion
 ```
 
 
-## Change ZSH to your shell
+### Change ZSH to your shell
 
 Official site: [http://zsh.sourceforge.net/](http://zsh.sourceforge.net/)
 
@@ -620,7 +620,7 @@ $ chsh -s $(which zsh)
 ```
 
 
-## Arandr
+### Arandr
 
 Official site: [http://christian.amsuess.com/tools/arandr/](http://christian.amsuess.com/tools/arandr/)
 
@@ -631,7 +631,7 @@ $ sudo dnf in arandr
 ```
 
 
-## xcalib
+### xcalib
 
 Official site: [http://xcalib.sourceforge.net/](http://xcalib.sourceforge.net/)
 
@@ -642,7 +642,7 @@ $ sudo dnf in xcalib
 ```
 
 
-## GIT-SVN
+### GIT-SVN
 
 Official site: [https://git-scm.com/](https://git-scm.com/)
 
@@ -653,7 +653,7 @@ $ sudo dnf in git-svn
 ```
 
 
-## TIG
+### TIG
 
 Official site: [https://jonas.github.io/tig/](https://jonas.github.io/tig/)
 
@@ -668,7 +668,7 @@ $ sudo dnf in tig
 ```
 
 
-## Git-Credential-Libsecret
+### Git-Credential-Libsecret
 
 Official site: [https://git-scm.com/](https://git-scm.com/)
 
@@ -689,7 +689,7 @@ $ sudo dnf in git-credential-libsecret
 ```
 
 
-## SSH AskPass
+### SSH AskPass
 
 Official site: [http://lxqt.org/](http://lxqt.org/)
 
@@ -702,7 +702,7 @@ $ sudo dnf in lxqt-openssh-askpass
 Saya memilih menggunakan versi **lxqt-openssh-askpass.x86_64**, daripada versi **openssh-askpass.x86_64** dan **x11-ssh-askpass.x86_64**.
 
 
-## Transmission Daemon
+### Transmission Daemon
 
 Official site: [http://www.transmissionbt.com](http://www.transmissionbt.com)
 
@@ -713,7 +713,7 @@ $ sudo dnf in transmission-daemon
 ```
 
 
-## tremc
+### tremc
 
 Official site: [https://github.com/tremc/tremc](https://github.com/tremc/tremc)
 
@@ -726,7 +726,7 @@ $ sudo make install
 ```
 
 
-## YouTube-DL
+### YouTube-DL
 
 Official site: [https://yt-dl.org](https://yt-dl.org)
 
@@ -737,7 +737,7 @@ $ sudo dnf in youtube-dl
 ```
 
 
-## yt-dlp
+### yt-dlp
 
 Official site: [https://github.com/yt-dlp/yt-dlp](https://github.com/yt-dlp/yt-dlp)
 
@@ -748,7 +748,7 @@ $ sudo dnf in yt-dlp
 ```
 
 
-## Newsboat (RSS Reader)
+### Newsboat (RSS Reader)
 
 Official site: [https://www.newsboat.org](https://www.newsboat.org)
 
@@ -759,7 +759,7 @@ $ sudo dnf in newsboat
 ```
 
 
-## Ranger File Manager
+### Ranger File Manager
 
 Official site: [https://ranger.github.io/](https://ranger.github.io/)
 
@@ -786,7 +786,7 @@ $ sudo dnf in odt2txt
 ```
 
 
-## Samba
+### Samba
 
 Official site: [https://www.samba.org](https://www.samba.org)
 
@@ -817,7 +817,7 @@ $ sudo dnf in gvfs-smb
 ```
 
 
-## Install Opus Audio Codec
+### Install Opus Audio Codec
 
 ```
 $ sudo dnf in libogg
@@ -831,7 +831,7 @@ $ sudo dnf in audacious-plugins-freeworld-ffaudio
 ```
 
 
-## Virt-Manager (libvirt)
+### Virt-Manager (libvirt)
 
 Official site: [https://virt-manager.org/](https://virt-manager.org/)
 
@@ -906,7 +906,7 @@ $ sudo usermod -a -G libvirt $(whoami)
 This adds the current user to the group. You must log out and log in to apply the changes.
 
 
-## firefox-dev
+### firefox-dev
 
 Official site: [https://www.mozilla.org/en-US/firefox/developer/](https://www.mozilla.org/en-US/firefox/developer/)
 
@@ -918,7 +918,7 @@ $ sudo dnf in firefox-dev
 ```
 
 
-## Chromium browser
+### Chromium browser
 
 ```
 $ sudo dnf in chromium
@@ -934,7 +934,7 @@ $ sudo dnf swap chromium chromium-freeworld
 ```
 
 
-## Chromedriver
+### Chromedriver
 
 WebDriver is an open source tool for automated testing of webapps across many browsers. It provides capabilities for navigating to web pages, user input, JavaScript execution, and more. ChromeDriver is a standalone server which implements WebDriver's wire protocol for Chromium. It is being developed by members of the Chromium and WebDriver teams.
 
@@ -943,7 +943,7 @@ $ sudo dnf in chromedriver
 ```
 
 
-## Google Chrome
+### Google Chrome
 
 Sumber: [https://docs.fedoraproject.org/en-US/quick-docs/installing-chromium-or-google-chrome-browsers/#installing-chrome](https://docs.fedoraproject.org/en-US/quick-docs/installing-chromium-or-google-chrome-browsers/#installing-chrome)
 
@@ -956,7 +956,7 @@ $ sudo dnf in google-chrome-stable_current_x86_64.rpm
 ```
 
 
-## Qutebrowser
+### Qutebrowser
 
 Official site: [http://www.qutebrowser.org](http://www.qutebrowser.org)
 
@@ -983,7 +983,7 @@ $ sudo dnf in qt5-qtwebengine-freeworld
 ```
 
 
-## lynx
+### lynx
 
 Official site: [http://lynx.browser.org/](http://lynx.browser.org/)
 
@@ -994,7 +994,7 @@ $ sudo dnf  in lynx
 ```
 
 
-## Setup Default Browser
+### Setup Default Browser
 
 Cek default browser yang digunakan saat ini.
 
@@ -1013,7 +1013,7 @@ $ xdg-settings set default-web-browser org.qutebrowser.qutebrowser.desktop
 ```
 
 
-## Codec from RPMFusion
+### Codec from RPMFusion
 
 Sumber: [https://docs.fedoraproject.org/en-US/quick-docs/assembly_installing-plugins-for-playing-movies-and-music/](https://docs.fedoraproject.org/en-US/quick-docs/assembly_installing-plugins-for-playing-movies-and-music/)
 
@@ -1024,7 +1024,7 @@ $ sudo dnf group upgrade --with-optional Multimedia
 ```
 
 
-## Another audio video support
+### Another audio video support
 
 ```
 $ sudo dnf in ffmpegthumbnailer
@@ -1032,7 +1032,7 @@ $ sudo dnf in rpmfusion-free-obsolete-packages
 ```
 
 
-## Install FFMPEG
+### Install FFMPEG
 
 Official site: [http://ffmpeg.org/](http://ffmpeg.org/)
 
@@ -1045,7 +1045,7 @@ $ sudo dnf in compat-ffmpeg28
 ```
 
 
-## Tor
+### Tor
 
 Official site: [https://www.torproject.org](https://www.torproject.org)
 
@@ -1058,7 +1058,7 @@ $ sudo dnf in tor
 ```
 
 
-## HandBrake
+### HandBrake
 
 Official site: [http://handbrake.fr/](http://handbrake.fr/)
 
@@ -1071,7 +1071,7 @@ $ sudo dnf in handbrake
 ```
 
 
-## MPV
+### MPV
 
 Official site: [https://mpv.io/](https://mpv.io/)
 
@@ -1104,7 +1104,7 @@ $ sudo ./waf install
 ```
 
 
-## DNSCrypt-Proxy
+### DNSCrypt-Proxy
 
 Official site: [https://github.com/jedisct1/dnscrypt-proxy](https://github.com/jedisct1/dnscrypt-proxy)
 
@@ -1172,7 +1172,7 @@ $ sudo systemctl restart systemd-resolved.service
 \* Perlu restart/reboot system.
 
 
-## Adwaita-Qt5 theme
+### Adwaita-Qt5 theme
 
 Official site: [https://github.com/FedoraQt/adwaita-qt](https://github.com/FedoraQt/adwaita-qt)
 
@@ -1183,7 +1183,7 @@ $ sudo dnf in adwaita-qt5
 ```
 
 
-## Qt5Ct
+### Qt5Ct
 
 Official site: [https://sourceforge.net/projects/qt5ct/](https://sourceforge.net/projects/qt5ct/)
 
@@ -1194,7 +1194,7 @@ $ sudo dnf in qt5ct
 ```
 
 
-## Change default cursor on lightdm
+### Change default cursor on lightdm
 
 ComixCursors: [https://www.gnome-look.org/p/999996](https://www.gnome-look.org/p/999996)
 
@@ -1207,7 +1207,7 @@ Inherits=ComixCursors-Opaque-White
 ```
 
 
-## Change default cursor on GDM
+### Change default cursor on GDM
 
 Sumber: [https://wiki.archlinux.org/title/GDM#Changing_the_cursor_theme](https://wiki.archlinux.org/title/GDM#Changing_the_cursor_theme)
 
@@ -1226,7 +1226,7 @@ $ sudo gsettings set org.gnome.desktop.interface cursor-theme 'theme-name'
 ```
 
 
-## Switch Between Java Versions
+### Switch Between Java Versions
 
 Memeriksa versi java yang terpasang.
 
@@ -1259,7 +1259,7 @@ Enter to keep the current selection[+], or type selection number: █
 Kebetulan saya hanya punya 1 versi Java, yaitu Java 11 dengan OpenJDK.
 
 
-## Neovim
+### Neovim
 
 Official site: [https://neovim.io](https://neovim.io)
 
@@ -1270,7 +1270,7 @@ $ sudo dnf in neovim
 ```
 
 
-## Neovim Nightly (build)
+### Neovim Nightly (build)
 
 ```
 $ sudo dnf in cmake
@@ -1310,7 +1310,7 @@ $ sudo dnf in ripgrep
 ```
 
 
-## PostgreSQL
+### PostgreSQL
 
 Official site: [http://www.postgresql.org/](http://www.postgresql.org/)
 
@@ -1407,7 +1407,7 @@ $ podman rm postgresql
 That's it! Now you're able to start and check the status of running container with systemct start and status.
 
 
-## SQLite3
+### SQLite3
 
 Official site: [http://www.sqlite.org/](http://www.sqlite.org/)
 
@@ -1423,7 +1423,7 @@ $ sudo dnf in libsqlite3x-devel
 Saya memerlukan install juga package `-devel`.
 
 
-## yarnpkg
+### yarnpkg
 
 Official site: [https://github.com/yarnpkg/yarn](https://github.com/yarnpkg/yarn)
 
@@ -1434,7 +1434,7 @@ $ sudo dnf in yarnpkg
 ```
 
 
-## Ruby on Rails Developer
+### Ruby on Rails Developer
 
 Saya lebih suka menggunakan **rbenv** untuk mendevelop Ruby apps.
 
@@ -1458,7 +1458,7 @@ $ sudo dnf in libsqlite3x-devel
 ```
 
 
-## pomo
+### pomo
 
 Official site: [https://github.com/tj/pomo](https://github.com/tj/pomo)
 
@@ -1471,7 +1471,7 @@ $ gem install pomo
 ```
 
 
-## Build ADVCMP
+### Build ADVCMP
 
 Sumber: [https://github.com/jarun/advcpmv](https://github.com/jarun/advcpmv)
 
@@ -1492,7 +1492,7 @@ $ make
 ```
 
 
-## TLP
+### TLP
 
 > INFO
 > 
@@ -1534,7 +1534,7 @@ Beberapa catatan tentang tlp:
 2. [https://forums.lenovo.com/t5/Windows-10/Power-Manager-for-Windows-10/m-p/2113645?page=3#2129075](https://forums.lenovo.com/t5/Windows-10/Power-Manager-for-Windows-10/m-p/2113645?page=3#2129075)
 
 
-## Cronie (Cronjob)
+### Cronie (Cronjob)
 
 Official site: [https://github.com/cronie-crond/cronie](https://github.com/cronie-crond/cronie)
 
@@ -1551,10 +1551,10 @@ $ sudo systemctl enable --now crond.service
 ```
 
 
-## Email Backend
+### Email Backend
 
 
-### imap
+#### imap
 
 Official site: [http://isync.sourceforge.net/](http://isync.sourceforge.net/)
 
@@ -1565,7 +1565,7 @@ $ sudo dnf in isync
 ```
 
 
-### smtp
+#### smtp
 
 Official site: [https://marlam.de/msmtp/](https://marlam.de/msmtp/)
 
@@ -1576,7 +1576,7 @@ $ sudo dnf in msmtp
 ```
 
 
-## Neomutt
+### Neomutt
 
 Official site: [https://neomutt.org/](https://neomutt.org/)
 
@@ -1611,7 +1611,7 @@ $ sudo make install
 ```
 
 
-## FreeRDP
+### FreeRDP
 
 Official site: [http://www.freerdp.com/](http://www.freerdp.com/)
 
@@ -1624,7 +1624,7 @@ $ sudo dnf in freerdp
 ```
 
 
-## x11vnc
+### x11vnc
 
 Official site: [https://github.com/LibVNC/x11vnc](https://github.com/LibVNC/x11vnc)
 
@@ -1637,7 +1637,7 @@ $ sudo dnf in x11vnc
 ```
 
 
-## Rofi
+### Rofi
 
 Official site: [https://github.com/DaveDavenport/rofi](https://github.com/DaveDavenport/rofi)
 
@@ -1648,7 +1648,7 @@ $ sudo dnf in rofi
 ```
 
 
-## Rofi-Calc
+### Rofi-Calc
 
 **Manual Build**
 
@@ -1673,7 +1673,7 @@ $ sudo make install
 ```
 
 
-## LazyGit
+### LazyGit
 
 Official site: [https://github.com/jesseduffield/lazygit](https://github.com/jesseduffield/lazygit)
 
@@ -1691,7 +1691,7 @@ $ sudo dnf in lazygit
 ```
 
 
-## LazyDocker
+### LazyDocker
 
 Official site: [https://github.com/jesseduffield/lazydocker](https://github.com/jesseduffield/lazydocker)
 
@@ -1708,7 +1708,7 @@ $ sudo dnf in lazydocker
 ```
 
 
-## Seahorse
+### Seahorse
 
 Official site: [https://wiki.gnome.org/Apps/Seahorse](https://wiki.gnome.org/Apps/Seahorse)
 
@@ -1719,7 +1719,7 @@ $ sudo dnf in seahorse
 ```
 
 
-## Crow translate
+### Crow translate
 
 Official site: [https://crow-translate.github.io/](https://crow-translate.github.io/)
 
@@ -1749,7 +1749,7 @@ $ sudo make install
 ```
 
 
-## libva-intel-driver
+### libva-intel-driver
 
 Official site: [https://github.com/intel/intel-vaapi-driver](https://github.com/intel/intel-vaapi-driver)
 
@@ -1770,14 +1770,14 @@ $ sudo dnf in libva-intel-hybrid-driver
 ```
 
 
-## Vulkan Hardware Capability Viewer
+### Vulkan Hardware Capability Viewer
 
 Sumber: [http://vulkan.gpuinfo.org/listdevices.php](http://vulkan.gpuinfo.org/listdevices.php)
 
 Download: [http://vulkan.gpuinfo.org/download.php](http://vulkan.gpuinfo.org/download.php)
 
 
-## GIMP
+### GIMP
 
 GIMP (GNU Image Manipulation Program) is a powerful image composition and editing program, which can be extremely useful for creating logos and other graphics for web pages. GIMP has many of the tools and filters you would expect to find in similar commercial offerings, and some interesting extras as well. GIMP provides a large image manipulation toolbox, including channel operations and layers, effects, sub-pixel imaging and anti-aliasing, and conversions, all with multi-level undo.
 
@@ -1785,7 +1785,7 @@ GIMP (GNU Image Manipulation Program) is a powerful image composition and editin
 $ sudo dnf in gimp
 ```
 
-## Inkscape
+### Inkscape
 
 Inkscape is a vector graphics editor, with capabilities similar to Illustrator, CorelDraw, or Xara X, using the W3C standard Scalable Vector Graphics (SVG) file format.  It is therefore a very useful tool for web designers and as an interchange format for desktop publishing.
 
@@ -1796,7 +1796,7 @@ $ sudo dnf in inkscape
 ```
 
 
-## Figma for Linux
+### Figma for Linux
 
 Official site: [https://github.com/Figma-Linux/figma-linux](https://github.com/Figma-Linux/figma-linux)
 
@@ -1809,7 +1809,7 @@ $ flatpak install flathub io.github.Figma_Linux.figma_linux
 ```
 
 
-## WeeChat
+### WeeChat
 
 WeeChat (Wee Enhanced Environment for Chat) is a portable, fast, light and extensible IRC client. Everything can be done with a keyboard. It is customizable and extensible with scripts.
 
@@ -1853,7 +1853,7 @@ $ ccmake ..
 Lalu set **OFF** untuk language support yang tidak ingin disertakan atau yang menyebabkan error.
 
 
-## WeeChat-Matrix
+### WeeChat-Matrix
 
 Official site: [https://github.com/poljar/weechat-matrix](https://github.com/poljar/weechat-matrix)
 
@@ -1885,7 +1885,7 @@ $ ln -s ../matrix.py ~/.weechat/python/autoload
 ```
 
 
-## WeeChat-twitch
+### WeeChat-twitch
 
 Official-site: [https://github.com/mumixam/weechat-twitch](https://github.com/mumixam/weechat-twitch)
 
@@ -1903,7 +1903,7 @@ Where to get **oauth**? [https://twitchapps.com/tmi/](https://twitchapps.com/tmi
 Referensi: [https://gist.github.com/noromanba/df3d975613713f60e6ae](https://gist.github.com/noromanba/df3d975613713f60e6ae)
 
 
-## Flameshot
+### Flameshot
 
 Official site: [https://github.com/lupoDharkael/flameshot](https://github.com/lupoDharkael/flameshot)
 
@@ -1914,7 +1914,7 @@ $ sudo dnf in flameshot
 ```
 
 
-## Optipng
+### Optipng
 
 Official site: [http://optipng.sourceforge.net/](http://optipng.sourceforge.net/)
 
@@ -1924,7 +1924,7 @@ OptiPNG is a PNG optimizer that recompresses image files to a smaller size, with
 $ sudo dnf in optipng
 ```
 
-## Scrot
+### Scrot
 
 Official site: [https://github.com/resurrecting-open-source-projects/scrot](https://github.com/resurrecting-open-source-projects/scrot)
 
@@ -1958,7 +1958,7 @@ $ sudo make install
 ```
 
 
-## Maim
+### Maim
 
 Official site: [https://github.com/naelstrof/maim](https://github.com/naelstrof/maim)
 
@@ -1969,7 +1969,7 @@ $ sudo dnf in maim
 ```
 
 
-## pulseaudio-utils
+### pulseaudio-utils
 
 Official site: [http://www.freedesktop.org/wiki/Software/PulseAudio](http://www.freedesktop.org/wiki/Software/PulseAudio)
 
@@ -1992,7 +1992,7 @@ $ sudo dnf in pulseaudio-utils
 > \* Sejak Fedora 35, saya sudah menetap dengan **Pipewire**.
 
 
-## pavucontrol
+### pavucontrol
 
 Official site: [http://freedesktop.org/software/pulseaudio/pavucontrol](http://freedesktop.org/software/pulseaudio/pavucontrol)
 
@@ -2003,7 +2003,7 @@ $ sudo dnf in pavucontrol
 ```
 
 
-## pulsemixer
+### pulsemixer
 
 Official site: [https://github.com/GeorgeFilipkin/pulsemixer](https://github.com/GeorgeFilipkin/pulsemixer)
 
@@ -2014,7 +2014,7 @@ $ pip install --user pulsemixer
 ```
 
 
-## pamixer
+### pamixer
 
 Sumber: [https://github.com/cdemoulins/pamixer](https://github.com/cdemoulins/pamixer)
 
@@ -2035,7 +2035,7 @@ $ meson install -C build
 ```
 
 
-## easyeffects
+### easyeffects
 
 Official site: [https://github.com/wwmm/easyeffects](https://github.com/wwmm/easyeffects)
 
@@ -2046,7 +2046,7 @@ $ sudo dnf in easyeffects
 ```
 
 
-## helvum
+### helvum
 
 Official site: [https://gitlab.freedesktop.org/ryuukyu/helvum](https://gitlab.freedesktop.org/ryuukyu/helvum)
 
@@ -2081,7 +2081,7 @@ $ flatpak run org.freedesktop.ryuukyu.Helvum
 ```
 
 
-## HexChat
+### HexChat
 
 Official site: [https://hexchat.github.io](https://hexchat.github.io)
 
@@ -2100,7 +2100,7 @@ $ sudo dnf in adwaita-gtk2-theme
 ```
 
 
-## Gping
+### Gping
 
 Official site: [https://github.com/orf/gping](https://github.com/orf/gping)
 
@@ -2114,7 +2114,7 @@ $ sudo dnf in gping
 ```
 
 
-## PrettyPing
+### PrettyPing
 
 Official site: [http://denilson.sa.nom.br/prettyping](http://denilson.sa.nom.br/prettyping)
 
@@ -2135,7 +2135,7 @@ $ sudo dnf in prettyping
 ```
 
 
-## Dunst
+### Dunst
 
 Official site: [https://dunst-project.org](https://dunst-project.org)
 
@@ -2146,7 +2146,7 @@ $ sudo dnf in dunst
 ```
 
 
-## SimpleScreenRecorder
+### SimpleScreenRecorder
 
 Official site: [https://www.maartenbaert.be/simplescreenrecorder/](https://www.maartenbaert.be/simplescreenrecorder/)
 
@@ -2157,7 +2157,7 @@ $ sudo dnf in simplescreenrecorder
 ```
 
 
-## Vokoscreen
+### Vokoscreen
 
 Official site: [https://github.com/vkohaupt/vokoscreen](https://github.com/vkohaupt/vokoscreen)
 
@@ -2178,7 +2178,7 @@ $ sudo dnf in alsa-lib-devel
 ```
 
 
-## ps_mem
+### ps_mem
 
 Official site: [https://github.com/pixelb/ps_mem](https://github.com/pixelb/ps_mem)
 
@@ -2191,7 +2191,7 @@ $ sudo dnf in ps_mem
 ```
 
 
-## GColor2
+### GColor2
 
 Official site: [http://gcolor2.sourceforge.net/](http://gcolor2.sourceforge.net/)
 
@@ -2202,10 +2202,10 @@ $ sudo dnf in gcolor2
 ```
 
 
-## Suckless
+### Suckless
 
 
-### st
+#### st
 
 Official site: [http://st.suckless.org/](http://st.suckless.org/)
 
@@ -2245,7 +2245,7 @@ $ sudo dnf in libXft-bgra libXft-bgra-devel
 Add `libXft` to `exclude=` package on `/etc/dnf/dnf.conf`.
 
 
-### dwm
+#### dwm
 
 Official site: [http://dwm.suckless.org/](http://dwm.suckless.org/)
 
@@ -2287,7 +2287,7 @@ DesktopNames=dwm
 ```
 
 
-### pinentry-dmenu
+#### pinentry-dmenu
 
 GitHub source: [https://github.com/ritze/pinentry-dmenu](https://github.com/ritze/pinentry-dmenu)
 
@@ -2326,7 +2326,7 @@ pinentry-program /usr/local/bin/pinentry-dmenu
 ```
 
 
-### pinentry-rofi
+#### pinentry-rofi
 
 Official site: [https://github.com/plattfot/pinentry-rofi](https://github.com/plattfot/pinentry-rofi)
 
@@ -2347,7 +2347,7 @@ $ sudo dnf in guile-devel
 ```
 
 
-### sxiv
+#### sxiv
 
 Official site: [https://github.com/muennich/sxiv](https://github.com/muennich/sxiv)
 
@@ -2372,7 +2372,7 @@ $ sudo make install
 ```
 
 
-## GTK3-NOCSD
+### GTK3-NOCSD
 
 Official site: [https://github.com/PCMan/gtk3-nocsd](https://github.com/PCMan/gtk3-nocsd)
 
@@ -2396,7 +2396,7 @@ export GTK_CSD=0
 > Karenanya, saya tidak lagi menggunakan cara ini.
 
 
-## Flatpak via Flathub Remote
+### Flatpak via Flathub Remote
 
 Flatpak is a tool for managing applications and the runtimes they use. In the Flatpak model, applications can be built and distributed independently from the host system they are used on, and they are isolated from the host system ('sandboxed') to some degree, at runtime.
 
@@ -2407,7 +2407,7 @@ $ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.fl
 ```
 
 
-## Gromit-MPX
+### Gromit-MPX
 
 Official site: [https://github.com/bk138/gromit-mpx](https://github.com/bk138/gromit-mpx)
 
@@ -2420,7 +2420,7 @@ $ flatpak install flathub net.christianbeier.Gromit-MPX
 ```
 
 
-## Telegram Desktop
+### Telegram Desktop
 
 Official site: [https://desktop.telegram.org/](https://desktop.telegram.org/)
 
@@ -2441,7 +2441,7 @@ $ flatpak install flathub org.telegram.desktop
 ```
 
 
-## Hide desktop icon on Application List
+### Hide desktop icon on Application List
 
 Sumber: [https://wiki.archlinux.org/title/desktop_entries#Hide_desktop_entries](https://wiki.archlinux.org/title/desktop_entries#Hide_desktop_entries)
 
@@ -2456,7 +2456,7 @@ where desktop-name can be option such as `GNOME`, `Xfce`, `KDE` etc.
 A desktop entry can be hidden in more than desktop at once - simply separate the desktop names with a semi-colon.
 
 
-## Center window in GNOME
+### Center window in GNOME
 
 Sumber: [https://www.reddit.com/r/gnome/comments/aaqy2p/center_windows_in_gnome/](https://www.reddit.com/r/gnome/comments/aaqy2p/center_windows_in_gnome/)
 
@@ -2469,7 +2469,7 @@ By: [deleted]
 Its also in GNOME Tweaks. It is under "Windows" -> "Center New Windows".
 
 
-## Polybar
+### Polybar
 
 Official site: [https://polybar.github.io/](https://polybar.github.io/)
 
@@ -2480,7 +2480,7 @@ $ sudo dnf in polybar
 ```
 
 
-## Feh
+### Feh
 
 Official site: [http://feh.finalrewind.org](http://feh.finalrewind.org)
 
@@ -2491,7 +2491,7 @@ $ sudo dnf in feh
 ```
 
 
-## SXHKD
+### SXHKD
 
 Official site: [https://github.com/baskerville/sxhkd](https://github.com/baskerville/sxhkd)
 
@@ -2504,7 +2504,7 @@ $ sudo dnf in sxhkd
 ```
 
 
-## j4-dmenu-desktop (dmenu wrapper)
+### j4-dmenu-desktop (dmenu wrapper)
 
 Official site: [https://github.com/enkore/j4-dmenu-desktop](https://github.com/enkore/j4-dmenu-desktop)
 
@@ -2515,7 +2515,7 @@ $ sudo dnf in j4-dmenu-desktop
 ```
 
 
-## XCompmgr
+### XCompmgr
 
 Official site: [https://gitlab.freedesktop.org/xorg/app/xcompmgr](https://gitlab.freedesktop.org/xorg/app/xcompmgr)
 
@@ -2535,7 +2535,7 @@ $ sudo dnf in xcompmgr
 > Saya tidak lagi menggunakan paket ini. Sejak menggunakan x260, saya menggunakan picom.
 
 
-## Picom
+### Picom
 
 Official site: [https://github.com/yshui/picom](https://github.com/yshui/picom)
 
@@ -2578,7 +2578,7 @@ $ sudo ninja -C build install
 ```
 
 
-## xmodmap
+### xmodmap
 
 Official site: [https://www.x.org](https://www.x.org)
 
@@ -2589,7 +2589,7 @@ $ sudo dnf in xmodmap
 ```
 
 
-## xcape
+### xcape
 
 Official site: [https://github.com/alols/xcape](https://github.com/alols/xcape)
 
@@ -2624,7 +2624,7 @@ $ sudo make install
 ```
 
 
-## xev
+### xev
 
 Official site: [https://www.x.org](https://www.x.org)
 
@@ -2635,7 +2635,7 @@ $ sudo dnf in xev
 ```
 
 
-## xdotool
+### xdotool
 
 Official site: [http://www.semicomplete.com/projects/xdotool/](http://www.semicomplete.com/projects/xdotool/)
 
@@ -2646,7 +2646,7 @@ $ sudo dnf in xdotool
 ```
 
 
-## brightlight
+### brightlight
 
 Official site: [https://github.com/multiplexd/brightlight](https://github.com/multiplexd/brightlight)
 
@@ -2657,7 +2657,7 @@ $ sudo dnf in brightlight
 ```
 
 
-## Udiskie
+### Udiskie
 
 Official site: [https://pypi.org/project/udiskie](https://pypi.org/project/udiskie)
 
@@ -2668,7 +2668,7 @@ $ sudo dnf in udiskie
 ```
 
 
-## abduco
+### abduco
 
 Official site: [http://www.brain-dump.org/projects/abduco/](http://www.brain-dump.org/projects/abduco/)
 
@@ -2679,7 +2679,7 @@ $ sudo dnf in abduco
 ```
 
 
-## dtach
+### dtach
 
 Official site: [https://github.com/crigler/dtach](https://github.com/crigler/dtach)
 
@@ -2690,7 +2690,7 @@ $ sudo dnf in dtach
 ```
 
 
-## LXappearance
+### LXappearance
 
 Official site: [http://lxde.org/](http://lxde.org/)
 
@@ -2703,7 +2703,7 @@ $ sudo dnf in lxappearance
 ```
 
 
-## unclutter-xfixes
+### unclutter-xfixes
 
 Official site: [https://github.com/Airblader/unclutter-xfixes](https://github.com/Airblader/unclutter-xfixes)
 
@@ -2726,7 +2726,7 @@ $ sudo make install
 ```
 
 
-## Calibre
+### Calibre
 
 Official site: [https://calibre-ebook.com/](https://calibre-ebook.com/)
 
@@ -2739,7 +2739,7 @@ $ sudo dnf in calibre
 ```
 
 
-## System Config Printer
+### System Config Printer
 
 Official site: [https://github.com/OpenPrinting/system-config-printer](https://github.com/OpenPrinting/system-config-printer)
 
@@ -2750,7 +2750,7 @@ $ sudo dnf in system-config-printer
 ```
 
 
-## PPD from foomatic-db
+### PPD from foomatic-db
 
 Official site: [http://www.openprinting.org](http://www.openprinting.org)
 
@@ -2762,7 +2762,7 @@ $ sudo dnf in foomatic-db-ppds
 ```
 
 
-## XSane (Scanner)
+### XSane (Scanner)
 
 Official site: [http://www.xsane.org/](http://www.xsane.org/)
 
@@ -2773,7 +2773,7 @@ $ sudo dnf in xsane
 ```
 
 
-## Gparted
+### Gparted
 
 Official site: [http://gparted.org](http://gparted.org)
 
@@ -2784,7 +2784,7 @@ $ sudo dnf in gparted
 ```
 
 
-## Numix Solarized Theme Build
+### Numix Solarized Theme Build
 
 Official site: [https://github.com/numixproject/numix-gtk-theme](https://github.com/numixproject/numix-gtk-theme)
 
@@ -2815,7 +2815,7 @@ $ sudo make THEME=Codedark install
 ```
 
 
-## Aria2
+### Aria2
 
 Official site: [http://aria2.github.io/](http://aria2.github.io/)
 
@@ -2832,7 +2832,7 @@ $ pip install --user "aria2p[tui]"
 ```
 
 
-## Mate Polkit
+### Mate Polkit
 
 Official site: [http://mate-desktop.org](http://mate-desktop.org)
 
@@ -2843,7 +2843,7 @@ $ sudo dnf in mate-polkit
 ```
 
 
-## LXpolkit
+### LXpolkit
 
 Official site: [http://lxde.sourceforge.net/](http://lxde.sourceforge.net/)
 
@@ -2854,7 +2854,7 @@ $ sudo dnf in lxpolkit
 ```
 
 
-## p7zip
+### p7zip
 
 Official site: [http://www.7-zip.org/](http://www.7-zip.org/)
 
@@ -2866,7 +2866,7 @@ $ sudo dnf in p7zip-plugins
 ```
 
 
-## Screenkey
+### Screenkey
 
 Official site: [https://www.thregr.org/~wavexx/software/screenkey](https://www.thregr.org/~wavexx/software/screenkey)
 
@@ -2889,7 +2889,7 @@ $ sudo dnf in screenkey
 ```
 
 
-## Docker
+### Docker
 
 Sumber: [https://developer.fedoraproject.org/tools/docker/docker-installation.html](https://developer.fedoraproject.org/tools/docker/docker-installation.html)
 
@@ -2955,7 +2955,7 @@ $ sudo docker run hello-world
 > You have to log out and log back in (or restart Docker daemon and use `newgrp` command as mentioned here) for these changes to take effect. Then you can verify if your changes were successful by running Docker without `sudo`.
 
 
-## KBBI-Qt
+### KBBI-Qt
 
 Official site: [https://github.com/bgli/kbbi-qt](https://github.com/bgli/kbbi-qt)
 
@@ -2975,7 +2975,7 @@ $ sudo make install
 ```
 
 
-## Zathura
+### Zathura
 
 Official site: [http://pwmt.org/projects/zathura/](http://pwmt.org/projects/zathura/)
 
@@ -2996,7 +2996,7 @@ $ sudo dnf in zathura-pdf-mupdf
 ```
 
 
-## Kamus
+### Kamus
 
 Official site: [https://github.com/abihf/kamus](https://github.com/abihf/kamus)
 
@@ -3018,7 +3018,7 @@ $ sudo make install
 ```
 
 
-## Thunderbird
+### Thunderbird
 
 Official site: [http://www.mozilla.org/projects/thunderbird/](http://www.mozilla.org/projects/thunderbird/)
 
@@ -3029,7 +3029,7 @@ $ sudo dnf in thunderbird
 ```
 
 
-## Evolution
+### Evolution
 
 Official site: [https://wiki.gnome.org/Apps/Evolution](https://wiki.gnome.org/Apps/Evolution)
 
@@ -3063,7 +3063,7 @@ $ sudo make install
 ```
 
 
-## Gucharmap (Character Map)
+### Gucharmap (Character Map)
 
 Official site: [https://wiki.gnome.org/Apps/Gucharmap](https://wiki.gnome.org/Apps/Gucharmap)
 
@@ -3074,7 +3074,7 @@ $ sudo dnf in gucharmap
 ```
 
 
-## Zoom Meeting Client
+### Zoom Meeting Client
 
 Sumber: [https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux#h_825b50ac-ad15-44a8-9959-28c97e4803ef)
 
@@ -3086,7 +3086,7 @@ $ sudo dnf localinstall zoom_x86_64.rpm
 ```
 
 
-## ffmulticonverter
+### ffmulticonverter
 
 Official site: [https://sites.google.com/site/ffmulticonverter/home](https://sites.google.com/site/ffmulticonverter/home)
 
@@ -3109,7 +3109,7 @@ $ sudo dnf in ffmulticonverter
 ```
 
 
-## HandBrake
+### HandBrake
 
 Official site: [http://handbrake.fr/](http://handbrake.fr/)
 
@@ -3122,7 +3122,7 @@ $ sudo dnf in HandBrake-gui
 ```
 
 
-## Discord
+### Discord
 
 Official site: [https://discordapp.com/](https://discordapp.com/)
 
@@ -3135,7 +3135,7 @@ $ sudo dnf in discord
 ```
 
 
-## Slack
+### Slack
 
 Official site: [https://slack.com/intl/en-id/downloads/linux](https://slack.com/intl/en-id/downloads/linux)
 
@@ -3147,7 +3147,7 @@ $ sudo dnf localinstall slack-4.17.0-0.1.fc21.x86_64.rpm
 ```
 
 
-## PDF Arranger
+### PDF Arranger
 
 Official site: [https://github.com/pdfarranger/pdfarranger](https://github.com/pdfarranger/pdfarranger)
 
@@ -3160,7 +3160,7 @@ $ sudo dnf in pdfarranger
 ```
 
 
-## Master PDF Editor 4
+### Master PDF Editor 4
 
 Sumber: [https://www.linuxuprising.com/2019/04/download-master-pdf-editor-4-for-linux.html](https://www.linuxuprising.com/2019/04/download-master-pdf-editor-4-for-linux.html)
 
@@ -3172,7 +3172,7 @@ $ sudo dnf localinstall master-pdf-editor-4.3.89_qt5.x86_64.rpm
 ```
 
 
-## Intel GPU Tools
+### Intel GPU Tools
 
 Official site: [https://gitlab.freedesktop.org/drm/igt-gpu-tools](https://gitlab.freedesktop.org/drm/igt-gpu-tools)
 
@@ -3183,7 +3183,7 @@ $ sudo dnf in igt-gpu-tools
 ```
 
 
-## Autocutsel
+### Autocutsel
 
 Sumber: [http://www.nongnu.org/autocutsel/](http://www.nongnu.org/autocutsel/)
 
@@ -3209,7 +3209,7 @@ $ sudo make install
 ```
 
 
-## XZoom
+### XZoom
 
 Sumber: [https://copr.fedorainfracloud.org/coprs/bgstack15/stackrpms/](https://copr.fedorainfracloud.org/coprs/bgstack15/stackrpms/)
 
@@ -3226,7 +3226,7 @@ $ sudo dnf in xzoom
 ```
 
 
-## Dragon (drag and drop helper)
+### Dragon (drag and drop helper)
 
 Official site: [https://github.com/mwh/dragon.git](https://github.com/mwh/dragon.git)
 
@@ -3248,7 +3248,7 @@ $ sudo make install
 ```
 
 
-## Minder (mind mapping)
+### Minder (mind mapping)
 
 Official site: [https://github.com/phase1geo/Minder](https://github.com/phase1geo/Minder)
 
@@ -3259,7 +3259,7 @@ $ sudo dnf in minder
 ```
 
 
-## Taskell (Kanban Board)
+### Taskell (Kanban Board)
 
 Sumber: [https://github.com/smallhadroncollider/taskell](https://github.com/smallhadroncollider/taskell)
 
@@ -3270,7 +3270,7 @@ $ sudo dnf in ncurses-compat-libs
 ```
 
 
-## Show/Hide GRUB Menu
+### Show/Hide GRUB Menu
 
 Sumber: [https://fedoraproject.org/wiki/Changes/HiddenGrubMenu](https://fedoraproject.org/wiki/Changes/HiddenGrubMenu)
 
@@ -3283,7 +3283,7 @@ $ sudo grub2-editenv - unset menu_auto_hide
 ```
 
 
-## Zeal
+### Zeal
 
 Official site: [https://zealdocs.org/](https://zealdocs.org/)
 
@@ -3294,7 +3294,7 @@ $ sudo dnf in zeal
 ```
 
 
-## xinput
+### xinput
 
 Official site: [https://www.x.org](https://www.x.org)
 
@@ -3305,7 +3305,7 @@ $ sudo dnf in xinput
 ```
 
 
-## gThumb (image viewer, editor, organizer)
+### gThumb (image viewer, editor, organizer)
 
 Official site: [https://wiki.gnome.org/Apps/gthumb](https://wiki.gnome.org/Apps/gthumb)
 
@@ -3316,7 +3316,7 @@ $ sudo dnf in gthumb
 ```
 
 
-## Speedtest CLI
+### Speedtest CLI
 
 Official site: [https://github.com/sivel/speedtest-cli](https://github.com/sivel/speedtest-cli)
 
@@ -3327,7 +3327,7 @@ $ sudo dnf in speedtest-cli
 ```
 
 
-## Spotify
+### Spotify
 
 Official site: [https://www.spotify.com/](https://www.spotify.com/)
 
@@ -3340,7 +3340,7 @@ $ flatpak install flathub com.spotify.Client
 ```
 
 
-## rpkg
+### rpkg
 
 Official site: [https://pagure.io/rpkg-util](https://pagure.io/rpkg-util)
 
@@ -3351,7 +3351,7 @@ $ sudo dnf in rpkg
 ```
 
 
-## asciidoc
+### asciidoc
 
 Official site: [http://asciidoc.org](http://asciidoc.org)
 
@@ -3370,7 +3370,7 @@ $ gem install pygments.rb
 ```
 
 
-## Tmux
+### Tmux
 
 Official site: [https://tmux.github.io/](https://tmux.github.io/)
 
@@ -3398,7 +3398,7 @@ $ sudo make install
 ```
 
 
-## Emacs
+### Emacs
 
 Official site: [http://www.gnu.org/software/emacs/](http://www.gnu.org/software/emacs/)
 
@@ -3411,7 +3411,7 @@ $ sudo dnf in emacs
 ```
 
 
-## Wireshark
+### Wireshark
 
 Official site: [http://www.wireshark.org/](http://www.wireshark.org/)
 
@@ -3434,7 +3434,7 @@ $ sudo usermod -a -G wireshark bandithijo
 \* Perlu restart/reboot system.
 
 
-## Scrcpy
+### Scrcpy
 
 Official site: [https://github.com/Genymobile/scrcpy](https://github.com/Genymobile/scrcpy)
 
@@ -3472,7 +3472,7 @@ $ sudo ninja -Cbuild-auto uninstall
 ```
 
 
-## Faketime
+### Faketime
 
 Official site: [https://github.com/wolfcw/libfaketime](https://github.com/wolfcw/libfaketime)
 
@@ -3485,7 +3485,7 @@ $ sudo dnf in libfaketime
 ```
 
 
-## Notion
+### Notion
 
 Official site: [https://github.com/notion-enhancer/notion-repackaged](https://github.com/notion-enhancer/notion-repackaged)
 
@@ -3519,7 +3519,7 @@ $ sudo dnf in notion-app-enhanced
 ```
 
 
-## Webcam
+### Webcam
 
 > INFO
 > 
@@ -3562,7 +3562,7 @@ uvcvideo
 Maka module uvcvideo akan diload saat booting.
 
 
-## guvcview
+### guvcview
 
 Official site: [http://guvcview.sourceforge.net/](http://guvcview.sourceforge.net/)
 
@@ -3573,7 +3573,7 @@ $ sudo dnf in guvcview
 ```
 
 
-## Kdenlive
+### Kdenlive
 
 Official site: [https://kdenlive.org/en/](https://kdenlive.org/en/)
 
@@ -3590,7 +3590,7 @@ Atau dari appimage.
 [Download Kdenlive AppImage](https://kdenlive.org/en/download2/).
 
 
-## Olive
+### Olive
 
 Official site: [https://www.olivevideoeditor.org](https://www.olivevideoeditor.org)
 
@@ -3605,7 +3605,7 @@ $ sudo dnf in olive
 ```
 
 
-## Clipnotify
+### Clipnotify
 
 Sumber: [https://github.com/cdown/clipnotify](https://github.com/cdown/clipnotify)
 
@@ -3624,7 +3624,7 @@ $ sudo make install
 ```
 
 
-## Bash-Language-Server
+### Bash-Language-Server
 
 Official site: [https://github.com/bash-lsp/bash-language-server](https://github.com/bash-lsp/bash-language-server)
 
@@ -3635,7 +3635,7 @@ $ sudo dnf in nodejs-bash-language-server
 ```
 
 
-## OBS Studio
+### OBS Studio
 
 Official site: [https://obsproject.com/](https://obsproject.com/)
 
@@ -3648,7 +3648,7 @@ $ sudo dnf in obs-studio
 ```
 
 
-## Barrier
+### Barrier
 
 Official site: [https://github.com/debauchee/barrier/wiki](https://github.com/debauchee/barrier/wiki)
 
@@ -3659,7 +3659,7 @@ $ sudo dnf in barrier
 ```
 
 
-## Unified Remote (urserver)
+### Unified Remote (urserver)
 
 Sumber: [https://www.unifiedremote.com/tutorials/how-to-install-unified-remote-server-rpm-via-terminal](https://www.unifiedremote.com/tutorials/how-to-install-unified-remote-server-rpm-via-terminal)
 
@@ -3691,7 +3691,7 @@ $ sudo rpm -e urserver
 ```
 
 
-## Linux-Wifi-Hotspot
+### Linux-Wifi-Hotspot
 
 Official site: [https://github.com/lakinduakash/linux-wifi-hotspot](https://github.com/lakinduakash/linux-wifi-hotspot)
 
@@ -3715,7 +3715,7 @@ $ sudo make install
 ```
 
 
-## Clang / LLVM
+### Clang / LLVM
 
 Official site: [http://llvm.org](http://llvm.org)
 
@@ -3728,7 +3728,7 @@ $ sudo dnf in clang
 ```
 
 
-## Cockpit
+### Cockpit
 
 Official site: [https://cockpit-project.org/](https://cockpit-project.org/)
 
@@ -3766,7 +3766,7 @@ $ sudo systemctl enable --now pmlogger.service
 > Saya hanya menyalakan service apabila saya perlukan saja.
 
 
-## aircrack-ng
+### aircrack-ng
 
 Official site: [https://github.com/aircrack-ng/aircrack-ng](https://github.com/aircrack-ng/aircrack-ng)
 
@@ -3777,7 +3777,7 @@ $ sudo dnf in aircrack-ng
 ```
 
 
-## heroku-cli
+### heroku-cli
 
 Official site: [https://devcenter.heroku.com/articles/heroku-cli](https://devcenter.heroku.com/articles/heroku-cli)
 
@@ -3788,7 +3788,7 @@ $ npm install -g heroku
 ```
 
 
-## FreeCAD
+### FreeCAD
 
 Official site: [http://freecadweb.org/](http://freecadweb.org/)
 
@@ -3805,7 +3805,7 @@ $ /usr/bin/env QT_AUTO_SCREEN_SCALE_FACTOR=0 QT_SCALE_FACTOR=1 FreeCAD
 ```
 
 
-## Visual Studio Code
+### Visual Studio Code
 
 Official site: [https://code.visualstudio.com/](https://code.visualstudio.com/)
 
@@ -3821,7 +3821,7 @@ $ sudo dnf in code
 ```
 
 
-## GNOME Battery Bench
+### GNOME Battery Bench
 
 Official site: [https://git.gnome.org/browse/gnome-battery-bench](https://git.gnome.org/browse/gnome-battery-bench)
 
@@ -3832,7 +3832,7 @@ $ sudo dnf in gnome-battery-bench
 ```
 
 
-## GNOME Power Manager
+### GNOME Power Manager
 
 Official site: [https://projects.gnome.org/gnome-power-manager/](https://projects.gnome.org/gnome-power-manager/)
 
@@ -3843,7 +3843,7 @@ $ sudo dnf in gnome-power-manager
 ```
 
 
-## Systool
+### Systool
 
 Official site: [https://github.com/linux-ras/sysfsutils](https://github.com/linux-ras/sysfsutils)
 
@@ -3854,7 +3854,7 @@ $ sudo dnf in sysfsutils
 ```
 
 
-## inxi
+### inxi
 
 Official site: [http://smxi.org/docs/inxi.htm](http://smxi.org/docs/inxi.htm)
 
@@ -3865,7 +3865,7 @@ $ sudo dnf in inxi
 ```
 
 
-## lshw
+### lshw
 
 Official site: [http://ezix.org/project/wiki/HardwareLiSter](http://ezix.org/project/wiki/HardwareLiSter)
 
@@ -3876,7 +3876,7 @@ $ sudo dnf in lshw
 ```
 
 
-## smartmontools
+### smartmontools
 
 Official site: [http://smartmontools.sourceforge.net/](http://smartmontools.sourceforge.net/)
 
@@ -3887,7 +3887,7 @@ $ sudo dnf in smartmontools
 ```
 
 
-## cpupower-gui
+### cpupower-gui
 
 Sumber: [https://github.com/vagnum08/cpupower-gui](https://github.com/vagnum08/cpupower-gui)
 
@@ -3901,7 +3901,7 @@ $ sudo dnf in cpupower-gui
 ```
 
 
-## Klavaro
+### Klavaro
 
 Official site: [http://klavaro.sourceforge.net/en/](http://klavaro.sourceforge.net/en/)
 
@@ -3912,7 +3912,7 @@ $ sudo dnf in klavaro
 ```
 
 
-## Rust Lang
+### Rust Lang
 
 Official site: [https://www.rust-lang.org](https://www.rust-lang.org)
 
@@ -3925,7 +3925,7 @@ $ sudo dnf in rust
 ```
 
 
-## XAMPP from Apachefriends
+### XAMPP from Apachefriends
 
 Official site: [https://www.apachefriends.org/index.html](https://www.apachefriends.org/index.html)
 
@@ -3951,7 +3951,7 @@ $ sudo /opt/lampp/manager-linux-x64.run
 ```
 
 
-## live-server
+### live-server
 
 Sumber: [https://www.chrisatmachine.com/Neovim/20-live-server/](https://www.chrisatmachine.com/Neovim/20-live-server/)
 
@@ -3962,7 +3962,7 @@ $ npm install -g live-server
 ```
 
 
-## fd-find
+### fd-find
 
 Official site: [https://crates.io/crates/fd-find](https://crates.io/crates/fd-find)
 
@@ -3973,7 +3973,7 @@ $ sudo dnf in fd-find
 ```
 
 
-## strace
+### strace
 
 Official site: [https://strace.io](https://strace.io)
 
@@ -3986,7 +3986,7 @@ $ sudo dnf in strace
 ```
 
 
-## Blender
+### Blender
 
 Official site: [http://www.blender.org](http://www.blender.org)
 
@@ -4003,7 +4003,7 @@ $ flatpak install org.blender.Blender
 \* **Catatan**: Saya memilih memasang Blender via Flatpak karena alasan beberapa codec seperti ffmpeg tidak terdapat di Blender versi dnf.
 
 
-## tty-clock
+### tty-clock
 
 Official site: [https://github.com/xorg62/tty-clock](https://github.com/xorg62/tty-clock)
 
@@ -4023,7 +4023,7 @@ $ sudo make install
 ```
 
 
-## kicad
+### kicad
 
 Official site: [https://www.kicad.org](https://www.kicad.org)
 
@@ -4034,7 +4034,7 @@ $ sudo dnf in kicad
 ```
 
 
-## dotnet
+### dotnet
 
 Official site: [https://github.com/dotnet/](https://github.com/dotnet/)
 
@@ -4049,7 +4049,7 @@ $ sudo dnf in dotnet
 ```
 
 
-## fontforge
+### fontforge
 
 Official site: [http://fontforge.github.io/](http://fontforge.github.io/)
 
@@ -4060,7 +4060,7 @@ $ sudo dnf in fontforge
 ```
 
 
-## microsoft core font (mscorefont)
+### microsoft core font (mscorefont)
 
 Official site: [http://mscorefonts2.sourceforge.net/](http://mscorefonts2.sourceforge.net/)
 

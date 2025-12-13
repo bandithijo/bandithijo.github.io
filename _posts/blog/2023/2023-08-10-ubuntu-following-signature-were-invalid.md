@@ -10,12 +10,12 @@ tags: ["ubuntu"]
 description: "Catatan kali ini, saya akan mendokumentasikan proses troubleshooting pada Ubuntu Server yang mengalami expired signature key saat melakukan apt update."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 {{ page.description }}
 
 
-# Masalah
+## Masalah
 
 Saat menjalankan perintah `$ sudo apt update`, keluar pesan erorr seperti ini,
 
@@ -26,7 +26,7 @@ The following signatures were invalid: EXPKEYSIG 23E7166788B63E1E Yarn Packaging
 Ini berarti di Ubuntu saya, masih memiliki kunci GPG versi lama yang digunakan untuk menandatangani package Yarn.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Kita asumsikan package maintainer sudah memperbaharui public key mereka dan menguploadnya di keyserver.ubuntu.com. Jadi, kita tinggal menjalankan perintah di bawah ini.
 
@@ -35,12 +35,12 @@ $ sudo apt-key adv --refresh-keys --keyserver keyserver.ubuntu.com
 ```
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Terima kasih sudah mampir yaa.
 
 
-# Referensi
+## Referensi
 
 1. [https://github.com/yarnpkg/yarn/issues/7866](https://github.com/yarnpkg/yarn/issues/7866) \
    Diakses tanggal: 2023-08-10

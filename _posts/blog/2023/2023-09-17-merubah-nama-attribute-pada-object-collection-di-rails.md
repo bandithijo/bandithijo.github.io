@@ -10,12 +10,12 @@ tags: ["rails"]
 description: "Pada catatan kali ini saya ingin memodifikasi output dari nama attribute yang terlalu panjang menjadi lebih pendek di Ruby on Rails."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 {{ page.description }}
 
 
-# Masalah
+## Masalah
 
 Saya memiliki method **geofences** yang mengembalikan *colllection of* `hash` data dari model **geofeonce**.
 
@@ -68,7 +68,7 @@ Outputnya,
 Karena nama attribute `:incoming_notification` dan `:outgoing_notification` terlalu panjang, saya akan ganti menjadi `:in` dan `:out`.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 **Algoritma Pertama**
 
@@ -151,11 +151,11 @@ Hasilnya,
 ```
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Terima kasih sudah mampir yaa.
 
 
-# Referensi
+## Referensi
 
 1. [stackoverflow.com: _Change property name of as_json call_](https://stackoverflow.com/a/33528446/4862516)

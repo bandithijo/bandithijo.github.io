@@ -10,14 +10,14 @@ tags: ["clipmenu"]
 description: "Clipboard manajemen mungkin merupakan kebutuhan sebagian temen-temen. Saya pun juga menggunakannya. Ternyata sangat praktis sekali, kalau kita menggunakan clipboard manajemen, tidak perlu melakukan copy paste berulang-ulang perihal yang sama. Clipmenu adalah salah satu clipboard manajemen yang simple. Karena kebanyakan kebutuhan clipboard saya adalah text, saya merasa clipmenu sudah lebih dari cukup untuk memenuhi kebutuhan saya."
 ---
 
-# Prakata
+## Prakata
 
 Selama ini saya tidak pernah menggunakan aplikasi *clipboard manager* semacam **Clipman** (`xfce4-clipman-plugin`) yang kegunaannya untuk menangkap, mengumpulkan, dan memanajemen hasil inputan copy. Saya merasa belum membutuhkannya. Saya pikir *copy* dan *paste* adalah hal yang sangat sederhana, tidak perlu sampai dimanajemen segala.
 
 Sampai beberapa hari lalu, saya membalas pertanyaan di group openSUSE Indonesia, dan salah mention, lalu saya *copy* jawaban dan hapus. Saat akan saya *paste* ke bubble yang bertanya, ternyata *clipboard* saya sudah tertumpuk oleh inputan *copy* yang lain. Hahaha. Beginilah yaa, usia sudah tidak lagi muda, terdistraksi sedikit dapat menimbulkan kelupaan.
 
 
-# Solusi
+## Solusi
 
 Hal yang saya alami tidak akan terjadi apabila saya menggunakan *clipboard manager*. Tahun ini sebenarnya sudah pernah juga mencoba *clipboard manager*, karena melihat video dari [Kai Hendry tentang bagaimana dia menghandle clipboard pada sistemnya](https://youtu.be/2rs1l4YZxRo). Ia mengunakan [**cdown/clipmenu**](https://github.com/cdown/clipmenu). Lantas saat saya coba pasang, Hahaha, selama pemakaian *resource memory* saya terus naik. Karena kurangnya ilmu saat itu dan motivasi yang sekedar ikut-ikutan, lantas niat menggunakan *clipboard manager* pupus di pinggr jalan.
 
@@ -28,7 +28,7 @@ Clipmenu adalah *clipboard manager* yang menggunakan dmenu atau Rofi sebagai ant
 Gambar 1. Tampilan Clipmenu menggunakan Rofi sebagai antar muka
 
 
-# Instalasi
+## Instalasi
 
 Untuk memasang **clipmenu** pada sistem, terdapat dua cara yang saya ketahui.
 
@@ -40,7 +40,7 @@ Dalam catatan ini, saya akan mencoba meng-*cover* kedua cara ini.
 Konfigurasi akan saya tulis pada bagian [Konfigurasi](#konfigurasi).
 
 
-## Clipmenu from Arch Repo
+### Clipmenu from Arch Repo
 
 Cara pasangnya sangat mudah.
 
@@ -51,7 +51,7 @@ $ sudo pacman -S clipmenu xsel
 Clipmenu memerlukan paket `xsel` untuk menhandle *clipboard*.
 
 
-## Clipmenu from GitHub
+### Clipmenu from GitHub
 
 Pertama-tama beri bintang pada repository [cdown/clipmenu](https://github.com/cdown/clipmenu). Sebagai bentuk apresiasi kita terhadap waktu dan pikiran developer.
 
@@ -96,17 +96,17 @@ Pertama-tama beri bintang pada repository [cdown/clipmenu](https://github.com/cd
    > Saya menggunakan cara lain, yaitu dengan menjalankan `clipmenud` secara manual pada script autorun.
 
 
-# Konfigurasi
+## Konfigurasi
 
 Sebagai informasi, konfigurasi yang saya tulis ini adalah konfigurasi untuk **i3wm**/**i3-gaps**. Untuk teman-teman yang tidak menggunakan wm yang sama, dapat menyesuaikan dan memodifikasi dengan wm masing-masing.
 
 
-## Aktifkan Clipmenu Daemon
+### Aktifkan Clipmenu Daemon
 
 Ada dua cara untuk menggukana mengaktifkan `clipmenud` (clipmenu daemon). Dengan menjalankannya saat sistem startup atau saat sistem booting.
 
 
-## Konfigurasi Startup pada WM
+### Konfigurasi Startup pada WM
 
 **i3wm**
 
@@ -135,7 +135,7 @@ Pada perintah di atas, saya melakukan proses `kill` terlebih dahulu kepada `clip
 Kemudian, baru saya memanggil `clipmenud` dan membuatnya berjalan di background dengan menambahkan simbol ampersand (&). `clipmenud` secara otomatis akan menjalankan `clipnotify` yang bertugas untuk menangkap clipboard.
 
 
-## Systemd Service
+### Systemd Service
 
 > PERHATIAN!
 > 
@@ -149,7 +149,7 @@ $ sudo systemctl start clipmenud.service
 ```
 
 
-## Definisikan Default Path
+### Definisikan Default Path
 
 Sebelum mengkonfigurasi, selalu biasakan untuk melihat help atau manual dari clipmenu terlebih dahulu.
 
@@ -215,7 +215,7 @@ $ chmod +x ~/.local/bin/rofi-clipmenu
 Kalau teman-teman yang menggunakan dmenu, tinggal menggantinya menjadi dmenu.
 
 
-## Keyboard Shortcuts
+### Keyboard Shortcuts
 
 Selanjutnya tinggal mendefiniskan keyboard shortcut.
 
@@ -254,7 +254,7 @@ Untuk memilih clip mana yang ingin kita pergunakan kembali, tinggal menekan arro
 Gambar 2. Ilustrasi penggunaan Clipmenu dengan Rofi
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Terdapat banyak sekali *clipboard management* yang dapat kita pergunakan. Saat ini saya sedang mengunakan clipmenu, entah besok akan mencoba yang mana lagi.
 
@@ -263,7 +263,7 @@ Catatan dokumentasi ini masih jauh dari kata sempurna. Sebaik-baik dokumentasi a
 Karena keterbatasan pengetahuan, Saya masih mengalami kegagalan dalam menjalankan clipmenud daemon melalui systemd service. Hehehe.
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/index.php/Clipboard](https://wiki.archlinux.org/index.php/Clipboard) \
    Diakses tanggal: 2018-12-16

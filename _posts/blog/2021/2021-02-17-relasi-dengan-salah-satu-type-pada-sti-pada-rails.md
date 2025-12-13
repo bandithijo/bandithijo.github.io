@@ -10,12 +10,12 @@ tags: ["rails"]
 description: "Menyambung catatan tentang Single Table Inheritance, namun kali ini mengenai relasi salah satu type dari model yang dipasang STI."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 3.0.0` `rails 6.1.2` `postgresql 12.5` `rspec 4.0.0`
 
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Catatan kali ini, saya akan membahas Ruby on Rails dari sisi back-end.
 
@@ -97,7 +97,7 @@ irb(main)> user_copywriter.news
 Developer juga dapat membuat News karena kita meletakkan association-nya pada model User (`has_many :news`) dan pada model News (`belongs_to :user`). Sedangkan pada model User, terdapat dua type user, yaitu Developer dan Copywriter. Tentu saja kedua type user tersebut jadi memiliki association terhadap model News.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Sudah dapat ditebak yaa, seharusnya kita meletakkan associationnya pada model **Copywriter**, bukan pada model **User**.
 
@@ -141,7 +141,7 @@ Hal ini karena secara skematik, pada tabel News, kita merelasikan dengan tabel U
 ```
 
 
-# Pengujian
+## Pengujian
 
 Kita akan mulai dari Copywriter.
 
@@ -168,7 +168,7 @@ NoMethodError (undefined method `news' for #<Developer id: 1, email: "bayuyuba@g
 Oke, mantap! Developer sudah **tidak dapat** membuat News.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -181,7 +181,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [guides.rubyonrails.org/association_basics.html#single-table-inheritance-sti](https://guides.rubyonrails.org/association_basics.html#single-table-inheritance-sti) \
    Diakses tanggal: 2021-02-17

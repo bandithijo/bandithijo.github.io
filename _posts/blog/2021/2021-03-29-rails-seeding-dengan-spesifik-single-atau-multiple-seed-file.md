@@ -10,12 +10,12 @@ tags: ["rails"]
 description: "Catatan kali ini, saya akan mencatatat tentang bagaimana mendiferensiasi seeds sesuai kategori tertentu dan juga menjalankan rails db:seed untuk single ataupun multiple spesifik file."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 3.0.0` `rails 6.1.3.1`
 
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Pada Rails project yang sederhana, mungkin tidak akan terlalu mengalami kendala apabila menjalankan seeds dari file **db/seeds.rb**.
 
@@ -43,7 +43,7 @@ Lantas, **bagaimana apabila kita hanya ingin menjalankan satu buah seed saja?**
 Misalkan, hanya ingin menjalankan seed untuk mengenerate user dengan tipe "subscriber", tanpa harus menjalankan semua seeds.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Secara sederhana, saya akan mengistilahkan "**Modularisasi**-kan, saja!".
 
@@ -77,7 +77,7 @@ Pemecahan file **db/seeds.rb**, saya letakkan pada direktori **db/seeds/** dan s
 Tidak ada aturan (convention) baku untuk hal ini.
 
 
-## File Induk seeds.rb
+### File Induk seeds.rb
 
 Untuk membaca semua file-file yang berakhiran **\*.seeds.rb** yang ada di dalam direktori **db/seeds/**, saya menggunakan cara seperti ini di dalam file **db/seeds.rb**.
 
@@ -89,7 +89,7 @@ Dir[File.join(Rails.root, "db", "seeds", "*.seeds.rb")].sort.each { |seed| load 
 Untuk isi dari file-file **db/seeds/\*.seeds.rb** tidak perlu saya tuliskan lah yaa. Sama saja isinya seperti tipikal seeds pada umumnya, hanya saja dipisah/dikategorikan berdasarkan tujuan atau fungsi tertentu.
 
 
-## Seeding
+### Seeding
 
 Rails menyediakan rake task untuk melakukan seeding,
 
@@ -100,7 +100,7 @@ $ rails db:seed
 Meskipun kita sudah me-modularisasi-kan seeds, kalau kita melakukan seeding dengan perintah di atas, maka rails akan menjalankan semua file seeding tersebut.
 
 
-### Seeding hanya pada single seed file
+#### Seeding hanya pada single seed file
 
 Seperti yang sudah saya singgung sebelumnya, catatan ini adalah mengenai cara melakukan seeding hanya pada single seed file yang kita tentukan.
 
@@ -153,7 +153,7 @@ Admin has created: bandithijo@gmail.com
 Kita hanya perlu menuliskan nama file, tanpa sufix **\*.seeds.rb**.
 
 
-### Seeding pada multiple seed file
+#### Seeding pada multiple seed file
 
 Kali ini, kebutuhannya adalah melakukan seeding pada 1 atau lebih file seeds.
 
@@ -248,7 +248,7 @@ rails db:version                         # Retrieves the current schema version 
 ```
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -261,7 +261,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [https://stackoverflow.com/a/31815032/4862516](https://stackoverflow.com/a/31815032/4862516) \
    Diakses tanggal: 2021-03-29

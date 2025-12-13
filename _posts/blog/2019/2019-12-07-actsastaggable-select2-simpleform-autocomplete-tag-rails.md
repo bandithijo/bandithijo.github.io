@@ -10,12 +10,12 @@ tags: ["rails", "javascript"]
 description: "Catatan ini mengenai cara membuat autocomplete tag dengan ActsAsTaggable, Select2, dan SimpleForm pada Ruby on Rails."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 2.6.3` `rails 5.2.3` `postgresql 11.5`
 
 
-# Prakata
+## Prakata
 
 Membuat *tagging system* pada Blog mungkin sudah menjadi sebuah keharusan. Rasanya tidak lengkap apabila sebuah Blog tidak memiliki fitur *tagging*. Seperti makan nasi goreng tidak pakai telur. Hihihi.
 
@@ -26,7 +26,7 @@ Nah, pada catatan kali ini, saya akan membahas mengenai,
 "Membuat Autcomplete Tag dengan ActsAsTaggable, Select2 dan Simple Form pada Rails".
 
 
-# Sekenario
+## Sekenario
 
 Kali ini yang akan saya bahas adalah membuat inputan tag, pada sisi admin.
 
@@ -52,7 +52,7 @@ Gambar 2. Autcomplete tag suggestion
 Nah, dari ilustrasi gambar tersebut, saya rasa pasti sudah paham kan yaa.
 
 
-# Instalasi
+## Instalasi
 
 Sebagai langkah awal, kita perlu memasang semua gem yang diperlukan pada `Gemfile`.
 
@@ -82,7 +82,7 @@ $ bundle install
 Setelah itu kita perlu melakukan langkah-langkah *post installation* terhadap masing-masing gem.
 
 
-## ActsAsTaggable
+### ActsAsTaggable
 
 Kita perlu melakukan generate migration untuk ActsAsTaggable.
 
@@ -99,7 +99,7 @@ $ rails db:migrate
 Dari migration tersebut, akan dibuatkan 2 buah skema baru, yaitu tabel **taggings** dan **tags**.
 
 
-## Simple Form
+### Simple Form
 
 Selanjutnya, untuk simple_form, jalankan juga generator yang sudah disediakan oleh simple_form.
 
@@ -114,7 +114,7 @@ $ rails generate simple_form:install --bootstrap
 ```
 
 
-## Select2 Rails
+### Select2 Rails
 
 Sekedar informasi, sebelum menggunakan select2_rails gem, saya sudah menggunakan chosen gem, namun tidak sesuai harapan. Dan sepertinya sudah tidak disarankan lagi untuk menggunakan chosen.
 
@@ -161,7 +161,7 @@ Kalau yang menggunakan `application.css`.
 Nah, selanjutnya tinggal mengaplikasikan ke dalam project.
 
 
-# Penerapan
+## Penerapan
 
 Proses pengaplikasian ke dalam project akan sangat tergantung dari project yang teman-teman miliki.
 
@@ -170,7 +170,7 @@ Cara yang saya berikan di bawah ini hanya ilustrasi yang saya lakukan pada proje
 Sebagai ilustrasi saya memiliki sebuah aplikasi blog dengan model article dan author.
 
 
-## Model
+### Model
 
 Saya akan mulai dari membuat relasi antara model tag dengan article.
 
@@ -220,7 +220,7 @@ Kecuali, kita ingin mengeset nama yang lain untuk object tag ini.
 Namun, untuk tujuan catatan ini, saya lebih baik menuliskannya saja.
 
 
-## Controller
+### Controller
 
 Setelah membuat relasi dan mendefinisikan object tag, kita akan punya object tag yang dapat kita panggil di dalam articles controller.
 
@@ -278,7 +278,7 @@ tag_list: ["#rubyonrails", "#rubyconf", "#rspec"]
 Nah, sekarang tinggal membuat form pada view template.
 
 
-## View
+### View
 
 Pada tahapan ini saya menggunakan 2 buah gem untuk membantu saya mengurusi masalah *front end*. Yaitu, simple_form dan select2_rails.
 
@@ -373,7 +373,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [github.com/mbleigh/acts-as-taggable-on](https://github.com/mbleigh/acts-as-taggable-on) \
    Diakses tanggal: 2019-12-07

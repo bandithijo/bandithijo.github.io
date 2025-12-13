@@ -13,7 +13,7 @@ description: "Untuk mengelola ebook yang saya kumpulkan, karena jumlahnya tidak 
 ![Banner](https://s20.postimg.cc/q966nyg5p/banner_post_02.png)
 
 
-# Latar Belakang
+## Latar Belakang
 
 Beberapa hari lalu saya sedang giat-giatnya membaca beberapa *ebook* yang saya kumpulkan dari *resources free learning*, [**Packt>**](https://www.packtpub.com/packt/offers/free-learning).
 
@@ -24,14 +24,14 @@ Untuk mengelola *ebook* yang saya kumpulkan, karena jumlahnya ~~tidak sedikit~~,
 Gambar 1. Calibre pada GNU/Linux
 
 
-# Masalah
+## Masalah
 
 Calibre, secara default sudah memiliki *ebook reader* yang biasa saya gunakan untuk membaca *file* dengan format EPUB, namun untuk membaca *file* dengan format PDF saya lebih *prefer* menggunakan [**Evince**](https://github.com/GNOME/evince).
 
 Belakangan saya dapati, ketika saya melakukan *view ebook* yang hanya mempunyai format PDF, Calibre akan membuka aplikasi Libreoffice Draw, dan bukan menggunakan Evince. Padahal pada pengaturan *default* untuk *view* PDF sudah saya arahkan agar dapat dibuka menggunakan Evince.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Calibre menggunakan `QDesktopServices.openUrl(qurl)` method, yang menggunakan `xdg-utils` untuk membuka *files*.
 
@@ -54,7 +54,7 @@ Apabila file PDF terbuka menggunakan Evince, maka konfigurasi *default* mimetype
 Sekarang, saat kita melakukan *view* file PDF pada Calibre, maka Calibre akan menggunakan Evince untuk membuka file PDF tersebut.
 
 
-# Rekomendasi dari Teman
+## Rekomendasi dari Teman
 
 Rekomendasi dari: **Pirate Professor**
 
@@ -75,7 +75,7 @@ Gambar 3. Instalasi Plugin
 Gambar 4. Konfigurasi Open With
 
 
-# Referensi
+## Referensi
 
 1. [jb-blog.readthedocs.io/en/latest/posts/0016-how-to-change-what-program-calibre-uses-to-open-stuff.html](http://jb-blog.readthedocs.io/en/latest/posts/0016-how-to-change-what-program-calibre-uses-to-open-stuff.html) \
    Diakses tanggal: 2018-04-14

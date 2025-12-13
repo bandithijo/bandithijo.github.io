@@ -10,7 +10,7 @@ tags: ["gpg", "gnupg"]
 description: "Memiliki email yang banyak tidak berarti juga memiliki GPG key yang banyak. Kita dapat membuat alias untuk masing-masing email agar menggunakan GPG key kita yang sudah ada. Simak caranya di catatan berikut ini. Mudah banget!"
 ---
 
-# Latar Belakang
+## Latar Belakang
 
 Maksud dari judul catatan ini adalah, menambahkan Email lain --email milik kita yang berbeda alamat, bisa lebih dari satu email-- ke dalam satu GPG key yang sama --GPG key yang sudah pernah kita buat sebelumnya.
 
@@ -37,7 +37,7 @@ Mungkin bisa. Tapi bukan signature seperti ini yang saya maksudkan.
 Namun, signature yang saya maksudkan adalah signature digital berupa GPG key. Signature yang yang juga digunakan dalam pemaketan aplikasi--yang pakai AUR pasti paham.
 
 
-# Permasalahan
+## Permasalahan
 
 Saya sudah memiliki GPG key, yang menggunakan email sebelumnya.
 
@@ -111,7 +111,7 @@ Nah, gimana? Sudah kebayang kan?
 > Dengan begini, kita **tidak perlu membuat banyak GPG key untuk masing-masing email yang kita memiliki**.
 
 
-## Pemecahan Masalah
+### Pemecahan Masalah
 
 **Bagaimana cara membuat GPG key yang dapat menyimpan banyak email, sepeti di atas?**
 
@@ -120,7 +120,7 @@ Sangat mudah.
 Ikuti langkah-langkahnya sebagai berikut ini.
 
 
-## 1. Identifikasi GPG Secret Key yang Kita Miliki
+### 1. Identifikasi GPG Secret Key yang Kita Miliki
 
 GPG adalah pasangan kunci (*key pairs*), **public key** dan **private key**.
 
@@ -165,7 +165,7 @@ AE706A616B252A6822635041560691E942A02F91
 ```
 
 
-### Key ID Format
+#### Key ID Format
 
 Selain menggunakan fingerprit seperti di atas, kita juga dapat menggunakan key id.
 
@@ -206,7 +206,7 @@ ssb   rsa4096/0x99999999 2018-08-11 [E] [expires: 2021-12-30]
 Tinggal disesuaikan saja format yang diperlukan, apakah **0xshort**, **short**, **0xlong**, dan **long**.
 
 
-### Fingerprit
+#### Fingerprit
 
 Untuk menampilkan fingerprint, kita dapat menambahkan option `--fingerprint`, baik untuk melihat public key ataupu private key.
 
@@ -227,7 +227,7 @@ ssb   rsa4096/0x99999999 2018-08-11 [E] [expires: 2021-12-30]
 ```
 
 
-## 2. Edit GPG Key untuk Menambahkan Email Lain
+### 2. Edit GPG Key untuk Menambahkan Email Lain
 
 Untuk menambahkan email lain, kita gunakan option, `--edit-key` diikuti dengan keyID.
 
@@ -323,10 +323,10 @@ ssb   rsa4096 2018-08-11 [E] [expires: 2021-12-30]
 Mantap!
 
 
-# Tambahan
+## Tambahan
 
 
-## GPG shell, Help!
+### GPG shell, Help!
 
 Untuk meminta bantuan pada GPG shell, gunaka perintah,
 
@@ -337,7 +337,7 @@ gpg> help
 ```
 
 
-## Menghapus uid
+### Menghapus uid
 
 Bagaimana cara menghapus email (uid) yang sudah tidak kita gunakan lagi?
 
@@ -390,7 +390,7 @@ Really remove this user ID? (y/N) y
 Masukkan `y`, dan uid terpilih akan dihapus dari list.
 
 
-## Memilih Primary uid
+### Memilih Primary uid
 
 Kalau kita memiliki lebih dari satu uid, tentunya kita perlu memilih uid mana yang menjadi uid primary.
 
@@ -477,7 +477,7 @@ Nah, sekarang email `rizqiassyaufi@gmail.com` sudah menjadi primary.
 Posisi primary akan selalu berada di uid 1.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -488,7 +488,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [Redmine - Adding Secondary Email Addresses to GPG Keys](https://redmine.dicelab.net/projects/instructibels/wiki/Adding_Secondary_Email_Addresses_to_GPG_Keys) \
    Diakses tanggal: 2020-12-11

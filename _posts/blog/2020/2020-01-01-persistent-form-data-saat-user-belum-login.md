@@ -10,26 +10,26 @@ tags: ["rails"]
 description: "Catatan ini mengenai cara memperhankan data (persistent) pada sebuah form ketika user belum melakukan authentication atau registration pada Ruby on Rails."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 2.6.3` `rails 5.2.3` `postgresql 11.5`
 
 
-# Prakata
+## Prakata
 
 Mengawali tahun 2020 ini, saya mencatat mengenai Ruby on Rails.
 
 Kali ini mengenai bagaimana cara memberikan *user experience flow* yang baik dengan web aplikasi yang menggunakan form saat pengguna belum melakukan *authentication*.
 
 
-# Permasalahan
+## Permasalahan
 
 Dalam mengisi form, misalkan form pemesanan (*order*), yang memiliki banyak inputan data, tentunya pengguna akan merasa kesal, apabila sudah memasukkan banyak data, namun saat menekan tombol *submit*, dan harus melakukan *sign in* atau *sign up* terlebih dahulu, setelah itu, data yang pengguna masukkan pada *order form* tadi sudah menghilang. Artinya, pengguna harus memasukkan kembali data-data yang sudah ia masukkan sebelumnya.
 
 *User experience flow* di atas, tentunya akan membuat user merasa kesal.
 
 
-# Penyelesaian Masalah
+## Penyelesaian Masalah
 
 Kebetulan, web aplikasi kali ini menggunakan Devise gem untuk menghandle proses *authentication*.[<sup>1</sup>](#referensi)
 
@@ -50,7 +50,7 @@ Proses di atas terdiri dari:
 Untuk membuat data yang ada pada form menjadi *persistent*, saya akan memanfaatkan **session**.[<sup>2</sup>](#referensi) Kemudian, setelah user melakukan *authentication*, session akan di-*passing* ke dalam variable dan akan dikosongkan.
 
 
-## Order Experiences Controller
+### Order Experiences Controller
 
 Karena proses order experience ini di-*handle* oleh action `:create`, maka saya perlu memodifikasi isi dari action ini.
 
@@ -96,7 +96,7 @@ Pastikan pada callback `before_action :authenticate_user!`, buat pengecualian un
 Selanjutnya, tinggal memodifikasi controller yang menghandle proses login/register.
 
 
-## Sessions & Registrations Controller
+### Sessions & Registrations Controller
 
 Kedua controller ini adalah controller yang digenerate oleh Devise.
 
@@ -180,7 +180,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [How To: Redirect back to current page after sign in, sign out, sign up, update](https://github.com/plataformatec/devise/wiki/How-To:-Redirect-back-to-current-page-after-sign-in,-sign-out,-sign-up,-update) \
    Diakses tanggal: 2020-01-01

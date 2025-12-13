@@ -10,27 +10,27 @@ tags: ["rails"]
 description: "Catatan kali ini adalah mengenai cara membuat fitur pertemanan sederhana dengan menggunakan referral link saat melakukan invitation pada web aplikasi yang dibangun dengan Ruby on Rails."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 2.6.3` `rails 5.2.3` `postgresql 11.5`
 
 
-# Prakata
+## Prakata
 
 Catatan kali ini, saya akan menuliskan tentang fitur yang bertujuan untuk menambahkan teman dengan menggunakan "*referral link*" pada Ruby on Rails.
 
 
-# Permasalahan
+## Permasalahan
 
 Saya memiliki tabel **users** menampung data user dan tabel **friendships**, yang menampung data relasi antar user.
 
 Sebagai ilustrasi user dengan ID 1 berelasi dengan user dengan ID 2 pada tebal yang sama, yaitu tabel users.
 
 
-# Pemecahan masalah
+## Pemecahan masalah
 
 
-## Migration
+### Migration
 
 Pertama, buat dulu Active Record Migration untuk membuat users model.
 
@@ -102,7 +102,7 @@ $ rails db:migrate
 ```
 
 
-## Model
+### Model
 
 Saya akan menggunakan `belongs_to` pada friendship model. Sedangkan pada user model saya akan menggunakan `has_many` dan `has_many :through` association.
 
@@ -246,7 +246,7 @@ Nah, pada Active Record sudah berhasil.
 Selanjutnya tinggal memasangnya ke dalam controller.
 
 
-## Controller
+### Controller
 
 Karena proses penambahan pertemanan ini terjadi pada saat user yang diundang melakukan registration (*). Maka saya akan menambahkan fungsi penambahan pertemanan ini di user registration controller pada action create (`Users::RegistrationsController#create`).
 
@@ -319,7 +319,7 @@ Karena saya menggunakan Devise, maka saya memiliki `current_user`.
 Instance variable `@invitation_token_url` nanti akan diguanakan pada view template.
 
 
-## Routes
+### Routes
 
 Selanjutnya, saya akan menambahkan routing untuk *referral link* agar langsung diarahkan ke halaman registrasi (*).
 
@@ -336,7 +336,7 @@ end
 Bentuk dari url dapat teman-teman sesuaikan sendiri.
 
 
-## View Template
+### View Template
 
 Yang perlu dikerjakan pada view template ada dua bagian.
 
@@ -468,14 +468,14 @@ Saya menambahkan fungsi "Copy URL" agar lebih praktis, tinggal tekan tombol dan 
 ```
 
 
-# Kekurangan(*)
+## Kekurangan(*)
 
 **Kekurangan** dari fitur yang saya buat ini adalah dalam hal *user experience* (UX).
 
 Karena ketika user menerima *referral link*, user langsung disuguhkan dengan halaman registrasi. Hal ini menjadi kekurangan, karena user tidak dapat melakukan eksplorasi pada halaman-halaman di web terlebih dahulu.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Oke, saya akhiri catatan ini.
 
@@ -486,7 +486,7 @@ Terima kasih
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [guides.rubyonrails.org/association_basics.html](https://guides.rubyonrails.org/association_basics.html) \
    Diakses tanggal: 2020-02-10

@@ -10,7 +10,7 @@ tags: ["irssi", "irc"]
 description: "Jaman sekarang sudah sangat jarang orang menggunakan IRC. Namun bukan berarti IRC sudah mati. Masih ada beberapa user yang masih menggunakan IRC. Bahkan beberapa distribusi yang besar, memiliki official channel yang terpelihara, seperti #archlinux. Untuk dapat masuk ke dalam layanan IRC, kita memerlukan IRC client. Saya ingin yang simple, salah satunya adalah Irssi."
 ---
 
-# Prakata
+## Prakata
 
 **IRC client? Serius nih?**
 
@@ -33,14 +33,14 @@ Sejujurnya baru beberapa bulan ini saya menggunakan Irssi. Sebelumnya, saya semp
 Oke, cukup dengan curhatnya. Kita langsung bahas konfigurasi Irssi.
 
 
-# Konfigurasi Irssi
+## Konfigurasi Irssi
 
 Mengkonfigurasi Irssi sebenarnya terbilang mudah apabila kita sudah pernah melakukannya. Untuk yang pertama kali mengkonfigurasi Irssi memang sedikit membuat frustasi. Hehehe.
 
 Saya sudah menuliskan cara-cara yang saya kumpulkan agar Irssi dapat saya pergunakan dengan nyaman. Sejujurnya mengumpulkan semua materi konfigurasi agar Irssi dapat digunakan sesuai kemauan kita, memang melelahkan. Namun, jangan khawatir, kalian dapat mengikuti dan memodifikasi konfigurasi yang sudah saya tuliskan di bawah.
 
 
-## Instalasi
+### Instalasi
 
 Pasang paket Irssi pada distro masing-masing.
 
@@ -51,7 +51,7 @@ $ sudo pacman -S irssi
 Untuk *scripts*, kita akan bahas beberapa *scripts* yang saya pergunakan pada pembahasan di bawah.
 
 
-## Membuat App Launcher
+### Membuat App Launcher
 
 Karena Irssi adalah program untuk dijalankan di atas Terminal, biasanya belum disertakan app launchernya. Kita perlu membuatnya sendiri.
 
@@ -83,7 +83,7 @@ Sekarang coba jalankan. Kalian akan bertemu dengan tampilan awal dari Irssi.
 Gambar 2. Antarmuka Default dari Irssi
 
 
-## Konfigurasi Dasar
+### Konfigurasi Dasar
 
 Seperti kebanyakan aplikasi berbasil ncurses, kalau mau enak digunakan kita perlu melakukan konfigurasi terlebih dahulu sesuai pereserensi kita. Secara *default* Irssi akan membuat konfig directori di *home* kita `~/.irssi/`. Di dalam direktori ini terdapat file config.
 
@@ -92,7 +92,7 @@ Seperti kebanyakan aplikasi berbasil ncurses, kalau mau enak digunakan kita perl
 > Selama proses memasukkan perintah-perintah konfigurasi ke dalam Irssi di bawah. Sebaiknya jangan dulu membuka file <code>~/.irssi/config</code>. Karena perintah-perintah di bawah akan kita simpan ke dalam file <code>config</code> dengan perintah <code>/save</code>.
 
 
-### Registrasi Username
+#### Registrasi Username
 
 Apabila sudah memiliki username yang terregistrasi tidak perlu melakukan tahap ini.
 
@@ -159,7 +159,7 @@ Selanjutnya, identifikasi username kamu.
 ```
 
 
-### Memilih Layer Autentikasi Koneksi
+#### Memilih Layer Autentikasi Koneksi
 
 Terdapat dua jenis layer authentikasi yang dapat kita pergunakan agar dapat terhubung dengan server, yaitu SASL (*Simple Authentication and Security Layer*) dan TLS (*Transport Layer Security*).
 
@@ -186,7 +186,7 @@ Keluar dengan `/quit`, lalu masuk kembali `/connect chat.freenode.net`.
 Apabila berhasil, akan terdapat huruf kapital "**Z**" mode. Akan ada output baris baru yang kira-kira berisi `Mode change [+Zi] for user bandithijo`.
 
 
-### Membuat Sertifikat Klien
+#### Membuat Sertifikat Klien
 
 Kita dapat menggunakan autentikasi menggunakan **SSL** *certificates* sebagai alternatif plaintext password. Sehingga memungkinkan kita untuk login seolah-olah tanpa memasukkan password.
 
@@ -269,10 +269,10 @@ Maka proses dari konfigurasi utama telah selesai.
 > 2019/01/29, Saya baru mengalami masalah ini, dan berhasil mengatasinya dengan mengulangi langkah pembuatan sertifikat klien di atas.
 
 
-## Konfigurasi Tambahan
+### Konfigurasi Tambahan
 
 
-### Tema
+#### Tema
 
 Untuk tema (*Theme*), teman-teman dapat melihat koleksi dari tema yang disediakan pada *official website* Irssi, [di sini](https://irssi-import.github.io/themes/).
 
@@ -303,7 +303,7 @@ Tema ini dapat diunduh [di sini](https://raw.githubusercontent.com/bandithijo/do
 Jangan lupa disimpan, `/save`.
 
 
-### Autojoin Channel
+#### Autojoin Channel
 
 Mungkin kita tidak mau setiap kali membuka Irssi selalu *join* channel secara manual. Tentunya ada beberapa channel yang kita selalu ikuti. Seperti saya, #freenode, #archlinux, #i3 dll.
 
@@ -342,7 +342,7 @@ Perhatikan, terdapat #freenode pada urutan kedua dan #archlinux pada urutan tera
 Jangan lupa disimpan, `/save`.
 
 
-### Notifikasi
+#### Notifikasi
 
 Secara *default* Irssi belum mengkonfigurasi notifikasi, baik visual maupun suara. Tapi jangan khawatir, kita dapat menambahkannya dengan *script*.
 
@@ -351,7 +351,7 @@ Secara *default* Irssi belum mengkonfigurasi notifikasi, baik visual maupun suar
 Di awal-awal saya menggunakan Irssi, saya belum menambahakn notifikasi. Sampai pada akhirnya saya mulai berinteraksi dengan orang-orang di channel. Saya mulai kesulitan mengetahui, apakah percakapan saya dibalas atau tidak? Akan lebih mudah apabila kita mendapatkan notifikasi saat user lain menyertakan nama kita (*mention*) pada pesan yang ia kirim.
 
 
-#### Notifikasi Visual
+##### Notifikasi Visual
 
 Kita akan menggunakan [`irssi-libnotify`](https://github.com/stickster/irssi-libnotify){:targer="_blank"} untuk notifikasi dan membuatnya autorun saat Irssi dijalankan, langkah-langkahnya sebagai berikut.
 
@@ -471,7 +471,7 @@ Tahap notifikasi visual telah Selesai. Coba jalankan Irssi dan lakukan pengujian
 ```
 
 
-#### Notifikasi Suara
+##### Notifikasi Suara
 
 Selanjutnya kita juga memerlukan notifikais dalam bentuk suara. Biar tidak sepi aja.
 
@@ -520,10 +520,10 @@ Konfigurasi tambahan segini dulu aja yaa. Untuk kegunaan *script* yang lain dapa
 Repositori untuk *scripts* Irssi dapat dilihat [di sini](https://scripts.irssi.org/).
 
 
-# Beberapa Pemecahan Masalah
+## Beberapa Pemecahan Masalah
 
 
-## Error Closing Link
+### Error Closing Link
 
 Selama menggunakan Irssi, saya mengalami hal ini beberapa kali.
 
@@ -540,7 +540,7 @@ Kecurigaan saya adalah, Freenode memblokir alamat IP publik saya. Karena saya se
 Gambar 5.  Error Closing Link
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Menggunakan IRC di jaman modern seperti saat ini tidak juga tidak berarti apa-apa. Karena masih terdapat orang-orang yang berkompeten dalam bidangnya dan masih menggunakan IRC.
 
@@ -549,7 +549,7 @@ Saya sendiri masih suka nongkrong di channel #archlinux dan #freenode. Sempat ju
 Apabila dirasa-rasa Irssi terlalu sulit untuk dikonfigurasi, ada satu lagi alternatif IRC client di Terminal, yaitu [**WeeChat**](https://weechat.org/).
 
 
-# Rencana Kedepan
+## Rencana Kedepan
 
 Masih terdapat banyak sekali hal yang belum dapat tercover oleh tulisan ini. Beberapa diantaranya :
 
@@ -562,7 +562,7 @@ Masih terdapat banyak sekali hal yang belum dapat tercover oleh tulisan ini. Beb
 7. dll.
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/index.php/Irssi](https://wiki.archlinux.org/index.php/Irssi) \
    Diakses tanggal: 2018-12-14

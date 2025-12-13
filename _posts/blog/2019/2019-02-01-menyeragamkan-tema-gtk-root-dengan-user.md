@@ -10,7 +10,7 @@ tags: ["tips"]
 description: "Bicara tentang tampilan desktop, setidaknya terdapat 2 library yang banyak digunakna oleh aplikasi-aplikasi GUI di lingkungan GNU/Linux, yaitu GTK+ dan Qt. Kedua library ini mungkin memiliki default theme mereka sendiri. Mungkin gak kalau kita seragamkan? Sangat mungkin! Beberapa teman-teman yang sering melihat screenshot atau video-video pendek yang sering saya share di Telegram mungkin pernah melihat dan memperhatikan."
 ---
 
-# Prakata
+## Prakata
 
 Menyeragamkan GTK theme yang dimiliki oleh root agar seragam dengan yang dimiliki oleh user biasa.
 
@@ -20,10 +20,10 @@ Menyeragamkan GTK theme yang dimiliki oleh root agar seragam dengan yang dimilik
 2. GTK theme memiliki dukungan terhadap GTK2 dan GTK3 (optional)
 
 
-# Pengecekan
+## Pengecekan
 
 
-## Pengecekan Lokasi Tema
+### Pengecekan Lokasi Tema
 
 Lakukan pengecekan untuk syarat pertama, apakah GKT theme yang kita pakai sudah berada pada direktori `/usr/share/themes/`. Kalau ternyata belum, sebaiknya dipindahkan saja.
 
@@ -59,7 +59,7 @@ Lakukan pengecekan untuk syarat pertama, apakah GKT theme yang kita pakai sudah 
    Tujuannya, agar GTK theme yang kita pergunakan juga dapat dipergunakan oleh user yang lain. Dalam hal ini adalah root. Karena kita akan berbagi tema yang sama dengan root.
 
 
-## Pengecekan GTK2 dan GTK3 Compatibility
+### Pengecekan GTK2 dan GTK3 Compatibility
 
 Selanjutnya, lakukan pengecekan apakah teman yang kita pergunakan memiliki kompatibilitas terhadap GTK2 dan GTK3 atau tidak. Apa hanya GTK3 saja.
 
@@ -97,12 +97,12 @@ Selanjutnya, lakukan pengecekan apakah teman yang kita pergunakan memiliki kompa
    Nah, dengan ini, tahap pengecekan sudah selesai.
 
 
-# Eksekusi
+## Eksekusi
 
 Setelah kita memastikan lokasi tema yang kita pergunakan sudah terdapat pada direktori `/usr/share/themes/`. Langkah selanjutnya adalah mencopy konfigurasi GTK, baik GTK2 maupun GTK3 yang dimiliki oleh user (yang kita gunakan) ke direktori `/root/`.
 
 
-## GTK2
+### GTK2
 
 Aplikasi GUI yang membutuhkan root permission dan masih menggunakan GTK2, salah satunya adalah **GParted**.
 
@@ -159,7 +159,7 @@ Berikut ini adalah ilustrasinya.
 Gambar 4. gtk2
 
 
-## GTK3
+### GTK3
 
 Sejujurnya saya jarang sekali menggunakan aplikasi GTK3 yang memerlukan root permission.
 
@@ -217,7 +217,7 @@ Gambar 5. gtk3
 Nah, sekarang tampilan aplikasi GTK3 yang dimiliki oleh root dan user sudah sama.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sejujurnya saya kurang mengerti apakah terdapat dampak buruk dari modifikasi ini terhadap keamanan sistem. Karena jujur saja untuk hal-hal yang berurusan dengan root permission, saya sedikit takut-takut.
 

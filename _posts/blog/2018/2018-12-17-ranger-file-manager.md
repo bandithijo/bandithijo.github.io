@@ -10,7 +10,7 @@ tags: ["ranger", "tui"]
 description: "Ranger adalah TUI (*Terminal User Interface*) file manager yang ditulis dengan bahasa pemrograman Python. Kalau yang pernah tahu MC (Midnight Commander), nah serupa, sama-sama file manager. Menggunakian ranger sangat mendongkrak efektifitas saya dalam melakukan eksplorasi terhadap file-file yang terdapat di sistem saya."
 ---
 
-# Prakata
+## Prakata
 
 Ranger adalah *Terminal User Interface file manager* (aplikasi untuk memanajemen file yang menggunakan antarmuka Terminal) yang ditulis dengan bahasa Python.
 
@@ -78,7 +78,7 @@ Tentukan pilihanmu, Bro.
 > Namun bagi saya, itu pendapat mereka, dan ini pilihan saya. Pasti ada alasan dan tujuan yang baik, mengapa Ranger sudah membawa banyak fitur secara *default*.
 
 
-# Instalasi
+## Instalasi
 
 Proses instalasi Ranger, saya rasa sudah pasti sangat mudah. Hanya tinggal menggunakan paket manajer dari distribusi sistem operasi teman-teman.
 
@@ -99,7 +99,7 @@ $ sudo pacman -S w3m
 ```
 
 
-## Membuat App Launcher
+### Membuat App Launcher
 
 Seperti biasa kita perlu membuat `.desktop` agar mudah dipaggil dengan *application launcher* seperti dmenu dan rofi sehingga tidak perlu membuka Terminal terlebih dahulu.
 
@@ -123,7 +123,7 @@ MimeType=inode/directory;
 Pada bagian `Exec=`, sesuaikan dengan Terminal emulator yang teman-teman pergunakan
 
 
-# Konfigurasi
+## Konfigurasi
 
 Apabila kita langsung menjalankan Ranger saat ini, maka Ranger akan menggunakan *default config*. Saya lebih *prefer* untuk menggunakan konfigurasi saya sendiri, karena lebih bebas untuk dimodifikasi dalam hal *colorscheme*, *key bindings*, dll.
 
@@ -169,7 +169,7 @@ drwxr-xr-x ..
 Langkah selanjutnya, kita akan mengkonfigurasi file `rc.conf`.
 
 
-## rc.conf - Konfigurasi Options
+### rc.conf - Konfigurasi Options
 
 Oke, sekarang kita sudah memiliki file configurasi dasar. Selanjutnya coba periksa terlebih dahulu bagaimana bentuk dari isi file `rc.conf`.
 
@@ -194,7 +194,7 @@ Tidak banyak yang harus saya rubah. Tapi saya akan bahas, apa saja yang saya mod
 Tentunya teman-teman tidak harus mengikuti konfigurasi saya. Silahkan bereksplorasi sendiri.
 
 
-### Konfirmasi Saat Delete
+#### Konfirmasi Saat Delete
 
 Terdapat *key bindings* untuk melakukan *recursive delete* seperti `rm`. Tentunya kita perlu hati-hati terhadap hal ini. Kita menghindari apabila suatu waktu kita mengalami *human error*. Untuk itu perlu sekali membuat langkah antisipasi. Salah satunya dengan mmberikan konfirmasi saat akan melakukan *recursive delete/remove*.
 
@@ -209,7 +209,7 @@ set confirm_on_delete always
 Secara *default* bernilai `multiple`, hanya menampilkan konfirmasi saat menghapus banyak file/direktori. Namun, saya lebih *prefer* untuk menggunakan value `always`. Agar setiap file/direktori yang akan saya *recursive delete* selalu ditampilkan konfirmasi untuk saya tinjau kembali. Dengan begini dapat meminimalisir dampak dari *human error*. Hehehe.
 
 
-### Aktifkan Preview Script
+#### Aktifkan Preview Script
 
 Saya merekeomendasikan untuk mengaktifkan variabel ini `preview_script`.
 
@@ -269,7 +269,7 @@ Dengan mengaktifkan kedua *section* di atas, yaitu `SVG` dan `PDF`, Ranger akan 
 Sengaja saya tidak mengaktifkan `VIDEO`. Tidak ada alasan apa-apa, hanya masalah selera saja.
 
 
-### Menampilkan Gambar
+#### Menampilkan Gambar
 
 Untuk menampilkan gambar, Ranger memerlukan paket bernama `w3m`. Silahkan dipasang terlebih dahulu apabila belum.
 
@@ -305,7 +305,7 @@ set preview_images_method uqberzug
 ```
 
 
-### Togglig Antar Image Preview & File Info
+#### Togglig Antar Image Preview & File Info
 
 Untuk menampilkan file info dari file gambar, caranya sagat mudah. Ranger sudah menyediakan fitur ini secara default, kita hanya perlu memasang paket dependensi yang diperlukan saja.
 
@@ -318,7 +318,7 @@ Kemudian, untuk melakukan toggling antar image preview dengan file info, kita da
 ![Gambar 7](https://i.postimg.cc/mrjLpLC3/gambar-08.gif)
 
 
-### Memilih Colorscheme
+#### Memilih Colorscheme
 
 Secara *default*, Ranger sudah menyertakan *colorscheme* bawaan, yaitu: default, jungle, snow, solarized. Saat ini kita masih menggunakan *colorscheme* default. Coba ganti dengan *colorscheme* lain yang disediakan.
 
@@ -348,7 +348,7 @@ Saya sendiri menggunakan *colorscheme* solarized hasil modifan sendiri. Karena t
 Mengenai memodifikasi warna dalam *colorscheme*, sepertinya tidak ingin saya tulis dulu saat ini. Terlalu panjang.
 
 
-### Mengaktifkan Border
+#### Mengaktifkan Border
 
 Kalian juga dapat mengaktifkan border, karena secara *default*, variable ini dalan keadaan `none`.
 
@@ -364,7 +364,7 @@ set draw_borders none
 Saya sendiri termasuk yang tidak begitu senang menggunakan border.
 
 
-### Mengaktifkan Line Number
+#### Mengaktifkan Line Number
 
 Untuk dapat memudahkan kita dalam bernavigasi antar baris, berlompat-lompat antar baris seperti pada Vim, Ranger memberikan kita fitur untuk menampilkan *line numbers*. Terdapat tiga pilihan: *false*, *absolute*, dan *relative*.
 
@@ -378,7 +378,7 @@ set line_numbers relative
 Saya lebih senang menggunakan `relative` karena lebih memudahkan untuk navigasi.
 
 
-### Scroll Wrapping
+#### Scroll Wrapping
 
 Untuk memudahkan navigasi juga, saya lebih senang mengaktifkan fitur *scroll wrapping*, agar ketika saya sudah melakukan *scrolling* sampai bawah, saya dapat dengan mudah menuju ke atas.
 
@@ -390,7 +390,7 @@ set wrap_scroll true
 ```
 
 
-## rc.conf - Konfigurasi Key Bindings
+### rc.conf - Konfigurasi Key Bindings
 
 Tidak banyak modifikasi *key bindings* yang saya modifikasi. Karena saya berusaha untuk membiasakan dengan *key bindings* yang sudah ada. Toh dalam hal navigasi dasar mirip-mirip dengan Vim.
 
@@ -438,7 +438,7 @@ $ sudo pacman -S trash-cli
 Untuk penggunaan `trash-cli`, seperti: *restore*, *empty-trash*, dll. dapat dieksplorasi sendiri yaa.
 
 
-## rifle.conf - Konfigurasi File Executor/Opener
+### rifle.conf - Konfigurasi File Executor/Opener
 
 File `rifle.conf` ini adalah file konfigurasi yang digunakan untuk mendaftarkan file tipe apa saja dan akan dieksekusi oleh aplikasi/prgram apa file tersebut.
 
@@ -474,7 +474,7 @@ Nah, sekarang silahkan bereksplorasi dengan file `rifle.conf` ini.
 Apabila ingin membandingkan file `rifle.conf` dengan milik saya, teman-teman dapat berkunjung [ke sini](https://github.com/bandithijo/dotfiles/blob/master/.config/ranger/rifle.conf).
 
 
-## Konfigurasi Plugins
+### Konfigurasi Plugins
 
 Sejauh ini saya belum banyak menggunakan plugins. Plugins yang baru saya gunakan hanya [**alexanderjeurissen/ranger_devicons**](https://github.com/alexanderjeurissen/ranger_devicons).
 
@@ -487,7 +487,7 @@ Sekarang buka Ranger dan lihat, sudah terdapat icon disamping name file/direktor
 Untuk unintsall juga mudah, tinggal `$ make uninstall`.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya seperti ini dahulu. Mungkin tulisan ini akan mengalami update, tapi saya tidak bisa janji. Silahkan diekplorasi sendiri lebih jauh.
 
@@ -504,7 +504,7 @@ Apabila sedang di dalam Ranger dapat memanggil pilihan bantuan dengan menekan to
 Sekian catatan ini saya tulis. Mudah-mudahan catatan yang masih belum sempurna ini dapat sedikit membantu memberikan gambaran, seperti apa *Terminal based file manager* yang bernama Ranger.
 
 
-# Update Berikutnya
+## Update Berikutnya
 
 Masih terdapat beberapa hal yang belum sempat saya tuliskan. Seperti:
 
@@ -513,7 +513,7 @@ Masih terdapat beberapa hal yang belum sempat saya tuliskan. Seperti:
 3. dll.
 
 
-# Referensi
+## Referensi
 
 1. [github.com/ranger/ranger](https://github.com/ranger/ranger) \
    Diakses tanggal: 2018-12-17

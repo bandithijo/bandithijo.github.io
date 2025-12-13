@@ -10,7 +10,7 @@ tags: ["jekyll"]
 description: "Navigasi next & previouse dalam sebuah post mungkin diperlukan untuk memudahkan pengunjung menelusuri blog."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 Catatan kali ini mengenai Jekyll. Haha. Jarang-jarang saya menulis tentang Jekyll.
 
@@ -19,7 +19,7 @@ Kebetulan sedang iseng mendevelop blog untuk sebuah buletin yang terbit tiap har
 Karena blog tersebut adalah blog kedua yang saya buat dengan Jekyll. Maka saya akan mencoba memulai dengna tertib dan lebih rapi. Tidak seperti saat membuat blog ini yang lebih ke "asal jadi dulu". Ahahaha.
 
 
-# Permasalahan
+## Permasalahan
 
 Post pada sebuah blog, pasti akan runut berdasarkan waktu dibuatnya.
 
@@ -28,7 +28,7 @@ Kalau berdasarkan *user experience*, setelah pembaca membaca artikel pada sebuah
 Maka dari itu, kita perlu untuk memasang, setidaknya menu navigasi untuk ke post sebelumnya atau ke post selanjutnya.
 
 
-# Penyelesaian Masalah
+## Penyelesaian Masalah
 
 Saya akan membuat sebuah file bernama `page-navigation.html` di dalam direktori `_includes`.
 
@@ -85,7 +85,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [blog.webjeda.com/related-post-jekyll/](https://blog.webjeda.com/related-post-jekyll/) \
    Diakses tanggal: 2020-04-18

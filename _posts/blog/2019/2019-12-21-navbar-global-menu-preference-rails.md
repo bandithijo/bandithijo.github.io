@@ -10,12 +10,12 @@ tags: ["rails"]
 description: "Catatan kali ini mengenai cara membuat navbar yang memiliki menu yang pilihannya hanya terdapat pada controller tertentu, namun menjadi dapat digunakan pada semua halaman."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 2.6.3` `rails 5.2.4` `postgresql 11.5`
 
 
-# Prakata
+## Prakata
 
 Sebenarnya saya kurang memahami harus memberikan judul seperti apa untuk catatan kali ini.
 
@@ -36,7 +36,7 @@ Jadi, dropdown menu tersebut mempunyai fungsi seperti ini:
 3. Apabila guest melakukan registrasi, maka language atau currency yang mereka pilih juga akan ikut tersimpan.
 
 
-# Permasalahan
+## Permasalahan
 
 Awalnya saya berfikir, "Bagaimana bisa mengganti language dan currency yang merupakan field atau entitas dari tabel users pada setiap halaman?"
 
@@ -51,12 +51,12 @@ Bagi Junior Rails Developer seperti saya yang masih anak kemarin sore, ini merup
 Saking bersemangatnya, rasanya seperti ada tablet Redoxon yang di larutkan di dalam dada. Wkwkwk
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Sebagai sekenario, saya sudah memiliki tabel `users` dengan field `locales:string` untuk menyimpan data language dan field `rate:string` untuk menyimpan data currency.
 
 
-## Schema
+### Schema
 
 ```ruby
 !filename: db/schema.rb
@@ -73,7 +73,7 @@ end
 ```
 
 
-## Controller
+### Controller
 
 Karena `locale` dan `rate` terdapat pada tabel `users` maka kita akan menambahkan kedua controller tersebut untuk users.
 
@@ -233,7 +233,7 @@ http://localhost:3000/users?locale=en
 Nah, pasti akan lebih memilih url form yang atas.
 
 
-## Route
+### Route
 
 Kemudian pada bagian routing, tinggal mengikuti controller.
 
@@ -268,7 +268,7 @@ Karena Admin tidak memerlukan url form yang bagus, maka saya keluarkan saja dari
 Selanjutnya, tinggal membuat view template.
 
 
-## View
+### View
 
 Seperti biasa, stylesheet pada catatan ini hanya sebagai contoh dan merupakan *dummy*. Jadi, akan tidak sesuai dengan yang ada pada ilustrasi gambar.
 
@@ -546,7 +546,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [guides.rubyonrails.org/routing.html#controller-namespaces-and-routing](https://guides.rubyonrails.org/routing.html#controller-namespaces-and-routing) \
    Diakses tanggal: 2019-12-21

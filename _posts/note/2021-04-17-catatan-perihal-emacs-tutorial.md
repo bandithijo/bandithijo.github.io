@@ -10,7 +10,7 @@ tags: ["emacs"]
 description: "Catatan ini merupakan snippets atau cheatsheet atau dapat pula disebut sebagai rangkuman untuk keyboard shortcut yang dijelaskan di dalam Emacs Tutorial."
 ---
 
-# Prakata
+## Prakata
 
 Buat teman-teman yang baru pertama kali mencoba Emacs dan sedang belajar Emacs Tutorial, mudah-mudahan catatan ini dapat membantu untuk mengingat kembali mapping keyboard apa saja / keyboard shortcut apa saja yang telah dijelaskan.
 
@@ -19,10 +19,10 @@ Karena Emacs Tutorial berbentuk narasi, sehingga tidak mudah bagi saya untuk men
 Namun, demikian, saya teteap ingin menuliskan catatan perihal Emacs Tutorial di sini. Mudah-mudahan dapat mempermudah teman-teman apabila mengalami kesulitan yang sama.
 
 
-# Keyboard Shortcut
+## Keyboard Shortcut
 
 
-## Penyamaan Persepsi
+### Penyamaan Persepsi
 
 CONTROL atau CTRL atau CTL, diwakilkan sebagai <kbd>C</kbd>.
 
@@ -45,7 +45,7 @@ DELETE, akan diwakilkan sebagai <kbd>&lt;DEL&gt;</kbd>.
 RETURN atau ENTER, akan diwakilkan sebagai <kbd>&lt;RET&gt;</kbd>.
 
 
-## Keluar dari Emacs Tutorial
+### Keluar dari Emacs Tutorial
 
 Dapat pula digunakan sebagai "kill buffer", karena buffer yang sedang terbuka adalah Emacs Tutorial.
 
@@ -56,12 +56,12 @@ Command ini akan memberikan kita pertanyaan,
 Apakah ingin menyimpan posisi cursor di Tutorial? Jawab saja **y**.
 
 
-## Mengakhiri Emacs Session
+### Mengakhiri Emacs Session
 
 <kbd>C-x</kbd> <kbd>C-c</kbd>
 
 
-## View Next/Previous Screen
+### View Next/Previous Screen
 
 **Next screen / Page down**
 
@@ -72,7 +72,7 @@ Apakah ingin menyimpan posisi cursor di Tutorial? Jawab saja **y**.
 <kbd>M-v</kbd>
 
 
-## Positioning Cursor on Center/Top/Bottom
+### Positioning Cursor on Center/Top/Bottom
 
 Kita dapat melakukan scrolling pada screen tanpa memindahkan cursor berfokus pada baris tertentu.
 
@@ -81,10 +81,10 @@ Kita dapat melakukan scrolling pada screen tanpa memindahkan cursor berfokus pad
 Akan dimulai dari tengah screen, kemudian atas, lalu bawah.
 
 
-## Basic Cursor Control (Basic Movement)
+### Basic Cursor Control (Basic Movement)
 
 
-### Memindahkan cursor per character
+#### Memindahkan cursor per character
 
 ```
                       Previous line, C-p
@@ -113,7 +113,7 @@ Backward, C-b .... Current cursor position .... Forward, C-f
 <kbd>C-p</kbd>
 
 
-### Memindahkan cursor perkata
+#### Memindahkan cursor perkata
 
 **Forward 1 word**
 
@@ -124,41 +124,41 @@ Backward, C-b .... Current cursor position .... Forward, C-f
 <kbd>M-b</kbd>
 
 
-### Memindahkan cursor ke awal baris
+#### Memindahkan cursor ke awal baris
 
 <kbd>C-a</kbd>
 
 
-### Memindahkan cursor ke akhir baris
+#### Memindahkan cursor ke akhir baris
 
 <kbd>C-e</kbd>
 
 
-### Memindahkan cursor ke awal kalimat
+#### Memindahkan cursor ke awal kalimat
 
 <kbd>M-a</kbd>
 
 Dapat diteruskan untuk berpindah ke kalimat selanjutnya.
 
 
-### Memindahkan cursor ke akhir kalimat
+#### Memindahkan cursor ke akhir kalimat
 
 <kbd>M-e</kbd>
 
 Dapat diteruskan untuk berpindah ke kalimat sebelumnya.
 
 
-### Memindahkan cursor ke baris pertama
+#### Memindahkan cursor ke baris pertama
 
 <kbd>M-&lt;</kbd>
 
 
-### Memindahkan cursor ke baris terakhir
+#### Memindahkan cursor ke baris terakhir
 
 <kbd>M-&gt;</kbd>
 
 
-### Jump to
+#### Jump to
 
 Perintah-perintah movement di atas, juga dapat kita berikan argument berupa angka.
 
@@ -179,7 +179,7 @@ Misal, kita ingin bergerak 20 character ke depan.
 <kbd>M-20</kbd> <kbd>C-f</kbd>
 
 
-## Jika Emacs Berhenti Merespon
+### Jika Emacs Berhenti Merespon
 
 Beberapa hal yang dapat menyebabkan Emacs berhenti merespon:
 
@@ -192,17 +192,17 @@ Dapat kita atasi dengan,
 <kbd>C-g</kbd>
 
 
-## Disabled Commands
+### Disabled Commands
 
 <kbd>C-g</kbd>
 
 Pda command display mode, Emacs akan menampilkan **Quit**.
 
 
-## Manipulation Windows
+### Manipulation Windows
 
 
-### Delete other windows
+#### Delete other windows
 
 Saya asumsikan sebagai *maximize current focused selected window*.
 
@@ -211,10 +211,10 @@ Saya asumsikan sebagai *maximize current focused selected window*.
 Command ini akan membuat current focuses selected window akan menjadi maximize.
 
 
-## Inserting
+### Inserting
 
 
-### Insert repeating character with repeat count
+#### Insert repeating character with repeat count
 
 Sama sepertin repeat count pada movement, kita dapat menggunakannya untuk memasukkan karakter sejumlah **n**.
 
@@ -229,35 +229,35 @@ Maka, hasilnya akan menjadi,
 ```
 
 
-## Deleting
+### Deleting
 
 
-### Delete 1 karakter di depan cursor
+#### Delete 1 karakter di depan cursor
 
 <kbd>C-d</kbd>
 
 
-### Delete 1 kata sebelum cursor
+#### Delete 1 kata sebelum cursor
 
 <kbd>M-&lt;DEL&gt;</kbd>
 
 
-### Delete 1 kata setelah cursor
+#### Delete 1 kata setelah cursor
 
 <kbd>M-d</kbd>
 
 
-### Hapus seluruh karakter mulai dari posisi cursor sampai akhir baris
+#### Hapus seluruh karakter mulai dari posisi cursor sampai akhir baris
 
 <kbd>C-k</kbd>
 
 
-### Hapus 1 paragraf mulai dari posisi cursor sampai akhir paragraph
+#### Hapus 1 paragraf mulai dari posisi cursor sampai akhir paragraph
 
 <kbd>M-k</kbd>
 
 
-## Text Selection
+### Text Selection
 
 Akan melakukan selection dimulai dari posisi cursor berada.
 

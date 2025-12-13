@@ -10,7 +10,7 @@ tags: ["barrier"]
 description: "Mungkin gak sih mengoperasikan banyak komputer hanya dengan satu keyboard dan mouse? Sangat mungkin! Kita dapat menggunakan tools bernama Barrier. Barrier ini mirip dengan aplikasi berbayar Synergy. Kita dapat membuat 1 komputer menjadi server dan komputer-komputer lain sebagai client. Dengan begini, kita dapat mengontrol kursor dan keyboard hanya dari komputer server."
 ---
 
-# Prakata
+## Prakata
 
 Mungkin teman-teman pernah dihadapkan pada situasi di mana, di depan kita, terdapat banyak komputer maupun laptop, yang mungkin bisa memiliki sistem operasi yang sama, maupun berbeda.
 
@@ -29,19 +29,19 @@ Synergy adalah aplikasi pembantu yang didevelop oleh Symless, yang dapat kita gu
 Synergy dapat dioperasikan pada sistem operasi macOS, Microsoft Windows, dan GNU/Linux. Cukup memerlukan jaringan Ethernet atau WiFi dan **tanpa memerlukan hardware tambahan**.
 
 
-# Permasalahan
+## Permasalahan
 
 Sayangnya, Synergy tidak memiliki versi trial. Yang mengizinkan kita untuk terlebih dahulu mencoba. Namun, Synergy menjamin kalau aplikasi ini akan langsung berjalan dengan baik.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Lantas, baru-baru saja, saya menemukan alternatif dari Synergy namun bersifat open source.
 
 **Barrier** adalah hasil *forked* dari *codebase* Synergy veri 1.9.[<sup>2</sup>](#referensi)
 
 
-# Instalasi
+## Instalasi
 
 Proses instalasinya juga cukup mudah.
 
@@ -112,7 +112,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [symless.com/synergy](https://symless.com/synergy) \
    Diakses tanggal: 2020-01-05

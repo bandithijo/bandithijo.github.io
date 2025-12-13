@@ -10,7 +10,7 @@ tags: ["artix linux", "openrc"]
 description: "Sedikit catatan-catatan kecil dalam memanajemen service dengan OpenRC. Mungkin cukup membantu untuk teman-teman yang baru bermigrasi ke init system OpenRC."
 ---
 
-# Latar Belakang
+## Latar Belakang
 
 Akhir Desember 2020, saya memigrasikan Arch Linux yang sudah saya pakai sejak April 2020 -- karena Maret 2020, saya bermigrasi ke FreeBSD -- ke Artix Linux OpenRC.
 
@@ -21,7 +21,7 @@ Menggunakan init system, selain **systemd** merupakan hal yang baru bagi saya. K
 Catatan kali ini saya ingin menyimpan bagaimana cara menggunakan OpenRC dalam memanajemen service.
 
 
-# Cara Penggunaan
+## Cara Penggunaan
 
 > INFO
 > 
@@ -36,7 +36,7 @@ Catatan kali ini saya ingin menyimpan bagaimana cara menggunakan OpenRC dalam me
 > ```
 
 
-## 1. Melihat Daftar Service yang Tersedia; RC-SERVICE(8)
+### 1. Melihat Daftar Service yang Tersedia; RC-SERVICE(8)
 
 ```
 NAME
@@ -98,7 +98,7 @@ wpa_supplicant
 ```
 
 
-## 2. Menambahkan Service ke runlevel; RC-UPDATE(8)
+### 2. Menambahkan Service ke runlevel; RC-UPDATE(8)
 
 ```
 NAME
@@ -198,7 +198,7 @@ Runlevel: default
 Tapi, statusnya masih **stopped**, kita akan jalankan di section selanjutnya.
 
 
-## 3. Menjalankan, Menghentikan, Merestart Service; RC-SERVICE(8)
+### 3. Menjalankan, Menghentikan, Merestart Service; RC-SERVICE(8)
 
 **Kok pakai `rc-service` lagi?**
 
@@ -209,7 +209,7 @@ Kalau pada systemd, proses ini mirip dengan **start**, **stop**, **reload**, **s
 **Start Service**
 
 ```
-$ sudo rc-service &lt;nama_service> start
+$ sudo rc-service <nama_service> start
 ```
 
 ```
@@ -258,7 +258,7 @@ sshd              | * Starting sshd ...                                       [ 
 **Status Service**
 
 ```
-$ sudo rc-service &lt;nama_service> status
+$ sudo rc-service <nama_service> status
 ```
 
 ```
@@ -276,7 +276,7 @@ atau,
 ```
 
 
-## 4. Menghapus Service dari runlevel; RC-UPDATE(8)
+### 4. Menghapus Service dari runlevel; RC-UPDATE(8)
 
 Untuk menghapus service dari runlevel, sangat mudah sekali.
 
@@ -299,7 +299,7 @@ $ sudo rc-update del sshd
 ```
 
 
-## 5. Melihat Service pada runlevel; RC-UPDATE(8)
+### 5. Melihat Service pada runlevel; RC-UPDATE(8)
 
 Kita dapat gunakan perintah ini untuk melihat service tertentu ada pada runlevel apa saja.
 
@@ -354,7 +354,7 @@ $ rc-update show default
 ```
 
 
-## 6. Melihat Service Status; RC-STATUS(8)
+### 6. Melihat Service Status; RC-STATUS(8)
 
 ```
 NAME
@@ -426,7 +426,7 @@ Dynamic Runlevel: manual
 Kalau ingin melihat service status dari semua runlevel, gunakan option `--all`.
 
 
-## 7. Direktori Config
+### 7. Direktori Config
 
 Untuk file-file konfigurasi dari init script, dapat dilihat pada direktori **/etc/conf.d/**
 
@@ -463,20 +463,20 @@ retry="SIGTERM/5/SIGTERM/5/SIGKILL/5"
 start_stop_daemon_args="--background --make-pidfile"
 
 depend() {
-	use logger net
-	provide dns
+ use logger net
+ provide dns
 }
 
 # start_pre() {
-# 	checkpath -q -d -m 0775 -o "${command_user}" /var/cache/"${RC_SVCNAME}"
-# 	checkpath -q -d -m 0775 -o "${command_user}" /var/log/"${RC_SVCNAME}"
+#  checkpath -q -d -m 0775 -o "${command_user}" /var/cache/"${RC_SVCNAME}"
+#  checkpath -q -d -m 0775 -o "${command_user}" /var/log/"${RC_SVCNAME}"
 # }
 ```
 
 Nah, teman-teman dapat melihat variabel-variabel pada file config tersebut digunakan pada init script.
 
 
-# Head to Head Table
+## Head to Head Table
 
 | systemd | OpenRC | Description |
 | :-- | :-- | :-- |
@@ -490,7 +490,7 @@ Nah, teman-teman dapat melihat variabel-variabel pada file config tersebut digun
 Sumber: [Arch Wiki: OpenRC - Usage](https://wiki.archlinux.org/index.php/OpenRC#Usage)
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -501,7 +501,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [Gentoo Wiki: OpenRC](https://wiki.gentoo.org/wiki/OpenRC) \
    Diakses tanggal: 2021-01-06

@@ -10,19 +10,19 @@ tags: ["rails", "pundit", "authorization"]
 description: "Catatan ini mengenai bagaimana cara membuat authorization dengan bantuan gem Pundit pada controller bertingkat, misal Authors::Articles. Author merupakan turunan dari User, karena User memiliki lebih dari satu user type. Tujuannya adalah untuk membatasi Author hanya dapat mengedit & menghapus Article miliknya saja."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 3.0.1` `rails 6.1.3.1`
 
 
-# Target
+## Target
 
 Membatasi antar Author untuk mengedit dan menghapus Article yang bukan miliknya.
 
 Untuk feature authorization tersebut, kita akan gunakan **Pundit** gem.
 
 
-# Sekenario
+## Sekenario
 
 Author merupakan turunan dari User dengan type "Author".
 
@@ -31,10 +31,10 @@ Kita ingin membuat feature administrasi untuk Author yang menampilkan semua daft
 Hanya Author pemilik Article yang dapat mengedit/menghapus Article yang ia miliki.
 
 
-# Eksekusi
+## Eksekusi
 
 
-## Pasang Pundit Gem
+### Pasang Pundit Gem
 
 Pasang **Pundit** pada Gemfile.
 
@@ -57,7 +57,7 @@ $ bundle install
 ```
 
 
-## Generate pundit:install
+### Generate pundit:install
 
 Jalankan generator untuk membuat konfigurasi awal.
 
@@ -89,7 +89,7 @@ Generator ini akan membuatkan direktori **app/policies** dan juga file bernama *
 ```
 
 
-## Include Pundit
+### Include Pundit
 
 Saya akan mengincludekan Pundit pada **application_controller** agar setiap controller turunan dapat menggunakan Pundit.
 
@@ -101,7 +101,7 @@ end
 ```
 
 
-## Define pundit_user
+### Define pundit_user
 
 Pundit menyediakan objek **current_user** sebagai instansiasi terhadap user yang sudah melakukan authentication.
 
@@ -170,7 +170,7 @@ end
 Baris ke 6-8, saya mendefinisikan **pundit_user** sebagai **current_author**.
 
 
-## Buat policy untuk Article
+### Buat policy untuk Article
 
 Karena yang ingin kita batasi adalah Article agar hanya Author si pemilik Article saja yang dapat memodifikasinya.
 
@@ -271,7 +271,7 @@ end
 ```
 
 
-## Authorize controller
+### Authorize controller
 
 Nah, kita telah mengatur policy untuk action edit, maka kita perlu memberikan authorization pada action edit di **articles_controller**.
 
@@ -296,7 +296,7 @@ Parameter **policy_class** ini sebenarnya adalah cara manual untuk mengarahkan f
 Saya menggunakannya hanya sebagai contoh siapa tahu kita mendapatkan kasus-kasus khusus, seperti nama Object dengan nama Controller atau Policy tidak sama.
 
 
-## Views Template
+### Views Template
 
 Selanjutnya, cara membatasi button atau link yang hanya dikhususkan untuk Author yang memiliki Article.
 
@@ -337,7 +337,7 @@ policy(Article).edit?
 Selesai.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -350,7 +350,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [github.com/varvet/pundit](https://github.com/varvet/pundit) \
    Diakses tanggal: 2021-04-09

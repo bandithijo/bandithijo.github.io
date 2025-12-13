@@ -13,17 +13,17 @@ description: "GNOME-ScreenShot adalah aplikasi untuk mengambil gambar layar moni
 ![Banner](https://s20.postimg.cc/yjw814lz1/banner_post_08.png)
 
 
-# Latar Belakang
+## Latar Belakang
 
 **GNOME-ScreenShot** adalah aplikasi untuk mengambil gambar layar monitor yang sudah tersedia secara *native* pada **GNOME** *desktop environment*. Saya sudah menggunakan aplikasi ini sejak masih GNOME versi 2. Saat ini saya sedang menggunakan **XFCE4**, namun saya kurang menyukai aplikasi *screenshot* milik XFCE4 karena terlalu sederhana (subjektif penulis).
 
 
-# Permasalahan
+## Permasalahan
 
 Saat mengambil *screenshot* menggunakan *shortcut* dengan kombinasi tombol pada keyboard. File gambar otomatis langsung diletakkan pada direktori **~/Pictures**. Tentunya hal ini sangat tidak menyenangkan buat saya, karena file tidak terorganisir sesuai tempatnya.
 
 
-# Solusi
+## Solusi
 
 Kita membutuhkan aplikasi bantuan untuk merubah konfigurasi, yang bernama [**dconf-editor**](https://www.archlinux.org/packages/extra/x86_64/dconf-editor/).
 
@@ -52,7 +52,7 @@ Pada contoh di atas, saya meletakkan hasil *screenshot* pada direktori `file:///
 *And we're redy to go !*
 
 
-# Referensi
+## Referensi
 
 1. [askubuntu.com/questions/114429/default-save-directory-for-gnome-screenshot](https://askubuntu.com/questions/114429/default-save-directory-for-gnome-screenshot) \
    Diakses tanggal: 2018-04-28

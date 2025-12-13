@@ -11,7 +11,7 @@ description: "Kamu punya web aplikasi yang dideploy di Heroku? Dan tarnyata zona
 ---
 
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Saya memiliki web aplikasi yang saya bangun dengan Rails menggunakan referensi waktu dengan cara seperti ini,
 
@@ -23,7 +23,7 @@ current_time = DateTime.now.strftime('%Y-%m-%d')
 Variable `current_time` tersebut yang akan saya jadikan referensi.
 
 
-# Permasalahan
+## Permasalahan
 
 **DateTime.now** tersebut akan sangat tergantung dari waktu mesin --waktu server.
 
@@ -42,7 +42,7 @@ Jadi kita cukup mendefinisikan zona waktu yang akan kita pakai. Maka web aplikas
 Semudah itu.
 
 
-# Caranya
+## Caranya
 
 Pada catatan ini, saya menggunakan zona waktu **Asia/Makassar**.
 
@@ -53,7 +53,7 @@ Pada catatan ini, saya menggunakan zona waktu **Asia/Makassar**.
 > Tools ini akan kita gunakan untuk berinteraksi dengan Heroku melalui Terminal. Benar-benar sangat memudahkan sekali.
 
 
-## Set TimeZone
+### Set TimeZone
 
 Buka Terminal emulator kalian dan jalankan,
 
@@ -71,7 +71,7 @@ TZ: Asia/Makassar
 Nah, berhasil.
 
 
-## Cek TimeZone
+### Cek TimeZone
 
 ```
 $ heroku config:get TZ
@@ -98,7 +98,7 @@ Mantap!
 Seharusnya, saat ini web aplikasi kita sudah menggunakan TimeZone yang kita definisikan.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -109,7 +109,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [dev.to/paulasantamaria/change-the-timezone-on-a-heroku-app-2b4](https://dev.to/paulasantamaria/change-the-timezone-on-a-heroku-app-2b4) \
    Diakses tanggal: 2021-02-06

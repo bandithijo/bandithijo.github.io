@@ -13,17 +13,17 @@ description: "Privacy adalah kata yang menjadi perhatian banyak pihak. Biasanya 
 ![Banner](https://s20.postimg.cc/40nbmxl8d/banner_post_15.png)
 
 
-# Pendahuluan
+## Pendahuluan
 
 Sepintas membaca judul dari tulisan ini memang rada-rada janggal. Disaat semua pengguna GNU/Linux ingin membuat *hardware* mereka dapat berfungsi, ini malah sebaliknya. Yaa terkadang memang ada hal-hal yang belum dapat kita mengerti saat ini dengan mudah. Menonaktifkan *webcam* ini erat kaitannya dengan *privacy*.
 
 *Privacy* adalah kata yang menjadi perhatian banyak pihak. Biasanya pengguna sistem operasi GNU/Linux juga cukup memperhatikan hal-hal seperti ini. Salah satu yang menjadi perhatian adalah informasi yang mengabarkan bahwa *malware* dapat dengan mudah mengakses penggunaan *webcam* yang terdapat di laptop kita. Kemungkinan seperti ini dapat terjadi pada laptop kita, tulisan kali ini akan mendokumentasikan bagaimana cara melakukan *disable* dan *enable* pada *webcam* pada tingkat *driver*.
 
 
-# Caranya
+## Caranya
 
 
-## Identifikasi Driver
+### Identifikasi Driver
 
 Pertama, kalian perlu mengetahui *webcam driver* menggunakan perintah di bawah ini.
 
@@ -44,7 +44,7 @@ usbcore             286702  5 uvcvideo,usbhid,xhci_pci,btusb,xhci_hcd
 Dari hasil di atas dapat diketahui bahwa **uvcvideo** adalah *webcam driver* yang saya gunakan.
 
 
-## Menonaktifkan Driver
+### Menonaktifkan Driver
 
 Selanjutnya, tinggal menonaktifkan driver **uvcvideo** dengan memasukkannya dalam daftar *blacklist*.
 
@@ -118,7 +118,7 @@ Saya sendiri belum tahu, apakah cara ini efektif dan benar dapat menangkal penyu
 > Mudah bukan ? ^_^
 
 
-# Referensi
+## Referensi
 
 1. [ostechnix.com/how-to-disable-built-in-webcam-in-ubuntu/](https://www.ostechnix.com/how-to-disable-built-in-webcam-in-ubuntu/) \
    Diakses tanggal: 2018-06-03

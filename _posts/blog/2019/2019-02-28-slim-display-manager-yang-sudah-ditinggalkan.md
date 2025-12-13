@@ -10,7 +10,7 @@ tags: ["slim"]
 description: "SLiM Display Manager termasuk display manager favorit yang banyak digunkan oleh para ricer. Karena sangat mudah untuk dimofifikasi. Catatan kali ini, saya ingin berbagi bagaimana cara saya dalam mengkonfigurasi SLiM."
 ---
 
-# Prakata
+## Prakata
 
 Mungkin sebagian dari teman-teman ada yang sudah pernah mencicipi distribusi sistem operasi GNU/Linux yang menggunakan SLiM display manager.
 
@@ -23,7 +23,7 @@ Dari informasi yang saya baca pada halaman [Arch Wiki/SLiM](https://wiki.archlin
 Pada halaman Arch Wiki tersebut juga kita disarankan untuk mempertimbangkan menggunakan Display Manager yang lain. Karena SLiM tidak secara penuh *support* dengan systemd, termasuk logind sessions.
 
 
-# Mengapa Tertarik dengan SLiM?
+## Mengapa Tertarik dengan SLiM?
 
 Sebenarnya sudah lama mencari-cari pengganti dari LightDM display manager. Saya merasa kurang fleksibel dalam mengkostumisasi sesuai preferensi sendiri. Belum lagi transisi antara verbose mode dari journalctl ke tampilan LightDM tidak begitu *smooth*.
 
@@ -38,14 +38,14 @@ Dengan selisih yang tidak terlampau jauh, tidak menutup kemungkinan LightDM akan
 Namun, saya tetap ingin mencoba SLiM. Karena rasa penasaran saya atas apa yang membuat SLiM masih menduduki peringkat pertama, padahal telah 5 tahun ditinggalkan.
 
 
-## Kelebihan dan Kekurangan SLiM
+### Kelebihan dan Kekurangan SLiM
 
 ![Gambar 3](https://i.postimg.cc/C1N5Z5SM/gambar-08.png)
 
 Gambar 3. Sumber: [Slant.co - SLiM Pros and Cons](https://www.slant.co/topics/2053/~best-linux-display-manager)
 
 
-# Pengecekan Paket
+## Pengecekan Paket
 
 Karena paket SLiM display manager ini termasuk paket yang sudah tidak lagi dimaintain oleh upstream developer, tentunya akan sangat penting untuk mengetahui apakah paket yang akan kita gunakan memiliki *bug reports*, *security reposts*, dll.
 
@@ -78,7 +78,7 @@ Kita juga dapat sekalian mengecek apakah paket `slim` ini memiliki *security iss
 Untuk teman-teman yang menggunakan distribusi selain Arch atau turunan Arch, silahkan menyesuaikan saja yaa.
 
 
-# Instalasi
+## Instalasi
 
 > PERHATIAN!
 > 
@@ -99,10 +99,10 @@ $ sudo pacman -S slim
 Untuk distribusi yang lain, silahkan menyesuaikan.
 
 
-# Konfigurasi
+## Konfigurasi
 
 
-## Jalankan Service SLiM
+### Jalankan Service SLiM
 
 Setelah memasang paket SLiM, kita perlu menjalankan `slim.service`.
 
@@ -119,7 +119,7 @@ $ sudo systemctl enable slim.service
 ```
 
 
-## Sessions
+### Sessions
 
 SLiM dapat secara otomatis mendeteksi daftar sessions yang terdapat pada direktori `/usr/share/xsessions/`.
 
@@ -152,7 +152,7 @@ Kedua cara di atas, pada dasarnya, kita akan berurusan dengan 2 file.
 Saya mulai dari cara pertama.
 
 
-### Menampilkan Pilihan Session pada saat Login
+#### Menampilkan Pilihan Session pada saat Login
 
 Edit file `/etc/slim.conf` dengan *text editor* favorit kalian.
 
@@ -196,7 +196,7 @@ Tujuannya agar inputan yang dipilih menggunakan <kbd>F1</kbd> akan dieksekusi.
 Kita dapat memilih session dengan menekan tombol <kbd>F1</kbd>.
 
 
-### Tidak Dapat Memilih Session pada saat Login
+#### Tidak Dapat Memilih Session pada saat Login
 
 Untuk Cara kedua ini, dapat pula kita sebut sebagai *automatic session*, karena kita tidak memilih session sendiri dengan menekan tombol <kbd>F1</kbd> seperti di atas. Melainkan, kita sudah terlebih dahulu mendefinisikan *default session* yang akan kita pergunakan.
 
@@ -232,7 +232,7 @@ $ vim ~/.xinitrc
 Ada dua cara yang saya tawarkan.
 
 
-#### Cara Sederhana
+##### Cara Sederhana
 
 ```bash
 !filename: $HOME/.xinitrc
@@ -248,7 +248,7 @@ exec i3
 Karena saya menggunakan i3wm sebagai *default session* saya, maka saya meng-*enable*-kan dengan menghapus tanda pagar `#`, seperti contoh di atas.
 
 
-#### Cara Keren
+##### Cara Keren
 
 > PERHATIAN!
 > 
@@ -281,7 +281,7 @@ Untuk mengganti *default session* yang ingin digunakan, ubah nilai dari *variabe
 ![Gambar 8](https://i.postimg.cc/yxs6sHRq/gambar-07.png)
 
 
-# System Sessions
+## System Sessions
 
 SLiM juga dapat mengakses *system sessions* seperti: reboot, shutdown, suspend, exit dan console.
 
@@ -307,7 +307,7 @@ console_cmd         /usr/bin/xterm -C -fg white -bg black +sb -T "Console login"
 **suspend**, secara default dalam keadaan tidak aktif.
 
 
-## Instalasi Themes
+### Instalasi Themes
 
 Instalasi themes pada SLiM display manager termasuk sangat mudah.
 
@@ -344,7 +344,7 @@ Secara garis besar proses instalasi dibagi dalam 2 tahap.
 2. Merubah nilai dari variabel `current_theme` pada file `/etc/slim.conf`
 
 
-### Copy Direktori Themes
+#### Copy Direktori Themes
 
 ```
 $ sudo cp -rvf &lt;dir_themes> /usr/share/slim/themes
@@ -372,7 +372,7 @@ drwxr-xr-x root root default
 Nah, kalau sudah ada, berarti sudah terinstall.
 
 
-### Menginisialisasi Nama Themes
+#### Menginisialisasi Nama Themes
 
 Apabila langkah copy direktori themes sudah dilakukan, selanjutnya tinggal mengganti nilai dari variabel `current_theme` pada file `/etc/slim.conf` yang tadinya bernilai `default` menjadi `<nama_theme>`.
 
@@ -394,7 +394,7 @@ current_theme        darky_solarized_dark_yellow
 ```
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Untuk diperhatikan, SLiM display manager tidak menggunakan `~/.profile` untuk mengambil data-data aplikasi atau PATH apa saja yang harus dijalankan saat sistem startup, melainkan menggunakan `~/.xinitrc`.
 
@@ -411,14 +411,14 @@ Mudah-mudahan dapat bermanfaat buat teman-teman.
 Terima kasih.
 
 
-# Terima Kasih
+## Terima Kasih
 
 Terima kasih, Bro **Harry Kurn**.
 
 ![Gambar 11](https://i.postimg.cc/xdSvWxK2/gambar-11.png)
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/index.php/SLiM](https://wiki.archlinux.org/index.php/SLiM) \
    Diakses tanggal: 2019-02-28

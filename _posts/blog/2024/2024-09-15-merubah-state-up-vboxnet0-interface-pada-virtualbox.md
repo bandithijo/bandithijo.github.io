@@ -10,7 +10,7 @@ tags: ["virtualbox"]
 description: "Ketika baru memasang Oracle VirtualBox di Arch Linux, saya tidak dapat terhubung dengan instance yang baru saya buat, padahal saya sudah menggunakan Host-only network adapter. Ternyata interface vboxnet0 belum diberikan permission untuk UP state."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 {{ page.description }}
 
@@ -22,7 +22,7 @@ description: "Ketika baru memasang Oracle VirtualBox di Arch Linux, saya tidak d
 Saya tidak tahu apakah problem ini dialami juga oleh distro lain atau tidak karena saya tidak menggunakan distro selain Arch Linux.
 
 
-# Solusi
+## Solusi
 
 Sata perlu melakukan set `vboxnet0` interface permission untuk dapat UP, sebelum saya dapat menggunakan dengan Host-only Network Adapter.
 
@@ -78,12 +78,12 @@ Sekarang, saya dapat melakukan ping ke instance IP address yang saya buat di Vir
 > Ini berarti, IP network rangenya (CIDR) adalah `192.168.57.1/24`.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Terima kasih sudah mampir yaa.
 
 
-# Referensi
+## Referensi
 
 1. bbs.archlinux.org: virtualbox can not UP the vboxnet0 interface \
    <https://bbs.archlinux.org/viewtopic.php?id=131711> \

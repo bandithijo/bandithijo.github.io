@@ -13,7 +13,7 @@ description: "Presentation Mode adalah mode dimana laptop kita tidak akan jatuh 
 ![Banner](https://s20.postimg.cc/5q63tl41p/banner_post_16.png)
 
 
-# Pendahuluan
+## Pendahuluan
 
 **Presentation Mode** pada **xfce4-power-manager**. Apa sih itu?
 
@@ -28,7 +28,7 @@ Gambar 1. xfce4-power-manager graphical user interface
 Sederhana saja jawabannya. Kita pasti selalu mencari cara untuk melakukan hal-hal yang rumit agar menjadi lebih praktis. Yaa, praktis.
 
 
-# Solusi
+## Solusi
 
 Coba jalankan perintah `xfconf-query` di Terminal.
 
@@ -201,7 +201,7 @@ alias presentationmode-off="xfconf-query -c xfce4-power-manager -p /xfce4-power-
 Saya rasa cukup seperti ini saja.
 
 
-# Referensi
+## Referensi
 
 1. [askubuntu.com/questions/407287/change-xfce4-power-manager-option-from-terminal/407298#407298](https://askubuntu.com/questions/407287/change-xfce4-power-manager-option-from-terminal/407298#407298) \
    Diakses tanggal: 2018-06-11

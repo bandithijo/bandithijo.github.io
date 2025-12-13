@@ -10,7 +10,7 @@ tags: ["jekyll", "liquid"]
 description: "Mengecualikan value tertentu dari sebuah data collection."
 ---
 
-# Sekenario Masalah
+## Sekenario Masalah
 
 Saya memiliki collection berupa daftar **dotfriends** `site.data.dotfriends` yang memiliki attribute:
 
@@ -55,12 +55,12 @@ Untuk menampilkan collection di atas, saya menggunakan cara seperti ini.
 Namun, Saya tidak ingin menampilkan nama saya pada collection **dotfriends** tersebut.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Nah, untuk mengecualikan (*exclude*) nama saya "Rizqi Nur Assyaufi" di dalam collection **site.data.dotfriends**.
 
 
-## 1. contains
+### 1. contains
 
 ```liquid
 !filename: _pages/daftar_dotfriends.html
@@ -77,7 +77,7 @@ Nah, untuk mengecualikan (*exclude*) nama saya "Rizqi Nur Assyaufi" di dalam col
 Baris ke 4, adalah negasi dari kondisi **if** (**unless**) untuk nama yang mengandung "Rizqi Nur Assyaufi". Kondisi inilah yang membuat nama saya tidak ikut ditampilkan.
 
 
-## 2. offset
+### 2. offset
 
 ```liquid
 !filename: _pages/daftar_dotfriends.html
@@ -113,7 +113,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [How can I exclude a specific Collection in "related-products.liquid"?](https://community.shopify.com/c/Shopify-Design/How-can-I-exclude-a-specific-Collection-in-quot-related-products/td-p/238708) \
    Diakses tanggal: 2020-07-21

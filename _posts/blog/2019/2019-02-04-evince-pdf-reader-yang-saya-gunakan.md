@@ -10,7 +10,7 @@ tags: ["evince"]
 description: "Saya adalah Gnome user sejak GNOME2. Sayangnya, laptop saya saat ini sudah tidak dapat menggunakan GNOME3. Namun, meski demikian, keuntungan dari GNU/Linux adalah kita bebas menggunakan komponen aplikasi yang ada di dalamnya. Evince adalah salah PDF reader yang menjadi default PDF reader di GNOME yang meski saat ini saya sudah menggunakan Window Manager, namun masih tetap saya gunakan. Apa alasannya? Simak catatan dan ulasannya pada artikel ini."
 ---
 
-# Prakata
+## Prakata
 
 PDF reader adalah salah satu aplikasi yang sudah menjadi kebutuhan saya selain Terminal dan Browser. Saya juga cukup sering menghabiskan waktu sembari membaca-baca *ebook* melalui aplikasi PDF reader.
 
@@ -27,7 +27,7 @@ Untuk dapat mendukung format PDF, Evince menggunakan *backend* **Poppler**. Popp
 Meskipun Evince saat ini lebih dikenal dengan **Document viewer**, namun penggunaan nama **evince** masih diterapkan dalam beberapa hal seperti: *excutable name* (`Exec=evince`), *nama paket*, dll.
 
 
-# Instalasi
+## Instalasi
 
 Untuk memasang **Evince**, biasaya sudah terdapat pada daftar paket-paket yang ada pada **Gnome Desktop**. Namun, kita dapat memasangnya secara independen.
 
@@ -49,12 +49,12 @@ $ yay -S evince-no-gnome
 ```
 
 
-# Fitur-fitur
+## Fitur-fitur
 
 Apa keunggulan dari Evince yang membuat saya menjadikan Evince sebagai PDF reader andalan?
 
 
-## User Interface yang Sederhana
+### User Interface yang Sederhana
 
 ![Gambar 1](https://i.postimg.cc/pX1kRpZp/gambar-01.png)
 
@@ -77,12 +77,12 @@ Gambar 4. Night Mode
 Gambar 5. Highlight (Membuat dan Menghapus)
 
 
-## Last Page Read
+### Last Page Read
 
 Evince akan menyimpan halaman terakhir yang kita baca. Sehingga memungkinkan saat kita buka file PDF tersebut, Evince akan menampilkan halaman dimana kita terkahir membaca.
 
 
-## Keyboard Shortcut yang Mudah
+### Keyboard Shortcut yang Mudah
 
 **Navigasi**
 
@@ -122,7 +122,7 @@ Pada area kertas, kita dapat menggunakan navigasi yang mirip seperti Vim.
 ![Gambar 6](https://i.postimg.cc/4x5RNvYX/gambar-06.png)
 
 
-# Tambahan Konfigurasi
+## Tambahan Konfigurasi
 
 Apabila teman-teman ingin mengatur konfigurasi default Evince dapat menggunakan aplikasi `dconf-editor`.
 
@@ -144,7 +144,7 @@ Di dalam sini terdapat beberapa konfigurasi *default* yang bisa kita atur seprti
 Maksud dari "*default*" di sini adalah konfigurasi yang akan diterapkan kepada Evince saat pertama kali di jalankan.
 
 
-# Autoupdate Konten
+## Autoupdate Konten
 
 Apabila teman-teman berurusan dengan edit-mengedit file PDF, misalkan seperti LaTeX yang kemudian dikonversi ke PDF menggunakan `pdflatex`. Maka setelah proses kompilasi `.tex` menjadi `.pdf` selesai, Evince akan langsung mengupdate isi dari file PDF tersebut secara otomatis.
 
@@ -153,14 +153,14 @@ Apabila teman-teman berurusan dengan edit-mengedit file PDF, misalkan seperti La
 Gambar 7. Vim (kiri) sebagai LaTeX editor dengan Evince (kanan)
 
 
-# Kekurangan
+## Kekurangan
 
 Kekurangan yang sampai saat ini masih saya rasakan adalah, pada sistem saya, Evince masih belum dapat digunakan untuk *push to print* (ngeprint langsung dari Evince, <kbd>CTRL</kbd>+<kbd>P</kbd>) -- Print Settings Window terbuka, namun tidak berdampak apa-apa saat kita menekan tombol print.
 
 Untuk mengakali ini, saya biasa membuka PDF di Firefox, kemudian baru memanfaatkan fitur print dari PDF reader yang dimiliki oleh Firefox.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Apabila dari teman-teman mempunyai PDF reader favorit boleh banget direkomendasikan kepada saya. Tentunya yang memiliki fitur setidaknya sama atau ada fitur lebih yang tidak dimiliki oleh Evince.
 
@@ -169,7 +169,7 @@ Saya sudah pernah mencoba **Okular**, namun karena aplikasi Qt, saya kurang begi
 Sepertinya segini dulu, mudah-mudahan bermanfaat.
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/index.php/GNOME/Document_viewer](https://wiki.archlinux.org/index.php/GNOME/Document_viewer) \
    Diakses tanggal: 2019-02-04

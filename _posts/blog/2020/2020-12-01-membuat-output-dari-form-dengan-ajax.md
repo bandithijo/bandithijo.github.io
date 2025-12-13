@@ -10,7 +10,7 @@ tags: ["rails", "ajax"]
 description: "Membuat output hasil akan ditampilkan tanpa perlu merefresh halaman. Tentu saja di Ruby on Rails juga dapat mengimplementasikan ini. Kita dapat menggunakan AJAX."
 ---
 
-# Latar Belakang
+## Latar Belakang
 
 Tujuannya menggunakan AJAX untuk menampilkan hasil tanpa perlu mereload tempate berulang kali. Cukup sekali panggil dan yang berubah adalah pada bagian hasilnya saja.
 
@@ -129,7 +129,7 @@ http://localhost:3000/search_stock?stock=GOOG&button=
 Nah, pada catatan kali ini, saya akan membuat template dirender sekali saja dan hanya pada bagian yang menampilkan hasil pencarian yang dirender berkali-kali.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Pertama-tama, saya akan merubah output di stocks_controller pada action search menjadi format Javascript.
 
@@ -237,7 +237,7 @@ Gambar 2. Hasil jadinya
 Kalau diperhatikan pada bagian address bar, alamat tidak berubah. Karena kita tidak merender template lagi untuk menampilkan hasil, namun hanya merubah bagian yang memiliki `<div id=results></div>`.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 

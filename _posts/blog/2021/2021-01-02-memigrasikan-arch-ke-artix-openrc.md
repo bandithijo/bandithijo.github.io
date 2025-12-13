@@ -10,7 +10,7 @@ tags: ["arch linux", "artix linux"]
 description: "Saya sudah hampir menyerah dengan ThinkPad X61, si laptop tua produksi tahun 2007 silam yang menggunakan Arch Linux dengan systemd yang terkadang temperature CPU sudah sering mencapai rata-rata 70-80°C. Hingga akhirnya saya memigrasikan ke Artix Linux dengan OpenRC. Ternyata sangat signifikan perbedaan temperaturenya. Lebih adem!"
 ---
 
-# Latar Belakang
+## Latar Belakang
 
 Saat saya pertama kali bermigrasi dari macOS dan memutuskan untuk menggunakan GNU/Linux saya pikir tidak ada kontroversi yang terjadi beberapa tahun terakhir. Karena, sejak 2010 saya tidak lagi mengikuti perkembangan dunia GNU/Linux.
 
@@ -33,7 +33,7 @@ Maka, Desember 2020 ini saya mulai dengan bermigrasi ke Artix OpenRC langsung da
 Berikut ini adalah catatan yang saya simpulkan dari [Artix Wiki: Migration](https://wiki.artixlinux.org/Main/Migration).
 
 
-# Tahapan Migrasi
+## Tahapan Migrasi
 
 > PERHATIAN!
 > 
@@ -44,7 +44,7 @@ Berikut ini adalah catatan yang saya simpulkan dari [Artix Wiki: Migration](http
 > Apabila kalian mengikuti catatan ini, berarti kalian **telah menyetujui** bahwa **segala bentuk risiko atas masalah** yang terjadi karena mengikuti catatan ini, adalah **tanggung jawab kalian sepenuhnya**.
 > 
 > Happy Hacking!
-
+> 
 > PERHATIAN!
 > 
 > **Semua perintah di bawah, harus dijalankan sebagai root**.
@@ -60,7 +60,7 @@ Berikut ini adalah catatan yang saya simpulkan dari [Artix Wiki: Migration](http
 > ```
 
 
-## 1. Mempersiapkan pacman.conf, repositori dan mirrorlist
+### 1. Mempersiapkan pacman.conf, repositori dan mirrorlist
 
 Kita akan memodifikasi file **pacman.conf** dan juga **mirrorlist**.
 
@@ -122,7 +122,7 @@ Tujuannya sebagai bakcup, apabila ditengah-tengah proses akan ada command yang m
 Oke, tahapan persiapan file pacman.conf dan mirrorlist dari Artix Linux telah selesai.
 
 
-## 2. Bersihkan Package Cache
+### 2. Bersihkan Package Cache
 
 Kita perlu membersihkan semua cache, karena beberapa package yang dimiliki oleh Artix Linux memiliki signature yang berbeda, kondisi ini tentu saja akan menyebabkan pacman memberikan pesan error atau warning.
 
@@ -133,7 +133,7 @@ $ pacman -Scc && pacman -Syy
 ```
 
 
-## 3. Lemahkan Tingkat Keamanan dari Pacman (Sementara)
+### 3. Lemahkan Tingkat Keamanan dari Pacman (Sementara)
 
 Untuk menginstall package `artix-keyring`, kita perlu untuk melemahkan tingkat keamanan yang dimiliki oleh Pacman untuk sementara, hanya selama proses mendaftarkan **master key**.
 
@@ -154,7 +154,7 @@ SigLevel    = Never
 ```
 
 
-## 4. Install Artix PGP Keyring
+### 4. Install Artix PGP Keyring
 
 Untuk menginstall `artix-keyring`, kita harus mendaftarkan **master key** nya secara manual.
 
@@ -171,7 +171,7 @@ Untuk menginstall `artix-keyring`, kita harus mendaftarkan **master key** nya se
 ```
 
 
-## 5. Pulihkan Kembali Tingkat Keamanan dari Pacman
+### 5. Pulihkan Kembali Tingkat Keamanan dari Pacman
 
 Pulihkan kembali tingkat keamanan dari Pacman, atau kita akan benar-benar lupa.
 
@@ -191,7 +191,7 @@ SigLevel    = Required DatabaseOptional
 ```
 
 
-## 6. Backup Daftar Daemon yang sedang Aktif
+### 6. Backup Daftar Daemon yang sedang Aktif
 
 Mungkin teman-teman perlu untuk menyimpan daftar-daftar service daemon yang sedang aktif, agar setelah proses instalasi selesai, kita dapat memasangnya kembali satu-persatu.
 
@@ -204,7 +204,7 @@ Saya memilih menyimpannya di `/root/daemon.list`.
 Oke, sekarang kita telah siap untuk melakukan instalasi dari komponen-komponen Artix Linux, serta init script pengganti systemd.
 
 
-## 7. Download Artix Packages
+### 7. Download Artix Packages
 
 Kita akan mengunduh package `base` dan `base-devel` termasuk paket-paket pendukung untuk init yang baru.
 
@@ -238,7 +238,7 @@ Total Download Size:  165.86 MiB
 > Kalau ditengah proses tiba-tiba internet kita mati, maka ulangi dengan menjalankan kembali command di atas.
 
 
-## 8. Hapus systemd
+### 8. Hapus systemd
 
 Setelah kita selesai mengunduh dan mempersiapkan init pengganti, dalam hal ini adalah OpenRC, kita siap untuk mengirim systemd dan keluarganya untuk dilupakan.
 
@@ -274,7 +274,7 @@ Kembalikan kembali file **mirrorlist** yang terhapus diakibatkan oleh proses di 
 ```
 
 
-## 9. Install OpenRC Init System
+### 9. Install OpenRC Init System
 
 Sekarang saatnya memasang paket `base`, `base-devel`, dan paket-paket OpenRC init yang sebelumnya kita telah download dengan option `pacman -Sw` di atas.
 
@@ -328,7 +328,7 @@ Nah, mirrorlist telah pulih, selanjutnya jalankan perintah di bawah untuk memasa
 Tunggu prosesnya hingga selesai.
 
 
-## 10. Reinstall Paket-paket dari Arch Repositori
+### 10. Reinstall Paket-paket dari Arch Repositori
 
 Pertama-tama, pastikan locale yang kita gunakan adalah **C**.
 
@@ -357,7 +357,7 @@ Satu persatu secara urut.
 Tunggu prosesnya hingga selesai.
 
 
-## 11. Pasang init Scripts
+### 11. Pasang init Scripts
 
 Kita akan memasang init scripts untuk menggantikan systemd init script.
 
@@ -374,7 +374,7 @@ Kita akan memasang init scripts untuk menggantikan systemd init script.
 > Kalau masih ada yang terlewatkan dan belum ingat, kira-kira init apa saja yang kita perlukan, kita dapat memasangnya nanti seiring kita gunakan.
 
 
-## 12. Enable Services
+### 12. Enable Services
 
 Berdasarkan init scripts yang telah kita install pada langkah 11, kita akan mengenablekannya, agar dijalankan saat sistem startup.
 
@@ -401,10 +401,10 @@ Oh yaa, khusus untuk OpenRC init, kita perlu mengaktifkan **udev** dan **sysinit
 ```
 
 
-## 13. Konfigurasi Networking
+### 13. Konfigurasi Networking
 
 
-### Traditional Network Interface Namespace
+#### Traditional Network Interface Namespace
 
 Saya rasa, kita perlu untuk mengembalikan network interface namespace menjadi bentuk *traditional network interface namespace*.
 
@@ -429,7 +429,7 @@ GRUB_CMDLINE_LINUX="net.ifnames=0"
 ```
 
 
-### Enable eth0 Interface on Boot
+#### Enable eth0 Interface on Boot
 
 Untuk yang menggunakan ehternet, saya pikir perlu untuk mengjalankan langkah ini.
 
@@ -490,7 +490,7 @@ Lalu, pasang paket **netifrc**.
 Untuk referensi lebih lanjut, teman-teman bisa juga membaca [**Gnome Wiki: Netifrc**](https://wiki.gentoo.org/wiki/Netifrc).
 
 
-## 14. LVM Setup
+### 14. LVM Setup
 
 Saya tidak menggunakan LVM, jadi saya tidak menjalankan langkah ini.
 
@@ -511,7 +511,7 @@ Tinggal kalian enable-kan saja.
 ```
 
 
-## 15. Remove More systemd Cruft
+### 15. Remove More systemd Cruft
 
 Kita juga dapat menghapus beberapa script yang digunakan oleh systemd.
 
@@ -524,14 +524,14 @@ Kita juga dapat menghapus beberapa script yang digunakan oleh systemd.
 ```
 
 
-## 16. Update Bootloader dan Kernel initramfs
+### 16. Update Bootloader dan Kernel initramfs
 
 Pada tahapan-tahapan sebelumnya, kita telah menginstall kembali **mkinitcpio** dan **grub**.
 
 Maka, sebaiknya kita harus mengkonfigurasi ulang.
 
 
-### Kernel initramfs
+#### Kernel initramfs
 
 Backup file **mkinitcpio.conf** yang lama.
 
@@ -579,7 +579,7 @@ Atau, kalau teman-teman memiliki banyak kernel, gunakan option `-P`.
 Agar lebih praktis untuk me-recreate semua kernel initramfs.
 
 
-### GRUB
+#### GRUB
 
 Backup file **/etc/default/grub** yang lama.
 
@@ -619,7 +619,7 @@ Kalau sudah jagan lupa diupdate.
 ```
 
 
-## 17. Reinstall GRUB
+### 17. Reinstall GRUB
 
 Untuk **UEFI**.
 
@@ -652,7 +652,7 @@ Ganti **sdX** dengan disk name yang teman-teman miliki.
 > ```
 
 
-## 18. Reboot
+### 18. Reboot
 
 Kita tidak lagi dapat melakukan reboot dengna cara yang biasa (cara systemd).
 
@@ -684,7 +684,7 @@ Setelah reboot, kita sudah akan berada di Artix.
 Good luck!
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -695,7 +695,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [wiki.artixlinux.org/Main/Migration](https://wiki.artixlinux.org/Main/Migration) \
    Diakses tanggal: 2021-01-02

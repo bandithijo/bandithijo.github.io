@@ -10,24 +10,24 @@ tags: ["zsh", "zgen"]
 description: "Z Shell juga memiliki plugin-plugin yang dapat kita manfaatkan untuk menambah fitur yang ingin kita gunakan. Untuk memanajemen plugin-plugin tersebut, saya memilih untuk menggunakan plugin manager yang bernama Zgen."
 ---
 
-# Prakata
+## Prakata
 
 Sejak menggunakan macOS (dulunya OSX), saya sudah mengenal ZSH shell dalam keseharian menggunakan Terminal. Saat itu kira-kira sekitar tahun 2014. Namun, baru sekarang saya sadari ternyata ZSH juga memiliki *plugin manger*.
 
 Berawal dari keinginan saya untuk menggunakan ZSH theme yang simpel, kemudian [Nanda Okitavera](https://okitavera.me/) mengenalkan ZSH theme bernama [**subnixr/minimal**](https://github.com/subnixr/minimal). Proses instalasi ZSH theme ini menggunakan Zgen atau Antigen. Dari sinilah awal perkenalan saya dengan Zgen -- *A lightweight plugin manager for Zsh inspired by Antigen*.
 
 
-# Alasan Menggunakan Zgen
+## Alasan Menggunakan Zgen
 
 Seperti namanya, *plugin manager*, tentunya berguna untuk memanajemen plugin. Mungkin teman-teman yang menggunakan Vim *text editor* akan langsung memahami, bahwa keberadaan *plugin manager* sangat memudahkan kita membongkar-pasang Vim plugin yang ingin atau tidak kita gunakan. Semudah memanajemen plugins/extensions pada *text editor* GUI seperti VSCode.
 
 Penjelasan mengenai **Apa itu Zgen?** dapat dibaca sendiri pada halaman GitHub dari Zgen, [di sini](https://github.com/tarjoilija/zgen).
 
 
-# Instalasi
+## Instalasi
 
 
-## Instalasi Zgen
+### Instalasi Zgen
 
 1. Backup `.zshrc`.
 
@@ -66,7 +66,7 @@ Penjelasan mengenai **Apa itu Zgen?** dapat dibaca sendiri pada halaman GitHub d
    Selanjutnya, pemasangan `oh-my-zsh` sebagai plugin.
 
 
-## Instalasi OH-MY-ZSH
+### Instalasi OH-MY-ZSH
 
 1. Tambahkan di bagian bawah atau setelah baris kode `# load zgen` di atas.
 
@@ -145,7 +145,7 @@ Penjelasan mengenai **Apa itu Zgen?** dapat dibaca sendiri pada halaman GitHub d
    ```
 
 
-# Hasilnya
+## Hasilnya
 
 Secara keseluruhan, isi dari kesemua komponan di atas yang ada di dalam file `~/.zshrc` saya akan seperti ini.
 
@@ -219,7 +219,7 @@ Untuk melihat isi dari `~/.zshrc` lebih lengkap, silahkan melihat pada repositor
 > Ini juga hanya asumsi saya saja. Untuk mengantisipasi. Pada kenyataannya juga belum teruji. Karena selama ini, belum pernah menemui kendala dengan **minimal** theme.
 
 
-# Reset Konfigurasi
+## Reset Konfigurasi
 
 Setelah menambahkan atau menghapus plugin, jangan lupa untuk melakukan perintah *reset*.
 
@@ -244,10 +244,10 @@ Creating a zgen save
 Selesai.
 
 
-# Troubleshoting
+## Troubleshoting
 
 
-## Perintah Terulang pada Output
+### Perintah Terulang pada Output
 
 **Maret 16, 2019**
 
@@ -317,7 +317,7 @@ Dengan begini permasalahan "Perintah Terulang pada Output" tidak terjadi lagi.
 Terima kasih untuk **Karen Kishou @snowsu**.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Tulisan ini bukan merupakan tulisan tandingan dari dokumentasi resmi yang ditulis oleh developer dari Zgen, melainkan hanya sebagai ulasan mengenai bagaimana saya dalam menggunakan dan mengkonfigurasi Zgen ke dalam sistem yang saya miliki.
 
@@ -326,7 +326,7 @@ Apabila terdapat kekeliruan atau untuk penjelasan lebih detail, silahkan merujuk
 Sepertinya ini saja. Mudah-mudahan dapat bermanfaat untuk teman-teman.
 
 
-# Referensi
+## Referensi
 
 1. [github.com/tarjoilija/zgen](https://github.com/tarjoilija/zgen) \
    Diakses tanggal: 2019-02-18

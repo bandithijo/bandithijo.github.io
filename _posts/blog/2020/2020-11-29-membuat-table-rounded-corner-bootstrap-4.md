@@ -10,7 +10,7 @@ tags: ["bootstrap", "css", "html"]
 description: "Hal yang masih menjadi misteri buat saya saat menggunakan Bootstrap adalah, hampir semua elemen seperti button, input field, card, alerts, dan lain-lain, sudah menggunakan rounded corner. Tapi kenapa tabel masih belum? Catatan kali ini adalah cara yang saya lakukan untuk membuat Bootstrap tabel memiliki rounded corner."
 ---
 
-# Latar Belakang
+## Latar Belakang
 
 Kalau teman-teman menggunakan Bootstrap sebagai CSS Framework--terkhusus Bootstrap 4--pasti akan mendapatkan table dengan bagian corner yang bersiku.
 
@@ -38,14 +38,14 @@ Kalau teman-teman menggunakan Bootstrap sebagai CSS Framework--terkhusus Bootstr
 ```
 
 
-# Masalah
+## Masalah
 
 Saya ingin memodifikasi agar tampilan dari masing-masing corner dari tabel memiliki tampilan yang rounded.
 
 Namun, Bootstrap 4 tidak menyediakan class agar user dapat membuat table dengan corner yang rounded.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Kita akan mengoverride class table bawaan Bootstrap.
 
@@ -150,7 +150,7 @@ Dan beginilah hasilnya setelah modifikasi di atas kita lakukan.
 ![Gambar 2](https://i.postimg.cc/NFWvZMcD/gambar-02.png)
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -165,7 +165,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [codepen.io/mlms13/pen/CGgLF](https://codepen.io/mlms13/pen/CGgLF) \
    Diakses tanggal: 2020-11-29

@@ -10,7 +10,7 @@ tags: ["vim"]
 description: "Ketika kita mengerjakan sebuah proyek, akan sangat membantu apabila cursor dapat tersimpan di posisi terakhir kita meninggalkannya. Apakah ini mungkin dilakukan oleh Vim? Tentu saja!"
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 Saya memerlukan fungsi dimana setiap file yang sudah pernah di buka, kemudian saya meninggalkan posisi cursor pada baris dan kolom tertentu, maka saat file tersebut dibuka kembali, saya menginginkan cursor masih berada pada posisi yang sama.
 
@@ -22,7 +22,7 @@ Hal ini dengan mudah dapat dilakukan oleh plugin bernama:
 *This is plugin for automatically restore one file's cursor position and folding information after restart vim.*
 
 
-# Permasalahan
+## Permasalahan
 
 Saya menggunakan plugin **lightline** untuk menghandle statusline.
 
@@ -35,7 +35,7 @@ Apabila terdapat dua buffer, maka statusline yang aktif hanya buffer yang terakh
 Maka dari itu saya memilih untuk tidak menggunakan kedua plugin tersebut. Karena fitur yang saya perlukan hanya "*restore cursor position*".
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Cukup tambahkan konfigurasi berikut ini pada `.vimrc`.
 
@@ -79,7 +79,7 @@ Gambar 2. Data disimpan pada ShaDa file di NeoVim (kiri), Data disimpan pada .vi
 > *The ShaDa file can be used to remember that information, which enables you to continue where you left off.  Its name is the abbreviation of **SHAred DAta** because it is used for sharing data between Neovim sessions*.
 
 
-# Referensi
+## Referensi
 
 1. [github.com/mhinz/vim-galore#restore-cursor-position-when-opening-file](https://github.com/mhinz/vim-galore#restore-cursor-position-when-opening-file) \
    Diakses tanggal: 2020-03-27

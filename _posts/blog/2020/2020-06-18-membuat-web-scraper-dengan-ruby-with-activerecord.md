@@ -17,24 +17,24 @@ description: "Web scraping adalah teknik mengambil atau mengekstrak sebagian dat
 > Penyalahgunaan data, bukan merupakan tanggung jawab dari penulis seutuhnya.
 
 
-# Prerequisite
+## Prerequisite
 
 `ruby 2.6.6` `rails 5.2.4` `postgresql 12.3`
 
 
-# Pendahuluan
+## Pendahuluan
 
 *Web scraping* adalah teknik mengambil atau mengekstrak sebagian data dari suatu website secara spesifik, spesifik dalam arti hanya data tertentu saja yang diambil. Script atau program untuk melakukan hal tersebut, disebut dengan *web scraper*.
 
 
-# Objektif
+## Objektif
 
 Catatan kali ini saya akan mendokumentasikan proses dalam membuat *web scraper* dengan tujuan untuk mengambil data nama-nama dosen yang ada pada website resmi Biro Akademik Universitas Mulia Balikpapan yang ada pada halaman [ini](http://baak.universitasmulia.ac.id/dosen/).
 
 Hasil yang akan di dapatkan dari script yang akan kita buat adalah daftar nama-nama dosen beserta nidn dalam bentuk tabel di dalam database PostgreSQL. Kita akan memasukkan data menggunakan Active Record yang merupakan salah satu komponen dari Ruby on Rails yang digunakan untuk menghandle model.
 
 
-# Penerapan
+## Penerapan
 
 Langkah awal adalah persiapkan direktori untuk proyek.
 
@@ -521,12 +521,12 @@ TOTAL DOSEN: 138 dosen
 Selesai!
 
 
-# Demonstrasi Video
+## Demonstrasi Video
 
 {% youtube 2zYDrEaj9EQ %}
 
 
-# Referensi
+## Referensi
 
 1. [It's Time To HTTParty!](https://blog.teamtreehouse.com/its-time-to-httparty) \
    Diakses tanggal: 2020-06-18

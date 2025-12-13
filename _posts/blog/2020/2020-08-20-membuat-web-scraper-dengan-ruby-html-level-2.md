@@ -17,7 +17,7 @@ description: "Catatan ini adalah modifikasi untuk tulisan sebelumnya, dimana scr
 > Penyalahgunaan data, bukan merupakan tanggung jawab dari penulis seutuhnya.
 
 
-# Sekenario Masalah
+## Sekenario Masalah
 
 Blog post ini adalah modifikasi dari post sebelumnya yang berjudul, ["Membuat Web Scraper dengan Ruby (Output: HTML)"](/blog/membuat-web-scraper-dengan-ruby-output-html).
 
@@ -36,7 +36,7 @@ Tampilan yang sekarang, tentunya tidak dapat difetch menggunakan CSS selector ya
 Lantas saya pun mencoba untuk memodifikasi script tersebut.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Tidak ada cara lain selain memodifikasi CSS selector.
 
@@ -67,12 +67,12 @@ Kemudian membuat 2 file baru yaitu `scaper.rb` dan `template.rb`.
 Oke, selanjutnya adalah isi dari ketiga file tersebut.
 
 
-# Ngoding Session
+## Ngoding Session
 
 Meskipun sebelumnya sudah pernah dilakukan, saya akan coba menulis kembali dari awal. Agar teman-teman yang baru mengikuti dari blog post ini tidak begitu kebingungan.
 
 
-## Initialisasi Gemfile
+### Initialisasi Gemfile
 
 Buat file dengan nama `Gemfile`. dan kita akan memasang gem yang diperlukan di dalam file ini.
 
@@ -94,7 +94,7 @@ $ bundle install
 Proses bundle install di atas akan membuat sebuah file baru bernama `Gemfile.lock` yang berisi daftar dependensi dari gem yang kita butuhkan --daftar requirements--.
 
 
-## main.rb
+### main.rb
 
 Selanjutnya adalah si tokoh utama.
 
@@ -143,7 +143,7 @@ main
 ```
 
 
-## scraper.rb
+### scraper.rb
 
 ```ruby
 !filename: scrapper.rb
@@ -200,7 +200,7 @@ end
 ```
 
 
-## template.rb
+### template.rb
 
 ```ruby
 !filename: template.rb
@@ -418,26 +418,26 @@ end
 ```
 
 
-# Hasilnya
+## Hasilnya
 
 ![Gambar 2](https://i.postimg.cc/qR48MVf0/gambar-02.gif)
 
 
-# Demo
+## Demo
 
 Untuk demonstrasi, teman-teman dapat mengunjungi alamat di bawah ini.
 
 [https://daftar-dosen-umb.vercel.app](https://daftar-dosen-umb.vercel.app)
 
 
-# Source
+## Source
 
 Bagi yang memerlukan source codenya, dapat mengunjungin alamat di bawah ini.
 
 [https://github.com/bandithijo/ruby-web-scraper-dosen](https://github.com/bandithijo/ruby-web-scraper-dosen)
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang saya tuliskan.
 
@@ -450,7 +450,7 @@ Terima kasih sudah mampir.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [It's Time To HTTParty!](https://blog.teamtreehouse.com/its-time-to-httparty) \
    Diakses tanggal: 2020-08-20

@@ -10,19 +10,19 @@ tags: ["rails"]
 description: "Catatan kali ini mengenai cara menggunakan input time_select namun dengan tupe data integer pada Ruby on Rails."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 2.6.3` `rails 5.2.3` `postgresql 11.5`
 
 
-# Prakata
+## Prakata
 
 Saya mendapatkan kasus dimana saya harus membuat "duration" field dengan tipe data integer. Yang mana sebelumnya duration field ini saya set dengan tipe data time.
 
 Tujuan dari penggunaan tipe data integer pada duration field agar nantinya dapat dengan mudah diolah, seperti difilter berdasarkan jumlah menit tertentu, dan lain sebagainya.
 
 
-# Target
+## Target
 
 Target yang ingin dicapai adalah, saya perlu **menyimpan data di dalam kolom duration dalam satuan menit**.
 
@@ -35,14 +35,14 @@ Tampilannya kira-kira seperti ini, untuk pemilihan jam dan menit.
 Gambar 1. time_select untuk jam dan menit
 
 
-# Permasalahan
+## Permasalahan
 
 `time_select` adalah salah satu method yang dimiliki oleh `ActionView::Helpers::DateHelper`. Beberapa method lain diantaranya seperti, `date_select`, `datetime_select`, dll.[<sup>1</sup>](#referensi)
 
 Secara normal, `time_select` ini akan bekerja dengan baik pada field dengan tipe data time. Namun, karena kebutuhan project, saya perlu memodifikasi agar `time_select` dapat menyimpan data ke dalam field dengan tipe data integer.
 
 
-# Solusi
+## Solusi
 
 Sebagai catatan, cara yang saya lakukan ini mungkin bukan merupakan cara yang baik. Mengingat masih minimnya pengalaman dan jam terbang saya dalam membangun web aplikasi, terkhusus dengan Ruby on Rails.
 
@@ -221,7 +221,7 @@ end
 Selesai!
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sekian, mudah-mudahan catatan saya yang masih banyak kurangnya ini dapat bermanfaat buat teman-teman.
 
@@ -230,7 +230,7 @@ Mungkin pada kesempatan yang lain, akan saya buatkan repo khusus agar teman-tema
 Terima kasih (^_^)v
 
 
-# Referensi
+## Referensi
 
 1. [api.rubyonrails.org/v5.2.1/classes/ActionView/Helpers/DateHelper.html](https://api.rubyonrails.org/v5.2.1/classes/ActionView/Helpers/DateHelper.html) \
    Diakses tanggal: 2019-12-04

@@ -10,12 +10,12 @@ tags: ["polybar"]
 description: "Tidak dipungkiri, beberapa aplikasi masih memerlukan trayicon. Bahkan ada beberapa aplikasi yang tidak dapat berjalan apabila tidak terdapat tempat untuk meletakkan trayicon. Untuk beberapa Window Manager yang tidak memiliki Bar yang menyediakan trayicon, kita dapat memanfaatkan Polybar sebagai tempat menyimpan trayicon."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 {{ page.description }}
 
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Saya sudah pernah menggunakan metode konvensional untuk melakukan hide/show pada Polybar sebagai trayicon di artikel ini, [**Polybar, Bar yang Mudah Dikonfig, Praktis, dan Mudah Dikustomisasi**](/blog/polybar-mudah-dikonfig-dan-praktis#showhide-bar-untuk-trayicon-konvensional)
 
@@ -26,17 +26,17 @@ Namun, yang paling mengganggu saya adalah: Fungsi aplikasi yang sangat tergantun
 Contohnya seperti **nm-applet** yang apabila tidak disimpan di trayicon dan hanya berjalan sebagai background process, tidak akan memberikan notifikasi status network.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Maka dari itu, saya lebih merekomendasikan untuk menggunakan pendekatan menggunakan IPC.
 
 Cara ini memanfaatkan IPC (*Interprocess Communication*) agar kita dapat mengirimkan message process ke Polybar dengan menggunakan perintah `polybar-msg` pada segment bar yang menggunakan attribute `enable-ipc = true`.
 
 
-# Langkah-langkah
+## Langkah-langkah
 
 
-## 1. Tambahkan attribute enable-ipc = true
+### 1. Tambahkan attribute enable-ipc = true
 
 Pada segment atau section bar yang dijadikan sebagai trayicon, tambahkan attribute `enable-ipc = true`.
 
@@ -123,7 +123,7 @@ Perhatikan pada baris ke-42, saya menggunakan attribute `enable-ipc = true` pada
 Sip, untuk langkah di Polybar config hanya seperti ini saja.
 
 
-## 2. Mengirimkan signal hide & show dengan polybar-msg
+### 2. Mengirimkan signal hide & show dengan polybar-msg
 
 Setelah memasang attribute `enable-ipc = true` pada bar yang kita ingin dapat melakukan hide & show, selanjutnya cara memanggil dan menyembunyikannya dengan menggunakan command `polybar-msg`.
 
@@ -171,7 +171,7 @@ super + shift + ~b
 ```
 
 
-# Demonstrasi
+## Demonstrasi
 
 ![Gambar 1](/assets/images/posts/2022/2022-12-10-01-gambar-01.gif)
 
@@ -182,7 +182,7 @@ Gambar 1. Notifikasi dari nm-applet masih dapat keluar meskipun Polybar dalam ke
 Gambar 2. Hide & Show Polybar dengan hotkey yang telah dideklarasikan dengan `polybar-msg`
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Penggunaan lebih lanjut saya serahkan pada imajinasi dan kreatifitas teman-teman.
 
@@ -191,7 +191,7 @@ Mungkin teman-teman bisa membaca-baca manual dari `man polybar-msg` dan membantu
 Terima kasih sudah mampir yaa.
 
 
-# Referensi
+## Referensi
 
 1. [https://www.reddit.com/r/Polybar/comments/ak246w/polybar_hide_show_on_key_press_release_bspwmsxhkd/](https://www.reddit.com/r/Polybar/comments/ak246w/polybar_hide_show_on_key_press_release_bspwmsxhkd/) \
    Diakses tanggal: 2022-12-10

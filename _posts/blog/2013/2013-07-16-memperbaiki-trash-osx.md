@@ -13,19 +13,19 @@ description: "Beberapa hari yang lalu, teman saya yang bernama Ichsan mengalami 
 ![Banner](https://1.bp.blogspot.com/-Jrz4qxlN9JQ/UeVCPh-mUCI/AAAAAAAABOs/XXW6t3UxH-s/s1600/Default+Header+Template+Post+14.jpg)
 
 
-# Latar Belakang
+## Latar Belakang
 
 Beberapa hari yang lalu, teman saya yang bernama Ichsan mengalami permasalahan pada Trash OS X nya. Trash tidak berfungsi sebagaimana mestinya. Setiap mendelete file / folder selalu diminta untuk memasukkan password dan setelah itu file / folder tidak muncul pada folder Trash.
 
 Apabila anda mempunyai permasalahan yang sama, saya akan mencoba memberikan tutorial bagaimana cara memperbaikinya.
 
 
-# Analisis
+## Analisis
 
 Menurut ilmu sotoy ane, dilihat dari gejalanya tiap kali delete file, diminta masukin password dulu. Ini biasanya gejala pada permission. Hahaha entah temen gue abis ngapain sampai2 trash permissionnya aja "ngaco".
 
 
-# Checking Status
+## Checking Status
 
 1. Kita harus melihat dulu, apakah benar "ngaco" nya trash ini karena permasalahan permission. Caranya dengan melihat folder **.Trash** kita yang ada pada Home directory user kita.
 
@@ -44,7 +44,7 @@ Menurut ilmu sotoy ane, dilihat dari gejalanya tiap kali delete file, diminta ma
 6. Apabila benar terdapat icon attribut dilarang berwarna merah, berarti benar, .Trash anda bermasalah dengan permission aksesnya. Silahkan ikuti step selanjutnya. Namun apabila tidak, hehe saya belum bisa menganalisis lebih jauh mengapa ke-ngacoan itu bisa terjadi.
 
 
-# Repair Permission Access
+## Repair Permission Access
 
 1. Langkah selanjutnya, buka Terminal anda, Applications > Utilities > Terminal
 

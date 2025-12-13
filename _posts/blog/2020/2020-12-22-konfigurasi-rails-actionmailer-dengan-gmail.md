@@ -10,7 +10,7 @@ tags: ["rails"]
 description: "Pada umumnya, tutorial ActionMailer pasti mendemonstrasikan penggunaan SendGrid dengan Heroku. Sudah terlalu mainstream, dan juga sejak SendGrid diakuisisi, jadi lebih sering gagal. Catatan kali ini mungkin dapat membantu teman-teman agar dapat menggunakan layanan Gmail saja. Hari gini, siapa yang gak pakai Gmail?"
 ---
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Catatan kali ini terinspirasi saat saya mencoba menggunakan SendGrid dengan Heroku sebagai Add-ons, namun tidak berjalan dengan baik.
 
@@ -35,7 +35,7 @@ Pada halaman tersebut ditunjukkan bagaimana cara mengkonfigurasi ActionMailer de
 5. Gmail
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Saya memutuskan untuk mencoba konfigurasi dengan Gmail, dengan alasan saya sudah memiliki akun Gmail, jadi tidak perlu daftar lagi.
 
@@ -48,7 +48,7 @@ Gmail memberikan kita jatah 500 email per hari yang dapat dikirim dengan protoko
 Ayo kita konfigurasi Gmail terlebih dahulu.
 
 
-# Konfigurasi Google Account
+## Konfigurasi Google Account
 
 Cara terbaik untuk menggunakan Google Account tanpa mengendorkan keamanan yang berlapis (2-Step Verification) adalah dengan memanfaatkan fitur **App passwords**.
 
@@ -87,10 +87,10 @@ Caranya, teman-teman dapat mengikuti langkah-langkahnya di bawah ini.
 > Namun, kalau teman-teman tidak ingin menggunakan 2-Step Verification, tidak perlu melakukan langkah di atas.
 
 
-# Konfigurasi Rails ActionMailer
+## Konfigurasi Rails ActionMailer
 
 
-## 1. Konfigurasi Gmail SMTP
+### 1. Konfigurasi Gmail SMTP
 
 Untuk mendefinisikan Gmail SMTP, saya memilih mendefinisikan di **config/environment.rb**.
 
@@ -153,10 +153,10 @@ $ heroku config:set RAILS_MASTER_KEY=`cat config/master.key`
 ```
 
 
-# Konfigurasi Environment
+## Konfigurasi Environment
 
 
-## 1. Development
+### 1. Development
 
 ```ruby
 !filename: config/environments/development.rb
@@ -177,7 +177,7 @@ end
 Jika, link konfirmasi hanya ingin di Rails server log saja, biarkan tetap `:test`.
 
 
-## 2. Production
+### 2. Production
 
 ```ruby
 !filename: config/environments/production.rb
@@ -204,7 +204,7 @@ Saya akan coba dengan ActionMailer untuk Email Confirmation dengan Devise gem.
 {% youtube Vio7yGUJEgw %}
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -215,7 +215,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [hixonrails.com/ruby-on-rails-tutorials/ruby-on-rails-action-mailer-configuration](https://hixonrails.com/ruby-on-rails-tutorials/ruby-on-rails-action-mailer-configuration/) \
    Diakses tanggal: 2020-12-22

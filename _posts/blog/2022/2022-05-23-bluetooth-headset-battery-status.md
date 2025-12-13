@@ -10,7 +10,7 @@ tags: ["upower"]
 description: "Selama menggunakan Bluetooth Headset di Linux, saya tidak mengetahui berapa persentase battery yang tersisa. Ternyata kita perlu mengaktifkan flag experimental pada bluetoothd service agar status bluetooth headset battery dapat dibaca oleh UPower API"
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 Selama menggunakan Bluetooth Headset di Linux, saya tidak mengetahui berapa persentase battery yang tersisa. Ternyata kita perlu mengaktifkan flag experimental pada bluetoothd service agar status bluetooth headset battery dapat dibaca oleh UPower.
 
@@ -32,15 +32,15 @@ Pada hasil di atas, kita dapat melihat, hanya terdapat battery laptop, line powe
 Pada catatan kali ini, kita akan meng-enable-kan fitur experimental agar Bluez memberikan Battery Power API.
 
 
-# Disclaimer
+## Disclaimer
 
 > Catatan ini saya kerjakan pada distribusi Arch Linux. Mungkin akan sedikit berbeda dengan distribusi yang lain.
 
 
-# Tahapan
+## Tahapan
 
 
-## Copy file bluetooth.service dari /usr/lib/systemd/ ke /etc/systemd/
+### Copy file bluetooth.service dari /usr/lib/systemd/ ke /etc/systemd/
 
 Secara default, file **bluetooth.service** apabila dijalankan, lokasinya diambil dari  **/usr/lib/systemd/**.
 
@@ -51,7 +51,7 @@ $ sudo cp /usr/lib/systemd/system/bluetooth.service /etc/systemd/system/
 ```
 
 
-## Tambahkan flag -E pada pemanggilan bluetoothd service
+### Tambahkan flag -E pada pemanggilan bluetoothd service
 
 Secara default, bluetoothd sevice yang dijalankan pada file bluetooth.service tidak menggunakan flag apapun.
 
@@ -86,7 +86,7 @@ ExecStart=/usr/lib/bluetooth/bluetoothd -E
 ```
 
 
-## Lakukan Daemon Reload
+### Lakukan Daemon Reload
 
 Prosedur standar yang dilakukan setiap mengubah file service, adalah dengan melakukan daemon reload.
 
@@ -95,7 +95,7 @@ $ sudo systemctl daemon-reload
 ```
 
 
-## Restart bluetooth.service
+### Restart bluetooth.service
 
 Setelah itu, restart bluetooth.service.
 
@@ -104,7 +104,7 @@ $ sudo systemctl restart bluetooth
 ```
 
 
-# Hasilnya
+## Hasilnya
 
 Sekarang coba kembali jalankan,
 
@@ -145,14 +145,14 @@ Nah! Sekarang, device bluetooth headset yang kita gunakan sudah terbaca di UPowe
 Dapat dilihat terdapat Battery persentase dari Bluetooth Headset yang saya gunakan.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Penggunaan lebih lanjut saya serahkan pada imajinasi dan kreatifitas teman-teman.
 
 Terima kasih sudah mampir yaa.
 
 
-# Referensi
+## Referensi
 
 1. [https://stackoverflow.com/a/70460138/4862516](https://stackoverflow.com/a/70460138/4862516) \
    Diakses tanggal: 2022-05-22

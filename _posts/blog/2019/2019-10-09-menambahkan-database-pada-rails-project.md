@@ -10,14 +10,14 @@ tags: ["rails"]
 description: "Catatan kali ini mengenai cara menambahkan atau mengganti database pada Ruby on Rails project yang sudah ada."
 ---
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Setelah pada blog post sebelumnya saya menulis tentang "[Membuat Rails Project tanpa Database](/blog/rails-project-tanpa-database)".
 
 Pada tulisan kali ini, saya akan membahas mengenai bagaimana cara menambahkan database engine pada Rails project yang sudah ada.
 
 
-# Tambahkan Gem
+## Tambahkan Gem
 
 Pertama-tama, tentukan dahulu database engine apa yang akan teman-teman gunakan.
 
@@ -40,7 +40,7 @@ gem 'sass-rails', '~> 5.0'
 ```
 
 
-# Tambahkan Database.yml
+## Tambahkan Database.yml
 
 Setelah itu, kita perlu membuat file `config/database.yml`.
 
@@ -136,7 +136,7 @@ production:
 ```
 
 
-# Aktifkan Active Record
+## Aktifkan Active Record
 
 Selanjutnya, kita perlu mengaktifkan Active Record pada `config/application.rb`.
 
@@ -159,7 +159,7 @@ require "rails/test_unit/railtie"
 Mantap, tinggal langkah terakhir, membuat database.
 
 
-# Create Database
+## Create Database
 
 Jalankan dengan perintah `rake`.
 
@@ -180,7 +180,7 @@ Mudah-mudahan dapat bermanfaat buat teman-teman.
 Terima kasih (^_^)v
 
 
-# Referensi
+## Referensi
 
 1. [How to add a Postgre Database to an existing Rails project](https://stackoverflow.com/a/48025954/4862516) \
    Diakses tanggal: 2019-10-09

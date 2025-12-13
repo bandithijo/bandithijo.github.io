@@ -10,7 +10,7 @@ tags: ["i3wm", "ulasan", "tips"]
 description: "i3WM disebut-sebut sebagai Window Manager yang cocok untuk kalian yang baru ingin memulai mengenal dan menggunakan Window Manager. Hal tersebut tidak lain karena i3wm memiliki file configurasi dalam bentuk plain text, sehingga dapat dimengerti meski tanpa pengetahuan tentang bahasa pemrograman. Selain itu, i3wm juga memiliki dokumentasi yang sangat lengkap yang berada di website resminya. Catatan kali ini, saya ingin mencoba membagikan, bagaimana cara saya mengkonfigurasi i3wm."
 ---
 
-# Prakata
+## Prakata
 
 Setelah setahun lebih menggunakan **i3** Window Manager (selanjutnya akan saya sebut sebagai i3wm), saya merasa sudah waktunya untuk membagikan pengalaman dalam menggunakan Window Manager yang sekaligus merupakan Window Manager pertama yang saya gunakan sehari-hari.
 
@@ -28,7 +28,7 @@ Saya merasa perlu untuk membuat catatan mengenai apa saja yang sudah saya manfaa
 
 {% image https://i.postimg.cc/6QMYz3K4/gambar-22.png | 22 %}
 
-# Window Manager
+## Window Manager
 
 Buat temen-temen yang belum mengetahui apa itu Window Manager. Window Manager adalah bagian dari Desktop Environment.
 
@@ -50,7 +50,7 @@ Seperti yang saya sebutkan di awal, Window Manager ini adalah komponen, maka beb
 
 Terdapat banyak sekali Window Manager yang dapat kita gunakan, tanpa harus menggunakan Desktop Environment.
 
-## Tipe-tipe Window Manager
+### Tipe-tipe Window Manager
 
 Window Manager secara umum, terbagi dalam 3 tipe.
 
@@ -58,7 +58,7 @@ Window Manager secara umum, terbagi dalam 3 tipe.
 2. **Tiling**, adalah Window Manager yang tidak menumpuk Window antara satu dengan yang lain, dan tersusun kotak-kotak seperti lantai (*tile*).
 3. **Dynamic**, adalah Window Manager yang dapat berganti-ganti diantara kedua tipe di atas menyesuaikan dengan kebutuhan user.
 
-## Tabel Window Manager
+### Tabel Window Manager
 
 Berikut ini adalah tabel dari Window Manager yang akan memberikan gambaran bahwa GNU/Linux tidak hanya GNOME dan KDE.
 
@@ -116,9 +116,9 @@ Berdasarkan data-data di atas,
 2. Banyak fitur-fitur yang terdapat di dalam Desktop Environment yang sebenarnya tidak saya perlukan.
 3. Kebebasan memilih komponen-komponen aplikasi pendukung sistem operasi yang menurut saya lebih baik dari aplikasi pendukung bawaan Desktop Environment.
 
-# i3 Window Manager
+## i3 Window Manager
 
-## Pertemuan dengan dwm
+### Pertemuan dengan dwm
 
 Berawal dari melihat video-video YouTube dari [Kai Hendry *channel*](https://www.youtube.com/user/kaihendry){:target="_blank"}. Saya memperhatikan bagaimana ia menggunakan **dwm** Window Manager. Pengalaman yang baru pertama kali saya dapati.
 
@@ -131,7 +131,7 @@ Saat itu, kira-kira inilah yang saya ada dibenak saya.
 
 Saya pun mencoba memasang dwm, namun karena belum pernah sama sekali mengerti hal-hal apa saja yang saya perlukan dan saya butuhkan dalam menggunakan Window Manager, saya pun kebingungan memilih *patch* apa yang hendak saya pergunakan. Lantas, saya pun menyerah pada dwm.
 
-## Mencoba Memahami i3wm
+### Mencoba Memahami i3wm
 
 Kemudian mengingat-ingat kembali, kalau distribusi Manjaro, beberapa kali selalu memberikan info terbaru seputar Manjaro i3 edition pada blog mereka. Kemudian, saya pun mencoba mencari referensi di YouTube mengenai i3wm.
 
@@ -151,11 +151,11 @@ Saya sarankan untuk dapat mempelajari video-video lain yang direkomendasikan ole
 
 Sebenarnya, istilah *Tiling* window manager, bukan pertama kali saya dengar. Saya pernah mendengar dari percakapan beberapa teman-teman di group Telegram BGLI (Belajar GNU/Linux Indonesia). Kang [Sucipto](https://sucipto.net){:target="_blank"} pun sudah pernah menawarkan untuk menggunakan *i3wm*, namun saat itu saya belum memahami apa kelebihannya dan keuntungan menggunakan *Tiling* window manager.
 
-## Mengapa i3 Window Manager?
+### Mengapa i3 Window Manager?
 
 Saya akan coba merangkum dengan beberapa point, mengapa saya akhirnya memutuskan untuk mantap menggunakan i3wm dan tidak pernah kembali menggunakan Desktop Environment seperti GNOME dan XFCE.
 
-### Konfigurasi Menggunakan Plain Text
+#### Konfigurasi Menggunakan Plain Text
 
 Untuk yang sudah pernah menggunakan Vim dan Tmux, pasti sudah familiar dengan file konfigurasi yang berbentuk *plain text*. Cukup menambahkan option-option di dalam file ini, maka program akan mengalami perubahan seperti yang kita isikan di dalam file konfigurasi. Contoh lain aplikasi yang menggunakan file konfigurasi berupa *plain text*, seperti: URxvt, Termite, Ranger, mpv, mpd, ncmpcpp, irssi, neomutt, newsboat, dunst, compton, cmus, dll.
 
@@ -170,7 +170,7 @@ i3wm dapat membaca file konfigurasi yang terdapat pada:
 
 Namun, untuk alasan kerapian struktur direktori, saya lebih senang mengumpulkan semua file konfigurasi pada direktori `~/.config/`.
 
-### Keyboard Shortcut adalah Segalanya
+#### Keyboard Shortcut adalah Segalanya
 
 Untuk menggunakan i3wm, sebenarnya tidak juga *keyboard* sentris, dapat pula menggunakan *mouse*, namun, saya memang sengaja memaksakan diri saya untuk mencoba *workflow* yang baru. Ternyata, memang sangat luar biasa mengoperasikan Window Manager tanpa perlu menggunakan *mouse*.
 
@@ -178,7 +178,7 @@ Kalau teman-teman yang sudah menggunakan Vim sebagai *text editor* pasti akan me
 
 Saya akan menunjukkan apa saja yang dapat dilakukan dengan menggunakan *keyboard* untuk mengoperasikan i3wm dengan sambil menunjukkan blok-blok kode konfigurasi yang ada di dalam file konfigurasi i3wm saya, `~/.config/i3/config`.
 
-### Menentukan Modifier Key
+#### Menentukan Modifier Key
 
 Pertama kali kita harus menentukan **modifier key**, seperti **leader key** dalam Vim, atau **Prefix** dalam Tmux.
 
@@ -195,7 +195,7 @@ set $mod Mod4
 <p>Saya menggunakan <code>$mod</code> berupa <code>Mod4</code> yang merupakan tombol <kbd>SUPER</kbd>. Sebagaian user i3, adapula yang menggunakan <kbd>ALT</kbd>, namun sangat jarang saya temui.</p>
 {% endbox_info %}
 
-### Memanggil Terminal
+#### Memanggil Terminal
 
 Untuk memanggil Terminal yang kita gunakan, dalam kasus ini saya menggunakan **st** terminal dari [Suckless](https://suckless.org/){:target="_blank"} project.
 
@@ -212,7 +212,7 @@ Dapat dilihat pada kode di atas bahwa, saya menggunakan <kbd>SUPER</kbd>+<kbd>EN
 
 Teman-teman dapat mengganti **st** dengan terminal favorit kalian. Seperti **gnome-terminal**, **xfce4-terminal**, **urxvt**, **termite**, dll.
 
-### Pemanggil Aplikasi
+#### Pemanggil Aplikasi
 
 *Application launcher*, pemanggil aplikasi. Kalau di GNOME saya biasa menggunakan tombol <kbd>SUPER</kbd> untuk memanggil *application launcher*, nah pada i3wm, kita bebas untuk menggunakan aplikasi yang berfungsi sebagai *application launcher* dan bebas pula ingin kita letakkan pada *keyboard shortcut* yang mana.
 
@@ -237,7 +237,7 @@ Jadi, menggunakan **dmenu** saja, sebenarnya juga bisa.
 <p>Sebelumnya, saya menggunakan paket <code>dmenu</code>, namun terasa ada <i>delay</i> yang sangat mengganggu. Kemudian, setelah mencari informasi, saya memutuskan untuk menggunakan paket <code>j4-dmenu-desktop</code> (AUR) karena terasa lebih cepat saat dikombinasikan dengan Rofi.</p>
 {% endbox_info %}
 
-### Konfigurasi Font
+#### Konfigurasi Font
 
 Untuk mengatur font pada i3wm, biasaya font akan terlihat pada Title Bar yang ada pada Window Container.
 
@@ -253,11 +253,11 @@ font pango:Fantasque Sans Mono 10
 
 `10`, adalah size dari font.
 
-### Window Container
+#### Window Container
 
 Pada i3wm, Window akan saya sebut sebagai Container. Ya, sesuai dengan penamaannya "kontainer" yang berarti tidak hanya dapat menampung 1 buah Window, namun dapat menampung banyak Window dalam 1 Container. Sehingga akan lebih cocok kalau disebut sebagai Container.
 
-#### Berpindah Focus Container
+##### Berpindah Focus Container
 
 Untuk berpindah-pindah fokus antara satu Container ke Container yang lain, saya menggunakan:
 
@@ -300,7 +300,7 @@ bindsym $mod+Up    focus up
 bindsym $mod+Right focus right
 {% endhighlight %}
 
-#### Memindahkan Focus Container
+##### Memindahkan Focus Container
 
 Memindahkan di sini dapat kita gunakan untuk memindahkan (menukar) Container pada *tiling* layout dari kanan ke kiri, *viceversa*. Dapat pula digunakan untuk menggerakan Container pada *floating* layout.
 
@@ -334,7 +334,7 @@ bindsym $mod+Shift+Up    move up    20px
 bindsym $mod+Shift+Right move right 20px
 {% endhighlight %}
 
-#### Mengganti Orientasi Container
+##### Mengganti Orientasi Container
 
 Pada i3wm, kita dapat mengganti-ganti orientasi dari Container yang sedang terbuka. Misalkan terdapat 2 buah Container kanan dan kiri, hanya dengan menekan kombinasi *keyboard* kita dapat membuat menjadi atas dan bawah.
 
@@ -392,7 +392,7 @@ Kita dapat mengatur *default orientation* saat menggunakan *Tiling* layout, apak
 default_orientation horizontal
 {% endhighlight %}
 
-#### Membuat Fullscreen Container
+##### Membuat Fullscreen Container
 
 Terkadang kita memerlukan untuk membuat sebuah Window menjadi *fullscreen* karena alasan tertentu. Tentu saja i3wm juga mempunyai fitur ini.
 
@@ -427,7 +427,7 @@ Perhatikan, terdapat option `toggle` yang menandakan *keyboard shortcut* ini ber
 # Viceversa, pada Container 2
 </pre>
 
-#### Menggati Layout Container
+##### Menggati Layout Container
 
 Pada pembahasa di atas, saya beberapa kali menyebutkan tentang *tiling* layout. i3wm mempunyai 3 macam layout (sepertinya, kalau *scratchpad* tidak dihitung sebagai layout), yaitu:
 
@@ -488,7 +488,7 @@ workspace_layout default
 
 Saya menggunakan **default**, yang berarti *Tiling* atau *Split* layout.
 
-#### Membuat Floating Container
+##### Membuat Floating Container
 
 Tidak semua Window harus dalam keadaan *maximize*. Contohnya seperti: dialog notifikasi window, popup window, open dan save dialog window, password dialog window, dll. i3wm secara cerdas dapat mengenali dialog-dialog seperti ini. Sehingga kita tidak perlu mengkonfigurasi lagi.
 
@@ -560,7 +560,7 @@ Ilustrasinya seperti ini.
 +---------------+
 </pre>
 
-#### Parent dan Child Container
+##### Parent dan Child Container
 
 Saya sudah menyebutkan pada tulisan di atas, bahwa i3wm merupakan *tree based* window manager. Kita dapat mengasumsikan Container seperti sebuah ranting dan daun.
 
@@ -627,7 +627,7 @@ bindsym $mod+Shift+a focus child
 
 Pembahasan mengenai layout ini sangat kompleks dan seru sekali. Sepertinya, tidak sanggup kalau harus menuliskan semuanya. Mungkin kapan-kapan akan saya buatkan video ulasannya saja.
 
-#### Memanfaatkan Scratchpad
+##### Memanfaatkan Scratchpad
 
 Pada i3wm, kita tidak mengenal *minimize*. Dan memang tidak diperlukan fitur ini.
 
@@ -679,7 +679,7 @@ Lalu untuk memanggil dan menyembunyikannya, saya mengguakan <kbd>SUPER</kbd>+<kb
 bindsym $mod+minus scratchpad show
 {% endhighlight %}
 
-#### Membuat Sticky Container
+##### Membuat Sticky Container
 
 Secara sederhana fitur ini mirip dengan **Always on Top** pada Window yang dimiliki oleh Desktop Environment.
 
@@ -695,7 +695,7 @@ Saya biasa menggunakan fitur ini saat melakukan *screencasting* dengan menampilk
 bindsym $mod+Shift+plus sticky toggle
 {% endhighlight %}
 
-#### Membuat Default Floating Container
+##### Membuat Default Floating Container
 
 Pasti akan ada beberapa aplikasi yang memiliki Window yang kecil, namun pada i3wm akan dijalankan secara *maximize*, dan kita harus melakukan *floating* terhadap aplikasi tersebut secara manual. Beberapa contoh dari aplikasi tersebut adalah GKamus, GColor3, Gnome Power Statistics, Pavucontrol, Arandr, Blueman Manager, dll.
 
@@ -734,7 +734,7 @@ for_window [class="pavucontrol-qt"]                    floating disable
 Meskipun sangat jarang saya temui aplikasi yang sejak awal sudah berada pada *floating* container, namun saya rasa perlu juga untuk memiliki konfigurasi ini apabila sewaktu-waktu diperlukan pada kasus yang lain.
 
 
-#### Menutup/mengakhiri Window Container
+##### Menutup/mengakhiri Window Container
 
 Di dalam sebuah Window, dapat berupa apa saja. Aplikasi, program, dialog, terminal, pokoknya apa saja yang ada di dalam Window, kita dapat mengakhirinya dengan <kbd>SUPER</kbd>+<kbd>SHIFT</kbd>+<kbd>Q</kbd>.
 
@@ -749,7 +749,7 @@ bindsym $mod+Shift+q kill
 
 Hal ini diperlukan mengingat i3wm tidak menyediakan tombol *close* atau menu *exit* pada *title bar*. Tentu saja hal ini malah membuat proses menutup/mengakhiri sebuah window menjadi lebih praktis tanpa perlu menggerakkan *mouse* ke arah menu atau tombol *close* pada *title bar*.
 
-#### Mengganti Window Container Border Color
+##### Mengganti Window Container Border Color
 
 Kita dapat mengganti warna dari Window Container border.
 
@@ -792,7 +792,7 @@ Hasilnya akan seperti ini.
 
 {% image https://i.postimg.cc/j5nmsrtC/gambar-08.png | 7 | Window Container Aktif (kiri) dan Window Container Tidak Aktf (kanan) %}
 
-#### Menentukan Container Border
+##### Menentukan Container Border
 
 Kita dapat menentukan apakah aplikasi yang kita panggil, akan memiliki border seperti apa. Atau tidak memiliki border sama sekali.
 
@@ -881,7 +881,7 @@ Contohnya, seperti di atas. Kalian dapat menambahkan sendiri. Hampir sama sepert
 
 Atau, dapat pula sekalian ditambahkan pengaturan border pada saat menentukan *floating* container, seperti contoh [di sini](#membuat-default-floating-container).
 
-#### Merubah Title Container
+##### Merubah Title Container
 
 Kita dapat pula merubah-rubah *alignment* dari Title yang ada pada Title Bar.
 
@@ -908,7 +908,7 @@ Selain itu, dapat pula merubah format dari tulisan yang ada di Title bar.
 for_window [class="^.*"] title_format " > %title"
 {% endhighlight %}
 
-#### Membuka Container Kosong
+##### Membuka Container Kosong
 
 Untuk alasan tertentu, mungkin kita ingin membuka Container kosong. Misalkan seperti yang biasa saya lakukan, untuk sekedar melihat Conky yang ada pada desktop. Atau untuk sekedar gaya-gaya saja saat mengambil screenshot.
 
@@ -923,7 +923,7 @@ Saya menggunakan <kbd>SUPER</kbd>+<kbd>O</kbd>.
 bindsym $mod+o open
 {% endhighlight %}
 
-### Workspaces
+#### Workspaces
 
 Secara *default* pada file konfigurasi i3wm sudah menyediakan 10 Workspaces.
 
@@ -947,7 +947,7 @@ set $workspace9  "9"
 set $workspace10 "10"
 {% endhighlight %}
 
-#### Berpindah antar Workspaces
+##### Berpindah antar Workspaces
 
 Setelah kita mendifinisikan Workspace, kita berikan pengaturan *keyboard shortcut* untuk dapat berpindah antar Workspace dengan mudah.
 
@@ -971,7 +971,7 @@ bindsym $mod+9 workspace $workspace9
 bindsym $mod+0 workspace $workspace10
 {% endhighlight %}
 
-#### Memindahkan Container ke Workspace Lain
+##### Memindahkan Container ke Workspace Lain
 
 Kemudian, Apabila diperlukan, kita juga dapat memindahkan Container dari satu Workspace ke Workspace yang lain.
 
@@ -1084,7 +1084,7 @@ Saya menggunakan <kbd>SUPER</kbd>+<kbd>TAB</kbd>, sebagai ganti dari <kbd>ALT</k
 {% image https://i.postimg.cc/8k3jCdGY/gambar-07.png | 12 | Mendaftar semua Window Container dengan Rofi %}
 
 
-### Memuat Ulang Konfigurasi
+#### Memuat Ulang Konfigurasi
 
 Setiap kita selesai mengubah atau mengurangi beberapa konfigurasi pada file `~/.configi/i3/config`, tidak serta merta langsung dapat kita lihat hasilnya. Selayaknya aplikasi konfigurasi GUI, kita perlu menekan tombol "Apply" terlebih dahulu. Nah, pada i3wm, setelah kita menyimpan file konfigurasi, kita dapat memuat ulang (*reload*) konfigurasi i3wm.
 
@@ -1112,7 +1112,7 @@ Saya menggunakan *keyboard shortcut*, <kbd>SUPER</kbd>+<kbd>SHIFT</kbd>+<kbd>R</
 bindsym $mod+Shift+r restart
 {% endhighlight %}
 
-### Binding Mode
+#### Binding Mode
 
 Ini adalah salah satu fitur dari i3wm yang saya suka, namun belum saya manfaatkan dengan maksimal.
 
@@ -1190,7 +1190,7 @@ Saya baru menggunakan untuk 1 mode ini saja.
 
 Sekarang teman-teman pasti sudah mempunyai gambaran, berapa banyak kombinasi *keyboard shortcut8 yang dapat kita buat. Tentunya akan sangat cukup dan memenuhi kebutuhan kita.
 
-### Gaps
+#### Gaps
 
 Perlu teman-teman ketahui, bahwa i3wm tidak menyediakan fitur *gaps* atau "jeda" antar Window Container pada *tiling* layout.
 
@@ -1216,7 +1216,7 @@ smart_gaps on
 Karena saya cepat sekali bosan, jadi saya sering berganti-ganti suasana. Terkadang ingin menggunakan *gaps*, kadang juga tidak.
 
 
-### BAR
+#### BAR
 
 i3wm juga sudah secara *default* menyediakan atau membawa Bar mereka sendiri. Bar adalah tempat untuk Workspace indicator dan Status indicator.
 
@@ -1257,7 +1257,7 @@ Kemudian tambahkan konfigurasinya.
 exec_always --no-startup-id feh --bg-fill -Z ~/pix/Wallpapers/Arch-Wallpaper-Solarized.png
 {% endhighlight %}
 
-### Mengeset LockScreen
+#### Mengeset LockScreen
 
 Seperti Desktop Environment, pada Window Manager, kita juga dapat mengeset lock screen.
 
@@ -1286,7 +1286,7 @@ Atau, apabila terlalu ribet menggunakan script `i3lock-color` dan `lock`, bisa j
 
 Saya sendiri sudah tidak lagi menggunakan `lightdm` sebagai Display Manager. Saat ini sedang menggunakan `slim`. Karena lebih mudah untuk dikustomisasi.
 
-### Autostart Application
+#### Autostart Application
 
 Untuk membuat aplikasi berjalan secara otomatis saat sistem pertama kali di jalankan, sangat mudah sekali dalam i3wm.
 
@@ -1323,7 +1323,7 @@ Saya menggunakan aplikasi ini karena mudah digunakan, secara dulunya saya adalah
 
 Beberapa pemanfaatan aplikasi xfce-power-manager yang pernah saya tuliskan ada [di sini]({{ site.url }}/blog/mengaktifkan-presentasion-mode-xfce4-dari-terminal){:target="_blank"}.
 
-#### Clipboard
+##### Clipboard
 
 Saya menggunakan Clipmenu.
 
@@ -1338,7 +1338,7 @@ exec --no-startup-id clipmenud
 
 Konfigurasi ini sudah pernah saya bahas pada postingan, [di sini]({{ site.url }}/blog/manajemen-clipboard-dengan-clipmenu){:target="_blank"}.
 
-#### Disable Touchpad
+##### Disable Touchpad
 
 Karena saya pengguna TrackPoint pada ThinkPad, saya kurang suka menggunakan Touchpad. Saya perlu untuk menonaktifkannya sejak sistem startup.
 
@@ -1362,7 +1362,7 @@ Saya juga perlu menjaga agar Touchpad tetap dapat melakukan "Tap to Click".
 exec_always --no-startup-id xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 {% endhighlight %}
 
-#### Polkit
+##### Polkit
 
 Saya menggunakan memilih menggunakan `lxpolkit` karena lebih independen dan dapat dipasang tanpa membawa dependensi lain seperti polkit yang dimiliki oleh GNOME.
 
@@ -1375,7 +1375,7 @@ Saya menggunakan memilih menggunakan `lxpolkit` karena lebih independen dan dapa
 exec --no-startup-id /usr/bin/lxpolkit
 {% endhighlight %}
 
-#### Window Compositor
+##### Window Compositor
 
 Saya menggunakan `compton` sebagai window compositor. Secara sederhaa window compositor adalah aplikasi yang memberikan efek-efek pada Window Manager kita. Seperti shadow, blur, fade, opacity, dll.
 
@@ -1388,7 +1388,7 @@ Saya menggunakan `compton` sebagai window compositor. Secara sederhaa window com
 exec --no-startup-id compton --config ~/.config/compton/compton.conf
 {% endhighlight %}
 
-#### Notification
+##### Notification
 
 Sebelumnya saya menggunakan `notify-osd`, namun setelah mengenal `dunst` saya malah jatuh cinta sama kesederhanannya. Sangat simpel dan tentu saja dapat dikonfigurasi menggunakan plain text.
 
@@ -1401,7 +1401,7 @@ Sebelumnya saya menggunakan `notify-osd`, namun setelah mengenal `dunst` saya ma
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 {% endhighlight %}
 
-#### Conky
+##### Conky
 
 Window Manager masih memerlukan Compton?
 
@@ -1416,7 +1416,7 @@ Ini soal selera dan kebutuhan. Saya perlu dan butuh, jadi mengapa tidak.
 exec --no-startup-id conky -c ~/.config/conky/conkyrc
 {% endhighlight %}
 
-#### Polybar
+##### Polybar
 
 Polybar termasuk aplikasi pengganti bar yang dapat kita gunakan. i3wm tentu saja mengijinkan usernya untuk mengganti *default* bar milik mereka dengan pihak ketiga, seperti: lemonbar, tint2, dzen, polybar, dll.
 
@@ -1433,7 +1433,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 Kita juga dapat menambahkan pengaturan *keyboard shortcut* sendiri untuk memanggil apalikasi yang kita inginkan.
 
-#### System Session
+##### System Session
 
 Saya menggunakan script `rofi-power` untuk menampilkan dialog System Session seperti Logout, Restart, dan Shut Down.
 
@@ -1450,7 +1450,7 @@ Saya memanggil script ini dengan menggunakan <kbd>SUPER</kbd>+<kbd>SHIFT</kbd>+<
 
 Script ini dapat teman-teman dapatkan pada dotfiles milik saya, [di sini](https://github.com/bandithijo/dotfiles/blob/master/.local/bin/rofi-power){:target="_blank"}.
 
-#### Clipmenu
+##### Clipmenu
 
 Sebelumnya saya sudah menuliskan cara menjalankan *backend service* dari `clipmenud` pada bagian *autostart*. Pada bagian ini saya akan menunjukkan pengaturan *keyboard shortcut* yang saya gunakan untuk memanggil Rofi yang berisi Clipboard.
 
@@ -1491,7 +1491,7 @@ Dapat dilihat, kode dari *keyboard* di atas sangat aneh. Itu adalah penamaan dar
 
 Di sini saya menggunakan paket `pamixer`.
 
-#### Audio Mixer
+##### Audio Mixer
 
 Audio mixer adalah aplikasi yang saya perlukan. Sebenarnya teman-teman juga memerlukan ini dan perlu mengetahui akan hal ini.
 
@@ -1512,7 +1512,7 @@ Namun, belakangan ini sudah sangat jarang saya menggunakan `pavucontrol`, lebih 
 
 {% image https://i.postimg.cc/8PnP19JW/gambar-15.png | 5 | Tampilan TUI dari ncpamixer %}
 
-#### Brightness Control
+##### Brightness Control
 
 Kita juga memerlukan pengaturan pencahayaan pada layar agar tetap nyaman menggunakan laptop dalam waktu lama dan dapat menyesuaikan dengan kondisi cahaya dari lingkungan sekitar.
 
@@ -1531,7 +1531,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 2
 <p>Apabila ini terjadi pada teman-teman, mungkin bisa mencari solusinya sendiri. Karena saya belum mengalaminya. Akan sangat sulit bagi saya melakukan perbaikan apabila saya belum mengalami pada sistem saya. Hehe.</p>
 {% endbox_info %}
 
-#### Arandr
+##### Arandr
 
 Arandr adalah aplikasi GUI untuk Xrandr. Sederhananya aplikasi ini saya gunakan untuk mengatur monitor apabila sedang menggunakan dual monitor.
 
@@ -1551,7 +1551,7 @@ Lagi-lagi, karena tombol <kbd>F7</kbd> saya bergambar projector, maka saya letak
 {% image https://i.postimg.cc/1XXh2RKd/gambar-16.png | 6 | Tampilan GUI dari Arandr %}
 
 
-#### Network Manager
+##### Network Manager
 
 Saya tidak menggunakan trayicon untuk memilih network dan memanggil Network Manager Settings. Saya lebih senang tidak menggunakan trayicon agar tampilan desktop tetap clean dan tidak terlalu banyak icon yang tidak konvergen dengan theme.
 
@@ -1637,12 +1637,12 @@ Hasilnya, akan seperti di bawah ini.
 {% image https://i.postimg.cc/LsHPsDVN/gambar-17.gif | 7 | Tampilan NetworkManager_dmenu dengan Rofi %}
 
 
-# Dotfiles
+## Dotfiles
 
 Bagi yang memerlukan contoh file konfig secara lengkap, dapat melihat pada dotfiles milik saya, [di sini](https://github.com/bandithijo/dotfiles/blob/master/.config/i3/config){:target="_blank"}. (Sedang Diperbaiki)
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 i3wm dapat dikatakan Window Manager yang cukup kaya fitur, ada beberapa orang yang tidak menyukai hal ini, karena dianggap terlalu *bloated*.
 
@@ -1675,7 +1675,7 @@ Terima kasih.
 
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/index.php/Window_manager](https://wiki.archlinux.org/index.php/Window_manager) \
    Diakses tanggal: 2019/02/26

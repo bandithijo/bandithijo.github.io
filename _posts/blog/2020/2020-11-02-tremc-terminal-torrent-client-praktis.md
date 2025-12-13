@@ -10,7 +10,7 @@ tags: ["torrent", "tui"]
 description: "Sebelumnya, saya sering menggunakan torrent client favorit saya sejak masih menggunakan OSX, yaitu Transmission. Namun, ternyata transmission memiliki daemon yang berjalan di background, lantas saya terpikir, kenapa tidak menggunakan user interface yang lebih sederhana, bukan dengan GUI melainkan dengan TUI. Tremc adalah salah satu user interface alternatif untuk transmission daemon yang dapat kita operasikan cukup menggunakan Terminal."
 ---
 
-# Latar Belakang
+## Latar Belakang
 
 **Tremc**, adalah TUI client untuk BitTorrent client Transmission.
 
@@ -23,7 +23,7 @@ Sudah hampir dua pekan ini saya mecoba beralih menggunakan curses interface untu
 Tremc ini merupakan fork dari **transmission-remote-cli** (sudah tidak lagi dimaintain, last commit Jan 16, 2017) yang dibangun dengan Python 3.
 
 
-# Instalasi
+## Instalasi
 
 Karena Tremc ini hanya TUI interface, tentunya kita perlu memasang program utamanya terlebih dahulu, yaitu **transmission-cli**.
 
@@ -40,7 +40,7 @@ $ yay -S tremc-git
 ```
 
 
-# Eksekusi
+## Eksekusi
 
 **NOTE!** Sebelum dapat membuka **tremc**, kita harus menjalankan **transmission-daemon** terlebih dahulu.
 
@@ -53,10 +53,10 @@ Secara otomatis, akan berjalan di background process.
 Kalau tidak, tremc akan gagal dibuka, atau tidak akan berjalan sebagaimana mestinya.
 
 
-# Konfigurasi
+## Konfigurasi
 
 
-## tremc config
+### tremc config
 
 Tremc sudah menyediakan command untuk mengenerate file config.
 
@@ -121,7 +121,7 @@ file_prio_off              = fg:blue,bg:default
 Gambar 1. Tampilan tremc
 
 
-## transmission-daemon settings.json
+### transmission-daemon settings.json
 
 Secara default, lokasi dari file unduhan akan berada pada `/var/lib/transmission/Downloads/` direktori.
 
@@ -147,12 +147,12 @@ $ sudo vim /var/lib/transmission/.config/transmission-daemon/settings.json
 `"download-dir":` dan `"incomplete-dir":`, adalah direktori file unduhan, rubah sesuai keingian kalian. Saya meletakkannya pada direktori **~/Downloads/Torrent/**.
 
 
-# Keyboard Mapping
+## Keyboard Mapping
 
 Tremc, sudah membundle keybind help info yang sangat mudah dipahami dan mudah diakses.
 
 
-## Keymap Help
+### Keymap Help
 
 Tekan <kbd>F1</kbd> atau <kbd>?</kbd>.
 
@@ -171,7 +171,7 @@ Kemudian, pindah ke tab selanjutnya dengan <kbd>Tab</kbd> atau <kbd>-></kbd>.
 ![Gambar 5](https://i.postimg.cc/t4rnVJqf/gambar-05.png)
 
 
-## Add Torrent
+### Add Torrent
 
 Kita dapat menambahkan torrent dengan menekan tombol <kbd>a</kbd>.
 
@@ -184,14 +184,14 @@ magnet:?xt=urn:btih:ba7a8d78a535a9bf22dbb4482b9174ea8fd70891&dn=archlinux-2020.1
 ```
 
 
-## Move Torrent File
+### Move Torrent File
 
 Secara default, file torrent akan diletakkan di direktori Downloads.
 
 Kita dapat memindahkan ke direktori yang kita mau, dengan menekan tombol <kbd>m</kbd>, kemudian arahkan manual path direktori. Kita dapat menggunakan tombol <kbd>Tab</kbd> untuk auto complete.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -204,7 +204,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [github.com/tremc/tremc](https://github.com/tremc/tremc) \
    Diakses tanggal: 2020-11-02

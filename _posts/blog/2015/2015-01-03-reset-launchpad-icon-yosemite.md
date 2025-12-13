@@ -13,7 +13,7 @@ description: "Launchpad pada OS X Yosemite ini benar-benar sangat memudah kita s
 ![Banner](https://s20.postimg.cc/pm0zdqf0t/Default_Header_Template_Post_7.jpg)
 
 
-# Latar Belakang
+## Latar Belakang
 
 Sudah mengupgrade OS X anda dengan OS X Yosemite 10.10 ?
 
@@ -30,7 +30,7 @@ Untuk mengatasi hal ini, sampai tulisan ini dibuat, saya pribadi belum mencari k
 Saya akan memberikan tips, bagaimana agar susunan icon aplikasi pada Launchpad berurutan sesuai abjad.
 
 
-# Step by Step
+## Step by Step
 
 1. Buka Terminal, dan salin kode dibawah, salin perbaris dan tekan <kbd>Return</kbd>
 
@@ -44,7 +44,7 @@ Saya akan memberikan tips, bagaimana agar susunan icon aplikasi pada Launchpad b
 3. Tunggu hingga Launchpad selesai merefresh aplikasi.
 
 
-# Kesimpulan
+## Kesimpulan
 
 Menurut saya, Apple mempunyai alasan tidak begitu mementingakan susunan icon aplikasi pada Launchpad, begitu juga programmer / developer pihak ketiga. Ini disebabkan oleh sudah  cukup powerfulnya aplikasi Spotlight yang mempunyai kemampuan seperti aplikasi Alfred.
 

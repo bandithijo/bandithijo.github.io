@@ -59,7 +59,7 @@ Kapan-kapan akan saya tuliskan mengenai "Pemanfaatan **dunstify** untuk menjadi 
 Sesuai janji, saya sudah menuliskan catatan mengenai hal ini, [di sini]({{ site.url }}/blog/dunst-sebagai-notifikasi-bantuan-pengingat-shortcut).
 
 
-# Referensi
+## Referensi
 
 1. [twitter.com/bandithijo/status/1088634885286199296](https://twitter.com/bandithijo/status/1088634885286199296) \
    Diakses tanggal: 2019-01-27

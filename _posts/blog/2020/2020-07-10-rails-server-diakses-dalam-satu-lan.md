@@ -10,7 +10,7 @@ tags: ["rails"]
 description: "Kita dapat membuat Rails aplikasi yang kita bangun di local environment sistem kita membuka akes broadcast ke local network. Sehingga, semua perangkat yang berada pada satu network yang sama, dapat mengakses Rails aplikasi yang ada di local sistem kita."
 ---
 
-# Sekenario Masalah
+## Sekenario Masalah
 
 Saya sedang membangun atau memodifikasi layout dari sebuah web.
 
@@ -19,7 +19,7 @@ Selain mendesain untuk tampilan desktop, saya juga perlu mendesain untuk tampila
 Agar saya dapat merasakan secara langsung, seperti apa layout yang saya sedang kerjakan, lebih baik kalau saya dapat langsung membukanya secara langsung di *smartphone*.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Rails sudah menyediakan fitur untuk menjalankan server dengan mengganti Host yang kita definisikan.
 
@@ -32,7 +32,7 @@ Maka, kita perlu mengganti ip address tersebut menjadi ip address untuk *broadca
 Caranya sangat mudah.
 
 
-## Definisikan Host
+### Definisikan Host
 
 Cukup tambahkan option `-b` atau `--binding=` diikuti dengan *broadcast ip address*.
 
@@ -56,7 +56,7 @@ Tampilan mobile dari web yang sedang kita kerjakan, dapat kita ekplorasi secara 
 Enak banget kan!
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Catatan ini bukan merupakan tutorial, saya hanya ingin sharing tentang informasi yang saya dapat dan saya pergunakan selama membangun web aplikasi menggunakan Ruby on Rails.
 
@@ -71,7 +71,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [guides.rubyonrails.org/command_line.html](https://guides.rubyonrails.org/command_line.html) \
    Diakses tanggal: 2020-07-10

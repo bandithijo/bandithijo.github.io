@@ -12,14 +12,14 @@ description: "Netbeans merupakan aplikasi yang dibangun dengan bahasa Java. Java
 
 ![Banner](https://4.bp.blogspot.com/-t8rFinLgSyM/WmCaNEg1ffI/AAAAAAAAG5Y/MteYia1GKyg3j6SGVMOAxT7slgPeX84YwCLcBGAs/s1600/Default%2BHeader%2BTemplate%2BPost%2B2X.png)
 
-# Latar Belakang
+## Latar Belakang
 
 _Font rendering_ yang buruk pada beberapa aplikasi GUI tentu sangat mengganggu _mood_ kita dalam menggunakan aplikasi tersebut. Apalagi kalau aplikasi yang kita gunakan adalah aplikasi yang sehari-harinya kita gunakan.  Netbeans adalah salah satu aplikasi yang memiliki _font rendering_ yang buruk pada [i3wm](https://wiki.archlinux.org/index.php/I3) saya.
 
 Bagaimana cara saya memperbaiki ini ?
 
 
-# Caranya
+## Caranya
 
 Kita perlu mengetahui terlebih dahulu direktori tempat file `netbeans.conf` disimpan. Atau secara umum, direktori Netbeans tersimpan pada sistem. Dalam kasus saya, Arch Linux, menempatkan direktori Netbeans pada `/usr/share/netbeans`. Penempatan direktori ini dapat berbeda-beda tergantung distribusi GNU/Linux maupun proses instalasi local user atau wide system.
 
@@ -73,12 +73,12 @@ Sekarang, coba buka kembali, atau _restart_ Netbeans.
 Apakah _font rendering_ sudah lebih bagus dan _smooth_ ?
 
 
-# Video Dokumentasi
+## Video Dokumentasi
 
 {% youtube Bw1RYFkCXYs %}
 
 
-# Referensi
+## Referensi
 
 1. [thomashunter.name/blog/enabling-anti-aliasing-in-the-netbeans-editor/](https://thomashunter.name/blog/enabling-anti-aliasing-in-the-netbeans-editor/) \
    Diakses tanggal: 2018-01-16

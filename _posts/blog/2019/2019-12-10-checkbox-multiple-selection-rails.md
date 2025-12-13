@@ -10,12 +10,12 @@ tags: ["rails", "javascript"]
 description: "Catatan kali ini mengenai cara membuat checkbox dengan multiple selection pada Ruby on Rails."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 2.6.3` `rails 5.2.3` `postgresql 11.5`
 
 
-# Prakata
+## Prakata
 
 Rails, menyediakan helper method untuk menampilkan multiple checkbox pada view template yang bernama `collection_check_boxes`.
 
@@ -28,7 +28,7 @@ Helper ini masuk ke dalam kelas **ActionView::Helpers::FormOptionsHelper**. Nah,
 Lebih jauh mengenail helper method ini, dapat teman-teman baca sendiri pada dokumentasi di [**apidock.com/rails**](#referensi) yaa.
 
 
-# Sekenario
+## Sekenario
 
 Misalkan, saya memiliki 3 pilihan berupa, Adult, Teen, dan Children.
 
@@ -54,7 +54,7 @@ Gambar 1. Multiple checkbox dengan fitur Select All
 Gambar 2. Uncheck Select All jika salah satu dari checkbox tidak dicentang
 
 
-# Eksekusi
+## Eksekusi
 
 Saya sudah memiliki field `:age_preference` dengan tipe data string pada skema database.
 
@@ -72,7 +72,7 @@ end
 ```
 
 
-## Controller
+### Controller
 
 Bagian controller ini tidak penting pada catatan ini.
 
@@ -132,7 +132,7 @@ end
 Selanjutnya, saya akan membuat tampilan multiple checkbox pada view template.
 
 
-## View
+### View
 
 Berdasarkan sekenario di atas, pada nomor 1 dan 2, artinya, saya memiliki form pada saat `:new` dan `:edit`.
 
@@ -223,7 +223,7 @@ Selanjutnya kita perlu merubah data yang di passing dari view template ini ke mo
 Kita akan tambahkan method untuk mempercantik bentuk datanya terlebih dahulu pada model.
 
 
-## Model
+### Model
 
 Karena data output dari helper method `collection_check_boxes` ini berupa array, maka saya akan merubahnya menjadi string karena field `:age_preference` bertipe data string. Namun, kalau langsung disimpan, bentuk datanya akan jelek, wkwkwk.
 
@@ -276,7 +276,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [apidock.com/rails/v4.0.2/ActionView/Helpers/FormOptionsHelper/collection_check_boxes](https://apidock.com/rails/v4.0.2/ActionView/Helpers/FormOptionsHelper/collection_check_boxes) \
    Diakses tanggal: 2019-12-10

@@ -13,7 +13,7 @@ description: "Pada praktikum ini, saya menggunakan MySQL Workbench sebagai aplik
 ![Banner](https://s20.postimg.cc/xv6bxotfx/banner_post_04.png)
 
 
-# Step 00: Persiapan
+## Step 00: Persiapan
 
 Pada praktikum ini, saya menggunakan **MySQL Workbench** sebagai aplikasi *database management*. Dapat juga menggunakan aplikasi sejenis yang lain seperti **PhpMyAdmin**, **PGAdmin4**, dll.
 
@@ -23,7 +23,7 @@ Aplikasi dan soal dapat diunduh pada tautan di bawah.
 2. [6 Praktikum DW.pdf](https://drive.google.com/open?id=1ZQmxgNFR4uoVPP3pc3FwG5b45ipc5wg1)
 
 
-# Step 01: Membuat ERD
+## Step 01: Membuat ERD
 
 {% youtube fqYOZk1S8RQ %}
 
@@ -32,7 +32,7 @@ Aplikasi dan soal dapat diunduh pada tautan di bawah.
 > 1. [dw_toko_erd.sql](https://drive.google.com/open?id=1b4bFkEKAo4kPcNbkblS2tnDYyfzaJkMi)
 
 
-# Step 02: Memasukkan Data
+## Step 02: Memasukkan Data
 
 {% youtube sSW-VXeeOXY %}
 
@@ -41,7 +41,7 @@ Aplikasi dan soal dapat diunduh pada tautan di bawah.
 > 1. [dw_toko_data.sql](https://drive.google.com/open?id=1BCNlwRDsynvgv5sQZ9qBfAqGaer_IiGA)
 
 
-# Step 03: Membuat Skema Bintang
+## Step 03: Membuat Skema Bintang
 
 {% image https://s20.postimg.cc/4ftedv2m5/thumbnails_dw_3_ud.png | 3 %}
 
@@ -56,7 +56,7 @@ Aplikasi dan soal dapat diunduh pada tautan di bawah.
 > 2. [jawaban dw_tokos.txt](https://drive.google.com/open?id=19gTej3ZFxZtlKnk5oe7nKB_dMs2rWsiK)
 
 
-# Kontributor
+## Kontributor
 
 1. Yuhendy Adiyasa Aurindra
 2. ...

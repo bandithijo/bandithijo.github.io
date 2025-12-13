@@ -13,7 +13,7 @@ description: "Ini pertama kali bagi saya melakukan upgrade sistem operasi Fedora
 ![Banner](https://4.bp.blogspot.com/-YjUgk-I-xV8/VXstgLAFV_I/AAAAAAAABpk/YFOiY8VCCt0/s1600/Default%2BHeader%2BTemplate%2BPost%2B19.jpg)
 
 
-# Pendahuluan
+## Pendahuluan
 
 Mei 26, 2015. Fedora 22 telah resmi dirilis. Ini pertama kali bagi saya melakukan _upgrade_ sistem operasi Fedora dengan menggunakan tool. Karena sebelumnya saya adalah pengguna Ubuntu. Dan _upgrade_ sistem operasi pada lingkungan Ubuntu benar-benar sangat mudah. Karena developer sudah menyediakan aplikasi GUI (_Graphic User Interface_).
 
@@ -21,13 +21,13 @@ Lain halnya dengan Fedora yang hanya menyediakan aplikasi berupa CLI (_Com-
 mand Language Interface_), berupa `fedup`. Namun disinlah letak kelebihan Fedora dalam melakukan _upgrade_ sistem operasinya. Penggunaan _source_ RAM _memory_ menjadi lebih sedikit.
 
 
-# Tujuan
+## Tujuan
 
 _Upgrade_ Fedora 21 ke Fedora 22 dengan menggunakan aplikasi fedup.
 Langkah ini saya nilai yang paling mudah karena tidak membutuhkan banyak pengaturan.
 
 
-# Requirement
+## Requirement
 
 1. Fedora 21 yang telah terinstal pada sistem komputer anda
 2. Koneksi internet yang memadai, karena kita akan melakukan _upgrade_ sistem ke Fedora 22 dengan mengambil _source_ dari _server_ Fedora di internet.
@@ -35,17 +35,17 @@ Langkah ini saya nilai yang paling mudah karena tidak membutuhkan banyak pengatu
 4. `fedup`, aplikasi yang disediakan oleh Fedora untuk memudahkan user dalam
 
 
-# Batasan Tutorial
+## Batasan Tutorial
 
 Tutorial ini ditujukan bagi user produk Apple atau dapat juga digunakan (apabila dimungkinkan) oleh user lain yang telah memiliki sistem operasi Fedora 21.
 Untuk user sistem operasi Fedora 18/19/20, saya tidak dapat memberikan
 rekomendasi karena saya belum menguji coba secara langsung di lapangan apakah tutorial ini dapat digunakan dengan baik.
 
 
-# Langkah meng-Upgrade
+## Langkah meng-Upgrade
 
 
-## Update Sistem Fedora 21
+### Update Sistem Fedora 21
 
 Update sistem Fedora 21 dengan menggunakan Terminal dan ketik
 
@@ -58,7 +58,7 @@ Disarankan sebelum meng-upgrade OS ke Fedora 22, anda telah menggunakan versi ke
 Kemudian setelah proses update selesai, silahkan restart komputer anda dan kembali ke desktop.
 
 
-## Install fedup
+### Install fedup
 
 Buka Terminal dan ketik
 
@@ -69,7 +69,7 @@ $ sudo dnf install fedup
 Tunggu proses instalasi fedup hingga selesai.
 
 
-## Hapus Repositori yang Bukan Resmi
+### Hapus Repositori yang Bukan Resmi
 
 Disarankan oleh wiki Fedora untuk menghapus repositori yang bukan resmi terlebih dahulu sebelum meng-upgrade. Namun pengalaman pribadi saya, repositori seperti rpmfusion tidak begitu menggangu. Dari sekian banyak repositori unofficial yang saya gunakan, repositori yang mengalami masalah saat proses upgrade berlangsung hanya fedy. Untuk itu saya perlu menghapus fedy.repo terlebih dahulu dari daftar repositori saya.
 
@@ -86,7 +86,7 @@ $ sudo mv /etc/yum.repos.d/fedy.repo /etc/yum.repos.d/fedy.repo.bak
 ```
 
 
-## Upgrade Sistem ke Fedora 22
+### Upgrade Sistem ke Fedora 22
 
 1. Pastikan koneksi internet anda aman dan lancar untuk meng-upgrade sistem operasi Fedora 22 untuk beberapa waktu kedepan. Karena proses upgrade ini memakan waktu lumayan lama untuk men-download dan meng-upgrade paket-paket yang telah ada dalam sistem Fedora 21 anda dari mirror Fedora.
 

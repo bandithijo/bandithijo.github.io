@@ -10,7 +10,7 @@ tags: ["dunst"]
 description: "Dunst adalah replacement untuk standalone notification daemon yang ringan. Biasanya digunakan oleh pengguna Window Manager. Catatan kali ini, saya akan memanfaatkan dunst untuk menampilkan daftar keybind keymap."
 ---
 
-# Prakata
+## Prakata
 
 Latar belakang dari ditulisnya post ini adalah, untuk menyempurnakan [post sebelumnya]({{ site.url }}/blog/dunst-sebagai-notifikasi-bantuan-pengingat-shortcut) dengan judul yang sama.
 
@@ -33,7 +33,7 @@ Dengan begini, akan lebih sederhana dan singkat proses pemanggilan plain text ya
 Ide ini terinspirasi dari script [**st-urlopener**](https://github.com/thomas154/st-urlopener/blob/master/urlopener) yang digunakan untuk mengambil url pada screen terminal yang terlihat.
 
 
-# Proses Pembuatan
+## Proses Pembuatan
 
 Sekenarionya akan seperti ini.
 
@@ -43,7 +43,7 @@ Sekenarionya akan seperti ini.
 Langsung saja kita eksekusi.
 
 
-## Pembuatan Script
+### Pembuatan Script
 
 Langsung saja tanpa bertele-tele.
 
@@ -125,7 +125,7 @@ Dengan begini proses pembuatan *script* telah selesai.
 Kita akan lanjut membuat *plain text* yang berisi *keyboard shortcut*.
 
 
-## Pembuatan Plain Text
+### Pembuatan Plain Text
 
 Seperti yang sedikit sudah saya singgung pada *section* di atas.
 
@@ -263,7 +263,7 @@ mod+f                State: Fullscreen []=&lt;&gt;&lt;
 Nah, sekarang tinggal teman-teman racik sendiri *keyboard shortcut* untuk aplikasi yang lain yang teman-teman ingin buatkan notifikasi pengingatnya.
 
 
-# Hasilnya
+## Hasilnya
 
 Kalau sekenario di atas sudah teman-teman selesaikan, hasilnya akan seperti ini.
 
@@ -302,7 +302,7 @@ Terima kasih untuk Nabil yang sudah menginspirasi untuk memperbaiki pola kerja d
 Terima kasih sudah mampir kawan.
 
 
-# Referensi
+## Referensi
 
 1. [github.com/thomas154/st-urlopener/blob/master/urlopener](https://github.com/thomas154/st-urlopener/blob/master/urlopener) \
    Diakses tanggal: 2019-06-17

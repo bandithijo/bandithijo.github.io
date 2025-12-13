@@ -10,15 +10,15 @@ tags: ["gnome"]
 description: "GNOME memang terkenal Desktop Environment yang berat dan membutuhkan banyak resource. Namun, saya tidak bisa tidak suka dengan GNOME. Mungkin karena saya cukup lama dengan OSX yang menjadi rujukan UI/UX design dari GNOME, sehingga saya merasa cukup nyaman menggunakan GNOME. Di catatan kali ini, saya akan mencatat tips ketika saya menggunakan GNOME di Arch Linux."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 {{ page.description }}
 
 
-# Prerequisite
+## Prerequisite
 
 
-## dconf
+### dconf
 
 Pasang paket `dconf` dan `dconf-editor`
 
@@ -27,13 +27,13 @@ $ sudo pacman -S dconf dconf-editor
 ```
 
 
-# Tips
+## Tips
 
 
-## GDM (GNOME Display Manager (Login Manager))
+### GDM (GNOME Display Manager (Login Manager))
 
 
-### GDM: Login Screen Logo (Bottom Logo)
+#### GDM: Login Screen Logo (Bottom Logo)
 
 GDM di Arch Linux, tidak langsung menampilkan logo distribusi di bagian bawah dari GDM. Kita perlu melakukan setup manual.
 
@@ -66,7 +66,7 @@ logo='/usr/share/pixmaps/archlinux-logo-text-dark.svg'
 > `/usr/share/pixmaps/archlinux-logo-text-dark.svg` sudah secara default disediakan oleh Arch Linux, tinggal digunakan saja.
 
 
-### GDM: Cursor Theme & Size
+#### GDM: Cursor Theme & Size
 
 Untuk mengganti cursor theme dan size pada GDM.
 
@@ -90,10 +90,10 @@ Pada variable `cursor-theme=`, isi dengan cursor theme yang kalian inginkan. Ala
 Pada variable `cursor-size=`, isi dengan size yang tersedia dari cursor theme, umumnya antara: 16, 24, 36, 48. Saya menggunakan 48, karena saya menggunakan layar FHD (1920x1080).
 
 
-## Gnome Desktop
+### Gnome Desktop
 
 
-### Disable Super+Num function on Dash
+#### Disable Super+Num function on Dash
 
 For disable Super+Number function on Dash,
 
@@ -102,7 +102,7 @@ $ for i in $(seq 1 9); do gsettings set org.gnome.shell.keybindings switch-to-ap
 ```
 
 
-### Setup cursor size on GNOME for Gtk apps
+#### Setup cursor size on GNOME for Gtk apps
 
 For check the current cursor size,
 
@@ -121,7 +121,7 @@ $ gsettings set org.gnome.desktop.interface cursor-size 32
 ```
 
 
-### Setup cursor size on GNOME for Qt apps
+#### Setup cursor size on GNOME for Qt apps
 
 Just set the env `XCURSOR_SIZE=` before run the Qt apps, or define on local/global env file.
 
@@ -133,10 +133,10 @@ export XCURSOR_SIZE=36
 ```
 
 
-## Extensions
+### Extensions
 
 
-### Dash to Dock: Disable Default Super App Key (Super+Num)
+#### Dash to Dock: Disable Default Super App Key (Super+Num)
 
 Secara default, kalau kita menekan <kbd>SUPER</kbd>+<kbd>Number</kbd>, maka app yang terdapat pada Dash pada index yang terpanggil, akan terbuka. Fitur ini sangat mengganggu bagi saya yang terbiasa menggunakan Window Manager (WM). Saya akan disable fitur ini.
 
@@ -153,12 +153,12 @@ $ for i in $(seq 1 9); do gsettings set org.gnome.shell.keybindings switch-to-ap
 ```
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Terima kasih sudah mampir yaa.
 
 
-# Referensi
+## Referensi
 
 1. [Arch Wiki: GDM > Login Screen Logo](https://wiki.archlinux.org/title/GDM#Login_screen_logo) \
    Diakses tanggal: 2023-06-27

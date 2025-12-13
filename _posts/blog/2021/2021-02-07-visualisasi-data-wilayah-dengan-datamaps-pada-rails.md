@@ -10,12 +10,12 @@ tags: ["javascript", "rails"]
 description: "Mungkin teman-teman pernah melihat interaktif peta yang memvisualisasikan data tertentu, misal data jumlah penduduk setiap provinsi yang ditampilkan dalam bentuk peta. Catatan kali ini saya akan membahas bagaimana cara membuat hal tersebut dengan datamaps Javascript library pada Rails."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 2.7.2` `rails 6.1.1` `datamaps 0.5.9`
 
 
-# Latar Belakang
+## Latar Belakang
 
 Misalkan saya memiliki sebuah data peta sebaran kasus kumulativ COVID-19 seluruh provinsi di Indonesia.
 
@@ -116,12 +116,12 @@ Visualisasi peta di atas menggunakan bantuan **datamaps** yang menggunakan **D3.
 > *Datamaps is intended to provide some data visualizations based on geographical data. It's **SVG-based**, can scale to any screen size, and includes everything inside of 1 script file. It heavily relies on the amazing **D3.js** library*.
 
 
-# Permasalahan
+## Permasalahan
 
 Bagaimana caranya menghubungkan data yang ada di database Rails, dengan datamaps?
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Kalau kita lihat pada bagian `data: {...}`,
 
@@ -151,7 +151,7 @@ Data contohnya seperti di atas.
 Kita akan mengganti data statis tersebut dengan data yang ada di database yang kita miliki.
 
 
-## ActionController
+### ActionController
 
 Kalau melihat format data di atas pada baris 12-15, `data: {...}` tersebut memiliki format persatuan data, seperti ini:
 
@@ -190,7 +190,7 @@ Baris 6, saya menggunakan method `.join` untuk membuat array mejadi string yang 
 ```
 
 
-### Mengkonversi Nama Provinsi ke Kode Provinsi
+#### Mengkonversi Nama Provinsi ke Kode Provinsi
 
 Kalau teman-teman perhatikan, bagian nama provinsi dan `fillKey:` masih belum sesuai dengan format yang diperlukan.
 
@@ -266,7 +266,7 @@ end
 ```
 
 
-### Mengklasifikasi total_cases Berdasaran Warna
+#### Mengklasifikasi total_cases Berdasaran Warna
 
 Selanjutnya kita perlu mengklasifikasi jumlah dari `total_cases` ke dalam format warna yang tersedia.
 
@@ -326,7 +326,7 @@ end
 ```
 
 
-### Memberikan Delimiter , untuk Ribuan
+#### Memberikan Delimiter , untuk Ribuan
 
 Data **total_cases** tidak memiliki format string berupa delimiter koma (,) untuk memberikan kemudahan dalam membaca satuan ribuan dalam nominal angka.
 
@@ -376,7 +376,7 @@ end
 Instance variable `@cumulative_cases` inilah yang akan kita gunakan pada view template.
 
 
-## ActionView
+### ActionView
 
 Setelah selesai membuat object query di controller, selanjutnya tinggal kita gunakan di view template.
 
@@ -498,7 +498,7 @@ Hanya seperti itu saja.
 Apabila dirasa ada yan kurang pas, teman-teman bisa memodifikiasi dan memperbaiki sesuai keinginan.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -509,7 +509,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [github.com/markmarkoh/datamaps](https://github.com/markmarkoh/datamaps) \
    Diakses tanggal: 2021-02-07

@@ -10,7 +10,7 @@ tags: ["network manager"]
 description: "Terdapat banyak sekali tools yang dapat kita gunakan untuk mengatur jaringan di GNU/Linux. Perkakas-perkakas ini sering diistilahkan dengan Comprehensive Network Manager, atau Network Manager saja. Tapi jangan salah paham yaa, karena salah satu Network Manager tersebut ada yang bernama NetworkManager."
 ---
 
-# Prakata
+## Prakata
 
 Sebagai pengguna Arch Linux, kita dibebaskan untuk memilih **Network Manager** yang akan kita gunakan untuk menghandle jaringan (*networking*).
 
@@ -35,7 +35,7 @@ Untuk catatan kali ini, saya hanya akan mendokumentasikan mengenai **NetworkMana
 Saya juga merekomendasikan untuk teman-teman yang baru menggunakan Arch Linux atau yang ingin praktis dan simpel seperti saya, NetworkManager adalah pilihan yang mudah.
 
 
-# Instalasi
+## Instalasi
 
 Proses pemasangan paket `networkmanager` juga sangat mudah.
 
@@ -69,14 +69,14 @@ $ sudo systemctl start NetworkManager.service
 Perhatikan huruf besar dan kecilnya!
 
 
-# Konfigurasi
+## Konfigurasi
 
 Sejujurnya saya bingung apa yang harus dikonfigurasi, karena semua sudah dihandle oleh NetworkManager.
 
 Kita hanya perlu memasukkan profil jaringan seperti SSID, dll.
 
 
-# Paket Tambahan
+## Paket Tambahan
 
 Ada beberapa paket tambahan yang saya pergunakan, Seperti
 
@@ -91,10 +91,10 @@ Ada beberapa paket tambahan yang saya pergunakan, Seperti
    - dan masih banyak lagi, silahkan lihat di [Arch Wiki](https://wiki.archlinux.org/index.php/NetworkManager#VPN_support)
 
 
-# Tampilan
+## Tampilan
 
 
-## GUI
+### GUI
 
 Berikut ini adalah beberapa tampilan NetworkManager menggunakan GUI.
 
@@ -107,7 +107,7 @@ Gambar 1. nm-applet
 Gambar 2. nm-connection-editor
 
 
-## TUI
+### TUI
 
 Untuk saat ini, saya lebih sering menggunakan TUI, dan tidak menggunakan kedua paket di atas untuk memilih network profile.
 
@@ -132,7 +132,7 @@ Gambar 6. nmtui, bagian Set system hostname
 Sejak menggunakan `nmtui`, saya tidak memerlukan lagi `nm-applet`. Sehingga membuat saya terbebas dari menggunakan trayicon.
 
 
-## Memanfaatkan Rofi untuk Interface NetworkManager
+### Memanfaatkan Rofi untuk Interface NetworkManager
 
 Saya tidak menggunakan trayicon untuk memilih network dan memanggil Network Manager Settings. Saya lebih senang tidak menggunakan trayicon agar tampilan desktop tetap clean dan tidak terlalu banyak icon yang tidak konvergen dengan theme.
 
@@ -156,7 +156,7 @@ Aplikasi ini dapat kita gunakan untuk memilih-mili jaringan dan beberapa menu ja
 Gambar 7. Tampilan NetworkManager_dmenu dengan Rofi
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sekali waktu, apabila ada waktu luang, coba sempatkan untuk mencoba network manager yang lain juga.
 
@@ -181,7 +181,7 @@ Karena tulisan ini bukan ditujukan untuk membuat tandingan dari dokumentasi resm
 Sepertinya ini saja yang dapat saya tulisakan. Mudah-mudahan dapat bermanfaat bagi teman-teman yang memerlukan.
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/index.php/Network_configuration#Network_managers](https://wiki.archlinux.org/index.php/Network_configuration#Network_managers) \
    Diakses tanggal: 2019-02-09

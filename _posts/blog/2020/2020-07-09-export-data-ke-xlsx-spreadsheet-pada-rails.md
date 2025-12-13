@@ -10,24 +10,24 @@ tags: ["rails"]
 description: "Saya memeiliki sejumlah data yang ingin saya eksport ke dalam bentuk spreadshet dengan format XLSX. Apakah saya dapat melakukannya dengan Ruby on Rails?"
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 2.6.6` `rails 5.2.4` `postgresql 12.3`
 
 
-# Sekenario Masalah
+## Sekenario Masalah
 
 Saya punya data yang ingin di-*eksport* ke dalam bentuk *spreadsheet* dengan format **.xlsx**.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Kita dapat menggunakan bantuan gem [**axlsx**](https://github.com/randym/axlsx) & [**axlsx_rails**](https://github.com/caxlsx/caxlsx_rails). Namun, gem ini sudah tidak dimaintain lagi.
 
 Nah, kita akan menggunakan versi yang dimaintain oleh komunitas bernama [**cxlsx**](https://github.com/caxlsx/caxlsx) & [**cxlsx_rails**](https://github.com/caxlsx/caxlsx_rails).
 
 
-# Instalasi
+## Instalasi
 
 Pasang gem yang dibutuhkan di `Gemfile`.
 
@@ -49,12 +49,12 @@ $ bundle install
 ```
 
 
-# Implementasi
+## Implementasi
 
 Kita akan membuat tombol pada view template dan akan di-respon oleh controller.
 
 
-## Controller
+### Controller
 
 Saya akan mengawali dengan membuat response ke controller apabila tombol pada view template di tekan.
 
@@ -80,7 +80,7 @@ end
 Apabila ingin merubah nama file, dapat merubah pada bagian `filename=...` di baris ke-13 tersebut.
 
 
-## View Template
+### View Template
 
 Selanjutnya, kita buat link atau button yang akan di respon oleh controller.
 
@@ -126,7 +126,7 @@ Pada baris ke-7, adalah salah satu bentuk lain cara pemanggilan Array di Ruby.
 Selesai!
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Catatan ini bukan merupakan tutorial, saya hanya ingin memberikan gambaran betapa mudahnya mengeksport data ke dalam format **.xlsx** dari Rails menggunakan **cxlsx** dan **cxlsx_rails**.
 
@@ -143,7 +143,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [github.com/randym/axlsx](https://github.com/randym/axlsx) \
    Diakses tanggal: 2020-07-09

@@ -13,12 +13,12 @@ description: "Saat ini saya sudah tidak lagi menggunakan Vim, karena beberapa al
 ![Banner](https://s20.postimg.cc/wzvhg7ngd/banner_post_09.png)
 
 
-# Latar Belakang
+## Latar Belakang
 
 [**Vim**](https://www.vim.org/) adalah *text editor* yang sejak 2016 saya gunakan. Keputusan untuk mempelajari Vim pada tahun itu, semakin saya rasakan manfaatnya seiring berjalannya waktu. Keuntungan-keuntungan yang diceritakan oleh orang-orang yang sudah terlebih dahulu menggunakan Vim, juga saya alami sekarang. Bagi saya yang hampir 80% sehari-hari menggunakan *text editor*, mempelajari Vim adalah investasi jangka panjang yang berharga. Jadi buat kalian yang sedang mempelajari Vim, maju terus pantang mundur. Buat yang belum tahu apa itu Vim, saya tidak merekomendasikan. Hehehe.
 
 
-# Permasalahan
+## Permasalahan
 
 Saat ini saya sudah tidak lagi menggunakan Vim, karena beberapa alasan yang salah satunya adalah dukungan terhadap *clipboard* -- salah satu kegunannya adalah *copy paste* dari Vim ke dalam sistem dan sebaliknya. Sehingga saya lebih memilih turunan dari Vim yang membawa lebih banyak fitur, yaitu [**NeoVim**](https://neovim.io/).
 
@@ -27,7 +27,7 @@ NeoVim juga mendukung mime. Sehingga kita dapat langsung membuka berbagai macam 
 Atas dasar ini, saya akan merubah konfigurasi agar NeoVim dapat dibuka pada *terminal emulator* yang saya gunakan. Terkadang saya menggunakan **URXVT**, namun saat ini saya sedang menggunakan **XFCE4-Terminal**.
 
 
-# Solusi
+## Solusi
 
 Kita perlu memindahkan file launcher `vim.desktop` atau `nvim.desktop` -- tergantung kalian menggunakan Vim atau NeoVim. Lokasinya berada pada `/usr/share/applications/`, kita pindahkan ke dalam direktori lokal kita, yaitu `~/.local/share/applications/`.
 
@@ -67,7 +67,7 @@ Apabila berhasil, nanti akan seperti ini hasilnya.
 Gambar 1. Open With Text Format pada PCMANFM File Manager
 
 
-# Referensi
+## Referensi
 
 1. [askubuntu.com/questions/788736/open-vim-in-xfce4-terminal-from-thunar](https://askubuntu.com/questions/788736/open-vim-in-xfce4-terminal-from-thunar) \
    Diakses tanggal: 2018-04-28

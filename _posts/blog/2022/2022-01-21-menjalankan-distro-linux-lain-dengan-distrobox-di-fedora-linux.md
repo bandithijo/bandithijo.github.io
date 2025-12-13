@@ -10,7 +10,7 @@ tags: ["distrobox", "container"]
 description: "Dengan adanya teknologi container, untuk menggunakan distribusi lain langsung dari dalam Terminal Emulator distro yang kita gunakan tidak lagi rumit. Mudahnya seperti berpindah shell dengan SSH. Distrobox adalah tool yang akan menjembatani kita masuk ke dalam distribusi lain dalam bentuk container. Cara ini, dapat saya manfaatkan untuk memasang paket yang tidak tersedia di distro yang saya gunakan."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 Dengan adanya teknologi container, untuk menggunakan distribusi lain langsung dari dalam Terminal Emulator distro yang kita gunakan tidak lagi rumit.
 
@@ -28,7 +28,7 @@ Distrobox menggunakan **podman** atau **docker** untuk membantu kita dalam mempe
 Praktis dan tidak perlu konfigurasi tambahan. Cukup buat distro container yang diinginkan, cari aplikasi yang ingin dipasang, dan voila! aplikasi dapat dinikmati dari host sistem. Semudah dan sepraktis itu!
 
 
-# Target
+## Target
 
 Objektif atau tujuan catatan ini adalah untuk mencoba memasang aplikasi-aplikasi Terminal & GUI yang tidak tersedia pada distribusi Fedora Linux.
 
@@ -42,7 +42,7 @@ Beberapa dari aplikasi tersebut, antara lain:
 1. [**WhatsApp Nativevier**](https://aur.archlinux.org/packages/whatsapp-nativefier/), WhatsApp desktop built with nativefier (electron)
 
 
-# Instalasi
+## Instalasi
 
 Pada distribusi Fedora Linux, sudah terpasang **Podman**. Kita tinggal memasang **Distrobox**.
 
@@ -51,7 +51,7 @@ $ sudo dnf in distrobox
 ```
 
 
-# Penggunaan
+## Penggunaan
 
 Distrobox menyediakan 6 perintah yang dapat kita gunakan.
 
@@ -76,12 +76,12 @@ $ distrobox list
 ```
 
 
-## Membuat Container
+### Membuat Container
 
 Untuk membuat container, kita dapat menggunakan perintah `distrobox-create IMAGE`.
 
 
-### Tanpa nama image
+#### Tanpa nama image
 
 Kalau digunakan tanpa parameter apapun,
 
@@ -98,7 +98,7 @@ Trying to pull registry.fedoraproject.org/fedora-toolbox:35...
 Maka, image yang dipilihkan akan menggunakan **fedora-toolbox:35** dari **registry.fedoraproject.org**.
 
 
-### Dengan nama image
+#### Dengan nama image
 
 Apabila ingin menggunakan image lain, pada catatan ini saya menggunakan image Arch Linux Latest dari Docker Hub Registry.
 
@@ -123,7 +123,7 @@ $ distrobox-create --name arch-distrobox --image archlinux:latest
 > ```
 
 
-## Melihat daftar container
+### Melihat daftar container
 
 Untuk melihat daftar container yang sudah pernah dibuat, gunakan perintah,
 
@@ -138,7 +138,7 @@ ba3ee7918d87 | arch-distrobox            | Created         | docker.io/library/a
 ```
 
 
-## Masuk ke dalam container
+### Masuk ke dalam container
 
 Untuk masuk ke dalam container, gunakan perintah,
 
@@ -182,7 +182,7 @@ arch-distrobox.fedora-thinkpad
 `fedora-thinkpad` adalah hostname system yang saya pergunakan.
 
 
-## Konfigurasi Package Manager
+### Konfigurasi Package Manager
 
 Karena saya menggunakan Arch Linux, saya akan merubah beberapa konfigurasi default yang dibuat oleh Arch Linux image container.
 
@@ -235,11 +235,11 @@ Tujuannya agar tampilan pacman lebih berwarna dan juga terdapat progressbar agar
 
 
 
-## Pasang Aplikasi
+### Pasang Aplikasi
 
-### Aplikasi yang berjalan di Terminal
+#### Aplikasi yang berjalan di Terminal
 
-#### Case 1: neofetch
+##### Case 1: neofetch
 
 Saya akan coba pasang `neofetch`. Kebetulan **neofetch** tidak tersedia pada Arch Linux docker image yang kita pasang sebagai container.
 
@@ -309,8 +309,8 @@ Setelah selesai, kita bisa menjalankan `neofetch`.
 
 Gambar 1. Shell default host system (kiri) & Shell pada arch-distrobox container (kanan)
 
-<br>
-#### Case 2: gping
+
+##### Case 2: gping
 
 ```
 community/gping 1.2.7-1
@@ -376,8 +376,8 @@ else
 fi
 ```
 
-<br>
-#### Case 3: yay
+
+##### Case 3: yay
 
 Salah satu alasan saya memilih Arch Linux agar dapat memanfaatkan AUR.
 
@@ -420,9 +420,9 @@ Sip! Sekarang kita dapat memasang paket-paket dari AUR dengan menggunakan `yay` 
 > Direktori **yay** hasil git clone sebelumnya, dapat kita hapus.
 
 
-### Aplikasi GUI
+#### Aplikasi GUI
 
-#### Case 1: Spotify (Electron)
+##### Case 1: Spotify (Electron)
 
 `spotify` dapat kita temukan di AUR, dan kebetulan ada beberapa nama paket yang memiliki nama yang mirip.
 
@@ -479,8 +479,8 @@ Berikut ini demonstrasinya,
 
 Gambar 3. Demonstrasi pemasangan Spotify menggunakan yay dengan Distrobox
 
-<br>
-#### Case 2: Beekeeper Studio (AppImage)
+
+##### Case 2: Beekeeper Studio (AppImage)
 
 > Paket yang menggunakan AppImage, memerlukan paket `fuse2` untuk dapat dijalankan.
 > ```
@@ -531,7 +531,7 @@ Berikut ini demonstrasinya,
 Gambar 4. Demonstrasi pemasangan Beekeeper Studio menggunakan yay pada Distrobox
 
 
-## Ekspor Aplikasi dari Container ke Host
+### Ekspor Aplikasi dari Container ke Host
 
 Dari case-case pemasangan beberapa aplkasi di atas, saya sudah menunjukkan cara mengekspor aplikasi dari container ke host system.
 
@@ -539,7 +539,7 @@ Kita dapat mengekspor aplikasi GUI, aplikasi terminal, bahkan systemd service.
 
 Untuk melakukan export, kita menggunakan perintah `distrobox-export` dari dalam container.
 
-### GUI Application
+#### GUI Application
 
 Misal, mengekspor aplikasi chromium dari container ke host.
 
@@ -572,7 +572,7 @@ chromium will disappear from your applications list in a few seconds.
 Maka, chromium tidak lagi tersedia di host system kita.
 
 
-### Terminal Application
+#### Terminal Application
 
 Misal, mengekspor aplikasi gping dari container ke host.
 
@@ -603,7 +603,7 @@ OK!
 Maka, gping tidak lagi tersedia di terminal host system kita.
 
 
-## Menghapus Container
+### Menghapus Container
 
 Untuk menghapus container, kita perlu memastikan bahwa container tidak sedang berjalan dengan menggunakan perintah,
 
@@ -656,7 +656,7 @@ Proses menghapus container sudah selesai.
 Panduan lebih lengkapnya dapat dilihat di `$ podman rm --help`.
 
 
-## Menghapus Image Container
+### Menghapus Image Container
 
 Container yang kita gunakan dibuat dengan menggunakan image.
 
@@ -706,7 +706,7 @@ Selesai, image beserta container yang menggunakan image tersebut telah berhasil 
 Panduan lebih lengkapnya dapat dilihat di `$ podman image rm --help`.
 
 
-## Menghapus Unused Data
+### Menghapus Unused Data
 
 > Command ini cukup beresiko.
 > 
@@ -747,7 +747,7 @@ Are you sure you want to continue? [y/N] █
 Panduan lebih lengkapnya dapat dilihat di `$ podman system prune --help`.
 
 
-# Tambahan
+## Tambahan
 
 Tentu saja, catatan ini tidak dapat mengcover semua dari dokumentasi Distrobox:
 
@@ -756,7 +756,7 @@ Tentu saja, catatan ini tidak dapat mengcover semua dari dokumentasi Distrobox:
 1. untuk melihat beberapa contoh penggunaan yang lain dapat mengunjungi halaman [**github:distrobox:usage**](https://github.com/89luca89/distrobox/blob/main/docs/usage/usage.md)
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -767,7 +767,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [https://twitter.com/LucaDiMaio11](https://twitter.com/LucaDiMaio11) \
    Diakses tanggal: 2022-01-22

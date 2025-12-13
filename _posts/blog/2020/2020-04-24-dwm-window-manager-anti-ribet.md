@@ -10,7 +10,7 @@ tags: ["dwm"]
 description: "Saya memulai perjalanan ke dunia Window Manager mulai dari i3WM. Namun, sebenarnya Window Manager yang pertama kali membuat saya semakin gregetan ingin menggunakan Window Manager adalah DWM. Memang bukan yang paling fancy."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 Sejak Oktober 2017, saya mulai masuk ke dunia Window Manager. Diawali dengan i3WM. Hingga April 2019, Saya mulai berpindah menggunakan BSPWM. Dan April 2020, saya kembali melangkahkan kaki ke Window Manger yang lain, yaitu DWM.
 
@@ -35,7 +35,7 @@ Seperti pepatah lama, "Berakit-rakit ke hulu, bersenang-senang kemudian."
 > Karena apabila dibandingkan berdasarkan kemampuan untuk mengelola window, i3WM dan BSPWM "jauh" lebih mumpuni.
 
 
-# Salah Satu Filosofi dari DWM
+## Salah Satu Filosofi dari DWM
 
 DWM merupakan salah satu dari project yang dikembangkan oleh [**suckkless.org**](https://suckless.org/). Project-project yang mereka kembangkan ingin lebih berfokus pada **advanced** dan **experienced** computer user. Biasanya propietary software dan kebanyakan project-project open source yang mainstream, lebih berfokus pada pengguna dengan tingkat kemahiran **average** atau **non-technical**. Mereka (suckless) berpikir **experienced** user kebanyakan lebih sering diabaikan.
 
@@ -48,7 +48,7 @@ DWM merupakan salah satu dari project yang dikembangkan oleh [**suckkless.org**]
 > Maka dari itu, kalau teman-teman tidak memantaskan diri sebagai **advanced** dan **experienced** computer user, sebaiknya tidak menggunakan DWM atau tools-tools buatan suckless dulu yaa.
 
 
-# Alasan Migrasi ke DWM
+## Alasan Migrasi ke DWM
 
 **Lah, kalau i3WM dan BPSWM jauh lebih mumpuni untuk mengelola window, kenapa pindah, mas Bro?**
 
@@ -85,7 +85,7 @@ Saya lebih banyak menggunakan model tilling layout yang mana window ke-1 lebih s
 Eits! Namun, bukan berarti DWM hanya sesederhana itu. Buat yang menggemari kompleksitas dalam menggunakan Tilling Window Manager, kalian masih dapat meracik DWM sesuai keinginan yang kalian perlukan dengan menambah *patch*.
 
 
-# Patching
+## Patching
 
 Ada banyak sekali daftar *patch* yang tersedia.
 
@@ -134,7 +134,7 @@ Tulisan ini saya update 3 Januari 2021, saya sudah memasang 31 pathces.
 Saya meracik semua *patches* tersebut menjadi Git branches. Masing-masing *patch*, memiliki satu branch. Setelah itu, untuk mengcompila mejadi dwm yang utuh, saya menggunakan bantuan beberapa script. Script ini bertugas mengautomatisasi proses yang berulang-ulang. Tujuannya jelas untuk mempermudah saya agar tidak kelelahan berlama-lama depan laptop.
 
 
-## Bagaimana Cara Patching?
+### Bagaimana Cara Patching?
 
 Seperti yang dijelaskan pada website [suckless.org/hacking](https://suckless.org/hacking/). Terdapat 2-3 cara.
 Namun, karena saya menggunakan git, maka, saya akan memanfaatkan cara *patching* menggunakan git.
@@ -154,7 +154,7 @@ Biasanya manual patching dilakukan apabila patching tersebut tidak dibuat dengan
 Manula patching adalah melakukan patching dengan meng-copy-kan baris demi baris yang ada di dalam *patch* ke dalam file-file yang berkaitan di dalam direktori dwm kita.
 
 
-## Bagaimana Cara Compiling?
+### Bagaimana Cara Compiling?
 
 Cara saya membangun DWM mungkin tidak sama seperti kebanyakan orang.
 
@@ -173,7 +173,7 @@ Berikut ini daftar script yang saya gunakan.
 Nah, berikut ini adalah isi dari script-script tersebut.
 
 
-# Suckless Script
+## Suckless Script
 
 Created by: HexDSL
 
@@ -433,10 +433,10 @@ Gambar 1. RicingShow: DeWayEm Project 2020-05
 Repositorinya dapat dilihat [di sini](https://github.com/bandithijo/dwm).
 
 
-# Tambahan
+## Tambahan
 
 
-## Patch from User
+### Patch from User
 
 **sracthpad by Gaspar Vardanyan**
 
@@ -455,10 +455,10 @@ Di dalam post tersebut, terdapat balasan dari user yang bernama **fake_larry**, 
 Kalian dapat menyalin patch tersebut atau dapat mendownload versi yang sudah saya jadikan file [di sini](https://github.com/bandithijo/sucklessthing/blob/master/patches/dwm/dwm-centerkeybinding-20190813-4adc917.diff).
 
 
-## Personal Branch
+### Personal Branch
 
 
-### config branch
+#### config branch
 Saya membuat branch yang isinya kurang lebih seperti personal konfigurasi untuk menampung beberapa pengaturan seperti font, border, gap, window rules, dan keybind.
 
 Jadi, saya menambahkan 1 branch yang bukan termasuk dwm *patch*, yaitu:
@@ -606,7 +606,7 @@ static Key keys[] = {
 > Catatan saya dalam menggunakan SXHKD, [**SXHKD, Simple X Hotkey Daemon**](https://bandithijo.github.io/blog/sxhkd-simple-x-hotkey-daemon)
 
 
-## Status Bar
+### Status Bar
 
 Seperti yang teman-teman ketahui, sebelumnya saya menggunakan Polybar. Namun, setelah migrasi menggunakan DWM, saya memutuskan untuk putus dengan Polybar dan memilih untuk meracik bar sendiri, tujuannya agar lebih sederhana.
 
@@ -805,7 +805,7 @@ fi
 ```
 
 
-## Autorun
+### Autorun
 
 > INFO
 > 
@@ -898,7 +898,7 @@ done
 ```
 
 
-# Instalasi
+## Instalasi
 
 Saya menyimpan konfigurasi yang sudah saya buat dalam bentuk branch kemudian saya simpan di GitHub.
 
@@ -1040,7 +1040,7 @@ DONE
 Perhatikan pesan yang sudah saya berikan mengenai statusbar, keyboard, dan autostart.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Pasti tulisan ini akan kadaluarsa dan ketinggalan update terabru dari yang saya lakukan.
 
@@ -1060,7 +1060,7 @@ Untuk mendapatkan versi update terbaru, kalian dapat langsung mengunjungi bebera
     Repo ini berisi master slstatus dengan branch config yang sudah saya modifikasi.
 
 
-# Referensi
+## Referensi
 
 1. [suckless.org/](http://suckless.org/) \
    Diakses tanggal: 2020-04-24

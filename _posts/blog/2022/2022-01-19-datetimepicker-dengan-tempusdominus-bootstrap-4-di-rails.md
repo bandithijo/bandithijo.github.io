@@ -10,11 +10,11 @@ tags: ["rails", "javascript"]
 description: "Konsistensi UI di setiap browser yang digunakan oleh user untuk membuka web aplikasi yang kita bangun, merupakan hal yang penting. Date time picker sudah disediakan oleh browser modern, namun baik Google Chrome maupun Firefox memiliki tampilan yang berbeda. Kita perlu menyeragamkannya dengan menggunakan date time picker pihak ketiga. Kita akan gunakan Javascript library yang bernama Tempus Dominus Bootstrap 4 pada web aplikasi yang dibangun dengan Ruby on Rails 6."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 3.0.3` `rails 6.1.4` `bootstrap 4` `tempusdominus-bootstrap-4 5.39` `jquery 3.6` `moment.js 2.29`
 
-# Problem
+## Problem
 
 Ketidakseragaman style dari date time picker pada browser.
 
@@ -33,7 +33,7 @@ Gambar 1 & 2 di atas menggunakan `date_field`.
 Apabila menggunakan `datetime_field`, Chrome juga dapat memberikan time selection UI di sebelah calendar, sedangkan Firefox tidak memberikan time selection UI, hanya calendar dan input text saja (dicoba: Januari 2022).
 
 
-# Target
+## Target
 
 Menyeragamkan date time picker pada input `date_field`.
 
@@ -67,7 +67,7 @@ Kalau ingin mengikutkan time, dapat menggunakan `datetime_field`.
 <% end %>
 ```
 
-# Instalasi
+## Instalasi
 
 Pada web dokumentasi dari Tempus Dominus - Bootstrap 4, terdapat beberapa cara untuk memasang library ini ke dalam web aplikasi kita. Namun, pada catatan kali ini saya akan menggunakan `yarn` package manager untuk memasang Javascript library ke dalam Rails project.
 
@@ -125,9 +125,9 @@ Kalau sudah selesai, kedua package tersebut akan ditambahkan ke dalam file `pack
 ```
 
 
-# Konfigurasi
+## Konfigurasi
 
-## 1. Konfigurasi Webpack untuk Moment.js
+### 1. Konfigurasi Webpack untuk Moment.js
 
 Definisikan `moment` pada webpacker environment agar dapat dikenali oleh aplikasi.
 
@@ -150,7 +150,7 @@ module.exports = environment
 Baris **9**, adalah pendefinisian `moment` yang perlu dilakukan.
 
 
-## 2. Konfigurasi Javascript
+### 2. Konfigurasi Javascript
 
 Kita perlu melakukan **import** terhadapat **tempusdominus-bootstrap-4** dan **moment** ke dalam aplikasi.
 
@@ -193,7 +193,7 @@ Baris **14**-**15** dan **17**-**22**, adalah bagian yang perlu ditambahkan.
 `autoHide: true`, yang akan membuat popup window datepicker keluar setelah user melakukan pilihan.
 
 
-## 3. Konfigurasi Stylesheet
+### 3. Konfigurasi Stylesheet
 
 Kalau menggunakan cara pemasangan Bootstrap 4 seperti yang saya gunakan, [Memasang Bootstrap 4 pada Rails 6 dengan Yarn](http://localhost:4000/blog/memasang-bootstrap-pada-rails-menggunakan-yarn#3-konfigurasi-stylesheet), maka kita perlu mengimport stylesheet untuk tempusdominus-bootstrap-4 ke dalam file **custom.scss**.
 
@@ -212,7 +212,7 @@ Baris **2**, adalah bagian yang perlu ditambahkan.
 > Telusuri file stylesheet dari Javascript library yang digunakan, di dalam direktori **node_modules** (dalam root project direktori).
 
 
-# Implementasi
+## Implementasi
 
 Langsung saja ke bagian view template, dalam kasus ini, saya memodifikasi inputan date pada file `_form.html.erb`.
 
@@ -260,7 +260,7 @@ Baris **6**-**10**, adalah input tanggal yang tampilannya akan mengikuti browser
 
 Selesai!
 
-# Hasil
+## Hasil
 
 ![Gambar 3](https://i.postimg.cc/85R7P4SS/gambar-02.gif)
 
@@ -275,12 +275,12 @@ Dapat dilihat, baik pada Google Chrome (Kiri) dan Firefox (Kanan), date input fi
 Selain itu, date format yang ditampilkan juga memiliki format **YYYY-MM-DD**.
 
 
-# Demo Project
+## Demo Project
 
 [github:demo_datetimepicker_with_tempusdominus-bootstrap-4](https://github.com/bandithijo/demo_datetimepicker_with_tempusdominus-bootstrap-4)
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -291,7 +291,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date) \
    Diakses tanggal: 2022-01-19

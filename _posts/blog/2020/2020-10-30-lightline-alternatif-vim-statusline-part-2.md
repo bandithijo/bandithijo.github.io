@@ -12,7 +12,7 @@ description: "Pembaharuan konfig dari catatan sebelumnya. Kali ini dengan peruba
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wernight/powerline-web-fonts@ba4426cb0c0b05eb6cb342c7719776a41e1f2114/PowerlineFonts.css">
 
-# Latar Belakang
+## Latar Belakang
 
 Post ini saya tulis sebagai update catatan bagian pertama yang berjudul: <br>
 [**Lightline, Alternatif Vim Statusline**](/blog/lightline-alternatif-vim-statusline).
@@ -28,7 +28,7 @@ Agak lucu rasanya, kalau pada Defx, statusline ditampilkan Git branch, line & co
 Maka, pada buffer Defx, Lightline statusline **tidak diperlukan untuk menampilkan status secara lengkap**.
 
 
-# Instalasi
+## Instalasi
 
 Saya menggunakan **vim-plug**.
 
@@ -38,7 +38,7 @@ Plug 'itchyny/lightline.vim'
 ```
 
 
-# Konfigurasi
+## Konfigurasi
 
 Contoh-contoh konfigurasi dapat teman-teman lihat pada halaman GitHub dari Lightline.
 
@@ -238,7 +238,7 @@ set guioptions-=e  " Don't use GUI tabline
 ```
 
 
-# Penjelasan
+## Penjelasan
 
 Seperti yang dapat dilihat di atas, cukup banyak function yang saya definisikan.
 
@@ -247,12 +247,12 @@ Saya membuat function agar lebih leluasa untuk memodifikasi isi dari statusline 
 Function-function modifikasi ini nantinya ditempatkan pada `'component_function': {..}`.
 
 
-# Credit
+## Credit
 
 Terima kasih kepada mas [Yeri](https://yeripratama.com/blog/customizing-vim-lightline/), untuk catatan di blognya.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -264,7 +264,7 @@ Terima kasih.
 
 (^_^)
 
-# Referensi
+## Referensi
 
 1. [github.com/itchyny/lightline.vim](https://github.com/itchyny/lightline.vim) \
    Diakses tanggal: 2020-10-30

@@ -10,27 +10,27 @@ tags: ["rails"]
 description: "Saya memeiliki sejumlah data yang ingin saya eksport ke dalam bentuk CSV. Apakah saya dapat melakukannya pada Ruby on Rails?"
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 2.6.6` `rails 5.2.4` `postgresql 12.3`
 
 
-# Sekenario Masalah
+## Sekenario Masalah
 
 Saya punya data yang ingin di-*eksport* ke dalam bentuk CSV (*Comma-Separated Value*).
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Ruby menyediakan class CSV yang dapat kita gunakan untuk melakukan baca & tulis.dari Strings atau IO objects.
 
 
-# Implementasi
+## Implementasi
 
 Kita akan membuat tombol untuk men-download file CSV pada view template dan akan di-respon oleh controller.
 
 
-## Controller
+### Controller
 
 Saya akan mengawali dengan membuat response ke controller apabila tombol pada view template di tekan.
 
@@ -57,7 +57,7 @@ Perhatikan bari ke-11, nantinya, kita akan membuat method `.to_csv()` pada model
 Apabila ingin merubah nama file, dapat merubah pada bagian `filename:...` di baris ke-12 tersebut.
 
 
-## Model
+### Model
 
 Pada model, kita akan menggunakan CSV class yang sudah disediakan oleh Ruby untuk membuat atau menulis file CSV. Kita akan menggunakan method `.generate()`.
 
@@ -89,7 +89,7 @@ Perhatikan pada baris ke-8 `attributes = ...`, ini bernilai Array yang mewakili 
 Baris ke-24 `col_sep: ";'`, adalah pendifinisian untuk *delimiter* atau batas yang digunakan untuk memisahkan antara data. Defaultnya menggunakan ",".
 
 
-## View Template
+### View Template
 
 Selanjutnya, kita buat link atau button yang akan di respon oleh controller.
 
@@ -108,7 +108,7 @@ Bagian yang harus diperhatikan adalah baris ke-3, `..._path(format: "csv")`.
 Selesai!
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Catatan ini bukan merupakan tutorial, saya hanya ingin memberikan gambaran betapa mudahnya mengeksport data ke dalam format **.csv** dari Rails menggunakan **CSV** class yang sudah disediakan oleh Ruby.
 
@@ -125,7 +125,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [dev.to/victorhazbun/export-records-to-csv-files-with-rails-2778](https://dev.to/victorhazbun/export-records-to-csv-files-with-rails-2778) \
    Diakses tanggal: 2020-07-09

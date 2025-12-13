@@ -10,7 +10,7 @@ tags: ["simple terminal", "terminal emulator"]
 description: "Simple Terminal (ST) adalah terminal yang sangat minimalis. Sampai-sampai untuk membuat window title menampilkan isi dari ST, kita perlu mengkonfigurasinya sendiri. Ya, memang beginilah tujuan dari ST. Apabila ada fitur lain yang ingin digunakan, user perlu menambahkan sendiri. Karena kebutuhan masing-masing user dapat berbeda satu dengan yang lain."
 ---
 
-# Prakata
+## Prakata
 
 Simple/Suckless Terminal (st) adalah Terminal Emulator yang saat ini menjadi anak kesayangan saya.
 
@@ -19,7 +19,7 @@ Meskipun, masih terdapat beberapa fungsi-fungsi yang belum bisa saya dapatkan pa
 Kisah migrasi, meng-*compile* dan mem-*patching*-nya dapat teman-teman baca pada posting ini, ["St, Simple Terminal yang Sudah Lama Saya Dambakan"]({{ site.url }}/blog/st-simple-terminal-dari-suckless).
 
 
-# Permasalahan
+## Permasalahan
 
 Saya baru-baru saja menyadari, ternyata terdapat kebutuhan lain lagi dari st yang saya perlukan. Yaitu, "detail" dari Window Title pada st.
 
@@ -30,7 +30,7 @@ Saat ini, Window Title pada st hanya menampilkan tulisan "st" saja. Sedangkan, s
 Gambar 1. Window Title pada st yang statis, hanya menampilkan details berupa tulisan "st"
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Langsung saja tanpa bertele-tele. Merujuk dari dokumentasi online yang bersumber dari **faqs.org** mengenai "Xterm Title", pada bagian "*Printing the current job name*" saya menemukan jawabannya.
 
@@ -79,7 +79,7 @@ Gambar 2. Tampilan detail Window Title yang menampilkan direktori aktif (*Defaul
 Gambar 3. Tampilan detail Window Title saat menjalankan program
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Catatan ini bukan merupakan tandingan dari dokumentasi resmi yang ditulis oleh pengembang aplikasi di atas. Namun, sebagai catatan pribadi yang saya dokumentasikan untuk bahan pengingat di kemudian hari.
 
@@ -90,7 +90,7 @@ Saya kira cukup seperti ini saja.
 Terima kasih.
 
 
-# Referensi
+## Referensi
 
 1. [www.faqs.org/docs/Linux-mini/Xterm-Title.html#s5](http://www.faqs.org/docs/Linux-mini/Xterm-Title.html#s5) \
    Diakses tanggal: 2019-04-15

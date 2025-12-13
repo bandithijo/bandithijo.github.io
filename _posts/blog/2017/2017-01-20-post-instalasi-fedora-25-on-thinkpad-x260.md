@@ -13,12 +13,12 @@ description: "Sudah banyak yang membuat artikel semacam ini, 'Apa yang dilakukan
 ![Banner](https://2.bp.blogspot.com/-x_2guEqX7Gc/WINOrVRgocI/AAAAAAAAEI0/bWUuprh3yaI4c_Z755uTIfZqsMKnx-2XgCLcB/s1600/Default%2BHeader%2BTemplate%2BPost%2B22.png)
 
 
-# Latar Belakang
+## Latar Belakang
 
 Sudah banyak yang membuat artikel semacam ini, “Apa yang dilakukan setelah menginstal Ubuntu, Linux Mint, Fedora, Debian, Kali Linux, Arch Linux” di Internet. Pada artikel kali ini saya akan membuat hal yang sama. Sebenarnya artikel ini lebih baik saya sebut sebagai “dokumentasi”.
 
 
-# Hal-hal Teknis
+## Hal-hal Teknis
 
 Saya melakukan instalasi sistem operasi Fedora 25 Workstation pada notebook Lenovo Thinkpad x260. Yang ternyata tidak ada kendala pada dukungan _hardware_. Berikut adalah tabel keterangannya.
 
@@ -42,15 +42,15 @@ Saya melakukan instalasi sistem operasi Fedora 25 Workstation pada notebook Leno
 | Fingerprint Scanner | **Berfungsi dengan baik** tanpa perlu dikonfigurasi |
 
 
-# Step by Step
+## Step by Step
 
 
-## Konektifitas ke Internet
+### Konektifitas ke Internet
 
 Seperti yang teman-teman ketahui, kita membutuhkan akses ke Internet agar dapat mengunduh aplikasi yang akan kita tambahkan ke dalam sistem operasi Fedora 25 Workstation dari repositori.
 
 
-## Lakukan Update Keseluruhan Sistem Operasi
+### Lakukan Update Keseluruhan Sistem Operasi
 
 Setelah anda memastikan bahwa masalah konektifitas ke internet tidak terdapat kendala, langkah selanjutnya adalah melakukan _update_ keseluruhan sistem operasi. Karena sistem operasi yang telah kita _install_ menggunakan `.iso` _image_ tentu telah mengalami update sejak `.iso` itu dipasang di situs resminya. Oleh karenanya kita perlu untuk melakukan _update_ keseluruhan aplikasi pada sistem operasi menjadi versi terakhir. Dengan cara _copy paste_ kode perintah di bawah ke Terminal.
 
@@ -61,7 +61,7 @@ $ sudo dnf update
 Saya menyarankan untuk `reboot` sistem setelah proses `update` ini selesai.
 
 
-## Menambahkan Repository RPM Fussion
+### Menambahkan Repository RPM Fussion
 
 Kita membutuhkan tambahan repository dari pihak ketiga dengan tujuan memperkaya daftar aplikasi yang dapat kita gunakan pada sistem operasi kita.
 
@@ -78,7 +78,7 @@ $ sudo dnf update
 ```
 
 
-## Instalasi Media Codec
+### Instalasi Media Codec
 
 Fedora tidak langsung dapat memutar musik berformat `.mp3`, `.wav` atau memutar video berformat `.mp4`, `.flv`, `.mkv`, dll, untuk itu kita perlu menginstal _plugin_ / _codec_ untuk multimedia agar dapat diputar pada multimedia _player_ di Fedora kita.
 
@@ -89,7 +89,7 @@ $ su -c 'dnf install gstreamer1-plugins-ugly gstreamer1-plugins-bad-freeworld gs
 ```
 
 
-## Menambahkan Program Applikasi yang Saya Biasa Gunakan
+### Menambahkan Program Applikasi yang Saya Biasa Gunakan
 
 Berikut ini adalah daftar program aplikasi yang biasa saya gunakan untuk mendukung pekerjaan dan aktifitas berkomputasi saya sehari-hari.
 
@@ -129,7 +129,7 @@ $ sudo dnf install gimp inkscape thunderbird blender brasero gcolor2 geany gthum
 Catatan: silahkan hapus aplikasi yang sekiranya tidak begitu anda perlukan.
 
 
-## Menambahkan Fedora Tweak, FEDY
+### Menambahkan Fedora Tweak, FEDY
 
 Fedy adalah aplikasi GUI yang memberikan kemudahan untuk menginstal _multimedia codec_ dan _software_ tambahan yang tidak disertakan oleh repositori resmi Fedora. Seperti dukungan format .mp3, Adobe Flash, Oracle Java, and masih banyak lagi, cukup dengan hanya satu kali klik saja.
 
@@ -167,7 +167,7 @@ Setelah Fedy berhasil diinstal, saatnya kita menginstal aplikasi-aplikasi yang s
 | Microsoft TrueType Core Fonts | Microsoft core fonts |
 
 
-## Install Aplikasi Pendukung Mesin
+### Install Aplikasi Pendukung Mesin
 
 Karena saya menggunakan laptop / notebook, sehingga perlu rasanya untuk menambahkan aplikasi untuk mengatur secara otomatis tentang sumber daya energi di laptop. Untuk itu saya memasang aplikasi bernama TLP.
 
@@ -180,12 +180,12 @@ $ sudo dnf install tlp
 ```
 
 
-# Kesimpulan
+## Kesimpulan
 
 Kesan setelah melakukan instalasi Fedora 25 Workstation pada mesin Lenovo ThinkPad x260 menurut saya sangat-sangat mudah dan tidak ribet. Kompatibilitas hardware yang sudah terpenuhi semua, tidak perlu repot-repot setting seperti yang saya lakukan pada MacBook Pro 8.1 late 2011 saya sebelumnya.
 
 
-# Daftar Referensi
+## Daftar Referensi
 
 1. [rpmfusion.org/Configuration](https://rpmfusion.org/Configuration) \
    Diakses tanggal: 2017-01-20

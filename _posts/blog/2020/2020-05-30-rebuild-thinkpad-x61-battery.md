@@ -10,17 +10,17 @@ tags: ["thinkpad", "battery"]
 description: "Dalam project ini, saya iseng merakit battery untuk ThinkPad X61. Tujuannya agar saya dapat terbebas dari cekikan vendor jualan ThinkPad Battery. Dengan begini, saya tetap dapat menggunakan ThinkPad X61 dalam waktu yang lama tanpa khawatir tercekik dengan biaya battery replacement."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 Sejak memutuskan untuk membeli ThinkPad X61, saya sudah berencana untuk merakit battery sendiri karena tidak ingin tergantung terhadap battery-battery yang dijual di marketplace. Dari Oktober 2018, baru Mei 2020 ini saya berkesempatan untuk mencoba merakit battery sendiri.
 
 Mungkin kali ini belum bisa dikatakn merakit, meskipun memang prosesnya merakit. Namun, untuk saat ini saya sebut dengan *rebuild* atau membangun ulang, karena cell battery yang saya dapatkan adalah cell battery dari bekas battery ThinkPad X260 yang berisi 6 cell yang sudah tidak dapat digunakan (persentase tidak mau naik, hanya 0%).
 
 
-# Proses Perakitan
+## Proses Perakitan
 
 
-## Menggambar Skema Ala-ala
+### Menggambar Skema Ala-ala
 
 Saya mulai dengan menggambar skema wiring ala-ala, agar tidak kehilangan arah saat merakit kembali. Meskipun rangkaian battery ini meruapakan rangkaian paralel sederhana, namun karena saya tidak terbiasa dengan hal-hal seperti ini, lebih baik saya catat. Hehe.
 
@@ -39,7 +39,7 @@ Gambar 2. Cell yang ditunjuk adalah cell yang rusak (bocor)
 Cell ini mengeluarkan cairan, meski tidak terlihat basah namun terasa basah di tangan dan mengeluarkan bau khas bahan battery Li-ion.
 
 
-## Membongkar Rangkaian Battery
+### Membongkar Rangkaian Battery
 
 Setelah cukup yakin bahwa saya mencatat semua yang saya perlukan untuk nantinya dapat saya rangkai kembali, saya mulai membongkar rangkaian. Saya mulai dari melepas kabel-kabel yang terhubung dengan battery.
 
@@ -58,7 +58,7 @@ Gambar 4. Cell dari battery ThinkPad X260 68+
 Dari Gambar 4, terlihat bahwa dari 6 cell, ternyata ada 2 cell yang rusak. Padahal battery case nya masih bagus dan tidak ada menggembung atau terlihat rusak --meskipun akhirnya battery casenya rusak karena saya buka paksa. Pantas saja battery ini sudah tidak dapat digunakan. Ke empat cell yang masing bagus tersebut masih memiliki voltase sebesar 3,6V.
 
 
-## Merakit Battery
+### Merakit Battery
 
 Langkah selanjutnya adalah merakit battery. Karena sebenarnya proyek ini hanya uji coba, saya tidak mempersiapkan bahan-bahan dengan baik. Termasuk plat yang saya tidak punya. Lantas saya menggunakan potongan kabel kecil bekas dari kabel penyambung USB.
 
@@ -79,12 +79,12 @@ Sambil dirakit, setiap blok pararelnya, jangan lupa sambil dilakukan pengukuran 
 ***Hasilnya menyusul yaa, lupa difoto =p***
 
 
-## Pengukuran Voltase
+### Pengukuran Voltase
 
 Setelah battery selesai dirakit, saatnya pengukuran voltase bagian akhir. pabila setiap battery bervoltase 3,6V dikalikan 4 cell, berarti seharusnya akan memiliki total 14,4V.
 
 
-### Pengukuran Battery Bawaan
+#### Pengukuran Battery Bawaan
 
 ![Gambar 6](https://i.postimg.cc/rpPww0h4/gambar-06.jpg)
 
@@ -132,7 +132,7 @@ Capacity                                                    = 2065.5 [%] 👈️
 Bisa dilihat, pada bagian yang saya marking, menunjukkan value yang aneh.
 
 
-### Pengukuran Battery Rebuild
+#### Pengukuran Battery Rebuild
 
 Kemudian, saya mengukur battery yang saya rakit (*rebuild*).
 
@@ -232,7 +232,7 @@ $ sudo powertop --calibrate
 Saya juga sedikit terkejut karena setelah dikalibrasi dengan powertop, dapat menambah efisiensi penggunaan power menjadi 30 menit lebih lama, yang awalnya hanya bertahan 30 menitan, sekarang dapat mencapai 1 jam. Padahal saya melakukan pengetesan sambil menonton YouTube.
 
 
-# Video
+## Video
 
 {% youtube GGiT3v6GM9w %}
 
@@ -241,7 +241,7 @@ Saya juga sedikit terkejut karena setelah dikalibrasi dengan powertop, dapat men
 Dari video di atas, terlihat saya sedang menguji coba penggunaan battery yang sudah di rebuild ke laptop. Saya ingin melihat apakah ada indikasi *whitelisting* oleh BIOS atau tidak.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Saat tulisan ini dibuat, sudah hari kedua saya mengguanakan battery ini. Dan sejauh ini tidak ada masalah sama sekali.
 
@@ -250,7 +250,7 @@ Sejujurnya ada sedikit perasaan yang mengganjal di hati saya. Yaitu tentang pemb
 Saya menyertakan beberapa referensi yang belum sempat saya baca-baca. Mungkin teman-teman memerlukannya.
 
 
-# Referensi
+## Referensi
 
 1. [IBM Thinkpad Battery Re-Celling Battery Rebuild Tutorial](https://forum.thinkpads.com/viewtopic.php?t=121516) \
    Diakses tanggal: 2020-05-30

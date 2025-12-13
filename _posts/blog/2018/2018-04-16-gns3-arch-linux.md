@@ -13,7 +13,7 @@ description: "Panduan dan catatan untuk memasang GNS3 mungkin lebih banyak untuk
 ![Banner](https://s20.postimg.cc/yln43s5fh/banner_post_03.png)
 
 
-# Latar Belakang
+## Latar Belakang
 
 Beberapa waktu yang lalu saya mengikuti webminar (web seminar) tentang *Network Automation* menggunakan Python. Aplikasi yang digunakan pada webminar tersebut adalah GNS3. Saya sudah mengenal aplikasi ini sejak 2016, namun belum pernah sama sekali menggunakannya.
 
@@ -22,7 +22,7 @@ Kebanyakan tutorial untuk melakukan instalasi GNS3 diperuntukkan untuk sistem op
 Sebenarnya GNS3 sudah terdapat pada AUR (*Arch User Repository*) namun saya kesulitan untuk mengkonfigurasinya. Kemudian saya melakukan pencarian hingga menemukan dokumentasi yang langsung diarahkan oleh GNS3 untuk instalasi dan konfigurasi GNS3 pada Arch Linux, [di sini](https://gns3.com/news/article/install-and-configure-gns3-on-ar).
 
 
-# Komponen yang Diperlukan
+## Komponen yang Diperlukan
 
 Pada dokumentasi ini akan dibahas mengenai proses instalasi:
 
@@ -33,15 +33,15 @@ Pada dokumentasi ini akan dibahas mengenai proses instalasi:
 5. [VirtualBox](https://www.archlinux.org/packages/community/x86_64/virtualbox/)
 
 
-# Prasyarat
+## Prasyarat
 
 Syarat minimal yang diperlukan adalah tentu saja distribusi sistem operasi Arch Linux.
 
 
-# Instalasi & Konfigurasi Komponen
+## Instalasi & Konfigurasi Komponen
 
 
-## Dynamips
+### Dynamips
 
 Pasang dependensi untuk **Dynamips**.
 
@@ -87,7 +87,7 @@ $ getcap $(which dynamips)
 Apabila tampil *output* seperti di atas, artinya proses instalasi **Dynamips** telah berhasil.
 
 
-## VPCS
+### VPCS
 
 Saya akan menggunakan `subversion` *checkout* dari branch utama Virtual PC Simulator (VPCS).
 
@@ -129,7 +129,7 @@ Welcome to Virtual PC Simulator, version 0.8c
 Apabila tampil *output* seperti di atas, artinya proses instalasi VPCS telah berhasil.
 
 
-## IOUYAP
+### IOUYAP
 
 Pasang paket `iniparser` yang menjadi dependensi bagi IOUYAP.
 
@@ -179,7 +179,7 @@ $ getcap $(which iouyap)
 Apabila tampil *output* seperti di atas, maka kita telah sukses memasang IOYUAP.
 
 
-## uBridge
+### uBridge
 
 Saya akan memasang versi terbaru dari uBridge. Pada dokumentasi ini dibuat, versi paling baru adalah **0.9.14**. Kamu dapat melakukan pengecekan [di sini](https://github.com/GNS3/ubridge/releases).
 
@@ -215,7 +215,7 @@ $ getcap $(which ubridge)
 Apabila tampil *output* seperti di atas, maka kita telah sukses memasang uBridge.
 
 
-## Docker
+### Docker
 
 Paket `docker` sudah terdapat pada *Official Repository* Arch Linux.
 
@@ -256,7 +256,7 @@ $ docker info
 ```
 
 
-## VirtualBox
+### VirtualBox
 
 Untuk proses instalasi VirtualBox, saya akan merujuk pada dokumentasi yang terdapat pada Arch Wiki [di sini](https://wiki.archlinux.org/index.php/VirtualBox).
 
@@ -323,7 +323,7 @@ users wheel network storage input power docker vboxusers
 Perhatikan *output* yang ditampilkan, terdapat tambahan `vboxusers`.
 
 
-## GNS3
+### GNS3
 
 Pasang dependensi untuk GNS3.
 
@@ -396,7 +396,7 @@ EOL
 *Command* di atas bertujuan untuk membuat file `gns3.desktop`. Ini merupakan file *launcher* untuk memanggil aplikasi melalui *desktop environment*.
 
 
-# Upgrade GNS3 to Latest Version
+## Upgrade GNS3 to Latest Version
 
 Karena kita menggunakan GNS3 dari GitHub, maka kita perlu melakukan *upgrade* secara manual. Jangan khawatir, karena proses *upgrade* ini tidak begitu rumit. Tinggal mengikuti *command* yang sudah ditulis di sini.
 
@@ -443,7 +443,7 @@ gns3-server (2.1.5)
 Saya rasa cukup seperti ini saja proses instal dan konfigurasi GNS3 pada distribusi sistem operas Arch Linux. Dengan demikian proses instalasi dan konfigurasi ini telah selesai.
 
 
-# Referensi
+## Referensi
 
 1. [binarynature.blogspot.com/2015/11/install-configure-gns3-arch-linux.html](http://binarynature.blogspot.com/2015/11/install-configure-gns3-arch-linux.html) \
    Diakses tanggal: 2018-04-16

@@ -17,14 +17,14 @@ description: "Saya sedang memanfaatkan docker untuk memasang beberapa komponen-k
 > **Sebaiknya tidak diterapkan pada level production, karena berkaitan dengan security** (dalam hal akses data).
 
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Saya sedang mencoba untuk memanfaatkan docker untuk memasang beberapa komponen-komponen pendukung web development.
 
 Kali ini, yang saya coba pasang adalah PostgreSQL.
 
 
-# Sekenarion Masalah
+## Sekenarion Masalah
 
 PostgreSQL akan memberikan layanan dari Docker container.
 
@@ -35,16 +35,16 @@ Untuk mengkonfigurasi PostgreSQL di Arch Linux untuk tujuan local Development me
 Tinggal merujuk ke Arch Wiki, dan proses inisialisasi dan konfigurasi awal sudah dijelaskan dan sudah berkali-kali saya coba dan berhasil.
 
 
-# Tujuan Mencari Masalah
+## Tujuan Mencari Masalah
 
 1. Mempelajari Docker
 2. Mencari workflow yang fleksible dengan memanfaatkan Docker
 
 
-# Eksekusi Masalah
+## Eksekusi Masalah
 
 
-## 1. Mematikan PostgreSQL Service
+### 1. Mematikan PostgreSQL Service
 
 Kalau kita sudah memiliki PostgreSQL service yang berjalan, sebaiknya kita hentikan dahulu.
 
@@ -61,7 +61,7 @@ $ sudo rc-service postgresql stop
 ```
 
 
-## 2. Pulling PostgreSQL Docker Image
+### 2. Pulling PostgreSQL Docker Image
 
 Untuk versi, pada contoh kali ini saya akan menggunakan tag **13.1**.
 
@@ -85,7 +85,7 @@ postgres     13.1      1f1bd4302537   13 days ago   314MB
 Sip.
 
 
-## 3. Create Container
+### 3. Create Container
 
 Saatnya membuat container.
 
@@ -130,7 +130,7 @@ dc005b14dab0   postgres:13.1   "docker-entrypoint.s…"   2 hours ago   Up 1 sec
 Sip, sudah berhasil dijalankan.
 
 
-## 4. Membuat User
+### 4. Membuat User
 
 Proses pembuatan container pada langkah ketiga di atas, juga secara otomatis akan membuatkan kita user bernama `postgres` dengan database yang juga bernama `postgres`.
 
@@ -219,7 +219,7 @@ postgres=# \l
 Mantap.
 
 
-## 5. Pengujian
+### 5. Pengujian
 
 Sekarang tinggal ditest saja.
 
@@ -249,10 +249,10 @@ Cukup *convenient* bukan?
 Tapi, jangan digunakan pada level production yaa.
 
 
-# Troubleshooting
+## Troubleshooting
 
 
-## 1. Connection on Unix Domain Socket
+### 1. Connection on Unix Domain Socket
 
 Ketika menjalankan perintah,
 
@@ -300,10 +300,10 @@ $ exec $SHELL
 ```
 
 
-# Tambahan
+## Tambahan
 
 
-## 1. Mengcopy/Backup Postgres data Direktori dari Container ke Host
+### 1. Mengcopy/Backup Postgres data Direktori dari Container ke Host
 
 Mungkin kita ingin melakukan backup data yang ada di dalam postgres container.
 
@@ -395,7 +395,7 @@ drwx------ pg_xact
 ```
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -406,7 +406,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [hub.docker.com/\_/postgres](https://hub.docker.com/_/postgres) \
    Diakses tanggal: 2021-01-12

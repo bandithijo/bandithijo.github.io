@@ -10,14 +10,14 @@ tags: ["iwctl"]
 description: "iwd adalah perkakas wireless daemon yang dikembangkan oleh Intel. Digadang-gadang akan menjadi replacement bagi wpa_supplicant. Arch installer pun sudah menggunakan iwd secara default. Catatan ini mungkin bisa memandu teman-teman dalam menggunakan iwd dengan interaktif shell yang bernama iwctl."
 ---
 
-# Latar Belakang
+## Latar Belakang
 
 Setelah pada catatan sebelumnya, saya menulis tentang [**Mudah Mengkonfigurasi Wi-Fi dengan wpa_supplicant**](/blog/mudah-mengkonfigurasi-wifi-dengan-wpa_supplicant).
 
 Catatan kali ini, saya akan menulis calon penerus dari **wpa_supplicant**, yaitu **iwd**.
 
 
-# Sekilas Tentang iwd
+## Sekilas Tentang iwd
 
 **iwd** adalah kependekan dari **iNet wireless daemon**, adalah wireless daemon tool untuk Linux yang dikembangkan oleh Intel.
 
@@ -26,7 +26,7 @@ Tujuan inti dari proyek ini adalah untuk mengoptimalkan pemanfaatan sumber daya 
 Seperti halnya **wpa_supplicant**, **iwd** pun dapat digunakan secara standalone maupun dikombinasikan dengan comprehensive network manager seperti **ConnMan**, **NetworkManager**, dan **systemd-networkd**.
 
 
-# Instalasi
+## Instalasi
 
 Pasang **iwd** sangat mudah di Arch Linux.
 
@@ -47,12 +47,12 @@ Pada iwd package ini kita juga akan mendapatkan:
 3. `iwmon`, Wi-Fi monitoring tool
 
 
-# Cara Penggunaan
+## Cara Penggunaan
 
 Cara penggunaan yang akan saya catat adalah cara yang saya pergunakan. Pasti akan banyak sekali cara dalam menggunakan iwd. Jadi jangan kaku. Kita harus fleksibel agar tidak patah. 😄
 
 
-## iwctl Shell
+### iwctl Shell
 
 > INFO
 > 
@@ -92,7 +92,7 @@ Kita akan dibawa masuk ke dalam iwd shell yang berpenampilan seperti di bawah in
 Artinya kita sudah berada di dalam iwd shell.
 
 
-## iwctl Help
+### iwctl Help
 
 Jangan panik dan mundur, karena tidak ada petunjuk apa-apa, kamu dapat memasukkan perintah `help` untk mendapatkan petuah yang berguna.
 
@@ -183,7 +183,7 @@ Miscellaneous:
 ```
 
 
-## iwctl Device List
+### iwctl Device List
 
 Kita perlu mengetahui nama interface yang tersedia di sistem kita. Dengan kata lain adalah wireless interface yang tersedia.
 
@@ -222,7 +222,7 @@ Teman-teman juga dapat melihat keterangan tentang wireless interface tersebut le
 ```
 
 
-## iwctl Station Scan
+### iwctl Station Scan
 
 Sekarang, kita masuk ke blok **Station**.
 
@@ -256,7 +256,7 @@ Lalu setelah proses scanning selesai, akan berubah kembali menjadi **no**.
 Untuk melihat hasil scan, kita gunakan option **get-networks**.
 
 
-## iwctl Station Get Networks
+### iwctl Station Get Networks
 
 Setelah kita melakukan scanning, saatnya melihat hasilnya dengan menggunakan perintah,
 
@@ -285,7 +285,7 @@ Temukan **Network name** atau SSID yang teman-teman miliki.
 Kalau sudah, kita akan gunakan option **connect** untuk terhubung.
 
 
-## iwctl Station Connect
+### iwctl Station Connect
 
 ```
 [iwd]# station wlan0 connect bandithijo
@@ -369,17 +369,17 @@ rtt min/avg/max/mdev = 215.292/228.954/245.752/12.631 ms
 Mantap! Kita telah berhasil terhubung ke internet.
 
 
-## iwctl Station Disconnect
+### iwctl Station Disconnect
 
 ```
 [iwd]# station wlan0 disconnect
 ```
 
 
-# Lokasi File Config
+## Lokasi File Config
 
 
-## General (Main) File Config
+### General (Main) File Config
 
 Berlokasi di **/etc/iwd/main.conf**.
 
@@ -390,7 +390,7 @@ Apabila kita mendefinisikan option di dalam file config ini, terntu akan berdamp
 Misal,
 
 
-### Enable Built-in DHCP
+#### Enable Built-in DHCP
 
 Saya ingin semua file konfigurasi network SSID yang tersimpan, menggunakan *buil-it* DHCP client bawaan dari iwd.
 
@@ -403,7 +403,7 @@ EnableNetworkConfiguration=true
 ```
 
 
-## File Config Network Spesifik
+### File Config Network Spesifik
 
 Berbeda dengan **wpa_supplicant** yang menyimpan file configurasi pada direktori **/etc/wpa_supplicant/**, sehingga dapat diakses oleh semua user. **iwd** menyimpan file configurasi atau *stored data file* pada direktori **/var/lib/iwd/**. Sehingga hanya root yang dapat mengakses direktori ini.
 
@@ -426,7 +426,7 @@ Passphrase=iniadalahpassword
 ```
 
 
-## Konfigurasi Auto Connect ke Network Tertentu
+### Konfigurasi Auto Connect ke Network Tertentu
 
 Tambahkan saja option `AutoConnect=true` pada group `[Settings]`, di dalam file config dari network yang kita inginkan.
 
@@ -445,14 +445,14 @@ AutoConnect=true
 Atau, kalau ingin lebih general, tambahkan pada file **/etc/iwd/main.conf**.
 
 
-# Konfigurasi Lanjut
+## Konfigurasi Lanjut
 
 Untuk konfigurasi lebih lanjut, atau cara-cara lain dalam mengkonfigurasi iwd, teman-teman dapat melihat pada Arch Wiki.
 
 [**Arch Wiki: iwd**](https://wiki.archlinux.org/index.php/Iwd).
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -463,13 +463,13 @@ Terima kasih.
 (^_^)
 
 
-# Terima Kasih
+## Terima Kasih
 
 1. Herman Thaw
 2. Suka Isnaini
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/index.php/Iwd](https://wiki.archlinux.org/index.php/Iwd) \
    Diakses tanggal: 2021-01-01

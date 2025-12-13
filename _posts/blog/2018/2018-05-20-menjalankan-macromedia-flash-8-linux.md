@@ -13,7 +13,7 @@ description: "Kira-kira tiga minggu yang lalu, saya mendapat tugas kuliah oleh d
 ![Banner](https://s20.postimg.cc/hs0fmbvwt/banner_post_13.png)
 
 
-# Latar Belakang
+## Latar Belakang
 
 Kira-kira tiga minggu yang lalu, saya mendapat tugas kuliah oleh dosen saya untuk membuat "Media Pembelajaran bagi siswa SMP atau SMA" dengan menggunakan aplikasi **Flash**. Dalam hati ada sedikit rasa haru karena senang tapi tidak lama rasa senang itu langsung tertutupi kabut kenyataan bahwa saya saat ini sudah menggunakan sistem operasi GNU/Linux.
 
@@ -28,7 +28,7 @@ Yes, proyek terakhir, menurut saya adalah pencapaian paling tinggi saat itu bagi
 Oke, cukup nostalgia masa lalunya. Sekarang kita kembali ke topik pembahasan.
 
 
-# Sedikit Penjelasan
+## Sedikit Penjelasan
 
 Kita memerlukan versi Flash yang memiliki dukungan paling baik dengan aplikasi Wine. Yaa tentu saja karena untuk menjalankan aplikasi Windows di sistem operasi GNU/Linux, kita memerlukan Wine.
 
@@ -37,7 +37,7 @@ Saya selalu melakukan pengecekan **Rating** sebuah aplikasi yang berjalan di ata
 Setelah saya lakukan pengecekan, ternyata Macromedia Flash 8, ada yang memberikan rating Platinum sebanyak 2 orang, Gold 2 orang, dan Bronze. Ini adalah hasil yang sangat bagus. Karena artinya, ada kesempatan yang sangat besar untuk dapat menjalankan aplikasi ini di atas platform Linux.
 
 
-# Instalasi
+## Instalasi
 
 Langkah awal adalah, instalasi **Wine**.
 
@@ -74,7 +74,7 @@ Sekarang, kita coba menjalankannya.
 Gambar 2. Menjalankan Shortcut Macromedia Flash 8
 
 
-# Pengujian
+## Pengujian
 
 Kebetulan karena saya sedang mengerjakan tugas kuliah untuk membuat media pembelajaran, jadi langsung saja sekalian kita coba.
 
@@ -106,12 +106,12 @@ Ketika di publish, hasilnya akan seperti ini.
 Gambar 4. Setelah di Publish
 
 
-# Kesimpulan
+## Kesimpulan
 
 Setelah menggunakan Macromedia Flash 8 menggunakan Wine pada sistem operasi GNU/Linux, saya merasa tidak ada kendala yang mengganggu selama proses pengerjaan tugas ini.
 
 
-# Referensi
+## Referensi
 
 1. [appdb.winehq.org/objectManager.php?sClass=version&iId=3673&iTestingId=57604](https://appdb.winehq.org/objectManager.php?sClass=version&iId=3673&iTestingId=57604) \
    Diakses tanggal: 2018-05-20

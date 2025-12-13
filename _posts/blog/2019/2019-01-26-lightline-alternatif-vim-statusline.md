@@ -19,7 +19,7 @@ description: "Sudah mulai merasakan kalau vim-airline terasa berat atau terasa b
 Post terbaru ada di sini: [**Lightline, Alternatif Vim Statusline Bagian 2 (feat. Defx)**](/blog/lightline-alternatif-vim-statusline-part-2).
 
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Malam tadi, 2019/01/25, tiba-tiba saja saya merasa Vim (teks editor favorit saya) terasa lambat sekali saat proses *startup*.
 
@@ -44,7 +44,7 @@ Delay yang dialami oleh statusline pada proses *startup* ini dapat semakin molor
 Karena alasan tersebut saya memutuskan untuk memigrasikan `vim-airline` dan mencari alternatif statusline yang lain.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Setelah mencoba beberapa statusline, pilihan saya jatuh pada [**itchyny/lightline**](https://github.com/itchyny/lightline.vim).
 
@@ -73,7 +73,7 @@ Gambar 5. Vim-Airline
 Gambar 6. Lightline
 
 
-# Instalasi
+## Instalasi
 
 Saya menggunakan plugin manager [**vim-plug**](https://github.com/junegunn/vim-plug).
 
@@ -84,10 +84,10 @@ Plug 'mengelbrecht/lightline-bufferline'
 ```
 
 
-# Konfigurasi
+## Konfigurasi
 
 
-## Lightline
+### Lightline
 
 Pada konfigurasi `lightline` ini saya hanya menambahkan:
 
@@ -159,7 +159,7 @@ material, OldHope, nord, 16color and deus are available.
 ```
 
 
-## Lightline-Bufferline
+### Lightline-Bufferline
 
 Buat apa kita perlu `Lightline-Bufferline` ?
 
@@ -191,12 +191,12 @@ let g:lightline#bufferline#unicode_symbols = 1
 ```
 
 
-# Modifikasi
+## Modifikasi
 
 Beberapa modifikasi yang saya lakukan adalah,
 
 
-## Colorscheme
+### Colorscheme
 
 Modifikasi terhadap `solarized` colorscheme.
 
@@ -255,7 +255,7 @@ let g:lightline#colorscheme#lightline_solarized#palette = lightline#colorscheme#
 ```
 
 
-## Tabline
+### Tabline
 
 Modifikasi yang saya lakukan adalah merubah dan menambah **tabline** sebelah kanan atas. Yang sebelumnya hanya menampilkan tanda **X**, saya rubah menjadi menampilkan **BUFFERS** dan **BANDITHIJO.COM**.
 
@@ -300,7 +300,7 @@ endfunction
 ```
 
 
-# Hasilnya
+## Hasilnya
 
 ![Gambar 7](https://i.postimg.cc/TwHHXRWc/gambar-03.png)
 
@@ -311,7 +311,7 @@ Gambar 7. Lightline + Lightline-Bufferline
 Gambar 8. Tampilan saat tidak sibuk
 
 
-# Tambahan Fugitive, Readonly, Modified, FileFormat, dan FileType
+## Tambahan Fugitive, Readonly, Modified, FileFormat, dan FileType
 
 Kita juga dapat menambahkan simbol untuk **vim-fugitive** dan **readonly** agar lebih mirip lagi dengan **vim-airline**.
 
@@ -422,7 +422,7 @@ Gambar 9. Dengan tambahan powerline symbol untuk master dan readonly
 Gambar 10. Dengan penambahan Devicon pada Filetype dan Fileformat
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Saya memutuskan untuk bermigrasi bukan berarti `vim-airline` tidak bagus dan berat. Hanya saja, pada kasus saya, saya mengalami "startup delay" yang entah dari mana datangnya tiba-tiba menghampiri Vim saya.
 
@@ -431,7 +431,7 @@ Kesempatan ini saya pergunakan untuk berekplorasi dengan statusline plugin yang 
 Sebaik-baik dokumentasi adalah yang ditulis oleh developer pengembang dari masing-masing plugin. Silahkan kunjungin GitHub pages dari masing-masing plugin untuk penjelasan yang lebih kompleks.
 
 
-# Referensi
+## Referensi
 
 1. [github.com/itchyny/lightline.vim](https://github.com/itchyny/lightline.vim) \
    Diakses tanggal: 2019-01-26

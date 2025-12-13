@@ -10,7 +10,7 @@ tags: ["jekyll"]
 description: "Cerita proses upgrde Jekyll 3.8.6 ke 4.0.0 dari BanditHijo (R)-Chive."
 ---
 
-# Prakata
+## Prakata
 
 Jekyll 4.0.0 akhirnya dirilis pada tanggal 20 Agustus 2019.
 
@@ -19,12 +19,12 @@ Mengenai fitur-fitur serta perbaikan apa saja yang dibawa oleh Jekyll 4.0.0 ini,
 Langsung saja, saya akan menceritakan proses upgrade BanditHijo.com dari Jekyll 3.8.6 ke 4.0.0.
 
 
-# Proses Upgrade
+## Proses Upgrade
 
 Saya akan menceritakan runut berdasarkan kronologi yang saya lakukan.
 
 
-## Upgrade Jekyll
+### Upgrade Jekyll
 
 Untuk dapat menggunakan Jekyll 4.0.0, minimal saya harus memiliki Ruby versi 2.4.0.
 
@@ -59,7 +59,7 @@ $ gem update jekyll
 ```
 
 
-## Edit Gemfile
+### Edit Gemfile
 
 Langkah selanjutnya, saya perlu mengedit Gemfile yang ada di dalam root project.
 
@@ -111,7 +111,7 @@ $ bundle update
 Dengan begini, proses update versi Jekyll yang ada di project BanditHijo.com telah selesai.
 
 
-# Tambahan
+## Tambahan
 
 Sebelumnya, saya menggunakan plugin [**jekyll-netlify**](https://github.com/jayvdb/jekyll-netlify/), yang saya manfaatkan untuk mengeset environment `site.environment=production` pada Netlify.
 
@@ -134,7 +134,7 @@ Mudah-mudahan dapat bermanfaat buat teman-teman.
 Terima kasih (^_^)v
 
 
-# Referensi
+## Referensi
 
 1. [Upgrading from 3.x to 4.x](https://jekyllrb.com/docs/upgrading/3-to-4/) \
    Diakses tanggal: 2019-10-16

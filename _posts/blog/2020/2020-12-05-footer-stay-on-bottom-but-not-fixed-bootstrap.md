@@ -10,7 +10,7 @@ tags: ["bootstrap", "css", "html"]
 description: "Footer yang menempel pada body content memang mengesalkan. Terutama bila content masih sedikit. Maka footer akan menempel pada body dengan sangat manja. Catatan ini adalah solusi bagaimana agar footer tetap berada di bagian paling bawah dari halaman meskipun content yang tersedia masih sedikit."
 ---
 
-# Latar Belakang
+## Latar Belakang
 
 Kalian pasti pernah melihat Footer yang manja di sebuah website.
 
@@ -37,7 +37,7 @@ Gambar 2. Footer yang menempel manja pada bagian bawah halaman
 Meskipun post content hanya sedikit, Footer tetap berada di bagian bawah layar. Dan apabila post content sudah banyak, Footer akan terdorong menghilang bersama post content yang paling bawah.
 
 
-# Implementasi
+## Implementasi
 
 Markup HTML nya seperti ini polanya.
 
@@ -82,7 +82,7 @@ body {
 ```
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 

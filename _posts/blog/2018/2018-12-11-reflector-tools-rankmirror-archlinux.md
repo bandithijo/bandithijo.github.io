@@ -10,7 +10,7 @@ tags: ["arch linux", "reflector"]
 description: "Masih ribet memilih-milih mirror yang cepat sesuai dengan network yang kita gunakan? Saya lebih memilih menggunakan script yang dapat melakukan profiling (penilaian) mana-mana saja mirror yang cepat untuk network saya. Reflector adalah salah satu tools yang dapat kita gunakan untuk menentukan mana saja mirror yang cepat untuk kita."
 ---
 
-# Prakata
+## Prakata
 
 Jika sebelum *posting* ini saya tulis, saya hanya mengetahui *tools* bernama `rankmirrors` untuk memfilter mirrors tercepat. Dan sepertinya *scripts* ini sudah *deprecated* dari *official repository* Arch Linux.
 
@@ -33,7 +33,7 @@ Namun, `reflector` memberikan hasil yang sangat timpang dalam hal kecepatan dala
 Berikut ini adalah catatan-catatan yang tentu saja saya kutip dari Arch Wiki.
 
 
-# Penerapan
+## Penerapan
 
 > PERHATIAN!
 > 
@@ -44,7 +44,7 @@ Berikut ini adalah catatan-catatan yang tentu saja saya kutip dari Arch Wiki.
 > ```
 
 
-## Instalasi
+### Instalasi
 
 Install paket `reflector`.
 
@@ -53,7 +53,7 @@ $ sudo pacman -S reflector
 ```
 
 
-## Contoh Penggunaan
+### Contoh Penggunaan
 
 Untuk melihat bagaimana cara menggunakan `reflector` selalu biasakan untuk membaca `--help` dari sebuah *tools*.
 
@@ -101,7 +101,7 @@ Nah, gimana? mantep yaa?
 Biar lebih mantep lagi yuk kita bikin automatis aja proses di atas.
 
 
-## Automatisasi
+### Automatisasi
 
 Automatisasi ini tergantung kalian ingin menggunakan yang mana.
 
@@ -160,14 +160,14 @@ $ sudo vim /etc/cron.daily/mirrorlist
 ```
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sekian catatan pribadi saya, mudah-mudahan bermanfaat bagi yang tersasar dan menemukannya.
 
 Apabila menemukan kesalahan dan kegagalan sekali lagi saya berpesan, tulisan ini bukan tulisan yang baik. Dokumentasi paling baik adalah yang ditulis langsung oleh tim pengembangnya. Silahkan merujuk pada referensi yang saya sertakan, yaa.
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/index.php/Reflector](https://wiki.archlinux.org/index.php/Reflector) \
    Diakses tanggal: 2018-12-11

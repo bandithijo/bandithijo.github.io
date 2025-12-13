@@ -10,7 +10,7 @@ tags: ["arch linux", "postgresql"]
 description: "Mengkonfigurasi database mungkin cukup menjadi momok sebagian orang. Termasuk saya. Rasanya sangat mengerikan kalau harus kembali mengknfigurasi database dari awal. Catatan ini saya buat agar saya tidak lupa, bagaimana cara untuk mengkonfigurasi database di Arch Linux untuk keperluan development (bukan production)."
 ---
 
-# Prakata
+## Prakata
 
 Beberapa kali saya mendapati pertanyaan dari teman-teman seputar bagaimana cara memasang dan mengkonfigurasi PostgreSQL pada Arch Linux.
 
@@ -25,7 +25,7 @@ Jujur saja, saya pertama kali dulu juga begitu. Bahkan sampai beberapa kali seti
 Namun, setelah hampir setiap hari bergelut dengan PostgreSQL karena tuntutan pekerjaan, saya mulai terbiasa dengan proses pemasangan dan konfigurasi, yang ternyata sangat mudah sekali.
 
 
-# Eksekusi
+## Eksekusi
 
 Pada catatan kali ini saya akan menuliskan tentang:
 
@@ -39,7 +39,7 @@ Menurut saya ini cara yang paling mudah, untuk mengkonfigurasi PostgreSQL yang h
 Pada catatan ini tidak akan jauh berbeda dengan Arch Wiki pada saat tulisan ini dibuat.
 
 
-## Instalasi PostgreSQL
+### Instalasi PostgreSQL
 
 Pasang paket PostgreSQL yang sudah terdapat pada *official repo* Arch.
 
@@ -54,7 +54,7 @@ Pada proses instalasi tersebut juga akan dibuatkan secara otomatis *system user*
 User ini yang nantinya akan kita gunakan untuk melakukan konfigurasi awal seperti membuat user dan database atas nama username kita sendiri.
 
 
-## Konfigurasi Awal
+### Konfigurasi Awal
 
 Setelah instalasi PostgreSQL, biasanya tidak dapat langsung digunakan. Karena kita perlu untuk mengkonfigurasi user dan database mana yang akan kita pergunakan.
 
@@ -62,6 +62,7 @@ Anggaplah saya akan menggunakan user dengan nama yang sama dengan username Linux
 
 
 ### Berpindah User Postgres
+
 Sekarang, kita perlu berpindah menggunkaan aku `postgres` ini dengna cara.
 
 ```
@@ -85,7 +86,7 @@ Atau, apabila teman-teman sudah pernah mengkonfigurasi nama hostname pada Arch, 
 Intinya adalah kita sudah berpindah menggunakan user `postgres`.
 
 
-### Initialisasi Database Cluster
+#### Initialisasi Database Cluster
 
 Kita perlu mengeset *default data directory*, biar mudah tidak usah *custom* deh, ikutin *default*-nya saja, seperti yang dicontohkan oleh Arch Wiki.
 
@@ -145,7 +146,7 @@ Keluar dari user `postgres` dengan perintah
 ```
 
 
-### Jalankan PostgreSQL Service
+#### Jalankan PostgreSQL Service
 
 Pastikan kita sudah keluar dari user `postgres` seperti perintah di atas.
 
@@ -207,7 +208,7 @@ Nov 25 08:53:31 BANDITHIJO-X61 postgres[1084471]: 2019-11-25 08:53:31.144 WITA [
 ```
 
 
-### Membuat User
+#### Membuat User
 
 Kalau saya pribadi, saya tidak suka menggunakan user `postgres`, karena tentu saja akan memiliki keterbatasan ruang gerak dalam hal *permission*.
 
@@ -237,7 +238,7 @@ Shall the new role be a superuser? (y/n) y
 Ganti dengan username `bandithijo` dengan username kalian.
 
 
-### Membuat Database untuk User
+#### Membuat Database untuk User
 
 Kita **HARUS** membuat database untuk user yang baru saja kita buat. Kalau tidak, tentu saja tidak akan dapat kita gunakan.
 
@@ -356,10 +357,10 @@ Sekarang database kita sudah menjadi milik kita.
 > Dengan begini, kita telah membuat user dan database atas nama username kita.
 
 
-# Tambahan
+## Tambahan
 
 
-## Menghapus Database dan User
+### Menghapus Database dan User
 
 Untuk menghapus database dan menghapus role (user), gunakan perintah ini.
 
@@ -383,21 +384,21 @@ DROP ROLE
 ```
 
 
-# Upgrade
+## Upgrade
 
 Salah satu hal merepotkan lain adalah proses upgrade.
 
 Sejauh pengalaman saya, terdapat 2 jenis upgrade, yaitu upgrade minor dan upgrade major.
 
 
-## Upgrade Minor
+### Upgrade Minor
 
 Apabila teman-teman mengupdate repo Arch dan mendapati versi upgrade Postgres 11.4 ke 11.5, ini diseut upgrade minor.
 
 Untuk upgrade minor, seperti dari versi Postgres 11.4 ke 11.5, tidak memerlukan konfigurasi apapun. Semua berjalan otomatis dan tidak memerlukan konfigurasi apapun.
 
 
-## Upgrade Major
+### Upgrade Major
 
 Namun, apabila teman-teman menemukan versi major yang berbeda saat melakukan update repo.
 
@@ -424,7 +425,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/index.php/PostgreSQL](https://wiki.archlinux.org/index.php/PostgreSQL) \
    Diakses tanggal: 2019-11-25

@@ -10,7 +10,7 @@ tags: ["xfce", "desktop environment"]
 description: "XFCE bukan desktop environment yang populer seperti GNOME dan KDE Plasma. Namun, namanya selalu punya tempat tersendiri di hati penggunanya."
 ---
 
-# Tentang XFCE
+## Tentang XFCE
 
 XFCE bukan dibaca "Eks Face", tapi dibaca "Ecks Eff See Eee".
 
@@ -25,7 +25,7 @@ Meskipun masuk dalam kategori desktop yang ringan, tapi XFCE memiliki tools util
 Tools utility ini sebenarnya merupakan project terpisah yang masing-masingnya merupakan bagian dari desktop environment XFCE.
 
 
-## Core Components
+### Core Components
 
 1. **xfdesktop** (Desktop Manager) \
    *This program sets the background image and provides a root window menu, desktop icons or minimized icons and a windows list.*
@@ -49,7 +49,7 @@ Tools utility ini sebenarnya merupakan project terpisah yang masing-masingnya me
    *Simple client-server configuration storage and query system.*
 
 
-## Applications
+### Applications
 
 1. **xfce4-terminal** (Terminal Emulator) \
    *Terminal is a modern terminal emulator featuring tabs and transparent backgrounds.*
@@ -69,7 +69,7 @@ Tools utility ini sebenarnya merupakan project terpisah yang masing-masingnya me
    *Easily themable notification daemon with transparency effects.*
 
 
-## External Plugins
+### External Plugins
 
 1. **xfce4-battery-plugin** (Battery) \
    *A battery monitor panel plugin for Xfce4 compatible with APM and ACPI, for Linux and *BSD.*
@@ -139,7 +139,7 @@ Tools utility ini sebenarnya merupakan project terpisah yang masing-masingnya me
    *Setup and use multiple (currently up to 4 due to X11 protocol limitation) keyboard layouts.*
 
 
-# ScreenShots
+## ScreenShots
 
 Panel default XFCE tidak seperti yang ada di screenshot ini, saya sudah merubah sesuai preferensi saya. Saya terinspirasi dari XFCE versi 4.0.0.
 
@@ -184,7 +184,7 @@ Gambar 9. DBeaver Community
 Gambar 10. Baobab
 
 
-# Referensi
+## Referensi
 
 1. [XFCE Official Website](https://xfce.org/) \
    Diakses tanggal: 2025-11-15

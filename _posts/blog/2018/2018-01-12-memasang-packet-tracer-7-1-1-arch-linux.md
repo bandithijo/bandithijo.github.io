@@ -13,7 +13,7 @@ description: "Catatan untuk memasang Packet Tracer dari AUR"
 ![Banner](https://4.bp.blogspot.com/-BowYWqgwdWY/WmHgRqi8cFI/AAAAAAAAG6E/Q3vgYPF4blEWr4CfCfepG8ld3zXlghOjQCEwYBhgL/s1600/Default%2BHeader%2BTemplate%2BPost%2B2X.png)
 
 
-# Latar Belakang
+## Latar Belakang
 
 Oktober 2017, saya menglami kepanikan dikarenakan aplikasi penunjang perkuliahan Jaringan Komunikasi 2 (CCNA 2) yaitu [Cisco Packet Tracer](https://www.netacad.com/courses/packet-tracer-download/) versi 7.1.1, yang secara tiba-tiba tidak dapat dibuka di sistem saya (Arch Linux).
 
@@ -22,12 +22,12 @@ Berbagai macam cara saya kerahkan mulai dari memasang menggunakan sumber dari _s
 Lantas saya mencoba mencari di [AUR](https://aur.archlinux.org/) (_Arch User Repository_) ternyata sudah tersedia Cisco Packet Tracer 7.1.1 dengan nama paket [`packettracer`](https://aur.archlinux.org/packages/packettracer). Namun proses instalasinya tidak biasa. Karena kita harus membuat _package_ sendiri dengan bantuan PKGBUILD. Ini adalah pertama kalinya saya memasang sebuah paket dengan menggunakan PKGBUILD.
 
 
-# Prasyarat
+## Prasyarat
 
 Karena bahan untuk melakukan proses instalasi ini adalah _tarball_ Cisco Packet Tracer yang kita dapatkan langsung dari _upstream_, sehingga syarat utama yang diperlukan adalah **anda harus memiliki akses ke dalam situs netacad.com**. Untuk dapat mendownload Cisco Packet Tracer versi paling baru (7.1.1).
 
 
-# Instalasi
+## Instalasi
 
 Meskipun proses instalasi Cisco Packet Tracer 7.1.1 ini tidak biasa, namun ternyata sangat mudah dilakukan. Meskipun awalnya saya juga ragu-ragu, tapi begitu menjalani tahapan demi tahapan, rasanya siapa saja bisa melakukan proses instalasi seperti ini. Langsung saja kita ke langkah-langkahnya.
 
@@ -90,7 +90,7 @@ Meskipun proses instalasi Cisco Packet Tracer 7.1.1 ini tidak biasa, namun terny
 Ikuti proses instalasi hingga sampai akhir. Maka proses instalasi Cisco Packet Tracer 7.1.1 dengan menggunakan PKGBUILD dari AUR telah selesai.
 
 
-# Upgrade
+## Upgrade
 
 Mungkin akan timbul pertanyaan bagaimana nanti apabila sudah keluar versi packet tracer yang baru?
 
@@ -101,7 +101,7 @@ Proses upgrade 7.1.1 ke 7.2 tidak sempat di dokumentasikan. Sebagai gantinya pad
 {% youtube Soox7yWWRqo %}
 
 
-# Referensi
+## Referensi
 1. [aur.archlinux.org/packages/packettracer](https://aur.archlinux.org/packages/packettracer) \
    Diakses tanggal: 2018-01-19
 

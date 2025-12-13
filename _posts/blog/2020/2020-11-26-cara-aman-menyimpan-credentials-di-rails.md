@@ -10,7 +10,7 @@ tags: ["rails"]
 description: "Menyimpan credentials merupakan hal yang wajib sebagai seorang developer atau sistem administrator. Ada banyak sekali cara yang dapat diimplementasikan. Catatan kali ini mungkin hanya salah satu cara yang mungkin dapat teman-teman gunakan."
 ---
 
-# Latar Belakang
+## Latar Belakang
 
 Biasanya Junior Programmer (seperti saya) belum mengetahui bagaimana cara mendefinisikan dan menyimpan credential dengan aman.
 
@@ -74,7 +74,7 @@ ENV["..."]
 ```
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Rails sudah menyediakan file **credentials.yml.enc** (.enc adalah abreviation dari encrypted) dan juga **master.key**.
 
@@ -180,10 +180,10 @@ Rails.application.credentials
 ```
 
 
-# Tambahan
+## Tambahan
 
 
-## Heroku Environment Variable
+### Heroku Environment Variable
 
 Kita perlu mendefinisikan **RAILS_MASTER_KEY** pada menu **Settings > Config Vars**.
 
@@ -208,7 +208,7 @@ Maka, variable **RAILS_MASTER_KEY** sudah otomatis dibuatkan.
 Dengan begini, aplikasi kita di Heroku sudah dapat membuka dan membaca file **credentials.yml.enc**.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -219,7 +219,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [https://edgeguides.rubyonrails.org/security.html#custom-credentials](https://edgeguides.rubyonrails.org/security.html#custom-credentials) \
    Diakses tanggal: 2020-11-26

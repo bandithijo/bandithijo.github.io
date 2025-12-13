@@ -10,19 +10,19 @@ tags: ["ruby", "rake"]
 description: "Rake dapat kita manfaatkan untuk menggabungkan beberapa baris perintah menjadi satu baris perintah. Sehingga membuat proses developing kita menjadi lebih efisien."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 Beberapa hari ini, saya sedang mengerjakan *side project* membuat *web scraper* menggunakan Ruby.
 
 Project ini terus berkembang, hingga saya sampai pada kebutuhan untuk membuat Rake task sendiri.
 
 
-# Tujuannya
+## Tujuannya
 
 Tujuan yang saya inginkan dalam membuat Rake tasks sendiri adalah untuk merangkum beberapa perintah sekaligus, agar tidak perlu menulis perintah yang panjang secara berulang-ulang. Bahasa kerennya, mungkin disebut "automatisasi".
 
 
-# Instalasi
+## Instalasi
 
 Rake benar-benar *tool* yang sangat *powerful* untuk melakukan proses automatisasi. Rake juga sangat praktis dan dapat dipasang pada project yang belum secara *default* memasang Rake. Bahkan juga dapat dipasang pada project yang bukan berbasis Ruby. Keren!
 
@@ -52,7 +52,7 @@ $ bundle install
 ```
 
 
-# Konfgurasi
+## Konfgurasi
 
 Pada catatan ini ada 2 konfigurasi yang akan saya tuliskan.
 
@@ -84,7 +84,7 @@ Nantinya, kita akan meletakkan Rake tasks di dalam direktori tersebut.
 Selanjutnya tinggal mengkonfigurasi Rakefile sesuai dengan preferensi project yang digunakan.
 
 
-## Konfigurasi Rakefile untuk Project Apapun
+### Konfigurasi Rakefile untuk Project Apapun
 
 Buat `Rakefile` pada project root direktori. Kemudian isikan seperti di bawah.
 
@@ -96,7 +96,7 @@ Dir.glob(File.join('lib/tasks/**/*.rake')).each { |file| load file }
 Dapat dibaca, kalau baris di atas akan memerintahkan Rake untuk menjalankan file `.rake` yang ada di dalam direktori `lib/tasks/`.
 
 
-## Konfigurasi Rakefile untuk Standalone Migrations Gem
+### Konfigurasi Rakefile untuk Standalone Migrations Gem
 
 Untuk yang membuat Ruby project menggunakan gem **Standalone Migrations**, biasanya karena ingin memanfaatkan migration dari gem **Active Record** --yang merupakan komponen dari Ruby on Rails-- agar dapat menggunakan migration di luar Ruby on Rails project.
 
@@ -111,12 +111,12 @@ StandaloneMigrations::Tasks.load_tasks
 Perintah di atas juga akan menjalankan Rake task yang kita simpan di dalam direktori `lib/tasks/`.
 
 
-# Menulis Rake Task
+## Menulis Rake Task
 
 Dalam menulis Rake task, sebaiknya kita juga mengikuti *convention* yang sudah ada.
 
 
-## Morfologi Rake Task
+### Morfologi Rake Task
 
 Morfologi dari Rake task, adalah seperti ini:
 
@@ -135,7 +135,7 @@ end
 Meskipun sintaks dari Rake task ditulis dengan bahasa Ruby, namun ekstensi dalam meberikan nama file tetap menggunakan akhiran `.rake` bukan `.rb`.
 
 
-## Tugas Sederhana
+### Tugas Sederhana
 
 Misalnya hanya ada satu jenis tugas, kita dapat mendefiniskan seperti ini.
 
@@ -168,10 +168,10 @@ rake stats                           # Report code statistics (KLOCs, etc) from 
 Dengan begini, saya tidak perlu lagi menjalankan command `$ ruby app/main.rb` yang cukup panjang, cukup menjalankan dengan `$ rake run`, maka hasilnya pun akan sama namun dengan command yang lebih pendek. =P
 
 
-## Tugas Bercabang (Bertingkat) / Namespace
+### Tugas Bercabang (Bertingkat) / Namespace
 
 
-### Tingkat Satu
+#### Tingkat Satu
 
 Tugas yang bercabang atau bertingkat ini, maksudnya seperti kita punya kategori tugas yang sama, namun detail pekerjaannya yang berbeda. Kalau yang pernah menggunakan Ruby on Rails, pasti pernah menggunakan perintah `$ rake db:create`, `$ rake db:migrate`, `$ rake db:rollback`, dll.
 
@@ -210,7 +210,7 @@ rake db:fixtures:load                # Loads fixtures into the current environme
 Secara sederhana *namesapce* akan mengkategorikan task yang sejenis, dalam hal ini, task yang memiliki tugas untuk berinteraksi dengan database `db` akan dimasukkan ke dalam *namespace* ini agar task list menjadi lebih rapi dan terorganisir.
 
 
-### Tingkat Lebih dari Satu
+#### Tingkat Lebih dari Satu
 
 Nah, mungkin teman-teman yang menggunakan Ruby on Rails juga pernah melihat perintah `$ rake db:migrate:status`, pasti sudah bisa ketebak dong yaa, gimana cara membuatnya.
 
@@ -243,7 +243,7 @@ rake db:prepare                      # Runs setup if database does not exist, or
 ```
 
 
-## Memasukkan Argument
+### Memasukkan Argument
 
 Terkadang kita membutuhkan argument yang akan diolah di dalam task.
 
@@ -266,7 +266,7 @@ Nah, kita ingin membuat dua angka yang dijumlahkan tersebut menjadi dinamis, dia
 Berikut ini adalah 4 cara dalam memasukkan argument ke dalam Rake task.
 
 
-### 1. The Rake Way
+#### 1. The Rake Way
 
 Rake memiliki built-in function yang dapat menerima argument, caranya seperti ini.
 
@@ -302,7 +302,7 @@ $ rake penjumlahan[1,2]
 > Selain itu, kita **tidak boleh menggunakan spasi setelah tanda koma "," diantara argument**, hal ini akan menyebabkan error yang lain.
 
 
-### 2. Environment Variables
+#### 2. Environment Variables
 
 Kita akan menggunakan cara *environment variables* seperti yang biasa dijalankan di terminal, misal `RAILS_ENV=`.
 
@@ -325,7 +325,7 @@ $ rake penjumlahan NUM1=1 NUM2=2
 Cara ini dapat dilakukan, namun agak sia-sia kalau menjalankan task dengan melakukan pengesetan/pendefinisian *environment variables*.
 
 
-### 3. Menggunakan ARGV
+#### 3. Menggunakan ARGV
 
 ARGV adalah *command line argument*. Untuk teman-teman yang pernah membuat Ruby script dan ingin mengambil inputan dari user bersamaan dengan menjalankan command, pasti pernah menggunakannya.
 
@@ -353,7 +353,7 @@ $ rake penjumlahan 1 2
 ```
 
 
-### 4. Menggunakan Ruby OptionParser
+#### 4. Menggunakan Ruby OptionParser
 
 Cara memberikan argument dengan **OptionParser** ini mirip seperti yang kita lakukan untuk menjalankan commmand dengan penambahan **flag**, misal yang umum kita gunakan untuk mengetahui command help, yaitu dengan menambahkan flag `-h`.
 
@@ -390,7 +390,7 @@ $ rake penjumlahan -- --one 1 --two 2
 ```
 
 
-# Melihat Daftar Rake Task
+## Melihat Daftar Rake Task
 
 Untuk melihat daftar task apa saja, sekaligus task yang sudah kita buat, jalankan perintah berikut.
 
@@ -405,7 +405,7 @@ $ rake -T
 ```
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Yang saya tuliskan pada catatan ini adalah hal sederhana dalam membuat Rake tasks. Apabila teman-teman mendapatkan kasus yang lebih kompleks, dapat menelusuri Google sendiri yaa.
 
@@ -418,7 +418,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [cobwwweb.com/how-to-write-a-custom-rake-task](https://cobwwweb.com/how-to-write-a-custom-rake-task) \
    Diakses tanggal: 2020-06-26

@@ -13,14 +13,14 @@ description: "Masalah yang ingin saya angkat pada dokumentasi ini adalah adanya 
 ![Banner](https://s20.postimg.cc/6vuksuzgt/banner_post_17.png)
 
 
-# Pendahuluan
+## Pendahuluan
 
 Sejujurnya saya belum memahami benar pengaturan dan penggunaan **GnuPG** (*GNU Privacy Guard*). Mengutip dari situs [gnupg.org<sup>1</sup>]({{ site.url }}/blog/memperbaiki-gpg-permissions-on-homedir#referensi), GnuPG adalah implementasi yang lengkap dan berlisensi bebas pakai dari **OpenPGP standard** sebagaimana yang dijelaskan pada [RFC4880](https://www.ietf.org/rfc/rfc4880.txt) (dikenal juga dengan sebutan PGP). GnuPG memungkinkan kita untuk mengenkripsi dan memberikan *signature* pada data dan komunikasi kita. GnuPG juga dikenal sebagai **GPG**, yang merupakan aplikasi *command line* dengan fitur-fitur untuk memudahkan integrasi dengan aplikasi yang lain.
 
 Sejak diperkenalkan pada tahun 1997, GnuPG adalah aplikasi bebas merdeka yang artinya dapat digunakan secara bebas, dimodifikasi, dan didistribusikan di bawah syarat-syarat GNU *General Public License*.
 
 
-# Permasalahan
+## Permasalahan
 
 Masalah yang ingin saya angkat pada dokumentasi ini adalah adanya *warning* yang muncul setiap kali saya menjalankan perintah `gpg` di Terminal.
 
@@ -31,7 +31,7 @@ gpg: WARNING: unsafe permissions on homedir
 *unsafe permissions* sesuatu yang menurut saya agak-agak mengerikan. Hal seperti ini saya sudah mencurigai karena adanya kesalahan konfigurasi atau konfigurasi yang belum sempurna pada direktori yang mengatur gpg (`~/.gnupg/`). Hal ini dapat memungkinkan orang yang tidak berkepentingan apabila mendapatkan akses ke dalam direktori home saya, mungkin saja dapat mengambil keuntungan dari celah seperti ini.
 
 
-# Solusi
+## Solusi
 
 Dari *warning* yang diberikan, sudah sangat jelas bahwa yang menjadi perhatian adalah direktori `~/.gnupg/` yang berada di direktori home saya. Maka kita akan memperbaiki *permissions* dari direktori tersebut.
 
@@ -57,7 +57,7 @@ Setelah melakukan kedua langkah di atas, sangat saya rekomendasikan untuk **rebo
 Saya rasa cukup seperti ini saja.
 
 
-# Referensi
+## Referensi
 
 1. [gnupg.org/](https://gnupg.org/) \
    Diakses tanggal: 2018-06-22

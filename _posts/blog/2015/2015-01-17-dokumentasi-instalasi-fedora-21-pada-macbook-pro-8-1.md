@@ -13,12 +13,12 @@ description: "Tujuan dari penulisan dokumentasi ini untuk memudahkan pengguna me
 ![Banner](https://s20.postimg.cc/g07ex98dp/Default_Header_Template_Post_18_D2.jpg)
 
 
-# Pendahuluan
+## Pendahuluan
 
 Tujuan dari penulisan dokumentasi ini untuk memudahkan pengguna mesin Apple khususnya Macbook Pro 8.1 (Late 2011) dalam menginstalasi sistem operasi Fedora 21. Untuk itu, saya mendokumentasikan proses setup Fedora 21 ini agar memudahkan pengguna Apple yang ingin beralih menggunakan sistem operasi Fedora 21.
 
 
-# Kompatibilitas
+## Kompatibilitas
 
 Kita sama-sama tahu bahwa mesin Apple sudah menyertakan sistem operasi pada saat pembelian _hardware,_ yaitu OS X. Maka dari itu tidak semua sistem operasi berjalan sempurna pada mesin Apple. Fedora 21 adalah sistem operasi berbasis Linux yang termasuk mempunyai kompatibilitas yang baik pada mesin Apple khususnya Macbook Pro 8.1.
 
@@ -45,7 +45,7 @@ Berikut adalah daftar kompatibilitas yang sudah di-support dengan baik oleh Fedo
 _akan dijelaskan lebih lanjut_
 
 
-# Airport Card / Wifi Adapter
+## Airport Card / Wifi Adapter
 
 Airport card / Wifi adapter tidak langsung dapat berfungsi. Kita membutuhkan driver broadcom-wl dari internet. Untuk itu, jangan terlebih dahulu sebaiknya anda men-download terlebih dulu sebelum melakukan peng-install-an Fedora 21.
 
@@ -77,7 +77,7 @@ Airport card / Wifi adapter tidak langsung dapat berfungsi. Kita membutuhkan dri
    \* Lakukan sesuai dengan urutan.
 
 
-# Touchpad
+## Touchpad
 
 Pada dasarnya touchpad pada Macbook Pro 8.1 sudah didukung cukup baik pada sistem operasi Fedora 21. Namun kita tetap perlu melakukan penyesuaian agar penggunaan touchpad mendekati seperti pada OS X.
 
@@ -169,7 +169,7 @@ Maka dengan begini, setting-an synaptics kita akan berjalan otomatis saat startu
 Sekarang, coba reboot dan rasakan perbedaan touchpad anda. Apakah sudah lebih mendekati seperti pada OS X?
 
 
-# Update Semua Sistem
+## Update Semua Sistem
 
 Hal yang tidak kalah penting dari sistem operasi adalah update terbaru. Setelah berhasil mengaktifkan Airport Card, sebaiknya sebelum melakukan hal-hal lain, kita melakukan update terlebih dahulu.
 
@@ -180,7 +180,7 @@ $ sudo dnf update
 Proses ini akan memakan waktu yang lumayan lama. Pastikan koneksi internet anda stabil. Silahkan bersantai minum kopi dan makan pisang goreng dahulu, dan biarkan dnf menyelesaikan tugasnya.
 
 
-# Mengatur Read / Write pada Partisi HFS+ Macintosh HD
+## Mengatur Read / Write pada Partisi HFS+ Macintosh HD
 
 Secara default, partisi ber-format Hfs+ sudah dapat di-mount dengan baik namun kita hanya dapat membaca tanpa bisa menulis ke dalam partisi tersebut. Tentu saja ini mengganggu keleluasaan bagi kita yang hanya menggunakan Fedora sebagai sistem operasi dan ingin menggunakan partisi OS X sebagai media penyimpanan.
 
@@ -254,7 +254,7 @@ Untuk bisa membaca dan menulis (Read & Write) partisi Hfs+ Macintosh HD, kita pe
     > Sebaiknya melakukan unmount terlebih dahulu partisi Macintosh HD anda sebelum melakukan perintah fsck.
 
 
-# Menambahkan Repositori Pihak Ketiga
+## Menambahkan Repositori Pihak Ketiga
 
 Tidak semua repositori resmi memenuhi paket yang kita inginkan. Untuk itu kita perlu menambahkan repositori pihak ketiga. Salah satu yang paling banyak digunakan adalah
 
@@ -267,7 +267,7 @@ $ su -c 'yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedor
 ```
 
 
-# Install YUM Plugin
+## Install YUM Plugin
 
 Ada beberapa yum plugin yang efisien jika digunakan, namun plugin ini tidak terpasang secara default. Yum Fastest Mirror, plugin ini akan memilih server mirror paling cepat saat melakukan instalasi atau update paket.
 
@@ -278,7 +278,7 @@ $ su -c 'yum install yum-plugin-fastestmirror'
 ```
 
 
-# Instal Browser Plugin
+## Instal Browser Plugin
 
 Browser Firefox memerlukan beberapa plugin untuk kebutuhan anda ber-internet.
 
@@ -295,7 +295,7 @@ $ su -c 'yum install flash-plugin'
 ```
 
 
-# Install Media Codec
+## Install Media Codec
 
 Fedora tidak langsung dapat memutar musik berformat .mp3, .wav atau memutar video berformat .mp4, .flv, .mkv, dll, untuk itu kita perlu menginstal plugin / codec untuk multimedia agar dapat diputar pada player-player multimedia di Fedora kita.
 
@@ -306,7 +306,7 @@ $ su -c 'yum install gstreamer1-plugins-ugly gstreamer1-plugins-bad-freeworld gs
 ```
 
 
-# Instal Paket-paket Tambahan
+## Instal Paket-paket Tambahan
 
 Dalam hal ini, setiap pengguna memiliki kebutuhan yang berbeda-beda. Ada beberapa hal yang mungkin terlewatkan untuk pengguna yang masih awam. Seperti, bagaimana cara membuka file ber-ekstensi .rar.
 
@@ -323,7 +323,7 @@ $ su -c 'yum install p7zip audacity unrar gimp inkscape gnome-tweak-tool vlc'
 > Jawabannya ada. GIMP (GNU Image Manipulation Program) sebagai pengganti Adobe Photoshop dan Inkscape (Sebagai penganti Corel Draw atau Adobe Illustrator). p7zip (Sebagai pengganti WinRar, dan file-file kompresi berformat yang lain).
 
 
-# Instal Fedy
+## Instal Fedy
 
 Fedy, saya kurang begitu bisa mendefinisikan Fedy. Menurut taksiran saya, Fedy ini seperti "one stop app installer". Jadi, dengan menginstal Fedy kita dengan mudah menginstall aplikasi hanya dengan menekan tombol Install. Hanya saja proses instalasinya tidak dapat kita lihat. Jadi, harus sabar menunggu sampai selesai dan tombolnya berubah menjadi Remove.
 
@@ -338,7 +338,7 @@ $ su -c "curl https://satya164.github.io/fedy/fedy-installer -o fedy-installer &
 Saya merekomendasikan untuk menginstal aplikasi dan paket-paket yang anda inginkan di Fedy satu-persatu.
 
 
-# Referensi
+## Referensi
 
 1. [www.denniskanbier.nl/blog/fedora/fedora-20-on-a-macbook-82/](http://www.denniskanbier.nl/blog/fedora/fedora-20-on-a-macbook-82/) \
    Diakses tanggal: 2015-01-17

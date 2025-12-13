@@ -19,7 +19,7 @@ description: "Dunst adalah replacement untuk standalone notification daemon yang
 > [Memanfaatkan Dunst Sebagai PopUp Notifikasi Bantuan Keyboard Shortcut (ver. 2)]({{ site.url }}/blog/dunst-sebagai-notifikasi-bantuan-pengingat-shortcut-2)
 
 
-# Prakata
+## Prakata
 
 Sebenarnya agak malu menuliskan dokumentasi kali ini. Karena merasa algoritma pemecahan solusinya terlalu bertele-tele. Hihihi. Tapi ah sudahlah! Namanya juga belajar.
 
@@ -50,7 +50,7 @@ Maka dari itu, tujuan tulisan kali ini adalah untuk memecahkan permasalahan **ap
 Sangat memudahkan sekali (menurut saya). Hehe.
 
 
-# Sekenario
+## Sekenario
 
 Ada banyak sekali *blueprint* yang terpikirkan, namun untuk saat ini, saya menggunakan cara yang akan saya tuliskan ini terlebih dahulu.
 
@@ -63,10 +63,10 @@ Sekenarionya secara sederhana akan seperti ini:
 1. Membuat file text berisi daftar *keyboard shortcut*.
 
 
-# Eksekusi
+## Eksekusi
 
 
-## Membuat Script File Browser
+### Membuat Script File Browser
 
 Pada tahap ke-1 ini, saya menyebut ini sebagai **file browser** karena secara global memang menggunakan perintah `ls` yang berarti *list* atau daftar. Namun dengan menambahkan kemampuan untuk eksekusi file yang dipilih.
 
@@ -131,7 +131,7 @@ Pada tahap ke-1 ini, saya menyebut ini sebagai **file browser** karena secara gl
    Tahap ke-1, telah selesai.
 
 
-## Membuat Script Dunstify
+### Membuat Script Dunstify
 
 Pada tahap ke-2, saya akan membuat Shell *script* yang akan berpasangan dengan file text berisi daftar *keyboard shortcut*.
 
@@ -173,7 +173,7 @@ Misalnya,
    Shell *script* di atas, memanggil file text dengan nama `keybinds-i3` yang akan kita buat setelah ini.
 
 
-## Membuat Daftar Keyboard Shortcut
+### Membuat Daftar Keyboard Shortcut
 
 Pada tahap ke-3, kita perlu membuat file text yang berisi daftar dari *keyboard shortcut*.
 
@@ -250,14 +250,14 @@ Saya akan melanjutkan proses di atas. Yaitu membuat file text untuk daftar *keyb
 Silahkan menambahkan menambahkan sendiri untuk membuat daftar *keyboard shortcut* aplikasi yang lain. Dengan mengulang tahap ke-2 dan ke-3.
 
 
-# Hasilnya
+## Hasilnya
 
 ![Gambar 1](https://i.postimg.cc/vZsSj7b9/gambar-01.gif)
 
 Gambar 1. Demonstrasi hasil akhir dari semua proses di atas
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Saya menyadari bahwa masih terdapat banyak kekurangan dari metode yang saya gunakan untuk membuat "bantuan pengingat *keyboard shortcut*" ini. Sehingga tidak menutup kemungkinan pada kesempatan berikutnya akan ada metode lain yang saya tulisakan kembali.
 

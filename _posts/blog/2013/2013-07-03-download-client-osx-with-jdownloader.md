@@ -13,12 +13,12 @@ description: "Sudah beralih ke OS X dan masih berharap bisa download video di Yo
 ![Banner](https://3.bp.blogspot.com/-Rwnz4BKPMJA/UdMVgTfGWeI/AAAAAAAABAM/8QDqK8DfU08/s1600/Default+Header+Template+Post+10.jpg)
 
 
-# Latar Belakang
+## Latar Belakang
 
 Sudah beralih ke OS X dan masih berharap bisa download video di Youtube, donwload kontent-kontetn di website yang tidak terdapat menu download, download dari situs-situs yang membutuhkan account premium, ketergantungan dengan IDM (Internet Download Manager) di Windows ? Tapi sudah benar-benar terpojok dengan OS X ? Jangan khawatir. Saya akan memperkenalkan sebuah software sebagai alternatif bagi anda sebagai pengganti IDM di Windows.
 
 
-# JDownloader
+## JDownloader
 
 Adalah software gratis, open-source download manajemen tool yang di tulis dengan bahasa pemrograman Java, dengan komunitas pengembang yang besar, yang membuat download menjadi mudah dan secepat seharusnya. Pengguna dapat memulai, menghentikan atau memberikan jeda, menetapkan batasan bandwidth, arsip auto-ekstrak dan banyak lagi. Termasuk dapat mendownload dari website bertipe One-Click Hoster seperti Rapidshare.com atau Megaupload.com -tidak hanya untuk pengguna dengan account premium, tetapi juga untuk pengguna yang gak bayar.
 
@@ -29,7 +29,7 @@ Ada lagi kelebihan pada JDownloader yaitu semua link yang kita copy, akan otomat
 Bagi pengguna Ubuntu & Windows, tutorial pada artikel ini bisa digunakan untuk memandu anda menggunakan JDownloader.
 
 
-# Step by Step
+## Step by Step
 
 1. Download dulu aplikasinya [di sini](http://jdownloader.org/download/index) (link ini tidak langsung dapat mendownload aplikasi JDownloader. Tetapi anda diarahkan untuk memilih platform yang sesuai dengan yang anda gunakan berikut dengan update Java-nya).
 
@@ -64,7 +64,7 @@ Bagi pengguna Ubuntu & Windows, tutorial pada artikel ini bisa digunakan untuk m
 12. Disini kita dapat melihat kecepatan bandwidth yang digunakan (lihat kotak nomer 1), melihat progress bar besar file yang sudah ter-download dan estimasi waktunya (lihat kotak nomer 2), mengatur banyaknya part donwload dalam satu file (lihat kotak nomer 3), mengatur maksimal jumlah file download dalam sekali download (lihat kotak nomer 3), dan mengatur kecepatan download apabila kita sedang menggunakan koneksi kita untuk buffering (lihat kotak nomer 3)
 
 
-# Jangan Lupa
+## Jangan Lupa
 
 1. Pada tab "Linkgrabber" masih terdapat sisa link yang tadi tidak kita pilih
 
@@ -85,7 +85,7 @@ Bagi pengguna Ubuntu & Windows, tutorial pada artikel ini bisa digunakan untuk m
 7. Jadi dengan kata lain kita bisa men-nahan dahulu untuk mendownload dan mengumpulkan file-file link lalu mendownload setelah semua file yang kita inginkan terkumpul.
 
 
-# Error No Connection !
+## Error No Connection !
 
 1. Banyak faktor, bisa jadi server situsnya sedang trouble, atau
 
@@ -106,7 +106,7 @@ Bagi pengguna Ubuntu & Windows, tutorial pada artikel ini bisa digunakan untuk m
 Demikian tutorial mengenai cara penggunaan aplikasi JDownloader ini. Yaa tentu saja setiap aplikasi ada kelebihan dan kekurangannya masing-masing. Ribet ? Ini cuman salah satu trik kok. Sebenarnya sudah ada fasilitas terintegrasi dengan Flashget untuk browser Mozilla Firefox. Tapi saya lebih suka dengan gaya seperti ini. jadi, tutorial ini saya persembahkan untuk mereka-mereka yang mau ribet sedikit. Hehehe
 
 
-# Referensi
+## Referensi
 
 1. [jdownloader.org/](http://jdownloader.org/) \
    Diakses tanggal: 2013-07-03

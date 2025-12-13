@@ -10,7 +10,7 @@ tags: ["jekyll"]
 description: "Cara ini, biasa saya gunakan untuk mempercantik alamat URL yang kurang ramah untuk diingat."
 ---
 
-# Sekenario Masalah
+## Sekenario Masalah
 
 Saya memiliki sebuah URL yang cukup panjang dan tidak begitu mudah untuk diingat maupun ditulis.
 
@@ -37,7 +37,7 @@ Pokoknya lumayan mudah diingat lah yaa. Karena cukup mengakses URL dari blog ini
 Bisa banget, mas Bro! Caranya juga sangat mudah.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Kita akan menggunakan **jekyll-redirect-from** gem.
 
@@ -90,10 +90,10 @@ Selesai!
 Dokumentasi lebih lengkap dapat teman-teman baca pada halaman README dari **jekyll-redirect-from** gem di GitHub. Alamat URL nya sudah saya berikan pada bagian referensi di bawah.
 
 
-# Tambahan
+## Tambahan
 
 
-## Membuat Redirecting Layout
+### Membuat Redirecting Layout
 
 Kalau hanya menggunakan cara di atas, maka halaman redirect kita akan putih polos saja.
 
@@ -124,7 +124,7 @@ Saya hanya mencontohkan sederhana, namun teman-teman dapat bermain-main dengan l
 Perhatikan bagian `page.redirect.to`, adalah variabel yang saya pergunakan pada front matter dari page yang saya pergunakan untuk membuat page redirect.
 
 
-# Sekedar Simpan
+## Sekedar Simpan
 
 Sebelum menggunakan **jekyll-redirect-from** gem, saya sempat mencoba menggunakan cara manual dengan mengisi file page untuk redirect seperti di bawah ini.
 
@@ -150,7 +150,7 @@ Sekian, mudah-mudahan dapat bermanfaat.
 Terima kasih (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [docs.github.com/en/enterprise/2.13/user/articles/redirects-on-github-pages](https://docs.github.com/en/enterprise/2.13/user/articles/redirects-on-github-pages) \
    Diakses tanggal: 2020-07-06

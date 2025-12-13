@@ -10,12 +10,12 @@ tags: ["rails", "singletableinheritance"]
 description: "Mengimplementasikan Single Table Inheritance pada web apps yang dibangun dengan Ruby on Rails."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 2.6.3` `rails 5.2.4` `postgresql 11.5`
 
 
-# Prakata
+## Prakata
 
 **Apa itu Single Table Inheritance?**
 
@@ -36,7 +36,7 @@ Kira-kira seperti ini ERD-nya.
 Gambar 1. ERD Single Table Inheritance contacts dengan friends dan emergencies
 
 
-# Migrations
+## Migrations
 
 Saya membuat dua buah model migration untuk tabel users dan contacts.
 
@@ -96,7 +96,7 @@ $ rails db:migrate
 ```
 
 
-# Models
+## Models
 
 Setelah migration berhasil dijalankan, saya akan membuat scope pada model contact untuk model friend dan emergency.
 
@@ -135,7 +135,7 @@ end
 ```
 
 
-# Controllers
+## Controllers
 
 Model sudah jadi, selanjutnya mengatur controller.
 
@@ -273,7 +273,7 @@ end
 ```
 
 
-# Routes
+## Routes
 
 Pada routes, saya akan menggunakan namespace untuk `:users`.
 
@@ -320,7 +320,7 @@ edit_user_emergency GET    /users/:user_id/emergencies/:id/edit(.:format)  conta
 ```
 
 
-# Views
+## Views
 
 Selanjutnya view template.
 
@@ -430,7 +430,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [www.driftingruby.com/episodes/single-table-inheritance](https://www.driftingruby.com/episodes/single-table-inheritance) \
    Diakses tanggal: 2020-02-21

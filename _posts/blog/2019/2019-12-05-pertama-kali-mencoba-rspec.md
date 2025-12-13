@@ -10,12 +10,12 @@ tags: ["rails", "rspec"]
 description: "Catatan kali ini mengenai pertama kalinya mencoba RSpec."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 2.6.3` `rails 6.0.1` `postgresql 11.5` `rspec 4.0.0.beta3`
 
 
-# Prakata
+## Prakata
 
 Sekitar seminggu yang lalu,  di saat badan sedang meriang dan meler hebat namun kadang tersumbat, saya mencoba untuk mempelajari salah satu test atau pengujian untuk membantu kita menguji web aplikasi yang kita bangun.
 
@@ -34,7 +34,7 @@ Ini adalah bukti yang sangat bagus sekali, untuk menjelaskan bahwa dalam membuat
 Kalau saya tidak ngawur, konsep ngoding sambil melakukan testing itu dikenal dengan **Test Driven Development** (TDD).
 
 
-# Kenapa RSpec?
+## Kenapa RSpec?
 
 Kalau Ruby on Rails sudah membawa MiniTest secara default, lantas mengapa memilih menggunakan RSpec?
 
@@ -83,7 +83,7 @@ Cukup dapat dimengerti kan, maksud dari list tersebut.
 Nah, sekarang saya lanjutkan untuk proses memasang RSpec pada project Rails kita.
 
 
-# Instalasi
+## Instalasi
 
 Pada project baru, saya menjalankan perintah ini.
 
@@ -152,7 +152,7 @@ Kalau tidak ingin menambahkannya sekarang, kita juga dapat menambahkannya dilain
 Nah, sekarang kita dapat lanjut pada tahapan membuat spesifikasi test.
 
 
-# Model Specs
+## Model Specs
 
 Saya sependapat dengan pernyataan bahwa, "Untuk memahami apa itu test, paling mudah kita mulai dari model test."
 
@@ -433,7 +433,7 @@ Sesuai dengan jumlah spesifikasi yang kita tulis, ada 11 buah. Dan kesemuanya be
 Selanjutnya untuk controller spec.
 
 
-# Controller Spec
+## Controller Spec
 
 Kita gunakan lagi *spec file generator* yang sudah disediakan oleh RSpec.
 
@@ -524,7 +524,7 @@ Terima kasih.
 (^_^)v
 
 
-# Referensi
+## Referensi
 
 1. [github.com/rspec/rspec-rails](https://github.com/rspec/rspec-rails) \
    Diakses tanggal: 2019-12-05

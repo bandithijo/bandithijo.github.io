@@ -10,11 +10,11 @@ tags: ["rails"]
 description: "Mungkin teman-teman pernah melihat sebuah blog yang memiliki fitur go to next dan previous post? Nah, kita akan membuat fitur yang sama seperti itu, apabila teman-teman memiliki web aplikasi dalam bentuk blog yang dibangun menggunakan Ruby on Rails."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 2.7.2` `rails 6.1.2` `postgresql 12.5` `rspec 4.0.0`
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Catatan kali ini, saya akan membahas Ruby on Rails dari sisi front-end.
 
@@ -27,14 +27,14 @@ Gambar 1. Fitur Go to Next-Prev di post/article
 Contohnya seperti gambar di atas, bagian yang saya beri kotak merah.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Untuk mengimplementasikan fitur go to next & previous post di atas, sangat mudah sekali.
 
 Kita hanya perlu bermain di Model dan juga View template.
 
 
-## ActiveRecord
+### ActiveRecord
 
 Misal, saya memiliki sebuah model bernama **article**.
 
@@ -59,7 +59,7 @@ end
 Nah, method tersebut tinggal kita gunakan saja.
 
 
-## ActionController
+### ActionController
 
 Anggaplah controllernya bernama **articles_controller**.
 
@@ -83,7 +83,7 @@ end
 Sekarang tinggal menggunakannya pada view template.
 
 
-## ActionView
+### ActionView
 
 Mengikuti dari **articles_controller** dengan action **show**, artinya kita akan memiliki susunan dari halaman template seperti ini.
 
@@ -151,7 +151,7 @@ Kalau ingin menggunakan tooltip, dapat menggunakan cara seperti ini.
 Selesai!
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -164,7 +164,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [stackoverflow.com/questions/1275963/rails-next-post-and-previous-post-links-in-my-show-view-how-to](https://stackoverflow.com/questions/1275963/rails-next-post-and-previous-post-links-in-my-show-view-how-to) \
    Diakses tanggal: 2021-02-13

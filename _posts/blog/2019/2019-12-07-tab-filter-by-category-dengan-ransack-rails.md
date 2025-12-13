@@ -10,12 +10,12 @@ tags: ["rails", "ransack"]
 description: "Catatan ini mengenai cara membuat filter by category menggunakan Ransack gem pada Ruby on Rails."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 2.6.3` `rails 5.2.3` `postgresql 11.5`
 
 
-# Prakata
+## Prakata
 
 Beberapa waktu yang lalu, saya pernah membangun project dengan menggunakan **Ransack** gem untuk menghandle [MetaSearch](https://github.com/activerecord-hackery/meta_search).
 
@@ -34,7 +34,7 @@ Ransack kompatibel dengan Rails versi 6.0, 5.2, 5.1, 5.0, dan pada Ruby 2.3 ke a
 Alasan kenapa memilih Ransack, karena Ransack works out-of-the-box pada Active Record.
 
 
-# Instalasi
+## Instalasi
 
 Seperti biasa, tambahkan pada `Gemfile`.
 
@@ -55,7 +55,7 @@ $ bundle install
 Untuk menginstall Ransack pada web aplikasi kita.
 
 
-# Penerapan
+## Penerapan
 
 Pada catatan kali ini, saya tidak akan menuliskan tentang penggunaan Ransack untuk pencarian dengan menggunakan form `search_form_for`.
 
@@ -74,7 +74,7 @@ Gambar 2. Hasil dari filter pada tab tertentu, berdasarkan negara
 Contoh di atas, sudah dapat kita perkirakan bahwa hasil dari object yang sudah difilter akan ditampilkan pada view `index.html.erb`.
 
 
-## Controller
+### Controller
 
 Nah, pada bagian controller, isinya sangat orisinil seperti yang dicontohkan pada halaman readme dari Ransack.
 
@@ -115,7 +115,7 @@ Dapat teman-teman perhatikan, terdapat object `country_cont` pada params tersebu
 `_cont` adalah **predicate** yang disediakan oleh Ransack yang berarti **Contains value**.
 
 
-## View
+### View
 
 Untuk view template style dari tab, sesuaikan dengan style yang teman-teman gunakan.
 
@@ -254,10 +254,10 @@ Mungkin akan saya cari pada kesempatan yang lain.
 Atau teman-teman punya rekomendasi untuk membuat URL menjadi lebih cantik, boleh tulis pada komentar di bawah yaa.
 
 
-# Update
+## Update
 
 
-## Nice URL Form
+### Nice URL Form
 
 Oke, akhirnya saya berhasil untuk membuat bentuk dari URL menjadi lebih bagus.
 
@@ -339,7 +339,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [github.com/activerecord-hackery/ransack](https://github.com/activerecord-hackery/ransack) \
    Diakses tanggal: 2019-12-07

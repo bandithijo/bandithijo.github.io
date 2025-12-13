@@ -10,12 +10,12 @@ tags: ["rails", "jquery"]
 description: "Catatan kali ini mengenai cara membuat daftar checkbox yang berbasis rentang (range) pada web aplikasi yang dibabgun dengan Ruby on Rails."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 2.6.3` `rails 5.2.3` `postgresql 11.5`
 
 
-# Prakata
+## Prakata
 
 Catatan kali ini, saya akan kembali mendokumentasikan tentang search filter yang menggunakan Ransack sebagai backend dengan tampilan frontend berupa checkbox.
 
@@ -30,7 +30,7 @@ Hampir sama dengan tulisan saya sebelumnya, mengenai ["Membuat Input Select yang
 Secara default, `collection_check_boxes` ini dapat menampung multiple value yang akan disimpan dalam bentuk array. Namun, untuk menyederhanakan proses pencarian, saya membuat `collection_check_boxes` hanya dapat dipilih satu saja dengan bantuan jQuery.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Masih sama seperti post sebelum ini.
 
@@ -73,7 +73,7 @@ Kira-kira seperti itu.
 Tinggal dibuatkan frontend nya.
 
 
-## Controller
+### Controller
 
 Search filter ini akan tampil pada halaman Experience index.
 
@@ -91,7 +91,7 @@ end
 ```
 
 
-## Routes
+### Routes
 
 Seperti biasa, saya memberikan route untuk action index.
 
@@ -105,7 +105,7 @@ end
 ```
 
 
-## View Template
+### View Template
 
 Contoh blok html di bawha ini hanya sebagai dummy.
 
@@ -242,7 +242,7 @@ end
 ```
 
 
-### jQuery disable multiple check
+#### jQuery disable multiple check
 
 Secara default, view helper `collection_check_boxes` ini dapat menampung multiple value yang disimpan dalam array, sehingga frontend, kita dapat memilih banyak pilihan pada check box. Namun, karena alasan tertentu, saya memilih untuk menyederhanakan dan membuat `collection_check_boxes` ini hanya dapat menampung nilai string dan hanya dapat memilih satu saja.
 
@@ -293,7 +293,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [apidock.com/rails/v4.0.2/ActionView/Helpers/FormOptionsHelper/collection_check_boxes](https://apidock.com/rails/v4.0.2/ActionView/Helpers/FormOptionsHelper/collection_check_boxes) \
    Diakses tanggal: 2020-02-05

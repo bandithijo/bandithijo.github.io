@@ -13,12 +13,12 @@ description: "Sudah beralih ke Ubuntu Linux dan masih berharap bisa download vid
 ![Banner](https://2.bp.blogspot.com/-UBmvBCC3EJ0/UdMJakiqSQI/AAAAAAAAA_8/t90Rt6IGukw/s1600/Default+Header+Template+Post+9.jpg)
 
 
-# Latar Belakang
+## Latar Belakang
 
 Sudah beralih ke Ubuntu Linux dan masih berharap bisa download video di Youtube, donwload kontent-kontetn di website yang tidak terdapat menu download, download dari situs-situs yang membutuhkan account premium, ketergantungan dengan IDM (Internet Download Manager) di Windows ? Tapi sudah benar-benar terpojok dengan Ubuntu ? Jangan khawatir. Saya akan memperkenalkan sebuah software sebagai alternatif bagi anda sebagai pengganti IDM di Windows.
 
 
-# JDownloader
+## JDownloader
 
 Adalah software gratis, open-source download manajemen tool yang di tulis dengan bahasa pemrograman Java, dengan komunitas pengembang yang besar, yang membuat download menjadi mudah dan secepat seharusnya. Pengguna dapat memulai, menghentikan atau memberikan jeda, menetapkan batasan bandwidth, arsip auto-ekstrak dan banyak lagi. Termasuk dapat mendownload dari website bertipe One-Click Hoster seperti Rapidshare.com atau Megaupload.com -tidak hanya untuk pengguna dengan account premium, tetapi juga untuk pengguna yang gak bayar.
 
@@ -29,7 +29,7 @@ Untuk cara pengunaannya anda bisa melihat pada tutorial yang saya tuliskan untuk
 Untuk pengguna Ubuntu Linux, pada artikel ini saya menyediakan tutorial bagaimana cara mendownloadnya dari Ubuntu Linux dengan menggunakan PPA source.
 
 
-# Step by Step
+## Step by Step
 
 1. Buka Terminal anda.
 
@@ -52,7 +52,7 @@ Kalau sudah mencoba dan ketagihan, jangan salahkan saya yaa. Hahahaha.
 Senang bisa berbagi informasi.
 
 
-# Referensi
+## Referensi
 
 1. [jdownloader.org/](http://jdownloader.org/)
 2. [bandithijo.github.io/posts/download-client-osx-with-jdownloader](http://bandithijo.github.io/posts/download-client-osx-with-jdownloader)

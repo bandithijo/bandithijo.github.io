@@ -10,7 +10,7 @@ tags: ["virtmanager", "libvirt", "network"]
 description: "IP address yang dimiliki guest instance selalu berubah-ubah. Akibatnya, setiap ingin melakukan ssh session, kita harus mengubah tujuan dari IP address yang dimiliki oleh guest instance. Permasalahan ini dapat diatasi dengan membuat IP address yang dimiliki oleh setiap guest instance menjadi static."
 ---
 
-# Sekenario Masalah
+## Sekenario Masalah
 
 Saya mencoba membangun Virtual Private Server untuk belajar men-deploy Ruby on Rails ke production.
 
@@ -21,7 +21,7 @@ Beberapa kali saya dapati, kalau IP address yang diset melalui DHCP selalu berub
 Hal ini mempengaruhi konfigurasi yang ada pada web aplikasi, karena saya harus mengubah IP server yang ada pada konfigurasi deploy `config/deploy/production.rb`.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Agar IP address dari guest instance tidak berubah-ubah, kita perlu mendefinisikannya pada virtual router yang mengatur DHCP.
 
@@ -50,7 +50,7 @@ Saya akan tulis langkah-langkahnya di bawah ini.
 >              └─345535 /usr/bin/libvirtd --timeout 120
 > ```
 
-## 1. Mengecek Daftar Virtual Network
+### 1. Mengecek Daftar Virtual Network
 
 Kita perlu mengetahui nama dari virtual network yang ada dan yang kita gunakakan.
 
@@ -83,7 +83,7 @@ $ sudo virsh net-dumpxml default | grep -i '<range'
 Nah, kalau IP yang ada pada guest instance kita berada pada range IP tersebut di atas, berarti benar, guest instance yang kita gunakan menggunakan network **default** tersebut.
 
 
-## 2. Mengetahui MAC Address yang Digunakan Guest Instance
+### 2. Mengetahui MAC Address yang Digunakan Guest Instance
 
 Karena kita ingin mengeset IP address static pada guest instance yang kita perlukan, kita memerlukan MAC address dari guest instance yang kita gunakan.
 
@@ -128,7 +128,7 @@ $ sudo virsh dumpxml ubuntu18.04-clone | grep -i '<mac'
 Catat dan simpan kedua MAC address dari kedua guest instance tersebut.
 
 
-## 3. Edit Virtual Network XML
+### 3. Edit Virtual Network XML
 
 Nah, pada tahap ini, kita akan melakukan pendefinisian IP address static kepada kedua guest instance yang kita punya di dalam file konfigurasi XML dari virtual network **default**.
 
@@ -212,7 +212,7 @@ $ sudo virsh net-dumpxml default
 Apabila sudah terdapat konfigurasi yang kita tambahkan tadi, artinya kita sudah berhasil.
 
 
-## 4. Restart DHCP Service
+### 4. Restart DHCP Service
 
 Karena konfigurasi IP address di virtual network ini dihandle oleh DHCP server, kita perlu me-reset ulang untuk mengaktifkan konfigurasi yang baru saja kita tambahkan.
 
@@ -235,7 +235,7 @@ Network default started
 ```
 
 
-## 5. Restart libvirtd.service
+### 5. Restart libvirtd.service
 
 Restart **libvirtd.service**.
 
@@ -244,7 +244,7 @@ $ sudo systemctl restart libvirtd.service
 ```
 
 
-## 6. ReOpen The Stage
+### 6. ReOpen The Stage
 
 Kalau teman-teman menggunakan Virtual Machine Manager, harus exit dan buka kembali.
 
@@ -336,7 +336,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [KVM libvirt assign static guest IP addresses using DHCP on the virtual machine](https://www.cyberciti.biz/faq/linux-kvm-libvirt-dnsmasq-dhcp-static-ip-address-configuration-for-guest-os/) \
    Diakses tanggal: 2020-07-19

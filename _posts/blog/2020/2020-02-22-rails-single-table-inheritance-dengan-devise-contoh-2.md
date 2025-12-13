@@ -10,12 +10,12 @@ tags: ["rails", "singletableinheritance", "devise"]
 description: "Mengimplementasikan Single Table Inheritance pada web apps yang menggunakan Device gem."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 2.6.3` `rails 5.2.4` `postgresql 11.5`
 
 
-# Prakata
+## Prakata
 
 **Apa itu Single Table Inheritance?**
 
@@ -44,7 +44,7 @@ Tabel users ini hasil generate dari Devise.
 Yak! Pada catatan kali ini, saya akan mencatat bagaimana membuat Single Table Inheritance (STI) dengan Devise.
 
 
-# Sekenario
+## Sekenario
 
 Saya berencana membuat sebuah website untuk registrasi sebuah event.
 
@@ -55,12 +55,12 @@ Menurut saya, ini adalah contoh yang pas untuk memnggunakan STI.
 Dimana model user akan menurunkan sifatnya pada model participant dan sponsor.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Saya akan memulai dari pemasangan Devise
 
 
-## Migrations
+### Migrations
 
 Saya akan membuat tabel users dengan menggunakan generator yang dimiliki oleh Devise.
 
@@ -120,7 +120,7 @@ $ rails db:migrate
 ```
 
 
-## Models
+### Models
 
 Kemudian buat dua model untuk participant dan sponsor.
 
@@ -151,7 +151,7 @@ end
 ```
 
 
-## Routes
+### Routes
 
 Kemudian, pada routes untuk `:users` juga ganti menjadi dua buah untuk masing-masing model.
 
@@ -165,7 +165,7 @@ end
 ```
 
 
-## Views & Controller
+### Views & Controller
 
 Untuk views template, saya perlu membuat homepage dan halaman dashboard ketika user sudah melakukan sign up dan sign in.
 
@@ -344,12 +344,12 @@ Terima kasih.
 (^_^)
 
 
-# Tambahan
+## Tambahan
 
 1. [**Membuat Relasi dengan Hanya Salah Satu Type pada Single Table Inheritance Model di Rails**](/blog/relasi-dengan-salah-satu-type-pada-sti-pada-rails)
 
 
-# Referensi
+## Referensi
 
 1. [vsmedia.co.uk/single-table-inheritance-sti-devise/](https://vsmedia.co.uk/single-table-inheritance-sti-devise/) \
    Diakses tanggal: 2020-02-21

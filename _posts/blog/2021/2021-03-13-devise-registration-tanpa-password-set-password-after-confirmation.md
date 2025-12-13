@@ -10,20 +10,20 @@ tags: ["rails"]
 description: "Catatan kali ini tentang pemanfaatan Devise gem untuk registration tanpa menginputkan password, password akan diminta setelah user membuka link konfirmasi yang dikirimkan via email."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 3.0.0` `rails 6.1.3` `postgresql 12.5` `rspec 4.0.0`
 
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Catatan kali ini tentang pemanfaatan Devise gem untuk registration tanpa menginputkan password, password akan diminta setelah user membuka link konfirmasi yang dikirimkan via email.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 
-## Gemfile
+### Gemfile
 
 1. [**Devise**](https://github.com/heartcombo/devise), untuk authentication
 2. [**Simple Form**](https://github.com/heartcombo/simple_form), untuk menghandle form agar lebih praktis*
@@ -56,7 +56,7 @@ Setelah itu, **devise**.
 $ rails g devise:install
 ```
 
-## ActionMailer
+### ActionMailer
 
 Selanjutnya konfigurasi ActionMailer untuk environment development.
 
@@ -80,7 +80,7 @@ Baris 7 dan 8, adalah configurasi untuk MailCatcher.
 Untuk yang belum tahu MailCatcher, dapat dibaca di sini, [**Konfigurasi Ruby on Rails ActionMailer pada Local Environment dengan MailCatcher**](/blog/ruby-on-rails-actionmailer-local-mailcatcher).
 
 
-## Devise Initializer
+### Devise Initializer
 
 Kita perlu merubah beberapa konfigurasi pada Devise initializer.
 
@@ -110,7 +110,7 @@ Ganti `config.mailer_sender =` sesuai alamat yang teman-teman inginkan.
 Ganti `config.reconfirmable =` menjadi **false**.
 
 
-## Devise User Model
+### Devise User Model
 
 Kita akan membuat User model dengan devise.
 
@@ -227,7 +227,7 @@ end
 ```
 
 
-## Controller
+### Controller
 
 Kita akan membuat 2 custom controller yang merupakan turunan dari Devise controller.
 
@@ -328,7 +328,7 @@ $ rails g controller Home index
 ```
 
 
-## Routes
+### Routes
 
 ```ruby
 !filename: config/routes.rb
@@ -496,19 +496,19 @@ Pasang nav untuk menempatkan link indikator apabila user telah login atau belum.
 ```
 
 
-# Demonstrasi
+## Demonstrasi
 
 ![Gambar 3](https://i.postimg.cc/ZqNC6RFV/gambar-01.gif)
 
 Gambar 3. Demonstrasi register and activation
 
 
-# Repositori
+## Repositori
 
 [**github.com/bandithijo/demo_devise_confirmable**](https://github.com/bandithijo/demo_devise_confirmable)
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -521,7 +521,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [mailcatcher.me](https://mailcatcher.me/) \
    Diakses tanggal: 2021-03-13

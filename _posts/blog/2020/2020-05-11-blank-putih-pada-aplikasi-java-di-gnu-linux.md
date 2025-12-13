@@ -10,12 +10,12 @@ tags: ["java"]
 description: "Saya mendapati beberapa aplikasi berbasis Java, apabila dibuka, hanya menampilkan *canvas* putih dan tidak merender *asset* seperti form, menu, button, text, gambar dan lain-lain."
 ---
 
-# Permasalahan
+## Permasalahan
 
 Saya mendapati beberapa aplikasi berbasis Java, apabila dibuka, hanya menampilkan *canvas* putih dan tidak merender *asset* seperti form, menu, button, text, gambar dan lain-lain.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Misalkan, dalam kasus saya, saya ingin menjalankan binary dari aplikasi Jdownloader 2 Beta. Nama file binarynya adalah `JDownloader2`.
 
@@ -50,7 +50,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [bbs.archlinux.org/viewtopic.php?id=159016](https://bbs.archlinux.org/viewtopic.php?id=159016) \
    Diakses tanggal: 2020-05-11

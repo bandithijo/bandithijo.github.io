@@ -13,22 +13,22 @@ description: "Sudah hampir dua minggu ini saya terpilih sebagai peserta untuk me
 ![Banner](https://s20.postimg.cc/dwqipcfgd/banner_post_18.png)
 
 
-# Pendahuluan
+## Pendahuluan
 
 Sudah hampir dua minggu ini saya terpilih sebagai peserta untuk mengikuti kelas yang membahas tentang *Cloud Computing*. Ini merupakan bidang yang sangat baru pertama kali saya sentuh. Sebelumnya, memang saya sering membaca (meski hanya judul) di beberapa blog GNU/Linux yang membahas tentang teknologi-teknologi yang digunakan dalam *cloud computing*. Meskipun sama-sama dalam bidang teknologi, namun jujur saja, istilah-istilah yang digunakan sangat asing buat saya pahami.
 
 
-# Keresahan
+## Keresahan
 
 Di kelas yang saya ikuti, saya menemukan beberapa penerapan perintah-perintah `ssh` yang saya rasa perlu untuk mendokumentasikannya. Saya khawatir akan sangat membuang-buang waktu lagi apabila saya harus melakukan *research* kembali jika suatu saat nanti saya membutuhkannya. Jadi, kenapa tidak saya tulis.
 
 
-# Catatan Kaki
+## Catatan Kaki
 
 Berikut ini adalah beberapa perintah-perintah SSH yang saya gunakan. Belum dapat saya jelaskan secara detail masing-masing fungsinya dan penjabaran masing-masing parameter yang digunakan.
 
 
-## SSH Tunneling dengan Keybase Login & Spesifik Port
+### SSH Tunneling dengan Keybase Login & Spesifik Port
 
 ```
 $ ssh -i .ssh/{private-key} {user}@{server-address} -p {port}
@@ -45,7 +45,7 @@ $ ssh -i .ssh/id_rsa bandithijo@10.1.41.200.1 -p 2200
 ```
 
 
-## SSH Tunneling dengan Keybase Login, Spesifik Port & Dynamic Port Forwarding
+### SSH Tunneling dengan Keybase Login, Spesifik Port & Dynamic Port Forwarding
 
 Nah, kalo ini saya gunakan untuk *Dynamic Port Forwarding*, kegunannya untuk mengakses server agar dapat kita akses dari *web browser* kita.
 
@@ -93,7 +93,7 @@ $ chromium --proxy-server="socks5://localhost:8080"
 ```
 
 
-## SSH Tunneling dengan Username yang Terdaftar pada Server
+### SSH Tunneling dengan Username yang Terdaftar pada Server
 
 ```
 $ ssh -l banditbiru dev.bandithijo.com
@@ -108,12 +108,12 @@ $ ssh -l banditbiru 10.1.41.200
 Perintah di atas akan membawa kita langsung memasuki user **banditbiru** di server. Tentu saja perintah ini dapat dilakukan setelah kita memasukkan **public key** kita ke dalam file `/home/banditbiru/.ssh/authorized_keys` di server pada user **banditbiru**.
 
 
-## Generate Private & Public Key SSH
+### Generate Private & Public Key SSH
 
 Saya menggunakan beberapa bentuk format perintah `ssh-keygen` untuk mengenerate key. Berikut ini adalah beberapa bentuk format yang saya gunakan dalam pelatihan.
 
 
-### Generate Key untuk User Biasa
+#### Generate Key untuk User Biasa
 
 Yang sederhana,
 
@@ -150,7 +150,7 @@ $ ls -l $HOME/.ssh/
 Sebagai catatan, apabila kita melakukan perintah `ssh-keygen` pada user biasa, maka otomatis file *private* dan *public key* akan diletakkan pada direktori `.ssh/` milik user biasa tersebut. Seperti contoh di atas, terletak pada direktori `.ssh` milik user **bandithijo**.
 
 
-### Generate Key untuk Root dari User Biasa
+#### Generate Key untuk Root dari User Biasa
 
 Kita dapat mengenerate key untuk user root melalui user biasa, dengan cara menambahkan `sudo` pada awal perintah `ssh-keygen`.
 
@@ -191,7 +191,7 @@ $ sudo ssh -l bandithijo 10.1.41.200
 > Tentu saja kita dapat mengganti nama dari file *private* dan *public key* tersebut, namun sangat direkomendasikan untuk memberikan nama yang sama diantara keduanya. Agar tetap berpasangan.
 
 
-## Menampilkan Public Key
+### Menampilkan Public Key
 
 ```
 $ cat $HOME/.ssh/{nama_public_key}.pub
@@ -202,7 +202,7 @@ $ cat $HOME/.ssh/id_rsa.pub
 ```
 
 
-## Menyimpan public key di server target
+### Menyimpan public key di server target
 
 ```
 $ ssh-copy-id -i ~/.ssh/id_rsa.pub <username@ipaddress>
@@ -213,14 +213,14 @@ $ ssh-copy-id -i ~/.ssh/id_rsa.pub bandithijo@192.168.1.7
 ```
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Oke, saya rasa untuk saat ini, cukup seperti ini saja. Saya tidak berhenti menulis, mungkin lain kali kamu datang lagi, tulisan di halaman ini sudah bertambah dengan perintah-perintah SSH yang lain.
 
 Terima kasih. ^_^
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/index.php/Secure_Shell](https://wiki.archlinux.org/index.php/Secure_Shell) \
    Diakses tanggal: 2018-07-24

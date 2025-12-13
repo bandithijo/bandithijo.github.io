@@ -10,7 +10,7 @@ tags: ["bluetooth", "bluetoothctl"]
 description: "Bluetoothctl adalah interaktif shell yang dapat kita gunakan untuk berinteraksi dengan bluetooth device tanpa perlu menggunakan GUI tool seperti Blueman Manager atau Blueman applet (trayicon). Cukup dengan bermodalkan Terminal, kita dapat melakukan power on, scan on, pairing, connecting dan disconnecting."
 ---
 
-# Latar Belakang
+## Latar Belakang
 
 Selama ini saya masih menggunakan Blueman Manager untuk mengurusi hal-hal terkait bluetooth.
 
@@ -19,7 +19,7 @@ Satu-satunya bluetooth device yang saya gunakan adalah headset bluetooth yang ja
 Karena jarang digunakan, maka ketika harus berurusan dengannya, saya memilih untuk gak ribet-ribet untuk mencoba workflow baru. Maka, saya gunakan Blueman Manager saja yang praktis.
 
 
-# Terminologi
+## Terminologi
 
 Kita samakan persepsi dulu yaa, agar teman-teman mudah memahami istilah-istilah yang ada dalam catatan ini.
 
@@ -28,15 +28,15 @@ Kita samakan persepsi dulu yaa, agar teman-teman mudah memahami istilah-istilah 
 **Bluetooth Device**, adalah perangkat bluetooth yang akan dihubungkan dengan bluetooth controller, seperti Bluetooth Headset, Bluetooth Keyboard, Blutooth Speaker, Smartphone, dll.
 
 
-# Apa itu bluetoothctl?
+## Apa itu bluetoothctl?
 
 Bluetoothctl adalah tools yang dapat kita pergunakan untuk melakukan pairing a device from the shell.
 
 
-# Cara Penggunaan
+## Cara Penggunaan
 
 
-## Nyalakan bluetoothd service
+### Nyalakan bluetoothd service
 
 **systemd**
 
@@ -53,7 +53,7 @@ $ sudo rc-service bluetoothd start
 Pastikan **bluetoothd** service sudah dalam status aktif.
 
 
-## Periksa Bluetooth Controller
+### Periksa Bluetooth Controller
 
 Biasanya, kalau kita memiliki satu buah bluetooth controller, maka akan bernama **hci0**.
 
@@ -82,7 +82,7 @@ Namun, statusnya masih DOWN (bukan OFF).
 Untuk dapat menggunakannya, kita perlu menjalankan langkah-langkah di bawah.
 
 
-## Masuk bluetoothctl shell
+### Masuk bluetoothctl shell
 
 Untuk mengakses bluetoothctl shell, cukup jalankan perintah di Termial:
 
@@ -144,7 +144,7 @@ export                                            Print environment variables
 ```
 
 
-## Pilih Controller
+### Pilih Controller
 
 Untuk melihat daftar bluetooth controller yang tersedia:
 
@@ -167,7 +167,7 @@ Apabila terdapat lebih dari satu bluetooth controller, kalian harus memilih sala
 ```
 
 
-## Melihat Detail dari Controller
+### Melihat Detail dari Controller
 
 Untuk melihat detail dari controller yang dipilih, gunakan perintah:
 
@@ -242,7 +242,7 @@ Perintah di atas akan menyalakan controller yang kita set sebagai default dengan
 > Perintah di atas, dijalankan di luar dari bluetoothctl.
 
 
-## Scanning Perangkat Bluetooth yang Lain
+### Scanning Perangkat Bluetooth yang Lain
 
 Untuk melakukan scanning terhadap perangkat bluetooth yang lain,
 
@@ -268,7 +268,7 @@ Discovery started
 Dapat dilihat, bahwa ada perangkat bluetooth bernama **MBH20** yang terdeteksi oleh bluetooth controller kita.
 
 
-## Pairing dengan Perangkat Lain
+### Pairing dengan Perangkat Lain
 
 Kalau sudah terdeteksi, tinggal kita pairing saja.
 
@@ -296,7 +296,7 @@ Nah, pairing successfull.
 Status **Paired: yes**, namun **Connected: no**.
 
 
-## Connect dengan Paired Device
+### Connect dengan Paired Device
 
 Kalau sudah dipairing, sekarang kita bisa hubungkan.
 
@@ -356,7 +356,7 @@ Changing 44:D4:E0:EF:94:DD trust succeeded
 ```
 
 
-## Disconnect
+### Disconnect
 
 Untuk memutuskan hubungan dengan device yang terhubung,
 
@@ -378,7 +378,7 @@ Prompt akan kembali ke semula
 ```
 
 
-## Melihat Daftar Paired Devices
+### Melihat Daftar Paired Devices
 
 Untuk melihat daftar device yang sudah kita pair.
 
@@ -393,7 +393,7 @@ Device 44:D4:E0:EF:94:DD MBH20
 Kebetulan saya hanya memiliki satu device saja.
 
 
-## Menghapus Paired Device
+### Menghapus Paired Device
 
 Untuk menghapus device yang sudah pernah kita pair,
 
@@ -407,12 +407,12 @@ Device has been removed
 ```
 
 
-# Demonstrasi
+## Demonstrasi
 
 {% youtube Bxc3e6lnEUg %}
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -425,7 +425,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/index.php/Bluetooth](https://wiki.archlinux.org/index.php/Bluetooth) \
    Diakses tanggal: 2021-01-13

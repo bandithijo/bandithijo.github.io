@@ -10,7 +10,7 @@ tags: ["sxhkd", "hotkey"]
 description: "Tools untuk mengatur kombinasi keyboard (keybind) yang independent. Dapat kita gunakan pada Window Manager atau Desktop Environment apa pun. Konfigurasinya juga menggunakan Bash, dan sangat mudah untuk dikonfigurasi. Cukup fleksibel untuk bermain-main dengan berbagai macam bentuk kombinasi keyboard shortcut. Dengan begini, kita tidak perlu lagi pusing dengan keybind apabila kita ingin mencoba-coba Window Manager yang berbeda."
 ---
 
-# Latar Belakang
+## Latar Belakang
 
 SXHKD, adalah Daemon yang sederhana (simple) untuk keyboard shortcut (hotkey) pada lingkungan X (Xorg).
 
@@ -25,7 +25,7 @@ Window Manager pertama yang saya gunakan untuk beraktifitas adalah i3WM. Pada i3
 Berbeda dengan BSPWM, yang menggunakan SXHKD sebagai alat bantu untuk menghandle keyboard shortcut.
 
 
-# Keuntungan Menggunakan SXHKD
+## Keuntungan Menggunakan SXHKD
 
 Terdapat beberapa keuntungan yang akan kita dapatkan apabila kita memanfaatkan SXHKD sebagai alat bantu untuk menghandle keyboard shortcut, diantaranya:
 
@@ -38,7 +38,7 @@ Terdapat beberapa keuntungan yang akan kita dapatkan apabila kita memanfaatkan S
 3. **Independent** \
     SXHKD tidak hanya untuk BSPWM, tetapi dapat digunakan untuk Window Manager atau Desktop Environment yang lain pula.
 
-# Cara Penggunaan
+## Cara Penggunaan
 
 Untuk memanggil config sxhkd, saya lebih senang menggunakan option `-c`.
 
@@ -55,14 +55,14 @@ Misal, contohnya seperti yang saya pergunakan di bawah ini.
 ![Gambar 1](https://i.postimg.cc/RVts5LyC/gambar-01.png)
 
 
-# Contoh Penggunaan
+## Contoh Penggunaan
 
 Berikut ini beberapa contoh isi dari konfigurasi SXHKD yang saya pergunakan.
 
 Saya akan ambil beberapa contoh yang simple dan berbeda dengan yang lain.
 
 
-## 1. Single Key
+### 1. Single Key
 
 Ini adalah contoh yang menggnunakan single key.
 
@@ -80,7 +80,7 @@ XF86AudioMute
 Dalam contoh di atas, saya menggunakan tombol <kbd>PrtScr</kbd> untuk memanggil script yang bernama `scrot-full`.
 
 
-## 2. Simple Combination Sequence Key
+### 2. Simple Combination Sequence Key
 
 Kita dapat menggunakan 2 atau lebih kombinasi tombol yang kita gunakan dengan cara "press & hold".
 
@@ -116,7 +116,7 @@ super + shift + x
 ```
 
 
-## 3. Simple Parenthesis
+### 3. Simple Parenthesis
 
 **Different Statement**
 
@@ -158,7 +158,7 @@ Dan seterusnya.
 ```
 
 
-## 4. Combination Sequence Key with Parenthesis
+### 4. Combination Sequence Key with Parenthesis
 
 ```bash
 super + {_+shift} + F1
@@ -174,7 +174,7 @@ Arti dari keybind di atas adalah:
 <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>F1</kbd>, untuk menjalankan `statement --option B`.
 
 
-## 5. Toggling On/Off
+### 5. Toggling On/Off
 
 ```bash
 ~F11
@@ -203,7 +203,7 @@ super + ~F11
 ```
 
 
-## 6. Multiline for Long Statement
+### 6. Multiline for Long Statement
 
 ```bash
 super + F1
@@ -215,7 +215,7 @@ super + F1
 Kita dapat menggunakan `\` backslash untuk memisahkan satu statement panjang menjadi beberapa baris. Dengan begini, command yang kita tulis akan lebih mudah untuk dibaca.
 
 
-## 7. Multistatement
+### 7. Multistatement
 
 ```bash
 !filename: $HOME/.config/sxhkd/sxhkdrc
@@ -226,7 +226,7 @@ super + F1
 Kita dapat menggunakan tanda `;` untuk memisahkan antar statement. Maka statement ini akan dijalankan berurutan dimulai dari yang paling depan.
 
 
-## 8. Multiline for Multistatement
+### 8. Multiline for Multistatement
 
 ```bash
 !filename: $HOME/.config/sxhkd/sxhkdrc
@@ -238,12 +238,12 @@ super + F1
 Ini adalah kombinasi dari point ke 6 & 7. Tujuannya agar statement yang kita definisikan menjadi lebih readable.
 
 
-## 9. Etc.
+### 9. Etc.
 
 Silahkan lihat pada `man sxhkd` untuk fungsi-fungsi yang lain.
 
 
-# Contoh
+## Contoh
 
 Saya akan mencontohkan penggunaan yang terlihat ribet.
 
@@ -310,7 +310,7 @@ alt + XF86AudioMute
 Penggunaan seperti ini tidak saya rekomendasikan. Saya lebih merekomendasikan dimasukkan saja ke dalam file script.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -323,7 +323,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [baskerville/sxhkd](https://github.com/baskerville/sxhkd) \
    Diakses tanggal: 2020-10-12

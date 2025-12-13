@@ -10,7 +10,7 @@ tags: ["freebsd"]
 description: "Apakah kita dapat mengkonfigurasi FreeBSD untuk melakukan sleep/standby ketika lid laptop di tutup?"
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 Karena FreeBSd masih menggunakan "Traditional BSD-style init"<super>1</super>, hal ini membuat kita dengan mudah dapat membaca dan memodifikasi atribut dari sistem kernel dengan menggunakan `sysctl`.
 
@@ -35,12 +35,12 @@ Hasilnya akan banyak sekali.
 Nah, dengan ini, membuat pekerjaan kita lebih mudah untuk mengatur kernel state.
 
 
-# Permasalahan
+## Permasalahan
 
 Pada awal-awal menggunakan FreeBSD, saya menggunakan XFCE. Pada saat itu, ketika lid laptop ditutup, laptop akan langsung standby karena pengaturan pada **xfce4-power-manager**. Namun, setelah bermigrasi ke BSPWM, laptop tidak lagi sleep/standby ketika lid ditutup.
 
 
-# Identifikasi Masalah
+## Identifikasi Masalah
 
 Kemudian saya lakukan pengecekan terlebih dahulu pada atribute **hw.acpi**
 
@@ -78,7 +78,7 @@ Nah, saya ingin ketika lid laptop ditutup maka laptop akan jatuh pada kondisi sl
 Oleh karena itu, saya perlu mengganti nilai dari atribut `lid_switch_state=NONE` menjadi `lid_switch_state=S3`.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Untuk merubah nilai dari atribut tersebut sangat mudah sekali.
 
@@ -126,7 +126,7 @@ hw.acpi.lid_switch_state=S3
 ```
 
 
-# Pengujian
+## Pengujian
 
 Nah, enaknya lagi, tanpa perlu restart, kita langsung dapat mencoba pengaturan yang baru saja kita lakukan.
 
@@ -143,7 +143,7 @@ Berikut ini video demonstrasinya.
 Pada video di atas, terlihat bahwa saya mendemonstrasikan proses sebelum dan sesudah mengubah atribut **lid_switch_state** tanpa perlu melakukan restart.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Catatan ini masih jauh dari kata baik.
 
@@ -158,7 +158,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [freebsd.org/doc/en_US.ISO8859-1/articles/linux-users/startup.html](https://www.freebsd.org/doc/en_US.ISO8859-1/articles/linux-users/startup.html) \
    Diakses tanggal: 2020-03-25

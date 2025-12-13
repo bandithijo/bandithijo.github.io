@@ -10,7 +10,7 @@ tags: ["jekyll"]
 description: "Semakin bertambahnya jumlah artikel di BanditHijo blog, mungkin akan memperlambat proses generate static blog ini. Maka dari itu, saya memilih untuk memisahkan beberapa gem yang hanya akan saya gunakan saat di local development, sebagiannya saya jalankan hanya di level production."
 ---
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Saat memindahkan proses build blog ini dari Netlify ke GitHub Pages, saya menyadari bahwa ada beberapa plugin yang membuat proses build blog ini sangat molor. Sekitar 40-60 detik.
 
@@ -30,13 +30,13 @@ Bayangkan kalau kita harus menunggu 40-60 detik hanya karena menambah 1 huruf sa
 Regenerating: 1 file(s) changed at 2021-01-07 21:15:48
               _posts/blog/2021/2021-01-07-membedakan-jekyll-gemfile-antar-environment.md
  Jekyll Feed: Generating feed for posts
-              ...done in 37.638836748 seconds.
+               ...done in 37.638836748 seconds.
 ```
 
 Proses build yang molor ini juga dikarenakan prosesor saya sudah cukup tua, namun menolak untuk menyerah.
 
 
-# Apa Penyebabnya?
+## Apa Penyebabnya?
 
 Kalau saya menjalankan build dengan option `--profile`.
 
@@ -104,7 +104,7 @@ Kalau saya tidak gunakan, rasanya tidak bisa. 😄
 Saya perlukan plugin sitemap untuk mendhandle ketentuan SEO dan saya perlukan plugin last-modified-at untuk memberikan keterangan bahwa saya telah melakukan pembaharuan terhadap post tertentu.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Kalau di Ruby on Rails, pada Gemfile, kita dapat menempatkan gem pada group tertentu.
 
@@ -150,16 +150,16 @@ Setidaknya ada 3 cara yang dapat kita lakukan.
   Karena sudah diganti dengan **plugins**. Lihat [issue #6195](https://github.com/jekyll/jekyll/issues/6195#issuecomment-312499884).
 
 2. **Gemfile Plugins** \
-  Pendefisian plugin yang berbeda antar dua file Gemfile: **Gemfile** (production) & **Gemfile-dev** (development).
+  Pendefinisian plugin yang berbeda antar dua file Gemfile: **Gemfile** (production) & **Gemfile-dev** (development).
 
-3. **Limit Number of Post Rendering** \
+3. **Limit Number Of Post Rendering** \
   Apabila kalian memiliki jumlah post yang banyak, kita dapat membatasi jumlah post yang dapat di-generate. \
   Dengan menggunakan option `--limit_posts`.
 
 Dari ketiga cara di atas, saya menggunakan cara nomor 2 & 3.
 
 
-## Gemfile Plugins
+### Gemfile Plugins
 
 Karena saya tidak menemukan cara untuk membuat scope dalam Gemfile guna memberikan batasan plugin pada masing-masing level environment, maka kita akali dengan memisahkan Gemfile (membuat dua Gemfile) antar level environment.
 
@@ -253,13 +253,13 @@ $ rake jekyll:server
 $ rake jekyll:server:inc
 ```
 
-# Hasilnya
+## Hasilnya
 
 ```
 Regenerating: 1 file(s) changed at 2021-01-07 20:19:30
               _posts/blog/2021/2021-01-07-membedakan-jekyll-gemfile-antar-environment.md
  Jekyll Feed: Generating feed for posts
-              ...done in 9.767419585 seconds.
+               ...done in 9.767419585 seconds.
 ```
 
 Akan lebih cepat lagi kalau menggunakan `--incremental` dan `--watch`.
@@ -268,7 +268,7 @@ Akan lebih cepat lagi kalau menggunakan `--incremental` dan `--watch`.
 Regenerating: 1 file(s) changed at 2021-01-07 20:25:39
               _posts/blog/2021/2021-01-07-membedakan-jekyll-gemfile-antar-environment.md
  Jekyll Feed: Generating feed for posts
-              ...done in 1.772672945 seconds.
+               ...done in 1.772672945 seconds.
 ```
 
 > INFO
@@ -282,7 +282,7 @@ Regenerating: 1 file(s) changed at 2021-01-07 20:25:39
 > \* Fitur ini masih merupakan experimental feature.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -293,7 +293,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [stackoverflow.com/a/59762252/4862516](https://stackoverflow.com/a/59762252/4862516) \
    Diakses tanggal: 2021-01-07

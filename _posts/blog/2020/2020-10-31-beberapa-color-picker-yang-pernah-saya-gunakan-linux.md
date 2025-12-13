@@ -10,7 +10,7 @@ tags: ["colorpicker"]
 description: "Mengetahui sebuah warna yang ada pada objek merupakan kebutuhan seorang desainer. Tidak juga graphic desainer, seorang ricer juga memerlukannya. Berikut ini adalah beberapa color picker tools yang pernah saya cicipi sepanjang menggunakan GNU/Linux."
 ---
 
-# Latar Belakang
+## Latar Belakang
 
 Di awal-awal saya mengenal komputer, saya banyak menghabiskan waktu dengan aplikasi olah multimedia seperti Photoshop, Ilustrator, Flash, GIMP, Inkscape, dll.
 
@@ -21,10 +21,10 @@ Maka dari itu, aplikasi color picker adalah salah satu tools yang penting bagi s
 Catatan kali ini adalah mengenai beberapa aplikasi yang sudah saya kenal, sejak aktif menggunakan GNU/Linux dan menemani saya dalam menyelesaikan project-project yang saya kerjakan di lingkungan GNU/Linux.
 
 
-# Daftar Color Picker
+## Daftar Color Picker
 
 
-## Gpick
+### Gpick
 
 ![Gambar 1](https://i.postimg.cc/V6v81DpV/gambar-01.png)
 
@@ -41,7 +41,7 @@ Sesuai namanya "Advance color picker" memang cocok disematkan untuk aplikasi ini
 Saya pribadi, awal-awal mengenal Gpick, sangat menyukainya. Namun, karena kebutuhan saya tidak sekompleks dengan fitur yang ditawarkan, akhirnya saya merasa Gpick terlalu berlebihan untuk saya.
 
 
-## Gcolor2
+### Gcolor2
 
 ![Gambar 2](https://i.postimg.cc/PJ8nvNtb/gambar-02.png)
 
@@ -60,7 +60,7 @@ Gcolor2 benar-benar hanya mengerjakan tugas yang spesifik dengan sangat baik.
 Saya pribadi, sempat memakai Gcolor2 dalam waktu yang cukup lama.
 
 
-## Gcolor3
+### Gcolor3
 
 ![Gambar 3](https://i.postimg.cc/SjFF6qsB/gambar-03.png)
 
@@ -77,7 +77,7 @@ Sama seperti Gcolor2, Gcolor3 juga memiliki fungsi dan fitur-fitur yang serupa n
 Alasan saya menggunakan Gcolor3, ketimbang Gcolor2, karena mengikuti trend saja. Tidak ada alasan teknis.
 
 
-## ColorGrab
+### ColorGrab
 
 ![Gambar 4](https://i.postimg.cc/ydGzN0zY/gambar-04.png)
 
@@ -102,7 +102,7 @@ Alasannya:
 3. Fitur-fitur yang tidak sering digunakan, tersembunyi di dalam menu. Cocok sekali untuk digunakan apabila diperlukan.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 

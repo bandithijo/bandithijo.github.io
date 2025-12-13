@@ -19,7 +19,7 @@ description: "Saya kurang menyukai tampilan BIOS logo ThinkPad X260 bawaan. Kare
 > *Do with your own risk!*
 
 
-# Prakata
+## Prakata
 
 Sudah sejak 15 Oktober 2018 lalu, saya begitu mengincar untuk dapat mengganti BIOS logo ThinkPad saya yang bertuliskan gambar ini.
 
@@ -30,12 +30,12 @@ Gambar 1. Default BIOS Logo pada ThinkPad X260 saya
 Alasan saya begitu gigih untuk mengganti logo ini adalah, karena boot time yang molor pada saat BIOS logo ini. Luamaaaaaa aseeeeeliii. Saya berpikir akan sangat pas kalau BIOS logo ini diganti dengan logo yang saya inginkan.
 
 
-# Langkah-langkah
+## Langkah-langkah
 
 Untuk melakukan kustomisasi BIOS logo pada laptop ThinkPad menurut pendapat saya, merupakan hal yang sangat-sangat mudah.
 
 
-## Konfigurasi UEFI BIOS Update Option
+### Konfigurasi UEFI BIOS Update Option
 
 Ini adalah langkah yang penting, agar kita dapat fleksibel untuk mengupdate dan downgrade BIOS firmware.
 
@@ -45,12 +45,12 @@ Ini adalah langkah yang penting, agar kita dapat fleksibel untuk mengupdate dan 
 4. Pada option **Secure RollBack Prevention** ubah valuenya menjadi **Disabled**
 
 
-## Racik Bahan-bahan
+### Racik Bahan-bahan
 
 Proses merubah BIOS logo ini sebenarnya hampir sama dengan proses update firmware BIOS yang sudah pernah saya tuliskan - [Update BIOS Lenovo di GNU/Linux Tanpa Menggunakan Windows]({{ site.url }}/blog/update-lenovo-bios-dari-linux). Hanya ada sedikit modifikasi pada *bootable flash drive* yang sudah kita buat. Kita hanya perlu memasukkan file gambar ke dalam direktori FLASH/. Just it!
 
 
-### Membuat Bootable Flash Drive
+#### Membuat Bootable Flash Drive
 
 Untuk proses pembuatan *bootable flash drive* yang sudah berisi *firmware update* bisa disimak pada post [di sini]({{ site.url }}/blog/update-lenovo-bios-dari-linux).
 
@@ -63,7 +63,7 @@ Ikuti langkah-langkah yang diberikan sampai pada "**Step 4: Bakar Image ke dalam
 Saya akan langsung lompat pada tahap memodifikasi *bootable flash drive*.
 
 
-### Mempersiapkan File Gambar
+#### Mempersiapkan File Gambar
 
 Ada beberapa persyaratan yang saya dapat dari sumber referensi **iBSD** pada videonya yang menunjukkan isi dari file README.TXT.<sup>[2]({{ site.url }}/blog/custom-bios-logo-thinkpad#referensi)</sup>
 
@@ -144,7 +144,7 @@ Dengan begini, file gambar kita telah siap.
 > Untuk itu, saya tidak berani mengambil resiko bermain-main dengan *firmware update* karena laptop ini masih saya gunakan untuk bekerja.
 
 
-### Memasukkan File Gambar ke Bootable Flash Drive
+#### Memasukkan File Gambar ke Bootable Flash Drive
 
 Kemudian saya cabut dan colok kembali *bootable flash drive* yang sudah berisi BIOS firmware (bisa update terbaru atau versi yang sama) - agar kembali terdeteksi, kalau sudah terdeteksi tidak perlu melakukan langkah ini.
 
@@ -192,7 +192,7 @@ Terdapat direktori dengan nama **FLASH/**. Kita akan memasukkan file gambar *cus
 Dapat dilihat di atas, saya telah memasukkan file gambar **LOGO.GIF** ke dalam direktori **FLASH/**
 
 
-### Eksekusi Firmware Update
+#### Eksekusi Firmware Update
 
 Selanjutnya tinggal *reboot* dan *booting* ke dalam *bootable flash drive*.
 
@@ -201,7 +201,7 @@ Lakukan prosedur *firmware update* seperti biasa.
 Akan ada tambahan pertanyaan yang kira-kira berisi konfirmasi bahwa di dalam direktori *firmware update* ini ditemukan *custom image*, apakah kita ingin meneruskan? Jawab saja "yes" dengan menekan tombol <kbd>Y</kbd>.
 
 
-# Hasil Akhir
+## Hasil Akhir
 
 Setelah selesai, hasilnya akan seperti ini.
 
@@ -244,7 +244,7 @@ Gambar 6. Percobaan kedua, logo terlihat lebih di tengah.
 > Jadi, kita hanya perlu melakukan proses penggantian custom BIOS logo ini sekali saja, dan akan kita pakai seterusnya.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Meskipun proses mengkustomisasi BIOS logo ini terdengar sangat "berbahaya" namun aslinya tidak seseram kedengarannya. Dapat dilihat di atas prosesnya sangat mudah.
 
@@ -253,7 +253,7 @@ Bagian paling ***crucial*** adalah pada saat pembuatan *bootable flash drive* ya
 Meskipun demikian, apabila berhasil, ada kepuasan tersendiri karena laptop akan terasa lebih *personal* dengan *custom BIOS logo* yang kita buat sendiri.
 
 
-# Referensi
+## Referensi
 
 1. [reddit.com/r/unixporn/comments/84tdtm/bios_custom_bios_bootscreen_on_my_thinkpad_t440s/](https://www.reddit.com/r/unixporn/comments/84tdtm/bios_custom_bios_bootscreen_on_my_thinkpad_t440s/) \
    Diakses tanggal: 2019-01-13

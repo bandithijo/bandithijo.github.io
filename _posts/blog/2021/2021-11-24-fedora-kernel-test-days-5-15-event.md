@@ -18,11 +18,11 @@ description: "Serunya menggunakan distribusi sistem operasi GNU/Linux, kita dapa
 > 
 > Happy Testing!
 
-# Latar Belakang
+## Latar Belakang
 
 {{ page.description }}
 
-## Apa itu Kernel Test Days?
+### Apa itu Kernel Test Days?
 
 Kernel Test Days adalah kegiatan di mana siapa pun dapat membantu memastikan perubahan di Fedora dapat berfungsi dengan baik pada rilis mendatang. Anggota komunitas Fedora sering ikut berpartisipasi, dan menyambut baik acara ini. Jika kamu belum pernah berkontribusi sebelumnya, *event* ini adalah cara sempurna untuk memulai kontribusi pertama kamu.
 
@@ -44,13 +44,13 @@ Gambar 3. Science (Kernel Tester III): You completed 10 runs of the kernel regre
 
 Dan begitu seterusnya.
 
-# Dari mana saya dapat informasi tentang Kernel Test Days?
+## Dari mana saya dapat informasi tentang Kernel Test Days?
 
 Fedora Community memiliki beberapa portal informasi yang dapat kamu ikuti. Salah satu yang sering saya kunjungi adalah [Fedora Magazine](https://fedoramagazine.org). Biasanya, apabila ada informasi terkait *event*, akan diberitakan di Fedora Magazine. Biar tidak ketinggalan *event* atau artikel terbaru, kamu juga bisa berlangganan via email.
 
 Biasanya, pemberitahuan terkait Kernel Test Days akan diberitakan 2-4 hari sebelum *event* diselenggarakan.
 
-## Bagaimana cara kerja Kernel Test Days ini?
+### Bagaimana cara kerja Kernel Test Days ini?
 
 Sangat mudah. Untuk berkontribusi dalam *event* ini, kita hanya perlu melakukan hal-hal berikut:
 
@@ -63,7 +63,7 @@ Contohnya, untuk kegiatan Kernel Test Days 5.15 kali ini, [**Test Day:2021-11-14
 
 Jadi, pastikan bahwa kamu mengikuti panduan wiki yang sesuai.
 
-## Apakah media yang digunakan untuk melakukan Kernel test?
+### Apakah media yang digunakan untuk melakukan Kernel test?
 
 Terdapat beberapa media yang dapat kamu pilih untuk melakukan Kernel test. Pilih yang sesuai dan tidak beresiko untuk sistem kamu.
 
@@ -73,9 +73,9 @@ Terdapat beberapa media yang dapat kamu pilih untuk melakukan Kernel test. Pilih
 
 Dari ketiga pilihan tersebut, untuk catatan kali ini, saya memberanikan diri untuk mengambil pilihan kedua, yaitu langsung memasang Kernel 5.15 pada sistem yang sudah terpadang Fedora 35. Saya akan ambil Kernel 5.15 dari Koji.
 
-# Persiapkan Bahan Pengujian
+## Persiapkan Bahan Pengujian
 
-## Pasang paket Koji
+### Pasang paket Koji
 
 *Koji is a system for building and tracking RPMS.*
 
@@ -85,7 +85,7 @@ Karena saya memilih menggunakan Kernel 5.15 dari Koji, terlebih dahulu harus mem
 $ sudo dnf install koji
 ```
 
-## Melihat daftar Kernel builds yang tersedia
+### Melihat daftar Kernel builds yang tersedia
 
 Untuk melihat daftar dari Kernel builds yang tersedia. Gunakan flag `--after=`, lalu isi dengan format tanggal YYYY-MM-DD.
 
@@ -98,7 +98,7 @@ kernel-5.15.2-200.fc35                                   jforbes           COMPL
 kernel-5.15.3-200.fc35                                   jforbes           COMPLETE
 ```
 
-## Download Kernel builds
+### Download Kernel builds
 
 Saya pilih yang paling bawah dari daftar Kernel 5.15 yang tersedia untuk di download.
 
@@ -130,7 +130,7 @@ SIZE PACKAGES
 254K kernel-modules-internal-5.15.3-200.fc35.x86_64.rpm
 ```
 
-## Update kernel
+### Update kernel
 
 Setelah proses download selesai, saatnya mengupdate kernel.
 
@@ -201,9 +201,9 @@ Complete!
 
 Setelah kernel berhasil dipasang, saatnya **reboot**.
 
-# Persiapan Alat Pengujian
+## Persiapan Alat Pengujian
 
-## Pasang paket yang diperlukan
+### Pasang paket yang diperlukan
 
 Pastikan paket `gcc`, `git`, dan `python3-fedora` sudah terpasang.
 
@@ -219,7 +219,7 @@ Kita juga memerlukan paket-paket di bawah ini untuk menjalankan test.
 $ sudo dnf install make libtirpc libtirpc-devel policycoreutils-python-utils
 ```
 
-## Clone kernel-tests tools dari repositori
+### Clone kernel-tests tools dari repositori
 
 ```
 $ git clone https://pagure.io/kernel-tests.git
@@ -249,7 +249,7 @@ $ cd kernel-tests
 └ 📄 runtests.sh
 ```
 
-## Allow SELinux permission untuk heap execution
+### Allow SELinux permission untuk heap execution
 
 Before running tests, we need to allow the testsuite to make their heap memory executable with this command,
 
@@ -259,7 +259,7 @@ $ sudo semanage boolean -m --on selinuxuser_execheap
 
 \* Setelah proses pengujian selesai, kita akan me-nonaktifkan-nya kembali.
 
-## Buat salinan konfigurasi
+### Buat salinan konfigurasi
 
 Salin contoh konfigurasi default, karena kita akan membuat konfigurasi kita sendiri.
 
@@ -269,7 +269,7 @@ $ cp config.example .config
 
 \* **Perhatikan!** terdapat tanda titik di depan nama `.config`.
 
-## Edit file konfigurasi
+### Edit file konfigurasi
 
 Kita akan mengedif file `.config` untuk memasukkan beberapa nilai-nilai credential seperti username dan password FAS kita.
 
@@ -314,7 +314,7 @@ password='your-password-FAS'
 > 
 > Optionally, if you use the proprietary Nvidia driver, look for the line "thirdparty=y" and uncomment it.
 
-# Pengujian
+## Pengujian
 
 Di dalam file `runtests.sh` terdapat fungsi yang menunjukkan beberapa macam jenis test yang dapat kita lakukan, seperti: minimal, default, stress, destructive, performance test.
 
@@ -322,7 +322,7 @@ Yang benar-benar dibutuhkan hanya menjalankan default test.
 
 Namun, sesuai dokumentasi yang ditulis [QA:Testcase kernel regression](https://fedoraproject.org/wiki/QA:Testcase_kernel_regression), dicontohkan melakukan 2 test. 1 default test dan 1 optional test, dalam wiki tersebut disebutkan performance test.
 
-## Default test
+### Default test
 
 ```
 $ sudo ./runtests.sh
@@ -415,7 +415,7 @@ Starting test ./default/sysfs-perms
 
 </details>
 
-## Performance test (optional)
+### Performance test (optional)
 
 ```
 $ sudo ./runtests.sh -t performance
@@ -714,7 +714,7 @@ fedora-th Linux 5.15.3- 2925 5304 1707 4933.3  11.8K 6614.1 4496.1 10.K 6313.
 
 </details>
 
-# Submission Test Result
+## Submission Test Result
 
 Kalau kita sudah mengkonfigurasi FAS akun pada file `.config`, setiap selesai melakukan *test*, hasil akan otomatis di submit ke [Fedora Kernel Test Results](https://apps.fedoraproject.org/kerneltest/).
 
@@ -726,13 +726,13 @@ Hasil pengujian kita akan berada di dalam daftar (gambar di bawah). Coba buka sa
 
 ![Gambar 2](https://i.postimg.cc/1tqXM9qd/gambar-02.png)
 
-# Turn SELinux boolean selinuxuser_execheap back to default state
+## Turn SELinux boolean selinuxuser_execheap back to default state
 
 ```
 $ sudo semanage boolean -m --off selinuxuser_execheap
 ```
 
-# Upload Hasil Kernel Regression Test
+## Upload Hasil Kernel Regression Test
 
 Setiap Kernel Test Days event, akan ada thread tersendiri untuk melakukan submit test result.
 
@@ -778,7 +778,7 @@ You completed a run of the kernel regression test suite
         https://badges.fedoraproject.org/user/bandithijo
 ```
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -789,7 +789,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [https://fedoramagazine.org/contribute-at-the-fedora-linux-36-test-week-for-kernel-5-15/](https://fedoramagazine.org/contribute-at-the-fedora-linux-36-test-week-for-kernel-5-15/) \
    Diakses tanggal: 2021-11-24

@@ -10,7 +10,7 @@ tags: ["rails", "bootstrap"]
 description: "Mungkin belum ada gem yang menyediakan integrasi Bootstrap 4 dengan Rails 6. Jangan khawatir, karena kita tetap dapat memasang Bootstrap 4 dengan menggunakan Yarn. Caranya juga sangat mudah sekali!"
 ---
 
-# Latar Belakang
+## Latar Belakang
 
 Saya mulai membiasaka membuat project-project latihan dengan Rails 6, agar saat mengerjakan project sungguhan sudah terbiasa dengan versi terbaru dari Rails ini.
 
@@ -25,7 +25,7 @@ Jadi, kalau teman-teman belum memiliki yarn, boleh dipasang terlebih dahulu.
 Oke langsung saja.
 
 
-# Instalasi
+## Instalasi
 
 Untuk memsang Bootstrap 4 dengan yarn, pastikan kita sudah berada di root direktori project yang akan dipasang Bootstrap.
 
@@ -80,10 +80,10 @@ Kalau sudah selesai, Coba teman-teman buka file `package.json` yang ada di root 
 Perhatikan pada baris 9-11 adalah paket yang baru saja kita pasang menggunakan yarn.
 
 
-# Konfigurasi
+## Konfigurasi
 
 
-## 1. Konfigurasi Webpack
+### 1. Konfigurasi Webpack
 
 ```javascript
 !filename: config/webpack/environment.js
@@ -103,7 +103,7 @@ module.exports = environment
 Tambahkan pada baris 3-9 di antara baris 1-11.
 
 
-## 2. Konfigurasi Javascript
+### 2. Konfigurasi Javascript
 
 Pada Rails 6, struktur direktori untuk Javascript bukan lagi berada di dalam `app/assets/`, melainkan sudah berada di `app/javascript/`.
 
@@ -134,7 +134,7 @@ import "bootstrap"
 Baris ke 18 adalah baris yang perlu ditambahkan.
 
 
-## 3. Konfigurasi StyleSheet
+### 3. Konfigurasi StyleSheet
 
 Selanjutnya, buat file scss baru pada direktori yang sama dengan nama **custom.scss**.
 
@@ -152,7 +152,7 @@ Selesai!
 > Telusuri file stylesheet dari Javascript library yang digunakan, di dalam direktori **node_modules** (dalam root project direktori).
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -163,7 +163,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [mashrurhossain.com/blog/rails6bootstrap4](https://www.mashrurhossain.com/blog/rails6bootstrap4) \
    Diakses tanggal: 2020-12-20

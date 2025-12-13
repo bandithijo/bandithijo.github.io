@@ -10,12 +10,12 @@ tags: ["ruby", "imagemagick"]
 description: "Ide untuk mempercantik hasil screenshot dari Flameshot ini terinspirasi dari gambar-gambar hasil screenshot yang diproduksi oleh sistem operasi OSX. Jangan khawatir, di GNU/Linux, kita juga dapat membuat hal serupa, malah bisa lebih keren karena kita dapat dengan bebas memodifikasinya. Dengan begini, hasil screenshot setiap orang, akan jadi unik dan khas, sesuai dengan karakter masing-masing."
 ---
 
-# Requirements
+## Requirements
 
 `imagemagick 7.x` `flameshot 0.8.x` `xclip 0.13` `ruby 2.7.x`
 
 
-# Sekenario Masalah
+## Sekenario Masalah
 
 Beberapa waktu yang lalu, saya menulis tentang ["Membuat Hasil ScreenShot pada GNU/Linux seperti Milik macOS"](/blog/membuat-hasil-screenshot-linux-seperti-pada-macos).
 
@@ -32,7 +32,7 @@ $ flameshot gui; imagemagick-script
 Permasalahannya adalah, apabila kita tidak jadi melakukan screenshot dengan flameshot, maka script `imagemagick-script` akan tetap dijalankan, dan akan memodifikasi gambar terakhir pada direktori screenshot.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Kita perlu memasukkan perintah flameshot ke dalam script.
 
@@ -128,12 +128,12 @@ Nah, dengan seperti ini, kita tetap dapat memanfaatkan fitur annotate milik flam
 Mulai dari sekarang, hasil flameshot kita akan berbeda dari screenshot-screenshot sebelumnya.
 
 
-# Modifikasi Script
+## Modifikasi Script
 
 Beberapa modifikasi yang sering saya lakukan adalah:
 
 
-## Menghilangkan Border
+### Menghilangkan Border
 
 Baris ke-11, adalah variabel untuk mendefinisikan border dari hasil screenshot.
 
@@ -145,7 +145,7 @@ border_size = '0'
 ```
 
 
-## Mengganti Author (ScreenShoter)
+### Mengganti Author (ScreenShoter)
 
 Baris ke-20, adalah variabel untuk mendifinisikan author dari pengambil screenshot.
 
@@ -157,7 +157,7 @@ author = 'Shooter: @' + `echo $USER`.strip
 ```
 
 
-## Disable Author
+### Disable Author
 
 Baris ke 35-38, adalah proses pemberian author.
 
@@ -182,7 +182,7 @@ flameshot gui --raw > #{original_file}
 ```
 
 
-## Mengganti Author Font
+### Mengganti Author Font
 
 Baris ke-15, adalah variable untuk mendifinisikan font.
 
@@ -227,7 +227,7 @@ font = 'JetBrains-Mono-Regular-Nerd-Font-Complete'
 > Ambil value yang ada di dalam `Font:`
 
 
-## Mengganti Author Font Size
+### Mengganti Author Font Size
 
 Baris ke-16, adalah variable yang mendifinisikan ukuran font.
 
@@ -239,7 +239,7 @@ font_size = '11'
 ```
 
 
-## Mengganti Author Position
+### Mengganti Author Position
 
 Baris ke-19, adalah variabel untuk mendifinisikan nilai posisi dari author.
 
@@ -271,7 +271,7 @@ author_position = ['South', '+10+10']
 ```
 
 
-## Background Transparent
+### Background Transparent
 
 Baris ke-12, adalah variable untuk mendifinisikan border color yang digunakan untuk memberikan background pada hasil screenshot.
 
@@ -290,7 +290,7 @@ background_color  = "'#002b36'"
 ```
 
 
-## Background Padding
+### Background Padding
 
 Baris ke-13, adalah variable untuk mendifinisikan padding dari background dengan screenshot.
 
@@ -304,7 +304,7 @@ background_size   = "20"
 ```
 
 
-## Shadow
+### Shadow
 
 Baris ke-14, adalah variable untuk mendifinisikan shadow yang ada di bawah screenshot.
 
@@ -316,7 +316,7 @@ shadow_size = '50x10+0+10'
 ```
 
 
-## Color Profile
+### Color Profile
 
 Menambahkan color profile ini penting untuk Telegram. Kalau tidak menambahkan color profile, gambar kita akan terlihat "over bright" di Telegram Android meskipun tidak terlihat di Telegram Desktop.
 
@@ -342,7 +342,7 @@ convert #{target_file} -profile #{color_profile} #{target_file}
 ```
 
 
-## Save to Clipboard!
+### Save to Clipboard!
 
 Jangan lupa modifikasi pendefinisikan shortcut untuk **COPY** yang defaultnya menggunakan <kbd>Ctrl</kbd>+<kbd>C</kbd>, menjadi <kbd>Enter</kbd> pada file **~/.config/flameshot/flameshot.ini**.
 
@@ -386,7 +386,7 @@ $ flameshot config
 Tujuannya agar kita tidak latah lalu menekan tombol save. Agar hanya ada satu pilihan untuk menyimpan, yaitu menekan tombol <kbd>ENTER</kbd>.
 
 
-## Menghandle Escape
+### Menghandle Escape
 
 Apabila kita tidak jadi melakukan screenshot dan menekan tombol <kbd>ESC</kbd>, proses screenshot dengan script ini akan meninggalkan file kosong (sebesar 0 B - 10 B).
 
@@ -402,7 +402,7 @@ end
 ```
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Mantap!!!
 
@@ -415,11 +415,11 @@ Terima kasih.
 (^_^)
 
 
-# BONUS
+## BONUS
 
-## Alternatif Project
+### Alternatif Project
 
-### 1. Awesome Flameshot (Bash Version oleh Berrabe)
+#### 1. Awesome Flameshot (Bash Version oleh Berrabe)
 
 Tidak semua temann-teman memiliki Ruby, namun, biasanya sudah memiliki Bash secara default.
 
@@ -434,7 +434,7 @@ Teman-teman dapat menikmati source nya di sini yaa, [**Bash version oleh Berrabe
 {% image https://github.com/berrabe/awesome-flameshot/raw/master/docs/output.png | 4 %}
 
 
-## Versi Python
+### Versi Python
 
 > PERHATIAN!
 > 
@@ -509,7 +509,7 @@ if size == '0' or size <= '20':
 ```
 
 
-# Referensi
+## Referensi
 
 1. [Membuat Hasil ScreenShot pada GNU/Linux seperti Milik macOS](/blog/membuat-hasil-screenshot-linux-seperti-pada-macos) \
    Diakses tanggal: 2020-08-16

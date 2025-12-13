@@ -10,7 +10,7 @@ tags: ["wine", "arch linux", "microsoft office"]
 description: "File .lnk dapat benar-benar membuat kotor direktori home kalian apabila tidak dilokalisasi dengan benar."
 ---
 
-# Prakata
+## Prakata
 
 Beberapa waktu yang lalu, saya mencoba memasang **Microsoft Office 2010** pada distribusi sistem operasi **Arch Linux** menggunakan **Wine 4.4-1**.
 
@@ -77,7 +77,7 @@ Saya hanya menggunakan Microsoft Word untuk melihat template dokumen-dokumen dar
 > Mengenai file berekstensi `.fodt` akan saya ulas pada tulisan yang lain.
 
 
-# Permasalahan
+## Permasalahan
 
 Pada tulisan ini, saya hanya mengkhususkan pada **Microsoft Word** saja. Karena aplikasi ini yang sedang saya pergunakan.
 
@@ -151,7 +151,7 @@ Kira-kira, ilustrasinya seperti di atas.
 Awalnya, saya tidak begitu menghiraukan. Namun, lama-kelamaan menjadi tidak sedap dipandang juga.
 
 
-# Penyelesaian
+## Penyelesaian
 
 Untuk mengatasi permasalahan ini, ternyata sangat mudah sekali.
 
@@ -243,7 +243,7 @@ Nah, sekarang kita akan sediakan direktori *Recent* untuk mengatasi permasalahan
    Selesai.
 
 
-# Pengujian
+## Pengujian
 
 Sekarang coba buka kembali file dokumen yang berekstensi `.doc` atau `.docx` dari dalam Microsoft Word.
 
@@ -266,7 +266,7 @@ total 12
 Sekarang file berekstensi `.lnk` yang dihasilkan oleh Microsoft Office sudah tidak lagi berhamburan pada struktur direktori GNU/Linux, karena sudah kita lokalisasi pada direktori **Recent** sebagaimana pada habitat asalnya. Hehe.
 
 
-# Referensi
+## Referensi
 
 1. [Office 2010 and .lnk files ](https://www.codeweavers.com/support/forums/general/?t=26;msg=128936) \
    Diakses tanggal: 2019-03-27

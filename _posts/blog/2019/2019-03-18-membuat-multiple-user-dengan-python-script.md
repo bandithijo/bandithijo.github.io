@@ -10,7 +10,7 @@ tags: ["python"]
 description: "Catatan ini mengenai cara membuat user dalam jumlah banyak sekaligus menggunakan Python script."
 ---
 
-# Prakata
+## Prakata
 
 Kemarin, 2019/03/17, ada salah satu anggota group Telegram BGLI (Belajar GNU/Linux Indonesia) menanyakan perihal ini.
 
@@ -27,10 +27,10 @@ Karena sepintas saya membayangkan bagaimana caranya untuk dapat menyelesaikan "p
 Berhubung saya tidak terlalu mengerti banyak tetang Shell script, saya mengkombinasikan dengan Python yang juga baru mengerti sedikit-sedikit.
 
 
-# Eksekusi
+## Eksekusi
 
 
-## Algoritma
+### Algoritma
 
 Alur program yang terpikirkan oleh saya adalah seperti ini:
 
@@ -40,7 +40,7 @@ Alur program yang terpikirkan oleh saya adalah seperti ini:
 ![Gambar 2](https://i.postimg.cc/0jQVk0v1/gambar-02.png)
 
 
-## Ngoding
+### Ngoding
 
 Command atau perintah inti untuk membuat user baru beserta direktori home pada sistem operasi GNU/Linux, adalah:
 
@@ -93,7 +93,7 @@ Username: seniman Berhasil ditambahkan !
 ```
 
 
-## Pengecekan
+### Pengecekan
 
 Untuk melakukan pengecekan apakah user-user baru sudah berhasil dibuat atau tidak.
 
@@ -131,7 +131,7 @@ $ sudo userdel -rf <username>
 ```
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Saya benar-benar menikmati proses dalam mempelajari bahasa pemrograman Python karena dapat sembari saya manfaatkan dan pergunakan dalam aktifitas sehari-hari untuk memecahkan keinginan, ide-ide, maupun permasalahan-permasalahan yang muncul dalam menggunakan sistem operasi GNU/Linux.
 
@@ -144,7 +144,7 @@ Sepertinya seperti ini saja.
 Terima kasih.
 
 
-# Referensi
+## Referensi
 
 1. [BanditHijo.Com/Arch - Step 6: Create User, Password, and Hostname]({{ site.url }}/arch/step-6-create-user-password-and-hostname#61-user-and-password) \
    Diakses tanggal: 2019-03-18

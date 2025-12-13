@@ -10,7 +10,7 @@ tags: ["terminal emulator", "simple terminal", "st"]
 description: "ST sangat saya inginkan karena kesederhanannya. Karena minimalisnya inilah saya ingin menjadikannya basis untuk meracik terminal yang sesuai dengan yang saya inginkan."
 ---
 
-# Prakata
+## Prakata
 
 Tidak saya pungkiri bahwa [Kai Hendry](https://github.com/kaihendry) yang memperkenalkan saya dengan [suckless.org](https://suckless.org/) melalui [video-video log-nya di YouTube](https://www.youtube.com/user/kaihendry) banyak memberikan saya pengaruh dalam menggunakan sistem operasi GNU/Linux, terkhusus Arch Linux.
 
@@ -21,7 +21,7 @@ Selama ini saya hanya memanfaatkan **dmenu**, itu pun tidak benar-benar mengguna
 Saya tertarik menggunakan **dwm**, *Dynamic Window Manager*, sebuah window manager yang dikelola oleh Suckless. Karena kedua orang di atas menggunakan window manager ini. Namun, saya masih menyukai [**i3wm** dan belum menemukan jalan buntu]({{ site.url }}/blog/i3wm-window-manager-yang-taktis-namun-praktis).
 
 
-# Permasalahan
+## Permasalahan
 
 Malam tadi, **Termite** salah satu Terminal emulator yang saya gunakan dan saya andalkan tiba-tiba saja salah dalam menampilkan glyph font untuk simbol-simbol bawaan dari **Devicons**. Saya mendapati kesalahan ini pada **NERDTree** (vim sidebar file manager) dan **Ranger**.
 
@@ -32,7 +32,7 @@ Gambar 1. Termite dan ST
 Saya sudah mencoba Terminal emulator yang lain, seperti gnome-terminal, xfce4-terminal, lxterminal, kitty, alacritty, semua menampilkan kesalahan yang sama seperti yang dialami oleh Termite. Permasalahan ini hanya dialami oleh Terminal yang berbasis VTE.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Karena alasan tersebut, saya akhirnya memutuskan untuk bermigrasi secara penuh dalam menggunakan St Terminal.
 
@@ -43,7 +43,7 @@ Mungkin saja, sebenarnya saya dapat mengatasi permasalahan dalam menampilkan gly
 Dapat di baca sendiri [di sini](https://st.suckless.org/patches/alpha/)
 
 
-# Instalasi
+## Instalasi
 
 Proses instalasi St Terminal menurut saya sangat-sangat mudah.
 
@@ -144,7 +144,7 @@ Namun, belum terdapat beberapa fungsi yang saya perlukan seperti:
 Untuk itu, saya perlu untuk menambahkan beberapa patch.
 
 
-# Patch
+## Patch
 
 Patch yang saya gunakan tidak banyak. Beberapa di antaranya.
 
@@ -201,7 +201,7 @@ Saya kasih previewnya dulu saja gpp yaa. Hehe.
 {% youtube w9l3-ZkXPT4 %}
 
 
-# Hasilnya
+## Hasilnya
 
 Saya sangat puas dengan hasilnya. Dikarenakan ada beberapa hal yang saya tidak dapati pada Terminal emulator yang lain. Seperti:
 
@@ -214,7 +214,7 @@ Saya sangat puas dengan hasilnya. Dikarenakan ada beberapa hal yang saya tidak d
 ![Gambar 2](https://i.postimg.cc/gcQWhNYs/gambar-02.gif)
 
 
-# Kekurangan
+## Kekurangan
 
 1. Saya masih belum dapat menggunakan tombol <kbd>DELETE</kbd> sebagai mana fungsinya. Karena saat ini fungsi tombol ini malah menampilkan karakter `~`.
 
@@ -225,17 +225,17 @@ Saya sangat puas dengan hasilnya. Dikarenakan ada beberapa hal yang saya tidak d
 2. Link/URL yang *clickable*. Fitur ini juga masih belum saya cari tahu.
 
 
-# Tambahan Konfigurasi
+## Tambahan Konfigurasi
 
 
-## Window Title
+### Window Title
 
 Secara *default*, pada Window Title, st hanya menampilkan detail berupa tulisan "st".
 
 Untuk dapat membuat Window Title menjadi lebih dinamis, dapat mengikuti catatan yang sudah saya tulis pada artikel ini, ["Konfigurasi Window Title untuk Simple/Suckless Terminal"]({{ site.url }}/blog/konfigurasi-window-title-st-terminal).
 
 
-## Pengetesan Font
+### Pengetesan Font
 
 Akan sangat melelahkan apabila kita melakukan kompilasi berulang kali hanya sekedar untuk melihat dan menguji tampilan dari font yang ingin kita gunakan.
 
@@ -256,7 +256,7 @@ Perintah di atas akan menghasilkan Simple/Suckless Terminal yang terbuka dengan 
 Gampang kan?
 
 
-# Referensi
+## Referensi
 
 1. [st.suckless.org/](https://st.suckless.org/) \
    Diakses tanggal: 2019-02-08

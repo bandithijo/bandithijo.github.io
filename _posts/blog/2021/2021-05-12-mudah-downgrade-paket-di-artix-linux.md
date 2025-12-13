@@ -19,7 +19,7 @@ description: "Menggunakan distribusi yang menggunakan metode rilis 'rolling' mun
 > Happy Hacking!
 
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Menggunakan distribusi yang menggunakan metode rilis "rolling" mungkin merupakan kekhawatiran bagi sebagian besar GNU/Linux user. Mereka sering menyebut distro yang memiliki paket-paket yang tidak stabil.
 
@@ -32,10 +32,10 @@ Menggunakan distribusi yang menggunakan metode rilis "rolling" mungkin merupakan
 Catatan ini adalah tips menggunakan tool yang bernama 'downgrade' yang defaultnya untuk Arch Linux pada Artix Linux.
 
 
-# Mengatasi Masalah
+## Mengatasi Masalah
 
 
-## Pasang Perkakas
+### Pasang Perkakas
 
 Terdapat setidaknya 2 tools yang dapat kita gunakan, yaitu:
 
@@ -49,7 +49,7 @@ $ yay -S downgrade
 ```
 
 
-## Cara Penggunaan
+### Cara Penggunaan
 
 Saya anggap, teman-teman sudah familiar dengan aturan berkaitan degan paket (library) di Arch Linux, bahwa:
 
@@ -92,12 +92,12 @@ $ sudo downgrade --ala-url "https://archive.artixlinux.org" <package1> <package2
 ```
 
 
-## Kapan Harus Menggunakan ala-url ?
+### Kapan Harus Menggunakan ala-url ?
 
 _Sedang dalam proses riset..._
 
 
-## Contoh Penggunaan
+### Contoh Penggunaan
 
 Misal, kita mau downgrade kernel **linux**. Saya mencontohkan package **linux** karena perbedaannya terlihat di nama packagenya **-arch** dan **-artix**.
 
@@ -152,7 +152,7 @@ $ man downgrade
 ```
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -165,7 +165,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/title/Downgrading_packages](https://wiki.archlinux.org/title/Downgrading_packages) \
    Diakses tanggal: 2021-05-12

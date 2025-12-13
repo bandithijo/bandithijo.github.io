@@ -13,17 +13,17 @@ description: "Aplikasi yang membantu mempermudah pekerjaan saya ini adalah Vokos
 ![Gambar 0](https://i.postimg.cc/VLKJrrjj/banner-post-22.png)
 
 
-# Prakata
+## Prakata
 
 Akhir-akhir ini sering sekali beberapa dari teman-teman di group Telegram menanyakan perihal aplikasi *screen recorder* yang saya gunakan. Saya memang kerap kali menjawab pertanyaan dengan memberikan video-video pendek tanpa suara dengan ukuran yang tidak lebih dari 1-2 MB. Tujuannya agar jawaban yang saya berikan dapat lebih mudah dipahami.
 
 Aplikasi yang membantu mempermudah pekerjaan saya ini adalah **Vokoscreen**. Saya sudah pernah mencicipi beberapa dari aplikasi *screen recorder* seperti: **Simple Screen Recorder** (SSR), **Open Boradcaster Studio** (OBS), dan **Kazam**. Namun, selera saya jatuh pada Vokoscreen.
 
 
-# Mengapa Saya Memilih Vokoscreen?
+## Mengapa Saya Memilih Vokoscreen?
 
 
-## 1. Praktis
+### 1. Praktis
 
 Sejak program dipanggil kemudian kita melakukan proses perekaman, Vokoscreen dapat dioperasikan dengan sangat praktis. Salah satu faktor yang menyebabkan Vokoscreen saya katakan praktis adalah karena mendukung *shortcut key* pada setiap tombol fungsinya. Berikut ini adalah beberapa *shortcut key* yang biasa saya gunakan :
 
@@ -39,7 +39,7 @@ Sejak program dipanggil kemudian kita melakukan proses perekaman, Vokoscreen dap
 Kesemua fungsi dari *shortcut keys* di atas sudah sangat memenuhi kebutuhan saya dalam membuat video demonstrasi pendek.
 
 
-## 2. Interface yang mudah dioperasikan
+### 2. Interface yang mudah dioperasikan
 
 Vokoscreen memiliki *user interface* yang apabila kita baru pertama kali menggunakannya, kita sudah langsung dapat mengerti bagaimana cara mengoperasikan aplikasi ini.
 
@@ -112,7 +112,7 @@ Saya belum pernah sama sekali menggunakan tab Ekstension ini.
 Gambar 7. Tab About
 
 
-# Instalasi
+## Instalasi
 
 Untuk memasang Vokoscreen terbilang cukup mudah. Silahkan siapkan direktori khusus atau direktori yang memang kalian sediakan untuk menyimpan aplikasi yang berupa source code.
 
@@ -149,12 +149,12 @@ $ ./vokoscreen
 ```
 
 
-# Membuat App Launcher
+## Membuat App Launcher
 
 Karena aplikasi ini kita kompilasi sendiri dari *source code*, terkadang belum terdapat *launcher* untuk memanggil Vokoscreen. Kita perlu untuk mengkonfigurasinya sendiri.
 
 
-## 1. Membuat Symbolic Link
+### 1. Membuat Symbolic Link
 
 Pertama-tama kita akan membuat *symbolic link* untuk file binary `vokoscreen` yang sudah kita kompilasi sebelumnya yang akan kita letakkan pada `/usr/bin/` agar Vokoscreen dapat kita panggil via Terminal.
 
@@ -173,7 +173,7 @@ $ vokoscreen
 Apabila Vokoscreen berhasil terbuka, berarti kita dapat lanjut mengkonfigurasi *application launcher*.
 
 
-## 2. Memindahkan Application Launcher
+### 2. Memindahkan Application Launcher
 
 Beruntungnya di dalam direktori `../vokoscreen/applications/` sudah terdapat file `vokoscreen.desktop`. Ini adalah file *launcher* untuk memanggil aplikasi. Tinggal kita pindahkan ke tempat yang benar.
 
@@ -185,7 +185,7 @@ $ cp vokoscreen.desktop $HOME/.local/share/applications/vokoscreen.desktop
 Apabila berhasil, sekarang coba panggil Vokoscreen menggunakan *application launcher* / *menu laucher* pada Desktop Environment yang kalian pergunakan.
 
 
-# Workflow
+## Workflow
 
 Kira-kira seperti ini kebiasaan saya dalam menggunakan Vokoscreen.
 
@@ -198,12 +198,12 @@ Hasilnya seperti ini.
 Nah, kira-kira seperti ini dulu yang dapat saya tuliskan.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Saat ini Vokoscreen 2.5.8-beta sudah tidak lagi dilanjutkan pengembangannya. Vokoscreen dilanjutkan ke project [**VokoscreeNG**](https://github.com/vkohaupt/vokoscreenNG) yang merupakan akronim dari Vokoscreen Next Generation. Saat tulisan ini ditulis VokoscrenNG sudah memasuki versi 2.9.5-beta.
 
 
-# Referensi
+## Referensi
 
 1. [linuxecke.volkoh.de/vokoscreen/vokoscreen.html](http://linuxecke.volkoh.de/vokoscreen/vokoscreen.html) \
    Diakses tanggal: 2018-10-28

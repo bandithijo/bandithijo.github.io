@@ -10,12 +10,12 @@ tags: ["tips", "rails"]
 description: "Bagaimana memasangkan pagination pada web aplikasi yang dibangun menggunakan Ruby on Rails. Kali ini, saya akan menggunakan gem yang mengklaim dirinya sebagai salah satu gem tercepat dan teringan diantara gem-gem pagination yang lain. yaitu, Pagy."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 2.6.3` `rails 5.2.3` `postgresql 11.5`
 
 
-# Prakata
+## Prakata
 
 Bos ditempat saya bekerja, pernah membagikan sebuah tulisan mengenai perbandingan dari 3 gems yang digunakan untuk membantu developer dalam membuat fitur pagination pada web aplikasi yang mereka bangun. 2 diantara gems tersebut adalah gems yang sudah terkenal (setidaknya yang saya tahu seperti itu) dan sudah sering menjadi pilihan.
 
@@ -26,7 +26,7 @@ Bos ditempat saya bekerja, pernah membagikan sebuah tulisan mengenai perbandinga
 3. Pagy
 
 
-# Kenapa Pagy?
+## Kenapa Pagy?
 
 Coba teman-teman melihat sebentar pada artikel mengenai perbandingan diantara 3 pagination gems tersebut.
 
@@ -47,7 +47,7 @@ Dari artikel tersebut, hasil yang diberika Pagy sangat mengintimidasi pembaca ya
 Setelah membaca-baca dan mencoba-coba sedikit, saya pun memutuskan untuk memigrasikan pagination pada proyek yang sedang saya kerjakan yang sebelumnya menggunakan Kaminari.
 
 
-# Migrasi Kaminari to Pagy
+## Migrasi Kaminari to Pagy
 
 Langkah-langkah migrasi yang saya lakukan adalah, saya tidak langsung menghapus Kaminari gem dari Gemfile. Namun, menambahkan Pagy gem.
 
@@ -302,7 +302,7 @@ require 'pagy/extras/bootstrap'
 Saya menggunakan bootstrap, maka saya memilih frontend extra untuk Bootstrap theme, agar tampilan pagination pada view template saya mengunakan Bootstrap theme.
 
 
-# Controller
+## Controller
 
 Selanjutnya pada controller, bisa memigrasikan object query yang menggunakan Kaminary menjadi Pagy, seperti contoh di bawah.
 
@@ -333,7 +333,7 @@ end
 ```
 
 
-# View
+## View
 
 Kemudian pada view template, saya akan menambahkan direktori `app/views/pagy/` dan menambahkan Bootstrap theme `_bootstrap_nav.html.erb`.
 
@@ -454,7 +454,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [ddnexus.github.io/pagination-comparison/gems.html](https://ddnexus.github.io/pagination-comparison/gems.html) \
    Diakses tanggal: 2020-02-20

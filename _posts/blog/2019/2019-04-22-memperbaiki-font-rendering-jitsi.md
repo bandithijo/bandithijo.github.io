@@ -10,7 +10,7 @@ tags: ["jitsi"]
 description: "Catatan kali ini mengenai cara memperbaiki font rendering yang jelek pada aplikasi Jitsi di GNU/Linux."
 ---
 
-# Masalah
+## Masalah
 
 Bagi teman-teman yang menggunakan Jitsi pada distribusi Arch Linux, mungkin mengalami hal yang sama seperti yang saya alami.
 
@@ -21,7 +21,7 @@ Persis seperti font rendering yang ada pada aplikasi yang menggunakan Java pada 
 Mungkin beberapa distribusi seperti Ubuntu atau Fedora tidak mengalami hal semacam ini. Tapi bagi saya pengguna Arch Linux dan beberapa distribusi untuk pengguna tingkat mahir, kami harus mengkonfigurasi beberapa bagian terlebih dahulu untuk dapat membuat font rendering pada aplikasi yang menggunkan Java dapat terlihat mulus.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Tambahkan pada file `~/.profile`,
 
@@ -55,7 +55,7 @@ Gambar 1. Setelah ditambahkan JAVA_OPTIONS
 Sekian, mudah-mudahan bermanfaat.
 
 
-# Referensi
+## Referensi
 
 1. [lists.jitsi.org/pipermail/dev/2013-November/018919.html](http://lists.jitsi.org/pipermail/dev/2013-November/018919.html) \
    Diakses tanggal: 2019-04-22

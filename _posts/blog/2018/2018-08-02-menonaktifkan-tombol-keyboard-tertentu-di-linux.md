@@ -13,17 +13,17 @@ description: "Terkadang kita ingin membuat tombol tertentu pada keyboard untuk t
 ![Banner](https://s20.postimg.cc/9myvdtav1/banner_post_19.png)
 
 
-# Permasalahan
+## Permasalahan
 
 Terkadang kita ingin membuat tombol tertentu pada keyboard untuk tidak aktif atau mengganti fungsinya menjadi fungsi yang lain. Misal, menonaktifkan tombol <kbd>PrtSc</kbd> pada keyboard ThinkPad keluaran 2014 ke atas karena letaknya yang diapit dua tombol lain, <kbd>Right Alt</kbd> <kbd>PrtSc</kbd> <kbd>Right Ctrl</kbd> sehingga lebih sering salah pencet saat akan menekan Alt atau Ctrl.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Lagkah-langkah yang saya lakukan di bawah ini saya lakukan pada distribusi sistem operasi Arch Linux. Seharusnya tidak jauh berbeda dengan distribusi yang lain.
 
 
-# Menonaktifkan Tombol pada Console
+## Menonaktifkan Tombol pada Console
 
 1. Deteksi **keycode** dari tombol keyboard yang kita tekan menggunakan perintah di bawah.
 
@@ -111,7 +111,7 @@ Lagkah-langkah yang saya lakukan di bawah ini saya lakukan pada distribusi siste
 8. Lakukan pengujian dengan me-*Reboot* sistem kamu.
 
 
-# Menonaktifkan Tombol pada X
+## Menonaktifkan Tombol pada X
 
 Langkah-langkah di atas hanya berlaku pada **console**, apabila kita ingin menonaktifkan tombol <kbd>PrtSc</kbd> juga pada **X**, salah satu cara yang dapat dilakukan adalah meng-*comment* *keycode* nya dari dalam file `evdev`.
 
@@ -144,7 +144,7 @@ Dengan begini maka tombol <kbd>PrtSc</kbd> benar-benar dinonaktifkan baik di con
 Saya rasa cukup seperti ini dulu.
 
 
-# Referensi
+## Referensi
 
 1. [unix.stackexchange.com/questions/74151/fully-disable-prntscr-key](https://unix.stackexchange.com/questions/74151/fully-disable-prntscr-key) \
    Diakses tanggal: 2018-08-02

@@ -10,7 +10,7 @@ tags: ["ruby", "geocoding"]
 description: "Sebelum menggunakan Geocoder Gem, saya menggunakan infosniper.net untuk mengetahui IP provider dan location. Repotnya, saya harus membuka browser. Dengan Geocoder Gem, saya hanya perlu menggunakan Terminal. Praktis."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 {{ page.description }}
 
@@ -19,12 +19,12 @@ description: "Sebelum menggunakan Geocoder Gem, saya menggunakan infosniper.net 
 Gambar 1. Tampilan Website infosniper.net
 
 
-# Problem
+## Problem
 
 Mengakses web service infosniper.net hanya untuk mengetahui location dan provider dari sebuah IP address, sangat tidak praktis.
 
 
-# Solusi
+## Solusi
 
 Praktis akan sangat berbeda-beda bagi setiap orang, tapi bagi saya, praktis artinya saya dapat menyelesaikan tujuan saya hanya dari Terminal. Hanya dengan mengetikkan baris command ke Terminal, kemudian hasil yang saya inginkan sudah tercapai.
 
@@ -35,12 +35,12 @@ Gem ini menambahkan command `geocoder` ke dalam command shell kita. Kita dapat m
 > Geocoder Gem ini secara default menggunakan OpenStreetMap Service.
 
 
-## Prerequisite
+### Prerequisite
 
 Sudah harus terinstall Ruby di sistem
 
 
-## Install Gem
+### Install Gem
 
 Install gem dengan cara,
 
@@ -49,7 +49,7 @@ $ gem install geocoder
 ```
 
 
-## Cara penggunaan
+### Cara penggunaan
 
 ```
 $ geocode 18.139.194.139
@@ -90,12 +90,12 @@ $ geocode 18.139.194.139 --json
 That's it!
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Terima kasih sudah mampir yaa.
 
 
-# Referensi
+## Referensi
 
 1. infosniper.net \
    <https://infosniper.net/> \

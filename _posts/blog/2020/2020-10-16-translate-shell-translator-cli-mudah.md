@@ -13,7 +13,7 @@ contributors: []
 description: "Tools ini dapat kita operasikan dari dalam Terminal. Sangat praktis untuk menerjemahkan kata maupun kalimat. Untuk yang sehari-harinya bekerja dengan di dalam Terminal, mungkin aplikasi ini sangat cocok untuk digunakan. Tidak perlu lagi harus membuka Browser untuk mencari translasi dari kata/kalimat."
 ---
 
-# Latar Belakang
+## Latar Belakang
 
 Kamus atau *dictionary*, bagi yang beraktifitas dalam dua bahasa, pasti memerlukannya.
 
@@ -42,12 +42,12 @@ Belum lagi apabila resource RAM yang tidak memadai sehingga membuka browser saja
 Saya adalah gambaran dari **Orang A** sebelum akhirnya mengenal **translate-shell** dan menjadi **Orang B** saat ini.
 
 
-# Tentang translate-shell
+## Tentang translate-shell
 
 **Translate Shell** adalah *command-line translator* yang dapat menggunakan Google Translate, Bing Translator, Yandex Translate, Apertium, dll. sebagai engine translator untuk menerjemahkan kata/frase/kalimat. Sebelumnya, dikenal dengan nama Google Tranaslate CLI.
 
 
-## Kebutuhan Sistem
+### Kebutuhan Sistem
 
 Translate Shell dapat bekerja pada banyak sistem yang sesuai dengan POSIX seperti:
 
@@ -58,7 +58,7 @@ Translate Shell dapat bekerja pada banyak sistem yang sesuai dengan POSIX sepert
 5. Windows (menggunakan WSL, Cygwin, atau MSYS2)
 
 
-## Dependensi
+### Dependensi
 
 Dependensi yang diperlukan:
 
@@ -66,7 +66,7 @@ Dependensi yang diperlukan:
 2. GNU Bash atau Zsh, namun dapat pula menggunakan unix shell apapun seperti ksh, tcsh, fish, dan lain-lain.
 
 
-## Dependensi yang Direkomendasikan
+### Dependensi yang Direkomendasikan
 
 Beberapa daftar dependensi di bawah ini bersifat *optional* namun sangat direkomendasikan untuk dipasang.
 
@@ -78,12 +78,12 @@ Beberapa daftar dependensi di bawah ini bersifat *optional* namun sangat direkom
 6. aspell, hunspell
 
 
-## Instalasi
+### Instalasi
 
 Translate Shell pada halaman "GitHub readme" mereka, menjelaskan berbagai macam cara untuk memasang Translate Shell, tautannnya dapat teman-teman lihat [di sini](https://github.com/soimort/translate-shell#installation).
 
 
-### Nyicip dulu (tanpa install)
+#### Nyicip dulu (tanpa install)
 
 Kita dapat sekedar "nyicipin" dahulu tanpa perlu melakukan instalasi.
 
@@ -116,7 +116,7 @@ Untuk distirbusi yang lain, dapat dilihat [di sini](https://github.com/soimort/t
 Untuk cara instalasi yang lain, dapat dilihat [di sini](https://github.com/soimort/translate-shell#installation).
 
 
-# Konfigurasi
+## Konfigurasi
 
 File konfigurasi dapat kalian letakkan pada lokasi-lokasi beirikut ini:
 
@@ -148,15 +148,15 @@ Parameter-parameter tersebut dapat kalian lihat pada option `-h` atau `$ manual 
 Silahkan modifikasi sendiri sesaui dengan kebutuhan kalian.
 
 
-# Cara Penggunaan
+## Cara Penggunaan
 
 Saya hanya akan menunjukkan beberapa contoh saja, karena pada halaman GitHub readme dari Translate Shell sudah mendemonstrasikan dengan sangat lengkap.
 
 
-## Menerjemahkan kata
+### Menerjemahkan kata
 
 
-### Mendefinisikan bahasa target
+#### Mendefinisikan bahasa target
 
 **Dari bahasa apapun, ke bahasa kita**
 
@@ -196,7 +196,7 @@ $ trans -t 日本語 impersonate
 ```
 
 
-### Mendefinisikan bahasa sumber
+#### Mendefinisikan bahasa sumber
 
 Sekarang sebaliknya, untuk mendefinisikan bahasa sumber.
 
@@ -213,7 +213,7 @@ $ trans -s id menirukan
 ```
 
 
-### Menerjemahkan banyak kata atau sebuah frase
+#### Menerjemahkan banyak kata atau sebuah frase
 
 Kalau kalian menulis seperti ini.
 
@@ -231,7 +231,7 @@ $ trans :id "impersonate character"
 ```
 
 
-### Menerjemahkan sebuah kalimat
+#### Menerjemahkan sebuah kalimat
 
 Kurang lebih formnya sama dengan frase, yaitu menggunakan tanda petik satu `'...'` atau dua `"..."`.
 
@@ -280,7 +280,7 @@ $ trans :id -j  Life\'s but a walking shadow, a poor player.
 ```
 
 
-## Brief Mode
+### Brief Mode
 
 Secara default, Translate Shell akan menunjukkan hasil terjemahan yang banyak sekali.
 
@@ -333,10 +333,10 @@ Translate Shell
 REPL mode ini mengikuti konfigurasi file `init.trans` yang sudah kita definisikan.
 
 
-# Tambahan
+## Tambahan
 
 
-## Membuat Interaktif Menu Translate dengan Dmenu
+### Membuat Interaktif Menu Translate dengan Dmenu
 
 ```bash
 !filename: $HOME/.local/bin/dmenu-trans
@@ -398,7 +398,7 @@ Hasilnya akan seperti ini,
 Saya biasa gunakan untuk mentranslate beberapa kata/frase/atau kalimat yang saya tidak paham maksudnya.
 
 
-## Mengintegrasikan Translate Shell dengan Vim/Neovim
+### Mengintegrasikan Translate Shell dengan Vim/Neovim
 
 Ada beberapa plugin yang dapat kita gunakan untuk mengintegrasikan Translate Shell dengan Vim.
 
@@ -417,7 +417,7 @@ Gambar 2. Mencoba `:translate` dan `:TranslateReplave`
 Gambar 3. Perbandingan kecepatan Translate Shell dengan vim-translate
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -428,7 +428,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [github.com/soimort/translate-shell](https://github.com/soimort/translate-shell) \
    Diakses tanggal: 2020-10-16

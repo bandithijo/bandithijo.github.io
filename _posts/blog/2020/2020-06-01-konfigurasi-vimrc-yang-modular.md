@@ -10,21 +10,21 @@ tags: ["vim"]
 description: "Mengelola dan mengkonfigurasi vimrc yang sudah sangat panjang (ribuan baris) mungkin akan membingungkan. Kita bisa membuat vimrc yang modular untuk memisahkan beberapa komponen-komponen sesuai dengan fungsinya. Dengan begini, diharapkan akan lebih mudah untuk dikelola."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 Kira-kira 27 Maret 2020 yang lalu, saya berdiskusi dengan **M. Nabil Adani** ([@mnabila](https://t.me/mnabila)) perihal akan ikut memigrasikan konfigurasi vim --lebih tepatnya Neovim-- saya menjadi modular. Kali ini saya tidak bisa menunda, karena saya menemukan masalah terhadap lightline saya yang mengalami error saat berpindah-pindah buffer.
 
 Jadi, untuk mencari penyebab dari permasalahan tersebut, saya memilih menggunakan cara modular, yang mana --asumsi saya-- nantinya, saya dapat menelusuri modul-modul mana yang ternyata menyebabkan masalah tersebut.
 
 
-# Dasar Teori
+## Dasar Teori
 
 Untuk teori vimrc modular ini saya belum menelusuri lebih jauh. Tulisan ini saya buat hanya sebagai catatan dan bukan sebagai referensi.
 
 Dasar atau panduan saya membuat vimrc menjadi modular ini adalah catatan yang diberikan oleh **@mnabila**.
 
 
-# Struktur Direktori
+## Struktur Direktori
 
 Memodularkan konfigurasi vim (vimrc), bisa dikatakan mengelompokkan konfigurasi berdasarkan fungsi-fungsi yang bersesuaian satu dengan yang lainnya baik dalam bentuk file maupun direktori.
 
@@ -55,7 +55,7 @@ Berikut ini adalah struktur direktori yang saya pergunakan, saya sedikit melakuk
   Direktori ini saya gunakan untuk menyimpan file-file dari plugin yang tidak terkait langsung dengan plugin, seperti file stylesheet, dll.
 
 
-# Penerapan
+## Penerapan
 
 Nah, dari struktur direktori di atas, saya tinggal memecah-mecah isi dari konfigurasi-konfigurasi yang ada di dalam vimrc saya, yang kira-kira berisi 1500an baris. Hehehe =P
 
@@ -143,7 +143,7 @@ Untuk contoh lebih detail dan lebih lengkap, mungkin dapat melihat langsung pada
 > Saya tidak lagi menggunakan file `~/.vimrc`. Karena konfigurasi modular di atas, tidak memerlukan vimrc.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya segini saja yang dapat saya catat.
 
@@ -158,7 +158,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [gist.github.com/mnabila/112d8770475bb3cb6ce59b076fb1d123](https://gist.github.com/mnabila/112d8770475bb3cb6ce59b076fb1d123) \
    Diakses tanggal: 2020-06-01

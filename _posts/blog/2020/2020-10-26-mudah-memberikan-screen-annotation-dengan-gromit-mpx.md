@@ -10,7 +10,7 @@ tags: ["screenannotation"]
 description: "Mencoret-coret layar untuk memberikan atensi kepada lawan bicara, kini sudah tidak lagi sulit. Dengan Gromit-MPX kita dapat mencoret-coret di mana saja."
 ---
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Saat presentasi menggunakan aplikasi presentasi semacam LibreOffice Impress, pasti teman-teman pernah menggunakan --setidaknya pernah melihat-- menu atau tools yang digunakan untuk memberikan coretan berupa garis, panah, atau tulisan tangan dengan tujuan untuk memberikan catatan pada bagian slide yang dipresentasikan.
 
@@ -33,7 +33,7 @@ Atau saat kita ingin menunjukkan bagian atau area tertentu pada layar yang harus
 Tentunya hal-hal tersebut tidak dapat dilakukan dengan LibreOffice Impress. Masih mungkin kalau dengan Flameshot, namun tidak cukup nyaman, karena tujuan dibuatnya Flameshot memang bukan untuk membuat screen annotation, melainkan untuk membuat screenshot annotation.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 **Gromit-MPX** adalah aplikasi multi-pointer yang diporting dari **Gromit (Annotation Tool)** yang dikembangkan oleh Simon Budig.
 
@@ -50,7 +50,7 @@ Berikut ini adalah ilustrasi dari Simon Budig yang saya ambil dari website [Grom
 ![Gambar 4](https://i.postimg.cc/BnLSwjNH/gambar-04.jpg)
 
 
-# Instalasi
+## Instalasi
 
 Saya memilih membuild sendiri aplikasi ini.
 
@@ -80,7 +80,7 @@ $ sudo make uninstall
 ```
 
 
-# Konfigurasi
+## Konfigurasi
 
 Secara default, Gromit-MPX akan mmebaca file `gromit-mx.cfg` yang berada pada direktori `$XDG_CONFIG_HOME` biasanya `~/.config`.
 
@@ -152,7 +152,7 @@ UNDOKEY = "F8";
 ```
 
 
-# Demonstrasi
+## Demonstrasi
 
 ![Gambar 5](https://i.postimg.cc/SxzC4NDb/gambar-05.gif)
 
@@ -161,7 +161,7 @@ UNDOKEY = "F8";
 ![Gambar 7](https://i.postimg.cc/2Sbqp0Gc/gambar-07.gif)
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -172,7 +172,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [github.com/bk138/gromit-mpx](https://github.com/bk138/gromit-mpx) \
    Diakses tanggal: 2020-10-26

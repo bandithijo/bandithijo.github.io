@@ -10,19 +10,19 @@ tags: ["udiskctl"]
 description: "Sudah sejak bulan Juli 2018 saya memigrasikan aplikasi-aplikasi GUI (Graphical User Interface) menjadi aplikasi CLI (Command Line Interface), maksud saya selain text editor Vim. Memang terdengar absurd. Namun, ternyata setelah saya mencoba satu aplikasi, saya pun ketagihan dan mencoba mencari-cari aplikasi mana yang dapat saya migrasikan ke CLI. Untuk cerita migrasi aplikasi ini aka saya sambung pada artikel yang lain."
 ---
 
-# Prakata
+## Prakata
 
 Sudah sejak bulan Juli 2018 saya memigrasikan aplikasi-aplikasi GUI (_Graphical User Interface_) menjadi aplikasi CLI (_Command Line Interface_), maksud saya selain text editor Vim. Memang terdengar absurd. Namun, ternyata setelah saya mencoba satu aplikasi, saya pun ketagihan dan mencoba mencari-cari aplikasi mana yang dapat saya migrasikan ke CLI. Untuk cerita migrasi aplikasi ini aka saya sambung pada artikel yang lain.
 
 Karena alasan tersebut di atas, saya sampai pada tahap memigrasikan _File Manager_. _File Manager_ yang menjadi _favorite_ saya adalah **PCManFM**. Mungkin kapan-kapan _File Manager_ ini akan saya bahas, mengapa menjadi satu-satunya _File Manager_ yang saya pasang di sistem operasi saya.
 
 
-# Permasalahan
+## Permasalahan
 
 Salah satu kemampuan dari _file manager_ adalah _mounting/unmounting external drive_, seperti: _Flash Drive_, _External Hard Drive_, _SD Card_, dll. Yang menjadi permasalahan adalah aplikasi _file manager_ pengganti PCManFM yang saya gunakan, **Ranger**, tidak memiliki kemampuan ini. Tentu saja ini tidak sebanding dengan banyak kelebihan yang dimiliki oleh Ranger, maka dari itu saya tetap bersikeras menggunakan Ranger sebagai _file manager_ utama saya.
 
 
-# Solusi
+## Solusi
 
 Untuk memecahkan permasalahan di atas, saya menggunakan aplikasi [**udisks2**](https://www.archlinux.org/packages/?name=udisks2).
 
@@ -56,7 +56,7 @@ Use "udisksctl COMMAND --help" to get help on each command.
 ```
 
 
-## Mounting
+### Mounting
 
 Untuk me-*mounting* _flash drive_ atau _external hard drive_, hal yang perlu kita lakukan cukup dengan :
 
@@ -105,7 +105,7 @@ Untuk me-*mounting* _flash drive_ atau _external hard drive_, hal yang perlu kit
    Apabila mengeluarkan tampilan seperti di atas, artinya _mounting_ berhasil.
 
 
-## Unmounting
+### Unmounting
 
 Setelah kita selesai berurusan dengan _drive_, sebelum mencabutnya sangat direkomendasikan untuk menjalankan proses _unmounting_. Caranya sangat mudah.
 
@@ -141,7 +141,7 @@ Setelah kita selesai berurusan dengan _drive_, sebelum mencabutnya sangat direko
    Apabila mengeluarkan tampilan seperti di atas, artinya _unmounting_ berhasil.
 
 
-## Power Off
+### Power Off
 
 Nah, namun apabila kita perhatikan, _external drive_ masih dalam keadaan menyala. Apakah aman untuk kita lepas?
 
@@ -168,19 +168,19 @@ Agar lebih yakin sebaiknya kita mematikan _external drive_ tersebut, kemudian ba
    Apabila mengeluarkan tampilan seperti di atas, artinya  proses _power-off_ berhasil.
 
 
-# Video Ilustrasi
+## Video Ilustrasi
 
 {% youtube nixRL8esSa8 %}
 
 
-# Akhir Kata
+## Akhir Kata
 
 Untuk penjelasan lebih lengkap dan literatur tambahan silahkan membaca dari referensi yang saya sertakan di bawah. Karena sebaik-baiknya dokumentasi adalah dokumentasi yang ditulis sendiri oleh developer yang membuat aplikasi.
 
 **udisksctl** juga dapat digunakan untuk melakukan mounting untuk file ISO image. Saya sudah pernah mencatatnya di sini, [**Mudah Mount & Unmount File ISO Image dengan Ruby Script (feat. udisksctl)**](/blog/mudah-mount-iso-dengan-ruby-script#alternatif-recommended).
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/index.php/Udisks](https://wiki.archlinux.org/index.php/Udisks) \
    Diakses tanggal: 2018-11-05

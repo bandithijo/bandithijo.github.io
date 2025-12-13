@@ -10,7 +10,7 @@ tags: ["systemd-boot"]
 description: "Saya memilih menggunakan systemd-boot untuk laptop EFI saya. Saya sudah menggunakan systemd-boot sejak masih menggunakan MacbookPro. Namun, selama ini saya hanya memiliki satu buat pilihan untuk memilih sistem operasi yang ingin digunakan. Dengan catatan ini, saya akan memanfaatkan systemd-boot untuk manampilkan pilihan kernel yang akan digunakan."
 ---
 
-# Prakata
+## Prakata
 
 Sejak masih menggunakan Arch Linux pada Macbook Pro 8.1, saya sudah tidak menggunakan **GRUB** sebagai *bootloader*, melainkan **Gummiboot**. Ini adalah kali pertama saya menggunakan *bootloader* ini, karena selama menggunakan distribusi sistem operasi yang lain, selalu menggunakan GRUB sebagai *default bootloader*.
 
@@ -29,10 +29,10 @@ Sudah terdapat bersama paket **systemd**, tidak perlu menambahkan paket yang lai
 Hanya dapat membaca/menjalankan EFI excutable seperti: Linux Kernel EFISTUB, UEFI Shell, GRUB, dan Windows Boot Manager.
 
 
-# Konfigurasi
+## Konfigurasi
 
 
-## Satu Kernel
+### Satu Kernel
 
 Saat proses instalasi Arch Linux, saya hanya menggunakan satu buah kernel, yaitu kernel vanilla.
 
@@ -70,7 +70,7 @@ Lantas bisa tidak apabila kita memasang dua kernel, misalkan kernel `linux-lts` 
 Jawabannya, tentu saja bisa.
 
 
-## Menambahkan Pilihan Kernel
+### Menambahkan Pilihan Kernel
 
 Untuk menambahkan pilihan kernel pada systemd-boot caranya cukup mudah.
 
@@ -128,26 +128,26 @@ Sangat *easy busy* bukan?
 > Hanya seperti itu saja, dengan menambahkan nilai-nilai parameter yang ingin kita gunakan pada akhir dari baris `options`.
 
 
-# Cara Menggunakannya
+## Cara Menggunakannya
 
 Karena saya menggunkaan nilai `timeout` pada konfigurasi `/boot/loader/loader.conf` bernilai `0`. Hal ini menyebabkan menu dari pilihan kernel tidak akan ditampilkan. Saya melakukan ini karena saya tidak memerlukan untuk selalu melihat pilihan ini.
 
 Lantas, untuk melihat pilihan menu kernel dari systemd-boot, cukup dengan menekan berulang-kali tombol <kbd>SPACE</kbd>.
 
 
-# Tips Menambah Kernel
+## Tips Menambah Kernel
 
 Beberapa bulan terakhir ini banyak dari teman-teman yang saya dapati baru bermigrasi menggunakan Arch Linux.
 
 Saya akan membagikan tips sebagai pengguna yang lebih dahulu mencicipi Arch Linux sejak pertengahan 2016.
 
 
-## Jangan Sekedar Menambahkan Kernel
+### Jangan Sekedar Menambahkan Kernel
 
 Apabila teman-teman ingin menggunakan kernel selain kernel `linux`, jangan sekedar menambahkan paket kernelnya saja. Ada beberapa hal yang setidaknya perlu teman-teman perhatiakan.
 
 
-### Kernel Headers
+#### Kernel Headers
 
 Apabila teman-teman menggukanan VirtualBox, aplikasi ini membutuhkan **Kernel Headers**. Tentu saja VirtualBox akan menampilkan pesan-pesan merah pada proses *booting* apabila teman-teman tidak memasang kernel headers.
 
@@ -162,7 +162,7 @@ Misal:
 Jadi, **jangan lupa!** untuk memasang paket kernel headers nya juga.
 
 
-### VirtualBox Host Module
+#### VirtualBox Host Module
 
 Masih berhubungan dengan aplikasi VirtualBox. Apabila teman-teman menggunakan Arch Linux sebagai host untuk VirtualBox, jangan lupa untuk menambahkan paket bernama `virtualbox-host-modules-arch`, ini untuk teman-teman yang menggunakan kernel `linux`.
 
@@ -174,7 +174,7 @@ Namun, untuk yang menggunakan kernel selain `linux`, misal `linux-lts`, `linux-z
 | `virtualbox-host-dkms` | `linux-lts`, `linux-zen`, `linux-ck` |
 
 
-### ACPI Module
+#### ACPI Module
 
 Tidak hanya paket VirtualBox saja yang membutuhkan module yang berbeda apabila kita menggunakan kernel selain `linux`. ACPI juga memmerlukan module yang berbeda.
 
@@ -186,7 +186,7 @@ Langsung saja saya berikan tabelnya agar mudah dipahami.
 | `acpi_call-dkms` | `linux-lts`, `linux-zen`, `linux-ck` |
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Tidak bosan-bosan saya mengingatkan,
 
@@ -201,7 +201,7 @@ Sepertinya segini saja catatan mengenai **systemd-boot**.
 Mudah-mudahan dapat bermanfaat bagi teman-teman yang memerlukan.
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/index.php/Arch_boot_process#Boot_loader](https://wiki.archlinux.org/index.php/Arch_boot_process#Boot_loader) \
    Diakses tanggal: 2019-02-13

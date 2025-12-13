@@ -10,7 +10,7 @@ tags: ["android", "adb", "twrp"]
 description: "Ide tulisan ini, bermula dari keinginan saya untuk menggambil data yang ada di dalam Smartphone Android yang telah rusak layarnya."
 ---
 
-# Sekenario Masalah
+## Sekenario Masalah
 
 Saya memiliki Android Mi-4C dengan screen yang sudah pecah akibat terlempar dari kantong.
 
@@ -32,12 +32,12 @@ dd46fe2b        unauthorized
 ```
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Agar proses mendaapatkan akses ke dalam *smartphone*, ada beberapa persyaratan yang harus dipenuhi dan langkah-langkah yang harus dikerjakan.
 
 
-## Persyaratan
+### Persyaratan
 
 1. Syarat utama adalah **smartphone sudah harus terpasang TWRP** --artinya sudah UBL (*Unlock Bootloader*). \
    Untuk recovery mode tools yang lain, saya belum pernah mencobanya.
@@ -48,7 +48,7 @@ Agar proses mendaapatkan akses ke dalam *smartphone*, ada beberapa persyaratan y
    ```
 
 
-## Inject adbkey.pub
+### Inject adbkey.pub
 
 1. Masuk ke TWRP (Recovery Mode)
 
@@ -132,7 +132,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [stackoverflow.com/a/36507541/4862516](https://stackoverflow.com/a/36507541/4862516) \
    Diakses tanggal: 2020-07-26

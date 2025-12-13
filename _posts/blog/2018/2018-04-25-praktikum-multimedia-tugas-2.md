@@ -13,14 +13,14 @@ description: ""
 ![Banner](https://s20.postimg.cc/f7zndndq5/banner_post_06.png)
 
 
-# Hasil
+## Hasil
 
 ![Gambar 1](https://s20.postimg.cc/ev897h365/gambar_01.png)
 
 ![Gambar 2](https://s20.postimg.cc/6xn0xertp/gambar_02.png)
 
 
-# Video Dokumentasi
+## Video Dokumentasi
 
 {% youtube X59On7MV0Co %}
 
@@ -29,7 +29,7 @@ description: ""
 > | Kelas | **TI2-B** |
 
 
-# Aplikasi
+## Aplikasi
 
 1. Vector Image Editor : [Inkscape](https://inkscape.org/en/)
 2. Video Editor : [Blender](https://www.blender.org/)

@@ -10,15 +10,15 @@ tags: ["Jekyll"]
 description: "Memilih platform untuk ngeblog memang mumet-mumet asik. Ini adalah catatan perjalanan BanditHijo (R)-Chive hingga akhirnya menggunakan Jekyll."
 ---
 
-# Latar Belakang
+## Latar Belakang
 
 {{ page.description }}
 
 
-## CMS
+### CMS
 
 
-### WordPress
+#### WordPress
 
 Website: [wordpress.com](https://www.wordpress.com)
 
@@ -31,7 +31,7 @@ Dengan menggunakan WordPress, saya belajar mengenal berbagai macam hal yang berk
 Dengan WordPress, tidak begitu kesulitan bagi saya untuk memodifikasi WordPress _theme_ yang saya unduh dari _official website_ karena sebelum-sebelumnya saya memang sudah mengenal HTML dan CSS sejak masih SMA.
 
 
-### Blogspot
+#### Blogspot
 
 Website: [blogger.com](https://www.blogger.com)
 
@@ -40,7 +40,7 @@ Website: [blogger.com](https://www.blogger.com)
 Singkat cerita, tahun 2012, saya berkeinginan untuk mencoba _platform_ lain. Saya memutuskan untuk berpindah _platform_ dari WordPress dan beralih menggunakan Blogger atau yang lebih dikenal dengan Blogspot, sebuah CMS yang dipayungin oleh Google. Saya cukup lama menggunakan Blogspot, hingga 2018 Maret, tepat dimana saya pun bermigrasi untuk yang kedua kalinya.
 
 
-## Static Site Generator
+### Static Site Generator
 
 Sejak 2017, saya mendengar beberapa teman-teman di komunitas GNU/Linux, menulis artikel-artikel mereka menggunakan _Static Site Generator_. Saya pun tertarik dan mulai mencari tahu sendiri dengan modal percakapan yang pernah saya tangkap, yaitu "menggunakan Hexo". Saya pun mencoba mencari tahu _platform_ _static site generator_ yang bernama Hexo. Dan mulai saat inilah keinginan untuk bermigrasi ke _platform_ lain dimulai. Terlebih lagi dengan menggunakan _statis site generator_ kita dapat meletakkan _source_ dari blog kita di GitHub dan membuatnya menjadi GitHub _page_ yang berdomain `username.github.io`.
 
@@ -52,7 +52,7 @@ Ketertarikan saya dengan _Static Site Generator_ karena :
 4. Semua orang ~~tidak~~ dapat membuatnya dengan mudah.
 
 
-### Hexo
+#### Hexo
 
 Language: JavaScript
 
@@ -67,7 +67,7 @@ _Static Site Generator_ ini, adalah yang pertama kali memperkenalkan saya tentan
 Untuk proses produksi, seperti penerbitan tulisan saya tidak mengalami kendala, karena saya sudah terbiasa menulis menggunakan format Markdown. Konvensi lain seperti pengaturan _page_, _post_, _draft_, _assets_, dll, tidak membuat saya kebingungan. Namun, begitu sampai tahap "_Build your own theme from scratch_", inilah tahap dimana saya mulai kebingungan dengan _layout convention_ yang dimiliki oleh Hexo. Saya yakin, saya kebingungan karena ini pertama kalinya saya mengenal _layout formating_ menggunakan EJS (_Embedded JavaScript_). Karena kesulitan ini saya mencoba untuk beralih mencoba _static site generator_ lain, yaitu Hugo.
 
 
-### Hugo
+#### Hugo
 
 Language: Go
 
@@ -82,7 +82,7 @@ Selain Hexo, saya juga sudah mengenal nama lain, yaitu Hugo, namun karena saya b
 2018 Maret 18, tepat siang hari, setelah semalaman saya mengalami frustasi dengan Hexo, saya pun langsung berpindah menggunakan Hugo, mencari tutorial-tutorial di YouTube yang dapat saya pelajari dengan cepat. Sekitar jam 10 malam, saya sudah berhasil membuat template saya sendiri. Rasa senang pun menggerogoti, sambil bersantai-santai mencari literatur-literatur yang saya bisa jadikan rujukan untuk menambah pengetahuan saya membuat Hugo _layout_ yang menggunakan Go _template_. Hingga, akhirnya menemukan sebuah website yang menampilkan statistik terhadap _static site generator_ yang populer, [staticgen.com](https://www.staticgen.com/) - _Top Open-Source Static Site Generators_. Website ini menggambarkan statistik bahwa Hugo menduduki peringkat kedua setelah Jekyll, _static site generator_ yang menggunakan bahasa pemrograman Ruby. Lantas saya pun penasaran, karena sebelumnya pun saya sudah pernah belajar Ruby. Saya berfikir, kenapa tidak menggunakan Ruby yang sudah pernah saya pelajari, mungkin akan lebih mudah ketimbang melanjutkan menggunakan Hugo yang menggunakan bahasa Go, yang belum pernah saya pelajarin dasarnya. Tepat tengah malam 2018 Maret 19, saya pun mencari tahu tentang Jekyll.
 
 
-### Jekyll
+#### Jekyll
 
 Language: Ruby
 
@@ -134,10 +134,10 @@ Tepat tengah malam, _layout_ yang saya _develop_ sudah berhasil dan sesuai denga
 > Simak catatannya di sini, [**Membuat Tampilan Command Prompt untuk Blog dengan Jekyll Liquid Tags**](/blog/membuat-tampilan-command-prompt-dengan-jekyll-liquid-tags)
 
 
-# Template yang Saya Gunakan
+## Template yang Saya Gunakan
 
 
-## Old Template
+### Old Template
 
 Dari cerita-cerita di atas, saya berkali-kali menyinggung kata "_layout_". Kenapa saya begitu bersikeras untuk membangun _layout_ saya sendiri ? Karena dengan membangun _layout_ sendiri, kita dapat dengan mudah memodifikasinya, karena kita memahami dengan baik bagaimana struktur dari _layout_ yang kita bangun.
 
@@ -150,7 +150,7 @@ Sederhana dan _old school_ sekali bukan?
 Saya memiliki kesan yang sangat baik terhadap bentuk desain _template_ seperti ini. Namun sayangnya, _template_ ini belum menggunakan prinsip _responsive design_. Sehingga sangat kaku dan tidak fleksibel apabila diakses menggunakan _smartphone_ atau _tablet_. Hal tersebut dikarenakan _template_ ini sebagian besar mengguanakn _element_ gambar untuk membangun tampilannya, mulai dari _header_ hingga _footer_.
 
 
-## New Template
+### New Template
 
 Atas dasar kecintaan saya terhadap warna, desain, dan _layout_ dari template sebelumnya, saya memutuskan untuk mencoba meniru desain dari _template_ tersebut. Tentunya sudah menggunakan prinsip _responsive design_. Dari cerita di atas, saya berhasil membuat _template_ ini dengan menggunakan Go _template_, namun saya kurang mengerti untuk mengembangkannya lebih jauh, sehingga saya memutuskan untuk mencoba Jekyll yang menggunakan Liquid untuk membangun _layout_. Dan, jadilah _layout_ yang saya inginkan. Hampir menyerupai _template_ buatan StyleShout.
 
@@ -247,7 +247,7 @@ _Layout_ yang saya buat ini juga sudah saya obrak-abrik mengikuti kemauan saya, 
 Mungkin soal _layout_ ini akan saya buatkan _post_ tersendiri. Agar lebih mendalam, karena judul dari _post_ ini hanya sekedar memberi tahu bahwa BanditHijo (R)-Chive sudah menggunakan _static site generator_ juga untuk membangun blog.
 
 
-# Akhir Kata
+## Akhir Kata
 
 Rumah baru sudah nyaman, sekarang tinggal mengukir kenangan-kenangan di dalamnya.
 
@@ -256,7 +256,7 @@ Saya benar-benar merasakan kemudahan dalam memproduksi tulisan-tulisan dengan me
 Terima kasih, untuk teman-teman yang sudah mampir dan membaca sepenggal kisah mengenai proses migrasi blog saya =)
 
 
-# Ucapan Terima Kasih
+## Ucapan Terima Kasih
 
 Berikut ini adalah nama-nama yang telah menginspirasi saya untuk bermigrasi menggunakan _static site generator_ :
 

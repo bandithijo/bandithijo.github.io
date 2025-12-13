@@ -13,17 +13,17 @@ description: "Saya baru saja berpindah desktop environment kembali menggunakan X
 ![Banner](https://s20.postimg.cc/j770ed1tp/banner_post_11.png)
 
 
-# Permasalahan
+## Permasalahan
 
 Saya baru saja berpindah *desktop environment* kembali menggunakan **XFCE4**. Permasalahan yang dulu pernah muncul salah satunya setiap kali sistem baru bangkit dari kondisi *sleep* terdapat sebuah *popup window* yang bertuliskan "*Authentication is required for suspending the system*".
 
 
-# Solusi
+## Solusi
 
 Untuk hal-hal berbau *authentication* biasanya diatur oleh *polkit*.
 
 
-## Cari lokasi target
+### Cari lokasi target
 
 Buka Terminal dan *copy paste command* di bawah untuk mencari lokasi dari file `org.freedesktop.login1.policy`.
 
@@ -37,7 +37,7 @@ $ locate -b org.freedesktop.login1.policy
 Pada sistem saya, file tersebut berada pada lokasi seperti yang ditampilkan *output* di atas.
 
 
-## Edit isi file target
+### Edit isi file target
 
 Kemudian, kita akan membuka file tersebut menggunakan *text editor* favorit masing-masing.
 
@@ -93,7 +93,7 @@ Pada bagian tag **defaults**, kita akan merubah nilai dari **allow_any** dan **a
 ```
 
 
-## Hasil setelah diedit
+### Hasil setelah diedit
 
 Maka setelah kita rubah, keseluruhan kodenya kan tampak seperti ini.
 
@@ -115,7 +115,8 @@ Maka setelah kita rubah, keseluruhan kodenya kan tampak seperti ini.
 ```
 
 
-# Referensi
+## Referensi
+
 1. [askubuntu.com/questions/543921/authentication-required-before-suspend](https://askubuntu.com/questions/543921/authentication-required-before-suspend) \
    Diakses tanggal: 2018-04-28
 

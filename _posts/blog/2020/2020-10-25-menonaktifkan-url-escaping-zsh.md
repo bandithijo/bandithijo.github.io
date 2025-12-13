@@ -10,7 +10,7 @@ tags: ["zsh", "shell"]
 description: "Backslash yang tersisipi apabila kita mempaste URL di Terminal dengan Z Shell, cukup mengganggu. Catatan kali ini mungkin dapat dijadikan solusi untuk mengatasi hal tersebut."
 ---
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Apa sih maksudnya "URL escaping"?
 
@@ -29,14 +29,14 @@ Sebenarnya ini adalah fitur dari oh-my-zsh, apabila kita melakukan copy paste te
 Namun sebaliknya, pada kondisi seperti kasus saya di atas, saya tidak menginginkan URL path yang saya miliki diberikan "escape character".
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Kalau di Oh-My-ZSH function ini dikenal dengan nama **url-quote-magic**.
 
 Menurut beberapa GitHub issue yang sudah di closed, saya mendapati beberapa solusi seperti ini.
 
 
-## 1. Enable DISABLE_MAGIC_FUNCTIONS
+### 1. Enable DISABLE_MAGIC_FUNCTIONS
 
 Tambahkan pada file `~/.zshrc`.
 
@@ -60,7 +60,7 @@ $ exec $SHELL
 Namun, saya tidak berhasil dengan cara ini.
 
 
-## 2. Commenting url-quote-magic function on lib
+### 2. Commenting url-quote-magic function on lib
 
 Biar cepat, saya melakukan cara yang tidak elegant.
 
@@ -135,7 +135,7 @@ https://www.youtube.com/watch?v=Q5eDxR7bU2k
 ```
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -146,7 +146,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [github.com/ohmyzsh/ohmyzsh/issues/7632 - Disable url escaping in quotes strings](https://github.com/ohmyzsh/ohmyzsh/issues/7632) \
    Diakses tanggal: 2020-10-25

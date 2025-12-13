@@ -10,12 +10,12 @@ tags: ["rails"]
 description: "Language Server Protocol sangat membantu developer saat proses membangun aplikasi. Solargraph adalah salah satu LSP yang populer digunakan dikalangan Ruby programmer dan Rails developer. Catatan ini akan mendokumentasikan cara saya melakukan setup terhadap Solargraph pada Rails project di Neovim."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 {{ page.description }}
 
 
-# Sekilas tentang Solargraph
+## Sekilas tentang Solargraph
 
 Dikutip dari halaman *official site* dari solargraph,
 
@@ -32,10 +32,10 @@ Fitur yang ditawarkan, antara lain:
 Ruby programmer atau Rails developer pasti sudah familiar dengan gem ini.
 
 
-# Setup
+## Setup
 
 
-## Setup Solargraph di Neovim (Lua)
+### Setup Solargraph di Neovim (Lua)
 
 Saya menggunakan Neovim dengan konfiguasi lua.
 
@@ -54,10 +54,10 @@ require("lspconfig").solargraph.setup({
 Solargraph belum akan berjalan karena kita perlu memasang Solargraph gem terlebih dahulu.
 
 
-## Setup Solargraph di Rails project
+### Setup Solargraph di Rails project
 
 
-### Install solargraph & solargraph-rails
+#### Install solargraph & solargraph-rails
 
 Gem yang diperlukan tentu saja `solargraph` dan juga `solargraph-rails`. Namun, kita **tidak perlu memasukkannya** ke dalam `Gemfile` project kita.
 
@@ -122,7 +122,7 @@ plugins:
 ```
 
 
-### Rubocop sebagai Linter
+#### Rubocop sebagai Linter
 
 Secara default Solargraph menggunakan Rubocop sebagai linter. Pasang juga.
 
@@ -150,7 +150,7 @@ Konfigurasi sudah selesai, dengan begini kita sudah dapat memanfaatkan kemampuan
 | <kbd>r</kbd>+<kbd>n</kbd>	| Rename method and update references |
 
 
-### Daftarkan .solargraph.yml, .rubocop.yml, dan .rubocop_todo.yml ke .gitignore
+#### Daftarkan .solargraph.yml, .rubocop.yml, dan .rubocop_todo.yml ke .gitignore
 
 Agar tidak mengganggu isi dari direktori Root Rails project, kita perlu mendaftarkan file-file konfigurasi yaml yang telah dibuat ke dalam file `.gitignore`.
 
@@ -161,12 +161,12 @@ Agar tidak mengganggu isi dari direktori Root Rails project, kita perlu mendafta
 ```
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Terima kasih sudah mampir yaa.
 
 
-# Referensi
+## Referensi
 
 1. [https://solargraph.org/](https://solargraph.org/) \
    Diakses tanggal: 2023-07-08

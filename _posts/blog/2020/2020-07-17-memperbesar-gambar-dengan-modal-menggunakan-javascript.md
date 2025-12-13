@@ -10,7 +10,7 @@ tags: ["javascript"]
 description: "Membuat fitur image fullscreen apabila diklik, dengan element modal menggunakan JavaScript, tanpa JQuery."
 ---
 
-# Sekenario Masalah
+## Sekenario Masalah
 
 Baru seminggu ini saya menambahkan fitur memperbesar gambar dengan modal.
 
@@ -23,10 +23,10 @@ Bukan anti JQuery, hanya saja, saya merasa sayang kalau harus menggunakan JQuery
 Nah, tepat hari ini, saya sudah berhasil memigrasikan fitur ini dari menggunakan JQuery menjadi hanya menggunakan vanilla JavaScript.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 
-## Contoh Menggunakan JQuery
+### Contoh Menggunakan JQuery
 
 Saya akan mulai dengan contoh yang menggunakan JQuery.
 
@@ -118,10 +118,10 @@ img.modal-content {
 ```
 
 
-## Contoh Menggunakan JavaScript
+### Contoh Menggunakan JavaScript
 
 
-### Versi W3Schools
+#### Versi W3Schools
 
 Kalau teman-teman mengikuti tutorial yang ada di W3Schools, akan seperti ini.
 
@@ -259,7 +259,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 Memang benar, script di atas dapat menampilkan gambar pada Modal, namun...**tidak bisa berfungsi apabila lebih dari satu gambar**.
 
 
-### Versi TutorialsPoint
+#### Versi TutorialsPoint
 
 Solusinya, kita perlu memodifikasi tag image yang menggunakan id menjadi class.
 
@@ -359,7 +359,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [How to create a modal image gallery with CSS and JavaScript?](https://www.tutorialspoint.com/how-to-create-a-modal-image-gallery-with-css-and-javascript) \
    Diakses tanggal: 2020-07-17

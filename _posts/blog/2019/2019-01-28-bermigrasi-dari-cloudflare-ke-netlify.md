@@ -10,7 +10,7 @@ tags: ["jekyll"]
 description: "Awalmula bandithijo berpindah domain ke .com menggunakan CLoudflare sebagai DNS resolver. Kali ini, kita akan coba menggunakan Netlify yang bertugas dsebagai CI dan juga DNS resolver."
 ---
 
-# Prakata
+## Prakata
 
 Bermigrasi? Sepertinya untuk kasus saya, lebih pas kalau saya sebut "mencoba". Ya, belajar mencoba menggunakan platform lain.
 
@@ -27,15 +27,15 @@ Kedua platform ini tidak dapat dibandingkan karena memiliki definisi dan fungsi 
 Pokoknya, saat ini, saya hanya butuh konfigurasi DNS dan Nameservers-nya saja untuk dapat menghubungkan GitHub/GitLab dengan domain name yang saya beli dari Dewaweb.
 
 
-# Proses Migrasi
+## Proses Migrasi
 
 Proses-proses di bawah ini ~~tidak~~ harus berurutan. Saya mencoba menyusun dan mengurutkan berdasarkan sekenario yang saya alami.
 
 
-## GitHub
+### GitHub
 
 
-### Menghapus GitHub Page
+#### Menghapus GitHub Page
 
 Sebenarnya langkah ini tidak diperlukan. Ini hanya preferensi saya saja.
 
@@ -68,7 +68,7 @@ Sebenarnya langkah ini tidak diperlukan. Ini hanya preferensi saya saja.
    Agar dikemudian hari tidak menimbulkan ambigu.
 
 
-### Mengganti Nama Direktori Root
+#### Mengganti Nama Direktori Root
 
 1. Saya juga perlu mengganti nama direktori root yang ada di laptop.
 
@@ -79,7 +79,7 @@ Sebenarnya langkah ini tidak diperlukan. Ini hanya preferensi saya saja.
    Tujuannya masih sama, agar tidak menimbulkan ambigu di kemudian hari.
 
 
-### Mengganti Alamat Git Remote
+#### Mengganti Alamat Git Remote
 
 1. Ganti alamat GitHub **remote** yang lama dengan yang baru.
 
@@ -106,7 +106,7 @@ Sebenarnya langkah ini tidak diperlukan. Ini hanya preferensi saya saja.
    ![Gambar 5](https://i.postimg.cc/jS5Cdr51/gambar-05.png)
 
 
-### Menghapus CNAME
+#### Menghapus CNAME
 
 1. Hapus **CNAME** yang ada pada root direktori.
 
@@ -132,10 +132,10 @@ Sebenarnya langkah ini tidak diperlukan. Ini hanya preferensi saya saja.
    ```
 
 
-## Netlify
+### Netlify
 
 
-### Tambah Site Baru
+#### Tambah Site Baru
 
 1. Setelah login dan otomatis di arahkan ke alamat [app.netlify.com/](https://app.netlify.com/). Saya menambahkan site baru.
 
@@ -202,7 +202,7 @@ Sebenarnya langkah ini tidak diperlukan. Ini hanya preferensi saya saja.
    Saat ini statusnya project kita sedang di build dan di deploy oleh Netlify.
 
 
-### Konfigurasi Custom Domain
+#### Konfigurasi Custom Domain
 
 1. Sembari menunggu proses deploy selesai, saya melakukan **Domain settings**.
 
@@ -263,7 +263,7 @@ Sebenarnya langkah ini tidak diperlukan. Ini hanya preferensi saya saja.
     dns4.p06.nsone.net
     ```
 
-### Mengganti Default Domain Netlify
+#### Mengganti Default Domain Netlify
 
 1. Saya perlu mengganti Default subdomain yang diberikan secara random oleh Netlify.
 
@@ -286,7 +286,7 @@ Sebenarnya langkah ini tidak diperlukan. Ini hanya preferensi saya saja.
    Maka target dari DNS record sudah di arahkan ke alamat Default domain yang baru.
 
 
-### Redirect Default Subdomain Netlify ke Primary Domain
+#### Redirect Default Subdomain Netlify ke Primary Domain
 
 1. Untuk melakukan redirect secara otomatis saat pengunjung mengakses **bandithijo.netlify.com** akan langsung diarahkan ke **bandithijo.com**, saya perlu melakukan konfigurasi tambahan untuk ini.
 
@@ -317,10 +317,10 @@ Sebenarnya langkah ini tidak diperlukan. Ini hanya preferensi saya saja.
    Sekarang, apabila ada pengunjung yang dengan atau tanpa sengaja mengakses alamat **bandithijo.netlify.com** akan otomatis didirect ke **bandithijo.com**.
 
 
-## Dewaweb
+### Dewaweb
 
 
-### Menambahkan Netlify Nameservers
+#### Menambahkan Netlify Nameservers
 
 1. Buka Client Area pada Dewaweb.
 
@@ -343,7 +343,7 @@ Sebenarnya langkah ini tidak diperlukan. Ini hanya preferensi saya saja.
    Karena saya sudah menggunakan DNS management milik Netlify.
 
 
-# Konfigurasi HTTPS
+## Konfigurasi HTTPS
 
 Sebenarnya tahap ini tidak perlu saya lakukan.
 
@@ -374,10 +374,10 @@ Namun untuk mencatat prosedur manualnya, saya akan tetap menuliskan langkah-lang
    ![Gambar 34](https://i.postimg.cc/63N5GMCs/gambar-33.png)
 
 
-# Tips
+## Tips
 
 
-## WWW or not WWW?
+### WWW or not WWW?
 
 Untuk masalah ini, Belum akan saya bahas di sini.
 
@@ -390,7 +390,7 @@ Cukup klik menu pada domain **www.bandithijo.com**.
 Lalu klik **Set as primary domain**.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Masih banyak yang saya dapat eksplorasi dari Netlify. Namun untuk saat ini, saya hanya menggunakan Netlify sebagai DNS management saja sebagai ganti dari Cloudflare yang saya pergunakan sebelumnya.
 
@@ -403,14 +403,14 @@ Oke, rasanya sudah cukup seperti ini dulu.
 Ini adalah catatan yang sangat panjang. Mudah-mudahan pengalaman saya dapat bermanfaat bagi teman-teman yang memerlukan.
 
 
-# Terima Kasih
+## Terima Kasih
 
 1. [Aflasio](https://blog.aflasio.com/)
 2. [Nanda Okitavera](https://okitavera.me/)
 3. Beserta teman-teman di group [JAMstack Indonesia](https://t.me/JAMstackID) yang telah banyak menginspirasi saya (memberikan observation value) bagi saya untuk bermigrasi menggunakan Netlify.
 
 
-# Referensi
+## Referensi
 
 1. [www.netlify.com/docs/continuous-deployment/](https://www.netlify.com/docs/continuous-deployment/) \
    Diakses tanggal: 2019-01-28

@@ -10,7 +10,7 @@ tags: ["scrcpy"]
 description: "Dengan menggunakan Scrcpy, kita dengan mudah dapat mengendalikan smartphone dari komputer."
 ---
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Mungkin pernah terlintas akan sangat praktis apabila kita dapat mengakses Android *smartphone* kita dari komputer/laptop?
 
@@ -25,7 +25,7 @@ Saya sudah merinci beberapa keperluan yang saya perlukan apabila terdapat aplika
 Apakah ada aplikasi yang dapat melakukan hal seperti itu di GNU/Linux? Kalaupun ada pasti harganya mahal.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Jawabannya, **ada**.
 
@@ -38,7 +38,7 @@ Saat tulisan ini dibuat, Scrcpy sudah memasuki versi 1.5 di GitHub repository me
 Scrcpy menggunakan **adb** sebagai *backend* untuk dapat berkomunikasi dengan Android *smartphone* kita. Artinya kita memerlukan paket `adb` pada sistem kita.
 
 
-# Proses Instalasi
+## Proses Instalasi
 
 Sejauh yang saya baca dari **README.md** yang ada pada repository GitHub dari Scrcpy, terdapat dua cara untuk memasang Scrcpy pada sistem kita.
 
@@ -46,7 +46,7 @@ Sejauh yang saya baca dari **README.md** yang ada pada repository GitHub dari Sc
 2. *Build* sendiri
 
 
-## Arch Linux
+### Arch Linux
 Beruntung untuk teman-teman yang menggunakan distribusi Arch Linux karena sudah terdapat *user* yang memaintain paket Scrcpy di repository. Untuk Arch Linux terdapat pada [AUR/scrcpy](https://aur.archlinux.org/packages/scrcpy/).
 
 Tinggal pasang menggunakan AUR Helper favorit kalian.
@@ -56,12 +56,12 @@ $ yay scrcpy
 ```
 
 
-## Build Sendiri
+### Build Sendiri
 
 Silahkan dibuild sendiri mengikuti petunjuk yang ditulis langsung oleh developer pada halaman repository Scrcpy, [di sini](https://github.com/Genymobile/scrcpy/blob/master/BUILD.md).
 
 
-# Cara Penggunaan
+## Cara Penggunaan
 
 Scrcpy dapat kita hubungkan dengan *smartphone* Android kita dengan dua cara, yaitu:
 
@@ -73,7 +73,7 @@ Praktis bukan?
 Kita tidak perlu menambahkan aplikasi pada *smartphone* Android kita.
 
 
-## Menggunakan Kabel Data
+### Menggunakan Kabel Data
 
 1. Hubungkan *smartphone* Android dengan laptop/komputer menggunakan kabel data.
 2. Buka Terminal dan pastikan *smartphone* sudah terhubung dengan laptop/komputer.
@@ -113,7 +113,7 @@ Kita tidak perlu menambahkan aplikasi pada *smartphone* Android kita.
    Gambar 1. Scrcpy saat dijalankan
 
 
-## Menggunakan Wifi
+### Menggunakan Wifi
 
 Untuk menghubungkan *smartphone* Android dengan laptop/komputer menggukanan konektifitas Wifi, syaratnya adalah *smartphone* kita harus berada pada *network*/jaringan yang sama dengan laptop/komputer kita.
 
@@ -199,7 +199,7 @@ Untuk menghubungkan *smartphone* Android dengan laptop/komputer menggukanan kone
    > Untuk *option* dan *properties* lebih tambahan seperti menurunkan *bit-rate* dan *definition*, dapat dilihat pada file [**README.md**](https://github.com/Genymobile/scrcpy) pada *resource* GitHub dari Scrcpy.
 
 
-# Keyboard Shortcuts
+## Keyboard Shortcuts
 
 *Tabel di bawah saya sunting langsung dari file README.md yang ada di repository GitHub dari Scrcpy, [di sini](https://github.com/Genymobile/scrcpy#shortcuts)*.
 
@@ -224,17 +224,17 @@ Untuk menghubungkan *smartphone* Android dengan laptop/komputer menggukanan kone
 *² Right-click turns the screen on if it was off, presses BACK otherwise.*
 
 
-# Sekilas Penggunaan
+## Sekilas Penggunaan
 
 {% youtube Pn_YhMWnZVE %}
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Masih banyak fitur-fitur dari Scrcpy yang belum sempat saya tuliskan di sini. Silahkan bereksplorasi lebih dalam dan lebih jauh, merujuk pada daftar referensi yang saya sertakan di bawah.
 
 
-# Referensi
+## Referensi
 
 1. [github.com/Genymobile/scrcpy](https://github.com/Genymobile/scrcpy) \
    Diakses tanggal: 2018-12-30

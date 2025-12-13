@@ -10,7 +10,7 @@ tags: ["openbsd"]
 description: "Migrasi ke OpenBSD mungkin akan menjadi perjalaan yang panjang dan penuh persiapan. Karena proses pengerjaannya diwaktu luang dan tidak sekali waktu langsung selesai, saya merasa perlu untuk mendokumentasikan catatan, agar tidak lupa begitu saja."
 ---
 
-# Prakata
+## Prakata
 
 Migrasi ke OpenBSD mungkin akan menjadi perjalanan yang panjang dan penuh persiapan.
 
@@ -21,10 +21,10 @@ Saya mempublikasikan catatan untuk teman-teman pembaca Blog BaditHijo, agar dapa
 Terima kasih telah menjadi pembaca setia dan menemani saya sampai saat ini.
 
 
-# Troubleshooting
+## Troubleshooting
 
 
-## Mengakses Root
+### Mengakses Root
 
 Untuk berpindah ke root shell, dapat menggunakan.
 
@@ -35,7 +35,7 @@ $ su
 Masukkan password root yang dibuat pada saat proses instalasi.
 
 
-## Root permission from user
+### Root permission from user
 
 **doas** is preinstalled by default, kita hanya perlu melakukan konfigurasi,
 
@@ -52,7 +52,7 @@ permit persist :wheel
 ```
 
 
-## Text editor
+### Text editor
 
 **vi** is preinstalled by default, jadi kita dapat menggunakan text editor ini.
 
@@ -61,7 +61,7 @@ $ vi
 ```
 
 
-## Firmware update
+### Firmware update
 
 Dapat dilakukan dengan:
 
@@ -70,7 +70,7 @@ $ fw_update
 ```
 
 
-## USB tethering
+### USB tethering
 
 Lihat interface dari usb tethering,
 
@@ -111,7 +111,7 @@ urndis0: flags=808843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,AUTOCONF4> mtu 1500
 ```
 
 
-## Connect Wifi
+### Connect Wifi
 
 Untuk melakukan scaning, misal wifi interface kita **iwn0**. Sudah dapat ditebak kalau wireless card saya adalah intel.
 
@@ -132,7 +132,7 @@ Kemudian, untuk mendapatkan IP address, dapat menggunakan dhcp.
 ```
 
 
-## DHCP Server
+### DHCP Server
 
 Jika ingin mengaktifkan DHCP server service saat startup, dapat menggunakan,
 
@@ -149,7 +149,7 @@ Misal, untuk etheret interface **em0** dan **iwn0**.
 ```
 
 
-## Tmux
+### Tmux
 
 Sejak OpeBSD 4.6, tmux telah menjadi bagian dari base system, sehingga kita tidak perlu repot-repot memasangnya.
 
@@ -160,7 +160,7 @@ $ tmux
 ```
 
 
-## Starting X (Xenodm)
+### Starting X (Xenodm)
 
 The recommended way to run X is with the xenodm(1) display manager. It offers some important security benefits over the traditional startx(1) command.
 If xenodm(1) wasn't enabled during installation, it can be done so later like any other system daemon:
@@ -177,7 +177,7 @@ Cara di atas akan meng-enable-kan Display Manager yang --mungkin bernama-- **xen
 Dan ketika kita login, default sessionnya adalah **fvwm** yang merupakan turunan dari **twm**.
 
 
-## Mirror pkg_add OpenBSD
+### Mirror pkg_add OpenBSD
 
 Versi OpenBSD yang baru-baru menyimpan mirror pada **/etc/installurl**.
 
@@ -187,6 +187,6 @@ https://cdn.openbsd.org/pub/OpenBSD
 ```
 
 
-# Referensi
+## Referensi
 
 1. [openbsdhandbook.com/openbsd_for_linux_users/](https://www.openbsdhandbook.com/openbsd_for_linux_users/)

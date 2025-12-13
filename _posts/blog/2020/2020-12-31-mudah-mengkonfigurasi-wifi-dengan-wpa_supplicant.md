@@ -10,7 +10,7 @@ tags: ["wpasupplicant"]
 description: "Saya jarang sekali menggunakan comprehensive network manager seperti NetworkManager atau ConnMan. Terhubung ke jaringan juga hanya lewat Wi-Fi. Maka saya putuskan untuk menghapus NetworkManager dan hanya menggunakan wpa_supplicant. Ternyata tidak semengerikan yang saya bayangkan. wpa_supplicant juga memiliki interaktif shell yang bernama wpa_cli. Sangat memudahkan untuk digunakan memanajemen jaringan konektifitas Wi-Fi di sistem kita."
 ---
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Saya baru menyadari kalau saya ternyata lebih sering menggunakan koneksi wireless ketimbang menggunakan kabel.
 
@@ -44,7 +44,7 @@ Pada Arch Wiki disebutkan,
 \***wireless_tools** sudah deprecated.
 
 
-# Apa itu wap_supplicant
+## Apa itu wap_supplicant
 
 Secara sederhana wpa_supplicant adalah tools yang dapat kita pergunakan untuk meminta/me-request otentikasi ke jaringan. Awalan **wpa_** menandakan bahwa tools ini mendukung WPA. Tidak hanya WPA, tapi juga WEP dan WPA2.
 
@@ -57,7 +57,7 @@ wpa_supplicant sangat cocok digunakan untuk desktop, laptop, maupun embedded sys
 Yok, tanpa berlama-lama, langsung saja kita pasang.
 
 
-# Instalasi
+## Instalasi
 
 Pasang dulu paket **wpa_supplicant**.
 
@@ -74,10 +74,10 @@ Kalau kita memasang paket ini, kita akan mendapatkan:
 Kita juga dapat memasang package [**wpa_supplicant_gui**](https://aur.archlinux.org/packages/wpa_supplicant_gui/) `wpa_gui`, untuk yang lebih senang berinteraksi dengan aplikasi GUI.
 
 
-# Konfigurasi
+## Konfigurasi
 
 
-## Kenali Wireless Interface yang Digunakan
+### Kenali Wireless Interface yang Digunakan
 
 Pertama-tama, periksa dulu nama wireless interface yang teman-teman gunakan.
 
@@ -109,7 +109,7 @@ Selanjutnya, untuk terhubung dengan network yang ada, kita dapat menggunakan 2 c
 2. Menggunakan `wpa_passphrase`
 
 
-## Menjalankan Service
+### Menjalankan Service
 
 Sebelum dapat menggunakan **wpa_supplicant**, kita perlu untuk menjalankan wpa_supplicant daemon terlebih dahulu.
 
@@ -144,7 +144,7 @@ Ganti *nama_interface* dengan yang teman-teman pergunakan.
 Cara di atas, biasanya saya lakukan untuk debugging, apabila saya memiliki file konfigurasi selain file konfigurasi default.
 
 
-## 1. Menggunakan wpa_cli
+### 1. Menggunakan wpa_cli
 
 Terlebih dahulu kita harus menambahkan sedikit konfigurasi agar dapat menyimpan config dari wpa_cli.
 
@@ -183,7 +183,7 @@ Interactive mode
 Di dalam shell ini, kita dapat memanfaatkan auto completion untuk perintah-perintah yang tersedia menggunakan tombol <kbd>Tab</kbd>.
 
 
-### Bantuan
+#### Bantuan
 
 Seperti biasa, untuk melihat ketersediaan command yang ada, kita dapat menggunakan.
 
@@ -192,7 +192,7 @@ Seperti biasa, untuk melihat ketersediaan command yang ada, kita dapat menggunak
 ```
 
 
-### Scanning
+#### Scanning
 
 Untuk melakukan pencarian nama network yang ada di sekitar kita.
 
@@ -208,7 +208,7 @@ OK
 ```
 
 
-### Melihat Hasil Scan
+#### Melihat Hasil Scan
 
 Untuk melihat hasil yang telah di-scan.
 
@@ -226,7 +226,7 @@ e8:01:8d:ae:fb:00       2437    -86     [WPA-PSK-CCMP][WPA2-PSK-CCMP][ESS]      
 ```
 
 
-### Mendaftarkan Network
+#### Mendaftarkan Network
 
 Saya ingin mendaftarkan network baru degan SSID bernama **bandithijo**.
 
@@ -274,7 +274,7 @@ OK
 > Kalau terjadi kesalahan input, tinggal jalankan perintah yang sama dengan nilai yang benar.
 
 
-### Melihat Daftar Network yang Tersimpan
+#### Melihat Daftar Network yang Tersimpan
 
 Untuk melihat daftar network yang pernah didaftarkan, gunakan perintah:
 
@@ -288,7 +288,7 @@ network id / ssid / bssid / flags
 ```
 
 
-### Untuk Terhubung dengan Network
+#### Untuk Terhubung dengan Network
 
 Dapat dilihat, pada network index ke-0, saya telah berhasil menyimpan konfigurasi untuk network **bandithijo**.
 
@@ -333,7 +333,7 @@ Mantap, coba test `$ ip a s`, untuk melihat apakah wireless interface yang kita 
 Kalau sudah, laukan test koneksi dengan `ping`.
 
 
-### Simpan Hasil Konfigurasi
+#### Simpan Hasil Konfigurasi
 
 Sebelum keluar, jangan lupa untuk menyimpan hasil konfigurasi.
 
@@ -346,7 +346,7 @@ OK
 ```
 
 
-### Keluar dari wpa_cli
+#### Keluar dari wpa_cli
 
 Untuk keluar, kita dapat menggunakan perintah.
 
@@ -355,7 +355,7 @@ Untuk keluar, kita dapat menggunakan perintah.
 ```
 
 
-### Disconnect
+#### Disconnect
 
 Untuk disconnect dari jaringan, masuk lagi ke **wpa_cli**, dan jalankan printah:
 
@@ -370,7 +370,7 @@ OK
 ```
 
 
-## 2. Menggunakan wpa_passphrase
+### 2. Menggunakan wpa_passphrase
 
 Metode ini dapat kita gunakan untuk terkoneksi secara cepat ke SSID apabila kita sudah tahu nama SSID dan passwordnya.
 
@@ -471,17 +471,17 @@ rtt min/avg/max/mdev = 215.292/228.954/245.752/12.631 ms
 Mantap! Kita telah berhasil terhubung ke internet.
 
 
-# Penggunaan yang Lebih Advanced
+## Penggunaan yang Lebih Advanced
 
 Untuk konfigurasi dan penggunaan yang lebih advanced, teman-teman dapat membaca sendiri di Arch Wiki.
 
 [**wpa_supplicant: Advanced usage**](https://wiki.archlinux.org/index.php/Wpa_supplicant#Advanced_usage).
 
 
-# Tambahan
+## Tambahan
 
 
-## Bagaimana Saya Menggunakan wpa_supplicant?
+### Bagaimana Saya Menggunakan wpa_supplicant?
 
 Kalau saya, karena tidak banyak berpindah2 tempat, saya memilih menggunakan service untuk menjalankan **wpa_supplicant**.
 
@@ -581,7 +581,7 @@ Mantap, sekarang seharusnya kita sudah dapat terhubung dengan jaringan.
 Untuk systemd, mohon maaf saya belum sempat mencoba menggunakan systemd. Kemungkin hanya perlu menjalankan service dari wpa_supplicant.service seperti biasa. Silahkan merujuk ke Arch Wiki.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -592,7 +592,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/index.php/Wpa_supplicant](https://wiki.archlinux.org/index.php/Wpa_supplicant) \
    Diakses tanggal: 2020-12-31

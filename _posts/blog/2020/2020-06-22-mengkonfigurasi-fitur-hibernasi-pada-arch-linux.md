@@ -10,7 +10,7 @@ tags: ["arch linux"]
 description: "Hibernasi terkadang memang tidak langsung berjalan out of the box, kita perlu untuk mengaturnya sendiri. Catatan ini mungkin dapat membantu teman-teman mengkonfigurasi hibernasi di Arch Linux."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 Fitur hibernasi (*hybernation*) tidak secara otomatis akan aktif apabila kita beru memasang Arch Linux. Kita perlu untuk melakukan konfigurasi terlebih dahulu agar fitur hibernasi dapat kita nikmati.
 
@@ -19,15 +19,15 @@ Fitur hibernasi (*hybernation*) tidak secara otomatis akan aktif apabila kita be
 Kagak, Bro. Mudah banget.
 
 
-# Konfigurasi
+## Konfigurasi
 
 
-## Membuat Swap Space
+### Membuat Swap Space
 
 Ada beberapa metode dalam membuat swap space, seperti **swap partition**, **swapfile**. Silahkan merujuk ke Arch Wiki untuk membaca lebih lanjut. Pada post kali ini saya akan mendemonstrasikan menggunakan swapfile.
 
 
-### Membuat Swapfile
+#### Membuat Swapfile
 
 Saya menggunakan Swapfile pada filesystem **ext4**. Untuk teman-teman yang menggunakan filesystem yang lain seperti **BTRFS** atau yang lainnya, saya sarankan untuk melakukan eksplorasi lebih jauh.
 
@@ -42,7 +42,7 @@ Besar dari Swapfile, tergantung dari kebutuhan teman-teman.
 Perintah di atas akan membuat Swapfile `/swapfile` pada root direktori.
 
 
-### Merubah permission dari swapfile
+#### Merubah permission dari swapfile
 
 Swap space dapat menjadi lubang keamanan yang besar pada sistem kita, karena itu kita perlu menutup segala macam akses selain root.
 
@@ -51,7 +51,7 @@ $ sudo chmod 600 /swapfile
 ```
 
 
-### Format Swapfile
+#### Format Swapfile
 
 Sebelum dapat digunakan, kita perlu memformat `/swapfile` menjadi berformat swap.
 
@@ -60,7 +60,7 @@ $ sudo mkswap /swapfile
 ```
 
 
-### Mengaktifkan Swapfile
+#### Mengaktifkan Swapfile
 
 Setelah semua langkah di atas sudah dilakukan, Swapfile tidak langsung aktif. Selaaknya swap partition, kita perlu mengaktifkannya terlebih dahulu.
 
@@ -69,7 +69,7 @@ $ sudo swapon /swapfile
 ```
 
 
-## Tambahkan Swapfile pada /etc/fstab
+### Tambahkan Swapfile pada /etc/fstab
 
 Agar Swapfile sudah enable otomatis saat sistem startup, kita perlu menambahkan pada `/etc/fstab`.
 
@@ -84,7 +84,7 @@ UUID=00000000-0000  /     ext4  rw,noatime   0 1
 ```
 
 
-## Edit Kernel Module
+### Edit Kernel Module
 
 Kita perlu menambahkan `resume` dan `resume_offset`. Karena saya menggunakan Grub, maka saya akan menambahkan pada file `/etc/default/grub`.
 
@@ -132,7 +132,7 @@ $ sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 
-## Edit mkinitcpio
+### Edit mkinitcpio
 
 Kita perlu menambahkan `resume` hook pada startup hook di mkinitcpio. Hal ini akan memastikan sistem dapat kembali dari proses hibernasi.
 
@@ -170,12 +170,12 @@ Selesai.
 > Saya sudah mencobanya dengan OpenRC, dan berhasil.
 
 
-# Demonstrasi Hasil
+## Demonstrasi Hasil
 
 {% youtube y0h6pbkrITo %}
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/index.php/Swap](https://wiki.archlinux.org/index.php/Swap) \
    Diakses tanggal: 2020-06-22

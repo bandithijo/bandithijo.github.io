@@ -13,14 +13,14 @@ description: "Kelebihan memiliki ThinkPad adalah terdapat fingerprint scanner mo
 ![Banner](https://2.bp.blogspot.com/-ivgbZvKVSI4/WmBTWBAqElI/AAAAAAAAG4g/QKm653CH2nQ89IabEC5hkfDd8kF1QFbtQCLcBGAs/s1600/Default%2BHeader%2BTemplate%2BPost%2B2X.png)
 
 
-# Latar Belakang
+## Latar Belakang
 
 Untuk dapat menggunakan _fingerprint scanner_, terlebih dahulu kalian harus memastikan apakah tipe dari _fingerprint scanner_ yang kalian miliki telah didukung atau tidak. Kalian dapat melakukan pengecekan dengan mengunjungi link berikut ini: [libfprint_supported_devices](https://www.freedesktop.org/wiki/Software/fprint/libfprint/Supported_devices/).
 
 _FingerPrint scanner_ dapat digunakan secara _plug and play_ pada Arch Linux (dan beberapa distro tertentu yang saya sudah coba seperti Fedora) diatur oleh _fprint project_. Idenya adalah untuk membuat _built-in fingerprint scanner_ pada beberapa jenis laptop dapat melakukan _login_ dengan memanfaatkan [PAM](https://wiki.archlinux.org/index.php/PAM) (_Pluggable Authentication Modules_).
 
 
-# Prasyarat
+## Prasyarat
 
 Untuk mengetahui tipe dan _brand_ dari _fingerprint scanner_ yang kalian miliki, gunakan _command_ berikut ini,
 
@@ -39,7 +39,7 @@ Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 Dari keterangan di atas dapat terlihat bahwa _fingerprint_ saya ada pada baris kedua.
 
 
-# Instalasi
+## Instalasi
 
 Untuk dapat menggunakan _fingerprint scanner_, kalian membutuhkan paket bernama [fprintd](https://www.archlinux.org/packages/?name=fprintd). Mungkin beberapa paket lain seperti [imagemagick](https://www.archlinux.org/packages/?name=imagemagick) juga akan diperlukan sebagai dependensi.
 
@@ -50,12 +50,12 @@ $ sudo pacman -S fprintd libfprint
 **libfprint** adalah dependensi sari **fprintd**.
 
 
-# Konfigurasi
+## Konfigurasi
 
 Setelah melakukan instalasi paket fprintd, lantas kita perlu melakukan beberapa konfigurasi. Kalian dapat memilih konfigurasi-konfigurasi apa saja yang kalian perlukan dari beberapa konfigurasi yang saya lakukan di bawah ini. Tidak harus semua dilakukan, pilih saja yang kalian butuhkan.
 
 
-## Login
+### Login
 
 Untuk kalian yang menggunakan Gnome 3.26, _login manager_ diatur oleh GDM. Apabila kalian ingin menggunakan _fingerprint scanner_ untuk _login_ pada GDM, kalian dapat mengikuti langkah ini. Gnome sudah menyediakan _fingerprint option_ yang dapat kalian atur pada **Settings > Details > Users**. Kalian akan melihat window seperti di bawah ini,
 
@@ -88,12 +88,12 @@ Untuk dapat mengaktifkan _fingerprint login_, kalian perlu membuka kunci dari Se
 > Lagipula memasukkan password pada login manager juga tidak sering kita lakukan seperti halnya memasukkan password sudo atau permission yang lainnnya. Maka dari itu saya teteap memilih untuk memasukkan password login secara manual. Hehehe 😁
 
 
-## Membuat Fingerprint Signature secara Manual
+### Membuat Fingerprint Signature secara Manual
 
 Bagi teman-teman yang tidak menggunakan Gnome seperti di atas, Ada 2 cara untuk membuat _signature_ sidik jari kalian, yaitu dengan _signature_ hanya 1 jari dan _signature_ dengan semua jari (banyak jari).
 
 
-### Satu Jari (satu jari tertentu)
+#### Satu Jari (satu jari tertentu)
 
 Untuk menambahkan _signature_ 1 jari, defaultnya adalah telunjuk kanan.
 
@@ -120,7 +120,7 @@ $ fprintd-enroll username -f nama_jari
 ```
 
 
-### Semua Jari (10 jari)
+#### Semua Jari (10 jari)
 
 Atau, dengan membuat baru _signature_ untuk semua jari, namun terlebih dahulu kita perlu menghapus _signature_ yang sudah kita buat sebelumnya,
 
@@ -141,7 +141,7 @@ $ for finger in {left,right}-{thumb,{index,middle,ring,little}-finger}; do fprin
 Kemudian, kalian akan diminta memasukkan 10 sidik jari dengan masing-masing 3x scan setiap jari.
 
 
-## Konfirmasi Fingerprint
+### Konfirmasi Fingerprint
 
 Setelah kita mendaftarkan sidik jari, kita perlu melakukan konfirmasi, apakah sidik jari yang usdah kita inputkan dapat digunakan atau tidak.
 
@@ -164,7 +164,7 @@ Verify result: verify-match (done)
 ```
 
 
-## Mengamankan FingerPrint Signature
+### Mengamankan FingerPrint Signature
 
 Secara _default_, hasil _enroll_ dari _fingerprint scanner_ yang sudah kita buat dapat dengan mudah ditimpa dengan yang baru atau dihapus dengan perintah `$ fprintd-delete`, tanpa perlu terlebih dahulu menggunakan `sudo` _permission_. Kalian dapat mengubah aturan ini dengan memanfaatkan pengaturan pada _Polkit rules_.
 
@@ -186,12 +186,12 @@ polkit.addRule(function (action, subject) {
 Sekarang, untuk melakukan _enroll fingerprint_ harus **membutuhkan _sudo permission_ terlebih dahulu**.
 
 
-### PAM
+#### PAM
 
 Untuk menggunakan _fingerprint scanner_ pada saat Terminal meminta kita memasukan _password sudo_, atau saat sistem meminta kita memasukkan _password Polkit_, kita perlu mengedit dan melakukan penambahan beberapa baris perintah pada isi dari file-file yang terdapat pada direktori `/etc/pam.d/` berikut ini.
 
 
-### Sudo
+#### Sudo
 
 Untuk menggunakan _fingerprint_ pada saat menggunakan `sudo`,
 
@@ -220,7 +220,7 @@ Kalau tidak ingin menginputkan password, langsung saja tekan <kbd>Enter</kbd> un
 ![Gambar 1](https://i.postimg.cc/Gmfjqt7x/gambar-01.gif)
 
 
-### Polkit
+#### Polkit
 
 Untuk menggunakan _fingerprint_ pada saat ada aplikasi GUI yang membutuhkan akses _superuser_ dengan bantuan _Polkit_,
 
@@ -244,7 +244,7 @@ Demonya begini,
 ![Gambar 2](https://i.postimg.cc/XJbQ0c1L/gambar-02.gif)
 
 
-### i3lock
+#### i3lock
 
 Untuk membuka i3lock dengan menggunakan _fingerprint scanner_,
 
@@ -274,7 +274,7 @@ Untuk dapat menggunakannya, saat i3lock sudah aktif, terlebih dahulu kita harus 
 ![Gambar 3](https://i.postimg.cc/tJD3P4nP/gambar-03.gif)
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/index.php/Fprint](https://wiki.archlinux.org/index.php/Fprint) \
    Diakses tanggal: 2018-01-18

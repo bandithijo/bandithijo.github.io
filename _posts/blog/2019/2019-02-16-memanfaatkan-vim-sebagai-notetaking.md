@@ -10,7 +10,7 @@ tags: ["vim", "note-taking"]
 description: "Sebagai seorang vimers tentu saja lebih senang menulis di atas Vim. Catatan kali ini saya ingin berbagi pengalaman saya dalam memanajeman Vim untuk digunakan sebagai note-taking."
 ---
 
-# Prakata
+## Prakata
 
 **Apa itu *Note-Taking*?**
 
@@ -23,7 +23,7 @@ Ada berbagai cara untuk melakukan *note-taking*, tapi dalam tulisan ini, tentu s
 Bagi Teman-teman tertarik mempelajari beberapa metode *note-taking*, mungkin dapat memulai dari tautan ini: [The Best Note-Taking Methods For college students & serious note-takers](https://medium.goodnotes.com/the-best-note-taking-methods-for-college-students-451f412e264e).
 
 
-# Permasalahan
+## Permasalahan
 
 Saya tidak ingin menggunakan aplikasi pihak ketiga untuk melakukan *note-taking*, dengan beberapa alasan yang mungkin dapat saya rincikan sebagai berikut:
 
@@ -33,7 +33,7 @@ Saya tidak ingin menggunakan aplikasi pihak ketiga untuk melakukan *note-taking*
 1. Saya ingin *note-taking* yang saya panggil dapat keluar dengan cepat, tanpa harus menunggu lama
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Sekenario saat ini yang terpikirkan untuk memecahkan masalah yang saya hadapi adalah:
 
@@ -43,7 +43,7 @@ Sekenario saat ini yang terpikirkan untuk memecahkan masalah yang saya hadapi ad
 Seperti itu saja. Sederhana bukan?
 
 
-# Eksekusi
+## Eksekusi
 
 1. Buat direktori untuk menyimpan hasil *note-taking*. Terserah teman-teman.
 
@@ -184,12 +184,12 @@ Seperti itu saja. Sederhana bukan?
    Pada bagian yang saya *marking*, saya menggunakan **St** terminal. Teman-teman dapat mengganti dengan Terminal emulator yang kalian pergunakan.
 
 
-# Hasilnya
+## Hasilnya
 
 ![Gambar 1](https://i.postimg.cc/mkGQFW7P/gambar-01.gif)
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sejauh ini saya puas dan sangat nyaman menggunakan cara ini untuk melakukan *note-taking*. Saya dapat memanggil *notetaking* dengan cepat tanpa harus ketinggalan mencatat informasi yang saya perlukan dari dosen. Sangat memudahkan urusan saya.
 

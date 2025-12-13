@@ -10,12 +10,12 @@ tags: ["rails"]
 description: "Membuat menu item untuk menampilkan menu yang aktif dan yang tidak mungkin akan menjadi hal yang sedikit menyulitkan. Catatan kali ini, saya akan sedikit mencatat berbagai macam cara yang pernah saya lakukan untuk membuat fitur menu item yang dapat menampilkan indikator aktif (selected)."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 2.7.2` `rails 6.1.1` `bootstrap 4.6.x`
 
 
-# Latar Belakang
+## Latar Belakang
 
 Kali ini saya kembali mencatat perihal front-end pada Ruby on Rails untuk membuat menu yang dapat menampilkan indikator aktif (selected) saat berada pada halaman yang dipilih.
 
@@ -38,10 +38,10 @@ Saya akan coba meng-cover sebanyak yang saya pernah gunakan.
 > Jadi, jangan bingung apabila kode terapan tidak akan mirip dengan contoh di Gambar 1 di atas apabila digunakan.
 
 
-# Penerapan
+## Penerapan
 
 
-## Menggunakan Controller atau Action Name
+### Menggunakan Controller atau Action Name
 
 Setiap params hash selalu berisi controller dan action, untuk mengetahui valuenya di view template dengan cara seperti ini.
 
@@ -104,7 +104,7 @@ Mudah, kita dapat menggunakan bentuk array dengan method **include?**.
 ```
 
 
-## Menggunakan Routing Prefix dengan Request Path
+### Menggunakan Routing Prefix dengan Request Path
 
 ```eruby
 <div class="collapse <%= 'show' if [admins_root_path, admins_dashboard_path].include? request.path %>"></div>
@@ -164,7 +164,7 @@ Dapat dilihat pada bari 4, 11, 14.
 ```
 
 
-## Menggunakan ActionView Helper
+### Menggunakan ActionView Helper
 
 Kita dapat membuat method sendiri yang dapat kita gunakan di view template.
 
@@ -214,7 +214,7 @@ Terdapat 2 cara yang dapat digunakan:
 ```
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -227,7 +227,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [How TO - Collapsibles/Accordion](https://www.w3schools.com/howto/howto_js_accordion.asp) \
    Diakses tanggal: 2021-02-09

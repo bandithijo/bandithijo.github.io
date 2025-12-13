@@ -10,14 +10,14 @@ tags: ["disk", "partition", "udisksctl"]
 description: "Berinteraksi dengan disk partition mungkin merupakan pekerjaan harian bagi sebagian teman-teman, namun tidak dengan saya dan sebagian teman-teman yang lain. Catatan ini hadir untuk menyimpan beberapa 'Best Practice' yang dapat kita gunakan, apabila sewaktu-waktu kita berurusan dengan partition."
 ---
 
-# Prakata
+## Prakata
 
 Berinteraksi dengan disk dan partition mungkin merupakan pekerjaan harian bagi sebagian teman-teman, namun tidak dengan saya dan sebagian besar teman-teman yang lain.
 
 Catatan ini hadir untuk menyimpan beberapa "best practice" yang dapat kita gunakan, apabila kita memerlukannya saat akan berurusan dengan disk dan partition.
 
 
-# Perbedaan Disk dan Partition
+## Perbedaan Disk dan Partition
 
 Saya lihat banyak sekali teman-teman yang masih suka tertukar-tukar dalam membedakan dan mengidentifikasi sebuah block termasuk disk atau partition.
 
@@ -31,10 +31,10 @@ sda      ← disebut, disk,      biasanya ditulis /dev/sda
 ```
 
 
-# Tips & Tricks
+## Tips & Tricks
 
 
-## Melihat list block disk
+### Melihat list block disk
 
 Atau dapat kita artikan mengecek struktur dari partisi.
 
@@ -51,7 +51,7 @@ $ lsblk --output=NAME,FSTYPE,SIZE,TYPE,LABEL,MOUNTPOINT
 Teman-teman tinggal mendefinisikan aliasnya saja biar praktis.
 
 
-## Mounting file ISO dengan Udisks
+### Mounting file ISO dengan Udisks
 
 Terdapat 2 tahap:
 
@@ -98,7 +98,7 @@ loop0     iso9660   681M loop ARCH_202010
 Secara otomatis **udisks** akan membuat mount point ke path $XDG_RUNTIME_USER.
 
 
-## Unmounting file ISO dengan Udisks
+### Unmounting file ISO dengan Udisks
 
 Sekenarionya tinggal dibalik dari proses mounting di atas.
 
@@ -131,7 +131,7 @@ $ udisksctl loop-delete -b /dev/loop0
 ```
 
 
-## Membuat bootable flash drive dengan dd
+### Membuat bootable flash drive dengan dd
 
 Kita dapat menggunakan tools yang bernama **dd** untuk membuat bootable flash drive dari file ISO.
 

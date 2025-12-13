@@ -10,7 +10,7 @@ tags: ["tui"]
 description: "Catatan ini merupakan kumpulan dari daftar nama-nama CLI dan TUI tools yang dapat memudahkan pekerjaan kita sehari-hari."
 ---
 
-# Prakata
+## Prakata
 
 Seperti yang teman-teman ketahui, sebenarnya ada banyak sekali nama-nama CLI dan TUI tools yang dapat kita gunakan untuk mempermudah pekerjaan kita sehari-hari, tidak hanya dalam hal monitoring.
 
@@ -19,10 +19,10 @@ Yang sangat terkenal dan sangat serig kita lihat dipajang di setiap desktop-desk
 Catatan ini hadir, dari penulis untuk teman-teman, sebagai catatan untuk mengingatkan penulis akan nama-nama tools-tools tersebut. Karena, apabila tidak sering digunakan, mesti akan terlupakan, dan ketika diperlukan, perlu waktu untuk mengingatnya kembali.
 
 
-# System Monitor
+## System Monitor
 
 
-## htop
+### htop
 
 ![gambar-htop](https://i.postimg.cc/bwj3RHrR/gambar-htop.png)
 
@@ -39,7 +39,7 @@ Tasks related to processes (e.g. killing and renicing) can be done without enter
 [https://github.com/htop-dev/htop](https://github.com/htop-dev/htop)
 
 
-## gotop
+### gotop
 
 ![gambar-gotop](https://i.postimg.cc/15gDNgKr/gambar-gotop.png)
 
@@ -48,7 +48,7 @@ Another terminal based graphical activity monitor, inspired by gtop and vtop, th
 [https://github.com/xxxserxxx/gotop](https://github.com/xxxserxxx/gotop)
 
 
-## gtop
+### gtop
 
 ![gambar-gtop](https://i.postimg.cc/Wbr6HFJb/gambar-gtop.png)
 
@@ -57,7 +57,7 @@ System monitoring dashboard for terminal.
 [https://github.com/aksakalli/gtop](https://github.com/aksakalli/gtop)
 
 
-## vtop
+### vtop
 
 ![gambar-vtop](https://i.postimg.cc/yYzSWfks/gambar-vtop.png)
 
@@ -68,7 +68,7 @@ A graphical activity monitor for the command line.
 [https://github.com/MrRio/vtop](https://github.com/MrRio/vtop)
 
 
-## ytop
+### ytop
 
 ![gambar-ytop](https://i.postimg.cc/W4J2GvHK/gambar-ytop.png)
 
@@ -80,7 +80,7 @@ NO LONGER MAINTAINED. For a similar program, check out.<br>
 [https://github.com/ClementTsang/bottom](https://github.com/ClementTsang/bottom)
 
 
-## bottom (btm)
+### bottom (btm)
 
 ![gambar-bottom](https://i.postimg.cc/59mfqpsx/gambar-bottom.png)
 
@@ -91,7 +91,7 @@ A cross-platform graphical process/system monitor with a customizable interface 
 [https://github.com/ClementTsang/bottom](https://github.com/ClementTsang/bottom)
 
 
-## bashtop
+### bashtop
 
 ![gambar-bashtop](https://i.postimg.cc/pL3vXSLB/gambar-bashtop.png)
 
@@ -102,7 +102,7 @@ Notice, python version released! ([bpytop](https://github.com/aristocratos/bpyto
 [https://github.com/aristocratos/bashtop](https://github.com/aristocratos/bashtop)
 
 
-## bpytop
+### bpytop
 
 ![gambar-bpytop](https://i.postimg.cc/nzZ6Xfbq/gambar-bpytop.png)
 
@@ -115,7 +115,7 @@ Python port and continuation of bashtop.
 [https://github.com/aristocratos/bpytop](https://github.com/aristocratos/bpytop)
 
 
-## glances
+### glances
 
 {% image https://i.postimg.cc/yxp5pJJT/gambar-glances.png | gambar-galnces %}
 
@@ -126,7 +126,7 @@ Glances is a cross-platform monitoring tool which aims to present a large amount
 [https://github.com/nicolargo/glances](https://github.com/nicolargo/glances)
 
 
-## nmon
+### nmon
 
 ![gambar-nmon-01](https://i.postimg.cc/cJWDm79S/gambar-nmon-01.png)
 
@@ -143,10 +143,10 @@ This systems administrator, tuner, benchmark tool gives you a huge amount of imp
 [http://nmon.sourceforge.net/pmwiki.php](http://nmon.sourceforge.net/pmwiki.php)
 
 
-# Disk Monitor
+## Disk Monitor
 
 
-## vizex
+### vizex
 
 ![gambar-vizex](https://i.postimg.cc/1zDSjKr5/gambar-vizex.png)
 
@@ -157,10 +157,10 @@ vizex is the terminal program for the UNIX/Linux systems which helps the user to
 [https://github.com/bexxmodd/vizex](https://github.com/bexxmodd/vizex)
 
 
-# Network Monitor
+## Network Monitor
 
 
-## iftop
+### iftop
 
 ![gambar-iftop](https://i.postimg.cc/rmPrFhT1/gambar-iftop.png)
 
@@ -173,7 +173,7 @@ iftop does for network usage what top(1) does for CPU usage. It listens to netwo
 [https://code.blinkace.com/pdw/iftop](https://code.blinkace.com/pdw/iftop)
 
 
-## nethogs
+### nethogs
 
 ![gambar-htop](https://i.postimg.cc/L6Pxf09X/gambar-nethogs.png)
 
@@ -198,7 +198,7 @@ NetHogs is a small 'net top' tool. Instead of breaking the traffic down per prot
 > ([Source code download ](http://archive.ubuntu.com/ubuntu/pool/universe/n/nethogs/nethogs_0.8.0-1.debian.tar.gz), look in process.cpp)
 
 
-## gping
+### gping
 
 ![gambar-gping](https://i.postimg.cc/85sHCZXT/gambar-gping.png)
 
@@ -207,7 +207,7 @@ Ping, but with a graph.
 [https://github.com/orf/gping](https://github.com/orf/gping)
 
 
-## prettyping
+### prettyping
 
 ![gambar-prettyping](https://i.postimg.cc/rwqVqFR3/gambar-prettyping.png)
 
@@ -216,7 +216,7 @@ prettyping is a wrapper around the standard ping tool with the objective of maki
 [https://github.com/denilsonsa/prettyping](https://github.com/denilsonsa/prettyping)
 
 
-## wavemon
+### wavemon
 
 ![gambar-wavemon-01](https://i.postimg.cc/N08h4jQK/gambar-wavemon-01.png)
 
@@ -231,10 +231,10 @@ wavemon is a wireless device monitoring application that allows you to watch sig
 [https://github.com/uoaerg/wavemon](https://github.com/uoaerg/wavemon)
 
 
-# Torrent Client
+## Torrent Client
 
 
-## tremc
+### tremc
 
 ![gambar-tremc-01](https://i.postimg.cc/13xYj1Cw/gambar-tremc-01.png)
 
@@ -253,10 +253,10 @@ tremc is the python3 fork of transmission-remote-cli.
 [https://github.com/tremc/tremc](https://github.com/tremc/tremc)
 
 
-# Git Client
+## Git Client
 
 
-## lazygit
+### lazygit
 
 ![gambar-lazygit](https://i.postimg.cc/prwk4KZR/gambar-lazygit.png)
 
@@ -265,7 +265,7 @@ A simple terminal UI for git commands, written in Go with the gocui library.
 [https://github.com/jesseduffield/lazygit](https://github.com/jesseduffield/lazygit)
 
 
-## tig
+### tig
 
 ![gambar-tig-01](https://i.postimg.cc/ZRg1YBcD/gambar-tig-01.png)
 
@@ -278,22 +278,22 @@ Tig is an ncurses-based text-mode interface for git. It functions mainly as a Gi
 [https://github.com/jonas/tig](https://github.com/jonas/tig)
 
 
-# Docker Client
+## Docker Client
 
 
-## lazydocker
+### lazydocker
 
 
-# Font
+## Font
 
 
-## fontpreview-ueberzug
+### fontpreview-ueberzug
 
 
-# Science
+## Science
 
 
-## periodic-table-tui
+### periodic-table-tui
 
 ![gambar-periodic-table](https://i.postimg.cc/5NqptQ9K/gambar-periodic-table-tui.png)
 
@@ -302,10 +302,10 @@ A periodic table for the command line.
 [https://github.com/pryme-svg/periodic-table-tui](https://github.com/pryme-svg/periodic-table-tui)
 
 
-# Messaging
+## Messaging
 
 
-## Weechat (IRC Client)
+### Weechat (IRC Client)
 
 ![gambar-weechat-01](https://i.postimg.cc/J0bw07t3/gambar-weechat-01.png)
 
@@ -318,55 +318,55 @@ WeeChat (Wee Enhanced Environment for Chat) is a free chat client, fast and ligh
 [https://github.com/weechat/weechat](https://github.com/weechat/weechat)
 
 
-# Audio Mixer
+## Audio Mixer
 
 
-## ncpamixer
+### ncpamixer
 
 An ncurses mixer for PulseAudio inspired by pavucontrol.
 
 [https://github.com/fulhax/ncpamixer](https://github.com/fulhax/ncpamixer)
 
 
-## pulsemixer
+### pulsemixer
 
 [https://github.com/GeorgeFilipkin/pulsemixer](https://github.com/GeorgeFilipkin/pulsemixer)
 
 
-# Audio Player
+## Audio Player
 
 
-## cmus
+### cmus
 
 
-## ncmpcpp
+### ncmpcpp
 
 
-## mpd
+### mpd
 
 
-# Video Player
+## Video Player
 
 
-## youtube-dl
+### youtube-dl
 
 
-## youtube-viewer
+### youtube-viewer
 
 
-## ytfzf
+### ytfzf
 
 
-# Battery Monitor
+## Battery Monitor
 
 
-## battop
+### battop
 
 
-# RSS Reader
+## RSS Reader
 
 
-## newsboat
+### newsboat
 
 ![gambar-newsboat](https://i.postimg.cc/ryKZJNGB/gambar-newsboat.png)
 
@@ -377,10 +377,10 @@ A feed reader pulls updates directly from sites like blogs and news agencies, an
 [https://github.com/newsboat/newsboat](https://github.com/newsboat/newsboat)
 
 
-# Email Client
+## Email Client
 
 
-## neomutt
+### neomutt
 
 ![gambar-neomutt](https://i.postimg.cc/vHSQKzC5/gambar-neomutt.png)
 
@@ -401,10 +401,10 @@ NeoMutt was created when Richard Russon (@FlatCap) took all the old Mutt patches
 [https://github.com/neomutt/neomutt](https://github.com/neomutt/neomutt)
 
 
-# File Manager
+## File Manager
 
 
-## ranger
+### ranger
 
 ![gambar-ranger](https://i.postimg.cc/ryfcdjV7/gambar-ranger.png)
 
@@ -415,7 +415,7 @@ ranger is a console file manager with VI key bindings. It provides a minimalisti
 [https://github.com/ranger/ranger](https://github.com/ranger/ranger)
 
 
-## lf
+### lf
 
 
-## nnn
+### nnn

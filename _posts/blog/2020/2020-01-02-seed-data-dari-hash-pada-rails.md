@@ -10,12 +10,12 @@ tags: ["rails"]
 description: "Catatan kali ini tentang cara membuat seed data dari data yang berbentuk hash pada Ruby on Rails."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 2.6.3` `rails 5.2.3` `postgresql 11.5`
 
 
-# Prakata
+## Prakata
 
 Catatan kali ini akan singkat saja.
 
@@ -24,7 +24,7 @@ Saya akan mencatat cara yang saya temukan dari berbagai macam sumber, untuk memb
 Maksud dari catatan ini adalah, untuk membuat data pada seed untuk web aplikasi Rails.
 
 
-# Gambaran Masalah
+## Gambaran Masalah
 
 Misal, saya memiliki field `location` dan `meeting_point` yang merupakan entitas dari tabel experiences.
 
@@ -57,7 +57,7 @@ places = {
 ```
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Pertama-tama generate dulu fake data untuk experiences.
 
@@ -152,7 +152,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [docs.ruby-lang.org/en/2.0.0/Hash.html](https://docs.ruby-lang.org/en/2.0.0/Hash.html) \
    Diakses tanggal: 2020-01-02

@@ -13,7 +13,7 @@ description: "Semester ini saya mengikuti mata kuliah Sekuriti Jaringan. Pada sa
 ![Banner](https://s20.postimg.cc/402x64szx/banner_post_05.png)
 
 
-# Latar Belakang
+## Latar Belakang
 
 Semester ini saya mengikuti mata kuliah **Sekuriti Jaringan**. Pada salah satu pembahasan, terdapat praktik membuat dan mengkonfigurasi VPN (*Virtual Private Network*). Perangkat yang digunakan adalah perangkat dari **MikroTik** yang membutuhkan aplikasi **WinBox** untuk mempermudah proses konfigurasi. Dapat lebih memudahkan karena konfigurasi dilakukan dengan menggunakan GUI (*Graphical User Interface*).
 
@@ -22,7 +22,7 @@ Semester ini saya mengikuti mata kuliah **Sekuriti Jaringan**. Pada salah satu p
 Gambar 1. User Interface dari WinBox
 
 
-# Permasalahan
+## Permasalahan
 
 **Mikrotik** hanya menyediakan **WinBox** untuk sistem operasi Microsoft Windows -- yaa, sudah dapat ditebak dari namanya.
 
@@ -31,17 +31,17 @@ Saya sendiri mengenal Mikrotik dan WinBox baru sejak tahun 2015, di awal masa pe
 Tapi jangan khawatir, file **.exe** WinBox dapat dengan mudah kita pasang pada distribusi sistem operasi GNU/Linux apa saja.
 
 
-# Prasyarat
+## Prasyarat
 
 Kita membutuhkan bantuan aplikasi [**Wine**](https://www.archlinux.org/packages/multilib/x86_64/wine/) untuk menjalankan aplikasi WinBox.
 
 Proses instalasi Wine dapat merujuk pada distribusi sistem operasi GNU/Linux masing-masing. Atau cari saja di Google, sudah banyak teman-teman blogger yang mendokumentasikannya. Sangat mudah dan tidak ribet.
 
 
-# Penerapan
+## Penerapan
 
 
-## Instalasi Wine
+### Instalasi Wine
 
 Untuk distribusi Arch Linux.
 
@@ -54,7 +54,7 @@ $ sudo pacman -S wine wine_gecko wine-mono
 Untuk kebutuhan dokumentasi ini (instalasi WinBox), hanya sejauh ini saja yang diperlukan. Namun untuk konfigurasi lebih lanjut tentang Wine dapat merujuk pada Arch Wiki, [di sini](https://wiki.archlinux.org/index.php/wine).
 
 
-## Instalasi WinBox
+### Instalasi WinBox
 
 Terlebih dahulu kalian harus mengunduh WinBox installer pada situs *official* MikroTik [di sini](https://mikrotik.com/download).
 
@@ -129,12 +129,12 @@ Dengan demikian proses instalasi dan konfigurasi WinBox pada GNU/Linux saya rasa
 > ![Gambar 4](https://i.postimg.cc/zf8KN0zy/komentar-01.png)
 
 
-# Video Sample
+## Video Sample
 
 {% youtube 2DVKiNiCiI8 %}
 
 
-# Referensi
+## Referensi
 
 1. [https://wiki.archlinux.org/index.php/wine](https://wiki.archlinux.org/index.php/wine) \
    Diakses tanggal: 2018-04-24

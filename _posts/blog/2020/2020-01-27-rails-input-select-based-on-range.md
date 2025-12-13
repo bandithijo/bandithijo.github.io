@@ -10,19 +10,19 @@ tags: ["rails"]
 description: "Catatan kali ini mengenai cara membuat input selection yang berbasis rentang (range) pada web aplikasi yang dibangun dengan Ruby on Rails."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 2.6.3` `rails 5.2.3` `postgresql 11.5`
 
 
-# Prakata
+## Prakata
 
 Catatan kali ini masih dengan Rails sebagai Fullstack.
 
 Mengenai penggunaan Input Select yang mengambil data berupa Range (rentang) dari field yang berisi nilai di dalam database.
 
 
-# Sekenario
+## Sekenario
 
 Saya mempunyai sebuah tabel bernama Experience. Di dalam tabel ini terdapat field harga (*price*).
 
@@ -51,7 +51,7 @@ Misalkan:
 ![Gambar 1](https://i.postimg.cc/Dz531bWD/gambar-01.png)
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Kebetulan, saya menggunakan **Ransack**.
 
@@ -80,7 +80,7 @@ Terlihat bahwa pada tabel Experience, terdapat 2 buah Experience yang memiliki h
 Sekarang saya akan ke controller terlebih dahulu.
 
 
-## Controller
+### Controller
 
 Pada homepage_controller, saya akan buatkan sebuah instance variable `@search` untuk menampung object dari `params[:q]`.
 
@@ -130,7 +130,7 @@ end
 Selanjutnya, pada routes.
 
 
-## Routes
+### Routes
 
 Seperti biasa, kita memberikan route untuk action index dari homepage_controller.
 
@@ -146,7 +146,7 @@ end
 Nah, kalo sudah, tinggal buat view template.
 
 
-## View Template
+### View Template
 
 Contoh blok html di bawah ini hanya sebagai dummy.
 
@@ -224,7 +224,7 @@ Terima kasih
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [apidock.com/rails/v4.2.7/ActionView/Helpers/FormOptionsHelper/options_for_select](https://apidock.com/rails/v4.2.7/ActionView/Helpers/FormOptionsHelper/options_for_select) \
    Diakses tanggal: 2020-01-27

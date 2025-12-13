@@ -10,12 +10,12 @@ tags: ["vboxmanage"]
 description: "Hal-hal terkait command line memang sering terlupakan apabila tidak selalu digunakan. Catatan ini hadir untuk mempermudah teman-teman apabila sedang berkepentigan dengan vboxmanage."
 ---
 
-# Prakata
+## Prakata
 
 VBoxManage adalah command line interface dari VirtualBox. Lengkapnya adalah "*Oracle VM VirtualBox Command Line Management Interface*".
 
 
-# Melihat daftar VM
+## Melihat daftar VM
 
 Untuk melihat daftar vm yang ada,
 
@@ -34,10 +34,10 @@ Outputnya akan seperti ini,
 **34a99d7f-e482-4f6b-86ba-e827998213f2** adalah UUID dari vm.
 
 
-# Power On/Off VM
+## Power On/Off VM
 
 
-## Menjalankan vm secara headless mode
+### Menjalankan vm secara headless mode
 
 Untuk menjalankan vm tanpa membuka window display yang menampilkan tampilan layar dari vm biasanya diperlukan apabila hanya ingin menggunakan vm sebagai server. Biasanya diakses menggunakan SSH. Atau kalau ingin mengakses tampilan layar, dapat menggunakan protokol RDP.
 
@@ -59,7 +59,7 @@ VM "RDPWindows" has been successfully started.
 ```
 
 
-## Mematikan vm
+### Mematikan vm
 
 Saya tidak merekomendasikan mematikan vm dengan cara ini, karena sering sekali Windows vm saya masuk ke "Recovery Mode".
 
@@ -72,10 +72,10 @@ $ VBoxManage controlvm RDPWindows poweroff
 ```
 
 
-# Konektifitas USB Host -> Guest VM
+## Konektifitas USB Host -> Guest VM
 
 
-## Mengecek daftar device yang terhubung dengan USB port
+### Mengecek daftar device yang terhubung dengan USB port
 
 ```
 $ VBoxManage list usbhost
@@ -107,7 +107,7 @@ Untuk membuat UUID yang permanen, dapat menggunakan USB filter.
 \* Lain waktu saya akan catatat cara membuat USB filter yaa.
 
 
-## Memindahkan attached USB dari Host ke Guest vm
+### Memindahkan attached USB dari Host ke Guest vm
 
 Untuk memindahkan perangkat USB yang terhubung dengan Host ke Guest vm.
 

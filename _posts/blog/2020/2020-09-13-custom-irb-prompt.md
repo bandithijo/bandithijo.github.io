@@ -10,7 +10,7 @@ tags: ["ruby", "irb", "pry"]
 description: "Mengkonstumisasi IRB prompt agar menjadi lebih sederhana (sesuai degan yang kita inginkan)."
 ---
 
-# Latar Belakang
+## Latar Belakang
 
 Sebagai pemrogram yang menggunakan bahasa Ruby, pasti kita cukup sering berinteraksi dengan IRB (*Interactive Ruby Shell*).
 
@@ -42,14 +42,14 @@ Seperti ini.
 ```
 
 
-# Solusi
+## Solusi
 
 Kita dapat meng-*override* bentuk dari IRB prompt dengan menambahkan beberapa konfigurasi yang kita tulis pada file `~/.irbrc`.
 
 Kalau file tersebut belum ada, buat dan tambahkan seperti baris di bawah.
 
 
-## 1. Simple &gt;&gt;
+### 1. Simple &gt;&gt;
 
 ```config
 !filename: $HOME/.irbrc
@@ -79,7 +79,7 @@ Hasilnya akan seperti ini.
 ```
 
 
-## 2. Line Number [01]&gt;&gt;
+### 2. Line Number [01]&gt;&gt;
 
 Kita juga dapat mengkostumisasi dengan menambahkan beberapa spesial string yang disediakan.
 
@@ -129,10 +129,10 @@ Nah, silahkan teman-teman berkreasi sendiri apabila ingin prompt yang berbeda.
 Saya lebih suka menggunakan yang sederhan seperti ini.
 
 
-# Tips
+## Tips
 
 
-## 1. Pry (IRB with Steroid)
+### 1. Pry (IRB with Steroid)
 
 Sebelum versi Ruby 2.7. IRB memiliki tampilan yang flat tanpa sintax highlighting. Namun, IRB sudah di-*facelift* pada versi 2.7 sehingga memiliki sintaks color yang sangat mempermudah.
 
@@ -207,7 +207,7 @@ Hasilnya,
 Jika ingin lebih jauh mengetahui tentang Pry, kalian dapat mengunjuni GitHub repositorinya, [di sini](https://github.com/pry/pry).
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -218,7 +218,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [stackoverflow.com/a/6041003/4862516](https://stackoverflow.com/a/6041003/4862516) \
    Diakses tanggal: 2020/09/13

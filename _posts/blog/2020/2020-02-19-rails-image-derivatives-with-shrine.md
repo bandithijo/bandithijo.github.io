@@ -10,24 +10,24 @@ tags: ["rails", "shrine"]
 description: "Membuat turunan dari original image dapat mempermudah kita membuat diferensiasi terhadap ukuran image yang akan kita gunakan pada masing-msing kebutuhan yang berbeda pada sis frontend. Misalkan, ukuran image untuk thumbnails, menggunakan image dengan ukuran yang lebih kecil dari pada image untuk gallery. Catatan kali ini, akan membahas bagaimana cara membuat image derivatives dengan Shrine gem pada Ruby on Rails."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 2.6.3` `rails 5.2.3` `postgresql 11.5`
 
 
-# Prakata
+## Prakata
 
 Pada catatan kali ini saya akan mendokumentasikan proses implementasi image processing dengan Shrine gem pada aplikasi Ruby on Rails.
 
 
-## Shrine itu apa yaa?
+### Shrine itu apa yaa?
 
 Definisi sederhananya, Shrine adalah *file attachment toolkit* untuk aplikasi Ruby.
 
 Aplikasi Ruby artinya Shrine tidak hanya dapat digunakan oleh aplikasi yang dibuat dengan *Ruby web framework* seperti Ruby on Rails, melainkan dapat pula digunakan pada *Ruby web framework* yang lain seperti Sinatra, Hanami, Roda, Cuba, Grape.
 
 
-## Kenapa memilih menggunakan Shrine?
+### Kenapa memilih menggunakan Shrine?
 
 Shrine memiliki beberapa keuntungan diantaranya:
 
@@ -41,7 +41,7 @@ Shrine memiliki beberapa keuntungan diantaranya:
 Nah, pada catatan kali ini, saya akan membahas spesifik mengenai poin ke 5, **Flexible processing** atau lebih khusus ke **File processing**, atau lebih khusus lagi adalah **Image Processing**  yang akan digunakan untuk menggenerate *set of thumbnails*, atau dalam kata lain *image derivatives* (turunan gambar) dari gambar dengan ukuran asli yang diupload oleh user.
 
 
-# Sekenario
+## Sekenario
 
 Misal, pada Web aplikasi yang saya buat, saya mengizinkan user untuk dapat mengupload gambar (*image*).
 
@@ -50,10 +50,10 @@ Namun, ternyata pengguna mengupload gambar dengan ukuran yang besar-besar, tentu
 Untuk mengakali ini, saya memanfaatkan fungsi *image processing* yang dapat dikonfigurasi di dalam Shrine untuk menggenerate *set of thumbnails* sesuai kebutuhan, misal dalam 3 ukuran (small, medium dan large).
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 
-## Pemasangan Shrine
+### Pemasangan Shrine
 
 Saya sudah memasang Shrine ke dalam Gemfile aplikasi saya.
 
@@ -65,7 +65,7 @@ gem "shrine", "~> 3.0"
 ```
 
 
-## Pemasangan Image Processing
+### Pemasangan Image Processing
 
 Selanjutnya, saya akan memasang dependensi untuk Shrine dapat melakukan image procesing, yaitu ImageMagick.
 
@@ -95,7 +95,7 @@ $ bundle install
 ```
 
 
-## Konfigurasi Initializer Shrine
+### Konfigurasi Initializer Shrine
 
 Tambahkan plugin **derivatives** pada Shrine initializer.
 
@@ -115,7 +115,7 @@ Shrine.plugin :default_url
 Saya juga menambahkan plugin **default_url** agar image yang belum memiliki turunan, dapat menggunakan original image.
 
 
-## Models
+### Models
 
 Selanjutnya saya akan menambahkan fungsi untuk *eager processing* atau *derivatives processing* pada model image uploader.
 
@@ -174,7 +174,7 @@ end
 ```
 
 
-## Controller
+### Controller
 
 Selanjutnya, pada controller yang menggunakan image uploader, saya akan menambahkan method `.image_derivatives!`.
 
@@ -300,7 +300,7 @@ end
 ```
 
 
-## Views
+### Views
 
 Setelah gambar selesai diupload, gambar akan disimpan pada `image_data` atau nama apa saja `<attachment>_data` dalam catatan saya ini, berupa gambar.
 
@@ -367,7 +367,7 @@ Tinggal dikondisikan saja, ukuran-ukuran mana saja yang akan digunakan pada temp
 Misal pada bagian detail artikel, saya menggunakan ukuran `:medium`. Lalu apabila gambar diklik, gambar akan menampilkan ukuran `:large`.
 
 
-# Tambahan
+## Tambahan
 
 Misalkan, aplikasi yang kita buat sudah terdapat gambar-gambar yang sudah diupload.
 
@@ -494,7 +494,7 @@ Yah, bagaimanapun script ini masih jauh dari sempurna. Masih remah-remah biskuit
 Namun, cukup berguna bagi saya.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Catatan ini masih jauh dari kata sempurna.
 
@@ -511,7 +511,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [github.com/shrinerb/shrine](https://github.com/shrinerb/shrine) \
    Diakses tanggal: 2020-02-19

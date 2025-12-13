@@ -13,21 +13,21 @@ description: "Kesulitan dalam mengakses beberapa portal informasi membuat saya g
 ![Banner](https://s20.postimg.cc/hvtdtlfa5/banner_post_20.png)
 
 
-# Pendahuluan
+## Pendahuluan
 
 DNSCrypt ? Apa itu ?
 
 Dokumentasi ini tidak ditulis untuk menjelaskan pertanyaan-pertanyaan tersebut. Mungkin teman-teman bisa mencari-cari literatur sendiri untuk jawaban dari pertanyaan di atas, yaa. Seperti [di sini](https://dnscrypt.info/).
 
 
-# Permasalahan
+## Permasalahan
 
 Kesulitan dalam mengakses beberapa portal informasi membuat saya gerah. Pasalnya saya kehilangan beberapa bahan bacaan dan sumber informasi yang bagus sekali dari internet berskala global. Di sisi lain, saya pun setuju dengan adanya pemblokiran-pemblokiran ini. Agar informasi yang tidak semestinya dilihat oleh kelompok umur yang belum dewasa secara psikologis tidak melihat konten tersebut dengan mudah dan gamblang. Terlebih lagi untuk teman-teman yang sudah memiliki anak. Akan sangat diuntungkan oleh kebijakan ini. Toh, kita yang orang dewasa sudah pada pintar-pintar mencari jalan menuju roma.
 
 Baiklah, saya tidak ingin menuliskan panjang lebar tentang *issue* ini. Apabila kalian membaca post ini, mungkin masalah yang kita hadapi sama, mas bro !
 
 
-# Instalasi
+## Instalasi
 
 Kita perlu memasang paket yang bernama [**dnscrypt-proxy**](https://www.archlinux.org/packages/?name=dnscrypt-proxy).
 
@@ -36,7 +36,8 @@ $ sudo pacman -S dnscrypt-proxy
 ```
 
 
-# Konfigurasi
+## Konfigurasi
+
 Setelah kita berhasil memasang paket `dnscrypt-proxy`, tahap selanjutnya tentu saja mengkonfigurasi. Jujur saja, untuk saya, bagian ini agak susah-susah gampang. Bukan susah dalam artian sulit, namun lebih ke *tricky*. Karena dalam beberapa kasus, cara A terbukti berhasil di saya, namun belum tentu dengan di sistem kalian.
 
 Pada dokumentasi ini saya langsung saja akan menggunakan cara yang berhasil saya terapkan pada sistem saya.
@@ -44,7 +45,7 @@ Pada dokumentasi ini saya langsung saja akan menggunakan cara yang berhasil saya
 Sekenario pada dokumentasi ini adalah, kita akan mengkonfigurasi `dnscrypt-proxy` terlebih dahulu, selanjutnya kita akan mengkonfigurasi `/etc/resolv.conf` agar tidak ter-*generate* oleh NetworkManager.
 
 
-## Konfigurasi DNSCrypt
+### Konfigurasi DNSCrypt
 
 Setelah kita memasang paket `dnscrypt-proxy`, akan terdapat dua service yang disediakan, yang kita <span class="stabilo">hanya bisa memilih salah satu dari keduanya</span> untuk kita *enable*-kan<sup>[1](https://bandithijo.com/blog/konfigurasi-dnscrypt-proxy#referensi)</sup>.
 
@@ -125,7 +126,7 @@ Lahkah-lahkahnya sebagai berikut :
 Sekarang lanjut ke konfigurasi nameserver pada `/etc/resolv.conf`.
 
 
-## Konfigurasi resolv.conf
+### Konfigurasi resolv.conf
 
 > PERHATIAN!
 > 
@@ -259,7 +260,7 @@ nameserver 127.0.0.1
 {% youtube 1zf1Dpyzq84 %}
 
 
-# Hasilnya
+## Hasilnya
 
 Apabila kedua langkah di atas sudah kita lakukan, sekarang tinggal melakukan pengujian.
 
@@ -318,7 +319,7 @@ rtt min/avg/max/mdev = 29.596/30.352/31.551/0.755 ms
 Sekarang buka browser *favorite* kalian, dan buka halaman [www.reddit.com](https://www.reddit.com).
 
 
-# Kesimpulan
+## Kesimpulan
 
 Yang dibutuhkan untuk dapat mennggunakan `dnscrypt-proxy` adalah :
 
@@ -326,7 +327,7 @@ Yang dibutuhkan untuk dapat mennggunakan `dnscrypt-proxy` adalah :
 2. `nameserver 127.0.0.1` pada `/etc/resolv.conf`
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/index.php/DNSCrypt](https://wiki.archlinux.org/index.php/DNSCrypt) \
    Diakses tanggal: 2018-09-22

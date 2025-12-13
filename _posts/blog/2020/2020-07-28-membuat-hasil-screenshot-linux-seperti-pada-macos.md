@@ -10,7 +10,7 @@ tags: ["ruby", "imagemagick"]
 description: "Ide untuk mempercantik hasil screenshot ini terinspirasi dari gambar-gambar hasil screenshot yang diproduksi oleh sistem operasi OSX. Jangan khawatir, di GNU/Linux, kita juga dapat membuat hal serupa, malah bisa lebih keren karena kita dapat dengan bebas memodifikasinya. Dengan begini, hasil screenshot setiap orang, akan jadi unik dan khas, sesuai dengan karakter masing-masing."
 ---
 
-# Sekenario Masalah
+## Sekenario Masalah
 
 **Seperti apa sih bang, hasil screenshot seperti yang ada pada macOS itu?**
 
@@ -27,7 +27,7 @@ Kira-kira seperti ini hasil screenshot window aplikasi pada macOS.
 ![Gambar 1](https://i.postimg.cc/sXwSKwyj/ss-macos.png)
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Pastinya tools yang diperlukan adalah **ImageMagick**.
 
@@ -60,7 +60,7 @@ Tinggal teman-teman sesuaikan dengan preferensi untuk attribute `-shadow` nya.
 Kalau saya lebih suka yang `50x10+0+10`, karena shadownya tidak terlalu beleber keluar.
 
 
-# Tambahan
+## Tambahan
 
 Saya malas menuliskan command ImageMagick tersebut berulang-ulang.
 
@@ -118,7 +118,7 @@ Terima kasih.
 (^_^)
 
 
-# Bonus
+## Bonus
 
 Biasanya untuk modifikasi yang dapat kita lakukan, kita akan menambahkan ciri khas kita sendiri.
 
@@ -127,7 +127,7 @@ Maka dari itu, pada modifikasi ini, saya menambahkan ciri khas untuk memberikan 
 ![Gambar 5](https://i.postimg.cc/C1jrwMbJ/gambar-01.png)
 
 
-## Versi Ruby
+### Versi Ruby
 
 ```ruby
 !filename: $HOME/.local/bin/scrot-imgck
@@ -184,7 +184,7 @@ FRAMING SUCCESS!"
 ```
 
 
-## Versi Python
+### Versi Python
 
 ```python
 !filename: $HOME/.local/bin/scrot-imgck-python
@@ -252,7 +252,7 @@ FRAMING SUCCESS!""")
 ```
 
 
-# Referensi
+## Referensi
 
 1. [Create MacOS style screenshots with drop shadow using Imagemagick](https://apple.stackexchange.com/questions/384323/create-macos-style-screenshots-with-drop-shadow-using-imagemagick) \
    Diakses tanggal: 2020-07-28

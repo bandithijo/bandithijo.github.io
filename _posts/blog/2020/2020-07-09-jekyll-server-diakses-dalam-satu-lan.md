@@ -10,7 +10,7 @@ tags: ["jekyll"]
 description: "Kita dapat membuat Jekyll blog yang kita bangun di local environment sistem kita, membuka akes broadcast ke local network. Sehingga, semua perangkat yang berada pada satu network yang sama, dapat mengakses Jekyll blog yang ada di local sistem kita."
 ---
 
-# Sekenario Masalah
+## Sekenario Masalah
 
 Saya sedang membangun atau memodifikasi layout dari sebuah web.
 
@@ -19,7 +19,7 @@ Selain mendesain untuk tampilan desktop, saya juga perlu mendesain untuk tampila
 Agar saya dapat merasakan secara langsung, seperti apa layout yang saya sedang kerjakan, lebih baik kalau saya dapat langsung membukanya secara langsung di *smartphone*.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Jekyll sudah menyediakan fitur untuk menjalankan server dengan mengganti Host yang kita definisikan.
 
@@ -32,10 +32,10 @@ Maka, kita perlu mengganti ip address tersebut menjadi ip address untuk *broadca
 Caranya sangat mudah.
 
 
-## Definisikan Host
+### Definisikan Host
 
 
-### 1. Direct Command
+#### 1. Direct Command
 
 Cara pertama, dengan langsung mendefinisikan dari *command* terminal.
 
@@ -52,7 +52,7 @@ $ bundle exec jekyll s --host 0.0.0.0
 ```
 
 
-### 2. _config.yml
+#### 2. _config.yml
 
 Cara kedua, dengan mendefinisikan `host:` pada file `_config.yml`.
 
@@ -84,10 +84,10 @@ Tampilan mobile dari web yang sedang kita kerjakan, dapat kita ekplorasi secara 
 Enak banget kan!
 
 
-# Tambahan
+## Tambahan
 
 
-## Mengganti Port
+### Mengganti Port
 
 Apabila kita ingin mengganti port number yang defaultnya adalah `4000`.
 
@@ -96,7 +96,7 @@ Dapat menggunakan `-p` atau `--port` diikuti nomor portnya.
 Atau, dapat pula mendefinisikan `port:` pada file `_config.yml`.
 
 
-## LiveReload
+### LiveReload
 
 Dengan LiveReload, kita tidak perlu lagi capek-capek untuk meakukan refresh halaman browser secara manual.
 
@@ -113,7 +113,7 @@ $ bundle exec jekyll s --livereload
 ```
 
 
-## Incremental Regeneration (Build)
+### Incremental Regeneration (Build)
 
 Saat catatan ini ditulis, fitur **incremental regeneration** masih dalam tahap eksperimen.
 
@@ -135,7 +135,7 @@ Cara menggunakannya, cukup menambahkan `-I` atau `--incremental`.
 Dengan menggunakan fitur ini, menulis Jekyll post menjadi kembali menyenangkan. =P
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Catatan ini bukan merupakan tutorial, saya hanya ingin sharing tentang informasi yang saya dapat dan saya pergunakan selama menulis Blog menggunakan Jekyll.
 
@@ -150,7 +150,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [jekyllrb.com/news/2018/01/02/jekyll-3-7-0-released/](https://jekyllrb.com/news/2018/01/02/jekyll-3-7-0-released/) \
    Diakses tanggal: 2020-07-09

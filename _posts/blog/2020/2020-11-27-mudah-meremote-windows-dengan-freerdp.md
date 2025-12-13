@@ -10,7 +10,7 @@ tags: ["freerdp", "remotedesktop"]
 description: "Meremote desktop bukan lagi hal asing kalau kita menggunakan GNU/Linux. Saya pun juga sering menggunakan remote desktop untuk mengakses laptop Windows yang ada di ruangan lain. Dengan cara ini, saya tidak perlu repot-repot membawa dan memindahkan laptop tersebut ke ruangan saya. Cukup akses secara remote dengan RDP."
 ---
 
-# Latar Belakang
+## Latar Belakang
 
 Sejak masih kecil hingga sekarang, saya selalu kagum dengan hal-hal terkait "pengendali jarak jauh" (remote).
 
@@ -37,7 +37,7 @@ Gambar 2. Workflow saya dalam bekerja ketika mendevelop web
 Kalau saya buka di Laptop saya, akan cukup memakan resource. Maka saya memilih membukanya di Windows, kemudian saya akses dengan remote.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Untuk terhubung dengan sistem Windows secara remote, kita dapat memanfaatkan protokol komunikasi yang dibangun oleh Mirosoft. Protokol yang digunakan adalah Remote Desktop, atau yang lebih dikenal dengan RDP (*Remote Desktop Protocol*).
 
@@ -52,7 +52,7 @@ Ada beberapa client untuk RDP yang pernah saya coba, yang pertama kali saya guna
 Namun, semakin kesini, saya memilih untuk menggunakan RDP client yang lebih minimalis, yaitu [**FreeRDP**](https://www.freerdp.com/). FreeRDP dapat kita jalankan dengan menggunakan opsi-opsi tertentu dari Terminal. Kemudian, setelah terhubung, akan terbuka Window yang menampilkan Windows. Sangat sederhana sekali. Tidak ada toolbar dan tombol-tombol --ini yang saya mau. Gambar 1 & 2 adalah contoh dari RDP client menggunakan FreeRDP.
 
 
-# Instalasi FreeRDP
+## Instalasi FreeRDP
 
 Kalau teman-teman menggunakan Arch Linux.
 
@@ -61,7 +61,7 @@ $ sudo pacman -S freerdp
 ```
 
 
-# Cara Menggunakan
+## Cara Menggunakan
 
 Binary dari FreeRDP diberi nama `xfreerdp`.
 
@@ -106,15 +106,15 @@ Option-option lain yang lebih lengkap, dapat teman-teman lihat di man pages dari
 Mungkin ada option-option luar biasa yang teman-teman perlukan, namun saya belum sempat mencobanya.
 
 
-# Tambahan
+## Tambahan
 
 
-## Bagaimana cara berpindah focus?
+### Bagaimana cara berpindah focus?
 
 Untuk melepaskan focus dari mouse pointer yang berada di dalam FreeRDP, dapat menggunakan <kbd>Right Ctrl</kbd>.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -125,7 +125,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [freerdp.com](https://www.freerdp.com) \
    Diakses tanggal: 2020-11-27

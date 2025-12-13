@@ -10,12 +10,12 @@ tags: ["rails", "javascript", "ransack"]
 description: "Catatan kali ini mengenai cara membuat fitur pencari dengan memanfaatkan Rasack gem dan EasyAutocomplete javascript library pada Ruby on Rails."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `ruby 2.6.3` `rails 5.2.3` `postgresql 11.5`
 
 
-# Prakata
+## Prakata
 
 Pada artikel sebelumnya, ["Membuat Tab Filter by Category dengan Ransack pada Rails"](/blog/tab-filter-by-category-dengan-ransack-rails), saya sudah pernah membahas mengenai Ransack gem. Namun, bukan dimanfaatkan untuk pencarian, melainkan untuk mengakali dalam membuat fungsi tab yang akan menghasilkan index list yang sudah difilter berdasarkan hasil dari field tertentu. Wkwkwk.
 
@@ -38,10 +38,10 @@ Gambar 2. Ilustrasi bergerak dari autocomplete suggestion pada pencarian
 Nah, pada implementasi fitur ini, saya menggunakan bantuan JQuery plugin yang bernama [**EasyAutocomplete**](http://easyautocomplete.com/). Saya menggunakan tipe [**categories**](http://easyautocomplete.com/guide#sec-categories).
 
 
-# Instalasi
+## Instalasi
 
 
-## Ransack
+### Ransack
 
 Proses instalasi Ransack gem, sama seperti gem-gem pada umumnya. Gabungkan dengan formasi gem yang teman-teman miliki di `Gemfile`.
 
@@ -63,7 +63,7 @@ $ bundle install
 Setelah selesai, selanjutnya saya akan memasang EasyAutocomplete JQuery plugin.
 
 
-## EasyAutocomplete
+### EasyAutocomplete
 
 Proses instalasi ini ada banyak varian, namun untuk catatan kali ini, saya memilih untuk memasang secara manual.
 
@@ -129,7 +129,7 @@ Nah, setelah file javascript dan stylesheet tersebut saya distribusikan, saya da
 Saya akan mulai dari controller.
 
 
-# Controller
+## Controller
 
 Karena saya akan menampilkan hasil dari pencarian pada halaman experience index. Maka, saya akan membuat pemanggilan object pada Experiences controller.
 
@@ -235,7 +235,7 @@ Kemudian tinggal saya panggil dengan `$input.easyAutocomplete(options)`.
 Sekarang saya buat form pencariannya di view template.
 
 
-# View
+## View
 
 Form pencarian yang saya mau, bukan hanya terletak pada halaman tertentu. Melainkan, pada navigation bar. Yang artinya, dapat saya gunakan pada setiap halaman.
 
@@ -337,7 +337,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [easyautocomplete.com/](http://easyautocomplete.com/) \
    Diakses tanggal: 2019-12-07

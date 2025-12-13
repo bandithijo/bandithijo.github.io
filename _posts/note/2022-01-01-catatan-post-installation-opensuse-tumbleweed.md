@@ -10,7 +10,7 @@ tags: ["opensuse"]
 description: "Catatan ini merupakan kumpulan packages dan beberapa konfigurasi yang saya lakukan setelah melakukan proses instalasi openSUSE Tumbleweed."
 ---
 
-# Prakata
+## Prakata
 
 Catatan ini merupakan kumpulan packages dan beberapa konfigurasi yang saya lakukan setelah melakukan proses instalasi openSUSE Tumbleweed.
 
@@ -19,10 +19,10 @@ Saya memutuskan untuk mengkategorikan catatan ini sebagai "note" dan bukan sebag
 Selain itu, memiliki sebuah catatan "perjalanan" akan **menumbuhkan rasa percaya diri untuk terus maju ke depan**. Maksud saya, apabila terjadi kegagalan karena satu dan lain hal, kita tidak segan untuk memulai lagi dari awal. Ataupun, kita dapat dengan mudah memulai percabangan untuk awal baru yang lain.
 
 
-# Things To Do
+## Things To Do
 
 
-## Updating system
+### Updating system
 
 Lakukan refresh repositories,
 
@@ -41,7 +41,7 @@ $ sudo zypper up
 **up**, adalah *shorthand* dari **update**.
 
 
-## Add additional package repositories (Packman)
+### Add additional package repositories (Packman)
 
 Sumber: [https://en.opensuse.org/Additional_package_repositories](https://en.opensuse.org/Additional_package_repositories)
 
@@ -89,10 +89,10 @@ $ sudo zypper dup --from packman-essentials --allow-vendor-change
 ```
 
 
-# NaN Packages That I Need
+## NaN Packages That I Need
 
 
-## make
+### make
 
 Repository: Main Repository (OSS)
 
@@ -105,7 +105,7 @@ $ sudo zypper in make
 ```
 
 
-## cmake
+### cmake
 
 Repository: Main Repository (OSS)
 
@@ -118,7 +118,7 @@ $ sudo zypper in cmake
 ```
 
 
-## gcc-c++
+### gcc-c++
 
 Repository: Main Repository (OSS)
 
@@ -131,7 +131,7 @@ $ sudo zypper in gcc-c++
 ```
 
 
-## luajit-devel
+### luajit-devel
 
 Repository: Main Repository (OSS)
 
@@ -144,14 +144,14 @@ $ sudo zypper in luajit-devel
 ```
 
 
-## libX11-devel
+### libX11-devel
 
 ```
 $ sudo zypper in libX11-devel
 ```
 
 
-## git-core
+### git-core
 
 Repository: Main Repository (OSS)
 
@@ -164,7 +164,7 @@ $ sudo zypper in git-core
 ```
 
 
-## git-credential-libsecret
+### git-credential-libsecret
 
 ```
 $ sudo zypper in git-credential-libsecret
@@ -181,14 +181,14 @@ Edit file `$HOME/.gitconfig`.
 ```
 
 
-## tig
+### tig
 
 ```
 $ sudo zypper in tig
 ```
 
 
-## systemd-zram-service
+### systemd-zram-service
 
 Sumber: [https://build.opensuse.org/package/show/openSUSE%3AFactory/systemd-zram-service](https://build.opensuse.org/package/show/openSUSE%3AFactory/systemd-zram-service)
 
@@ -197,7 +197,7 @@ $ sudo zypper in systemd-zram-service
 ```
 
 
-## neofetch
+### neofetch
 
 Repository: Main Repository (OSS)
 
@@ -210,7 +210,7 @@ $ sudo zypper in neofetch
 ```
 
 
-## htop
+### htop
 
 Repository: Main Repository (OSS)
 
@@ -223,91 +223,91 @@ $ sudo zypper in htop
 ```
 
 
-## iftop
+### iftop
 
 ```
 $ sudo zypper in iftop
 ```
 
 
-## nmap
+### nmap
 
 ```
 $ sudo zypper in nmap
 ```
 
 
-## nmon
+### nmon
 
 ```
 $ sudo zypper in nmon
 ```
 
 
-## wavemon
+### wavemon
 
 ```
 $ sudo zypper in wavemon
 ```
 
 
-## nethogs
+### nethogs
 
 ```
 $ sudo zypper in nethogs
 ```
 
 
-## glances
+### glances
 
 ```
 $ sudo zypper in glances
 ```
 
 
-## zenity
+### zenity
 
 ```
 $ sudo zypper in zenity
 ```
 
 
-## vizex
+### vizex
 
 ```
 $ pip install --user vizex
 ```
 
 
-## sensors (lm_sensors)
+### sensors (lm_sensors)
 
 ```
 $ sudo zypper in sensors
 ```
 
 
-## soundconverter
+### soundconverter
 
 ```
 $ sudo zypper in soundconverter
 ```
 
 
-## audaciy
+### audaciy
 
 ```
 $ sudo zypper in audacity
 ```
 
 
-## audacious
+### audacious
 
 ```
 $ sudo zypper in audacious
 ```
 
 
-## telegram-desktop
+### telegram-desktop
 
 Repository: Main Repository (OSS)
 
@@ -320,7 +320,7 @@ $ sudo zypper in telegram-desktop
 ```
 
 
-## password-store
+### password-store
 
 Repository: Main Repository (OSS)
 
@@ -333,35 +333,35 @@ $ sudo zypper in password-store
 ```
 
 
-## pwgen
+### pwgen
 
 ```
 $ sudo zypper in pwgen
 ```
 
 
-## hascat
+### hascat
 
 ```
 $ sudo zypper in hashcat
 ```
 
 
-## arandr
+### arandr
 
 ```
 $ sudo zypper in arandr
 ```
 
 
-## xcalib
+### xcalib
 
 ```
 $ sudo zypper in xcalib
 ```
 
 
-## google-chrome
+### google-chrome
 
 Sumber: [https://linuxhint.com/install_google_chrome_opensuse/](https://linuxhint.com/install_google_chrome_opensuse/)
 
@@ -397,7 +397,7 @@ $ sudo zypper in google-chrome-stable
 ```
 
 
-## neovim
+### neovim
 
 Repository: Main Repository (OSS)
 
@@ -441,7 +441,7 @@ $ sudo make install
 ```
 
 
-## tmux
+### tmux
 
 Repository: Main Repository (OSS)
 
@@ -454,7 +454,7 @@ $ sudo zypper in tmux
 ```
 
 
-## clipnotify
+### clipnotify
 
 Deps,
 
@@ -470,77 +470,77 @@ $ sudo make install
 ```
 
 
-## ffmpeg
+### ffmpeg
 
 ```
 $ sudo zypper in ffmpeg-4
 ```
 
 
-## SimpleScreenRecorder
+### SimpleScreenRecorder
 
 ```
 $ sudo zypper in simplescreenrecorder
 ```
 
 
-## flameshot
+### flameshot
 
 ```
 $ sudo zypper in flameshot
 ```
 
 
-## scrot
+### scrot
 
 ```
 $ sudo zypper in scrot
 ```
 
 
-## maim
+### maim
 
 ```
 $ sudo zypper in maim
 ```
 
 
-## Qt5ct
+### Qt5ct
 
 ```
 $ sudo zypper in qt5ct
 ```
 
 
-## calibre
+### calibre
 
 ```
 $ sudo zypper in calibre
 ```
 
 
-## rofi
+### rofi
 
 ```
 $ sudo zypper in rofi
 ```
 
 
-## dmenu
+### dmenu
 
 ```
 $ sudo zypper in dmenu
 ```
 
 
-## jq
+### jq
 
 ```
 $ sudo zypper in jq
 ```
 
 
-## dnscrypt-proxy
+### dnscrypt-proxy
 
 Karena di openSUSE Tumbleweed belum secara default memasang paket **systemd-network** (networkd & resolved), maka saya lebih *prefer* menggunakan paket **openresolv** sebagai alternatif.
 
@@ -657,49 +657,49 @@ $ sudo resolvconf -u
 Selesai.
 
 
-## pavucontrol
+### pavucontrol
 
 ```
 $ sudo zypper in pavucontrol
 ```
 
 
-## pulsemixer
+### pulsemixer
 
 ```
 $ pip install --user pulsemixer
 ```
 
 
-## MozillaThunderbird
+### MozillaThunderbird
 
 ```
 $ sudo zypper in MozillaThunderbird
 ```
 
 
-## gparted
+### gparted
 
 ```
 $ sudo zypper in gparted
 ```
 
 
-## barrier
+### barrier
 
 ```
 $ sudo zypper in barrier
 ```
 
 
-## go
+### go
 
 ```
 $ sudo zypper in go
 ```
 
 
-## lazygit
+### lazygit
 
 Source: [https://github.com/jesseduffield/lazygit](https://github.com/jesseduffield/lazygit)
 
@@ -708,7 +708,7 @@ $ go get github.com/jesseduffield/lazygit
 ```
 
 
-## lazydocker
+### lazydocker
 
 Source: [https://github.com/jesseduffield/lazydocker](https://github.com/jesseduffield/lazydocker)
 
@@ -717,7 +717,7 @@ $ go get github.com/jesseduffield/lazydocker
 ```
 
 
-## docker
+### docker
 
 ```
 $ sudo zypper in docker
@@ -730,35 +730,35 @@ $ sudo gpasswd -a ${USER} docker
 ```
 
 
-## freecad
+### freecad
 
 ```
 $ sudo zypper in freecad
 ```
 
 
-## blender
+### blender
 
 ```
 $ sudo zypper in blender
 ```
 
 
-## transmission-daemon
+### transmission-daemon
 
 ```
 $ sudo zypper in transmission-daemon
 ```
 
 
-## youtube-dl
+### youtube-dl
 
 ```
 $ sudo zypper in youtube-dl
 ```
 
 
-## yt-dlp
+### yt-dlp
 
 ```
 $ sudo zypper in yt-dlp
@@ -766,14 +766,14 @@ $ pip install --user yt_dlp
 ```
 
 
-## newsboat
+### newsboat
 
 ```
 $ sudo zypper in newsboat
 ```
 
 
-## ranger
+### ranger
 
 ```
 $ sudo zypper in ranger
@@ -797,49 +797,49 @@ $ pip zypper in odt2txt
 ```
 
 
-## tor
+### tor
 
 ```
 $ sudo zypper in tor
 ```
 
 
-## handbrake-gtk
+### handbrake-gtk
 
 ```
 $ sudo zypper in handbrake-gtk
 ```
 
 
-## mpv
+### mpv
 
 ```
 $ sudo zypper in mpv
 ```
 
 
-## celluloid
+### celluloid
 
 ```
 $ sudo zypper in celluloid
 ```
 
 
-## nodejs
+### nodejs
 
 ```
 $ sudo zypper in nodejs
 ```
 
 
-## yarn
+### yarn
 
 ```
 $ npm i -g yarn
 ```
 
 
-## Ruby on Rails Developer
+### Ruby on Rails Developer
 
 ```
 $ sudo zypper in libopenssl-devel
@@ -851,28 +851,28 @@ $ sudo zypper in postgresql-server-devel
 ```
 
 
-## Flatpak via Flathub Remote
+### Flatpak via Flathub Remote
 
 ```
 $ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 
 
-## Spotify
+### Spotify
 
 ```
 $ flatpak install flathub com.spotify.Client
 ```
 
 
-## fontforge
+### fontforge
 
 ```
 $ sudo zypper in fontforge
 ```
 
 
-## tilix terminal emulator
+### tilix terminal emulator
 
 ```
 $ sudo zypper in tilix

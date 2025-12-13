@@ -10,7 +10,7 @@ tags: ["github pages", "aws", "route53"]
 description: "Catatan ini mengenai cara mengkonfigurasi custom domain dengan GitHub Pages dan Amazon Route 53."
 ---
 
-# Prakata
+## Prakata
 
 Kira-kira sudah dua minggu ini saya mengikuti kelas "[Belajar Menjadi AWS Solutions Architect Associate](https://www.dicoding.com/academies/104)" yang diadakan oleh Dicoding.
 
@@ -27,7 +27,7 @@ Nomor 53 ini merepresentasikan port yang biasa digunakan untuk service DNS pada 
 Oke, kita langsung ke konfigurasi yaa.
 
 
-# Konfigurasi
+## Konfigurasi
 
 Pada tahap ini, saya akan membagi menjadi 3 tahapan.
 
@@ -36,7 +36,7 @@ Pada tahap ini, saya akan membagi menjadi 3 tahapan.
 3. [Konfigurasi *Nameservers* di Dewaweb (Platform penyedia layanan Domain yang saya gunakan)]({{ site.url }}/blog/konfigurasi-custom-domain-github-pages-dengan-amazon-route53#3-konfigurasi-nameservers-di-penyedia-layanan-domain)
 
 
-## 1. Konfigurasi Custom Domain di GitHub
+### 1. Konfigurasi Custom Domain di GitHub
 
 Di sini, saya mengasumsikan teman-teman sudah memiliki GitHub Pages.
 
@@ -80,14 +80,14 @@ bandithijo.com
 Hanya seperti itu saja isi di dalam `CNAME`.
 
 
-## 2. Konfigurasi Hosted Zone di Route 53
+### 2. Konfigurasi Hosted Zone di Route 53
 
 Di sini saya mengasumsikan teman-teman sudah mempunyai akun Amazon.
 
 Selanjutnya akan saya bagi dalam 3 tahapan.
 
 
-### Mendaftarkan Domain ke Hosted Zone
+#### Mendaftarkan Domain ke Hosted Zone
 
 1. Masuk ke Amazon Console dan pilih layanan [Route 53](https://console.aws.amazon.com/route53).
 
@@ -129,7 +129,7 @@ Selanjutnya akan saya bagi dalam 3 tahapan.
 12. Selanjutnya Kita perlu menambahkan 2 record set, A dan CNAME.
 
 
-### Menambahkan Record Set A
+#### Menambahkan Record Set A
 
 1. Buat record set A dengan memilih tombol biru **Create Record Set** di bagian atas.
 
@@ -153,7 +153,7 @@ Selanjutnya akan saya bagi dalam 3 tahapan.
 6. Kemudian **Save Record Set** untuk menyimpan konfigurasi ini.
 
 
-### Menambahkan Record Set CNAME
+#### Menambahkan Record Set CNAME
 
 1. Buat record set CNAME dengan memilih tombol biru **Create Record Set** di bagian atas.
 
@@ -179,7 +179,7 @@ Kita perlu melakukan pengujian apakah konfigurasi Name Record A dan CNAME yang k
 Tapi, nanti akan kita lakukan di akhir. Setelah kita memasukkan konfigurasi Nameservers pada penyedia layanan domain.
 
 
-## 3. Konfigurasi Nameservers di Penyedia Layanan Domain
+### 3. Konfigurasi Nameservers di Penyedia Layanan Domain
 
 Saya membeli domain pada Dewaweb.com.
 
@@ -194,7 +194,7 @@ Masukkan 4 alamat Nameservers yang sudah kita catat sebelumnya.
 Dengan begini, tahap konfigurasi Custom Domain GitHub Pages dengan Route 53 sebagai DNS Management telah selesai.
 
 
-# Pengujian
+## Pengujian
 
 Lakukan pengujian `ping` terlebih dahulu, apakah domain kita sudah *up* atau belum.
 
@@ -266,7 +266,7 @@ Apabila telah sesuai dengan yang kita inputkan pada Amazon Console Route 53, ber
 > Jadi jangan khawatir apabila setelah teman-teman selesai mengkonfigurasi, tidak langsung dapat dilihat hasilnya.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Apabila mengalami kegagalan, silahkan merujuk juga ke tautan referensi yang saya sertakan di bawah.
 
@@ -281,7 +281,7 @@ Alhamdulillah, Final Submission saya telah dinyatakan lulus.
 ![Gamabr 8](https://i.postimg.cc/q73xftHy/gambar-08.png)
 
 
-# Referensi
+## Referensi
 
 1. [help.github.com/en/articles/using-a-custom-domain-with-github-pages](https://help.github.com/en/articles/using-a-custom-domain-with-github-pages) \
    Diakses tanggal: 2019-06-01

@@ -10,7 +10,7 @@ tags: ["rails"]
 description: "Catatan kali ini mengenai cara membuat Ruby on Rails project tanpa menggunakan database."
 ---
 
-# Prakata
+## Prakata
 
 Hello, Mas Bro!
 
@@ -21,7 +21,7 @@ Cukup lama juga tidak mengupdate tulisan di blog ini. Selain karena alasan peker
 Jujur saja, hal ini menghambat proses saya dalam menulis. Namun, masalah ini sudah berhasil saya ~~akalin~~ atasin. Mungkin, setelah ini akan saya posting bagaimana cara saya mengatasi masalah ini.
 
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Oke, kembali ke topik bahasan mengenai "Membuat Rails Project tanpa Database". Atau dapat pula saya gunakan kalimat "tanpa menggunakan Active Record".
 
@@ -30,7 +30,7 @@ Artikel ini akan menjadi tulisan yang sederhana.
 Dalam membuat sebuah project, mungkin saja dalam kasus yang sedang kita hadapi, kita tidak memerlukan database. Misalnya, membuat aplikasi yang semua data-datanya diambil dari API (*Application Program Interface*). Tentu akan lebih efektif kalo project yang kita buat, tidak perlu menyertakan database, karena kita tidak memerlukannya.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 **Apakah Rails dapat melakukan ini?**
 
@@ -61,7 +61,7 @@ Apabila dikemudian hari ingin menggunakan database, silahkan mengikuti blog post
 Terima kasih. (^_^)v
 
 
-# Referensi
+## Referensi
 
 1. [Ruby on Rails 5.2 Release Notes (edgeguides)](https://edgeguides.rubyonrails.org/5_2_release_notes.html) \
    Diakses tanggal: 2019-10-09

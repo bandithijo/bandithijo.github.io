@@ -10,7 +10,7 @@ tags: ["xdg-user-dirs"]
 description: "Apabila kamu merasa nama-nama direktori yang kamu miliki di Home terlalu panjang, seperti Documents, Desktop, Pictures, Vidoes, Sound, dll. Kita dapat merubahnya menjadi lebih singkat. Saya lebih senang dengan 3 huruf."
 ---
 
-# Prakata
+## Prakata
 
 Mungkin teman-teman melihat struktur direktori home milik saya, yang hanya mengandung 3 huruf.
 
@@ -46,7 +46,7 @@ Apabila sejak awal teman-teman sudah memiliki File Manager seperti Thunar, PCMan
 Lantas bagaimana caranya untuk membuat *custom name* pada direktori-direktori ini?
 
 
-# Caranya
+## Caranya
 
 Mudah sekali.
 
@@ -107,7 +107,7 @@ $ xdg-user-dirs-update
 Kemudian jangan lupa untuk merubah **Destination** direktori dari semua aplikasi secara manual satu persatu. Kalau tidak, akan berantakan semuanya. Hahaha.
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/index.php/XDG_user_directories](https://wiki.archlinux.org/index.php/XDG_user_directories) \
    Diakses tanggal: 2019-01-12

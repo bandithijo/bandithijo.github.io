@@ -13,7 +13,7 @@ description: "Terkadang kita ingin mengujicoba apakah aplikasi yang kita maksud 
 ![Banner](https://s20.postimg.cc/7t1qi5utp/banner_post_14.png)
 
 
-# Pendahuluan
+## Pendahuluan
 
 Saya termasuk tipe pengguna GNU/Linux yang sering mencoba memasang aplikasi Microsoft Windows di sistem GNU/Linux menggunakan Wine.
 
@@ -26,12 +26,12 @@ Sejauh ini aplikasi Microsoft Windows yang berhasil saya pasang dan saya masih g
 Line, terpaksa saya pasang karena teman-teman kuliah saya masih menggunakan aplikasi ini. Winbox saya gunakan untuk konfigurasi MikroTik. Macromedia Flash 8, belum saya gunakan untuk apa-apa, baru saya gunakan sekali untuk mengerjakan tugas "[Design Challenge](https://bandithijo.com/blog/menjalankan-macromedia-flash-8-linux)".
 
 
-# Permasalahan
+## Permasalahan
 
 Terkadang kita ingin mengujicoba apakah aplikasi yang kita maksud dapat berjalan dengan lancar di sistem operasi GNU/Linux yang kita miliki saat ini. Namun, setelah dipasang, kita bingung bagaimana cara menghapusnya. Apakah cukup menghapus direktori program tersebut yang terdapat pada "Program Files" atau harus menjalankan *tool* **Uninstall Program** seperti yang terdapat pada Microsoft Windows.
 
 
-# Solusi
+## Solusi
 
 Caranya sangat mudah, kita dapat menggunakan aplikasi GUI bantuan untuk meng-uninstall aplikasi-aplikasi yang kita pasang di Wine.
 
@@ -48,7 +48,7 @@ Berikut saya sertakan ilustrasinya.
 Gimana? Sangat mudah sekali bukan?
 
 
-# Referensi
+## Referensi
 
 1. [wiki.winehq.org/Uninstaller](https://wiki.winehq.org/Uninstaller) \
    Diakses tanggal: 2018-05-23

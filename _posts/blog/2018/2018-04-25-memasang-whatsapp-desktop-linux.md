@@ -13,7 +13,7 @@ description: "Memegang *smartphone* adalah hal yang jarang sekali saya lakukan. 
 ![Banner](https://s20.postimg.cc/tbrdrb9t9/banner_post_07.png)
 
 
-# Latar Belakang
+## Latar Belakang
 
 Memegang *smartphone* adalah hal yang jarang sekali saya lakukan. Tangan saya setiap saat selalu berada di atas keyboard. Dampaknya, setiap pesan yang masuk melalui aplikasi *messenger* tidak segera dapat saya baca dan balas. Waktu-waktu dimana saya baru akan memegang *smartphone* adalah ketika urusan saya di atas keyboard telah selesai. Hahaha.
 
@@ -22,7 +22,7 @@ Memegang *smartphone* adalah hal yang jarang sekali saya lakukan. Tangan saya se
 Nah, justru ndak saya silent loh. Saya suarakan dan getar juga. Yaa mohon maklum saja yaa, kalo sudah asik, suka gak bisa teralihkan dengan yang lain.
 
 
-# Permasalahan
+## Permasalahan
 
 Mayoritas teman-teman yang mempunyai urusan dengan saya belum menggunakan platform *messenger* yang saya gunakan. Aplikasi yang ~~seperti~~ berjalan secara *native* pada distribusi sistem operasi GNU/Linux, yaitu **Telegram**. Kebanyakan masih menggunakan **WhatsApp** dan sebagian kecil menggunakan **Line**.
 
@@ -33,7 +33,7 @@ Sebenarnya, WhatsApp menyediakan layanan [WhatsApp-Web](https://web.whatsapp.com
 Namun, saya merasa kurang praktis karena sebagian besar saya beraktifitas menggunakan browser yang saya tidak ingin diganggu oleh hal-hal lain selain pekerjaan yang sedang saya kerjakan.
 
 
-# Solusi
+## Solusi
 
 Pada tahun 2016 - 2017 saya masih sempat menggunakan aplikasi *unofficial* yang bernama **Whatsie**. Namun, proyek ini sudah lama ditutup dan tidak diteruskan kembali. Aplikasi ini menyerupai aplikasi *native desktop* WhatsApp yang berajalan pada sistem operasi Windows dan macOS.
 
@@ -46,7 +46,7 @@ Gambar 2. User Interface dari Whatsapp-Desktop
 Whatsapp-Desktop ini juga mempunyai *tray icon* dan memiliki notifikasi yang terintegrasi dengan sistem.
 
 
-# Instalasi
+## Instalasi
 
 Proses instalasi menggunakan *package manager* pada distribusi sistem operasi GNU/Linux yang kalian miliki dapat merujuk pada *official page* dari halaman GitHub Whatssapp-Desktop, [di sini](https://github.com/Enrico204/Whatsapp-Desktop).
 
@@ -177,7 +177,7 @@ X-GNOME-UsesNotifications=true
 Perhatikan pada bagian `Exec=`, berisi lokasi dimana file `WhatsApp` tersimpan. Pada kasus saya, saya menyimpan direktori *cloning* dari Whatsapp-Desktop berada pada lokasi `/home/bandithijo/app/whatsapp`, kamu harus menyesuaikan lokasi ini dengan lokasi dimana kamu menyimpan hasil *clone* Whatsapp-Desktop dari GitHub.
 
 
-# Referensi
+## Referensi
 
 1. [github.com/Enrico204/Whatsapp-Desktop/blob/master/readme.md](https://github.com/Enrico204/Whatsapp-Desktop/blob/master/readme.md) \
    Diakses tanggal: 2018-04-25

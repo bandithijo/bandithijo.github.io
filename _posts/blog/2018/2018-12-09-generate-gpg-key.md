@@ -10,7 +10,7 @@ tags: ["gnupg", "gpg"]
 description: "Catatan ini hanya sekedar catatan praktis tentang bagaimana cara membuat GPG key sendiri."
 ---
 
-# Prakata
+## Prakata
 
 Pada tulisan sebelumnya, saya pernah mendokumentasikan tentang ["Memperbaiki GPG: Warning: Unsafe Permissions on Homedir"](https://bandithijo.com/blog/memperbaiki-gpg-permissions-on-homedir). Kali ini, saya akan mendokumentasikan bagaimana cara membuat atau mengenerate GPG key milik kita sendiri.
 
@@ -21,7 +21,7 @@ Pemanfaatannya sangat beragam, misal ingin mengunci sebuah file atau direktori, 
 Nah, jika kamu belum memiliki GPG key sendiri, mungkin catatan ini dapat membantu kamu membuatnya.
 
 
-# Mengenerate GPG Key
+## Mengenerate GPG Key
 
 1. Instal `gnupg` - sesuaikan dengan distribusi GNU/Linux kalian.
 
@@ -126,7 +126,7 @@ Nah, jika kamu belum memiliki GPG key sendiri, mungkin catatan ini dapat membant
    Ganti `basyong@kontrakan.com` dengan email yang kalian isikan untuk identitas dari gpg key.
 
 
-# Mengeksport Public Key
+## Mengeksport Public Key
 
 Salah satu kegunannya seperti, apabila terdapat aplikasi seperti GitLab atau GitHub, dan lain sebagainya yang membutuhkan gpg public key kita, maka kita perlu melakukan export dari gpg public key yang kita miliki.
 
@@ -174,12 +174,12 @@ Caranya sangat mudah.
    Selesai.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Catatan ini masih sangat jauh dari sempurna. Apabila mengalami kesulitan dan kegagalan, sangat saya rekomendasikan untuk melihat referensi yang saya sertakan pada akhir tulisan ini.
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/index.php/GnuPG](https://wiki.archlinux.org/index.php/GnuPG) \
    Diakses tanggal: 2018-12-09

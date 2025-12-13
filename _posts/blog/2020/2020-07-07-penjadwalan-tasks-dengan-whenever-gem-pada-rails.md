@@ -10,7 +10,7 @@ tags: ["ruby", "rails"]
 description: "Saya memiliki sebuah rake task atau ruby script yang ingin saya jalankan secara otomatis di belakang layar tanpa perlu saya harus panggil terlebih dahulu. Bagaimana cara saya melakukannya pada Ruby on Rails?"
 ---
 
-# Sekenario Masalah
+## Sekenario Masalah
 
 Saya memiliki sebuah Rake tasks atau Ruby script, baik pada aplikasi Ruby maupun dengan Ruby on Rails, yang bertugas melakukan sebuah pekerjaan (*task*).
 
@@ -46,7 +46,7 @@ $ crontab -l
 Nanti, kita akan menggunakan perintah di atas untuk melihat apakah cronjob yang kita inisiasi dengan whenever sudah berhasil didaftarkan atau tidak.
 
 
-# Instalasi Whenever Gem
+## Instalasi Whenever Gem
 
 Pasang pada `Gemfile`.
 
@@ -71,7 +71,7 @@ $ bundle install
 ```
 
 
-# Inisialisasi Config File
+## Inisialisasi Config File
 
 Setelah memasang Whenever gem, kita perlu menjalankan perintah untuk mengenerate file konfigurasi yang bernama `config/schedule.rb`.
 
@@ -155,7 +155,7 @@ Perintah di atas, sudah dapat dibaca dengan mudah kan yaa?
 Saya masuk ke dalam direktori project yang sudah lebih dahulu saya definisikan variabel `project_dir=` secara dinamis menggunakan <code>`echo $PWD`.strip</code> untuk mendapatkan lokasi project direktori, kemudian baru menjalankan ketiga tasks secara berurutan.
 
 
-# Mengeset Waktu
+## Mengeset Waktu
 
 Kelebihan dari Whenever gem adalah kita dapat mendifinisikan waktu seperti kita menulis bahasa Inggris.
 
@@ -187,7 +187,7 @@ end
 ```
 
 
-# Mengeset Output Log
+## Mengeset Output Log
 
 Kita dapat menyimpan output tasks yang dijalankan ke dalam file log.
 
@@ -217,12 +217,12 @@ Apabila, cronjob kita berhasil dijalankan, maka outputnya akan tersimpan di file
 ```
 
 
-# Tentukan Environment Path
+## Tentukan Environment Path
 
 Tidak kalah penting adalah, kita perlu mendefinisikan environment path.
 
 
-## Ruby on Rails Project
+### Ruby on Rails Project
 
 ```ruby
 !filename: config/schedule.rb
@@ -233,7 +233,7 @@ end
 ```
 
 
-## Ruby Project
+### Ruby Project
 
 ```ruby
 !filename: config/schedule.rb
@@ -244,7 +244,7 @@ end
 ```
 
 
-# Mendaftarkan Schedule ke Cronjob
+## Mendaftarkan Schedule ke Cronjob
 
 Apabila kita sudah selesai menulis schedule. Langkah selanjutnya adalah mendaftarkan pada Cronjob.
 
@@ -282,7 +282,7 @@ Perintah `rake db:create`, `rake db:migrate`, `rake db:seed` di atas, hanya peru
 Selesai!
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Apabila teman-teman memiliki kebutuhan yang lebih kompleks dan belum tersedia pada catatan ini, silahkan merujuk pada README pada GitHub dari Whenever gem yang cukup mengcover semua kebutuhan dan sangat deskriptif. Saya sudah sertakan pada bagian referensi di bawah.
 
@@ -293,7 +293,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [Scheduling tasks in Rails with Cron and using the Whenever Gem](https://medium.com/@pawlkris/scheduling-tasks-in-rails-with-cron-and-using-the-whenever-gem-34aa68b992e3) \
    Diakses tanggal: 2020-07-07

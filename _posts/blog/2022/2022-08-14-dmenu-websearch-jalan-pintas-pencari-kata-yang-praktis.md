@@ -10,12 +10,12 @@ tags: ["dmenu"]
 description: "dmenu-websearch ini saya buat karena kemalasan saya dalam melakukan pencarian kata/frasa tertentu namun harus membuka website terkait. Tidak praktis. Saya ingin kata/frasa tersebut cukup saya inputkan dari menu di desktop kemudian browser akan menuntun saya ke halaman hasil pencarian di website terkait."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 dmenu-websearch ini saya buat karena kemalasan saya dalam melakukan pencarian kata/frasa tertentu namun harus membuka website terkait. Tidak praktis. Saya ingin kata/frasa tersebut cukup saya inputkan dari menu di desktop kemudian browser akan menuntun saya ke halaman hasil pencarian di website terkait.
 
 
-# Fitur-fitur
+## Fitur-fitur
 
 dmenu-websearch ini memiliki fitur:
 
@@ -24,10 +24,10 @@ dmenu-websearch ini memiliki fitur:
 1. menghapus target urlquery yang ada (konfirmasi sebelum dihapus)
 
 
-# Snippet Code
+## Snippet Code
 
 
-## dmenu-websearch script (Bash)
+### dmenu-websearch script (Bash)
 
 Simpan file `dmenu-websearch` di PATH direktori.
 
@@ -127,7 +127,7 @@ main
 ```
 
 
-## urlquery (plaintext)
+### urlquery (plaintext)
 
 Simpan file `.urlquery` di HOME direktori.
 
@@ -152,14 +152,14 @@ Simpan file `.urlquery` di HOME direktori.
 ```
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Penggunaan lebih lanjut saya serahkan pada imajinasi dan kreatifitas teman-teman.
 
 Terima kasih sudah mampir yaa.
 
 
-# Referensi
+## Referensi
 
 1. [http://kb.mozillazine.org/Using_keyword_searches](http://kb.mozillazine.org/Using_keyword_searches) \
    Diakses tanggal: 2022-08-14

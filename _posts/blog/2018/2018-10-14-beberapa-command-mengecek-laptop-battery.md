@@ -12,7 +12,7 @@ description: "Karena tidak memiliki PC dan keseharian saya menggunakan laptop da
 
 ![Banner](https://i.postimg.cc/TwdxFcR8/banner-post-21.png)
 
-# Prakata
+## Prakata
 
 Karena tidak memiliki PC dan keseharian saya menggunakan laptop dalam menyelesaikan pekerjaan, saya merasa butuh untuk mencatat beberapa hal penting terkait dengan perintah-perintah yang biasa digunakan untuk membantu menegakkan diagnosis dalam pemeriksaan kondisi laptop.
 
@@ -25,10 +25,10 @@ Karena kerterbatasan waktu, yang akan saya bahas terlebih dahulu dalam post ini 
 > Untuk teman-teman yang hanya memiliki satu buah *battery*, biasanya memiliki kode device BAT0.
 
 
-# Perintah-perintah
+## Perintah-perintah
 
 
-## upower
+### upower
 
 Perintah **Upower** pada Terminal hampir sudah terdapat pada sebagian besar distribusi sistem operasi GNU/Linux.
 
@@ -77,7 +77,7 @@ $ man upower
 ```
 
 
-## acpi
+### acpi
 
 Perintah selanjutnya adalah `acpi`. Perintah ini, selain digunakan untuk melihat status dari *battery* juga dapat kita melihat informasi lain yang diberikan oleh ACPI.
 
@@ -162,7 +162,7 @@ $ man acpi
 ```
 
 
-## tlp-stat
+### tlp-stat
 
 Apabila teman-teman ada yang menggunakan `tlp` sebagai manajemen power pada laptopnya, dapat menggunakan `tlp-stat` untuk melihat sistem informasi dari laptop yang kita gunakan.
 
@@ -236,7 +236,7 @@ Nah, dengan demikian, hanya seperti ini dulu catatan saya mengenai perintah-peri
 Semoga bermanfaat buat yang membutuhkan.
 
 
-# Referensi
+## Referensi
 
 1. [ostechnix.com/how-to-check-laptop-battery-status-in-terminal-in-linux/](https://www.ostechnix.com/how-to-check-laptop-battery-status-in-terminal-in-linux/) \
    Diakses tanggal: 2018-10-17

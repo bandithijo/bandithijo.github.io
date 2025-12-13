@@ -10,17 +10,17 @@ tags: ["freebsd", "heroku"]
 description: "Heroku adalah Cloud Application Platform (PAAS - Platform as a Service) dimana kita sebagai web developer dapat dengan mudah mengkonfigurasi aplikasi yang kita buat agar dapat diakses di internet. Apakah CLI yang disediakan, dapat digunakan pada FreeBSD?"
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 Heroku adalah *Cloud Application Platform* (PAAS - *Platform as a Service*) dimana kita sebagai *web developer* dapat dengan mudah memasang aplikasi yang kita buat agar dapat diakses di internet.
 
 
-# Permasalahan
+## Permasalahan
 
 Heroku CLI tidak menyediakan binary untuk FreeBSD. Di FreeBSD pkg & ports juga tidak ada.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Untuk mengatasi permasalahan tersebut, ada dua cara.
 
@@ -29,7 +29,7 @@ Untuk mengatasi permasalahan tersebut, ada dua cara.
 
 Saya akan mulai dari nomor satu.
 
-## Instalasi manual dengan GitHub clone dan yarn
+### Instalasi manual dengan GitHub clone dan yarn
 
 Pertama install **yarn**.
 
@@ -66,7 +66,7 @@ $ doas ln -sf $(pwd)/bin/run /usr/local/bin/heroku
 Maka dari itu, saya merekomendasikan cara yang kedua.
 
 
-## Instalasi dengan node dan npm
+### Instalasi dengan node dan npm
 
 Pastikan teman-teman sudah memasang `node` dan `npm`.
 
@@ -97,7 +97,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [devcenter.heroku.com/articles/heroku-cli](https://devcenter.heroku.com/articles/heroku-cli) \
    Diakses tanggal: 2020-04-03

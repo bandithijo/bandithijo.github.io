@@ -10,7 +10,7 @@ tags: ["thinkpad"]
 description: "Kalau kita mengecek temperature ThinkPad laptop dengan menggunakan perintah sensors, kita akan mendapati label-label seperti temp1, temp2, temp3, dst. Bagaimana kita tahu, kalau label-label tersebut menujuk pada objek-objek seperti CPU, GPU, dll? Nah, catatan kali ini, kita akan memberikan label terhadap sensor-sensor tersebut."
 ---
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Apakah kalian pernah mengecek temperatur pada ThinkPad dengan menggunakan perintah?
 
@@ -66,7 +66,7 @@ Untuk mendapatkan temperature CPU, saya mereferensikan dengan value dari **coret
 Sekarang, saatnya saya mencari tahu sensor prop apa saja yang dimiliki oleh ThinkPad saya (X61) dan apa makna dibalik **temp1** dan kawan-kawanya.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Sebenarnya sudah ada page pada ThinkPad Wiki yang menjelaskan perihal **sensors** ini.
 
@@ -158,7 +158,7 @@ CPU_1:        +56.0°C  (crit = +100.0°C)
 Selesai!
 
 
-# Tips
+## Tips
 
 > INFO
 > 
@@ -175,7 +175,7 @@ Selesai!
 > Untuk keluar, dapat menekan kombinasi keyboard <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -188,7 +188,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [http://www.thinkwiki.org/wiki/Thermal_Sensors](http://www.thinkwiki.org/wiki/Thermal_Sensors) \
    Diakses tanggal: 2021-02-26

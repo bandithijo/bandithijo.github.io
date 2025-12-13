@@ -10,7 +10,7 @@ tags: ['screenresolution']
 description: "Saya tidak menyangka, kalau di GNU/Linux, kita dapat dengan bebas membuat dan mengatur resolusi dari monitor. Baik external maupun internal. Kalau di sistem operasi lain, mungkin harus menggunakan tools yang berbayar."
 ---
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Saya memiliki external monitor berupa TV yang dihubungkan dengan ThinkPad X61 menggunakan kabel HDMI dengan bantuan konektor VGA to HDMI.
 
@@ -31,7 +31,7 @@ Berdasarkan pengalaman dengan laptop yang memiliki HDMI output dengan external m
 **Bagaimana saya dapat menambahkan resoulsi 1600x900?**
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Menurut saya, masalah ini sangat mudah dilakukan, kalau kita menggunakan sistem operasi GNU/Linux.
 
@@ -44,12 +44,12 @@ $ cvt h-resolution v-resolution refresh-rate
 ```
 
 
-## Menambahkan Custom Resolution
+### Menambahkan Custom Resolution
 
 Maka, dalam kasus saya, untuk menambahkan resolusi **1600x900**,
 
 
-### 1. Calculating VESA Coordinated dengan CVT
+#### 1. Calculating VESA Coordinated dengan CVT
 
 ```
 $ cvt 1600 900 60
@@ -63,7 +63,7 @@ Modeline "1600x900_60.00"  118.25  1600 1696 1856 2112  900 903 908 934 -hsync +
 Copy bagian text setelah "Modeline".
 
 
-### 2. Membuat Modeline dengan Xrandr Newmode
+#### 2. Membuat Modeline dengan Xrandr Newmode
 
 Selanjutnya kita akan menambahkan mode baru dengan **xrandr** menggunakan option `--newmode`.
 
@@ -91,7 +91,7 @@ VIRTUAL1 disconnected (normal left inverted right x axis y axis)
 ```
 
 
-### 3. Tambahkan Custom Resolution dengan Xrandr Addmode
+#### 3. Tambahkan Custom Resolution dengan Xrandr Addmode
 
 Kita perlu menambahkan custom resolution **1600x900** yang berada di monitor **VIRTUAL1** ke **VGA1** menggunakan **xrandr** dengan option `--addmode`.
 
@@ -124,7 +124,7 @@ Kalau sudah seperti ini, tinggal kita gunakan saja.
 ![Gambar 4](https://i.postimg.cc/8zmhJqNj/gambar-04.png)
 
 
-## Menghapus Custom Resolution
+### Menghapus Custom Resolution
 
 Sebenarnya, karena kita menambahkan custom resolution dengan cara manual, maka cukup dengan **reboot** sistem saya sudah cukup.
 
@@ -135,7 +135,7 @@ Untuk menghapus custom resolution pastikan external monitor atau extended monito
 Setelah itu jalankan 2 proses di bawah ini.
 
 
-## 1. Menghapus Custom Resolution dari VGA1
+### 1. Menghapus Custom Resolution dari VGA1
 
 Kita perlu menghapus custom resolution 1600x900 dari **VGA1** menggunkan **xrandr** dengan option `--delmode`.
 
@@ -164,7 +164,7 @@ VIRTUAL1 disconnected (normal left inverted right x axis y axis)
 ```
 
 
-## 2. Menghapus Custom Resolution dari VIRTUAL1
+### 2. Menghapus Custom Resolution dari VIRTUAL1
 
 Setelah custom resolution kembali ke VIRTUAL1, tinggal kita hapus dengan `--rmmode`.
 
@@ -192,7 +192,7 @@ VIRTUAL1 disconnected (normal left inverted right x axis y axis)
 ```
 
 
-# Tambahan
+## Tambahan
 
 Saya akan mencatat script sederhana yang saya buat untuk menghandle multi monitor menggunakan **dmenu**.
 
@@ -247,12 +247,12 @@ fi
 **Perhatikan!** Layout monitor pada baris ke 16, saya dapatkan dengan menyusun layout monitor dengan **arandr** kemudian saya export menjadi file. Buka file hasil export tersebut dan di dalamnya akan kalian temukan layout yang sudah diracik oleh arandr. Dengan begitu, tidak perlu susah-susah lagi.
 
 
-# Demonstrasi
+## Demonstrasi
 
 {% youtube PnrO4rVUYHs %}
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 

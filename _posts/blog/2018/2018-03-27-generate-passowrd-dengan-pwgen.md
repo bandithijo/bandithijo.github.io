@@ -13,7 +13,7 @@ description: "pwgen adalah perkakas command line interface yang praktis digunaka
 ![Banner](https://s20.postimg.cc/t810ca5cd/banner_post_00.png)
 
 
-# Latar Belakang
+## Latar Belakang
 
 _Password_ atau dalam bahasa Indonesia disebut kata sandi, merupakan hal yang penting untuk menjaga kerahasiaan sesuatu yang kita simpan di balik _password_ tersebut. Namun _password_ itu sendiri juga merupakan hal yang rahasia. Sebuah kunci rahasia untuk membuka sesuatu yang rahasia. Yang artinya, selain sesuatu yang dilindungin oleh _password_ tersebut harus aman, _password_ itu sendiri pun harus diamankan.
 
@@ -22,7 +22,7 @@ Bisa saya katakan, tidak semua orang sudah menerapkan cara membuat _password_ ya
 Sedikit saya akan membahas mengenai pengamanan _password_. Saya bisa mengambil satu contoh, dari [**Google Account Help**](https://support.google.com/accounts/answer/32040?hl=en), di sana dikatakan bahwa,
 
 
-# Membuat _Password_ yang Kuat
+## Membuat _Password_ yang Kuat
 
 Membuat _password_ yang kuat akan membantu kalian :
 
@@ -59,17 +59,17 @@ Setelah kalian membuat _password_ yang kuat, selanjutnya kalian perlu mengamanka
 Buat rencana cadangan apabila kalian lupa dengan _password_ yang telah kalian buat. Namun hati-hati jangan sampai malah orang yang tidak berhak dapat memanfaatkan kelemahan yang kalian buat pada rencana cadangan kalian ini.
 
 
-# Alat Bantu _Generate Password_
+## Alat Bantu _Generate Password_
 
 Pada dokumentasi ini saya akan membahas salah satu alat bantu yang saya gunakan untuk membuat _password_ yang sangat _random_.
 
 
-## Pwgen
+### Pwgen
 
 Dari manual yang ditulis, pwgen dirancang untuk menghasilkan _password_ yang mudah diingaat oleh manusia namun tetap seaman mungkin.
 
 
-### Instalasi
+#### Instalasi
 
 Untuk distribusi Arch Linux
 
@@ -80,7 +80,7 @@ $ sudo pacman -S pwgen
 Untuk distribusi sistem operasi yang lain, dapat menyesuaikan dan mencari paket yang bernama `pwgen`.
 
 
-### Melihat Help
+#### Melihat Help
 
 Kita perlu mengetahui opsi apa saja yang disediakan oleh pwgen sebelum kita dapat mengenerate _password_. _Help_ dari pwgen ini sangat sederhana dan mudah dipahami.
 
@@ -121,7 +121,7 @@ Options supported by pwgen:
 ```
 
 
-### Penggunaan
+#### Penggunaan
 
 Seperti yang kalian lihat, pwgen menyediakan banyak sekali opsi untuk kita dapat meracik _password_. Kalian dapat memilih _preferensi_ opsi yang kalian perlukan. Saya biasa menggunakan opsi `-sy` dengan panjang karakter sebanyak 15.
 
@@ -161,7 +161,7 @@ ip0|bE+&\S`-XvA fv8eRE>@.BVd/v) 09TFUyqyFnHqZH/ Y>`u*O^2WfHd"[7 XPus5[&mEb0y3Oz
 Kemudian, saya akan pilih satu dari 100 _random password_ yang sudah berhasil di _generate_. Setelah itu saya akan simpan pada alat yang saya khususkan untuk menyimpan _password_. Untuk pembahasan alat apa yang saya gunakan untuk menyimpan _password_ ([_Password Manager_](https://wiki.archlinux.org/index.php/List_of_applications/Security#Password_managers)) akan saya bahas pada dokumentasi yang lain.
 
 
-# Tips
+## Tips
 
 Kalau teman-teman ingin hasil generate password langsung otomatis ditangkap oleh clipboard, dapat menggunakan cara ini.
 
@@ -188,7 +188,7 @@ pwgen -sy 32 -1 | tr -d '\n' | xclip -sel clip
 Modifikasi sesuai keinginan kalian.
 
 
-# Referensi
+## Referensi
 1. [support.google.com/accounts/answer/32040?hl=en](https://support.google.com/accounts/answer/32040?hl=en) \
    Diakses tanggal: 2018-03-27
 

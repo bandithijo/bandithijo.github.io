@@ -10,7 +10,7 @@ tags: ["arch linux"]
 description: "Kita dapat memanfatkan GRUB untuk melakukan booting ke dalam ISO yang berada di dalam HardDrive. Dengan begini, kita dapat memanfaatkannya sebagai recovery sistem, apabila sewaktu-waktu sistem kita error dan kita memerlukan ISO dari distribusi yang kita gunakan untuk melakukan chroot. Jadi, tidak perlu lagi menggunakan FlashDrive."
 ---
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Sejak migrasi ke Arch Linux, saya selalu menyediakan FlashDrive dengan Bootable berisi ArchISO yang ~~rutin~~ saya perbaharui setiap bulannya (kalau ingat 😁).
 
@@ -19,14 +19,14 @@ Tujuan saya melakukan hal ini adalah untuk berjaga-jaga apabila saya tidak dapat
 Saya memerlukan ArchISO untuk melakukan proses chroot. Singkatnya chroot adalah tools yang dapat kita gunakan untuk berpindah root direktori. Dengan melakukan chroot saya dapat masuk ke dalam sistem Arch yang sedang bermasalah dan memperbaikinya dari dalam.
 
 
-# Permasalahan
+## Permasalahan
 
 Mengerjakan rutinitas membuat bootable FlashDrive setiap bulannya sangat membosankan dan lebih sering terlupakan.
 
 Namun, menyediakan jalan untuk situasi emergency adalah protokol yang sangat perlu saya lakukan. Saya tidak tahu kapan situasi buruk akan terjadi sehingga saya tidak dapat menggunakan sistem operasi saya.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Kalau kalian pernah memiliki laptop dengan Windows yang asli atau memiliki mesin Apple seperti Macbook, Macbook Pro, iMac dan Mac Mini. Teman-teman pasti pernah melihat sebuah partisi yang bernama Windows Recovery (Windows) atau RecoveryHD (macOS). Saya lebih sering menggunakan Recovery sewaktu masih menggunakan Macbook Pro.
 
@@ -46,10 +46,10 @@ Kebetulan saya menggunakan GRUB2 sebagai boot loader. Saya pernah melihat fitur 
 Intinya, **kita dapat booting ke dalam ArchISO yang image (.iso)-nya tersimpan di dalam hard drive menggunakan GRUB2**.
 
 
-# Caranya
+## Caranya
 
 
-## Persiapkan Arch ISO image
+### Persiapkan Arch ISO image
 
 Download terlebih dahulu ArchISO terbaru.
 
@@ -81,7 +81,7 @@ Setelah itu, mounting dan periksa struktur direktori dan beberapa file yang akan
 Setelah kita mengetahui lokasi file-file tersebut, kita akan gunakan pada tahap berikutnya.
 
 
-## Kenali Alamat dari Hard Drive Partition
+### Kenali Alamat dari Hard Drive Partition
 
 GRUB menggunakan penamaan yang berbeda dengan yang digunakan oleh GNU/Linux dalam mendefinisikan drive name dan partisi.
 
@@ -109,7 +109,7 @@ Saya meletakaanya di `/root/iso/archlinux-2020.08.01-x86_64.iso` berada pada par
 Oke, kalau sudah mengetahui hal ini, simpan informasi ini karena akan kita gunakan pada langkah selanjutnya.
 
 
-## Menambahkan Custom Boot Menu ke GRUB2
+### Menambahkan Custom Boot Menu ke GRUB2
 
 Cara paling mudah untuk menambahkan *custom boot menu* adalah dengan menambahkannya pada file `/etc/grub.d/40_custom`.
 
@@ -148,7 +148,7 @@ Untuk `-ucode`, saya menggunakan Intel. Kalian yang menggunakan AMD dapat menggu
 Simpan dan **jangan lupa update GRUB**.
 
 
-## Update GRUB
+### Update GRUB
 
 Setiap melakukan modifikasi terhadap GRUB, lakukan GRUB update.
 
@@ -167,12 +167,12 @@ $ sudo update-grub
 Kalau sudah, tinggal menikmati hasilnya.
 
 
-# Hasilnya
+## Hasilnya
 
 {% youtube xZWZ7gLH5FM %}
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang saya tuliskan.
 
@@ -189,7 +189,7 @@ Terima kasih.
 > [**Membuat Recovery Partition Artix Linux ISO dengan GRUB2**](/blog/membuat-recovery-partition-artix-iso-dengan-grub2)
 
 
-# Referensi
+## Referensi
 
 1. [en.wikipedia.org/wiki/Chroot](https://en.wikipedia.org/wiki/Chroot) \
    Diakses tanggal: 2020-08-30

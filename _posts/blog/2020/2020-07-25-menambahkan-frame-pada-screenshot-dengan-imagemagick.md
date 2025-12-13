@@ -10,7 +10,7 @@ tags: ["ruby", "imagemagick"]
 description: "Ide untuk memberikan framing ini muncul saat saya ingin membuat thumbnails di YouTube untuk video dengan resolusi layar saya yang berukuran 4:3, sedangkan thumbnail setidaknya memiliki resolusi berukuran 16:9."
 ---
 
-# Sekenario Masalah
+## Sekenario Masalah
 
 Saya baru-baru saja menyeragamkan semua produksi video yang saya jadikan [vlog di YouTube]({{ site.url }}/youtube/).
 
@@ -39,7 +39,7 @@ Saya ingin menggabungkan hasil screenshot dengan frame.
 Gambar 3. mockup-imagemagick
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Solusinya sangat mudah untuk ditemukan.
 
@@ -95,7 +95,7 @@ Hasilnya seperti ini.
 Gambar 4. hasil-screenshot-frame-imagemagick
 
 
-# Tambahan
+## Tambahan
 
 Terkadang saya tidak ingin setiap hasil screenshot langsung diframing. Namun, saya malas menulis command ImageMagick yang panjang. Maka sayapun membuat Ruby script untuk menghandle hal tersebut.
 
@@ -132,7 +132,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [imagemagick.org/script/command-line-processing.php#geometry](https://imagemagick.org/script/command-line-processing.php#geometry) \
    Diakses tanggal: 2020-07-25

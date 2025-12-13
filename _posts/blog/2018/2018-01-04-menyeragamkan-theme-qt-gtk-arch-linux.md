@@ -12,7 +12,7 @@ description: "Setidaknya terdapat dua library yang mengatur tampilan GUI di GNU/
 
 ![Banner](https://3.bp.blogspot.com/-rVnxY2exXrI/WmWg56pxTKI/AAAAAAAAG8w/_9tne4RcflQOM7Y0g_WXL_EhKQ7iWmZzQCLcBGAs/s1600/Default%2BHeader%2BTemplate%2BPost%2B2X.png)
 
-# Latar Belakang
+## Latar Belakang
 
 Sebagai pengguna GNU/Linux, tentu pernah mendapati beberapa aplikasi membawa _default theme_ yang terkadang tidak sesuai dengan _theme_ yang sedang kita gunakan. Sekedar informasi sedikit, tampilan _engine_ untuk GUI (_Graphical User Interface_) pada GNU/Linux yang banyak digunakan biasanya **GTK+** atau **Qt**. GTK+ biasanya digunakan oleh aplikasi yang dipaketkan bersama Gnome, sedangkan Qt biasanya digunakan oleh aplikasi yang dipaketkan bersama KDE.
 
@@ -20,7 +20,7 @@ Sekitar tahun 2005, saya masih merasakan KDE sebelum versi KDE 4. Disaat itu , s
 
 Karena alasan tersebut di atas yang mendorong saya untuk menuliskan dokumentasi ini, bagaimana saya mengadaptasikan apikasi yang menggunakan _engine_ Qt agar terlihat seperti aplikasi _native_ GTK+. Sekaligus juga bagaimana mengganti _theme_ hanya pada aplikasi tertentu saja.
 
-# Prasyarat
+## Prasyarat
 
 Ada beberapa paket yang perlu kita sediakan untuk menunjang pengaturan ini. Beberapa paket ini mungkin tidak langsung dipasang secara _default_ pada distro Arch Linux kalian. Paket-paket tersebut adalah :
 
@@ -53,20 +53,20 @@ $ yaourt adwaita-qt4; yaourt adwaita-qt5
 ```
 
 
-# Penerapan
+## Penerapan
 
 Kita dapat melakukan dua macam konfigurasi. Penerapan konfigurasi secara global atau penerapan hanya pada aplikasi tertentu.
 
 
-## Global
+### Global
 
 
-### GTK+
+#### GTK+
 
 Karena saya sudah menggunakan _desktop environment_ yang mayoritas menggunakan _engine_ GTK+, baik 2 maupun 3, makan untuk konfigurasi global, saya cukup menggunakan _Settings_ atau _Preferences_ yang disediakan oleh _desktop environment_ untuk mengganti _theme_ yang saya mau. Selain itu juga dapan menggunakan aplikasi bernama [`lxappearance`](https://www.archlinux.org/packages/community/x86_64/lxappearance/).
 
 
-### Qt5
+#### Qt5
 
 Untuk penerapan konfigurasi ini, dampaknya adalah semua aplikasi yang menggunakan _engine_ Qt5 akan terpengaruh.
 
@@ -83,7 +83,7 @@ Dengan menggunakan Qt5 Settings, kalian dapat mengatur _Appearance_, _Fonts_, _I
 Qt5 Settings ini sendiri menggunakan _engine_ Qt5, sehingga juga akan ikut terpengaruh terhadap perubahan pengaturan yang dilakukan.
 
 
-## Specific Apps
+### Specific Apps
 
 Untuk penerapan konfigurasi pada aplikasi spesifik yang kita inginkan, kita dapat mengaturnya dengan mengedit nilai dari parameter `Exec=` pada file `.desktop` dari aplikasi tersebut.
 
@@ -115,7 +115,7 @@ Langkah-langkah awalnya sebagai berikut.
    > Saya lebih merekomendasikan cara ini.
 
 
-### GTK+3
+#### GTK+3
 
 Saya mencontohkan dengan menggunakan aplikasi `nautilus`. Kalian dapat mencoba pada aplikasi yang lain. Tentu saja yang juga menggunakan GTK+3.
 
@@ -164,7 +164,7 @@ Untuk langkah awal, dapat di lihat pada langkah 1 dan 2 yang sudah dijelaskan pa
    ```
 
 
-### GTK+2
+#### GTK+2
 
 Saya mencontohkan dengan menggunakan aplikasi `inkscape`. Kalian dapat mencoba pada aplikasi yang lain. Tentu saja yang juga menggunakan GTK+2 seperti `gimp` atau `dia`.
 
@@ -206,7 +206,7 @@ Untuk langkah awal, dapat di lihat pada langkah 1 dan 2 yang sudah dijelaskan pa
    ```
 
 
-### Qt5
+#### Qt5
 
 Saya akan mencontohkan dengan menggunakan aplikasi `vokoscreen`. Kalian dapat mencoba pada aplikasi yang lain. Tentu saja yang juga menggunakan Qt5.
 
@@ -256,7 +256,7 @@ Nah, mudah bukan ?
 Kebebasan seperti ini yang membuat saya betah menggunakan sistem operasi GNU/Linux.
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications](https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications) \
    Diakses tanggal: 2018-01-22

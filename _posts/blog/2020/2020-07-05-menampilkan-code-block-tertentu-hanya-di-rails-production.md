@@ -10,14 +10,14 @@ tags: ["rails"]
 description: "Saya ingin menampilkan code block tertentu hanya pada environment tertentu. Misalkan, code block tersebut hanya akan dijalankan pada environment production. Dan tidak akan dijalankan pada environment development. Bagaimana saya melakukannya pada web aplikasi yang dibangun dengan Ruby on Rails?"
 ---
 
-# Sekenario Masalah
+## Sekenario Masalah
 
 Kasus kali ini adalah, saya ingin menampilkan code block tertentu hanya perlu dirender pada saat di level production. Karena tidak begitu diperlukan di level development.
 
 Misal, seperti code block untuk Disqus komentar, code block untuk analytics script, dan lain-lain.
 
 
-# Penyelesaian Masalah
+## Penyelesaian Masalah
 
 Saya yakin terdapat banyak sekali cara untuk memecahkan masalah ini, namun saya memilih untuk menggunakan cara ini.
 
@@ -39,7 +39,7 @@ Mudah-mudahan bermanfaat yaa.
 Terima kasih (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [stackoverflow.com/questions/4632747/rails-best-way-to-display-code-only-in-production](https://stackoverflow.com/questions/4632747/rails-best-way-to-display-code-only-in-production) \
    Diakses tanggal: 2020-07-05

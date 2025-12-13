@@ -10,7 +10,7 @@ tags: ["network"]
 description: "Saya ingin kembali menggunakan traditional network interface name, seperti sebelumnya eth0 & wlan0. Toh juga ini laptop sendiri. Biar gak ribet aja. Hehehe."
 ---
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Mungkin yang baru menggunakan GNU/Linux tidak mengerti apa maksudnya "Traditional Interface Name".
 
@@ -75,7 +75,7 @@ Maka, saya putuskan untuk tidak menggunakan interface namespace yang baru. Alasa
 Okeh, langsung saja bah, males nulis teori-teori. Temen-temen bisa cari tahu sendiri yaa.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Sebenarnya di Arch Wiki sudah ada yang mencatatkan.
 
@@ -89,7 +89,7 @@ Untuk catatan kali ini, sesuai judulnya, saya akan mencatat cara kedua, yaitu "M
 Cara kedua ini juga terdapat 2 cara:
 
 
-## 1. Masking Udev Rule
+### 1. Masking Udev Rule
 
 Dengan melakukan masking terhadap udev rule yang memberikan aturan interface namespace yang baru.
 
@@ -98,7 +98,7 @@ $ ln -s /dev/null /etc/udev/rules.d/80-net-setup-link.rules
 ```
 
 
-## 2. Kernel Parameter
+### 2. Kernel Parameter
 
 Cara alternatif adalah dengan menambahkan `net.ifnames=0` di kernel parameter.
 
@@ -123,7 +123,7 @@ Selesai.
 Tinggal reboot dan coba lakukan `$ ip a s` lagi untuk melihat nama interface, apakah sudah kembali ke traditional interface namespace atau belum.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -134,7 +134,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [Arch Wiki - Network configuration: Revert to traditional interface names](https://wiki.archlinux.org/index.php/Network_configuration#Revert_to_traditional_interface_names) \
    Diakses tanggal: 2020-12-26

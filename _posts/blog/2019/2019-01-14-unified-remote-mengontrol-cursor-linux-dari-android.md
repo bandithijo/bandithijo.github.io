@@ -10,7 +10,7 @@ tags: ["unified remote", "tool"]
 description: "Siapa yang tidak kagum dengan remote control? Menggerakkan benda jarak jauh? Keren sekali yaa! Catatan kali ini saya akan membahasa dan mengulas tentang sebuah perkakas untuk mengontrol mouse cursor GNU/Linux dari Smartphone Android."
 ---
 
-# Prakata
+## Prakata
 
 Setelah pada postingan sebelumnya, saya menuliskan tentang "[Bagaimana Mengrontrol Android Device dari Komputer]({{ site.url }}/blog/scrcpy-menampilkan-dan-mengontrol-android-dari-komputer)". Sekarang saya akan mereview aplikasi yang mempunyai fungsi kebalikan dari **scrcpy**, yaitu mengontrol komputer dari Android.
 
@@ -27,7 +27,7 @@ Hal lain yang perlu diperhatikan dari aplikasi remote seperti ini adalah "**kone
 Apabila di rumah, saya menggunakan konektifitas wifi karena berada dalam satu network. Sedangkan di luar rumah, saya menggunakan konektifitas bluetooth. Nah karena konektifitas bluetooth inilah yang menyebabkan saya sebaiknya menuliskan dokumentasi pribadi, karena cara untuk menghubungkannya terbilang tidak biasa (baca: ~~ribet~~).
 
 
-# Instalasi
+## Instalasi
 
 Sebelum memasuki proses instalasi, ada hal yang harus saya jelaskan terlebih dahulu.
 
@@ -40,7 +40,7 @@ Dalam hal ini,
 Oke, sekarang proses instalasi.
 
 
-## Instalasi Unified Remote Server
+### Instalasi Unified Remote Server
 
 1. Dari komputer/laptop, buka browser favorit dan pergi ke *official* website Unified Remote pada halaman ini: [unifiedremote.com/download](https://www.unifiedremote.com/download)
 
@@ -81,19 +81,19 @@ Oke, sekarang proses instalasi.
    > Kalau saya, tentu saja akan tetap memilih **Portable Archive**.
 
 
-## Konfigurasi Koneksi
+### Konfigurasi Koneksi
 
 Konfigurasi Koneksi akan terbagi menjadi 2 bagian, Wifi/Data dan Bluetooth.
 
 
-### Koneksi dengan Wifi/Data
+#### Koneksi dengan Wifi/Data
 
 Untuk konfigurasi menggunakan Wifi/Data pada komputer/laptop kita tidak diperlukan konfigurasi apapun. Asalkan komputer/laptop dan Android *smartphone* kita berada pada satu network yang sama (LAN), maka tidak akan terjadi masalah.
 
 Saya mencurigai bahwa Unified Remote ini juga dapat digunakan jarak jauh di luar LAN, namun belum saya pelajari lebih lanjut.
 
 
-### Koneksi dengan Bluetooth
+#### Koneksi dengan Bluetooth
 
 Bagian konektifitas menggunakan bluetooth adalah bagian yang menjadi alasan saya menuliskan dokumentasi ini.
 
@@ -212,7 +212,7 @@ Ada beberapa hal yang perlu dipersiapkan sebelum kita dapat menggunakan konektif
    >> - Setelah paket <code>bluez</code> update, biasanya <code>--compat</code> akan menghilang
 
 
-## Jalankan Unified Remote Server
+### Jalankan Unified Remote Server
 
 Untuk menjalankan server, sangat mudah sekali.
 
@@ -265,7 +265,7 @@ Untuk menjalankan server, sangat mudah sekali.
    Langkah selanjutnya tinggal memasangkan Unified Remote pada Android.
 
 
-## Instalasi Unified Remote Client
+### Instalasi Unified Remote Client
 
 1. Buka Google PlayStore dan cari "**Unified Remote**"
 
@@ -276,7 +276,7 @@ Untuk menjalankan server, sangat mudah sekali.
    Pasang dan tunggu prosesnya hingga selesai.
 
 
-## Konfigurasi Unified Remote Client
+### Konfigurasi Unified Remote Client
 
 1. Hubungkan komputer/laptop dengan Android menggunakan Bluetooth. Saya menggunakan aplikasi `blueman-manager`
 
@@ -343,12 +343,12 @@ Untuk menjalankan server, sangat mudah sekali.
    Gambar 12. Tampilan Slide Show remote
 
 
-# Preview Video
+## Preview Video
 
 {% youtube 7QACnojH5Ks %}
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Unified Remote ini memiliki dua versi, yaitu Free dan Full. Kalian dapat mencoba terlebih dahulu, apakah Unified Remote ini cocok untuk kebutuhan kalian atau tidak. Saya pun awalnya seperti itu, hingga akhirnya saya berani memutuskan untuk membeli versi yang Full di Google PlayStore.
 
@@ -357,7 +357,7 @@ Kenali baik-baik kebutuhan kalian, agar tidak ada penyesalan diantara kita.
 Sedap!
 
 
-# Referensi
+## Referensi
 
 1. [unifiedremote.com/tutorials](https://www.unifiedremote.com/tutorials) \
    Diakses tanggal: 2019-01-14

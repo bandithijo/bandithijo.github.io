@@ -10,7 +10,7 @@ tags: ["ruby", "rails"]
 description: "Catatan kali ini mengenai perbedaan antara Method class dengan Instance class pada bahasa pemrograman Ruby."
 ---
 
-# Prakata
+## Prakata
 
 Pada bahasa Ruby, setiap *Method* menyediakan fungsi ke dalam sebuah *Object*.
 
@@ -21,7 +21,7 @@ Sedangkan,
 *Instance Method* menyediakan fungsi ke satu *Instance Class* atau *Object*.
 
 
-# Contohnya
+## Contohnya
 
 Misalkan kita punya sebuah *Class* seperti di bawah ini.
 
@@ -89,7 +89,7 @@ Karena saat ini *jurus_pamungkas* adalah sebuah *object* dari *class JurusSakti*
 Maka dari itu, *method kaio_ken* kali ini, berhasil dipanggil.
 
 
-# Ringkasan
+## Ringkasan
 
 Contoh dari *Class Method*.
 
@@ -122,7 +122,7 @@ Mudah-mudahan bermanfaat buat teman-teman.
 Terima kasih (^_^)v
 
 
-# Referensi
+## Referensi
 
 1. [RailsTips - Class and Instance Methods in Ruby](http://www.railstips.org/blog/archives/2009/05/11/class-and-instance-methods-in-ruby/) \
    Diakses tanggal: 2019-10-12

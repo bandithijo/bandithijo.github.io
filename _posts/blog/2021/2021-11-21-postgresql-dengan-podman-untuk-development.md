@@ -10,12 +10,12 @@ tags: ["database", "postgresql", "podman", "container"]
 description: "Memasang service database seperti PostgreSQL merupakan sebuah tantangan tersendiri di setiap distribusi sistem operasi GNU/Linux. Yang merepotkan, terkadang cara yang sebelumnya kita lakukan berhasil, namun tidak berhasil pada versi distribusi yang terbaru. Sudah saatnya kita gunakan cara modern, khususnya untuk development, yaitu menggunakan kontainerisasi. Catatan kali ini, kita akan menjalankan PostgreSQL service dari container dengan bantuan Podman."
 ---
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Memasang service database seperti PostgreSQL merupakan sebuah tantangan tersendiri di setiap distribusi sistem operasi GNU/Linux. Karena, setiap distribusi memiliki cara yang berbeda-beda untuk menjalankan PostgreSQL service karena pilihan stack yang digunakan pada masing-masing distribusi biasanya berbeda. Yang merepotkan adalah apabila cara yang sebelumnya kita lakukan berhasil, namun tidak berhasil pada versi distribusi yang terbaru.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Sudah saatnya kita gunakan cara modern, khususnya untuk development, yaitu menggunakan kontainerisasi.
 
@@ -29,17 +29,17 @@ Dengan menggunakan container, kita akan mendapatkan kemudahan-kemudahan, diantar
 4. dan masih banyak lagi
 
 
-# Instalasi
+## Instalasi
 
 
-## Siapkan Podman
+### Siapkan Podman
 
 Untuk teman-teman yang menggunakan Fedora (saat tulisan ini dibuat, Fedora 35) sudah tersedia Podman secara default.
 
 Untuk yang belum memasang Podman, silahkan merujuk pada [dokumentasi pemasangan Podman](https://podman.io/getting-started/installation).
 
 
-## Persiapkan PostgreSQL Image
+### Persiapkan PostgreSQL Image
 
 Sebelum mebuat PostgreSQL container, kita perlu mengunduh PostgreSQL image terlebih dahulu.
 
@@ -111,7 +111,7 @@ docker.io/library/postgres  13        113197da0347  3 weeks ago  379 MB
 > 
 > Pastikan sudah tidak ada container yang menggunakan image yang ingin dihapus. Karena proses image remove akan gagal apabila masih ada container yang menggunakan image tersebut.
 
-## Persiapkan Direktori untuk Mounted Volume
+### Persiapkan Direktori untuk Mounted Volume
 
 Saya ingin membuat data yang ada di dalam container dapat terus digunakan. Maka, saya memilih menggunakan mounted volume agar data yang ada di dalam container dapat disimpan di system.
 
@@ -125,7 +125,7 @@ Saya akan simpan pada direktori `$HOME/Podman/postgresql/data/`.
 ```
 
 
-## Buat PostgreSQL Container
+### Buat PostgreSQL Container
 
 Untuk membuat PostgreSQL container dengan praktis, saya menggunakan perintah,
 
@@ -169,7 +169,7 @@ Lihat pada kolom STATUS, **Up 4 seconds ago**, berarti sudah berhasil *running*.
 Tahap pembuatan container sudah berhasil.
 
 
-## Akses PostgreSQL Shell
+### Akses PostgreSQL Shell
 
 Biasanya, untuk mengakses PostgreSQL shell, kita memerlukan tools yang bernama `psql`. Namun, karena host sistem yang kita gunakan tidak perlu memasang paket PostgreSQL client/server, maka kita tidak akan menemukan `psql`.
 
@@ -199,7 +199,7 @@ postgres=# _
 ```
 
 
-## Buat PostgreSQL user untuk host username
+### Buat PostgreSQL user untuk host username
 
 Tujuannya membuat PostgreSQL user dengan nama yang sama dengan username yang kita gunakan pada host adalah agar kita tidak perlu melakukan authentikasi untuk mengakses PostgreSQL shell.
 
@@ -278,10 +278,10 @@ bandithijo=# █
 ```
 
 
-# Troubleshooting
+## Troubleshooting
 
 
-## 1. Connection on Unix Domain Socket
+### 1. Connection on Unix Domain Socket
 
 Ketika menjalankan perintah,
 
@@ -320,7 +320,7 @@ $ exec $SHELL
 ```
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -333,7 +333,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [Memasang PostgreSQL dengan Docker untuk Local Development](https://bandithijo.github.io/blog/postgresql-dengan-docker-untuk-local-development) \
    Diakses tanggal: 2021-11-21

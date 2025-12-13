@@ -10,7 +10,7 @@ tags: ["database", "csv", "mysql"]
 description: "Pada tulisan ini saya menggunakan aplikasi manajemen database berbasis GUI yang bernama MySQL Workbench untuk melakukan extract dan transform dari data CSV ke dalam tabel operasional dalam bentuk ERD."
 ---
 
-# TUGAS 1
+## TUGAS 1
 
 | Mata Kuliah | **Data Warehouse & Data Mining** |
 | Nama | **Rizqi Nur Assyaufi** |
@@ -33,14 +33,14 @@ description: "Pada tulisan ini saya menggunakan aplikasi manajemen database berb
 > 2. [pasar_data.sql](https://drive.google.com/open?id=17N-iWrWR3m9S11sbX9BTcaJP5qesB6EX)
 
 
-# Jawaban
+## Jawaban
 
 Pada tulisan ini saya menggunakan aplikasi manajemen database berbasis GUI yang bernama [**MySQL Workbench**](https://dev.mysql.com/downloads/workbench/) pada sistem operasi [**Arch Linux**](https://www.archlinux.org/).
 
 ![Gambar 1](https://s20.postimg.cc/9kkmzr9i5/gambar_01.png)
 
 
-## Step 1: Membuat Connection
+### Step 1: Membuat Connection
 
 Apabila belum terdapat connection, kita dapat terlebih dahulu membuatnya dengan menekan icon (**+**) seperti yang ada pada Gambar di bawah.
 
@@ -73,7 +73,7 @@ Akan terbuka sebuah _tab_ baru dengan tampilan seperti di bawah.
 ![Gambar 8](https://s20.postimg.cc/5o7b3s3y5/gambar_08.png)
 
 
-## Step 2: Membuat Schema
+### Step 2: Membuat Schema
 
 Selanjutnya, kita akan mebuat _database schema_, dengan cara melakukan **klik kanan pada area kosong** di sisi _sidebar_ sebelah kiri pada _tab Schemas_.
 
@@ -98,7 +98,7 @@ Akan terbuat _database scheme_ dengan struktur seperti gambar di bawah.
 ![Gambar 13](https://s20.postimg.cc/6qhhmc9wt/gambar_13.png)
 
 
-## Step 3: Membuat Tabel-tabel
+### Step 3: Membuat Tabel-tabel
 
 Selanjutnya kita akan memasukkan **SQL Script** untuk membuat tabel-tabel secara otomatis.
 
@@ -137,7 +137,7 @@ Hasilnya akan seperti gambar di bawah.
 ![Gambar 19](https://s20.postimg.cc/gnsiffzj1/gambar_19.png)
 
 
-## Step 4: Ekstrak dan Transform Data
+### Step 4: Ekstrak dan Transform Data
 
 Terdapat 5 buah tabel:
 
@@ -150,7 +150,7 @@ Terdapat 5 buah tabel:
 Kita tidak dapat memasukkan data hasil ekstrak dan transform secara acak. Kita perlu membaca _relationship tables_ (relasi antar tabel). Untuk itu kita memerlukan ERD (_Entity Relationship Diagram_).
 
 
-### 4.1 Entity Relationship Diagram
+#### 4.1 Entity Relationship Diagram
 
 Caranya, pergi ke menu **Database > Reverse Engineer...**.
 
@@ -195,7 +195,7 @@ Dari pembacaan relasi antar tabel di atas, dapat kita urutkan tabel mana yang ak
 5. Tabel `transaksi`
 
 
-### 4.2 Mengekstrak CSV
+#### 4.2 Mengekstrak CSV
 
 Kita akan melakukan ekstraksi file `pasar_2014.csv` ke dalam bentuk struktur tabel.
 
@@ -252,7 +252,7 @@ Akan memunculkan hasil seperti di bawah.
 ![Gambar 37](https://s20.postimg.cc/tf6om36rx/gambar_37.png)
 
 
-### 4.3 Transform Hasil Exstrak
+#### 4.3 Transform Hasil Exstrak
 
 Selanjutnya kita akan melakukan transformasi dari tabel data yang seelunya kita ekstrak dari file **pasar_2014.csv**.
 
@@ -263,7 +263,7 @@ Untuk melakukan transform data, kita berpindah saja ke _tab_ **Query 1**. Di sin
 Selanjutnya kita akan melakukan transformasi dari tabel **data** berurut sesuai dengan hasil pembacaan relasi tabel ERD.
 
 
-#### 4.3.1 Tabel Pasar
+##### 4.3.1 Tabel Pasar
 
 Kita akan mentransformasi _fields_ **namapasar** dari tabel **data**, dengan _queries_ seperti di bawah ini.
 
@@ -323,7 +323,7 @@ Apabila gagal, maka kita perlu meninjau kembali data yang kita dapat dari hasil 
 > Selanjutnya saya hanya akan menuliskan _query syntax_ nya saja untuk melakukan transformasi tabel **data** ke bentuk yang diperlukan oleh tabel tujuan.
 
 
-#### 4.3.2 Tabel Komoditas
+##### 4.3.2 Tabel Komoditas
 
 Kita akan mentransformasi _fields_ **komoditas** dari tabel **data**, dengan _queries_ seperti di bawah ini.
 
@@ -338,7 +338,7 @@ Kemudian **Excute** dengan menekan tombol bergambar petir.
 Proses **Export** dan **Import** sama seperti tabel **pasar**, hanya saja proses _import_ dilakukan di tabel **komoditas**.
 
 
-#### 4.3.3 Tabel Satuan
+##### 4.3.3 Tabel Satuan
 
 Kita akan mentransformasi _fields_ **satuan** dari tabel **data**, dengan _queries_ seperti di bawah ini.
 
@@ -353,7 +353,7 @@ Kemudian **Excute** dengan menekan tombol bergambar petir.
 Proses **Export** dan **Import** sama seperti tabel **pasar**, hanya saja proses _import_ dilakukan di tabel **satuan**.
 
 
-#### 4.3.4 Tabel Detil Komoditas
+##### 4.3.4 Tabel Detil Komoditas
 
 Kita akan mentransformasi _fields_ **detilkomoditas** dari tabel **data** yang berelasi dengan tabel **komoditas**, dan **satuan** dengan _queries_ seperti di bawah ini.
 
@@ -380,7 +380,7 @@ Kemudian **Excute** dengan menekan tombol bergambar petir.
 Proses **Export** dan **Import** sama seperti tabel **pasar**, hanya saja proses _import_ dilakukan di tabel **detil_komoditas**.
 
 
-#### 4.3.5 Tabel Transaksi
+##### 4.3.5 Tabel Transaksi
 
 Kita akan mentransformasi _fields_ **tanggal**, **harga**, **jumlahterjual** dari tabel **data** yang berelasi dengan tabel **detil_komoditas** dan tabel **pasar** dengan _queries_ seperti di bawah ini.
 

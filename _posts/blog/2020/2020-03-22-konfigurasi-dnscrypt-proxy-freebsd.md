@@ -10,7 +10,7 @@ tags: ["dnscrypt"]
 description: "Kali ini adalah catatan mengenai konfigurasi dnscrypt-proxy pada lingkungan FreeBSD."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 Kalau sebelumnya, saya sudah pernah menuliskan mengenai ["Konfigurasi DNSCrypt di Arch Linux"](/blog/konfigurasi-dnscrypt-proxy), maka kali ini masih mengenai konfigurasi DNSCrypt juga namun pada sistem operasi FreeBSD. Woho!
 
@@ -27,7 +27,7 @@ Konfigurasi DNSCrypt-proxy pada FreeBSD pasti akan berbeda dengan Arch Linux, ka
 > Terima kasih. (^_^)
 
 
-# Instalasi
+## Instalasi
 
 Pasang dahulu paket `dnscrypt-proxy2`. Saat tulisan ini dibuat, paket ini sudah mencapai versi 2.0.39. Sedangkan pada repositori GitHubnya sudah mencapai versi 2.0.40
 
@@ -65,7 +65,7 @@ $ doas pkg install dnscrypt-proxy2
 ```
 
 
-# Konfigurasi
+## Konfigurasi
 
 Biasanya, setelah proses instalasi selesai, akan keluar *message*. Saat tulisan ini dibuat, *message* yang dikeluarkan adalah seperti ini.
 
@@ -444,14 +444,14 @@ Nah, saya juga sekalian menambahkan untuk `killall` agar dapat dijalankan tanpa 
 > Untuk yang menggunakan **doas**, silahkan menyesuaikan sendiri untuk pengaturannya yaa. (^_^)
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Oke sementara segini dulu.
 
 Mungkin beberapa hari lagi akan saya update hasil ekperimen menjalankan DNSCrypt-proxy tanpa menggunakan **sudo**.
 
 
-# Referensi
+## Referensi
 
 1. [dnscrypt.info/](https://dnscrypt.info/) \
    Diakses tanggal: 2020-03-22

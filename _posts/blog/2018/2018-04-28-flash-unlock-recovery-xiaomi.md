@@ -13,14 +13,14 @@ description: "Punya smartphone XiaoMi dan cuman punya komputer atau laptop yang 
 ![Banner](https://s20.postimg.cc/mp2f9pxkt/banner_post_10.png)
 
 
-# Latar Belakang
+## Latar Belakang
 
 Punya *smartphone* **XiaoMi** dan cuman punya komputer atau laptop yang sistem operasinya GNU/Linux ?
 
 Tidak perlu repot-repot meminjam laptop teman atau memasang Windows pada VirtualBox. Karena semua pekerjaan untuk memasang **Custom ROM** pada *smartphone* XiaoMi dapat dengan mudah kita lakukan dengan bermodalkan Terminal.
 
 
-# Prasyarat
+## Prasyarat
 
 Pasang paket-paket yang dibutuhkan.
 
@@ -65,7 +65,7 @@ Apabila sudah seperti di atas, maka `adb` dan `fastboot` siap kita ajak bertempu
 > `fastboot`, hanya dapat kita gunakan pada mode **Fastboot**, penjelasan lebih lanjut ada di bawah.
 
 
-# Ngoprek
+## Ngoprek
 
 Terdapat beberapa tahapan sebelum kita dapat memasang *custom* ROM yang kita inginkan. Saya memilih menggunakan **LineageOS**. Namun dokumentasi ini dapat digunakan untuk memasang *custom* ROM apa saja, karena langkah-langkah yang ada pada dokumentasi ini yang akan menjembatani hal tersebut.
 
@@ -80,7 +80,7 @@ Sekenarionya, kira-kira seperti ini :
 6. *Install custom* ROM menggunakan TWRP
 
 
-## Flash ROM for Downgrade
+### Flash ROM for Downgrade
 
 Kita perlu menurunkan versi ROM MIUI atau memasang MIUI ver. 6 ke dalam ROM *smartphone* kita. Tujuan kita melakukan hal ini adalah karena MIUI ver. 6 adalah MIUI ver. 6 ini paling minim pembatasan terhadap fitur-fitur yang *developer* butuhkan. Secara *default*, *bootloader* pada MIUI ver. 6 tidak dalam keadaan *locked*, sehingga memberikan kita kebebasan untuk bermain-main dengan *smartphone* XiaoMi. Meskipun beberapa sumber mengatakan hal ini adalah opsional, namun tidak ada salahnya kita coba.
 
@@ -217,7 +217,7 @@ Nah, kalo sudah ROM apa yang akan kita gunakan, kalian perlu mencari *fastboot* 
 {% youtube IwZZbfXzNWA %}
 
 
-## Unlock Bootloader
+### Unlock Bootloader
 
 Salah satu syarat untuk memodifikasi ROM (berganti-ganti ROM dengan menggunakan Custom Recovery) adalah **Bootloader** yang sudah dalam keadaan **Unlock**. Karena dengan ini, kita dapat memasangkan **Custom Recovery** ke dalam partisi **Recovery** di *smartphone* kita.
 
@@ -275,7 +275,7 @@ Prosesnya simple saja, ndak rumit.
    Apabila **Device unlocked:** sudah menjadi **true**, maka kita dapat memasangkan **Custom Recovery**.
 
 
-## Install Custom Recovery
+### Install Custom Recovery
 
 Teman-teman dapat menggunakan *custom recovery* apa saja, dalam dokumentasi ini saya memilih menggunakan **TWRP** karena saya akan menggunakan **LineageOS** ROM.
 
@@ -337,7 +337,7 @@ Proses instalasinya sangat mudah.
    Dengan begini, maka penggunaan Terminal cukup sampai di sini saja. Tapi jangan di cabut dulu kabel datanya, karena kita masih harus memasukkan bahan-bahan untuk proses instalasi *custom* ROM ke dalam *internal memory* dari *smartphone*.
 
 
-## Copy Bahan-bahan ke dalam Internal Memory
+### Copy Bahan-bahan ke dalam Internal Memory
 
 Kita melakukan instalasi *custom* ROM dengan bantuan TWRP. Untuk itu kita perlu memasukkan semua bahan-bahan yang akan kita pasang ke dalam *internal memory* dengan bantuan **File Manager**. Dalam hal ini saya menggunakan **Thunar** atau **PCMANFM**.
 
@@ -367,7 +367,7 @@ Hasilnya akan seperti di bawah.
 Gambar 6. Bahan-bahan yang sudah dimasukkan
 
 
-## Instalasi Custom ROM
+### Instalasi Custom ROM
 
 Masih pada menu **Install**, pilih file **.zip** secara berurutan:
 
@@ -405,7 +405,7 @@ Saya rasa cukup seperti ini saja proses *flash*, *unlock bootloader*, *install c
 {% youtube CGyxdElPPcQ %}
 
 
-# Referensi
+## Referensi
 
 1. [en.miui.com/thread-285121-1-1.html](http://en.miui.com/thread-285121-1-1.html) \
    Diakses tanggal: 2018-04-28

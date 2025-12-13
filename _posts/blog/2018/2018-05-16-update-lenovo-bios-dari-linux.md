@@ -13,14 +13,14 @@ description: "Sewaktu pertama kali memiliki laptop ini (Lenovo ThinkPad x260), s
 ![Banner](https://s20.postimg.cc/kcm94ki19/banner_post_12.png)
 
 
-# Pendahuluan
+## Pendahuluan
 
 Sewaktu pertama kali memiliki laptop ini (Lenovo ThinkPad x260), saya berfikir bagaimana nantinya saya harus meng-update BIOS, apabila saya menghapus sistem operasi Windows dan hanya menggunakan satu sistem operasi GNU/Linux?
 
 Saat itu saya hanya dapat menjawab pertanyaan itu dengan berbesar hati, "Kita jarang menggunakan BIOS sehari-hari dan fitur yang ada saat ini saya rasa sudah mencukupi." Namun, perjalanan dari pertanyaan ini berkata lain. Dan saya pun menemukan jawabannya. Jelas dan lugas. "Bisa! Sangat bisa!"
 
 
-# Mengapa Perlu Update BIOS ?
+## Mengapa Perlu Update BIOS ?
 
 Setiap versi pembaharuan dari BIOS terdapat "**Summary of Changes**" yang dapat kita lihat pada file berkas **.txt** yang juga dikeluarkan bersama file **.iso**.
 
@@ -78,7 +78,7 @@ Nah, dengan adanya informasi di atas, mudah-mudahan dapat memberikan gambaran ke
 \* Terima kasih untuk kang [Sucipto](https://sucipto.id/).
 
 
-# Disclaimer
+## Disclaimer
 
 > PERHATIAN!
 > 
@@ -87,10 +87,10 @@ Nah, dengan adanya informasi di atas, mudah-mudahan dapat memberikan gambaran ke
 > ***Do with your own risk!***
 
 
-# Langkah-langkah
+## Langkah-langkah
 
 
-## Step 1: Download Lenovo BIOS
+### Step 1: Download Lenovo BIOS
 
 Kita perlu mendownload BIOS image/iso dari [support.lenovo.com](https://support.lenovo.com/id/en/), untuk tipe spesifik dari Lenovo kalian. Dalam dokumentasi ini saya menggunakan Lenovo ThinkPad x260, maka saya akan mencari dengan kata kunci "x260 bios".
 
@@ -144,7 +144,7 @@ r02uj64d.iso               100%[=====================================>]  21.36M 
 ```
 
 
-## Step 2 : Pasang geteltorito cli
+### Step 2 : Pasang geteltorito cli
 
 Kita membutuhkan program bernama `geteltorito` yang akan berguna untuk mengekstrak file image dari file ISO yang baru saja kita download.
 
@@ -189,7 +189,7 @@ $ chmod +x geteltorito
 ```
 
 
-## Step 3: Ekstrak Image dari File ISO
+### Step 3: Ekstrak Image dari File ISO
 
 `geteltorito` adalah **El Torito boot image extractor**. Kita akan menggunakan program ini untuk mengeluarkan file image dari file ISO.
 
@@ -210,7 +210,7 @@ Berikan *output name* .img sesuka kalian.
 ![Gambar 5](https://s20.postimg.cc/o9mjxqji5/gambar_05.gif)
 
 
-## Step 4: Bakar Image ke dalam Flash Drive
+### Step 4: Bakar Image ke dalam Flash Drive
 
 Kalian dapat mengidentifikasi alamat dari Flash Drive dengan menggunakan perintah.
 
@@ -242,14 +242,14 @@ Kalian sesuaikan dengan nama image dan alamat blok dari *flash drive* yang kalia
 Dengan begini, *flash drive* sudah siap untuk kita gunakan untuk mengupdate BIOS Lenovo kita.
 
 
-## Step 5: Proses Update BIOS
+### Step 5: Proses Update BIOS
 
 Berikut ini adalah video proses update BIOS Lenovo. Mohon maaf apabila video ini terlalu lama, sekitar 6 menit. Saya tidak ingin memotong bagian-bagian penting dari proses update ini.
 
 {% youtube VjPw1RP0fYc %}
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 > INFO
 > 
@@ -258,7 +258,7 @@ Berikut ini adalah video proses update BIOS Lenovo. Mohon maaf apabila video ini
 > Penjelasan lebih lanjut tentang cara penggunaan fwupd dapat dilihat pada dokumentasi Arch Wiki, <a href="https://wiki.archlinux.org/index.php/Fwupd">di sini</a>.
 
 
-# Referensi
+## Referensi
 
 1. [cyberciti.biz/faq/update-lenovo-bios-from-linux-usb-stick-pen/](https://www.cyberciti.biz/faq/update-lenovo-bios-from-linux-usb-stick-pen/) \
    Diakses tanggal: 2018-05-16

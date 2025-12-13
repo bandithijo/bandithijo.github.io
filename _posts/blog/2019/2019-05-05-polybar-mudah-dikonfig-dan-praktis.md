@@ -10,7 +10,7 @@ tags: ["polybar"]
 description: "Polybar adalah salah satu standalone bar yang cukup banyak difavoritkan oleh pengguna Window Manager termasuk saya. Catatan kali ini, saya akan berbagi, bagaimana cara saya mengkonfigurasi Polybar yang saya pergunakan."
 ---
 
-# Apa itu Polybar?
+## Apa itu Polybar?
 
 Polybar. untuk teman-teman yang menggunakan Window Manager, pasti sudah tidak asing lagi mendengar aplikasi ini.
 
@@ -59,7 +59,7 @@ Sekedar pengetahuan saja, selain Polybar, masih ada lagi *standalone* taskbar/pa
 5. [dll.](https://wiki.archlinux.org/index.php/List_of_applications#Taskbars)
 
 
-# Gimana Cara Pasangnya?
+## Gimana Cara Pasangnya?
 
 Mumpung sedang pembahasan taskbar/panel, saya sekalian memberi informasi bahwa masing-masing taskbar/panel tersebut, memiliki proses konfigurasinya yang berbeda satu dengan yang lainnya -- pastinya.
 
@@ -71,12 +71,12 @@ Dalam proses konfigurasi Polybar, saya akan membagi menjadi 2 sesi, yaitu:
 Tujuannya untuk memudahkan saat ada pertanyaan mengenai "konfigurasi Polybar".
 
 
-## 1. Konfigurasi Menjalankan Polybar
+### 1. Konfigurasi Menjalankan Polybar
 
 Tentu saja kita perlu melakukan instalasi terlebih dahulu.
 
 
-### Instalasi dari Repositori
+#### Instalasi dari Repositori
 
 Karena saya menggunakan Arch Linux, saya akan mencontohkan dengan cara Arch.
 
@@ -88,7 +88,7 @@ $ yay polybar
 
 Untuk yang menggunakan distribusi lain, silahkan menyesuaikan. Hehe.
 
-### Instalasi dengan Meng-*compile* Sendiri
+#### Instalasi dengan Meng-*compile* Sendiri
 
 Perhatikan terlebih dahulu paket-paket dependensi yang diperlukan sebelum mengkompile Polybar.
 
@@ -185,7 +185,7 @@ Sesuaikan path dengan lokasi file `config` yang berada pada direktori `/usr/...`
 Kalau pada Arch Linux, hasil instalasi Polybar yang bersumber dari AUR, akan terdapat pada path seperti yang tertulis pada  nomor 1 di atas.
 
 
-### Menjalankan Polybar
+#### Menjalankan Polybar
 
 Setelah selesai meng-*copy* file konfig, selanjutnya kita perlu mengkonfigurasi untuk memanggil Polybar.
 
@@ -197,7 +197,7 @@ Cara menjalankan Polybar saya bagi menjadi 2, yaitu :
 2. [Tidak Langsung]({{ site.url }}/blog/polybar-mudah-dikonfig-dan-praktis#2-tidak-langsung)
 
 
-#### 1. Langsung
+##### 1. Langsung
 
 Dengan menggunakan perintah,
 
@@ -248,7 +248,7 @@ Maksudnya, semacam *autoreload*, jadi sambil kita mengubah-ubah nilai yang ada d
 > Karena saat kita menjalankan secara langsung seperti ini. Terminal tempat kita menjalankan Polybar akan menampilkan log-log dari apa yang kita ubah pada file `config`.
 
 
-#### 2. Tidak Langsung
+##### 2. Tidak Langsung
 
 Cara tidak langsung yaitu dengan menggunakan file executable.
 
@@ -289,7 +289,7 @@ Teman-teman dapat menggantinya dengan nama bar yang teman-teman atur pada file `
 Sekarang, saatnya menjalankan file `launch.sh` ini.
 
 
-##### i3WM
+###### i3WM
 
 Kalau yang menggunakan i3wm, tinggal pasang di file `config` dari i3wm saja.
 
@@ -314,7 +314,7 @@ Karena jujur saja, lebih suka menggunakan Polybar ketimbang bar bawaan dari i3WM
 Kalau sudah, restart i3WM.
 
 
-##### BSPWM
+###### BSPWM
 
 Untuk teman-teman yang menggunakan BSPWM, dapat memasang baris perintah pemanggilan Polybar pada file config `~/.config/bspwm/bspwmrc` atau yang berkorelasi, seperti saya, saya letakkan pada file `~/.config/bswpm/autorun`.
 
@@ -325,7 +325,7 @@ $HOME/.config/polybar/launch.sh
 Kalau sudah, restart BSPWM.
 
 
-## 2. Konfigurasi Memodifikasi Polybar
+### 2. Konfigurasi Memodifikasi Polybar
 
 Saat pertama kali menjalankan Polybar, secara *default* akan menampilkan tampilan seperti ini.
 
@@ -349,7 +349,7 @@ Selanjutnya, akan kita bahas satu-persatu mengenai isi yang ada di dalam blok-bl
 Tapi yang akan saya akan jadikan contoh adalah isi dari file config milik saya.
 
 
-### Blok [colors]
+#### Blok [colors]
 
 ```bash
 !filename: $HOME/.config/polybar/config
@@ -375,7 +375,7 @@ Cara penggunaan atau pemanggilan variabel color ini dengan menggunakan cara sepe
 Jangan bingung dulu karena nanti akan teman-teman lihat contoh-contoh lain mengenai cara penggunannya pada blok-blok selanjutnya.
 
 
-### Blok [bar/nama_bar]
+#### Blok [bar/nama_bar]
 
 `nama_bar` di sini maksudnya nama dari bar yang teman-teman berikan.
 
@@ -598,14 +598,14 @@ bottom = false
 Untuk penjelasan lebih lengkap mengenai topik yang sudah saya bahas di atas, dapat merujuk pada Wiki Polybar, [di sini](https://github.com/polybar/polybar/wiki/Configuration).
 
 
-### Blok [module/nama_modul]
+#### Blok [module/nama_modul]
 
 Untuk pembahasan modul, saya akan tulis dengan mendahulukan nama-nama modul yang sudah disediakan oleh Polybar.
 
 Untuk beberapa modul yang teman-teman lihat (pada daftar modul di atas) tidak terdapat pada modul bawaan Polybar (custom module), akan saya tulis belakangan.
 
 
-#### Modul BSPWM
+##### Modul BSPWM
 
 ```bash
 !filename: $HOME/.config/polybar/config
@@ -666,7 +666,7 @@ Pada baris kode di atas, teman-teman juga dapat melihat beberapa baris kode yang
 Penjelasan lebih lengkap mengenai Text Formating, tentang apa yang dapat dan tidak dapat dilakukan, silahkan merujuk ke halaman Wiki Polybar, [di sini](https://github.com/polybar/polybar/wiki/Formatting).
 
 
-#### Modul xwindow
+##### Modul xwindow
 
 ```bash
 !filename: $HOME/.config/polybar/config
@@ -687,7 +687,7 @@ label-empty-foreground = ${colors.background}
 Untuk penjelasan lebih lengkap mengenai blok-blok kode modul xwindow di atas, silahkan mengunjungi halaman Wiki Polybar, [di sini](https://github.com/polybar/polybar/wiki/Module:-xwindow).
 
 
-#### Modul xkeyboard
+##### Modul xkeyboard
 
 ```bash
 !filename: $HOME/.config/polybar/config
@@ -717,7 +717,7 @@ label-indicator-background = ${colors.background}
 Untuk penjelasan lebih lengkap mengenai blok-blok kode modul xkeyboard di atas, silahkan mengunjungi halaman Wiki Polybar, [di sini](https://github.com/polybar/polybar/wiki/Module:-xkeyboard).
 
 
-#### Modul xbacklight
+##### Modul xbacklight
 
 ```bash
 !filename: $HOME/.config/polybar/config
@@ -758,7 +758,7 @@ Untuk penjelasan lebih lengkap mengenai blok-blok kode modul xkeyboard di atas, 
 > Mungkin, dapat menggunakan [modul backlight](https://github.com/polybar/polybar/wiki/Module:-backlight).
 
 
-#### Modul PulseAudio
+##### Modul PulseAudio
 
 ```bash
 !filename: $HOME/.config/polybar/config
@@ -784,7 +784,7 @@ ramp-volume-2 = 
 Untuk penjelasan lebih lengkap mengenai blok-blok kode modul pulseaudio di atas, silahkan mengunjungi halaman Wiki Polybar, [di sini](https://github.com/polybar/polybar/wiki/Module:-pulseaudio).
 
 
-#### Modul Memory
+##### Modul Memory
 
 ```bash
 !filename: $HOME/.config/polybar/config
@@ -804,7 +804,7 @@ label-background = ${colors.background}
 Untuk penjelasan lebih lengkap mengenai blok-blok kode modul memory di atas, silahkan mengunjungi halaman Wiki Polybar, [di sini](https://github.com/polybar/polybar/wiki/Module:-memory).
 
 
-#### Modul CPU
+##### Modul CPU
 
 ```bash
 !filename: $HOME/.config/polybar/config
@@ -823,7 +823,7 @@ label-background = ${colors.background}
 Untuk penjelasan lebih lengkap mengenai blok-blok kode modul CPU di atas, silahkan mengunjungi halaman Wiki Polybar, [di sini](https://github.com/polybar/polybar/wiki/Module:-cpu).
 
 
-#### Modul FileSystem
+##### Modul FileSystem
 
 ```bash
 !filename: $HOME/.config/polybar/config
@@ -844,7 +844,7 @@ label-unmounted-foreground = ${colors.foreground}
 Untuk penjelasan lebih lengkap mengenai blok-blok kode modul filesystem di atas, silahkan mengunjungi halaman Wiki Polybar, [di sini](https://github.com/polybar/polybar/wiki/Module:-filesystem).
 
 
-#### Modul Temperature
+##### Modul Temperature
 
 ```bash
 !filename: $HOME/.config/polybar/config
@@ -876,7 +876,7 @@ ramp-background = ${colors.background}
 Untuk penjelasan lebih lengkap mengenai blok-blok kode modul temperature di atas, silahkan mengunjungi halaman Wiki Polybar, [di sini](https://github.com/polybar/polybar/wiki/Module:-temperature).
 
 
-#### Moudul Date
+##### Moudul Date
 
 ```bash
 !filename: $HOME/.config/polybar/config
@@ -902,7 +902,7 @@ label-background = ${colors.background}
 Untuk penjelasan lebih lengkap mengenai blok-blok kode date network di atas, silahkan mengunjungi halaman Wiki Polybar, [di sini](https://github.com/polybar/polybar/wiki/Module:-date).
 
 
-#### Modul Network
+##### Modul Network
 
 Untuk Wireless LAN
 
@@ -971,7 +971,7 @@ label-connected = " %local_ip% "
 Untuk penjelasan lebih lengkap mengenai blok-blok kode modul network di atas, silahkan mengunjungi halaman Wiki Polybar, [di sini](https://github.com/polybar/polybar/wiki/Module:-network).
 
 
-#### Modul Battery
+##### Modul Battery
 
 ```bash
 !filename: $HOME/.config/polybar/config
@@ -1018,7 +1018,7 @@ Karena saya mempunyai dua battery, yaitu Internal (BAT0) dan Eksternal (BAT1), s
 Untuk penjelasan lebih lengkap mengenai blok-blok kode modul battery di atas, silahkan mengunjungi halaman Wiki Polybar, [di sini](https://github.com/polybar/polybar/wiki/Module:-battery).
 
 
-#### Modul Text
+##### Modul Text
 
 ```bash
 !filename: $HOME/.config/polybar/config
@@ -1049,7 +1049,7 @@ Saya juga menggunakan modul text untuk memberikan jarak atau pun simbol pemisah 
 Untuk penjelasan lebih lengkap mengenai blok-blok kode modul text di atas, silahkan mengunjungi halaman Wiki Polybar, [di sini](https://github.com/polybar/polybar/wiki/Module:-text).
 
 
-### Blok [settings]
+#### Blok [settings]
 
 Pada blok ini tidak banyak yang saya pahami.
 
@@ -1073,7 +1073,7 @@ pseudo-transparency = false
 Untuk penjelasan lebih lengkap mengenai kode blok settings di atas, silahkan mengunjungi halaman Wiki Polybar, [di sini](https://github.com/polybar/polybar/wiki/Configuration#application-settings).
 
 
-### Blok [global/wm]
+#### Blok [global/wm]
 
 ```bash
 !filename: $HOME/.config/polybar/config
@@ -1085,10 +1085,10 @@ margin-bottom = 0
 Untuk penjelasan lebih lengkap mengenai kode blok global/wm di atas, silahkan mengunjungi halaman Wiki Polybar, [di sini](https://github.com/polybar/polybar/wiki/Configuration#global-wm-settings).
 
 
-# Tips
+## Tips
 
 
-## Show/Hide Bar untuk Trayicon (konvensional)
+### Show/Hide Bar untuk Trayicon (konvensional)
 
 > PERHATIAN!
 > 
@@ -1228,7 +1228,7 @@ Berikut ini adalah demonstrasinya.
 ![Gambar 4](https://i.postimg.cc/FKKM6wWh/gambar-04.gif)
 
 
-# Contoh File Konfigurasi
+## Contoh File Konfigurasi
 
 Nah, kalo sudah memahami blok demi blok di atas. Saya akan memberikan gambaran full dari baris kode konfigurasi Polybar yang saya miliki.
 
@@ -1734,7 +1734,7 @@ margin-bottom = 0
 ```
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Polybar merupakan salah satu taskbar/panel yang mudah untuk dikonfigurasi dan dikustomisasi.
 
@@ -1755,7 +1755,7 @@ Sepertinya cukup seperti ini saja.
 Terima kasih.
 
 
-# Referensi
+## Referensi
 
 1. [wiki.archlinux.org/index.php/List_of_applications#Taskbars](https://wiki.archlinux.org/index.php/List_of_applications#Taskbars) \
    Diakses tanggal: 2019-05-05

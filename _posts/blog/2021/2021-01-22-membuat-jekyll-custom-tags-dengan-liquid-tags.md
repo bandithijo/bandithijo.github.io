@@ -10,7 +10,7 @@ tags: ["jekyll"]
 description: "Menulis teknikal blog cukup merepotkan apabila kita tidak menghandle dengan baik cara untuk memasukkan command prompt, karena akan banyak sekali command prompt yang akan digunakan pada teknikal blog. Catatan ini akan membahas bagaimana BanditHijo dalam menghandle command prompt di blog."
 ---
 
-# Latar Belakang Masalah
+## Latar Belakang Masalah
 
 Seiring berjalannya waktu, jumlah post di BanditHijo Blog ini semakin banyak.
 
@@ -56,7 +56,7 @@ Nah, yang menjadi masalah adalah, bayangkan apabila terdapat ratusan artikel dan
 Mungkin gak? Masih mungkin, tapi cukup bikin mumet kepala. 😅
 
 
-## Apa yang saya inginkan?
+### Apa yang saya inginkan?
 
 Saya ingin menggunakan sesuatu semacam **wadah**, yang apabila ingin merubah stylenya, kita cukup merubah si wadah saja, dan semua yang menggunakan wadah tersebut otomatis ikut berubah juga.
 
@@ -66,9 +66,6 @@ Seperti ini,
 
 ```liquid
 !filename: _posts/blog/2021/2021-01-01-contoh-artikel.md
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam neque quod, debitis maxime nostrum quibusdam.
-Harum ullam repudiandae beatae nesciunt ea ipsam nisi? Quasi quae aliquid ratione vel blanditiis vitae.
-
 {% raw %}{% shell_user %}
 sudo pacman -Syu
 sudo pacman -S ruby
@@ -102,7 +99,7 @@ Oke, karena keterbatasan ilmu saya saat ini, yang ingin saya catat hanya hal yan
 Mungkin artikel ini akan berkesinambungan seiring bertambahnya teknik yang saya dapatkan.
 
 
-# Praktik Membuat Liquid Tags
+## Praktik Membuat Liquid Tags
 
 Di Jekyll, saya melihat pada module Tags menggunakan setidaknya **Liquid::Block** dan juga **Liquid::Tags**.
 
@@ -133,12 +130,12 @@ Dapat dilihat, kalau saya memiliki beberapa custom plugin yang saya buat untuk m
 Ayo kita lihat!
 
 
-## Liquid::Tags dengan Parameter
+### Liquid::Tags dengan Parameter
 
 Rasanya, penggunaan module **Liquid::Tags** memang hampir semuanya menggunakan parameter.
 
 
-### Image Tag
+#### Image Tag
 
 Saya menggunakannya untuk menghandle image.
 
@@ -200,12 +197,12 @@ Blok kode di atas adalah untuk kebutuhan saya.
 Tentunya, teman-teman perlu memodifikasi sesuai dengan yang teman-teman butuhkan.
 
 
-## Liquid::Block Tanpa Parameter
+### Liquid::Block Tanpa Parameter
 
 Untuk membuat Liquid::Block Tanpa Parameter, cukup mudah.
 
 
-### Command Prompt
+#### Command Prompt
 
 Saya akan contohkan untuk **shells.rb**, yang saya gunakan untuk menyimpan beberapa prompt shell untuk user dan root.
 
@@ -340,12 +337,12 @@ $ bundle exec jekyll server
 Nah, sederhana kan?
 
 
-## Liquid::Block dengan Parameter
+### Liquid::Block dengan Parameter
 
 Untuk membuat Liquid::Block dengan Parameter, cukup tricky tapi mungkin.
 
 
-### Command Prompt
+#### Command Prompt
 
 Saya akan contohkan lagi untuk Command Prompt tapi dapat kita definisikan sendiri bentuk dari prompt dan warnanya.
 
@@ -440,7 +437,7 @@ Liquid::Template.register_tag('shell_term',  Jekyll::ShellCommand)
 ```
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -451,7 +448,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [jekyllrb.com/docs/liquid/tags/](https://jekyllrb.com/docs/liquid/tags/) \
    Diakses tanggal: 2021-01-22

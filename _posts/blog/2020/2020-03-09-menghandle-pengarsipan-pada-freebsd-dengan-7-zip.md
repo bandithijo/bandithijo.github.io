@@ -10,7 +10,7 @@ tags: ["freebsd"]
 description: "Selama ini, saya selalu menggunkan tools pengarsipan GUI. Ternyata dengan 7zip, pengarsipan di Terminal juga jadi lebih mudah. Ada banyak sekali option dan parameter yang dapat kita gunakan. Tapi saya hanya mencatat sebagian kecil yang saya perlukan."
 ---
 
-# Pendahuluan
+## Pendahuluan
 
 Oke!
 
@@ -19,7 +19,7 @@ Sistem sudah siap untuk dipakai menulis kembali.
 Mungkin sebagian dari teman-teman sudah mengetahui kalau saya baru saja bermigrasi dari Arch Linux ke FreeBSD. Kira-kira akhir Februari 2020, saya memulai proses migrasi. Berarti saat ini sudah hampir dua pekan lebih.
 
 
-# Permasalahan
+## Permasalahan
 
 Dalam proses migrasi dari Arch Linux ke FreeBSD, meski sama-sama sistem operasi UNIX like (mirip UNIX), namun keduanya tidak benar-benar sama. Saya mendapati beberapa aplikasi baik GUI, TUI, bahkan script sekalipun, tidak semuanya dapat saya gunakan kembali di FreeBSD.
 
@@ -34,7 +34,7 @@ Misalnya, saya memerlukan program tools pengarsipan GUI. Diantara yang saya tahu
 Xarchiver tidak dapat membuat dan membuka arsip `.zip` yang terenkripsi (berpassword). Namun, dapat dilakukan dengan mudah oleh file-roller. Maka dari itu saya biasanya menggunakan file-roller.
 
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Karena hal tersebut di atas, saya tidak jadi memasang file-roller dan mencari alternatif lain.
 
@@ -56,7 +56,7 @@ Sejujurnya, saya agak menyesal, "Mengapa baru menggunakan 7-Zip sekarang."
 Padahal selalu terpasang di setiap distro GNU/Linux yang saya gunakan. Hahaha.
 
 
-# Penggunaan
+## Penggunaan
 
 Sebagai catatan untuk teman-teman, saya hanya akan mencatat perintah-perintah dasar.
 
@@ -74,7 +74,7 @@ Maksudnya keren di sini adalah, selain free dan open-source, 7-Zip juga memiliki
 6. [dst.](https://www.7-zip.org/)
 
 
-## Batasan Penggunaan
+### Batasan Penggunaan
 
 Karena 7-Zip memiliki perintah-perintah command line yang powerful dan banyak, maka pada catatan ini saya hanya membatasi pada:
 
@@ -82,7 +82,7 @@ Karena 7-Zip memiliki perintah-perintah command line yang powerful dan banyak, m
 2. Mengekstrak ZIP format yang terenkripsi
 
 
-## Membuat Arsip Berformat ZIP yang Terenkripsi
+### Membuat Arsip Berformat ZIP yang Terenkripsi
 
 Untuk membuat ZIP archive dengan enkripsi, caranya sangat mudah.
 
@@ -146,7 +146,7 @@ Ilustrasinya kira-kira seperti ini.
 > ```
 
 
-## Mengekstrak Arsip Berformat ZIP yang Terenkripsi
+### Mengekstrak Arsip Berformat ZIP yang Terenkripsi
 
 Untuk mengkestrak ZIP archive yang terenkripsi, caranya sangat mudah sekali.
 
@@ -194,7 +194,7 @@ Ilustrasinya kira-kira seperti ini.
 ![Gambar 2](https://i.postimg.cc/SRGtDzcD/gambar-02.gif)
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, hanya ini saja yang saat ini dapat saya catat.
 
@@ -209,7 +209,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [www.2daygeek.com/zip-7zip-encrypt-decrypt-password-protect-files-folders-linux/](https://www.2daygeek.com/zip-7zip-encrypt-decrypt-password-protect-files-folders-linux/) \
    Diakses tanggal: 2020-03-09

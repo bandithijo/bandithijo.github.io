@@ -10,19 +10,19 @@ tags: ["tmux"]
 description: "Hal-hal terkait Tmux, cukup banyak sekali yang saya lupakan. Seperti beberapa kombinasi keyboard dan command tertentu. Apabila diperlukan, saya harus Googling kembali. Agar tidak membuang waktu mencari kembali, saya akan mencatatnya saja di sini."
 ---
 
-# Prakata
+## Prakata
 
 Banyak sekali hal-hal terkait Tmux yang terlupakan karena tidak pernah saya catat. Saat diperlukan, saya harus Googling dan mencari kembali. Sangat membuang-buang waktu development.
 
 Karena alasan tersebut, saya putuskan untuk mencatat beberapa hal terkait Tmux. Mungkin, teman-teman juga dapat memanfaatkannya.
 
 
-# Morfologi
+## Morfologi
 
 Ibarat sebuah pohon, **session** adalah pokok batangnya, kemudian cabangnya adalah **window** (tab) yang memiliki daun berupa **pane**.
 
 
-## Sessions
+### Sessions
 
 ```
 - BLOG: 2 windows (attached)
@@ -50,7 +50,7 @@ Tanda **\*** adalah indikator window yang sedang aktif terbuka (*selected window
 **(1 panes)**, adalah jumlah dari pane.
 
 
-## Windows (Tabs)
+### Windows (Tabs)
 
 ```
 +-------------------+    +-------------------+    +-------------------+
@@ -66,7 +66,7 @@ Tanda **\*** adalah indikator window yang sedang aktif terbuka (*selected window
 ```
 
 
-## Panes
+### Panes
 
 ```
 +-------------------+    +-------------------+    +-------------------+
@@ -90,10 +90,10 @@ server > sessions > windows > panes
 **server** adalah bagian paling luar dari session, tempat dimana session berada.
 
 
-# Mappings (Keyboard Shortcut)
+## Mappings (Keyboard Shortcut)
 
 
-## Tmux prefix
+### Tmux prefix
 
 Default dari Tmux prefix adalah,
 
@@ -102,7 +102,7 @@ Default dari Tmux prefix adalah,
 Pada catatan ini, apabila di awali dengan kombinasi keyboard tersebut, artinya adalah **Prefix**.
 
 
-## Melihat daftar keybindings
+### Melihat daftar keybindings
 
 Tmux memmiliki banyak sekali keybindings, untuk melihat daftar tersebut,
 
@@ -113,7 +113,7 @@ Untuk keluar dari list keybindings,
 <kbd>q</kbd>
 
 
-## Masuk ke command mode
+### Masuk ke command mode
 
 Untuk masuk ke Tmux command mode,
 
@@ -128,7 +128,7 @@ Kalau berhasil, Tmux akan menampilkan command mode pada Tmux statusbar seperti i
 Tinggal kita masukkan command yang ingin di-input-kan.
 
 
-## Keluar/Close/Detach dari session yang sedang aktif
+### Keluar/Close/Detach dari session yang sedang aktif
 
 Untuk keluar/detach (melepaskan) session Tmux yang sedang aktif,
 
@@ -141,7 +141,7 @@ Tmux session tersebut tidak akan hilang, tapi masih berjalan di background proce
 Untuk mengakses Tmux session yang kita detach tersebut, gunakan [**cara ini**](#attachmemasang-kembali-session-yang-sudah-di-detach-dari-terminal)
 
 
-## Memberikan/Mengganti nama session
+### Memberikan/Mengganti nama session
 
 Secara default, nama session akan otomatis digenerate secara incremental dalam bentuk integer mulai dari 0.
 
@@ -158,7 +158,7 @@ Pada command mode, akan tertulis seperti ini,
 Ganti **0** dengan nama yang kalian inginkan.
 
 
-## Membuat window (tab) baru
+### Membuat window (tab) baru
 
 Secara default, saat session baru dibuat, hanya akan ada 1 window (tab) yang biasanya bernama **0:zsh**.
 
@@ -169,7 +169,7 @@ Kita dapat membuat/manambah window baru dengan cara,
 Window (tab) baru akan secara otomatis ditambahkan ke bagian akhir dari windows stack.
 
 
-## Memberikan/Mengganti nama window (tab)
+### Memberikan/Mengganti nama window (tab)
 
 Secara default, nama window akan otomatis diambil dari nama shell yang digunakan.
 
@@ -186,10 +186,10 @@ Pada command mode, akan tertulis seperti ini,
 Ganti **zsh** dengan nama yang kalian inginkan.
 
 
-# Command Mode
+## Command Mode
 
 
-## Membuat session baru dari dalam Tmux
+### Membuat session baru dari dalam Tmux
 
 Untuk membuat session baru dari dalam Tmux,
 
@@ -198,7 +198,7 @@ Untuk membuat session baru dari dalam Tmux,
 ```
 
 
-## Membuat session baru dengan working directory dari dalam Tmux
+### Membuat session baru dengan working directory dari dalam Tmux
 
 Kalau kita sudah berada di dalam Tmux, namun ingin membuat session lain (session baru yang lain) sambil mendefinisikan *workding directory*-nya,
 
@@ -207,7 +207,7 @@ Kalau kita sudah berada di dalam Tmux, namun ingin membuat session lain (session
 ```
 
 
-## Mengganti working directory pada session yang sudah ada dari dalam Tmux
+### Mengganti working directory pada session yang sudah ada dari dalam Tmux
 
 Kalau kita sudah terlanjur membuat session baru, namun ingin menganti *working directory*-nya,
 
@@ -226,10 +226,10 @@ Masuk dulu ke direktori yang ingin dijadikan cwd. Lalu jalankan perintah di bawa
 ```
 
 
-# Command Line Terminal
+## Command Line Terminal
 
 
-## Membuat session baru dari Terminal
+### Membuat session baru dari Terminal
 
 Untuk membuat session baru dari Terminal,
 
@@ -240,7 +240,7 @@ $ tmux new-session -s &lt;nama_session&gt;
 **-s** adalah flag option untuk **name the session**.
 
 
-## Membuat session baru dengan working directory dari Terminal
+### Membuat session baru dengan working directory dari Terminal
 
 Tmux session yang baru dibuat, akan dimulai dari WD (*Working Directory*) dimana session tersebut dibuat.
 
@@ -255,7 +255,7 @@ $ tmux new-session -s &lt;nama_session&gt; -c /lokasi/working/directory/baru
 **-c** adalah *specify working directory for the session*.
 
 
-## Attach/Memasang kembali session yang sudah di-detach dari Terminal
+### Attach/Memasang kembali session yang sudah di-detach dari Terminal
 
 Apabila kita memiliki session yang masih aktif di background karena kita melakukan proses [**detach**](#keluarclosedetach-dari-session-yang-sedang-aktif).
 

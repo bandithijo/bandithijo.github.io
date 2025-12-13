@@ -10,7 +10,7 @@ tags: ["vim", "defx"]
 description: "Alternatif Vim file explorer selain NERDTree yang dapat teman-teman jadikan pilihan untuk memanajemen file saat menggunakan Vim."
 ---
 
-# Latar Belakang
+## Latar Belakang
 
 Di Vim "world", ada beberapa nama-nama plugin yang sudah tersohor di kalangan pengguna Vim. Dan biasanya menjadi plugin pilihan pertama oleh Vim user ketika baru bargabung dengan komunitas Vim. Tentu saja, yang menyebabkan hal tersebut adalah, karena biasanya di dalam tutorial, baik blog maupun vlog yang mereka lihat menginformasikan untuk memasang nama-nama plugin tersebut.
 
@@ -25,12 +25,12 @@ Menurut yang tertulis di halaman GitHub README dari Defx, plugin ini diciptakan 
 Penjelasan mengenai konsep dari Defx, dapat teman-teman baca [di sini](https://github.com/Shougo/defx.nvim/blob/master/README.md).
 
 
-# Requirement
+## Requirement
 
 `neovim 0.4.x` atau `vim 8.2.x` dengan `python 3.6.x`.
 
 
-# Instalasi
+## Instalasi
 
 Saya menggunakan **vim-plug** sebagai plugin manager.
 
@@ -54,7 +54,7 @@ Plug 'kristijanhusak/defx-git'
 ```
 
 
-# Konfigurasi Defx
+## Konfigurasi Defx
 
 Jangan kaget, kalau di halaman GitHub README tidak tersedia contoh-contoh konfigurasi.
 
@@ -177,7 +177,7 @@ endif
 ```
 
 
-# Penjelasan
+## Penjelasan
 
 ```viml
 autocmd FileType defx call s:defx_my_settings()
@@ -276,7 +276,7 @@ Baris di atas bertujuan untuk mendefinisikan keyboard mapping yang digunakan.
 Kita dapat merubah-rubah sesuai preferensi pribadi masing-masing.
 
 
-# Konfigurasi Defx-icons
+## Konfigurasi Defx-icons
 
 ```viml
 !filename: $HOME/.config/nvim/init.vim
@@ -311,7 +311,7 @@ hi default link DefxIconsClosedTreeIcon   Directory
 ```
 
 
-# Konfigurasi defx-git
+## Konfigurasi defx-git
 
 ```viml
 !filename: $HOME/.config/nvim/init.vim
@@ -345,7 +345,7 @@ endif
 ```
 
 
-# Hasilnya
+## Hasilnya
 
 ![Gambar 1](https://i.postimg.cc/bJnLsY3b/gambar-01.png)
 
@@ -356,12 +356,12 @@ Kalau diperhatikan, kenapa status bar saya dapat berbeda ketika berada di buffer
 Jawabannya ada di post setelah ini.
 
 
-# Credit
+## Credit
 
 Terima kasih kepada [Elianiva](https://elianiva.github.io/post/defx-nvim/) dan [teh Tsara Fatma](https://tsarafatma.com/neovim/2020/02/08/defx-file-explorer-for-neovim), untuk catatan di blognya.
 
 
-# Pesan Penulis
+## Pesan Penulis
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
@@ -374,7 +374,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [github.com/crow-translate/crow-translate](https://github.com/crow-translate/crow-translate) \
    Diakses tanggal: 2020-10-27

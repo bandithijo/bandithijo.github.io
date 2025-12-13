@@ -10,11 +10,11 @@ tags: ["tips", "rails"]
 description: "Catatan kali ini tentang cara membuat user dan admin yang memiliki tabel terpisah pada Rails yang menggunakan Devise gem."
 ---
 
-# Prerequisite
+## Prerequisite
 
 `Ruby 2.6.3` `Rails 5.2.4` `PostgreSQL 11.5`
 
-# Prakata
+## Prakata
 
 Kali ini saya ingin mencatat mengenai web aplikasi yang memiliki tampilan frontend terpisah antara user dan admin. Tentu saja dengan menggunakan Rails.
 
@@ -24,13 +24,13 @@ Kedua aplikasi ini disebut CMS (*Content Management System*). Di mana web aplika
 
 Nah, kegunaan pemisahan User dengan Admin pada catatan kali ini, nantinya dapat dimanfaatkan untuk membuat web aplikasi seperti CMS.
 
-# Eksekusi
+## Eksekusi
 
 Kali ini saya sedikit rajin.
 
 Saya akan mencatat prosesnya dari awal project dibuat. Hehehe.
 
-## Inisiasi Project
+### Inisiasi Project
 
 Saya akan membuat project baru menggunakan Rails 5.2.4 dengan PostgreSQL sebagai database engine.
 
@@ -85,7 +85,7 @@ Yay! Berhasil.
 
 Entah mengapa saya suka melihat Default Rails Welcome Page ini. Dari sedikit web framework yang sudah saya coba seperti Codeigniter, Laravel, Django dan React. Rails memiliki tampilan Default Welcome Page yang menurut saya paling menarik.
 
-## Devise Gem
+### Devise Gem
 
 Devise adalah gem yang akan saya gunakan untuk menghandle authentication system.
 
@@ -253,7 +253,7 @@ http://localhost:3000/rails/info/routes
 
 Selanjutnya, saya akan mulai dari controller.
 
-## Controller
+### Controller
 
 Saya akan menggunakan **Controller Namespaces and Routing**.[<sup>2</sup>](https://guides.rubyonrails.org/routing.html#controller-namespaces-and-routing){:target="_blank"}. Untuk memisahkan antara admin dan user dengan struktur direktori seperti ini.
 
@@ -359,7 +359,7 @@ end
 
 Langsung saja membuat action `:index`, yang nantinya akan digunakan untuk menampilkan text sederhana pada view template.
 
-## Route
+### Route
 
 Kemudian, untuk routingnya akan seperti ini.
 
@@ -407,7 +407,7 @@ Maka dari itu, saya menggunakan `scope` untuk controller yang berada pada module
 
 Selanjutnya ke view template.
 
-## View
+### View
 
 Berikut ini struktur direktorinya.
 
@@ -710,7 +710,7 @@ Sekarang tinggal Stylesheet dan Javascript.
 
 Mengikuti struktur direktori di atas.
 
-## Javascript Assets
+### Javascript Assets
 
 Pada `javascripts/application.js` tambahkan `user.js`. Karena saya akan menggunakan sebagai satu kesatuan assets.
 
@@ -738,7 +738,7 @@ Kalau tidak menambahkan ini, Devise akan mengalami routing error saat melakukan 
 
 Untuk `admins/custom.js` dan `users/custom.js` digunakan untuk Javascript buatan kita sendiri. Namun karena masih kosong, jadi tidak saya contohkan.
 
-## Stylesheet Assets
+### Stylesheet Assets
 
 Pada `stylesheets/application.css` tambahkan `user.css`. Karena saya akan menggunakan sebagai satu kesatuan assets.
 
@@ -864,7 +864,7 @@ Terima kasih.
 (^_^)
 
 
-# Referensi
+## Referensi
 
 1. [github.com/plataformatec/devise](https://github.com/plataformatec/devise) \
    Diakses tanggal: 2019-12-15
