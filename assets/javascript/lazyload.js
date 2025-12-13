@@ -99,7 +99,7 @@
         }
         else if (elem.src !== (src = elem.getAttribute('data-echo'))) {
           elem.src = src;
-          
+
           // Reset opacity when image starts loading
           elem.onload = function() {
             this.style.opacity = '1';
@@ -146,20 +146,39 @@
   return echo;
 });
 
-// Improved fallback image handler
+// Improved fallback image handler and theme-aware placeholders
+function getPlaceholderPath() {
+  // Prefer explicit localStorage.theme, otherwise look at html class or prefers-color-scheme
+  try {
+    var theme = localStorage.theme;
+    if (theme === 'dark') return "/assets/images/bandithijo_logo_dark.svg";
+    if (theme === 'light') return "/assets/images/bandithijo_logo.svg";
+  } catch (e) {
+    // ignore localStorage errors (e.g., private mode)
+  }
+
+  var htmlIsDark = document && document.documentElement && document.documentElement.classList.contains('dark');
+  if (htmlIsDark) return "/assets/images/bandithijo_logo_dark.svg";
+
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    return "/assets/images/bandithijo_logo_dark.svg";
+  }
+  return "/assets/images/bandithijo_logo.svg";
+}
+
 function imgError(image) {
   // Prevent infinite error loops
   if (image.dataset.errorHandled) {
     return true;
   }
-  
+
   image.dataset.errorHandled = 'true';
   image.onerror = null; // Remove error handler to prevent loops
-  image.src = "/assets/images/bandithijo_logo.svg";
-  
+  image.src = getPlaceholderPath();
+
   // Optional: Add a class for styling broken images
   image.classList.add('img-error');
-  
+
   return true;
 }
 
@@ -167,7 +186,7 @@ function imgError(image) {
 function initLazyLoading() {
   // First, transform images to be lazy-loadable
   transformImagesToLazy();
-  
+
   // Then initialize Echo.js
   echo.init({
     offset: 2500,
@@ -175,7 +194,7 @@ function initLazyLoading() {
     unload: false,
     callback: function (element, op) {
       console.log('Image', element.src, 'has been', op + 'ed');
-      
+
       // Add loaded class for styling
       if (op === 'load') {
         element.classList.add('lazy-loaded');
@@ -186,42 +205,54 @@ function initLazyLoading() {
 
 // Transform images to be lazy-loaded
 function transformImagesToLazy() {
+  var placeholder = getPlaceholderPath();
+
   // Target images in markdown content
   const images = document.querySelectorAll(".markdown p img, .content img, article img");
-  
+
   images.forEach(function(img) {
-    // Skip if already processed or if it's already a placeholder
-    if (img.dataset.echo || img.src.includes('bandithijo_logo.svg')) {
+    // Skip if already processed or if it's already a placeholder for either theme
+    if (img.dataset.echo) {
       return;
     }
-    
+    var srcAttr = img.getAttribute('src') || '';
+    if (srcAttr.indexOf('bandithijo_logo.svg') !== -1 || srcAttr.indexOf('bandithijo_logo_dark.svg') !== -1) {
+      // Already a placeholder; ensure it's the correct placeholder
+      img.setAttribute("src", placeholder);
+      img.onerror = function() { imgError(this); };
+      img.classList.add('lazy-loading');
+      img.style.transition = img.style.transition || 'opacity 0.3s ease';
+      img.style.opacity = img.style.opacity || '0.7';
+      return;
+    }
+
     // Store original src in data-echo attribute
     const originalSrc = img.src;
-    
+
     // Only process if there's a valid src
     if (originalSrc && originalSrc.trim() !== '') {
       img.setAttribute("data-echo", originalSrc);
-      img.setAttribute("src", "/assets/images/bandithijo_logo.svg");
-      
+      img.setAttribute("src", placeholder);
+
       // Set up error handling
       img.onerror = function() {
         imgError(this);
       };
-      
+
       // Add loading class for styling
       img.classList.add('lazy-loading');
-      
+
       // Optional: Add loading animation or placeholder styling
       img.style.transition = 'opacity 0.3s ease';
       img.style.opacity = '0.7';
-      
+
       // Set up onload handler to restore opacity
       const originalOnload = img.onload;
       img.onload = function() {
         this.style.opacity = '1';
         this.classList.remove('lazy-loading');
         this.classList.add('lazy-loaded');
-        
+
         // Call original onload if it existed
         if (originalOnload) {
           originalOnload.call(this);
@@ -230,6 +261,35 @@ function transformImagesToLazy() {
     }
   });
 }
+
+// Update placeholders when theme changes
+function updateLazyPlaceholders() {
+  var placeholder = getPlaceholderPath();
+  var otherPlaceholder = placeholder.indexOf('dark') !== -1 ? "/assets/images/bandithijo_logo.svg" : "/assets/images/bandithijo_logo_dark.svg";
+
+  var images = document.querySelectorAll(".markdown p img, .content img, article img, img");
+  images.forEach(function(img) {
+    // Only swap if the image is currently showing a placeholder (either version)
+    var srcAttr = img.getAttribute('src') || '';
+    if (srcAttr.indexOf('bandithijo_logo.svg') !== -1 || srcAttr.indexOf('bandithijo_logo_dark.svg') !== -1) {
+      img.setAttribute('src', placeholder);
+    }
+
+    // If data-echo-placeholder exists (used when unload true), update it too
+    var echoPlaceholder = img.getAttribute('data-echo-placeholder');
+    if (echoPlaceholder && (echoPlaceholder.indexOf('bandithijo_logo.svg') !== -1 || echoPlaceholder.indexOf('bandithijo_logo_dark.svg') !== -1)) {
+      img.setAttribute('data-echo-placeholder', placeholder);
+    }
+  });
+
+  // Trigger echo.render to ensure viewport images re-evaluate (if echo exists)
+  if (window.echo && typeof window.echo.render === 'function') {
+    window.echo.render();
+  }
+}
+
+// Expose update function so darkmode script can call it
+window.updateLazyPlaceholders = updateLazyPlaceholders;
 
 // Enhanced DOM ready handler
 function domReady(callback) {
@@ -243,12 +303,12 @@ function domReady(callback) {
 // Initialize when DOM is ready
 domReady(function() {
   initLazyLoading();
-  
+
   // Also handle dynamically added content
   if (window.MutationObserver) {
     const observer = new MutationObserver(function(mutations) {
       let shouldRender = false;
-      
+
       mutations.forEach(function(mutation) {
         if (mutation.addedNodes.length > 0) {
           mutation.addedNodes.forEach(function(node) {
@@ -257,9 +317,11 @@ domReady(function() {
               if (newImages && newImages.length > 0) {
                 // Transform new images
                 newImages.forEach(function(img) {
-                  if (!img.dataset.echo && img.src && !img.src.includes('bandithijo_logo.svg')) {
+                  if (!img.dataset.echo && img.src && img.src.indexOf('bandithijo_logo.svg') === -1 && img.src.indexOf('bandithijo_logo_dark.svg') === -1) {
+                    // store and swap to current theme placeholder
+                    var placeholder = getPlaceholderPath();
                     img.setAttribute("data-echo", img.src);
-                    img.setAttribute("src", "/assets/images/bandithijo_logo.svg");
+                    img.setAttribute("src", placeholder);
                     img.onerror = function() { imgError(this); };
                     img.classList.add('lazy-loading');
                   }
@@ -270,12 +332,12 @@ domReady(function() {
           });
         }
       });
-      
+
       if (shouldRender && window.echo) {
         echo.render();
       }
     });
-    
+
     observer.observe(document.body, {
       childList: true,
       subtree: true
