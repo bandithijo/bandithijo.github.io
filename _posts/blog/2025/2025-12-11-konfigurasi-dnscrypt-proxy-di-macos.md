@@ -16,6 +16,8 @@ DNSCrypt-Proxy adalah aplikasi open source yang berfungsi untuk mengenkripsi lal
 
 Secara default, DNSCrypt-Proxy sudah menyertakan berbagai server DNS yang mendukung protokol DNSCrypt dan DoH (DNS over HTTPS). Kita dapat memilih server DNS yang diinginkan sesuai kebutuhan.
 
+Daftar publik server DNS yang didukung oleh DNSCrypt-Proxy dapat ditemukan di sini, [DNSCrypt Public Servers](https://dnscrypt.info/public-servers/).
+
 
 ## Cara kerja DNSCrypt-Proxy
 
@@ -228,6 +230,15 @@ $ networksetup -getdnsservers Wi-Fi
 ```
 
 Sip! Sekarang DNSCrypt-Proxy sudah berjalan dengan baik di macOS.
+
+
+## Pesan Penulis
+
+DNSCrypt-Proxy adalah cara yang mudah dan efektif untuk meningkatkan privasi dan keamanan saat melakukan resolusi nama domain. Namun, Public Server DNS yang digunakan tetap dapat melacak aktivitas browsing kita. Oleh karena itu, penting untuk memilih server DNS yang terpercaya dan sesuai dengan kebutuhan privasi kita.
+
+Selain itu, kita juga dapat menambahkan konfigurasi Anonymized DNS Relay untuk meningkatkan privasi lebih lanjut. Dengan menggunakan Anonymized DNS Relay, permintaan DNS kita akan melewati server perantara sebelum mencapai server DNS tujuan, sehingga menyulitkan pelacakan aktivitas browsing kita.
+
+Mengenai Anonymized DNS ini akan saya bahas di artikel selanjutnya.
 
 
 ## Referensi
