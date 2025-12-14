@@ -63,8 +63,8 @@ nav_bottom:
     url: /dotfriends/
   - title: Contact
     url: /contact/
-  - title: Stat
-    url: /stat/
+  - title: Stats
+    url: /stats/
 
 
 # Build settings
