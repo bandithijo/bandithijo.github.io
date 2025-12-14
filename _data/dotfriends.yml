@@ -206,3 +206,12 @@ friends:
   detail: >-
     Hi, I’m Kotaro—Software Engineer Enthusiast. I live in Yogyakarta, where I design the future.<br>
     Saat ini, saya bekerja sebagai freelancer yang mengembangkan website dan produk digital secara remote. Di sela-sela waktu kerja, saya juga mengelola dua greenhouse hidroponik bersama istri. Aktivitas bertani ini bukan hanya bentuk refreshing, tapi juga cara saya menjaga keseimbangan hidup—antara dunia digital dan alam yang nyata. 🌱
+
+
+- github_username: "adiprnm"
+  name:  "Adi Purnama"
+  photo: "https://github.com/adiprnm.png?size=200"
+  url1:  "https://adipurnm.com/"
+  url2:  "https://github.com/adiprnm"
+  detail: >-
+    I'm a full-stack web developer. I work as a full-time software engineer (backend) at Happy5. Ruby on Rails is my go-to framework.
