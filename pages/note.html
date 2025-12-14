@@ -7,7 +7,7 @@ permalink: '/note/'
 <div class="mb-4">
   <div id="search-container" class="flex items-center">
     <span class=""></span>
-    <input type="text" id="search-input" placeholder="Search for topic..." autocomplete="off"
+    <input type="text" id="search-input" placeholder="Search for topic... CMD/CTRL+K to focus" autocomplete="off" autofocus
       class="text-left rounded-lg border border-gray-300 dark:border-neutral-700 dark:bg-neutral-900 outline-none px-3 py-2 w-full placeholder:text-base placeholder:font-thin placeholder:text-neutral-400 focus:outline-none focus:ring-0 focus:ring-dark focus:border-dark select-none">
   </div>
 
@@ -148,4 +148,38 @@ document.getElementById('search-input').addEventListener('input', function (e) {
     searchLoader.classList.add('hidden');
   }
 });
+
+// Keyboard Shortcut for Search Input
+(function () {
+  const input = document.getElementById('search-input');
+  if (!input) return;
+
+  function isEditing() {
+    const el = document.activeElement;
+    if (!el) return false;
+    const tag = el.tagName;
+    return el.isContentEditable ||
+           tag === 'INPUT' ||
+           tag === 'TEXTAREA' ||
+           tag === 'SELECT' ||
+           el.getAttribute && el.getAttribute('role') === 'textbox';
+  }
+
+  // Fokuskan input saat halaman selesai dimuat (fallback jika autofocus diabaikan)
+  window.addEventListener('DOMContentLoaded', function () {
+    if (!isEditing()) {
+      try { input.focus(); } catch (err) {}
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    const key = e.key ? e.key.toLowerCase() : '';
+    const modifier = e.ctrlKey || e.metaKey; // Ctrl on Win/Linux, Meta(CMD) on macOS
+    if (!modifier || key !== 'k') return;
+    if (isEditing()) return; // jangan override saat user sedang mengetik
+    e.preventDefault();
+    input.focus();
+    // jika ingin menyeleksi teks saat fokus: input.select();
+  });
+})();
 </script>
