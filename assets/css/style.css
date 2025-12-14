@@ -2,7 +2,7 @@
 # This yaml frontmatter is required for Jekyll to process the file
 ---
 
-@import "/assets/css/color-neovim.css";
+@import "/assets/css/color-vscode.css";
 
 @tailwind base;
 @tailwind components;
@@ -150,15 +150,15 @@
   }
 
   .markdown code {
-    @apply font-mono text-[14px] inline bg-gray-100 dark:bg-zinc-800 rounded-md dark:rounded-md px-1 py-0;
+    @apply font-mono text-[14px] text-[#d4d4d4] inline bg-zinc-800 rounded-md px-1 py-0;
   }
 
   .markdown pre {
-    @apply bg-gray-100 dark:bg-zinc-800 rounded-md dark:rounded-md p-0 text-[14px] mb-5;
+    @apply bg-zinc-800 rounded-md p-0 text-[14px] mb-5;
   }
 
   .markdown pre code {
-    @apply block bg-transparent p-4 overflow-x-auto text-[14px];
+    @apply block p-4 overflow-x-auto text-[14px];
   }
 
   .markdown pre code > table.rouge-table {

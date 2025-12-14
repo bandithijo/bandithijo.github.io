@@ -1,0 +1,88 @@
+/* VS Code Dark+ colorscheme for Rouge syntax highlighting */
+
+.highlight {
+  /* background-color: #1e1e1e; */
+  /* background-color: none; */
+  color: #d4d4d4;
+}
+
+/* Comments */
+.highlight .c,
+.highlight .cm,
+.highlight .c1,
+.highlight .cs {
+  color: #6a9955;
+  font-style: italic;
+}
+
+/* Errors */
+.highlight .err {
+  color: #f44747;
+}
+
+/* Keywords */
+.highlight .k,
+.highlight .cp {
+  color: #569cd6;
+}
+
+/* Deleted / Inserted (diff) */
+.highlight .gd {
+  color: #f44747;
+}
+.highlight .gi {
+  color: #6a9955;
+}
+
+/* Types / Booleans */
+.highlight .kt,
+.highlight .kc {
+  color: #4ec9b0;
+}
+
+/* Numbers */
+.highlight .m,
+.highlight .mi {
+  color: #b5cea8;
+}
+
+/* Strings */
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .ss {
+  color: #ce9178;
+}
+
+/* Names */
+.highlight .n,
+.highlight .na,
+.highlight .nb,
+.highlight .nv {
+  color: #9cdcfe;
+}
+
+/* Class / Constant / Decorator */
+.highlight .nc {
+  color: #4ec9b0;
+}
+.highlight .no,
+.highlight .nd {
+  color: #dcdcaa;
+}
+
+/* Function / Label */
+.highlight .nf,
+.highlight .nl {
+  color: #dcdcaa;
+}
+
+/* HTML / XML tags */
+.highlight .nt {
+  color: #569cd6;
+}
+
+/* Whitespace */
+.highlight .w {
+  color: #3c3c3c;
+}
