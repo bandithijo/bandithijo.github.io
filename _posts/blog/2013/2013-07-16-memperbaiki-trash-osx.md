@@ -10,7 +10,7 @@ tags: ["osx", "tips"]
 description: "Beberapa hari yang lalu, teman saya yang bernama Ichsan mengalami permasalahan pada Trash OS X nya. Trash tidak berfungsi sebagaimana mestinya. Setiap mendelete file / folder selalu diminta untuk memasukkan password dan setelah itu file / folder tidak muncul pada folder Trash."
 ---
 
-![Banner]({{ site.url }}{{ page.assets }}/Default+Header+Template+Post+14.jpg)
+![Banner]({{ page.assets }}/Default+Header+Template+Post+14.jpg)
 
 
 ## Latar Belakang
@@ -39,7 +39,7 @@ Menurut ilmu sotoy ane, dilihat dari gejalanya tiap kali delete file, diminta ma
 
 5. Perhatikan folder .Trash anda, apabila normal akan tampak seperti screeshot yang saya berikan. Namun apabila tidak normal, akan terdapat icon attribut kecil bergambar "tanda lingkaran dilarang berwarna merah".
 
-   ![Gambar 1]({{ site.url }}{{ page.assets }}/Screen+Shot+2013-07-16+at+6.40.08+PM.png)
+   ![Gambar 1]({{ page.assets }}/Screen+Shot+2013-07-16+at+6.40.08+PM.png)
 
 6. Apabila benar terdapat icon attribut dilarang berwarna merah, berarti benar, .Trash anda bermasalah dengan permission aksesnya. Silahkan ikuti step selanjutnya. Namun apabila tidak, hehe saya belum bisa menganalisis lebih jauh mengapa ke-ngacoan itu bisa terjadi.
 
@@ -56,7 +56,7 @@ Menurut ilmu sotoy ane, dilihat dari gejalanya tiap kali delete file, diminta ma
 
 3. Tekan enter dan masukkan password user anda. Kalo user-nya gak ada password, bisa langsung enter saja (sepertinya. Soalnya user saya selalu berpassword, jadi belum pernah coba klo user nya gak di password).
 
-   ![Gambar 2]({{ site.url }}{{ page.assets }}/Screen+Shot+2013-07-16+at+6.54.09+PM.png)
+   ![Gambar 2]({{ page.assets }}/Screen+Shot+2013-07-16+at+6.54.09+PM.png)
 
 4. Lalu check lagi apakah permission pada .Trash folder sudah menjadi milik kita atau belum, dengan membuka kembali aplikasi Cloak, klo Cloak masih terbuka, close dulu lalu open lagi agar ter-refresh tampilan file folder yang sudah kita rubah tadi.
 
@@ -86,7 +86,7 @@ Menurut ilmu sotoy ane, dilihat dari gejalanya tiap kali delete file, diminta ma
 
 12. Selanjutnya lakukan "Verify & Repair Disk". Dimulai dari Hardisk anda terlebih dahulu. Setelah selesai, dilanjutnya pada partisi nya. Ilustrasi seperti screenshot yang saya berikan.
 
-    ![Gambar 3]({{ site.url }}{{ page.assets }}/Screen+Shot+2013-07-16+at+7.09.04+PM.png)
+    ![Gambar 3]({{ page.assets }}/Screen+Shot+2013-07-16+at+7.09.04+PM.png)
 
 13. Setelah selesai melakukan Verify & Repair Disk pada Recovery Mode, silahkan restart.
 
