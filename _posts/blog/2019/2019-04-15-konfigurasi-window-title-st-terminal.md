@@ -16,7 +16,7 @@ Simple/Suckless Terminal (st) adalah Terminal Emulator yang saat ini menjadi ana
 
 Meskipun, masih terdapat beberapa fungsi-fungsi yang belum bisa saya dapatkan pada st namun fungsi-fungsi mendasar dan ketepatan dalam menampilkan warna dan simbol, sudah lebih dari cukup untuk menyelesaikan pekerjaan rumah tangga.
 
-Kisah migrasi, meng-*compile* dan mem-*patching*-nya dapat teman-teman baca pada posting ini, ["St, Simple Terminal yang Sudah Lama Saya Dambakan"]({{ site.url }}/blog/st-simple-terminal-dari-suckless).
+Kisah migrasi, meng-*compile* dan mem-*patching*-nya dapat teman-teman baca pada posting ini, ["St, Simple Terminal yang Sudah Lama Saya Dambakan"](/blog/st-simple-terminal-dari-suckless).
 
 
 ## Permasalahan
@@ -25,7 +25,7 @@ Saya baru-baru saja menyadari, ternyata terdapat kebutuhan lain lagi dari st yan
 
 Saat ini, Window Title pada st hanya menampilkan tulisan "st" saja. Sedangkan, saya membutuhkan Window Title yang dapat menampilkan detail dari perintah atau program yang sedang berjalan di dalam st.
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
 Gambar 1. Window Title pada st yang statis, hanya menampilkan details berupa tulisan "st"
 
@@ -70,11 +70,11 @@ Coba buka **st** Terminal yang baru dan perhatikan Window Titlenya.
 
 Apabila berhasil, akan menampilkan Window Title dengan detail seperti gambar di bawah ini.
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.png)
+![Gambar 2]({{ page.assets }}/gambar-02.png)
 
 Gambar 2. Tampilan detail Window Title yang menampilkan direktori aktif (*Default*)
 
-![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-03.png)
+![Gambar 3]({{ page.assets }}/gambar-03.png)
 
 Gambar 3. Tampilan detail Window Title saat menjalankan program
 

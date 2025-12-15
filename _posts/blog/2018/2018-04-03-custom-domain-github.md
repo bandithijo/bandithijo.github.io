@@ -10,7 +10,7 @@ tags: ["cloudflare"]
 description: "Menggunakan GitHub Pages bukan berarti tidak dapat menggunakan Custom Domain seperti .com, .net, .org. Tentu saja bisa. Berikut ini saya memberikan salah satu cara, yaitu dengan menggunakan layanan Cloudflare. Caranya mudah sekali!"
 ---
 
-![Banner]({{ site.url }}{{ page.assets }}/banner_post_01.png)
+![Banner]({{ page.assets }}/banner_post_01.png)
 
 
 ## Latar Belakang
@@ -33,13 +33,13 @@ Selanjutnya saya akan melakukan order.
 
 ### Order Custom Domain
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar_01.png)
+![Gambar 1]({{ page.assets }}/gambar_01.png)
 
 Pilih menu **Order > Domain > Beli Domain Baru**.
 
 Nanti akan terbuka halaman seperti di bawah.
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar_02.png)
+![Gambar 2]({{ page.assets }}/gambar_02.png)
 
 Isikan nama _domain_ dan ekstensi _domain_ yang kamu inginkan. Pada contoh di atas, saya menggunakan nama _domain_ `devikamarina` dengan ekstensi _domain_ `.com`. Kemudian tekan tombol **Cek Domain**.
 
@@ -47,7 +47,7 @@ Apabila tersedia, pilih jangka waktu penagihan pembayaran. 1 tahun, 2 tahun, ata
 
 Nanti akan diarahkan pada halaman **Konfigurasi Domain**.
 
-![Gambar 3]({{ site.url }}{{ page.assets }}/gambar_03.png)
+![Gambar 3]({{ page.assets }}/gambar_03.png)
 
 Yang perlu diperhatikan pada halaman ini adalah apakah kamu ingin memberikan **Whois Privacy Protection** terhadap domain kamu. Layanan ini bersifat _optional_.
 
@@ -116,7 +116,7 @@ Untuk pengaturan **Nameserver** akan kita ubah nanti saja. Saya berencana menggu
 
 Kemudian tekan tombol **Update Keranjang Belanja**.
 
-![Gambar 4]({{ site.url }}{{ page.assets }}/gambar_04.png)
+![Gambar 4]({{ page.assets }}/gambar_04.png)
 
 Setelah dipastikan kembali tidak ada yang kurang atau yang lebih dari daftar item yang kita pesan di atas. Selanjutnya tekan tombol **Checkout dan Bayar**.
 
@@ -171,11 +171,11 @@ Kemudian, buka repositori GitHub tempat dimana kamu menyimpan repositori dari .g
 
 Kemudian selanjutnya pilih menu **Settings**.
 
-![Gambar 5]({{ site.url }}{{ page.assets }}/gambar_05.png)
+![Gambar 5]({{ page.assets }}/gambar_05.png)
 
 Selanjutnya, _scrolling page_ ke bagian **GitHub Pages** dan isikan nama domain yang baru saja kamu beli pada kolom **Custom domain**.
 
-![Gambar 6]({{ site.url }}{{ page.assets }}/gambar_06.png)
+![Gambar 6]({{ page.assets }}/gambar_06.png)
 
 Pilih **Save**.
 
@@ -186,11 +186,11 @@ Pada tahap ini konfigurasi GitHub hanya seperti ini saja. Namun, _custom domain_
 
 Buka [cloudflare.com](https://www.cloudflare.com/). Apabila belum memiliki akun, sebaiknya buat akun terlebih dahulu. Kemudian Login dan tambahkan website kamu. **+ Add site**.
 
-![Gambar 7]({{ site.url }}{{ page.assets }}/gambar_07.png)
+![Gambar 7]({{ page.assets }}/gambar_07.png)
 
 Setelah itu, pergi ke tab **DNS**.
 
-![Gambar 8]({{ site.url }}{{ page.assets }}/gambar_08.png)
+![Gambar 8]({{ page.assets }}/gambar_08.png)
 
 Isi dan ikuti seperti gambar di atas.
 
@@ -212,21 +212,21 @@ wesley.ns.cloudflare.com
 
 Saya lupa urutan detail konfigurasi nameserver pada Cloudflare ini seperti apa, yang jelas, nanti akan diberikan contoh bagaimana cara melakukan pengisian nameserver pada dewaweb.com menjadi nameserver Cloudflare. Seperti contoh di bawah.
 
-![Gambar 9]({{ site.url }}{{ page.assets }}/gambar_09.png)
+![Gambar 9]({{ page.assets }}/gambar_09.png)
 
 Secara _default_, dewaweb.com sudah memberikan 3 alamat nameserver bawaan dewaweb.com. Kita perlu mengganti Nameserver 1 dan 2 dengan nameserver yang sudah diberikan oleh Cloudflare, kemudian menghapus Nameserver 3.
 
 Buka kembali dewaweb.com, dan pergi ke bagian [**Login ke Client Area**](https://client.dewaweb.com/clientarea.php). Setelah login, pilih menu **Domain > Domain Saya**.
 
-![Gambar 10]({{ site.url }}{{ page.assets }}/gambar_10.png)
+![Gambar 10]({{ page.assets }}/gambar_10.png)
 
 Selanjutnya, pada domain yang akan kita konfigurasi, pilih tanda panah pada tombol **Edit**. Dan pilih **Pengaturan Nameserver**.
 
-![Gambar 11]({{ site.url }}{{ page.assets }}/gambar_11.png)
+![Gambar 11]({{ page.assets }}/gambar_11.png)
 
 Masukkan nameserver yang kita dapat dari Cloudflare.
 
-![Gambar 12]({{ site.url }}{{ page.assets }}/gambar_12.png)
+![Gambar 12]({{ page.assets }}/gambar_12.png)
 
 Kosongkan Nameserver 3.
 
@@ -239,7 +239,7 @@ Sekarang coba lakukan pemanggilan domain kita pada Browser. Apabila belum dapat 
 
 Karena kita menggunakan _custom domain_, maka pengaturan HTTPS pada GitHub Pages tidak dapat kita gunakan.
 
-![Gambar 13]({{ site.url }}{{ page.assets }}/gambar_13.png)
+![Gambar 13]({{ page.assets }}/gambar_13.png)
 
 Untuk mengakali ini kita perlu melakukan pengaturan HTTPS pada Cloudflare.
 
@@ -248,7 +248,7 @@ Untuk mengakali ini kita perlu melakukan pengaturan HTTPS pada Cloudflare.
 
 Buka tab **Crypto** dan pada bagian SSL, pilih **Full**.
 
-![Gambar 14]({{ site.url }}{{ page.assets }}/gambar_14.png)
+![Gambar 14]({{ page.assets }}/gambar_14.png)
 
 Setelah mengaktifkan SSL ini kita perlu menunggu 24 jam setelah situs aktif di Cloudflare untuk menerbitkan sertifikat baru.
 
@@ -259,7 +259,7 @@ Sampai nanti status **Active Certificate** sudah tersedia, seperti pada gambar d
 
 Selanjutnya, buka tab **Page Rules**.
 
-![Gambar 14]({{ site.url }}{{ page.assets }}/gambar_19.png)
+![Gambar 14]({{ page.assets }}/gambar_19.png)
 
 Kita akan menambahkan 3 _rules_ baru untuk _domain_ kita.
 
@@ -269,19 +269,19 @@ Kita akan menambahkan 3 _rules_ baru untuk _domain_ kita.
 
 **Always Use HTTPS**
 
-![Gambar 15]({{ site.url }}{{ page.assets }}/gambar_15.png)
+![Gambar 15]({{ page.assets }}/gambar_15.png)
 
 Saya memilih menggunakan APEX domain, dengan nama **bandithijo.com**, sehingga url yang harus saya masukkan adalah `https://bandithijo.com/*`. Penggunaan tanda `*` dimaksudkan untuk membuat _dynamic patterns_ yang dapat mencocokkan banyak URL.
 
 **Forwarding URL**
 
-![Gambar 16]({{ site.url }}{{ page.assets }}/gambar_16.png)
+![Gambar 16]({{ page.assets }}/gambar_16.png)
 
 Dikarenakan saya menggunakan nama domain **bandithijo.com**, maka saya perlu melakukan _forwarding URL_. Tujuannya, apabila terdapat pengunjung yang mengetikkan **www.bandithijo.com** akan langsung diarahkan ke URL **https://bandithijo.com**.
 
 **Cache Level**
 
-![Gambar 17]({{ site.url }}{{ page.assets }}/gambar_17.png)
+![Gambar 17]({{ page.assets }}/gambar_17.png)
 
 Mungkin teman-teman ingin menggunakan fitur cache level yang diberikan oleh CloudFlare.
 
@@ -313,11 +313,11 @@ Sebagai contoh di atas, saya menggunakan "No Query String".
 
 Sebelumnya saya menggunakan "Cache Everything", namun kekurangannya, setiap kita melakukan perubahan pada website kita, hasilya tidak langsung dapat terlihat dalam beberapa saat. Untuk memaksanya, ~~mungkin~~ kita dapat melakukan pembersihan cache dengan **Purge Everything**.
 
-![Gambar 18]({{ site.url }}{{ page.assets }}/gambar_20.png)
+![Gambar 18]({{ page.assets }}/gambar_20.png)
 
 Nah! setelah selesai melakukan 3 konfigurasi **Page Rules** di atas, maka, tampilan akhir dari konfigurasi **Page Rules** akan seperti ini.
 
-![gambar 19]({{ site.url }}{{ page.assets }}/gambar_18.png)
+![gambar 19]({{ page.assets }}/gambar_18.png)
 
 *Perhatikan! **Always Use HTTPS**, harus berada di layer paling atas.
 
@@ -362,7 +362,7 @@ Terima kasih saya ucapkan kepada kang [Sucipto](https://sucipto.net/) yang telah
 > 
 > Pertanggal 28 Januari 2019, saya sudah bermigrasi dari layanan CloudFlare ke Netlify.
 > 
-> Ceritanya, dapat teman-teman baca di sini, "[BanditHijo.com, Bermigrasi dari Cloudflare ke Netlify]({{ site.url }}/blog/bermigrasi-dari-cloudflare-ke-netlify)".
+> Ceritanya, dapat teman-teman baca di sini, "[BanditHijo.com, Bermigrasi dari Cloudflare ke Netlify](/blog/bermigrasi-dari-cloudflare-ke-netlify)".
 
 
 ## Referensi

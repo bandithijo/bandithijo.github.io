@@ -18,14 +18,14 @@ Ditambah lagi [Donovan Nagel](https://www.i-bsd.com/) melalui [video-video log-n
 
 Selama ini saya hanya memanfaatkan **dmenu**, itu pun tidak benar-benar menggunakan dmenu karena saya kombinasikan dengan **Rofi** sebagai application launcher dan banyak hal lainnya.
 
-Saya tertarik menggunakan **dwm**, *Dynamic Window Manager*, sebuah window manager yang dikelola oleh Suckless. Karena kedua orang di atas menggunakan window manager ini. Namun, saya masih menyukai [**i3wm** dan belum menemukan jalan buntu]({{ site.url }}/blog/i3wm-window-manager-yang-taktis-namun-praktis).
+Saya tertarik menggunakan **dwm**, *Dynamic Window Manager*, sebuah window manager yang dikelola oleh Suckless. Karena kedua orang di atas menggunakan window manager ini. Namun, saya masih menyukai [**i3wm** dan belum menemukan jalan buntu](/blog/i3wm-window-manager-yang-taktis-namun-praktis).
 
 
 ## Permasalahan
 
 Malam tadi, **Termite** salah satu Terminal emulator yang saya gunakan dan saya andalkan tiba-tiba saja salah dalam menampilkan glyph font untuk simbol-simbol bawaan dari **Devicons**. Saya mendapati kesalahan ini pada **NERDTree** (vim sidebar file manager) dan **Ranger**.
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
 Gambar 1. Termite dan ST
 
@@ -211,7 +211,7 @@ Saya sangat puas dengan hasilnya. Dikarenakan ada beberapa hal yang saya tidak d
 1. Glyph font yang sesuai
 1. Dapat menghandle w3m dalam Ranger dengan baik
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.gif)
+![Gambar 2]({{ page.assets }}/gambar-02.gif)
 
 
 ## Kekurangan
@@ -232,7 +232,7 @@ Saya sangat puas dengan hasilnya. Dikarenakan ada beberapa hal yang saya tidak d
 
 Secara *default*, pada Window Title, st hanya menampilkan detail berupa tulisan "st".
 
-Untuk dapat membuat Window Title menjadi lebih dinamis, dapat mengikuti catatan yang sudah saya tulis pada artikel ini, ["Konfigurasi Window Title untuk Simple/Suckless Terminal"]({{ site.url }}/blog/konfigurasi-window-title-st-terminal).
+Untuk dapat membuat Window Title menjadi lebih dinamis, dapat mengikuti catatan yang sudah saya tulis pada artikel ini, ["Konfigurasi Window Title untuk Simple/Suckless Terminal"](/blog/konfigurasi-window-title-st-terminal).
 
 
 ### Pengetesan Font

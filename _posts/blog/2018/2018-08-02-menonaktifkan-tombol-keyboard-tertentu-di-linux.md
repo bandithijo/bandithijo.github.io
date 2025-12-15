@@ -10,7 +10,7 @@ tags: ["tips"]
 description: "Terkadang kita ingin membuat tombol tertentu pada keyboard untuk tidak aktif atau mengganti fungsinya menjadi fungsi yang lain. Misal, menonaktifkan tombol PrtSc pada keyboard ThinkPad keluaran 2014 ke atas karena letaknya yang diapit dua tombol lain, Right Alt + PrtSc + Right Ctrl, sehingga lebih sering salah pencet saat akan menekan Alt atau Ctrl."
 ---
 
-![Banner]({{ site.url }}{{ page.assets }}/banner_post_19.png)
+![Banner]({{ page.assets }}/banner_post_19.png)
 
 
 ## Permasalahan

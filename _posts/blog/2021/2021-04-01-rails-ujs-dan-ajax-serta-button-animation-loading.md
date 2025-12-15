@@ -266,7 +266,7 @@ document.querySelector("#published-at").innerHTML = "<%= @book.published_at %>";
 
 Jadinya akan seperti ini.
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.gif)
+![Gambar 1]({{ page.assets }}/gambar-01.gif)
 
 Gambar 1. Demo Rails UJS & AJAX pada button
 
@@ -312,7 +312,7 @@ end
 
 Hasilnya akan seperti ini,
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.gif)
+![Gambar 2]({{ page.assets }}/gambar-02.gif)
 
 Gambar 2. Demo Rails UJS & AJAX pada button dengan animation loading
 

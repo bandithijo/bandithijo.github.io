@@ -12,7 +12,7 @@ description: "Ide untuk memberikan framing ini muncul saat saya ingin membuat th
 
 ## Sekenario Masalah
 
-Saya baru-baru saja menyeragamkan semua produksi video yang saya jadikan [vlog di YouTube]({{ site.url }}/youtube/).
+Saya baru-baru saja menyeragamkan semua produksi video yang saya jadikan [vlog di YouTube](/youtube/).
 
 Dalam video tersebut, saya menggunakan frame seperti ini:
 

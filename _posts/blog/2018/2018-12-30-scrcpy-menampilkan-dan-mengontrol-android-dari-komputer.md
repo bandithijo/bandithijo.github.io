@@ -108,7 +108,7 @@ Kita tidak perlu menambahkan aplikasi pada *smartphone* Android kita.
 
    Pada saat ini, akan muncul *window* baru yang akan menampilkan tampilan dari layar *smartphone* Andorid kita.
 
-   ![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
+   ![Gambar 1]({{ page.assets }}/gambar-01.png)
 
    Gambar 1. Scrcpy saat dijalankan
 
@@ -119,7 +119,7 @@ Untuk menghubungkan *smartphone* Android dengan laptop/komputer menggukanan kone
 
 1. Langkah pertama, kita harus mengetahui **IP address** yang dimilii oleh *smartphone* kita. Langkah paling mudah menurut saya, buka menu **Settings → About Phone → Status**.
 
-   ![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.jpg)
+   ![Gambar 2]({{ page.assets }}/gambar-02.jpg)
 
    Gambar 2. Melihat IP address dari smartphone
 

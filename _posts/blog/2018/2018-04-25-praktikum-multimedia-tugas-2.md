@@ -10,14 +10,14 @@ tags: ["multimedia"]
 description: ""
 ---
 
-![Banner]({{ site.url }}{{ page.assets }}/banner_post_06.png)
+![Banner]({{ page.assets }}/banner_post_06.png)
 
 
 ## Hasil
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar_01.png)
+![Gambar 1]({{ page.assets }}/gambar_01.png)
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar_02.png)
+![Gambar 2]({{ page.assets }}/gambar_02.png)
 
 
 ## Video Dokumentasi

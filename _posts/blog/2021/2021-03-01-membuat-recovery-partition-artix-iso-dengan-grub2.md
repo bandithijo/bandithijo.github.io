@@ -136,7 +136,7 @@ Kalau sudah begini tinggal mencobanya.
 
 Karena kita membuat partisi recovery, otomatis oleh GVFS, partisi ini akan terbaca di File Manager.
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
 Gambar 1. Lokasi dari RECOVERY partition
 
@@ -168,7 +168,7 @@ Setelah itu, jalankan perintah:
 $ sudo udevadm trigger --verbose
 ```
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.png)
+![Gambar 2]({{ page.assets }}/gambar-02.png)
 
 Gambar 2. RECOVERY partition yang sudah hidden
 

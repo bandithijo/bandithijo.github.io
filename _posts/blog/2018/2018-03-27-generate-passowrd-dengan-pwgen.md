@@ -10,7 +10,7 @@ tags: ["security", "pwgen"]
 description: "pwgen adalah perkakas command line interface yang praktis digunakan untuk mengenerate password."
 ---
 
-![Banner]({{ site.baseurl }}{{ page.assets }}/banner_post_00.png)
+![Banner]({{ page.assets }}/banner_post_00.png)
 
 
 ## Latar Belakang

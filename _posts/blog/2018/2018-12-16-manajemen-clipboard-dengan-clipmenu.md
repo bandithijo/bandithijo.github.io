@@ -23,7 +23,7 @@ Hal yang saya alami tidak akan terjadi apabila saya menggunakan *clipboard manag
 
 Clipmenu adalah *clipboard manager* yang menggunakan dmenu atau Rofi sebagai antar muka.
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
 Gambar 1. Tampilan Clipmenu menggunakan Rofi sebagai antar muka
 
@@ -249,7 +249,7 @@ Saya menggunakan :
 
 Untuk memilih clip mana yang ingin kita pergunakan kembali, tinggal menekan arrow key <kbd> ↓ </kbd> / <kbd> ↑ </kbd> untuk memilih, tekan <kbd>ENTER</kbd> untuk memasukkannya pada PRIMARY. Kemudian, tinggal kita *paste* di mana saja.
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.gif)
+![Gambar 2]({{ page.assets }}/gambar-02.gif)
 
 Gambar 2. Ilustrasi penggunaan Clipmenu dengan Rofi
 

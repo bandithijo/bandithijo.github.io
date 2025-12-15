@@ -14,7 +14,7 @@ description: "Catatan ini mengenai cara membuat user dalam jumlah banyak sekalig
 
 Kemarin, 2019/03/17, ada salah satu anggota group Telegram BGLI (Belajar GNU/Linux Indonesia) menanyakan perihal ini.
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
 Gambar 1. Pertanyaan oleh: **./XiongXong @sandy147**
 
@@ -37,7 +37,7 @@ Alur program yang terpikirkan oleh saya adalah seperti ini:
 1. Meminta inputan kepada user, berapa banyak jumlah user baru yang ingin dibuat.
 2. Mengulang-ulang perintah pembuatan user baru sesuai dengan jumlah yang diinputkan oleh user.
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.png)
+![Gambar 2]({{ page.assets }}/gambar-02.png)
 
 
 ### Ngoding
@@ -146,5 +146,5 @@ Terima kasih.
 
 ## Referensi
 
-1. [BanditHijo.Com/Arch - Step 6: Create User, Password, and Hostname]({{ site.url }}/arch/step-6-create-user-password-and-hostname#61-user-and-password) \
+1. [BanditHijo.Com/Arch - Step 6: Create User, Password, and Hostname](/arch/step-6-create-user-password-and-hostname#61-user-and-password) \
    Diakses tanggal: 2019-03-18

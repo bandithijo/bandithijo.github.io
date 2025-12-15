@@ -98,11 +98,11 @@ Ada beberapa paket tambahan yang saya pergunakan, Seperti
 
 Berikut ini adalah beberapa tampilan NetworkManager menggunakan GUI.
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
 Gambar 1. nm-applet
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.png)
+![Gambar 2]({{ page.assets }}/gambar-02.png)
 
 Gambar 2. nm-connection-editor
 
@@ -113,19 +113,19 @@ Untuk saat ini, saya lebih sering menggunakan TUI, dan tidak menggunakan kedua p
 
 Fungsinya sama saja, hanya berbeda tampilan.
 
-![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-03.png)
+![Gambar 3]({{ page.assets }}/gambar-03.png)
 
 Gambar 3. nmtui, bagian depan
 
-![Gambar 4]({{ site.url }}{{ page.assets }}/gambar-04.png)
+![Gambar 4]({{ page.assets }}/gambar-04.png)
 
 Gambar 4. nmtui, bagian Edit connection
 
-![Gambar 5]({{ site.url }}{{ page.assets }}/gambar-05.png)
+![Gambar 5]({{ page.assets }}/gambar-05.png)
 
 Gambar 5. nmtui, bagian Activate a connection
 
-![Gambar 6]({{ site.url }}{{ page.assets }}/gambar-06.png)
+![Gambar 6]({{ page.assets }}/gambar-06.png)
 
 Gambar 6. nmtui, bagian Set system hostname
 
@@ -151,7 +151,7 @@ bindsym $mod+F8 exec --no-startup-id networkmanager_dmenu
 
 Aplikasi ini dapat kita gunakan untuk memilih-mili jaringan dan beberapa menu jaringan. Dapat menggunakan `dmenu` atau `rofi` sebagai frontend nya. Tentu saja saya memilih menggunakan `rofi` agar seragam dengan theme. Hehehe.
 
-![Gambar 7]({{ site.url }}{{ page.assets }}/gambar-07.gif)
+![Gambar 7]({{ page.assets }}/gambar-07.gif)
 
 Gambar 7. Tampilan NetworkManager_dmenu dengan Rofi
 
@@ -164,11 +164,11 @@ Menggunakan Arch Linux memberikan kita kemudahan untuk membongkar-pasang berbaga
 
 Beberapa waktu yang lalu, saya pun sempat mencoba **connman** dan **wicd**.
 
-![Gambar 8]({{ site.url }}{{ page.assets }}/gambar-08.png)
+![Gambar 8]({{ page.assets }}/gambar-08.png)
 
 Gambar 8. Tampilan GUI dari `connman-gtk`
 
-![Gambar 9]({{ site.url }}{{ page.assets }}/gambar-09.png)
+![Gambar 9]({{ page.assets }}/gambar-09.png)
 
 Gambar 9. Tampilan GUI dari `wicd-gtk`
 

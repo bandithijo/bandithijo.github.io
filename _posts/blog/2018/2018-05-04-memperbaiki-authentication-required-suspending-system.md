@@ -10,7 +10,7 @@ tags: ["xfce"]
 description: "Saya baru saja berpindah desktop environment kembali menggunakan XFCE4. Permasalahan yang dulu pernah muncul salah satunya setiap kali sistem baru bangkit dari kondisi *sleep* terdapat sebuah popup window yang bertuliskan 'Authentication is required for suspending the system'."
 ---
 
-![Banner]({{ site.url }}{{ page.assets }}/banner_post_11.png)
+![Banner]({{ page.assets }}/banner_post_11.png)
 
 
 ## Permasalahan

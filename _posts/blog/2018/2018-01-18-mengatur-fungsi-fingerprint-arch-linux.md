@@ -217,7 +217,7 @@ Tujuannya agar kita diminta untuk memasukkan password terlebih dahulu, apabila g
 
 Kalau tidak ingin menginputkan password, langsung saja tekan <kbd>Enter</kbd> untuk melewati inputan password dan langsung ke permintaan fingerprint.
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.gif)
+![Gambar 1]({{ page.assets }}/gambar-01.gif)
 
 
 #### Polkit
@@ -241,7 +241,7 @@ session   include     system-auth
 
 Demonya begini,
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.gif)
+![Gambar 2]({{ page.assets }}/gambar-02.gif)
 
 
 #### i3lock
@@ -271,7 +271,7 @@ auth   sufficient   pam_fprintd.so
 
 Untuk dapat menggunakannya, saat i3lock sudah aktif, terlebih dahulu kita harus menekan tombol <kbd>Enter</kbd>, maka _fingerprint scanner_ akan aktif, kemudian _unlock_ i3lock dengan melakukan _enroll fingerprint_.
 
-![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-03.gif)
+![Gambar 3]({{ page.assets }}/gambar-03.gif)
 
 
 ## Referensi

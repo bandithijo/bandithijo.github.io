@@ -32,7 +32,7 @@ Kita akan menggunakan MailCatcher.
 
 Dengan MailCatcher, kita dapat manangkap email yang dikirimkan dengan prokotol SMTP ke localhost.
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
 Gambar 1. Interface dari MailCatcher
 

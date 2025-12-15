@@ -31,9 +31,9 @@ Oke, kita langsung ke konfigurasi yaa.
 
 Pada tahap ini, saya akan membagi menjadi 3 tahapan.
 
-1. [Konfigurasi *Custom Domain* di GitHub]({{ site.url }}/blog/konfigurasi-custom-domain-github-pages-dengan-amazon-route53#1-konfigurasi-custom-domain-di-github)
-2. [Konfigurasi *Hosted Zone* di Route 53]({{ site.url }}/blog/konfigurasi-custom-domain-github-pages-dengan-amazon-route53#2-konfigurasi-hosted-zone-di-route-53)
-3. [Konfigurasi *Nameservers* di Dewaweb (Platform penyedia layanan Domain yang saya gunakan)]({{ site.url }}/blog/konfigurasi-custom-domain-github-pages-dengan-amazon-route53#3-konfigurasi-nameservers-di-penyedia-layanan-domain)
+1. [Konfigurasi *Custom Domain* di GitHub](/blog/konfigurasi-custom-domain-github-pages-dengan-amazon-route53#1-konfigurasi-custom-domain-di-github)
+2. [Konfigurasi *Hosted Zone* di Route 53](/blog/konfigurasi-custom-domain-github-pages-dengan-amazon-route53#2-konfigurasi-hosted-zone-di-route-53)
+3. [Konfigurasi *Nameservers* di Dewaweb (Platform penyedia layanan Domain yang saya gunakan)](/blog/konfigurasi-custom-domain-github-pages-dengan-amazon-route53#3-konfigurasi-nameservers-di-penyedia-layanan-domain)
 
 
 ### 1. Konfigurasi Custom Domain di GitHub
@@ -42,7 +42,7 @@ Di sini, saya mengasumsikan teman-teman sudah memiliki GitHub Pages.
 
 Secara *default* GitHub Pages memiliki nama domain seperti ini **username.github.io**.
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
 Untuk mengatur konfirgurasi dari *custom domain* pada GitHub Pages, caranya sangat mudah.
 
@@ -52,7 +52,7 @@ Untuk mengatur konfirgurasi dari *custom domain* pada GitHub Pages, caranya sang
 
 3. Scrolling ke bawah, sampai menemukan section "GitHub Pages", seperti di bawah.
 
-   ![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.png)
+   ![Gambar 2]({{ page.assets }}/gambar-02.png)
 
 4. Pada bagian **Custom domain**, isikan dengan domain yang teman-teman miliki.
 
@@ -95,7 +95,7 @@ Selanjutnya akan saya bagi dalam 3 tahapan.
 
 3. Buat Hosted Zone baru dengan memilih tombol biru pada bagian atas bertuliskan "**Create Hosted Zone**".
 
-   ![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-03.png)
+   ![Gambar 3]({{ page.assets }}/gambar-03.png)
 
 4. Isikan **Domain Name:** dengan domain yang teman-teman miliki.
 
@@ -109,7 +109,7 @@ Selanjutnya akan saya bagi dalam 3 tahapan.
 
 9. Tampilannya akan seperti di bawah ini.
 
-   ![Gambar 4]({{ site.url }}{{ page.assets }}/gambar-04.png)
+   ![Gambar 4]({{ page.assets }}/gambar-04.png)
 
 10. Saat pertama kali dibuat, hanya akan terdapat dua buah record set, **Nameservers** dan **SOA (*Start of authority*)**, seperti yang saya kotak merah pada gambar di atas.
 
@@ -133,7 +133,7 @@ Selanjutnya akan saya bagi dalam 3 tahapan.
 
 1. Buat record set A dengan memilih tombol biru **Create Record Set** di bagian atas.
 
-   ![Gambar 5]({{ site.url }}{{ page.assets }}/gambar-05.png)
+   ![Gambar 5]({{ page.assets }}/gambar-05.png)
 
 2. Lalu isikan seperti gambar di atas.
 
@@ -157,7 +157,7 @@ Selanjutnya akan saya bagi dalam 3 tahapan.
 
 1. Buat record set CNAME dengan memilih tombol biru **Create Record Set** di bagian atas.
 
-   ![Gambar 6]({{ site.url }}{{ page.assets }}/gambar-06.png)
+   ![Gambar 6]({{ page.assets }}/gambar-06.png)
 
 2. Lalu isikan seperti gambar di atas.
 
@@ -187,7 +187,7 @@ Bagi teman-teman yang tidak membeli domain di Dewaweb, jangan khawatir, karena m
 
 Secara garis besar, tampilannya akan mirip seperti di bawah ini.
 
-![Gambar 7]({{ site.url }}{{ page.assets }}/gambar-07.png)
+![Gambar 7]({{ page.assets }}/gambar-07.png)
 
 Masukkan 4 alamat Nameservers yang sudah kita catat sebelumnya.
 
@@ -278,7 +278,7 @@ Terima kasih.
 
 Alhamdulillah, Final Submission saya telah dinyatakan lulus.
 
-![Gamabr 8]({{ site.url }}{{ page.assets }}/gambar-08.png)
+![Gamabr 8]({{ page.assets }}/gambar-08.png)
 
 
 ## Referensi

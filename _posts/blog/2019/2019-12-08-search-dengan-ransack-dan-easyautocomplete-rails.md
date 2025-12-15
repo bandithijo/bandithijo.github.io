@@ -27,11 +27,11 @@ Misal, dalam project yang saya kerjakan adalah field location dan nama dari expe
 
 Kira-kira, hasilnya akan seperti ini.
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
 Gambar 1. Autocomplete suggestion pada input field pencarian
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.gif)
+![Gambar 2]({{ page.assets }}/gambar-02.gif)
 
 Gambar 2. Ilustrasi bergerak dari autocomplete suggestion pada pencarian
 
@@ -297,7 +297,7 @@ http://localhost:3000/experiences.json?q=location_atau_nama_experience
 
 akan seperti ini hasilnya.
 
-![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-03.png)
+![Gambar 3]({{ page.assets }}/gambar-03.png)
 
 Gambar 3. Hasil pencarian dalam bentuk JSON
 

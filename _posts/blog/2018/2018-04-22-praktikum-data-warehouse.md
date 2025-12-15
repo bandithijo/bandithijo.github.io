@@ -10,7 +10,7 @@ tags: ["data warehouse"]
 description: "Pada praktikum ini, saya menggunakan MySQL Workbench sebagai aplikasi database management. Dapat juga menggunakan aplikasi sejenis yang lain seperti PhpMyAdmin, PGAdmin4, dll."
 ---
 
-![Banner]({{ site.url }}{{ page.assets }}/banner_post_04.png)
+![Banner]({{ page.assets }}/banner_post_04.png)
 
 
 ## Step 00: Persiapan
@@ -43,7 +43,7 @@ Aplikasi dan soal dapat diunduh pada tautan di bawah.
 
 ## Step 03: Membuat Skema Bintang
 
-![Gambar 3]({{ site.url }}{{ page.assets }}/thumbnails_dw_3_ud.png)
+![Gambar 3]({{ page.assets }}/thumbnails_dw_3_ud.png)
 
 > Resources:
 > 

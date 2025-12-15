@@ -18,7 +18,7 @@ Polybar adalah *standalone* taskbar/panel yang dapat kita gunakan sebagai wadah 
 
 Biasanya pengguna Desktop Environment menyebutnya dengan istilah "Panel".
 
-Saya juga pernah menyinggung sedikit tentang Polybar pada tulisan sebelumnya, mengenai "[i3wm, Window Manager yang Taktis namun Praktis]({{ site.url }}/i3wm-window-manager-yang-taktis-namun-praktis)".
+Saya juga pernah menyinggung sedikit tentang Polybar pada tulisan sebelumnya, mengenai "[i3wm, Window Manager yang Taktis namun Praktis](/blog/i3wm-window-manager-yang-taktis-namun-praktis)".
 
 Taskbar/panel adalah salah satu aplikasi pendukung agar kita dapat menggunakan sistem kita dengan mudah.
 
@@ -42,9 +42,9 @@ Status indikator yang *optional* seperti:
 
 Di bawah ini adalah contoh Polybar yang saya pergunakan.
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.png)
+![Gambar 2]({{ page.assets }}/gambar-02.png)
 
 Jangan bingung, tampilan Polybar saya memang sederhana seperti ini saja.
 
@@ -65,8 +65,8 @@ Mumpung sedang pembahasan taskbar/panel, saya sekalian memberi informasi bahwa m
 
 Dalam proses konfigurasi Polybar, saya akan membagi menjadi 2 sesi, yaitu:
 
-1. [Konfigurasi Menjalankan Polybar]({{ site.url }}/blog/polybar-mudah-dikonfig-dan-praktis#1-konfigurasi-menjalankan-polybar)
-2. [Konfigurasi Memodifikasi Polybar]({{ site.url }}/blog/polybar-mudah-dikonfig-dan-praktis#2-konfigurasi-memodifikasi-polybar)
+1. [Konfigurasi Menjalankan Polybar](/blog/polybar-mudah-dikonfig-dan-praktis#1-konfigurasi-menjalankan-polybar)
+2. [Konfigurasi Memodifikasi Polybar](/blog/polybar-mudah-dikonfig-dan-praktis#2-konfigurasi-memodifikasi-polybar)
 
 Tujuannya untuk memudahkan saat ada pertanyaan mengenai "konfigurasi Polybar".
 
@@ -193,8 +193,8 @@ Memanggil/menjalankan Polybar diperlukan agar Polybar dapat menampakkan diri pad
 
 Cara menjalankan Polybar saya bagi menjadi 2, yaitu :
 
-1. [Langsung]({{ site.url }}/blog/polybar-mudah-dikonfig-dan-praktis#1-langsung)
-2. [Tidak Langsung]({{ site.url }}/blog/polybar-mudah-dikonfig-dan-praktis#2-tidak-langsung)
+1. [Langsung](/blog/polybar-mudah-dikonfig-dan-praktis#1-langsung)
+2. [Tidak Langsung](/blog/polybar-mudah-dikonfig-dan-praktis#2-tidak-langsung)
 
 
 ##### 1. Langsung
@@ -329,7 +329,7 @@ Kalau sudah, restart BSPWM.
 
 Saat pertama kali menjalankan Polybar, secara *default* akan menampilkan tampilan seperti ini.
 
-![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-03.png)
+![Gambar 3]({{ page.assets }}/gambar-03.png)
 
 Gambar di atas adalah contoh dari pemanggilan `[bar/example]` dari file `config` yang belum kita modifikasi.
 
@@ -339,10 +339,10 @@ Nah sekarang kita akan mem-*breakdown* isi dari file config.
 
 Secara garis besar, di dalam file config, baris-baris kode tersebut terkelompokkan menjadi beberapa blok.
 
-1. [**Blok [colors]**]({{ site.url }}/blog/polybar-mudah-dikonfig-dan-praktis#blok-colors)
-2. [**Blok [bar/nama_bar]**]({{ site.url }}/blog/polybar-mudah-dikonfig-dan-praktis#blok-barnama_bar)
-3. [**Blok-blok [module/nama_modul]**]({{ site.url }}/blog/polybar-mudah-dikonfig-dan-praktis#blok-modulenama_modul)
-4. [**Blok [settings]**]({{ site.url }}/blog/polybar-mudah-dikonfig-dan-praktis#blok-settings)
+1. [**Blok [colors]**](/blog/polybar-mudah-dikonfig-dan-praktis#blok-colors)
+2. [**Blok [bar/nama_bar]**](/blog/polybar-mudah-dikonfig-dan-praktis#blok-barnama_bar)
+3. [**Blok-blok [module/nama_modul]**](/blog/polybar-mudah-dikonfig-dan-praktis#blok-modulenama_modul)
+4. [**Blok [settings]**](/blog/polybar-mudah-dikonfig-dan-praktis#blok-settings)
 
 Selanjutnya, akan kita bahas satu-persatu mengenai isi yang ada di dalam blok-blok tersebut.
 
@@ -1225,7 +1225,7 @@ Saya menggunakan kombinasi keyboard <kbd>SUPER</kbd>+<kbd>F12</kbd> untuk mengak
 
 Berikut ini adalah demonstrasinya.
 
-![Gambar 4]({{ site.url }}{{ page.assets }}/gambar-04.gif)
+![Gambar 4]({{ page.assets }}/gambar-04.gif)
 
 
 ## Contoh File Konfigurasi

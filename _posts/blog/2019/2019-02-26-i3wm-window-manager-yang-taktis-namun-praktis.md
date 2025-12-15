@@ -14,7 +14,7 @@ description: "i3WM disebut-sebut sebagai Window Manager yang cocok untuk kalian 
 
 Setelah setahun lebih menggunakan **i3** Window Manager (selanjutnya akan saya sebut sebagai i3wm), saya merasa sudah waktunya untuk membagikan pengalaman dalam menggunakan Window Manager yang sekaligus merupakan Window Manager pertama yang saya gunakan sehari-hari.
 
-Berdasarkan daftar log video pada [bandithijo.com/vlog]({{ site.url }}/vlog/){:target="_blank"}, saya menggunakan i3wm pada 30 Oktober 2017.
+Berdasarkan daftar log video pada [bandithijo.com/vlog](/vlog/){:target="_blank"}, saya menggunakan i3wm pada 30 Oktober 2017.
 
 Saya merasa perlu untuk membuat catatan mengenai apa saja yang sudah saya manfaatkan dan pergunakan dengan i3wm. Mungkin dari catatan ini, teman-teman yang membaca mendapatkan informasi yang subjektif dari sudut pandang saya sebagai pengguna. Jujur saja, saya pun sangat menyukai tulisan-tulisan yang mengulas tentang suatu teknologi dari sudut pandang pengguna.
 
@@ -1321,7 +1321,7 @@ exec --no-startup-id xfce4-power-manager
 
 Saya menggunakan aplikasi ini karena mudah digunakan, secara dulunya saya adalah XFCE user.
 
-Beberapa pemanfaatan aplikasi xfce-power-manager yang pernah saya tuliskan ada [di sini]({{ site.url }}/blog/mengaktifkan-presentasion-mode-xfce4-dari-terminal){:target="_blank"}.
+Beberapa pemanfaatan aplikasi xfce-power-manager yang pernah saya tuliskan ada [di sini](/blog/mengaktifkan-presentasion-mode-xfce4-dari-terminal){:target="_blank"}.
 
 ##### Clipboard
 
@@ -1336,7 +1336,7 @@ Saya menggunakan Clipmenu.
 exec --no-startup-id clipmenud
 {% endhighlight %}
 
-Konfigurasi ini sudah pernah saya bahas pada postingan, [di sini]({{ site.url }}/blog/manajemen-clipboard-dengan-clipmenu){:target="_blank"}.
+Konfigurasi ini sudah pernah saya bahas pada postingan, [di sini](/blog/manajemen-clipboard-dengan-clipmenu){:target="_blank"}.
 
 ##### Disable Touchpad
 

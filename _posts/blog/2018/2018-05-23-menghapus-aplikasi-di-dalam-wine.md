@@ -10,7 +10,7 @@ tags: ["wine"]
 description: "Terkadang kita ingin mengujicoba apakah aplikasi yang kita maksud dapat berjalan dengan lancar di sistem operasi GNU/Linux yang kita miliki saat ini. Namun, setelah dipasang, kita bingung bagaimana cara menghapusnya. Apakah cukup menghapus direktori program tersebut yang terdapat pada Program Files atau harus menjalankan tool Uninstall Program seperti yang terdapat pada Microsoft Windows."
 ---
 
-![Banner]({{ site.url }}{{ page.assets }}/banner_post_14.png)
+![Banner]({{ page.assets }}/banner_post_14.png)
 
 
 ## Pendahuluan
@@ -43,7 +43,7 @@ $ wine uninstaller
 
 Berikut saya sertakan ilustrasinya.
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar_01.gif)
+![Gambar 1]({{ page.assets }}/gambar_01.gif)
 
 Gimana? Sangat mudah sekali bukan?
 

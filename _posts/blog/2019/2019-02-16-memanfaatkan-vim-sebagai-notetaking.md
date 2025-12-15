@@ -53,7 +53,7 @@ Seperti itu saja. Sederhana bukan?
    $ mkdir -p ~/doc/notetaking
    ```
 
-   **doc** -- adalah Kependekan dari **Documents**. [Lihat bagaimana cara saya merubah penamaan direktori ini]({{ site.url }}/blog/merubah-nama-direktori-pada-home).
+   **doc** -- adalah Kependekan dari **Documents**. [Lihat bagaimana cara saya merubah penamaan direktori ini](/blog/merubah-nama-direktori-pada-home).
 
 2. Selanjutnya, saya akan membuat file `README.md`, hanya untuk gaya-gaya saja, sebagai penanda bahwa ini adalah direktori yang saya pergunakan untuk *note-taking* dan mungkin di lain waktu akan saya tambahkan beberapa *rules* yang akan saya pergunakan dalam melakukan *note-taking* versi saya sendiri.
 
@@ -152,11 +152,11 @@ Seperti itu saja. Sederhana bukan?
 
    **Sebelum,**
 
-   ![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
+   ![Gambar 1]({{ page.assets }}/gambar-01.png)
 
    **Sesudah,**
 
-   ![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.png)
+   ![Gambar 2]({{ page.assets }}/gambar-02.png)
 
    Saya menggunakan NERDTree, untuk membuat file baru. Karena sudah terbiasa menggunakan NERDTree.
 
@@ -186,7 +186,7 @@ Seperti itu saja. Sederhana bukan?
 
 ## Hasilnya
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-03.gif)
+![Gambar 1]({{ page.assets }}/gambar-03.gif)
 
 
 ## Pesan Penulis

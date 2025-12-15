@@ -31,7 +31,7 @@ Ternyata, terdapat berita "Community Account Migration" pada portal [^2] yang ma
 
 Saya coba daftarkan username saya `bandithijo`, ternyata sudah terdaftar. Namun, saya **tidak bisa melakukan password reset**, dan mendapatkan pesan error,
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
 Gambar 1. Error saat Password Reset
 
@@ -286,7 +286,7 @@ Setelah saya coba lagi langkah 1 (password reset), ternyata berhasil! 🎉
 
 #### 1. Reset Password
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.png)
+![Gambar 2]({{ page.assets }}/gambar-02.png)
 
 Gambar 2. Memilih media untuk menerima token reset password
 
@@ -324,13 +324,13 @@ Dapat dilihat token untuk mereset password sudah didapatkan.
 
 Copy token atau klik link yang diberikan.
 
-![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-03.png)
+![Gambar 3]({{ page.assets }}/gambar-03.png)
 
 Gambar 3. Memperbaharui password dengan token
 
 Kemudian tekan **CHANGE PASSWORD**.
 
-![Gambar 4]({{ site.url }}{{ page.assets }}/gambar-04.png)
+![Gambar 4]({{ page.assets }}/gambar-04.png)
 
 Gambar 4. Popup ketika berhasil memperbahrui password
 
@@ -367,7 +367,7 @@ Copy token atau click link yang diberikan.
 
 Jika berhasil, akan mendapatkan popup seperti ini.
 
-![Gambar 5]({{ site.url }}{{ page.assets }}/gambar-05.png)
+![Gambar 5]({{ page.assets }}/gambar-05.png)
 
 Gambar 5. Berhasil Memvalidasi Email
 

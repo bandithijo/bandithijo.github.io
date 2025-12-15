@@ -29,7 +29,7 @@ Setelah saya amati, statusline yang dihandle oleh `vim-airline` mengalami delay 
 
 Coba perhatikan perbandingan Vim pada user biasa dan pada user root di bawah ini.
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.gif)
+![Gambar 1]({{ page.assets }}/gambar-01.gif)
 
 Gambar 1. Perbandingan startup Vim pada root dan Vim pada user
 
@@ -52,23 +52,23 @@ Dan untuk menghandle bufferline, saya menggunakan [**mengelbrecht/lightline-buff
 
 Berikut ini adalah gambar perbandingan tampilan antara **Vim-Airline** versus **Lightline** dan **Lightline-Bufferline**.
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.png)
+![Gambar 2]({{ page.assets }}/gambar-02.png)
 
 Gambar 2. irline (Kiri), Lightline (Kanan)
 
-![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-07.gif)
+![Gambar 3]({{ page.assets }}/gambar-07.gif)
 
 Gambar 3. Startup dengan Vim-Airline
 
-![Gambar 4]({{ site.url }}{{ page.assets }}/gambar-08.gif)
+![Gambar 4]({{ page.assets }}/gambar-08.gif)
 
 Gambar 4. Startup dengan Lightline
 
-![Gambar 5]({{ site.url }}{{ page.assets }}/gambar-05.png)
+![Gambar 5]({{ page.assets }}/gambar-05.png)
 
 Gambar 5. Vim-Airline
 
-![Gambar 6]({{ site.url }}{{ page.assets }}/gambar-06.png)
+![Gambar 6]({{ page.assets }}/gambar-06.png)
 
 Gambar 6. Lightline
 
@@ -302,11 +302,11 @@ endfunction
 
 ## Hasilnya
 
-![Gambar 7]({{ site.url }}{{ page.assets }}/gambar-03.png)
+![Gambar 7]({{ page.assets }}/gambar-03.png)
 
 Gambar 7. Lightline + Lightline-Bufferline
 
-![Gambar 8]({{ site.url }}{{ page.assets }}/gambar-04.png)
+![Gambar 8]({{ page.assets }}/gambar-04.png)
 
 Gambar 8. Tampilan saat tidak sibuk
 
@@ -405,7 +405,7 @@ set showtabline=2  " Show tabline
 set guioptions-=e  " Don't use GUI tabline
 ```
 
-Pada bagian `'right': [['string1'], ['string2']]` juga sudah saya lakukan modifikasi dari yang sebelumnya `'right': [['close']]` pada bagian [Tabline]({{ site.url }}/blog/lightline-alternatif-vim-statusline#tabline).
+Pada bagian `'right': [['string1'], ['string2']]` juga sudah saya lakukan modifikasi dari yang sebelumnya `'right': [['close']]` pada bagian [Tabline](/blog/lightline-alternatif-vim-statusline#tabline).
 
 Saya juga melakukan modifikasi terhadap `modified` indikator yang tadinya `+` saya ubah agar lebih terlihat jelas menjadi `●`.
 
@@ -413,11 +413,11 @@ Juga penambahan Devicons pada Filetype dan Fileformat.
 
 **Hasilnya**,
 
-![Gambar 9]({{ site.url }}{{ page.assets }}/gambar-09.png)
+![Gambar 9]({{ page.assets }}/gambar-09.png)
 
 Gambar 9. Dengan tambahan powerline symbol untuk master dan readonly
 
-![Gambar 10]({{ site.url }}{{ page.assets }}/gambar-10.png)
+![Gambar 10]({{ page.assets }}/gambar-10.png)
 
 Gambar 10. Dengan penambahan Devicon pada Filetype dan Fileformat
 

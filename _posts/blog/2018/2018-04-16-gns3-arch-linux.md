@@ -10,7 +10,7 @@ tags: ["gns3"]
 description: "Panduan dan catatan untuk memasang GNS3 mungkin lebih banyak untuk distribusi turunan Debian atau Ubuntu. Apakah tidak dapat dipasang di Arch Linux? Tentu saja bisa."
 ---
 
-![Banner]({{ site.url }}{{ page.assets }}/banner_post_03.png)
+![Banner]({{ page.assets }}/banner_post_03.png)
 
 
 ## Latar Belakang

@@ -25,7 +25,7 @@ Saya tidak akan berbasa-basi mengenai *privacy* di sini.
 
 Saya yakin teman-teman yang tertarik dengan topik ini memiliki alasan dan kepentingan masing-masing.
 
-Sebenarnya, saya sudah pernah menuliskan mengenai topik ini, namun terletak pada sub bab dari ebook proses instalasi Arch Linux pada UEFI firmware yang saya tulis [di sini]({{ site.url }}/arch/step-7-install-gnome-and-complete-installation#710-encrypt-home-directory).
+Sebenarnya, saya sudah pernah menuliskan mengenai topik ini, namun terletak pada sub bab dari ebook proses instalasi Arch Linux pada UEFI firmware yang saya tulis [di sini](/arch/step-7-install-gnome-and-complete-installation#710-encrypt-home-directory).
 
 Karena tidak aksesible banget, jadi saya memutuskan untuk membuat post tersendiri.
 
@@ -314,7 +314,7 @@ Tunggu proses penghapusan sampai selesai.
 
 Dengan begini, proses enkripsi Home direktori kita telah selesai.
 
-Apabila teman-teman ingin mengganti *password* dari user yang berarti juga harus mengganti *passphrase* dari Home direktori yang terenkripsi, silahkan mengunjungi tulisan saya yang ini, "[Mengganti Password User dari Home Direktori yang Terenkripsi]({{ site.url }}/blog/mengganti-password-user-dari-home-direktori-yang-terenkripsi)".
+Apabila teman-teman ingin mengganti *password* dari user yang berarti juga harus mengganti *passphrase* dari Home direktori yang terenkripsi, silahkan mengunjungi tulisan saya yang ini, "[Mengganti Password User dari Home Direktori yang Terenkripsi](/blog/mengganti-password-user-dari-home-direktori-yang-terenkripsi)".
 
 
 ## Pesan Penulis

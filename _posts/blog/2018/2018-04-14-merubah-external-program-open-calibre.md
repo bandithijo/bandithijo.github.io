@@ -10,7 +10,7 @@ tags: ["calibre"]
 description: "Untuk mengelola ebook yang saya kumpulkan, karena jumlahnya tidak sedikit, saya tidak menggunakan manajemen direktori untuk mengatur dan mengkategorikan koleksi ebook yang saya miliki. Karena, akan sangat merepotkan apabila kita ingin mencari dan menelusuri semua ebook yang kita miliki dalam satu waktu. Lebih mudah apabila kita menggunakan aplikasi yang menampilkan koleksi ebook yang kita miliki layaknya sebuah galeri foto atau rak buku di toko buku. Sehingga dapat memudahkan kita dalam memilih ebook apa yang akan kita baca, dan masih banyak segudang kemudahan lainnya yang bisa kita nikmati apabila kita menggunakan aplikasi untuk memanajemen koleksi ebook yang kita miliki. Karena latar belakang tersebut, saya menggunakan aplikasi ebook management yang bernama, Calibre."
 ---
 
-![Banner]({{ site.url }}{{ page.assets }}/banner_post_02.png)
+![Banner]({{ page.assets }}/banner_post_02.png)
 
 
 ## Latar Belakang
@@ -19,7 +19,7 @@ Beberapa hari lalu saya sedang giat-giatnya membaca beberapa *ebook* yang saya k
 
 Untuk mengelola *ebook* yang saya kumpulkan, karena jumlahnya ~~tidak sedikit~~, saya tidak menggunakan manajemen direktori untuk mengatur dan mengkategorikan koleksi *ebook* yang saya miliki. Karena, akan sangat merepotkan apabila kita ingin mencari dan menelusuri semua *ebook* yang kita miliki dalam satu waktu. Lebih mudah apabila kita menggunakan aplikasi yang menampilkan koleksi *ebook* yang kita miliki layaknya sebuah galeri foto atau rak buku di toko buku. Sehingga dapat memudahkan kita dalam memilih *ebook* apa yang akan kita baca, dan masih banyak segudang kemudahan lainnya yang bisa kita nikmati apabila kita menggunakan aplikasi untuk memanajemen koleksi *ebook* yang kita miliki. Karena latar belakang tersebut, saya menggunakan aplikasi *ebook management* yang bernama, [**Calibre**](https://calibre-ebook.com/).
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar_1.png)
+![Gambar 1]({{ page.assets }}/gambar_1.png)
 
 Gambar 1. Calibre pada GNU/Linux
 
@@ -62,15 +62,15 @@ Kita dapat menggunakan plugins yang sudah disediakan oleh Calibre, yaitu **Open 
 
 Berikut ilustrasinya.
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar_02.gif)
+![Gambar 2]({{ page.assets }}/gambar_02.gif)
 
 Gambar 2. Sebelum dipasang Plugin
 
-![Gambar 3]({{ site.url }}{{ page.assets }}/gambar_03.gif)
+![Gambar 3]({{ page.assets }}/gambar_03.gif)
 
 Gambar 3. Instalasi Plugin
 
-![Gambar 4]({{ site.url }}{{ page.assets }}/gambar_04.gif)
+![Gambar 4]({{ page.assets }}/gambar_04.gif)
 
 Gambar 4. Konfigurasi Open With
 

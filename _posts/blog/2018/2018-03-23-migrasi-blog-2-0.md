@@ -22,7 +22,7 @@ description: "Memilih platform untuk ngeblog memang mumet-mumet asik. Ini adalah
 
 Website: [wordpress.com](https://www.wordpress.com)
 
-![WordPress]({{ site.url }}{{ page.assets }}/gambar_08.png)
+![WordPress]({{ page.assets }}/gambar_08.png)
 
 "Migrasi Blog 2.0". Ya, sesuai judul dari post ini, **BanditHijo (R)-Chive**, bukan yang pertama kali saya migrasikan. Pertama kali saya menulis blog, saya memilih menggunakan WordPress sebagai _platform_ yang saya percayakan untuk menampung tulisan-tulisan saya. Saya perkirakan mungkin sejak 2010 saya mulai membuat _post_ pertama saya dengan WordPress.
 
@@ -35,7 +35,7 @@ Dengan WordPress, tidak begitu kesulitan bagi saya untuk memodifikasi WordPress 
 
 Website: [blogger.com](https://www.blogger.com)
 
-![BlogSpot]({{ site.url }}{{ page.assets }}/gambar_09.png)
+![BlogSpot]({{ page.assets }}/gambar_09.png)
 
 Singkat cerita, tahun 2012, saya berkeinginan untuk mencoba _platform_ lain. Saya memutuskan untuk berpindah _platform_ dari WordPress dan beralih menggunakan Blogger atau yang lebih dikenal dengan Blogspot, sebuah CMS yang dipayungin oleh Google. Saya cukup lama menggunakan Blogspot, hingga 2018 Maret, tepat dimana saya pun bermigrasi untuk yang kedua kalinya.
 
@@ -60,7 +60,7 @@ Templates: EJS, Pug, Haml, Swig, Nunjucks, Mustache, Handlebars, Twig, Marko
 
 Website: [hexo.io](https://hexo.io/)
 
-![Hexo]({{ site.url }}{{ page.assets }}/gambar_10.png)
+![Hexo]({{ page.assets }}/gambar_10.png)
 
 _Static Site Generator_ ini, adalah yang pertama kali memperkenalkan saya tentang konsep dari _Static Site Generator_. Saya belajar dari berbagai macam sumber, mulai dari YouTube, hingga artikel-artikel di internet. Proses saya belajar memakan waktu lama, hahaha, saya juga tidak begitu mengerti kenapa saya sangat malas dikala itu. Hingga 2018 Januari, saya memutuskan untuk serius mendalami Hexo.
 
@@ -75,7 +75,7 @@ Templates: Go
 
 Website: [gohugo.io](https://gohugo.io/)
 
-![Hugo]({{ site.url }}{{ page.assets }}/gambar_11.png)
+![Hugo]({{ page.assets }}/gambar_11.png)
 
 Selain Hexo, saya juga sudah mengenal nama lain, yaitu Hugo, namun karena saya belum pernah sama sekali belajar bahasa pemrograman Go, saya pikir akan sulit, sehingga saya memutuskan untuk tetap menggunakan Hexo.
 
@@ -90,7 +90,7 @@ Templates: Liquid
 
 Website: [jekyllrb.com](https://jekyllrb.com/)
 
-![Jekyll]({{ site.url }}{{ page.assets }}/gambar_12.png)
+![Jekyll]({{ page.assets }}/gambar_12.png)
 
 Karena sudah mengenal _static site generator_ dari Hexo dan Hugo, saya tidak begitu kesulitan untuk beradaptasi menggunakan Jekyll dalam memproduksi konten. Terlebih lagi saat membuat Jekyll _layout_, Jekyll menggunakan [Liquid](https://shopify.github.io/liquid/), dimana Liquid ini hampir mirip seperti [Jinja](http://jinja.pocoo.org/) _template_ dalam mengambil _variable_ atau _filters_ yang diperlukan, sehingga saya tidak membutuhkan waktu lama untuk mengerti dan beradaptasi.
 
@@ -143,7 +143,7 @@ Dari cerita-cerita di atas, saya berkali-kali menyinggung kata "_layout_". Kenap
 
 Saya mengadopsi desain dari blog lama saya, yang menggunakan template buatan [StyleShout](https://www.styleshout.com/). Yang menurut saya, desain _template_ ini mirip dengan _default template_ Blogspot di awal-awal kemunculannya, hal ini sangat membuat saya bernostalgia dan betah berlama-lama memandangi _template_ ini.
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar_01.png)
+![Gambar 1]({{ page.assets }}/gambar_01.png)
 
 Sederhana dan _old school_ sekali bukan?
 
@@ -156,23 +156,23 @@ Atas dasar kecintaan saya terhadap warna, desain, dan _layout_ dari template seb
 
 **HomePage**
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar_03.png)
+![Gambar 2]({{ page.assets }}/gambar_03.png)
 
 **Blog (Post List)**
 
-![Gambar 3]({{ site.url }}{{ page.assets }}/gambar_04.png)
+![Gambar 3]({{ page.assets }}/gambar_04.png)
 
 **Page**
 
-![Gambar 4]({{ site.url }}{{ page.assets }}/gambar_02.png)
+![Gambar 4]({{ page.assets }}/gambar_02.png)
 
 **Post**
 
-![Gambar 5]({{ site.url }}{{ page.assets }}/gambar_05.png)
+![Gambar 5]({{ page.assets }}/gambar_05.png)
 
 **Mobile Device Wide**
 
-![Gambar 6]({{ site.url }}{{ page.assets }}/gambar_06.png)
+![Gambar 6]({{ page.assets }}/gambar_06.png)
 
 Hohoho, sejujurnya saya sangat menyukai _layout_ ini. Karena saya bisa melakukan apa saja, meletakkan apa saja, dan memindahkan apa saja.
 

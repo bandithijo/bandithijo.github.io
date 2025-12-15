@@ -41,11 +41,11 @@ Nah, atas dasar permasalah tersebut, catatan ini saya buat.
 Kira-kira, tampilan jadinya akan seperti ini.
 
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
 Gambar 1. Multiple tag
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.png)
+![Gambar 2]({{ page.assets }}/gambar-02.png)
 
 Gambar 2. Autcomplete tag suggestion
 

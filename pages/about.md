@@ -46,7 +46,7 @@ Blog ini saya bangun menggunakan *Static Site Generator* yang bernama [**Jekyll*
 
 Tampilan dari tema blog ini juga dibuat sendiri agar saya lebih bebas membongkar dan memasang fitur-fitur yang ingin saya tambah dan kurangi di dalam blog ini.
 
-Ceritanya dapat teman-teman baca [**Migrasi BLog 2.0**]({{ site.url }}/blog/migrasi-blog-2-0){:target="_blank"}.
+Ceritanya dapat teman-teman baca [**Migrasi BLog 2.0**](/blog/migrasi-blog-2-0){:target="_blank"}.
 
 # Sistem Operasi yang digunakan?
 

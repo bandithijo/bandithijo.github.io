@@ -305,7 +305,7 @@ Setelah selesai, kita bisa menjalankan `neofetch`.
 [bandithijo@arch-distrobox ~]$ █
 ```
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
 Gambar 1. Shell default host system (kiri) & Shell pada arch-distrobox container (kanan)
 
@@ -359,7 +359,7 @@ $ gping google.com
 
 Berikut ini demonstrasinya,
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.gif)
+![Gambar 2]({{ page.assets }}/gambar-02.gif)
 
 Gambar 2. Demonstrasi menjalankan gping hasil export dari distrobox-export
 
@@ -475,7 +475,7 @@ StartupWMClass=spotify
 
 Berikut ini demonstrasinya,
 
-![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-03.gif)
+![Gambar 3]({{ page.assets }}/gambar-03.gif)
 
 Gambar 3. Demonstrasi pemasangan Spotify menggunakan yay dengan Distrobox
 
@@ -526,7 +526,7 @@ Atau, tinggal kita export agar dapat dipanggil lebih mudah dari host system.
 
 Berikut ini demonstrasinya,
 
-![Gambar 4]({{ site.url }}{{ page.assets }}/gambar-04.gif)
+![Gambar 4]({{ page.assets }}/gambar-04.gif)
 
 Gambar 4. Demonstrasi pemasangan Beekeeper Studio menggunakan yay pada Distrobox
 

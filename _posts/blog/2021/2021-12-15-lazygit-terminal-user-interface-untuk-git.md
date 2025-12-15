@@ -14,7 +14,7 @@ description: "Lazygit adalah Git Tools berupa Terminal User Interface yang dapat
 
 Lazygit adalah Terminal User Interface ~~sederhana~~ yang digunakan untuk mempermudah kita dalam menggunakan perintah-perintah Git. Ditulis dengan bahasa pemrograman Go oleh [Jesse Duffield](https://github.com/jesseduffield).
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
 
 ## Skenario
@@ -36,7 +36,7 @@ Pada catatan kali ini, saya akan mendokumentasikan secara tertulis pemaparan ten
 
 ### 1. Staging files fast
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.png)
+![Gambar 2]({{ page.assets }}/gambar-02.png)
 
 Pada section **Files**,
 
@@ -65,7 +65,7 @@ Keterangan,
 
 Letakkan cursor (highlight cursor) pada commit hash setelah last commit (setelah commit terakhir) (Lihat Gambar 3 di bawah).
 
-![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-03.png)
+![Gambar 3]({{ page.assets }}/gambar-03.png)
 
 Saya ingin melakukan reset terhadap commit hash **b5d7f96f**, maka cursor saya letakkan pada commit hash **8b27e34f**, kemudian tekan <kbd>g</kbd>.
 
@@ -75,13 +75,13 @@ Saya ingin melakukan reset terhadap commit hash **b5d7f96f**, maka cursor saya l
 
 Nanti akan keluar popup window,
 
-![Gambar 4]({{ site.url }}{{ page.assets }}/gambar-04.png)
+![Gambar 4]({{ page.assets }}/gambar-04.png)
 
 Pilih yang **soft reset**.
 
 Kalau berhasil, stagging files yang berada di last commit kita akan muncul di section Files.
 
-![Gambar 5]({{ site.url }}{{ page.assets }}/gambar-05.png)
+![Gambar 5]({{ page.assets }}/gambar-05.png)
 
 
 ### 2. Staging Lines
@@ -90,21 +90,21 @@ Pada section Files, pilih file yang ingin dilakukan commit pada baris tertentu s
 
 Kemudian tekan <kbd>Enter</kbd>. Focus akan berpindah ke section Unstaged Changes.
 
-![Gambar 6]({{ site.url }}{{ page.assets }}/gambar-06.png)
+![Gambar 6]({{ page.assets }}/gambar-06.png)
 
 
 #### 2.1. Single line
 
 Pada section Unstaged Changes, tekan <kbd>Space</kbd> untuk memasukkan baris yang terseleksi (selected line) ke dalam secton Staged Changes.
 
-![Gambar 7]({{ site.url }}{{ page.assets }}/gambar-07.png)
+![Gambar 7]({{ page.assets }}/gambar-07.png)
 
 
 #### 2.2. Multiline dengan Visual Block
 
 Bisa juga gunakan Visual Block dengan menekan <kbd>v</kbd> (untuk mengaktifkan mode visual block), lalu tekan <kbd>j</kbd> (untuk memilih rentang line). Kalau sudah, tinggal tekan <kbd>Space</kbd> (untuk memasukkan rentang baris yang terlpilih ke dalam secton Staged Changes).
 
-![Gambar 8]({{ site.url }}{{ page.assets }}/gambar-08.png)
+![Gambar 8]({{ page.assets }}/gambar-08.png)
 
 
 #### 2.3. Melakukan commit
@@ -116,7 +116,7 @@ untuk membuat commit, sama seperti pada feature no. 1 di atas, yaitu menggunakan
 
 Untuk melakukan undo terhadap baris yang sudah terlanjur di-staging, kita perlu berpindah section ke secton Staged Changes dengan menekan <kbd>Tab</kbd> (toggle on/off).
 
-![Gambar 9]({{ site.url }}{{ page.assets }}/gambar-09.png)
+![Gambar 9]({{ page.assets }}/gambar-09.png)
 
 Kemudian gunakan <kbd>d</kbd> atau <kbd>Space</kbd> untuk mengembalikan baris atau rentang baris yang tidak jadi di-staging ke section Unstaged Changes.
 
@@ -130,7 +130,7 @@ Pada section Unstaged Changes, kita dapat membatalkan perubahan pada baris yang 
 
 Misalkan saat ini kita berada pada branch Master. Pada section Commits, tekan <kbd>c</kbd> (toggle on/off) pada commit yang ingin dilakukan *cherry picking*.
 
-![Gambar 10]({{ site.url }}{{ page.assets }}/gambar-10.png)
+![Gambar 10]({{ page.assets }}/gambar-10.png)
 
 Kemudian pindah ke section Local Branches, dengan <kbd>h</kbd>. Pilih branch dengan <kbd>j</kbd> dan <kbd>k</kbd>, lalu aktifkan (berpindah) branch dengan <kbd>Space</kbd>.
 
@@ -138,7 +138,7 @@ Setelah berpindah branch di branch tujuan (misalkan branch tujuan saya adalah st
 
 Akan ada popup window,
 
-![Gambar 11]({{ site.url }}{{ page.assets }}/gambar-11.png)
+![Gambar 11]({{ page.assets }}/gambar-11.png)
 
 Yang bertuliskan, "**Are you sure you want to cherry-pick the copied commits onto this branch?**"
 
@@ -146,7 +146,7 @@ Tekan <kbd>Enter</kbd> untuk setuju.
 
 Hasilnya akan seperti ini,
 
-![Gambar 12]({{ site.url }}{{ page.assets }}/gambar-12.png)
+![Gambar 12]({{ page.assets }}/gambar-12.png)
 
 Gambar 12. 3 commit hash yang telah dipindahkan dari branch master ke branch status2d
 
@@ -160,7 +160,7 @@ Pada section Files, misalkan kita ingin mengembalikan file atau menghapus peruba
 
 Akan ada popup window,
 
-![Gambar 13]({{ site.url }}{{ page.assets }}/gambar-13.png)
+![Gambar 13]({{ page.assets }}/gambar-13.png)
 
 Pilih **discard all changes**, untuk mengembalikan file seperti semula (sebelum di-edit).
 
@@ -173,11 +173,11 @@ Pada section Files, misalkan kita ingin membersihkan semua unstaging files dari 
 
 Akan ada popup window,
 
-![Gambar 14]({{ site.url }}{{ page.assets }}/gambar-14.png)
+![Gambar 14]({{ page.assets }}/gambar-14.png)
 
 Pilih "**nuke working tree**". Maka, semua unstaged files akan hilang dari daftar working tree.
 
-![Gambar 15]({{ site.url }}{{ page.assets }}/gambar-15.png)
+![Gambar 15]({{ page.assets }}/gambar-15.png)
 
 Cara ini **tidak menghapus file-file tersebut** namun hanya mengembalikan file ke dalam keadaan semula sebelum dilakukan perubahan.
 
@@ -186,11 +186,11 @@ Cara ini **tidak menghapus file-file tersebut** namun hanya mengembalikan file k
 
 Pada section Commits, kita ingin melakukan rebase dari commit yang saya kotakin merah di bawah.
 
-![Gambar 16]({{ site.url }}{{ page.assets }}/gambar-16.png)
+![Gambar 16]({{ page.assets }}/gambar-16.png)
 
 Untuk melakukan rebase, tekan <kbd>e</kbd>. Maka akan masuk ke dalam mode interaktif rebase seperti di bawah ini.
 
-![Gambar 17]({{ site.url }}{{ page.assets }}/gambar-17.png)
+![Gambar 17]({{ page.assets }}/gambar-17.png)
 
 
 #### 5.1. Beberapa rebase commands
@@ -217,7 +217,7 @@ Bertukar posisi/swap commit menggunakan,
 
 Kalau sudah, tekan <kbd>m</kbd>, dan akan muncul popum window.
 
-![Gambar 18]({{ site.url }}{{ page.assets }}/gambar-18.png)
+![Gambar 18]({{ page.assets }}/gambar-18.png)
 
 Pilih **continue** jika ingin melakukan proses rebase. Pilih **abort** jika tidak ingin melakukan rebase.
 
@@ -232,7 +232,7 @@ Pilih commit yang ingin dilakukan **ammending**. Lalu tekan <kbd>Shift</kbd>+<kb
 
 Akan ada popup window,
 
-![Gambar 19]({{ site.url }}{{ page.assets }}/gambar-19.png)
+![Gambar 19]({{ page.assets }}/gambar-19.png)
 
 Tekan <kbd>Enter</kbd> untuk menyetujui.
 
@@ -252,7 +252,7 @@ Pada section Commits, pilih commit yang ingin dilakukan *revert*. Kemudian tekan
 Revert "bla bla commit message bla bla"
 ```
 
-![Gambar 20]({{ site.url }}{{ page.assets }}/gambar-20.png)
+![Gambar 20]({{ page.assets }}/gambar-20.png)
 
 
 ### 9. Stash selected files
@@ -266,7 +266,7 @@ Kemudian buat stash message.
 
 Maka, file yang di-stash akan masuk ke dalam section Stash.
 
-![Gambar 21]({{ site.url }}{{ page.assets }}/gambar-21.png)
+![Gambar 21]({{ page.assets }}/gambar-21.png)
 
 
 #### 9.2. Menggunakan stash

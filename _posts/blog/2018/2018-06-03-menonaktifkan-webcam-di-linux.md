@@ -10,7 +10,7 @@ tags: ["webcam"]
 description: "Privacy adalah kata yang menjadi perhatian banyak pihak. Biasanya pengguna sistem operasi GNU/Linux juga cukup memperhatikan hal-hal seperti ini. Salah satu yang menjadi perhatian adalah informasi yang mengabarkan bahwa malware dapat dengan mudah mengakses penggunaan webcam yang terdapat di laptop kita. Kemungkinan seperti ini dapat terjadi pada laptop kita, tulisan kali ini akan mendokumentasikan bagaimana cara melakukan disable dan enable pada webcam pada tingkat driver."
 ---
 
-![Banner]({{ site.url }}{{ page.assets }}/banner_post_15.png)
+![Banner]({{ page.assets }}/banner_post_15.png)
 
 
 ## Pendahuluan
@@ -73,11 +73,11 @@ Setelah itu, coba buka aplikasi *webcam* seperti **Cheese** atau **guvcview**.
 
 Apabila berhasil, akan seperti ini jadinya.
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar_01.png)
+![Gambar 1]({{ page.assets }}/gambar_01.png)
 
 Gambar 1. Cheese yang sudah tidak dapat digunakan
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar_02.png)
+![Gambar 2]({{ page.assets }}/gambar_02.png)
 
 Gambar 2. guvcview yang sudah tidak dapat digunakan
 
@@ -113,7 +113,7 @@ Saya sendiri belum tahu, apakah cara ini efektif dan benar dapat menangkal penyu
 > 
 > Dan coba panggil `alias` yang sudah kita buat tadi.
 > 
-> ![Gambar 3]({{ site.url }}{{ page.assets }}/gambar_03.gif)
+> ![Gambar 3]({{ page.assets }}/gambar_03.gif)
 > 
 > Mudah bukan ? ^_^
 

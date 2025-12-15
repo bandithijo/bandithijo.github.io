@@ -21,7 +21,7 @@ Pernah membuat menu select atau dropdown menu, namun merasa keterngan nama yang 
 
 Misalnya, seperti pada project yang sedang saya kerjakan. Terdapat menu select untuk memilih salah satu Cancellation Policy melalui menu select. Seperti di bawah ini.
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
 Gambar 1. Cancellation Policy Menu Select
 
@@ -126,7 +126,7 @@ Atau dapat juga menggunakan inspect element pada Browser untuk mengetahui id dar
 
 Nah, kalau sudah semua, hasilnya akan seperti ini.
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.gif)
+![Gambar 2]({{ page.assets }}/gambar-02.gif)
 
 Gambar 2. Cancellation Policy Menu Select dengan Short Description
 

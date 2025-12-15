@@ -10,7 +10,7 @@ tags: ["xfce"]
 description: "Presentation Mode adalah mode dimana laptop kita tidak akan jatuh pada kondisi blank screen, standby, atau sleep saat sistem dalam keadaan idle atau tidak digunakan. Contoh penerapannya seperti saat presentasi atau saat menonton film dengan durasi yang panjang."
 ---
 
-![Banner]({{ site.url }}{{ page.assets }}/banner_post_16.png)
+![Banner]({{ page.assets }}/banner_post_16.png)
 
 
 ## Pendahuluan
@@ -21,7 +21,7 @@ Jadi, yang dimaksud dengan *presentation mode* adalah mode dimana laptop kita ti
 
 Kenapa harus mengaktifkan **Presentation Mode** pada aplikasi **xfce4-power-manager** melalui Terminal? Bukankah sudah terdapat GUI?
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar_01.png)
+![Gambar 1]({{ page.assets }}/gambar_01.png)
 
 Gambar 1. xfce4-power-manager graphical user interface
 
@@ -178,7 +178,7 @@ Dapat dilihat pada baris *alias* di atas, saya menggunakan nama `presentationmod
 
 Untuk mencobanya, kalian bisa membuka Terminal baru, atau merefresh Terminal yang saat ini sedang terbuka. `$ exec $SHELL`
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar_02.gif)
+![Gambar 2]({{ page.assets }}/gambar_02.gif)
 
 Kalian juga dapat menambahkan *output* berupa `echo` agar menampilkan tulisan seperti yang saya lakukan pada contoh di atas.
 

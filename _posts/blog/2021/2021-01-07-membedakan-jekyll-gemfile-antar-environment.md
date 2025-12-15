@@ -16,7 +16,7 @@ Saat memindahkan proses build blog ini dari Netlify ke GitHub Pages, saya menyad
 
 Dengan waktu build yang selama itu, mungkin tidak akan terasa mengganggu apabila terjadi pada level production.
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
 Gambar 1. Proses build di production dengan Travis-CI
 

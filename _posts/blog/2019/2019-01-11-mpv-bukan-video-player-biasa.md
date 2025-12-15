@@ -363,11 +363,11 @@ Hasilnya,
 > 1. Dapat **Multi Cam**
 > 1. Cenderung **ringan** dan tidak membuat laptop menjadi panas
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.gif)
+![Gambar 1]({{ page.assets }}/gambar-01.gif)
 
 Gambar 1. MPV menampilkan output dari banyak WebCam
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.gif)
+![Gambar 2]({{ page.assets }}/gambar-02.gif)
 
 Gambar 2. Demonstrasi Horizontal Flip dan Rotate menggunakan keyboard Shortcut
 
@@ -406,7 +406,7 @@ MPV juga dapat menampilkan dual subtitle.
 $ mpv video.mp4 --sub-file=subtitle1.srt --sub-file=subtitle2.srt --secondary-sid=2
 ```
 
-![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-03.png)
+![Gambar 3]({{ page.assets }}/gambar-03.png)
 
 
 ## Keyboard Shortcuts

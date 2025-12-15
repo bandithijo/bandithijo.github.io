@@ -23,7 +23,7 @@ description: "Saya kurang menyukai tampilan BIOS logo ThinkPad X260 bawaan. Kare
 
 Sudah sejak 15 Oktober 2018 lalu, saya begitu mengincar untuk dapat mengganti BIOS logo ThinkPad saya yang bertuliskan gambar ini.
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.jpg)
+![Gambar 1]({{ page.assets }}/gambar-01.jpg)
 
 Gambar 1. Default BIOS Logo pada ThinkPad X260 saya
 
@@ -47,12 +47,12 @@ Ini adalah langkah yang penting, agar kita dapat fleksibel untuk mengupdate dan 
 
 ### Racik Bahan-bahan
 
-Proses merubah BIOS logo ini sebenarnya hampir sama dengan proses update firmware BIOS yang sudah pernah saya tuliskan - [Update BIOS Lenovo di GNU/Linux Tanpa Menggunakan Windows]({{ site.url }}/blog/update-lenovo-bios-dari-linux). Hanya ada sedikit modifikasi pada *bootable flash drive* yang sudah kita buat. Kita hanya perlu memasukkan file gambar ke dalam direktori FLASH/. Just it!
+Proses merubah BIOS logo ini sebenarnya hampir sama dengan proses update firmware BIOS yang sudah pernah saya tuliskan - [Update BIOS Lenovo di GNU/Linux Tanpa Menggunakan Windows](/blog/update-lenovo-bios-dari-linux). Hanya ada sedikit modifikasi pada *bootable flash drive* yang sudah kita buat. Kita hanya perlu memasukkan file gambar ke dalam direktori FLASH/. Just it!
 
 
 #### Membuat Bootable Flash Drive
 
-Untuk proses pembuatan *bootable flash drive* yang sudah berisi *firmware update* bisa disimak pada post [di sini]({{ site.url }}/blog/update-lenovo-bios-dari-linux).
+Untuk proses pembuatan *bootable flash drive* yang sudah berisi *firmware update* bisa disimak pada post [di sini](/blog/update-lenovo-bios-dari-linux).
 
 Ikuti langkah-langkah yang diberikan sampai pada "**Step 4: Bakar Image ke dalam Flash Drive**" selesai. Kemudian kembali lagi ke sini, yaa.
 
@@ -65,7 +65,7 @@ Saya akan langsung lompat pada tahap memodifikasi *bootable flash drive*.
 
 #### Mempersiapkan File Gambar
 
-Ada beberapa persyaratan yang saya dapat dari sumber referensi **iBSD** pada videonya yang menunjukkan isi dari file README.TXT.<sup>[2]({{ site.url }}/blog/custom-bios-logo-thinkpad#referensi)</sup>
+Ada beberapa persyaratan yang saya dapat dari sumber referensi **iBSD** pada videonya yang menunjukkan isi dari file README.TXT.<sup>[2](/blog/custom-bios-logo-thinkpad#referensi)</sup>
 
 ```
 (TO ALL USER)
@@ -110,7 +110,7 @@ Nah, dari penjelasan README.TXT tersebut kita dapat mengambil kesimpulan:
 
 Setelah mendapatkan informasi yang valid, saya pun menyiapkan gambar yang saya inginkan.
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.png)
+![Gambar 2]({{ page.assets }}/gambar-02.png)
 
 Gambar 2. Gambar pertama yang saya siapkan (440x440)
 
@@ -122,7 +122,7 @@ File gambar ini saya buat berukuran lebar 440px dan tinggi 440px, tidak transpar
 
 Caranya sangat mudah. Dengan menggunakan GIMP, buka menu **Image → Mode → Indexed...**.
 
-![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-06.png)
+![Gambar 3]({{ page.assets }}/gambar-06.png)
 
 Gambar 3. Mode Indexed Window pada GIMP
 
@@ -205,7 +205,7 @@ Akan ada tambahan pertanyaan yang kira-kira berisi konfirmasi bahwa di dalam dir
 
 Setelah selesai, hasilnya akan seperti ini.
 
-![Gambar 4]({{ site.url }}{{ page.assets }}/gambar-04.gif)
+![Gambar 4]({{ page.assets }}/gambar-04.gif)
 
 Gambar 4. Percobaan pertama
 
@@ -217,7 +217,7 @@ Kemduian saya coba menambahkan **Canvas Size** pada bagian atas dengan menggunak
 
 Kira-kira seperti ini hasilnya.
 
-![Gambar 5]({{ site.url }}{{ page.assets }}/gambar-03.png)
+![Gambar 5]({{ page.assets }}/gambar-03.png)
 
 Gambar 5. Gambar kedua dengan ukuran (440x600)
 
@@ -227,7 +227,7 @@ Kemudian saya ulangin langkah memasukkan gambar ke dalam *bootable flash drive* 
 
 Hasilnya seperti ini.
 
-![Gambar 6]({{ site.url }}{{ page.assets }}/gambar-05.gif)
+![Gambar 6]({{ page.assets }}/gambar-05.gif)
 
 Gambar 6. Percobaan kedua, logo terlihat lebih di tengah.
 
@@ -248,7 +248,7 @@ Gambar 6. Percobaan kedua, logo terlihat lebih di tengah.
 
 Meskipun proses mengkustomisasi BIOS logo ini terdengar sangat "berbahaya" namun aslinya tidak seseram kedengarannya. Dapat dilihat di atas prosesnya sangat mudah.
 
-Bagian paling ***crucial*** adalah pada saat pembuatan *bootable flash drive* yang ada pada tulisan saya berjudul "[Update BIOS Lenovo di GNU/Linux Tanpa Menggunakan Windows]({{ site.url }}/blog/update-lenovo-bios-dari-linux)". Apabila pada proses tersebut tidak tepat, saya juga kurang begitu paham akan seperti apa laptop kita. Mungkin saja *bricked*.
+Bagian paling ***crucial*** adalah pada saat pembuatan *bootable flash drive* yang ada pada tulisan saya berjudul "[Update BIOS Lenovo di GNU/Linux Tanpa Menggunakan Windows](/blog/update-lenovo-bios-dari-linux)". Apabila pada proses tersebut tidak tepat, saya juga kurang begitu paham akan seperti apa laptop kita. Mungkin saja *bricked*.
 
 Meskipun demikian, apabila berhasil, ada kepuasan tersendiri karena laptop akan terasa lebih *personal* dengan *custom BIOS logo* yang kita buat sendiri.
 

@@ -10,7 +10,7 @@ tags: ["gnome"]
 description: "GNOME-ScreenShot adalah aplikasi untuk mengambil gambar layar monitor yang sudah tersedia secara native pada GNOME desktop environment. Saya sudah menggunakan aplikasi ini sejak masih GNOME versi 2. Saat ini saya sedang menggunakan XFCE4, namun saya kurang menyukai aplikasi screenshot milik XFCE4 karena terlalu sederhana."
 ---
 
-![Banner]({{ site.url }}{{ page.assets }}/banner_post_08.png)
+![Banner]({{ page.assets }}/banner_post_08.png)
 
 
 ## Latar Belakang
@@ -37,11 +37,11 @@ Lalu pergi ke **org** > **gnome** > **gnome-screenshot**.
 
 Klik dua kali pada bagian **auto-save-directory**.
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar_01.png)
+![Gambar 1]({{ page.assets }}/gambar_01.png)
 
 Nanti akan terbuka *section* seperti di bawah.
 
-![Gambar 2]({{ site.url }}{{ page.assets }}/gambar_02.png)
+![Gambar 2]({{ page.assets }}/gambar_02.png)
 
 Pada bagian paling bawah, **Custom value**, ganti ke direktori tempat dimana kalian ingin menyimpan hasil *screenshot*.
 
