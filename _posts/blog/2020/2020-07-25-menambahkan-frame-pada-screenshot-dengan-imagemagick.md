@@ -16,7 +16,7 @@ Saya baru-baru saja menyeragamkan semua produksi video yang saya jadikan [vlog d
 
 Dalam video tersebut, saya menggunakan frame seperti ini:
 
-![Gambar 1](https://i.postimg.cc/kg4MKtmK/obs-frame.png)
+![Gambar 1]({{ page.assets }}/obs-frame.png)
 
 Gambar 1. obs-frame
 
@@ -26,7 +26,7 @@ Nah, permasalahannya adalah:
 
 Saat ini, hasil screenshot yang diambil langsung dari laptop ThinkPad X61 saya, seperti ini:
 
-![Gambar 2](https://i.postimg.cc/9FXcHqzK/thinkpad-x61-1024x768.png)
+![Gambar 2]({{ page.assets }}/thinkpad-x61-1024x768.png)
 
 Gambar 2. thinkpad-x61-1024x768
 
@@ -34,7 +34,7 @@ Nah, hasil screenshot di atas memiliki resolusi 1024x768.
 
 Saya ingin menggabungkan hasil screenshot dengan frame.
 
-![Gambar 3](https://i.postimg.cc/rmLLnDvh/mockup-imagemagick.png)
+![Gambar 3]({{ page.assets }}/mockup-imagemagick.png)
 
 Gambar 3. mockup-imagemagick
 
@@ -90,7 +90,7 @@ super + Print
 
 Hasilnya seperti ini.
 
-![Gambar 4](https://i.postimg.cc/yNGTs9VP/hasil-screenshot-frame-imagemagick.png)
+![Gambar 4]({{ page.assets }}/hasil-screenshot-frame-imagemagick.png)
 
 Gambar 4. hasil-screenshot-frame-imagemagick
 

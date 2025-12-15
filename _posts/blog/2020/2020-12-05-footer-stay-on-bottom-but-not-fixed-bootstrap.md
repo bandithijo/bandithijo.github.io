@@ -16,7 +16,7 @@ Kalian pasti pernah melihat Footer yang manja di sebuah website.
 
 Kira-kira seperti ini contohnya.
 
-![Gambar 1](https://i.postimg.cc/RFGxYSgJ/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
 Gambar 1. Footer yang menempel pada bagian bawah body
 
@@ -30,7 +30,7 @@ Namun, saya juga tidak ingin membuat Footer ini terlalu keras kepala (Fixed), se
 
 Idealnya, Footer yang saya inginkan seperti ini.
 
-![Gambar 2](https://i.postimg.cc/pdHNXh7n/gambar-02.png)
+![Gambar 2]({{ page.assets }}/gambar-02.png)
 
 Gambar 2. Footer yang menempel manja pada bagian bawah halaman
 

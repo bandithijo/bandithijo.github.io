@@ -55,7 +55,7 @@ Sangat merepotkan. 😅
 
 Kalau sudah diset, sekarang coba buka salah satu plain text, dengan klik kanan "Open With Vim/NeoVim". Seperti yang saya demokan di bawah.
 
-![Gambar 1](https://i.postimg.cc/ryWmMDwS/gambar-01.gif)
+![Gambar 1]({{ page.assets }}/gambar-01.gif)
 
 Mantap!!!
 

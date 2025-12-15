@@ -19,7 +19,7 @@ description: "Catatan kali ini mengenai cara membuat daftar checkbox yang berbas
 
 Catatan kali ini, saya akan kembali mendokumentasikan tentang search filter yang menggunakan Ransack sebagai backend dengan tampilan frontend berupa checkbox.
 
-![Gambar 1](https://i.postimg.cc/gjrXFksr/gambar-01.gif)
+![Gambar 1]({{ page.assets }}/gambar-01.gif)
 
 Gambar 1. Rails view helper collection_check_boxes
 

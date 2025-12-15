@@ -31,7 +31,7 @@ Catatan kali ini adalah contoh pertama.
 
 Kira-kira seperti ini ERD-nya.
 
-![Gambar 1](https://i.postimg.cc/2yPq01Rv/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
 Gambar 1. ERD Single Table Inheritance contacts dengan friends dan emergencies
 

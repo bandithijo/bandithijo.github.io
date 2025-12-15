@@ -48,7 +48,8 @@ Maka, kita akses dari smartphone dengan tujuan `192.168.1.5:3000`.
 
 Voila!
 
-![Gambar 1](https://i.postimg.cc/KzvdYqxr/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
+
 Gambar 1. Tampilan Desktop dan Mobile
 
 Tampilan mobile dari web yang sedang kita kerjakan, dapat kita ekplorasi secara langsung dari smartphone.

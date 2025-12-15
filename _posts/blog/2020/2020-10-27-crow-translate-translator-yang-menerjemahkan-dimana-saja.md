@@ -95,7 +95,7 @@ Keyboard shortcut ini dapat kita langsung panggil di dalam desktop --mungkin aka
 
 ## Demonstrasi
 
-![Gambar 1](https://i.postimg.cc/L8Hwc0zz/gambar-01.gif)
+![Gambar 1]({{ page.assets }}/gambar-01.gif)
 
 
 ## Pesan Penulis

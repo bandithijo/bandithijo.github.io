@@ -127,7 +127,7 @@ Selesai!
 
 ## Demonstrasi
 
-![Gambar 2](https://i.postimg.cc/W3cmXqyt/gambar-02.gif)
+![Gambar 2]({{ page.assets }}/gambar-02.gif)
 
 Gambar 2. Demo registration dan get confirmation email dengan MailCatcher
 

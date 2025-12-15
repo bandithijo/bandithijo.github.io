@@ -90,7 +90,7 @@ Kita dapat langsung membuat chart dengan cara seperti ini.
 <%= line_chart a: 2, b: 5, c: 3, d: 15, e: 6, f: 12, g: 3 %>
 ```
 
-![Gambar 1](https://i.postimg.cc/sxLgvFk5/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
 **Area Chart**
 
@@ -98,7 +98,7 @@ Kita dapat langsung membuat chart dengan cara seperti ini.
 <%= area_chart a: 2, b: 5, c: 3, d: 15, e: 6, f: 12, g: 3 %>
 ```
 
-![Gambar 2](https://i.postimg.cc/Y0CTThyx/gambar-02.png)
+![Gambar 2]({{ page.assets }}/gambar-02.png)
 
 **Column Chart (Grafik Batang Berdiri)**
 
@@ -106,7 +106,7 @@ Kita dapat langsung membuat chart dengan cara seperti ini.
 <%= column_chart a: 2, b: 5, c: 3, d: 15, e: 6, f: 12, g: 3 %>
 ```
 
-![Gambar 3](https://i.postimg.cc/QCYvDh2Z/gambar-03.png)
+![Gambar 3]({{ page.assets }}/gambar-03.png)
 
 **Bar Chart (Grafik Batang Tidur)**
 
@@ -114,7 +114,7 @@ Kita dapat langsung membuat chart dengan cara seperti ini.
 <%= bar_chart a: 2, b: 5, c: 3, d: 15, e: 6, f: 12, g: 3 %>
 ```
 
-![Gambar 4](https://i.postimg.cc/ZK01cvNb/gambar-04.png)
+![Gambar 4]({{ page.assets }}/gambar-04.png)
 
 **Pie Chart (Grafik Lingkaran)**
 
@@ -122,7 +122,7 @@ Kita dapat langsung membuat chart dengan cara seperti ini.
 <%= pie_chart a: 2, b: 5, c: 3, d: 15, e: 6, f: 12, g: 3 %>
 ```
 
-![Gambar 5](https://i.postimg.cc/G3XWGxHg/gambar-05.png)
+![Gambar 5]({{ page.assets }}/gambar-05.png)
 
 Dan masih banyak lagi chart yang tidak dapat saya tampilkan di blog ini, silahkan teman-teman mengunjungi halaman depan dari **ChartKick**.
 
@@ -150,7 +150,7 @@ Contohnya seperti ini.
                 }) %>
 ```
 
-![Gambar 6](https://i.postimg.cc/T1BQQ181/gambar-06.png)
+![Gambar 6]({{ page.assets }}/gambar-06.png)
 
 Dan masih banyak lagi option-option yang dapat digunakan, silahkan teman-teman mengunjungi dokumentasi dari ChartKick.
 

@@ -16,7 +16,7 @@ Saat presentasi menggunakan aplikasi presentasi semacam LibreOffice Impress, pas
 
 Menurut saya, memberikan anotasi pada slide, lebih efektif untuk menjelaskan dan lebih mudah dimengerti oleh penyimak, ketimbang hanya menunjuk-nujuk bagian-bagian dari slide.
 
-![Gambar 1](https://i.postimg.cc/J4XY6mZt/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
 Gambar 1. Slide Annotation pada LibreOffice
 
@@ -43,11 +43,11 @@ Latar belakang Simon Budig mengembangkan Gromit karena saat ia membuat presentas
 
 Berikut ini adalah ilustrasi dari Simon Budig yang saya ambil dari website [Gromit](http://www.home.unix-ag.org/simon/gromit/).
 
-![Gambar 2](https://i.postimg.cc/rFYyJ1Gq/gambar-02.jpg)
+![Gambar 2]({{ page.assets }}/gambar-02.jpg)
 
-![Gambar 3](https://i.postimg.cc/52h4cfkG/gambar-03.jpg)
+![Gambar 3]({{ page.assets }}/gambar-03.jpg)
 
-![Gambar 4](https://i.postimg.cc/BnLSwjNH/gambar-04.jpg)
+![Gambar 4]({{ page.assets }}/gambar-04.jpg)
 
 
 ## Instalasi
@@ -154,11 +154,11 @@ UNDOKEY = "F8";
 
 ## Demonstrasi
 
-![Gambar 5](https://i.postimg.cc/SxzC4NDb/gambar-05.gif)
+![Gambar 5]({{ page.assets }}/gambar-05.gif)
 
-![Gambar 6](https://i.postimg.cc/5NZRjCmP/gambar-06.gif)
+![Gambar 6]({{ page.assets }}/gambar-06.gif)
 
-![Gambar 7](https://i.postimg.cc/2Sbqp0Gc/gambar-07.gif)
+![Gambar 7]({{ page.assets }}/gambar-07.gif)
 
 
 ## Pesan Penulis

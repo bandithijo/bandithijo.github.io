@@ -29,7 +29,7 @@ Ternyata, setelah saya cek website dari target belajar, desain dari website suda
 
 Sekarang menjadi seperti ini.
 
-![Gambar 1](https://i.postimg.cc/yYZzBw7k/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
 Tampilan yang sekarang, tentunya tidak dapat difetch menggunakan CSS selector yang sebelumnya. Karena markup dari HTML sudah berubah.
 
@@ -420,7 +420,7 @@ end
 
 ## Hasilnya
 
-![Gambar 2](https://i.postimg.cc/qR48MVf0/gambar-02.gif)
+![Gambar 2]({{ page.assets }}/gambar-02.gif)
 
 
 ## Demo

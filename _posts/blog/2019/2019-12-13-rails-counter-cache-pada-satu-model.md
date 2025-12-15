@@ -1,28 +1,20 @@
 ---
-layout: 'post'
+layout: "post"
 title: "Rails Counter Cache pada Satu Model"
-date: 2019-12-13 20:49
-permalink: '/blog/:title'
-author: 'BanditHijo'
-license: true
-comments: true
-toc: true
-category: 'blog'
-tags: ['Tips', 'Rails']
-pin:
-hot:
-contributors: []
+date: '2019-12-13 20:49'
+permalink: "/blog/:title"
+assets: "/assets/images/posts/2019/2019-12-13-rails-counter-cache-pada-satu-model"
+author: "BanditHijo"
+category: "blog"
+tags: ["rails"]
 description: "Catatan kali ini mengenai cara membuat counter cache pada model yang sama (self)."
 ---
 
-<!-- BANNER OF THE POST -->
-<!-- <img class="post&#45;body&#45;img" src="{{ site.lazyload.logo_blank_banner }}" data&#45;echo="#" alt="banner"> -->
-
-# Prerequisite
+## Prerequisite
 
 `Ruby 2.6.3` `Rails 5.2.3` `PostgreSQL 11.5`
 
-# Prakata
+## Prakata
 
 **Counter Cache**, apa itu?
 
@@ -54,7 +46,7 @@ Namun, pada catatan ini, saya tidak membahas secara mendalam mengenai Counter Ca
 
 Saya akan membahas kasus yang mungkin cukup unik, yang saya alami.
 
-# Permasalahan
+## Permasalahan
 
 Seperti definisi yang sudah saya jelaskan di atas. Counter Cache adalah salah satu options dari banyak options yang dapat kita gunakan apabila kita menggunakan Active Record Association yaitu `belongs_to`.[<sup>1</sup>](#referensi).
 
@@ -66,7 +58,7 @@ Nah, sedangkan, saya ingin menggunakannya hanya pada 1 model.
 
 Apakah bisa? Tentu saja bisa. Saya cukup lama mencari solusi ini.
 
-# Sekenario
+## Sekenario
 
 Saya ingin membuat fitur "Invite Friend" yang nantinya akan terdapat 2 buah field.
 
@@ -77,15 +69,15 @@ Di sini, saya tidak menggunakan model lain selain model user.
 
 Yang mana, seharusnya, untuk dapat menggunakan counter_cache, kita harus memiliki dua model yang saling berasosiasi menggunakan `belongs_to`.
 
-# Pemecahan Masalah
+## Pemecahan Masalah
 
 Pertama-tama seperti halnya convetion pada counter cache, saya perlu manambahkan kolom baru pada tabel yang ingin saya buatkan counter cachenya.
 
 Buat migration untuk menambahkan kolom counter cache.
 
-{% shell_user %}
-rails g migration add_inviting_user_to_users
-{% endshell_user %}
+```
+$ rails g migration add_inviting_user_to_users
+```
 
 <pre>
     <span style="color:#859900;">create</span> 20191122174434_add_inviting_user_count_to_users.rb
@@ -93,28 +85,28 @@ rails g migration add_inviting_user_to_users
 
 Setelah file migrasi jadi, saya akan menambahkan dua buah kolom.
 
-{% highlight_caption db/migrate/20191122174434_add_inviting_user_count_to_users.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: db/migrate/20191122174434_add_inviting_user_count_to_users.rb
 class AddInvitingUsersCountToUsers < ActiveRecord::Migration[5.2]
   def change
     add_column :users, :inviting_user_id, :integer
     add_column :users, :inviting_users_count, :integer, default: 0, null: false
   end
 end
-{% endhighlight %}
+```
 
 Untuk field `inviting_users_count` adalah field yang saya siapkan untuk counter cache, yang harus mengikuti aturan penamaan kolom untuk counter cache. yaitu, penamaannya harus plural (jamak).
 
 Kemudian, jalankan migrationnya.
 
-{% shell_user %}
-rails db:migrate
-{% endshell_user %}
+```
+$ rails db:migrate
+```
 
 Apabila berhasil, berikut ini adalah bentuk dari skema database setelah migrasi berhasil kita jalankan.
 
-{% highlight_caption db/schema.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: db/schema.rb
 create_table "users", force: :cascade do |t|
   ...
   ...
@@ -122,10 +114,10 @@ create_table "users", force: :cascade do |t|
   t.integer "inviting_user_id"
   t.integer "inviting_users_count", default: 0, null: false
 end
-{% endhighlight %}
+```
 
-<pre>
-<span style="color:#586e75;font-style:italic;"># Users table</span>
+```
+# Users table
 +------------------------+-----------------------------+-----------------------------------------------------+
 | Column                 | Type                        | Modifiers                                           |
 |------------------------+-----------------------------+-----------------------------------------------------|
@@ -138,12 +130,12 @@ end
 | inviting_user_id       | integer                     |                                                     |
 | inviting_users_count   | integer                     |  not null default 0                                 |
 +------------------------+-----------------------------+-----------------------------------------------------+
-</pre>
+```
 
 Selanjutnya tinggal membuat asosiasi pada user model.
 
-{% highlight_caption app/models/user.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/models/user.rb
 class User < ApplicationRecord
   # ...
   # ...
@@ -159,7 +151,7 @@ class User < ApplicationRecord
   # ...
   # ...
 end
-{% endhighlight %}
+```
 
 Saya rasa, sudah jelas dari kode di atas. Bagaimana relasi antar kedua field dalam satu model dapat terjadi.
 
@@ -175,16 +167,18 @@ Apabila tidak, maka user baru yang tidak memiliki relasi dengan user lain, tidak
 
 Begini kira-kira hasilnya.
 
-<pre>
-<span style="color:#586e75;font-style:italic;"># Users table</span>
+```
+# Users table
 +------+-----------------------+--------------------+------------------------+
 | id   | full_name             | inviting_user_id   | inviting_users_count   |
 |------+-----------------------+--------------------+------------------------|
-| 1    | Rizqi Assyaufi        | &lt;null&gt;             | 1                      |
+| 1    | Rizqi Assyaufi        | <null>             | 1                      |
 | 2    | Baik Budiman          | 1                  | 0                      |
-</pre>
+```
 
-{% image https://i.postimg.cc/P5NkZJFn/gambar-01.png | 1 | Baik Budiman melakukan registrasi dengan menggunakan kode referral yang diberikan oleh Rizqi Assyaufi. %}
+![Gambar 1]({{ page.assets }}/gambar-01.png)
+
+Gambar 1. Baik Budiman melakukan registrasi dengan menggunakan kode referral yang diberikan oleh Rizqi Assyaufi.
 
 Selesai!
 
@@ -198,13 +192,13 @@ Terima kasih
 
 
 
-# Referensi
+## Referensi
 
-1. [guides.rubyonrails.org/association_basics.html#options-for-belongs-to](https://guides.rubyonrails.org/association_basics.html#options-for-belongs-to){:target="_blank"}
-<br>Diakses tanggal: 2019/12/13
+1. [guides.rubyonrails.org/association_basics.html#options-for-belongs-to](https://guides.rubyonrails.org/association_basics.html#options-for-belongs-to) \
+   Diakses tanggal: 2019/12/13
 
-2. [guides.rubyonrails.org/association_basics.html#options-for-has-many-counter-cache](https://guides.rubyonrails.org/association_basics.html#options-for-has-many-counter-cache){:target="_blank"}
-<br>Diakses tanggal: 2019/12/13
+1. [guides.rubyonrails.org/association_basics.html#options-for-has-many-counter-cache](https://guides.rubyonrails.org/association_basics.html#options-for-has-many-counter-cache) \
+   Diakses tanggal: 2019/12/13
 
-3. [stackoverflow.com/questions/35265225/rails-counter-cache-on-the-same-model](https://stackoverflow.com/questions/35265225/rails-counter-cache-on-the-same-model){:target="_blank"}
-<br>Diakses tanggal: 2019/12/13
+1. [stackoverflow.com/questions/35265225/rails-counter-cache-on-the-same-model](https://stackoverflow.com/questions/35265225/rails-counter-cache-on-the-same-model) \
+   Diakses tanggal: 2019/12/13

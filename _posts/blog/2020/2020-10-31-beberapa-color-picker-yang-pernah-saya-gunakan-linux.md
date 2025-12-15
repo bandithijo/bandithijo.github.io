@@ -26,7 +26,7 @@ Catatan kali ini adalah mengenai beberapa aplikasi yang sudah saya kenal, sejak 
 
 ### Gpick
 
-![Gambar 1](https://i.postimg.cc/V6v81DpV/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
 **Gpick**.
 
@@ -43,7 +43,7 @@ Saya pribadi, awal-awal mengenal Gpick, sangat menyukainya. Namun, karena kebutu
 
 ### Gcolor2
 
-![Gambar 2](https://i.postimg.cc/PJ8nvNtb/gambar-02.png)
+![Gambar 2]({{ page.assets }}/gambar-02.png)
 
 **Gcolor2**
 
@@ -62,7 +62,7 @@ Saya pribadi, sempat memakai Gcolor2 dalam waktu yang cukup lama.
 
 ### Gcolor3
 
-![Gambar 3](https://i.postimg.cc/SjFF6qsB/gambar-03.png)
+![Gambar 3]({{ page.assets }}/gambar-03.png)
 
 **Gcolor3**
 
@@ -79,7 +79,7 @@ Alasan saya menggunakan Gcolor3, ketimbang Gcolor2, karena mengikuti trend saja.
 
 ### ColorGrab
 
-![Gambar 4](https://i.postimg.cc/ydGzN0zY/gambar-04.png)
+![Gambar 4]({{ page.assets }}/gambar-04.png)
 
 **ColorGrab**
 

@@ -20,7 +20,7 @@ Artinya, semakin banyak komputer/laptop, semakin banyak mouse dan keyboard yang 
 
 Saat masih menggunakan MacbookPro, beberapa tahun silam, saya pernah mencari-cari tools yang dapat mempermudah saya untuk berpindah-pindah cursor di antara dua laptop. Dalam pencarian ini, saya menemukan aplikasi yang bernama **Synergy**.[<sup>1</sup>](#referensi)
 
-![Gambar 1](https://i.postimg.cc/qqPyBc24/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
 Gambar 1. Synergy
 
@@ -75,7 +75,7 @@ Terdapat dua tipe, Barrier GUI dan Barrier Headless
     Open-source KVM software based on Synergy (GUI)
 ```
 
-![Gambar 3](https://i.postimg.cc/m21vg70q/gambar-02.png)
+![Gambar 3]({{ page.assets }}/gambar-02.png)
 
 Gambar 3. Proses instalasi Barrier dengan Yay
 
@@ -85,11 +85,11 @@ Bagi yang ingin memasang sendiri dari source code, dapat merujuk ke panduan yang
 
 Nah, kalo sudah dipasang, saat pertama kali dijalankan, kita akan dihadapkan pada tampilan window seperti ini.
 
-![Gambar 4](https://i.postimg.cc/brW4Rv23/gambar-03.png)
+![Gambar 4]({{ page.assets }}/gambar-03.png)
 
 Gambar 4. Welcome Page dari Barrier
 
-![Gambar 5](https://i.postimg.cc/sfLFzT07/gambar-04.png)
+![Gambar 5]({{ page.assets }}/gambar-04.png)
 
 Gambar 5. Window Utama untuk Memilih Sebagai Client atau Server
 
@@ -97,7 +97,7 @@ Pada contoh di atas, saya menggunakan ThinkPad X61 (GNU/Linux) sebagai server, d
 
 Server artinya, mesin yang kita setup sebagai server akan kita gunakan mouse dan keyboardnya untuk menjelajah ke mesin-mesin lain yang di setup sebagai client.
 
-![Gambar 6](https://i.postimg.cc/VN7RQVLC/gambar-05.png)
+![Gambar 6]({{ page.assets }}/gambar-05.png)
 
 Gambar 6. Konfigurasi Layout yang ada di Server
 

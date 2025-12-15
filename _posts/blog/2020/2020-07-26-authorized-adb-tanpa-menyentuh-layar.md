@@ -117,9 +117,9 @@ Nah, setelah mendapatkan hak akses, kita bisa ngapain aja deh.
 
 Misalkan untuk menjalankan **scrcpy** dan lain-lain.
 
-![Gambar 1](https://i.postimg.cc/SNfLLYWN/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
-![Gambar 2](https://i.postimg.cc/pLVfsVZQ/gambar-02.png)
+![Gambar 2]({{ page.assets }}/gambar-02.png)
 
 Mantap!!!
 

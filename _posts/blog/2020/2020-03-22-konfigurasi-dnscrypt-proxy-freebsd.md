@@ -392,7 +392,7 @@ Kalau sudah begini, langsung bisa kita gunakan.
 
 Coba lakukan pengetesan dengan [**dnsleaktest.com**](https://www.dnsleaktest.com/).
 
-![Gambar 1](https://i.postimg.cc/zvPYSxkr/gambar-01.png)
+![Gambar 1]({{ page.assets }}/gambar-01.png)
 
 Gambar 1. Hasil pengetesan dengan dnsleaktest.com (*gambar menyusul server postimages sedang maintenance*)
 

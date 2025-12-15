@@ -261,7 +261,7 @@ Lalu, bisa coba jalankan di Home direktori.
 $ ncdu ~
 ```
 
-![Gambar 1](https://i.postimg.cc/26kvgVfs/gambar-01.gif)
+![Gambar 1]({{ page.assets }}/gambar-01.gif)
 
 Gambar 1. Proses listing direktori yang kegemukan
 

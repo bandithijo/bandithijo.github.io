@@ -150,6 +150,8 @@ $ networksetup -getdnsservers Wi-Fi
 127.0.0.1
 ```
 
+Sekarang coba test dengan [https://www.dnsleaktest.com/](https://www.dnsleaktest.com/) untuk memastikan DNSCrypt-Proxy sudah berjalan dengan baik.
+
 ![gambar 1]({{ page.assets }}/gambar_1.png)
 
 Gambar 1. Sebelum menggunakan DNSCrypt-Proxy dengan Anonymized DNS
