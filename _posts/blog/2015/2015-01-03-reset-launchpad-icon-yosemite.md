@@ -10,7 +10,7 @@ tags: ["osx"]
 description: "Launchpad pada OS X Yosemite ini benar-benar sangat memudah kita sebagai user OS X untuk mencari aplikasi yang akan kita gunakan. Dibandingakan dengan tidak menggunakan Launchpad, kita harus membuka folder 'Applications' dan mencari aplikasi yang akan kita butuhkan. Sungguh merepotkan mencari diantara banyak icon aplikasi dalam folder Applications."
 ---
 
-![Banner](https://s20.postimg.cc/pm0zdqf0t/Default_Header_Template_Post_7.jpg)
+![Banner]({{ site.url }}{{ page.assets }}/Default_Header_Template_Post_7.jpg)
 
 
 ## Latar Belakang

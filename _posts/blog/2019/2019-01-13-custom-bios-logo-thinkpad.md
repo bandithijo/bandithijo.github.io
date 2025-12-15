@@ -23,7 +23,7 @@ description: "Saya kurang menyukai tampilan BIOS logo ThinkPad X260 bawaan. Kare
 
 Sudah sejak 15 Oktober 2018 lalu, saya begitu mengincar untuk dapat mengganti BIOS logo ThinkPad saya yang bertuliskan gambar ini.
 
-![Gambar 1](https://i.postimg.cc/rmLd5HKn/gambar-01.jpg)
+![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.jpg)
 
 Gambar 1. Default BIOS Logo pada ThinkPad X260 saya
 
@@ -110,7 +110,7 @@ Nah, dari penjelasan README.TXT tersebut kita dapat mengambil kesimpulan:
 
 Setelah mendapatkan informasi yang valid, saya pun menyiapkan gambar yang saya inginkan.
 
-![Gambar 2](https://i.postimg.cc/76K9VL6h/gambar-02.png)
+![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.png)
 
 Gambar 2. Gambar pertama yang saya siapkan (440x440)
 
@@ -122,7 +122,7 @@ File gambar ini saya buat berukuran lebar 440px dan tinggi 440px, tidak transpar
 
 Caranya sangat mudah. Dengan menggunakan GIMP, buka menu **Image → Mode → Indexed...**.
 
-![Gambar 3](https://i.postimg.cc/V69hq1yH/gambar-06.png)
+![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-06.png)
 
 Gambar 3. Mode Indexed Window pada GIMP
 
@@ -205,7 +205,7 @@ Akan ada tambahan pertanyaan yang kira-kira berisi konfirmasi bahwa di dalam dir
 
 Setelah selesai, hasilnya akan seperti ini.
 
-![Gambar 4](https://i.postimg.cc/pVzWSnvg/gambar-04.gif)
+![Gambar 4]({{ site.url }}{{ page.assets }}/gambar-04.gif)
 
 Gambar 4. Percobaan pertama
 
@@ -217,7 +217,7 @@ Kemduian saya coba menambahkan **Canvas Size** pada bagian atas dengan menggunak
 
 Kira-kira seperti ini hasilnya.
 
-![Gambar 5](https://i.postimg.cc/C5dN6VBN/gambar-03.png)
+![Gambar 5]({{ site.url }}{{ page.assets }}/gambar-03.png)
 
 Gambar 5. Gambar kedua dengan ukuran (440x600)
 
@@ -227,7 +227,7 @@ Kemudian saya ulangin langkah memasukkan gambar ke dalam *bootable flash drive* 
 
 Hasilnya seperti ini.
 
-![Gambar 6](https://i.postimg.cc/pLxgqqY6/gambar-05.gif)
+![Gambar 6]({{ site.url }}{{ page.assets }}/gambar-05.gif)
 
 Gambar 6. Percobaan kedua, logo terlihat lebih di tengah.
 

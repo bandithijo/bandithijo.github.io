@@ -253,11 +253,11 @@ Selesai.
 
 Sebenarnya, sudah pernah mengalami hal ini, namun karena lupa melakukan pencatatan, dan ternyata mengalami untuk kedua kali, malah jadi kebingungan.
 
-![Gambar 1](https://i.postimg.cc/1Xs2bb4M/gambar-02.gif)
+![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.gif)
 
 Dapat dilihat pada ilustrasi di atas, apapun perintah (*command*) yang saya tulisakan, akan ditampilkan kembali pada baris *output*.
 
-![Gambar 2](https://i.postimg.cc/qR8WbpBz/gambar-01.png)
+![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.png)
 
 Saya mengalami permasalah ini pada terminal URxvt dan Termite, namun tidak pada ST terminal yang sehari-hari saya pergunakan.
 
@@ -267,7 +267,7 @@ Untung saja ada group [BGLI (Belajar GNU/Linux Indonesia)](https://t.me/GNULinux
 
 > Terkadang perlu "sudut pandang" orang lain dalam menemukan "kata kunci" yang tepat untuk mencari solusi dari sebuah masalah.
 
-![Gambar 3](https://i.postimg.cc/K8MfrJ8Y/gambar-03.png)
+![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-03.png)
 
 Gambar 3. URL: [ZSH repeats command in output](https://stackoverflow.com/questions/30940299/zsh-repeats-command-in-output)
 

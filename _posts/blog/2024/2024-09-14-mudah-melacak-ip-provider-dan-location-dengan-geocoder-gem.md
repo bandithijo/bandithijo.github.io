@@ -14,7 +14,7 @@ description: "Sebelum menggunakan Geocoder Gem, saya menggunakan infosniper.net 
 
 {{ page.description }}
 
-![Gambar 1]({{ page.assets }}/01.png)
+![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
 
 Gambar 1. Tampilan Website infosniper.net
 

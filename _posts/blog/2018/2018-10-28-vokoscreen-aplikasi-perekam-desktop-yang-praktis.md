@@ -10,7 +10,7 @@ tags: ["vokoscreen", "screen recorder"]
 description: "Aplikasi yang membantu mempermudah pekerjaan saya ini adalah Vokoscreen. Saya sudah pernah mencicipi beberapa dari aplikasi *screen recorder* seperti: Simple Screen Recorder (SSR), Open Boradcaster Studio (OBS), dan Kazam. Namun, selera saya jatuh pada Vokoscreen."
 ---
 
-![Gambar 0](https://i.postimg.cc/VLKJrrjj/banner-post-22.png)
+![Banner]({{ site.url }}{{ page.assets }}/banner_post_22.png)
 
 
 ## Prakata
@@ -43,7 +43,7 @@ Kesemua fungsi dari *shortcut keys* di atas sudah sangat memenuhi kebutuhan saya
 
 Vokoscreen memiliki *user interface* yang apabila kita baru pertama kali menggunakannya, kita sudah langsung dapat mengerti bagaimana cara mengoperasikan aplikasi ini.
 
-![Gambar 1](https://i.postimg.cc/nrWtw4xq/gambar-1.png)
+![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-1.png)
 
 Gambar 1. Tab Video
 
@@ -56,7 +56,7 @@ Pada **Tab Video** kita dapat mengatur :
 5. **Showclick**. Digunakan untuk menandai area screen yang kita klik. Bagian ini juga dapat kita kustomisasi
 6. **Countdown**. Kita dapat menentukan berapa detik lamanya proses hitung mundur sampai proses perekaman dimulai
 
-![Gambar 2](https://i.postimg.cc/JnCRccqg/gambar-2.png)
+![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-2.png)
 
 Gambar 2. Tab Audio
 
@@ -65,7 +65,7 @@ Pada **Tab Audio** kita dapat mengatur :
 1. **Enable** / **Disable** audio dengan mencentang *checkbox* Audio
 2. Memilih driver Pulse atau Alsa
 
-![Gambar 3](https://i.postimg.cc/3Nn7hMT5/gambar-3.png)
+![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-3.png)
 
 Gambar 3. Tab Format
 
@@ -78,7 +78,7 @@ Pada **Tab Format** kita dapat mengatur :
 5. **Audiocodec**. Audio codec yang dapat kita gunakan adalah: libmp3lame, mp2, aac
 6. Kita juga dapat memilih untuk ingin merekam mouse cursor atau tidak
 
-![Gambar 4](https://i.postimg.cc/0QGPtMXN/gambar-4.png)
+![Gambar 4]({{ site.url }}{{ page.assets }}/gambar-4.png)
 
 Gambar 4. Tab Preferences
 
@@ -89,7 +89,7 @@ Pada **Tab Preferences** kita dapat mengatur :
 3. **Recorder**. Kita dapat memilih aplikasi backend apa yang kita gunakan untuk merekam
 4. Dan fitur-fitur lain yang dapat dilihat sendiri pada Gambar 4
 
-![Gambar 5](https://i.postimg.cc/FsHNZKy9/gambar-5.png)
+![Gambar 5]({{ site.url }}{{ page.assets }}/gambar-5.png)
 
 Gambar 5. Tab Webcam
 
@@ -101,13 +101,13 @@ Pada **Tab Webcam** kita dapat mengatur :
 
 Namun, fitur ini jarang sekali saya gunakan. Saya biasa mengkombinasikan dengan aplikasi **Guvcview** untuk menampilkan webcam ke dalam layar.
 
-![Gambar 6](https://i.postimg.cc/7hxDjHjn/gambar-6.png)
+![Gambar 6]({{ site.url }}{{ page.assets }}/gambar-6.png)
 
 Gambar 6. Tab Ekstension
 
 Saya belum pernah sama sekali menggunakan tab Ekstension ini.
 
-![Gambar 7](https://i.postimg.cc/h4rKTm7y/gambar-7.png)
+![Gambar 7]({{ site.url }}{{ page.assets }}/gambar-7.png)
 
 Gambar 7. Tab About
 
@@ -189,11 +189,11 @@ Apabila berhasil, sekarang coba panggil Vokoscreen menggunakan *application laun
 
 Kira-kira seperti ini kebiasaan saya dalam menggunakan Vokoscreen.
 
-![Voko 1](https://i.postimg.cc/90XgytmP/voko-1.gif)
+![Voko 1]({{ site.url }}{{ page.assets }}/voko-1.gif)
 
 Hasilnya seperti ini.
 
-![Voko 2](https://i.postimg.cc/jSB1B7cK/voko-2.gif)
+![Voko 2]({{ site.url }}{{ page.assets }}/voko-2.gif)
 
 Nah, kira-kira seperti ini dulu yang dapat saya tuliskan.
 

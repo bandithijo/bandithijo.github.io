@@ -42,9 +42,9 @@ Status indikator yang *optional* seperti:
 
 Di bawah ini adalah contoh Polybar yang saya pergunakan.
 
-![Gambar 1](https://i.postimg.cc/NfwPVNhT/gambar-01.png)
+![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
 
-![Gambar 2](https://i.postimg.cc/ZYNMVGQ4/gambar-02.png)
+![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.png)
 
 Jangan bingung, tampilan Polybar saya memang sederhana seperti ini saja.
 
@@ -329,7 +329,7 @@ Kalau sudah, restart BSPWM.
 
 Saat pertama kali menjalankan Polybar, secara *default* akan menampilkan tampilan seperti ini.
 
-![Gambar 3](https://i.postimg.cc/C5N3j57m/gambar-03.png)
+![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-03.png)
 
 Gambar di atas adalah contoh dari pemanggilan `[bar/example]` dari file `config` yang belum kita modifikasi.
 
@@ -1225,7 +1225,7 @@ Saya menggunakan kombinasi keyboard <kbd>SUPER</kbd>+<kbd>F12</kbd> untuk mengak
 
 Berikut ini adalah demonstrasinya.
 
-![Gambar 4](https://i.postimg.cc/FKKM6wWh/gambar-04.gif)
+![Gambar 4]({{ site.url }}{{ page.assets }}/gambar-04.gif)
 
 
 ## Contoh File Konfigurasi

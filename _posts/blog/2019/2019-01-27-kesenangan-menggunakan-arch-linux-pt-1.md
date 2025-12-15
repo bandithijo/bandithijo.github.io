@@ -16,7 +16,7 @@ Salah satu kesenangan menggunakan distribusi Arch adalah kemudahan dalam hal men
 
 Beberapa waktu lalu `dunstify` masih terdapat di AUR, namun begitu sudah di merge dari upstream, repo `dunst` official pun ikut membawa `dunstify`.
 
-![Gambar 1](https://i.postimg.cc/Jn5zQgJW/gambar-01.png)
+![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
 
 Gambar 1. Kemudahan mengecek paket pada archlinux.org
 
@@ -28,7 +28,7 @@ Untuk mengecek apakah `dunstify` sudah terdapat pada paket `dunst`, kita dapat m
 $ sudo pacman -Ql dunst
 ```
 
-![Gambar 2](https://i.postimg.cc/ydHNcBDP/gambar-02.png)
+![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.png)
 
 Gambar 2. Kemudahan mengecek paket pada pacman
 
@@ -48,7 +48,7 @@ $ sudo pacman -S dunst
 
 Saya menggunakan `dunstify` untuk keperluan menampilkan **HELP** dari daftar keyboard shortcut pada masing-masing aplikasi yang saya pergunakan.
 
-![Gambar 3](https://i.postimg.cc/gjcktDqL/gambar-03.gif)
+![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-03.gif)
 
 Gambar 3. Salah satu pemanfaatan dunstify
 

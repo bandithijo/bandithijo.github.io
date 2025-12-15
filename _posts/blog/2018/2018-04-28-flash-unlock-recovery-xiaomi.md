@@ -10,7 +10,7 @@ tags: ["bootloader", "xiaomi"]
 description: "Punya smartphone XiaoMi dan cuman punya komputer atau laptop yang sistem operasinya GNU/Linux? Tidak perlu repot-repot meminjam laptop teman atau memasang Windows pada VirtualBox. Karena semua pekerjaan untuk memasang Custom ROM pada smartphone XiaoMi dapat dengan mudah kita lakukan dengan bermodalkan Terminal."
 ---
 
-![Banner](https://s20.postimg.cc/mp2f9pxkt/banner_post_10.png)
+![Banner]({{ site.url }}{{ page.assets }}/banner_post_10.png)
 
 
 ## Latar Belakang
@@ -86,7 +86,7 @@ Kita perlu menurunkan versi ROM MIUI atau memasang MIUI ver. 6 ke dalam ROM *sma
 
 Untuk melakukan *flashing* pada ROM *smartphone* pada sistem operasi Windows, kita menggunakan MiFlash atau MiPhone2015 yang terlebih dahulu harus kita pasang di sistem kita.
 
-![Gambar 1](https://s20.postimg.cc/4beeipcv1/gambar_01.jpg)
+![Gambar 1]({{ site.url }}{{ page.assets }}/gambar_01.jpg)
 
 Gambar 1. MiFlash 2015 Windows
 
@@ -170,7 +170,7 @@ Nah, kalo sudah ROM apa yang akan kita gunakan, kalian perlu mencari *fastboot* 
 
 3. Buat *smartphone* kamu dalam mode **Fastboot** dengan menekan kombinasi tombol. Tekan dan tahan <kbd>Volume Down</kbd> + <kbd>Power</kbd> secara berurutan.
 
-   ![Gambar 1](https://s20.postimg.cc/sbu6t0nfx/gambar_02.png)
+   ![Gambar 2]({{ site.url }}{{ page.assets }}/gambar_02.png)
 
    Gambar 2. Mode Fastboot
 
@@ -326,7 +326,7 @@ Proses instalasinya sangat mudah.
 
    Tunggu beberapa detik, sampai *smartphone* kita akan *reboot* dan masuk ke dalam mode **Recovery**.
 
-   ![Gambar 3](https://s20.postimg.cc/kgjnegtbh/gambar_03.png)
+   ![Gambar 3]({{ site.url }}{{ page.assets }}/gambar_03.png)
 
    Gambar 3. Tampilan Depan Custom Recovery TWRP
 
@@ -341,7 +341,7 @@ Proses instalasinya sangat mudah.
 
 Kita melakukan instalasi *custom* ROM dengan bantuan TWRP. Untuk itu kita perlu memasukkan semua bahan-bahan yang akan kita pasang ke dalam *internal memory* dengan bantuan **File Manager**. Dalam hal ini saya menggunakan **Thunar** atau **PCMANFM**.
 
-![Gambar 4](https://s20.postimg.cc/fzrafmmrh/gambar_04.png)
+![Gambar 4]({{ site.url }}{{ page.assets }}/gambar_04.png)
 
 Gambar 4. Bahan-bahan yang diperlukan
 
@@ -358,11 +358,11 @@ Download semua bahan-bahan yang diperlukan. Sesuaikan dengan kebutuhan dan tipe 
 
 Selanjutnya, masukkan ke dalam *internal memory* *smartphone* XiaoMi kita. Letakkan saja di luar, agar lebih mudah di akses dari TWRP. Untuk melihat file-file tersebut, masuk ke dalam menu **Install**.
 
-![Gambar 5](https://s20.postimg.cc/8eo9k7wwt/gambar_06.png)
+![Gambar 5]({{ site.url }}{{ page.assets }}/gambar_06.png)
 
 Hasilnya akan seperti di bawah.
 
-![Gambar 6](https://s20.postimg.cc/4iaxoc6t9/gambar_05.png)
+![Gambar 6]({{ site.url }}{{ page.assets }}/gambar_05.png)
 
 Gambar 6. Bahan-bahan yang sudah dimasukkan
 
@@ -378,17 +378,17 @@ Masih pada menu **Install**, pilih file **.zip** secara berurutan:
 
 Untuk menambahkan lebih dari 1 **.zip**, pilih **Add more Zips**.
 
-![Gambar 7](https://s20.postimg.cc/nne6y7o31/gambar_07.png)
+![Gambar 7]({{ site.url }}{{ page.assets }}/gambar_07.png)
 
 Lakukan terus menerus sampai keempat semua bahan yang diperlukan masuk ke dalam daftar **queued** instalasi.
 
 Kemudian lakukan eksekusi, dengan menggeser tombol biru yang ada di paling bawah.
 
-![Gambar 8](https://s20.postimg.cc/zds4f31al/gambar_08.png)
+![Gambar 8]({{ site.url }}{{ page.assets }}/gambar_08.png)
 
 Proses instalasi akan seperti di bawah ini.
 
-![Gambar 9](https://s20.postimg.cc/c28m47x4d/gambar_09.png)
+![Gambar 9]({{ site.url }}{{ page.assets }}/gambar_09.png)
 
 Tunggu sampai proses instalasi dari semua file selesai di eksekusi.
 

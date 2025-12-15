@@ -49,11 +49,11 @@ Kalau kekurangan dari sxiv (subjektif menurut saya):
 
 ## Screenshots
 
-![Gambar 1](/assets/images/posts/2022/2022-08-07-01-gambar-01.png)
+![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
 
 Gambar 1. sxiv with image mode
 
-![Gambar 2](/assets/images/posts/2022/2022-08-07-01-gambar-02.png)
+![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.png)
 
 Gambar 2. sxiv with thumbnail mode
 
@@ -63,40 +63,40 @@ Gambar 2. sxiv with thumbnail mode
 
 ### Rotation
 
-![Gambar 3](/assets/images/posts/2022/2022-08-07-01-gambar-03.gif)
+![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-03.gif)
 
 Gambar 3. sxiv with rotate left & right
 
 
 ### Flipping
 
-![Gambar 4](/assets/images/posts/2022/2022-08-07-01-gambar-04.gif)
+![Gambar 4]({{ site.url }}{{ page.assets }}/gambar-04.gif)
 
 Gambar 4. sxiv with flip vertical & horizontal
 
 
 ### Zooming & Panning
 
-![Gambar 5](/assets/images/posts/2022/2022-08-07-01-gambar-05.gif)
+![Gambar 5]({{ site.url }}{{ page.assets }}/gambar-05.gif)
 
 Gambar 5. sxiv with zoom in & out
 
-![Gambar 6](/assets/images/posts/2022/2022-08-07-01-gambar-06.gif)
+![Gambar 6]({{ site.url }}{{ page.assets }}/gambar-06.gif)
 
 Gambar 6. sxiv with zoom in movement, zoom level 100%, fit image to window
 
 
 ### Navigation
 
-![Gambar 7](/assets/images/posts/2022/2022-08-07-01-gambar-07.gif)
+![Gambar 7]({{ site.url }}{{ page.assets }}/gambar-07.gif)
 
 Gambar 7. sxiv with navibation next & previous
 
-![Gambar 8](/assets/images/posts/2022/2022-08-07-01-gambar-08.gif)
+![Gambar 8]({{ site.url }}{{ page.assets }}/gambar-08.gif)
 
 Gambar 8. sxiv with navigation on thumbnails mode
 
-![Gambar 9](/assets/images/posts/2022/2022-08-07-01-gambar-09.gif)
+![Gambar 9]({{ site.url }}{{ page.assets }}/gambar-09.gif)
 
 Gambar 9. sxiv with zoom in/out thumbnails
 

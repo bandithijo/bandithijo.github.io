@@ -19,7 +19,7 @@ description: "Membuat menu item untuk menampilkan menu yang aktif dan yang tidak
 
 Kali ini saya kembali mencatat perihal front-end pada Ruby on Rails untuk membuat menu yang dapat menampilkan indikator aktif (selected) saat berada pada halaman yang dipilih.
 
-![Gambar 1](https://i.postimg.cc/DyNSMHLs/gambar-01.gif)
+![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.gif)
 
 Gambar 1. Selected menu item di Rails
 

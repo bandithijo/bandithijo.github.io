@@ -41,11 +41,11 @@ Sebenarnya langkah ini tidak diperlukan. Ini hanya preferensi saya saja.
 
 1. Buka tab **Settings** pada repository GitHub.
 
-   ![Gambar 1](https://i.postimg.cc/kgV8Y97C/gambar-01.png)
+   ![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
 
 2. Scrolling ke bawah, pada bagian "GitHub Pages". Ganti **Source** dari **master branch** menjadi **None**.
 
-   ![Gambar 2](https://i.postimg.cc/6QnZw071/gambar-02.png)
+   ![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.png)
 
    Kemudian, **Save**.
 
@@ -55,13 +55,13 @@ Sebenarnya langkah ini tidak diperlukan. Ini hanya preferensi saya saja.
 
 3. Selanjutnya, rename repository dari **bandithijo.github.io** menjadi **bandithijo.com**.
 
-   ![Gambar 3](https://i.postimg.cc/0QCJKy0Y/gambar-03.png)
+   ![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-03.png)
 
    Kemudian **Rename**.
 
    Setelah berhasil, nama dari repositori saya akan berubah.
 
-   ![Gambar 4](https://i.postimg.cc/wvzmBmLx/gambar-04.png)
+   ![Gambar 4]({{ site.url }}{{ page.assets }}/gambar-04.png)
 
    Tujuannya hanya untuk menyamakan presepsi saja, bahwa sudah tidak ada lagi repositori yang bernama **bandithijo.github.io**.
 
@@ -103,7 +103,7 @@ Sebenarnya langkah ini tidak diperlukan. Ini hanya preferensi saya saja.
 
    Perubahan alamat remote ini adalah hal yang direkomendasikan oleh perintah `git` saat saya melakukan `git push -u origin master`.
 
-   ![Gambar 5](https://i.postimg.cc/jS5Cdr51/gambar-05.png)
+   ![Gambar 5]({{ site.url }}{{ page.assets }}/gambar-05.png)
 
 
 #### Menghapus CNAME
@@ -139,11 +139,11 @@ Sebenarnya langkah ini tidak diperlukan. Ini hanya preferensi saya saja.
 
 1. Setelah login dan otomatis di arahkan ke alamat [app.netlify.com/](https://app.netlify.com/). Saya menambahkan site baru.
 
-   ![Gambar 6](https://i.postimg.cc/8PS526Mt/gambar-06.png)
+   ![Gambar 6]({{ site.url }}{{ page.assets }}/gambar-06.png)
 
 2. Karena saya menggunakan GitHub repo, maka pada langkah 1, ini saya memilih GitHub.
 
-   ![Gambar 7](https://i.postimg.cc/RFhfnnXc/gambar-07.png)
+   ![Gambar 7]({{ site.url }}{{ page.assets }}/gambar-07.png)
 
    Asiknya dengan Netlify, saya dapat berganti-ganti **resource**.
 
@@ -153,11 +153,11 @@ Sebenarnya langkah ini tidak diperlukan. Ini hanya preferensi saya saja.
 
 4. Pada tahap ini, saya diminta untuk memilih repository GitHub.
 
-   ![Gambar 8](https://i.postimg.cc/6QvVHZdt/gambar-08.png)
+   ![Gambar 8]({{ site.url }}{{ page.assets }}/gambar-08.png)
 
 5. Padah tahap ini saya diminta untuk melakukan setting untuk mendeploy repository.
 
-   ![Gambar 9](https://i.postimg.cc/26KQM9bb/gambar-09.png)
+   ![Gambar 9]({{ site.url }}{{ page.assets }}/gambar-09.png)
 
    Saya menambahkan `;rm _site/feed.xml` karena saya tidak menggunakan `feed.xml`.
 
@@ -197,7 +197,7 @@ Sebenarnya langkah ini tidak diperlukan. Ini hanya preferensi saya saja.
 
 6. Akan keluar tampilan seperti ini.
 
-   ![Gambar 10](https://i.postimg.cc/JntfdM1b/gambar-10.png)
+   ![Gambar 10]({{ site.url }}{{ page.assets }}/gambar-10.png)
 
    Saat ini statusnya project kita sedang di build dan di deploy oleh Netlify.
 
@@ -206,55 +206,55 @@ Sebenarnya langkah ini tidak diperlukan. Ini hanya preferensi saya saja.
 
 1. Sembari menunggu proses deploy selesai, saya melakukan **Domain settings**.
 
-   ![Gambar 11](https://i.postimg.cc/7PFFXFj2/gambar-11.png)
+   ![Gambar 11]({{ site.url }}{{ page.assets }}/gambar-11.png)
 
 2. Karena saya memiliki domain sendiri, yaitu **bandithijo.com**, maka saya melakukan konfigurasi custom domain, pilih **Add custom domain**.
 
-   ![Gambar 12](https://i.postimg.cc/vB3WDw9S/gambar-12.png)
+   ![Gambar 12]({{ site.url }}{{ page.assets }}/gambar-12.png)
 
 3. Saya mengisikan "bandithijo.com", lebih direkomendasikan untuk menggunakan "www". Namun pada tulisan kali ini saya akan menunjukkan mudahnya konfigurasi custom domain pada Netlify.
 
-   ![Gambar 13](https://i.postimg.cc/NFnm78d6/gambar-13.png)
+   ![Gambar 13]({{ site.url }}{{ page.assets }}/gambar-13.png)
 
    Tekan **Verify**.
 
 4. Netlify akan mengkonfirmasi bahwa "bandithijo.com" sudah ada yang punya, apakah pemiliknya adalah saya?
 
-   ![Gambar 14](https://i.postimg.cc/Y00QWDz2/gambar-14.png)
+   ![Gambar 14]({{ site.url }}{{ page.assets }}/gambar-14.png)
 
    Tentu saja, **Yes, add domain**.
 
 5. Akan tampil domain "bandithijo.com" dan "www.bandithijo.com" yang memiliki status **Check DNS configuration**.
 
-   ![Gambar 15](https://i.postimg.cc/76zY5gpG/gambar-15.png)
+   ![Gambar 15]({{ site.url }}{{ page.assets }}/gambar-15.png)
 
    Pilih salah satu dari kedua warning tersebut.
 
 6. Akan terbuka popup window yang berisi tentang rekomendasi konfigurasi DNS. Untuk melakukan *pointing root domain* ke Netlify.
 
-   ![Gambar 16](https://i.postimg.cc/T1qd9T2T/gambar-16.png)
+   ![Gambar 16]({{ site.url }}{{ page.assets }}/gambar-16.png)
 
    Namun, saya hiraukan saja, karena saya hanya ingin praktis dengan menggunakan DNS dari Netlify.
 
 7. Scrolling ke bawah, untuk menemukan bantuan dalam menggunakan DNS dari Netlify.
 
-   ![Gambar 17](https://i.postimg.cc/8cVkM7Sy/gambar-17.png)
+   ![Gambar 17]({{ site.url }}{{ page.assets }}/gambar-17.png)
 
    Saat ini, saya memilih menggunakan Netlify DNS agar lebih praktis.
 
 8. Sekali lagi saya diminta untuk memastikan apakah domain **bandithijo.com** benar saya miliki atau tidak.
 
-   ![Gambar 18](https://i.postimg.cc/vZ1R8QRD/gambar-18.png)
+   ![Gambar 18]({{ site.url }}{{ page.assets }}/gambar-18.png)
 
-   ![Gambar 19](https://i.postimg.cc/NFnm78d6/gambar-13.png)
+   ![Gambar 19]({{ site.url }}{{ page.assets }}/gambar-13.png)
 
 9. Bagian menambahkan DNS record yang lain, saya **continue** saja.
 
-   ![Gambar 20](https://i.postimg.cc/j5bBhPDJ/gambar-19.png)
+   ![Gambar 20]({{ site.url }}{{ page.assets }}/gambar-19.png)
 
 10. Copy paste domain Nameserver milik Netlify yang nanti akan saya letakkan pada konfigurasi Nameserver di Dewaweb.
 
-    ![Gambar 21](https://i.postimg.cc/fbX6XBRN/gambar-20.png)
+    ![Gambar 21]({{ site.url }}{{ page.assets }}/gambar-20.png)
 
     ```
     dns1.p06.nsone.net
@@ -267,21 +267,21 @@ Sebenarnya langkah ini tidak diperlukan. Ini hanya preferensi saya saja.
 
 1. Saya perlu mengganti Default subdomain yang diberikan secara random oleh Netlify.
 
-   ![Gambar 22](https://i.postimg.cc/LX5Lw0gd/gambar-21.png)
+   ![Gambar 22]({{ site.url }}{{ page.assets }}/gambar-21.png)
 
    Pilih **Edit site name**. Untuk merubahnya.
 
 2. Saya isikan sesuai nama domain yang saya miliki. **bandithijo**.
 
-   ![Gambar 23](https://i.postimg.cc/W179PCzt/gambar-22.png)
+   ![Gambar 23]({{ site.url }}{{ page.assets }}/gambar-22.png)
 
    Pilih **Save**.
 
 3. Lakukan pengecekan. **Go to DNS panel**.
 
-   ![Gambar 24](https://i.postimg.cc/YqHfqRJF/gambar-23.png)
+   ![Gambar 24]({{ site.url }}{{ page.assets }}/gambar-23.png)
 
-   ![Gambar 25](https://i.postimg.cc/m2y3cMs5/gambar-24.png)
+   ![Gambar 25]({{ site.url }}{{ page.assets }}/gambar-24.png)
 
    Maka target dari DNS record sudah di arahkan ke alamat Default domain yang baru.
 
@@ -292,7 +292,8 @@ Sebenarnya langkah ini tidak diperlukan. Ini hanya preferensi saya saja.
 
 2. Netlify sudah menyarankan untuk membuat file `_redirects` pada direktori root dari direktori site saya.
 
-   ![Gambar 26](https://i.postimg.cc/sDgxcZW8/gambar-25.png)
+   ![Gambar 26]({{ site.url }}{{ page.assets }}/gambar-25.png)
+   ```
 
    Namun, saya lebih memilih cara lain.
 
@@ -326,19 +327,19 @@ Sebenarnya langkah ini tidak diperlukan. Ini hanya preferensi saya saja.
 
 2. Saya hanya perlu mengganti default Dewaweb Nameserver dengan 4 buah Nameserver yang sudah diberikan oleh Netlify.
 
-   ![Gambar 27](https://i.postimg.cc/4dMGQmTC/gambar-26.png)
+   ![Gambar 27]({{ site.url }}{{ page.assets }}/gambar-26.png)
 
-   ![Gambar 28](https://i.postimg.cc/brthCpzZ/gambar-27.png)
+   ![Gambar 28]({{ site.url }}{{ page.assets }}/gambar-27.png)
 
 3. Pastikan berhasil memasukkan Nameserver Netlify.
 
-   ![Gambar 29](https://i.postimg.cc/GhRL7Tyr/gambar-28.png)
+   ![Gambar 29]({{ site.url }}{{ page.assets }}/gambar-28.png)
 
    Apabila gagal, ulangi sampai Nameserver benar-benar tersimpan.
 
 3. Pada Dewaweb, saya tidak perlu melakukan konfigurasi **DNS Management**.
 
-   ![Gambar 30](https://i.postimg.cc/qM2tgd8B/gambar-29.png)
+   ![Gambar 30]({{ site.url }}{{ page.assets }}/gambar-29.png)
 
    Karena saya sudah menggunakan DNS management milik Netlify.
 
@@ -355,23 +356,23 @@ Namun untuk mencatat prosedur manualnya, saya akan tetap menuliskan langkah-lang
 
 2. Scrolling ke bagian paling bawah dari halaman Settings Domain.
 
-   ![Gambar 31](https://i.postimg.cc/7L6jtw9q/gambar-30.png)
+   ![Gambar 31]({{ site.url }}{{ page.assets }}/gambar-30.png)
 
    Pilih **Verify DNS configuration**.
 
 3. Apabila berhasil.
 
-   ![Gambar 32](https://i.postimg.cc/J05LVKk8/gambar-31.png)
+   ![Gambar 32]({{ site.url }}{{ page.assets }}/gambar-31.png)
 
    Tinggal menunggu (paling lama 24 jam) hingga Netlify memberikan sertifikat Let's Encrypt (TLS/SSL certificate) untuk mendapatkan HTTPS.
 
 4. Yak! Tidak sampai 5 menit, SSL/TLS certificate dari Let's Encrypt saya sudah jadi.
 
-   ![Gambar 33](https://i.postimg.cc/VsW5XP7K/gambar-32.png)
+   ![Gambar 33]({{ site.url }}{{ page.assets }}/gambar-32.png)
 
 5. Saya coba cek di browser.
 
-   ![Gambar 34](https://i.postimg.cc/63N5GMCs/gambar-33.png)
+   ![Gambar 34]({{ site.url }}{{ page.assets }}/gambar-33.png)
 
 
 ## Tips
@@ -385,7 +386,7 @@ Namun apabila ingin berpindah dari "tanpa WWW (apex domain)" dan ingin menggunak
 
 Cukup klik menu pada domain **www.bandithijo.com**.
 
-![Gambar 35](https://i.postimg.cc/T3QG7R8P/gambar-34.png)
+![Gambar 35]({{ site.url }}{{ page.assets }}/gambar-34.png)
 
 Lalu klik **Set as primary domain**.
 

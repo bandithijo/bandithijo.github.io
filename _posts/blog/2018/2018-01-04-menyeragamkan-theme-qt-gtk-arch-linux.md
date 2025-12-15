@@ -10,7 +10,7 @@ tags: ["qt", "gtk"]
 description: "Setidaknya terdapat dua library yang mengatur tampilan GUI di GNU/Linux, Gtk dan Qt. Masing-masing memiliki theme yang berbeda. Apakah mungkin untuk diseragamkan?"
 ---
 
-![Banner](https://3.bp.blogspot.com/-rVnxY2exXrI/WmWg56pxTKI/AAAAAAAAG8w/_9tne4RcflQOM7Y0g_WXL_EhKQ7iWmZzQCLcBGAs/s1600/Default%2BHeader%2BTemplate%2BPost%2B2X.png)
+![Banner]({{ site.url }}{{ page.assets }}/Default+Header+Template+Post+2X.png)
 
 ## Latar Belakang
 
@@ -72,7 +72,7 @@ Untuk penerapan konfigurasi ini, dampaknya adalah semua aplikasi yang menggunaka
 
 Konfigurasinya cukup mudah karena kita menggunakan aplikasi GUI yang bernama Qt5 Settings (`qt5ct`).
 
-![Gambar 1](https://1.bp.blogspot.com/-qTQQ9JJm6JU/WmWjOErMKhI/AAAAAAAAG9I/1-Ny_Rsw5i8IhlsqRTytmPH8MAh1qilwwCLcBGAs/s1600/Screenshot%2Bfrom%2B2018-01-21%2B18-56-24.png)
+![Gambar 1]({{ site.url }}{{ page.assets }}/Screenshot+from+2018-01-21+18-56-24.png)
 
 Gambar 1. Qt5 Settings
 

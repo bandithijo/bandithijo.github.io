@@ -10,7 +10,7 @@ tags: ["battery", "upower", "acpi"]
 description: "Karena tidak memiliki PC dan keseharian saya menggunakan laptop dalam menyelesaikan pekerjaan, saya merasa butuh untuk mencatat beberapa hal penting terkait dengan perintah-perintah yang biasa digunakan untuk membantu menegakkan diagnosis dalam pemeriksaan kondisi laptop."
 ---
 
-![Banner](https://i.postimg.cc/TwdxFcR8/banner-post-21.png)
+![Banner]({{ site.url }}{{ page.assets }}/banner_post_21.png)
 
 ## Prakata
 

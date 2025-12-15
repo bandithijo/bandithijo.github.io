@@ -20,11 +20,11 @@ Ketidakseragaman style dari date time picker pada browser.
 
 > *Unsupporting browsers gracefully degrade to a text input, but this creates problems in **consistency of user interface** (the presented controls are different) and data handling.* [1]
 
-![Gambar 1](https://i.postimg.cc/XqVyw4DD/gambar-01.gif)
+![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.gif)
 
 Gambar 1. Default Date picker pada Google Chrome (Kiri) dan Firefox (Kanan) yang memiliki style yang berbeda
 
-![Gambar 2](https://i.postimg.cc/L821WhrX/gambar-03.png)
+![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-03.png)
 
 Gambar 2. Default Date Picker dari Google Chrome (Kiri) & Firefox (Kanan)
 
@@ -327,11 +327,11 @@ Selesai!
 
 ## Hasil
 
-![Gambar 3](https://i.postimg.cc/85R7P4SS/gambar-02.gif)
+![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-02.gif)
 
 Gambar 3. Date picker yang sudah menggunakan tempusdominus-bootstrap-4
 
-![Gambar 4](https://i.postimg.cc/VkgCPm8F/gambar-04.png)
+![Gambar 4]({{ site.url }}{{ page.assets }}/gambar-04.png)
 
 Gambar 4. Date picker yang sudah menggunakan tempusdominus-bootstrap-4
 

@@ -14,45 +14,45 @@ description: "File .lnk dapat benar-benar membuat kotor direktori home kalian ap
 
 Beberapa waktu yang lalu, saya mencoba memasang **Microsoft Office 2010** pada distribusi sistem operasi **Arch Linux** menggunakan **Wine 4.4-1**.
 
-![Gambar 1](https://i.postimg.cc/yWqzSvDJ/gambar-01.gif)
+![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.gif)
 
 Hasilnya lumayan memuaskan, meskipun beberapa aplikasi yang dibawa oleh Microsoft Office ini belum dapat dijalankan.
 
-![Gambar 2](https://i.postimg.cc/sXSKwrKg/gambar-02.png)
+![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.png)
 
 Gambar 2. Microsoft Word 2010
 
-![Gambar 3](https://i.postimg.cc/SxjzTwBC/gambar-03.png)
+![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-03.png)
 
 Gambar 3. Microsoft Excel 2010
 
-![Gambar 4](https://i.postimg.cc/sDKmnKP7/gambar-04.png)
+![Gambar 4]({{ site.url }}{{ page.assets }}/gambar-04.png)
 
 Gambar 4. Microsoft Access 2010
 
-![Gambar 5](https://i.postimg.cc/PfW2DdP6/gambar-05.png)
+![Gambar 5]({{ site.url }}{{ page.assets }}/gambar-05.png)
 
 Gambar 5. Microsoft Outlook 2010
 
-![Gambar 6](https://i.postimg.cc/prJCMJwN/gambar-06.png)
+![Gambar 6]({{ site.url }}{{ page.assets }}/gambar-06.png)
 
 Gambar 6. Microsoft Clip Organizer
 
-![Gambar 7](https://i.postimg.cc/WbsS6xZs/gambar-07.png)
+![Gambar 7]({{ site.url }}{{ page.assets }}/gambar-07.png)
 
 Gambar 7. Microsoft Publisher 2010
 
-![Gambar 8](https://i.postimg.cc/x14RQC4d/gambar-08.png)
+![Gambar 8]({{ site.url }}{{ page.assets }}/gambar-08.png)
 
 Gambar 8. Microsoft Office Picture Manager
 
 Beberapa aplikasi Microsoft Office yang belum dapat dijalankan, diantaranya :
 
-![Gambar 9](https://i.postimg.cc/Wzv8yHf6/gambar-09.png)
+![Gambar 9]({{ site.url }}{{ page.assets }}/gambar-09.png)
 
 Gambar 9. Microsoft OneNote 2010
 
-![Gambar 10](https://i.postimg.cc/LsgV8pc3/gambar-10.png)
+![Gambar 10]({{ site.url }}{{ page.assets }}/gambar-10.png)
 
 Gambar 10. Microsoft PowerPoint 2010
 

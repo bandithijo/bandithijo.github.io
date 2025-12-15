@@ -63,11 +63,11 @@ Namun, saya akan menuliskan penggunaan Ransack untuk membuat tab filter berdasar
 
 Kira-kira seperti ini hasilnya.
 
-![Gambar 1](https://i.postimg.cc/jSsxsCTt/gambar-01.png)
+![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
 
 Gambar 1. Hasil dari filter pada tab All
 
-![Gambar 2](https://i.postimg.cc/wj063HxJ/gambar-02.png)
+![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.png)
 
 Gambar 2. Hasil dari filter pada tab tertentu, berdasarkan negara
 

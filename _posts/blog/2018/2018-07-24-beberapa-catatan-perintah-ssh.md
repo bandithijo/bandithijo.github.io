@@ -3,14 +3,14 @@ layout: "post"
 title: "Beberapa Catatan Kaki Mengenai Perintah-perintah SSH"
 date: "2018-07-30 21:56"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2018/2018-06-22-memperbaiki-gpg-permissions-on-homedir"
+assets: "/assets/images/posts/2018/2018-07-24-beberapa-catatan-perintah-ssh"
 author: "BanditHijo"
 category: "blog"
 tags: ["ssh"]
 description: "Sudah hampir dua minggu ini saya terpilih sebagai peserta untuk mengikuti kelas yang membahas tentang Cloud Computing. Ini merupakan bidang yang sangat baru pertama kali saya sentuh. Sebelumnya, memang saya sering membaca (meski hanya judul) di beberapa blog GNU/Linux yang membahas tentang teknologi-teknologi yang digunakan dalam Cloud Computing. Meskipun sama-sama dalam bidang teknologi, namun jujur saja, istilah-istilah yang digunakan sangat asing buat saya pahami."
 ---
 
-![Banner](https://s20.postimg.cc/dwqipcfgd/banner_post_18.png)
+![Banner]({{ site.url }}{{ page.assets }}/banner_post_18.png)
 
 
 ## Pendahuluan

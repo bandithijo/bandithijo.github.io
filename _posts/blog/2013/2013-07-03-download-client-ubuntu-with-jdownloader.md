@@ -10,7 +10,7 @@ tags: ["osx", "jdownloader"]
 description: "Sudah beralih ke Ubuntu Linux dan masih berharap bisa download video di Youtube, donwload kontent-kontetn di website yang tidak terdapat menu download, download dari situs-situs yang membutuhkan account premium, ketergantungan dengan IDM (Internet Download Manager) di Windows ? Tapi sudah benar-benar terpojok dengan Ubuntu ? Jangan khawatir. Saya akan memperkenalkan sebuah software sebagai alternatif bagi anda sebagai pengganti IDM di Windows."
 ---
 
-![Banner](https://2.bp.blogspot.com/-UBmvBCC3EJ0/UdMJakiqSQI/AAAAAAAAA_8/t90Rt6IGukw/s1600/Default+Header+Template+Post+9.jpg)
+![Banner]({{ site.url }}{{ page.assets }}/Default+Header+Template+Post+9.jpg)
 
 
 ## Latar Belakang

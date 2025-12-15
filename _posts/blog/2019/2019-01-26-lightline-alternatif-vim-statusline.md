@@ -29,7 +29,7 @@ Setelah saya amati, statusline yang dihandle oleh `vim-airline` mengalami delay 
 
 Coba perhatikan perbandingan Vim pada user biasa dan pada user root di bawah ini.
 
-![Gambar 1](https://i.postimg.cc/JzcBJfsM/gambar-01.gif)
+![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.gif)
 
 Gambar 1. Perbandingan startup Vim pada root dan Vim pada user
 
@@ -52,23 +52,23 @@ Dan untuk menghandle bufferline, saya menggunakan [**mengelbrecht/lightline-buff
 
 Berikut ini adalah gambar perbandingan tampilan antara **Vim-Airline** versus **Lightline** dan **Lightline-Bufferline**.
 
-![Gambar 2](https://i.postimg.cc/05dcfybJ/gambar-02.png)
+![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.png)
 
 Gambar 2. irline (Kiri), Lightline (Kanan)
 
-![Gambar 3](https://i.postimg.cc/wB5t1V5t/gambar-07.gif)
+![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-07.gif)
 
 Gambar 3. Startup dengan Vim-Airline
 
-![Gambar 4](https://i.postimg.cc/j5sDP7vM/gambar-08.gif)
+![Gambar 4]({{ site.url }}{{ page.assets }}/gambar-08.gif)
 
 Gambar 4. Startup dengan Lightline
 
-![Gambar 5](https://i.postimg.cc/2SDs8SVk/gambar-05.png)
+![Gambar 5]({{ site.url }}{{ page.assets }}/gambar-05.png)
 
 Gambar 5. Vim-Airline
 
-![Gambar 6](https://i.postimg.cc/52SZHWCw/gambar-06.png)
+![Gambar 6]({{ site.url }}{{ page.assets }}/gambar-06.png)
 
 Gambar 6. Lightline
 
@@ -302,11 +302,11 @@ endfunction
 
 ## Hasilnya
 
-![Gambar 7](https://i.postimg.cc/TwHHXRWc/gambar-03.png)
+![Gambar 7]({{ site.url }}{{ page.assets }}/gambar-03.png)
 
 Gambar 7. Lightline + Lightline-Bufferline
 
-![Gambar 8](https://i.postimg.cc/yxfHSq5Q/gambar-04.png)
+![Gambar 8]({{ site.url }}{{ page.assets }}/gambar-04.png)
 
 Gambar 8. Tampilan saat tidak sibuk
 
@@ -413,11 +413,11 @@ Juga penambahan Devicons pada Filetype dan Fileformat.
 
 **Hasilnya**,
 
-![Gambar 9](https://i.postimg.cc/TPc2p3Zj/gambar-09.png)
+![Gambar 9]({{ site.url }}{{ page.assets }}/gambar-09.png)
 
 Gambar 9. Dengan tambahan powerline symbol untuk master dan readonly
 
-![Gambar 10](https://i.postimg.cc/CKn1Fgcd/gambar-10.png)
+![Gambar 10]({{ site.url }}{{ page.assets }}/gambar-10.png)
 
 Gambar 10. Dengan penambahan Devicon pada Filetype dan Fileformat
 

@@ -14,7 +14,7 @@ description: "SLiM Display Manager termasuk display manager favorit yang banyak 
 
 Mungkin sebagian dari teman-teman ada yang sudah pernah mencicipi distribusi sistem operasi GNU/Linux yang menggunakan SLiM display manager.
 
-![Gambar 1](https://i.postimg.cc/JzS4m67p/gambar-01.png)
+![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
 
 Gambar 1. SLiM display manager dengan default theme
 
@@ -29,7 +29,7 @@ Sebenarnya sudah lama mencari-cari pengganti dari LightDM display manager. Saya 
 
 Sampai beberapa waktu lalu, menemukan halaman pada Slant.co yang membahas [What is the best Linux Display Manager?](https://www.slant.co/topics/2053/~best-linux-display-manager).
 
-![Gambar 2](https://i.postimg.cc/SRfqskGy/gambar-02.png)
+![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.png)
 
 Saya agak heran, karena bukan LightDM yang menduduki peringkat no. 1 saat ini (2019/02/28), melainkan SLiM dengan perolehan point sebanyak 92, disusul LightDM sebesar 84.
 
@@ -40,7 +40,7 @@ Namun, saya tetap ingin mencoba SLiM. Karena rasa penasaran saya atas apa yang m
 
 ### Kelebihan dan Kekurangan SLiM
 
-![Gambar 3](https://i.postimg.cc/C1N5Z5SM/gambar-08.png)
+![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-08.png)
 
 Gambar 3. Sumber: [Slant.co - SLiM Pros and Cons](https://www.slant.co/topics/2053/~best-linux-display-manager)
 
@@ -59,15 +59,15 @@ Beberapa hal yang saya perhatikan adalah:
 
 Berikut ini tampilan dari ketiga hal di atas.
 
-![Gambar 4](https://i.postimg.cc/T2NPtdTS/gambar-03.png)
+![Gambar 4]({{ site.url }}{{ page.assets }}/gambar-03.png)
 
 Gambar 4. [last Updated](https://www.archlinux.org/packages/extra/x86_64/slim/)
 
-![Gambar 5](https://i.postimg.cc/fT3RFGLb/gambar-04.png)
+![Gambar 5]({{ site.url }}{{ page.assets }}/gambar-04.png)
 
 Gambar 5. [View Changes](https://git.archlinux.org/svntogit/packages.git/log/trunk?h=packages/slim)
 
-![Gambar 6](https://i.postimg.cc/5NZ2MsYS/gambar-05.png)
+![Gambar 6]({{ site.url }}{{ page.assets }}/gambar-05.png)
 
 Gambar 6. [Bug Reports](https://bugs.archlinux.org/?project=1&string=slim)
 
@@ -191,7 +191,7 @@ exec $1
 
 Tujuannya agar inputan yang dipilih menggunakan <kbd>F1</kbd> akan dieksekusi.
 
-![Gambar 7](https://i.postimg.cc/d35FFTvd/gambar-06.gif)
+![Gambar 7]({{ site.url }}{{ page.assets }}/gambar-06.gif)
 
 Kita dapat memilih session dengan menekan tombol <kbd>F1</kbd>.
 
@@ -278,7 +278,7 @@ esac
 
 Untuk mengganti *default session* yang ingin digunakan, ubah nilai dari *variabel* `DEFAULTSESSION=`.
 
-![Gambar 8](https://i.postimg.cc/yxs6sHRq/gambar-07.png)
+![Gambar 8]({{ site.url }}{{ page.assets }}/gambar-07.png)
 
 
 ## System Sessions
@@ -328,11 +328,11 @@ Salah satu contoh direktori SLiM themes, biasanya mengandung sedikitnya 3 file.
 > Saya menggunakan theme **darky_solarized_dark_yellow** yang merupakan hasil modifikasi dari **darky_pink** milik [GitHub/adi1090x/slim_themes](https://github.com/adi1090x/slim_themes).
 
 
-![Gambar 9](https://i.postimg.cc/4x6g4MJs/gambar-09.png)
+![Gambar 9]({{ site.url }}{{ page.assets }}/gambar-09.png)
 
 Gambar 9. Themes: darky_pink
 
-![Gambar 10](https://i.postimg.cc/MGz8nDTR/gambar-10.png)
+![Gambar 10]({{ site.url }}{{ page.assets }}/gambar-10.png)
 
 Gambar 10. Themes: darky_solarized_dark_yellow
 
@@ -415,7 +415,7 @@ Terima kasih.
 
 Terima kasih, Bro **Harry Kurn**.
 
-![Gambar 11](https://i.postimg.cc/xdSvWxK2/gambar-11.png)
+![Gambar 11]({{ site.url }}{{ page.assets }}/gambar-11.png)
 
 
 ## Referensi

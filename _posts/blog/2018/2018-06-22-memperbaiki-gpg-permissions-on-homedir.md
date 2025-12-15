@@ -10,7 +10,7 @@ tags: ['gnupg', 'gpg']
 description: "Masalah yang ingin saya angkat pada dokumentasi ini adalah adanya *warning* yang muncul setiap kali saya menjalankan perintah gpg di Terminal."
 ---
 
-![Banner](https://s20.postimg.cc/6vuksuzgt/banner_post_17.png)
+![Banner]({{ site.url }}{{ page.assets }}/banner_post_17.png)
 
 
 ## Pendahuluan

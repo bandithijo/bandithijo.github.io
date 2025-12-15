@@ -10,7 +10,7 @@ tags: ["dnscrypt"]
 description: "Kesulitan dalam mengakses beberapa portal informasi membuat saya gerah. Pasalnya saya kehilangan beberapa bahan bacaan dan sumber informasi yang bagus sekali dari internet berskala global. Ada banyak cara, ini cara yang saya pergunakan untuk lolos dari pembatasan yang dilakukan pemerintah."
 ---
 
-![Banner](https://s20.postimg.cc/hvtdtlfa5/banner_post_20.png)
+![Banner]({{ site.url }}{{ page.assets }}/banner_post_20.png)
 
 
 ## Pendahuluan
@@ -132,7 +132,7 @@ Sekarang lanjut ke konfigurasi nameserver pada `/etc/resolv.conf`.
 > 
 > Bagian ini telah diperbaharui sejak tanggal 2020-06-26.
 
-![Gambar 1](https://i.postimg.cc/d1F4dHzX/gambar-01.png)
+![Gambar 1]({{ site.url }}{{ page.assets }}/gambar_01.png)
 
 Sebelumnya, terima kasih kepada mas [DØNIX (@dsnvhlm)](https://t.me/dsnvhlm) yang telah memberikan informasi dan masukan untuk bagian ini.
 

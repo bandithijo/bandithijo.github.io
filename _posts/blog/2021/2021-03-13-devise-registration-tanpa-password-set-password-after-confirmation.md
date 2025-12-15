@@ -393,7 +393,7 @@ Modifikasi view template **registrations/new**.
 <%= render "devise/shared/links" %>
 ```
 
-![Gambar 1](https://i.postimg.cc/DzyQ71qR/gambar-02.png)
+![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-02.png)
 
 Gambar 1. Sign up form or Registration form
 
@@ -429,7 +429,7 @@ Saya memindahkan field `password` dan `password_confirmation` ke halaman yang la
 <% end %>
 ```
 
-![Gambar 2](https://i.postimg.cc/5t7Byjgy/gambar-03.png)
+![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-03.png)
 
 Gambar 2. Account Activation form
 
@@ -498,7 +498,7 @@ Pasang nav untuk menempatkan link indikator apabila user telah login atau belum.
 
 ## Demonstrasi
 
-![Gambar 3](https://i.postimg.cc/ZqNC6RFV/gambar-01.gif)
+![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-01.gif)
 
 Gambar 3. Demonstrasi register and activation
 

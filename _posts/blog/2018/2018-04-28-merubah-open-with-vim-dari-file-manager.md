@@ -10,7 +10,7 @@ tags: ['vim', 'tips', 'tools']
 description: "Saat ini saya sudah tidak lagi menggunakan Vim, karena beberapa alasan yang salah satunya adalah dukungan terhadap clipboard -- salah satu kegunannya adalah copy paste dari Vim ke dalam sistem dan sebaliknya. Sehingga saya lebih memilih turunan dari Vim yang membawa lebih banyak fitur, yaitu NeoVim."
 ---
 
-![Banner](https://s20.postimg.cc/wzvhg7ngd/banner_post_09.png)
+![Banner]({{ site.url }}{{ page.assets }}/banner_post_09.png)
 
 
 ## Latar Belakang
@@ -62,7 +62,7 @@ Jangan lupa untuk mengeset atribute `Terminal=false` apabila nilainya masih `tru
 
 Apabila berhasil, nanti akan seperti ini hasilnya.
 
-![Gambar 1](https://s20.postimg.cc/iupoeprd9/nvim-on-pcmanfm.gif)
+![Gambar 1]({{ site.url }}{{ page.assets }}/nvim-on-pcmanfm.gif)
 
 Gambar 1. Open With Text Format pada PCMANFM File Manager
 

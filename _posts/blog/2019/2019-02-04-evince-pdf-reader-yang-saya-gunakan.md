@@ -56,23 +56,23 @@ Apa keunggulan dari Evince yang membuat saya menjadikan Evince sebagai PDF reade
 
 ### User Interface yang Sederhana
 
-![Gambar 1](https://i.postimg.cc/pX1kRpZp/gambar-01.png)
+![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
 
 Gambar 1. Dual Page
 
-![Gambar 2](https://i.postimg.cc/HLbtw3Cy/gambar-02.png)
+![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.png)
 
 Gambar 2. Single Page
 
-![Gambar 3](https://i.postimg.cc/GhpzWkvW/gambar-03.png)
+![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-03.png)
 
 Gambar 3. Side Pane: Thumbnails (kiri), Outline(tengah), Annotations(kanan)
 
-![Gambar 4](https://i.postimg.cc/sgkcGqbz/gambar-04.png)
+![Gambar 4]({{ site.url }}{{ page.assets }}/gambar-04.png)
 
 Gambar 4. Night Mode
 
-![Gambar 5](https://i.postimg.cc/XYGLJ4Hx/gambar-05.png)
+![Gambar 5]({{ site.url }}{{ page.assets }}/gambar-05.png
 
 Gambar 5. Highlight (Membuat dan Menghapus)
 
@@ -119,7 +119,7 @@ Pada area kertas, kita dapat menggunakan navigasi yang mirip seperti Vim.
 
 **Touchpad Gesture**
 
-![Gambar 6](https://i.postimg.cc/4x5RNvYX/gambar-06.png)
+![Gambar 6]({{ site.url }}{{ page.assets }}/gambar-06.png)
 
 
 ## Tambahan Konfigurasi
@@ -148,7 +148,7 @@ Maksud dari "*default*" di sini adalah konfigurasi yang akan diterapkan kepada E
 
 Apabila teman-teman berurusan dengan edit-mengedit file PDF, misalkan seperti LaTeX yang kemudian dikonversi ke PDF menggunakan `pdflatex`. Maka setelah proses kompilasi `.tex` menjadi `.pdf` selesai, Evince akan langsung mengupdate isi dari file PDF tersebut secara otomatis.
 
-![Gambar 7](https://i.postimg.cc/6QMYz3K4/gambar-22.png)
+![Gambar 7]({{ site.url }}{{ page.assets }}/gambar-07.png)
 
 Gambar 7. Vim (kiri) sebagai LaTeX editor dengan Evince (kanan)
 

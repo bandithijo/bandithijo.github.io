@@ -227,7 +227,7 @@ Silahkan diisi sesuai dengan daftar RSS feed masing-masing.
 
 Biasanya pemilik blog/website tanpa sadar atau dengan sengaja meletakkan icon/tulisan RSS.
 
-![Gambar 1](https://i.postimg.cc/nzRT1sRY/gambar-04.png)
+![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-04.png)
 
 Gambar 1.  Icon dari RSS Feed
 
@@ -250,15 +250,15 @@ Namun, cara di atas tidak sepenuhnya berhasil. Hanya berhasil terhadap blog/webs
 
 ## Tampilan Newsboat
 
-![Gambar 2](https://i.postimg.cc/Vs3fvJ7t/gambar-01.png)
+![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-01.png)
 
 Gambar 2. Tampilan Depan, daftar RSS feed
 
-![Gambar 3](https://i.postimg.cc/fW3WMcvZ/gambar-02.png)
+![Gambar 3]({{ site.url }}{{ page.assets }}/gambar-02.png)
 
 Gambar 3. Daftar Artikel dari Salah Satu Blog
 
-![Gambar 4](https://i.postimg.cc/DyL2X7DM/gambar-03.png)
+![Gambar 4]({{ site.url }}{{ page.assets }}/gambar-03.png)
 
 Gambar 4. Tampilan Isi
 

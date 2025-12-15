@@ -173,11 +173,11 @@ super + shift + ~b
 
 ## Demonstrasi
 
-![Gambar 1](/assets/images/posts/2022/2022-12-10-01-gambar-01.gif)
+![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.gif)
 
 Gambar 1. Notifikasi dari nm-applet masih dapat keluar meskipun Polybar dalam keadaan hidden
 
-![Gambar 2](/assets/images/posts/2022/2022-12-10-01-gambar-02.gif)
+![Gambar 2]({{ site.url }}{{ page.assets }}/gambar-02.gif)
 
 Gambar 2. Hide & Show Polybar dengan hotkey yang telah dideklarasikan dengan `polybar-msg`
 

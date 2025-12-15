@@ -111,7 +111,7 @@ $ gpg --symmetric tabel_users.md
 
 Setelah itu, kita akan diminta memasukkan password sebanyak 2x.
 
-![Gambar 1](/assets/images/posts/2022/2022-08-20-01-gambar-01.png)
+![Gambar 1]({{ site.url }}{{ page.assets }}/gambar-01.png)
 
 Gambar 1. Popup window
 

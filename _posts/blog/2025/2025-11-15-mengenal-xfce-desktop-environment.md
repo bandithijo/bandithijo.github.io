@@ -143,43 +143,43 @@ Tools utility ini sebenarnya merupakan project terpisah yang masing-masingnya me
 
 Panel default XFCE tidak seperti yang ada di screenshot ini, saya sudah merubah sesuai preferensi saya. Saya terinspirasi dari XFCE versi 4.0.0.
 
-![01]({{ page.assets }}/01.png)
+![Gambar 01]({{ page.assets }}/gambar-01.png)
 
 Gambar 1. (dari kiri ke kanan) About XFCE dan Settings Manager
 
-![02]({{ page.assets }}/02.png)
+![Gambar 02]({{ page.assets }}/gambar-02.png)
 
 Gambar 2. (dari kiri ke kanan) Yay, Neovim, Neofetch
 
-![03]({{ page.assets }}/03.png)
+![Gambar 03]({{ page.assets }}/gambar-03.png)
 
 Gambar 3. (dari kiri ke kanan) Mousepad, Thunar, Viewnoir
 
-![04]({{ page.assets }}/04.png)
+![Gambar 04]({{ page.assets }}/gambar-04.png)
 
 Gambar 4. (dari kiri ke kanan) Gnome Calendar, Gnome Calculator
 
-![05]({{ page.assets }}/05.png)
+![Gambar 05]({{ page.assets }}/gambar-05.png)
 
 Gambar 5. LibreOffice
 
-![06]({{ page.assets }}/06.png)
+![Gambar 06]({{ page.assets }}/gambar-06.png)
 
 Gambar 6. (dari kiri ke kanan) Google Chrome dan bottom (Sytem Monitoring)
 
-![07]({{ page.assets }}/07.png)
+![Gambar 07]({{ page.assets }}/gambar-07.png)
 
 Gambar 7. (dari kiri ke kanan) nvtop, bottom, nmon
 
-![08]({{ page.assets }}/08.png)
+![Gambar 08]({{ page.assets }}/gambar-08.png)
 
 Gambar 8. Thunderbird
 
-![09]({{ page.assets }}/09.png)
+![Gambar 09]({{ page.assets }}/gambar-09.png)
 
 Gambar 9. DBeaver Community
 
-![10]({{ page.assets }}/10.png)
+![Gambar 10]({{ page.assets }}/gambar-10.png)
 
 Gambar 10. Baobab
 
