@@ -3,7 +3,7 @@ layout: "post"
 title: "Mulai Bermain-main dengan Ruby"
 date: "2019-05-02 00:29"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2019/2019-05-02-mulai-bermain-main-dengan-ruby"
+assets: "/assets/images/posts/blog/2019/2019-05-02-mulai-bermain-main-dengan-ruby"
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Praktikum Data Warehouse"
 date: "2018-04-22 16:33"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2018/2018-04-22-praktikum-data-warehouse"
+assets: "/assets/images/posts/blog/2018/2018-04-22-praktikum-data-warehouse"
 author: "BanditHijo"
 category: "blog"
 tags: ["data warehouse"]

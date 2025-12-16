@@ -3,7 +3,7 @@ layout: "post"
 title: "Zgen, ZSH Plugin Manager"
 date: "2019-02-18 12:15"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2019/2019-02-18-zgen-zsh-plugin-manager"
+assets: "/assets/images/posts/blog/2019/2019-02-18-zgen-zsh-plugin-manager"
 author: "BanditHijo"
 category: "blog"
 tags: ["zsh", "zgen"]

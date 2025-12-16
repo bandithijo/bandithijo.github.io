@@ -3,7 +3,7 @@ layout: "post"
 title: "Konfigurasi Anonymized DNSCrypt dengan DNSCrypt-Proxy di macOS"
 date: "2025-12-14 06:30"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2025/2025-12-14-konfigurasi-anonymized-dnscrypt-dengan-dnscrypt-proxy-di-macos"
+assets: "/assets/images/posts/blog/2025/2025-12-14-konfigurasi-anonymized-dnscrypt-dengan-dnscrypt-proxy-di-macos"
 author: "BanditHijo"
 category: "blog"
 tags: ["dnscrypt"]

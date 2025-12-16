@@ -3,7 +3,7 @@ layout: "post"
 title: "Flash, Unlock Bootloader, dan Pasang TWRP Recovery XiaoMi pada GNU/Linux"
 date: "2018-04-28 22:21"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2018/2018-04-28-flash-unlock-recovery-xiaomi"
+assets: "/assets/images/posts/blog/2018/2018-04-28-flash-unlock-recovery-xiaomi"
 author: "BanditHijo"
 category: "blog"
 tags: ["bootloader", "xiaomi"]

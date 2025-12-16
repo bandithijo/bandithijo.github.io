@@ -3,7 +3,7 @@ layout: "post"
 title: "Defx, Alternatif Vim File Explorer selain NERDTree"
 date: "2020-10-27 05:41"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-10-29-defx-alternatif-file-explorer-selain-nerdtree"
+assets: "/assets/images/posts/blog/2020/2020-10-29-defx-alternatif-file-explorer-selain-nerdtree"
 author: "BanditHijo"
 category: "blog"
 tags: ["vim", "defx"]

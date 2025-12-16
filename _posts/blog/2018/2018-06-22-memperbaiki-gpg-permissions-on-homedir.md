@@ -3,7 +3,7 @@ layout: "post"
 title: "Memperbaiki GPG: Warning: Unsafe Permissions on Homedir"
 date: "2018-06-22 17:58"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2018/2018-06-22-memperbaiki-gpg-permissions-on-homedir"
+assets: "/assets/images/posts/blog/2018/2018-06-22-memperbaiki-gpg-permissions-on-homedir"
 author: "BanditHijo"
 category: 'blog'
 tags: ['gnupg', 'gpg']

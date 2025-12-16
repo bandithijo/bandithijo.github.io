@@ -3,7 +3,7 @@ layout: "post"
 title: "Migrasi Blog 2.0"
 date: "2018-03-23"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2018/2018-03-23-migrasi-blog-2-0"
+assets: "/assets/images/posts/blog/2018/2018-03-23-migrasi-blog-2-0"
 author: "BanditHijo"
 category: "blog"
 tags: ["Jekyll"]

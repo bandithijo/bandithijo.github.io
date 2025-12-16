@@ -3,7 +3,7 @@ layout: "post"
 title: "Generate Private dan Public GPG Key Sendiri"
 date: '2018-12-09 07:43'
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2018/2018-12-09-generate-gpg-key"
+assets: "/assets/images/posts/blog/2018/2018-12-09-generate-gpg-key"
 author: "BanditHijo"
 category: "blog"
 tags: ["gnupg", "gpg"]

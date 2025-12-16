@@ -3,7 +3,7 @@ layout: "post"
 title: "DWM, Window Manager yang Gak Pake Ribet"
 date: "2020-04-24 14:23"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-04-24-dwm-window-manager-anti-ribet"
+assets: "/assets/images/posts/blog/2020/2020-04-24-dwm-window-manager-anti-ribet"
 author: "BanditHijo"
 category: "blog"
 tags: ["dwm"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "BanditHijo.com, Bermigrasi dari Cloudflare ke Netlify"
 date: "2019-01-28 01:18"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2019/2019-01-28-bermigrasi-dari-cloudflare-ke-netlify"
+assets: "/assets/images/posts/blog/2019/2019-01-28-bermigrasi-dari-cloudflare-ke-netlify"
 author: "BanditHijo"
 category: "blog"
 tags: ["jekyll"]

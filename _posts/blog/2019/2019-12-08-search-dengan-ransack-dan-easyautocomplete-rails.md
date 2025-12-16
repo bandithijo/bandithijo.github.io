@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Fitur Search dengan Ransack dan EasyAutocomplete pada Rails"
 date: "2019-12-08 17:02"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2019/2019-12-08-search-dengan-ransack-dan-easyautocomplete-rails"
+assets: "/assets/images/posts/blog/2019/2019-12-08-search-dengan-ransack-dan-easyautocomplete-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "javascript", "ransack"]

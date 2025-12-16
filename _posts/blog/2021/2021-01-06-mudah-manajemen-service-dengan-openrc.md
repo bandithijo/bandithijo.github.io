@@ -3,7 +3,7 @@ layout: "post"
 title: "Mudah Manajemen Service dengan OpenRC"
 date: "2021-01-06 06:45"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2021/2021-01-06-mudah-manajemen-service-dengan-openrc"
+assets: "/assets/images/posts/blog/2021/2021-01-06-mudah-manajemen-service-dengan-openrc"
 author: "BanditHijo"
 category: "blog"
 tags: ["artix linux", "openrc"]

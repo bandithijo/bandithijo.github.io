@@ -3,7 +3,7 @@ layout: "post"
 title: "Konfigurasi Window Title untuk Simple/Suckless Terminal"
 date: "2019-04-15 06:35"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2019/2019-04-15-konfigurasi-window-title-st-terminal"
+assets: "/assets/images/posts/blog/2019/2019-04-15-konfigurasi-window-title-st-terminal"
 author: "BanditHijo"
 category: "blog"
 tags: ["simple terminal", "terminal emulator"]

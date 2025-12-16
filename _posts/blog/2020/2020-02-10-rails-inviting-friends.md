@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Fitur Pertemanan dengan Referral Link pada Rails"
 date: "2020-02-10 15:10"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-02-10-rails-inviting-friends"
+assets: "/assets/images/posts/blog/2020/2020-02-10-rails-inviting-friends"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]

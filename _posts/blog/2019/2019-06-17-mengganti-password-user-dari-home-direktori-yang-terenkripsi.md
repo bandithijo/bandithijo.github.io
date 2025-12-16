@@ -3,7 +3,7 @@ layout: "post"
 title: "Mengganti Password User dari Home Direktori yang Terenkripsi"
 date: "2019-06-17 13:18"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2019/2019-06-17-mengganti-password-user-dari-home-direktori-yang-terenkripsi"
+assets: "/assets/images/posts/blog/2019/2019-06-17-mengganti-password-user-dari-home-direktori-yang-terenkripsi"
 author: "BanditHijo"
 category: "blog"
 tags: ["ecryptfs", "encryption"]

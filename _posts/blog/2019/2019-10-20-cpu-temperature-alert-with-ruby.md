@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat CPU Temperature Alert dengan Ruby"
 date: "2019-10-20 21:29"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2019/2019-10-20-cpu-temperature-alert-with-ruby"
+assets: "/assets/images/posts/blog/2019/2019-10-20-cpu-temperature-alert-with-ruby"
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby"]

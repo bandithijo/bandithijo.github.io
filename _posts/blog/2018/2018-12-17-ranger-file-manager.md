@@ -3,7 +3,7 @@ layout: "post"
 title: "Ranger, Terminal Based File Manager yang Ternyata Sangat Memudahkan"
 date: "2018-12-17 09:18"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2018/2018-12-17-ranger-file-manager"
+assets: "/assets/images/posts/blog/2018/2018-12-17-ranger-file-manager"
 author: "BanditHijo"
 category: "blog"
 tags: ["ranger", "tui"]

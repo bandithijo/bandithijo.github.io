@@ -3,7 +3,7 @@ layout: "post"
 title: "Rails Counter Cache pada Satu Model"
 date: '2019-12-13 20:49'
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2019/2019-12-13-rails-counter-cache-pada-satu-model"
+assets: "/assets/images/posts/blog/2019/2019-12-13-rails-counter-cache-pada-satu-model"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]

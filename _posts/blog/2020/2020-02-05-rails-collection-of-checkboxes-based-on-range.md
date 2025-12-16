@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Collection of Checkbox yang Berbasis Rentang pada Rails"
 date: "2020-02-05 06:09"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-02-05-rails-collection-of-checkboxes-based-on-range"
+assets: "/assets/images/posts/blog/2020/2020-02-05-rails-collection-of-checkboxes-based-on-range"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "jquery"]

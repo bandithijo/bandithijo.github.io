@@ -3,7 +3,7 @@ layout: "post"
 title: "Memperbaiki Font Rendering pada Jitsi - VoIP dan IM Client pada GNU/Linux"
 date: "2019-04-22 14:11"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2019/2019-04-22-memperbaiki-font-rendering-jitsi"
+assets: "/assets/images/posts/blog/2019/2019-04-22-memperbaiki-font-rendering-jitsi"
 author: "BanditHijo"
 category: "blog"
 tags: ["jitsi"]

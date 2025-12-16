@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Go To Next dan Previous Post Menu pada Blog Post yang Dibangun dengan Rails"
 date: "2021-02-13 18:07"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2021/2021-02-13-membuat-next-dan-prev-menu-pada-rails"
+assets: "/assets/images/posts/blog/2021/2021-02-13-membuat-next-dan-prev-menu-pada-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]

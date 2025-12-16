@@ -3,7 +3,7 @@ layout: "post"
 title: "Memperbesar Gambar dengan Modal Menggunakan JavaScript (Tanpa JQuery)"
 date: "2020-07-17 21:42"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-07-17-memperbesar-gambar-dengan-modal-menggunakan-javascript"
+assets: "/assets/images/posts/blog/2020/2020-07-17-memperbesar-gambar-dengan-modal-menggunakan-javascript"
 author: "BanditHijo"
 category: "blog"
 tags: ["javascript"]

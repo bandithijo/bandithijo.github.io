@@ -3,7 +3,7 @@ layout: "post"
 title: "Menghandle Pengarsipan pada FreeBSD dengan 7-Zip"
 date: "2020-03-09 16:41"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-03-09-menghandle-pengarsipan-pada-freebsd-dengan-7-zip"
+assets: "/assets/images/posts/blog/2020/2020-03-09-menghandle-pengarsipan-pada-freebsd-dengan-7-zip"
 author: "BanditHijo"
 category: "blog"
 tags: ["freebsd"]

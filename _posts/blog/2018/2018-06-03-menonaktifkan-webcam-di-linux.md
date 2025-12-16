@@ -3,7 +3,7 @@ layout: "post"
 title: "Menonaktifkan WebCam di GNU/Linux"
 date: "2018-06-03 13:23"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2018/2018-06-03-menonaktifkan-webcam-di-linux"
+assets: "/assets/images/posts/blog/2018/2018-06-03-menonaktifkan-webcam-di-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["webcam"]

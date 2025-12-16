@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Form's Output dengan AJAX"
 date: "2020-12-01 20:43"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-12-01-membuat-output-dari-form-dengan-ajax"
+assets: "/assets/images/posts/blog/2020/2020-12-01-membuat-output-dari-form-dengan-ajax"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "ajax"]

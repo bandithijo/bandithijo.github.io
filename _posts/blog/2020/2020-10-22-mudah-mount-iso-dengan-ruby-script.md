@@ -3,7 +3,7 @@ layout: "post"
 title: "Mudah Mount & Unmount File ISO Image dengan Ruby Script (feat. udisksctl)"
 date: "2020-10-22 06:52"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-10-22-mudah-mount-iso-dengan-ruby-script"
+assets: "/assets/images/posts/blog/2020/2020-10-22-mudah-mount-iso-dengan-ruby-script"
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby", "udisksctl"]

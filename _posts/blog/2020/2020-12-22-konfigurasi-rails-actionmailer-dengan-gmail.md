@@ -3,7 +3,7 @@ layout: "post"
 title: "Konfigurasi Ruby on Rails ActionMailer dengan Gmail"
 date: "2020-12-22 08:13"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-12-22-konfigurasi-rails-actionmailer-dengan-gmail"
+assets: "/assets/images/posts/blog/2020/2020-12-22-konfigurasi-rails-actionmailer-dengan-gmail"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]

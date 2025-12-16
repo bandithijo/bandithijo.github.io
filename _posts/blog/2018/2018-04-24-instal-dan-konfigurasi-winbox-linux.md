@@ -3,7 +3,7 @@ layout: "post"
 title: "Instal dan Konfigurasi WinBox pada GNU/Linux"
 date: "2018-04-24 00:59"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2018/2018-04-24-instal-dan-konfigurasi-winbox-linux"
+assets: "/assets/images/posts/blog/2018/2018-04-24-instal-dan-konfigurasi-winbox-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["wine", "winbox", "mikrotik"]

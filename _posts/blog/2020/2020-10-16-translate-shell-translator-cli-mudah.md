@@ -3,7 +3,7 @@ layout: "post"
 title: "Translate-shell, Translator CLI Online yang Praktis"
 date: "2020-10-16 22:05"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-10-16-translate-shell-translator-cli-mudah"
+assets: "/assets/images/posts/blog/2020/2020-10-16-translate-shell-translator-cli-mudah"
 author: "BanditHijo"
 category: "blog"
 tags: ["cli", "translator"]

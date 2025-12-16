@@ -3,7 +3,7 @@ layout: "post"
 title: "Notifikasi User Sign Up ke Email Admin dengan ActionMailer Rails"
 date: "2021-03-26 19:00"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2021/2021-03-26-notifikasi-user-signup-ke-email-admin-degan-actionmailer-rails"
+assets: "/assets/images/posts/blog/2021/2021-03-26-notifikasi-user-signup-ke-email-admin-degan-actionmailer-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]

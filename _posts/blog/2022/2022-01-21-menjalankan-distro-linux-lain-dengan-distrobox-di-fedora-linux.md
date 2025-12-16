@@ -3,7 +3,7 @@ layout: "post"
 title: "Menjalankan Distro Linux yang Lain dengan Distrobox di Fedora Linux"
 date: "2022-01-21 17:41"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2022/2022-01-21-menjalankan-distro-linux-lain-dengan-distrobox-di-fedora-linux"
+assets: "/assets/images/posts/blog/2022/2022-01-21-menjalankan-distro-linux-lain-dengan-distrobox-di-fedora-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["distrobox", "container"]

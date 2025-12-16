@@ -3,7 +3,7 @@ layout: "post"
 title: "Memasang Pagination dengan Pagy pada Rails"
 date: '2020-02-20 07:27'
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-02-20-rails-pagination-dengan-pagy"
+assets: "/assets/images/posts/blog/2020/2020-02-20-rails-pagination-dengan-pagy"
 author: "BanditHijo"
 category: "blog"
 tags: ["tips", "rails"]

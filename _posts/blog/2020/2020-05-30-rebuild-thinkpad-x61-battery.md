@@ -3,7 +3,7 @@ layout: "post"
 title: "Rebuild ThinkPad X61 Battery"
 date: "2020-05-30 17:49"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-05-30-rebuild-thinkpad-x61-battery"
+assets: "/assets/images/posts/blog/2020/2020-05-30-rebuild-thinkpad-x61-battery"
 author: "BanditHijo"
 category: "blog"
 tags: ["thinkpad", "battery"]

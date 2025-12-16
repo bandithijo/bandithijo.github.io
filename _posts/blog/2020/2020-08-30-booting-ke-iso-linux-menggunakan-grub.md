@@ -3,7 +3,7 @@ layout: "post"
 title: "Booting ke Linux ISO menggunakan GRUB2 (Tanpa Bootable FlashDrive) a.k.a RecoveryHD"
 date: "2020-08-30 19:47"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-08-30-booting-ke-iso-linux-menggunakan-grub"
+assets: "/assets/images/posts/blog/2020/2020-08-30-booting-ke-iso-linux-menggunakan-grub"
 author: "BanditHijo"
 category: "blog"
 tags: ["arch linux"]

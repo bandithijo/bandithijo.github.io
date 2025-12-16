@@ -3,7 +3,7 @@ layout: "post"
 title: "Select Menu dengan Short Description Menggunakan jQuery pada Rails"
 date: "2019-12-14 01:44"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2019/2019-12-14-select-menu-short-description-dengan-jquery"
+assets: "/assets/images/posts/blog/2019/2019-12-14-select-menu-short-description-dengan-jquery"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "javascript", "jquery"]

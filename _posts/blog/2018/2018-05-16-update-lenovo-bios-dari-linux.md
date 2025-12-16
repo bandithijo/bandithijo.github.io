@@ -3,7 +3,7 @@ layout: "post"
 title: "Update BIOS Lenovo di GNU/Linux Tanpa Menggunakan Windows"
 date: "2018-05-16 18:41"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2018/2018-05-16-update-lenovo-bios-dari-linux"
+assets: "/assets/images/posts/blog/2018/2018-05-16-update-lenovo-bios-dari-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["thinkpad", "bios"]

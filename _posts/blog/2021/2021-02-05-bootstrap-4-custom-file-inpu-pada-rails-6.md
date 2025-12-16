@@ -3,7 +3,7 @@ layout: "post"
 title: "Bootstrap 4 Custom File Input dengan bs-custom-file-input Javascript pada Rails 6"
 date: "2021-02-05 01:19"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2021/2021-02-05-bootstrap-4-custom-file-inpu-pada-rails-6"
+assets: "/assets/images/posts/blog/2021/2021-02-05-bootstrap-4-custom-file-inpu-pada-rails-6"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "bootstrap"]

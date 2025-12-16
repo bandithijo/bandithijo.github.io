@@ -3,7 +3,7 @@ layout: "post"
 title: "Memasang Rubocop (Ruby linter) pada Vim"
 date: "2020-08-25 05:17"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-08-25-memasang-rubocop-pada-vim"
+assets: "/assets/images/posts/blog/2020/2020-08-25-memasang-rubocop-pada-vim"
 author: "BanditHijo"
 category: "blog"
 tags: ["vim", "ruby", "rubocop"]

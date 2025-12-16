@@ -3,7 +3,7 @@ layout: "post"
 title: "Memory Cleaner untuk OSX"
 date: "2014-05-28"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2014/2014-06-28-memory-cleaner-osx"
+assets: "/assets/images/posts/blog/2014/2014-06-28-memory-cleaner-osx"
 author: "BanditHijo"
 category: "blog"
 tags: ["osx"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Menambahkan Custom Resolution pada GNU/Linux"
 date: "2020-11-06 13:16"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-11-06-menambahkan-custom-resolution-gnu-linux"
+assets: "/assets/images/posts/blog/2020/2020-11-06-menambahkan-custom-resolution-gnu-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ['screenresolution']

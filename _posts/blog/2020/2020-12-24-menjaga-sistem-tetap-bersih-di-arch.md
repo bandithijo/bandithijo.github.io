@@ -3,7 +3,7 @@ layout: "post"
 title: "Menjaga Sistem Tetap Bersih di Arch Linux"
 date: "2020-12-24 12:23"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-12-24-menjaga-sistem-tetap-bersih-di-arch"
+assets: "/assets/images/posts/blog/2020/2020-12-24-menjaga-sistem-tetap-bersih-di-arch"
 author: "BanditHijo"
 category: "blog"
 tags: ["pacman"]

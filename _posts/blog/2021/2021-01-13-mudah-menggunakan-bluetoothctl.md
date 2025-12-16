@@ -3,7 +3,7 @@ layout: "post"
 title: "Mudah Menggunakan Bluetoothctl"
 date: "2021-01-13 15:28"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2021/2021-01-13-mudah-menggunakan-bluetoothctl"
+assets: "/assets/images/posts/blog/2021/2021-01-13-mudah-menggunakan-bluetoothctl"
 author: "BanditHijo"
 category: "blog"
 tags: ["bluetooth", "bluetoothctl"]

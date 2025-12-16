@@ -3,7 +3,7 @@ layout: "post"
 title: "Generate Random Password menggunakan PWGEN"
 date: "2018-03-27"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2018/2018-03-27-generate-passowrd-dengan-pwgen"
+assets: "/assets/images/posts/blog/2018/2018-03-27-generate-passowrd-dengan-pwgen"
 author: "BanditHijo"
 category: "blog"
 tags: ["security", "pwgen"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Selected Menu Item pada Rails View Template"
 date: "2021-02-09 18:13"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2021/2021-02-09-selected-menu-item-pada-rails-view-template"
+assets: "/assets/images/posts/blog/2021/2021-02-09-selected-menu-item-pada-rails-view-template"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]

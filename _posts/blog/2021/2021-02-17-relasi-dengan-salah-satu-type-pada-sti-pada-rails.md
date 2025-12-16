@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Relasi dengan Hanya Salah Satu Type pada Single Table Inheritance Model di Rails"
 date: "2021-02-17 20:52"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2021/2021-02-17-relasi-dengan-salah-satu-type-pada-sti-pada-rails"
+assets: "/assets/images/posts/blog/2021/2021-02-17-relasi-dengan-salah-satu-type-pada-sti-pada-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]

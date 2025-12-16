@@ -3,7 +3,7 @@ layout: "post"
 title: "Mengatur Fungsi dari Fingerprint pada Arch Linux"
 date: "2018-01-18"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2018/2018-01-18-mengatur-fungsi-fingerprint-arch-linux"
+assets: "/assets/images/posts/blog/2018/2018-01-18-mengatur-fungsi-fingerprint-arch-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["thinkpad", "fingerprint"]

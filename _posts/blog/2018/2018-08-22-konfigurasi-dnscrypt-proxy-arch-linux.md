@@ -3,7 +3,7 @@ layout: "post"
 title: "Konfigurasi DNSCrypt di Arch Linux"
 date: "2018-08-22 12:52"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2018/2018-08-22-konfigurasi-dnscrypt-proxy-arch-linux"
+assets: "/assets/images/posts/blog/2018/2018-08-22-konfigurasi-dnscrypt-proxy-arch-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["dnscrypt"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Catatan Daftar Terminal Tools"
 date: "2021-05-04 04:17"
 permalink: "/note/:title"
-assets: "/assets/images/notes/2021-05-04-catatan-daftar-terminal-tools"
+assets: "/assets/images/posts/note/2021-05-04-catatan-daftar-terminal-tools"
 author: "BanditHijo"
 category: "note"
 tags: ["tui"]
@@ -24,7 +24,7 @@ Catatan ini hadir, dari penulis untuk teman-teman, sebagai catatan untuk menging
 
 ### htop
 
-![gambar-htop](https://i.postimg.cc/bwj3RHrR/gambar-htop.png)
+![gambar-htop]({{ page.assets }}/gambar-htop.png)
 
 An interactive process viewer
 
@@ -41,7 +41,7 @@ Tasks related to processes (e.g. killing and renicing) can be done without enter
 
 ### gotop
 
-![gambar-gotop](https://i.postimg.cc/15gDNgKr/gambar-gotop.png)
+![gambar-gotop]({{ page.assets }}/gambar-gotop.png)
 
 Another terminal based graphical activity monitor, inspired by gtop and vtop, this time written in Go!
 
@@ -50,7 +50,7 @@ Another terminal based graphical activity monitor, inspired by gtop and vtop, th
 
 ### gtop
 
-![gambar-gtop](https://i.postimg.cc/Wbr6HFJb/gambar-gtop.png)
+![gambar-gtop]({{ page.assets }}/gambar-gtop.png)
 
 System monitoring dashboard for terminal.
 
@@ -59,7 +59,7 @@ System monitoring dashboard for terminal.
 
 ### vtop
 
-![gambar-vtop](https://i.postimg.cc/yYzSWfks/gambar-vtop.png)
+![gambar-vtop]({{ page.assets }}/gambar-vtop.png)
 
 Wow such top. So stats. More better than regular top.
 
@@ -70,7 +70,7 @@ A graphical activity monitor for the command line.
 
 ### ytop
 
-![gambar-ytop](https://i.postimg.cc/W4J2GvHK/gambar-ytop.png)
+![gambar-ytop]({{ page.assets }}/gambar-ytop.png)
 
 A TUI system monitor written in Rust.
 
@@ -82,7 +82,7 @@ NO LONGER MAINTAINED. For a similar program, check out.<br>
 
 ### bottom (btm)
 
-![gambar-bottom](https://i.postimg.cc/59mfqpsx/gambar-bottom.png)
+![gambar-bottom]({{ page.assets }}/gambar-bottom.png)
 
 Yet another cross-platform graphical process/system monitor.
 
@@ -93,7 +93,7 @@ A cross-platform graphical process/system monitor with a customizable interface 
 
 ### bashtop
 
-![gambar-bashtop](https://i.postimg.cc/pL3vXSLB/gambar-bashtop.png)
+![gambar-bashtop]({{ page.assets }}/gambar-bashtop.png)
 
 Linux/OSX/FreeBSD resource monitor.
 
@@ -104,7 +104,7 @@ Notice, python version released! ([bpytop](https://github.com/aristocratos/bpyto
 
 ### bpytop
 
-![gambar-bpytop](https://i.postimg.cc/nzZ6Xfbq/gambar-bpytop.png)
+![gambar-bpytop]({{ page.assets }}/gambar-bpytop.png)
 
 Linux/OSX/FreeBSD resource monitor.
 
@@ -117,7 +117,7 @@ Python port and continuation of bashtop.
 
 ### glances
 
-{% image https://i.postimg.cc/yxp5pJJT/gambar-glances.png | gambar-galnces %}
+![gambar-glances]({{ page.assets }}/gambar-glances.png)
 
 Glances an Eye on your system. A top/htop alternative for GNU/Linux, BSD, Mac OS and Windows operating systems.
 
@@ -128,9 +128,9 @@ Glances is a cross-platform monitoring tool which aims to present a large amount
 
 ### nmon
 
-![gambar-nmon-01](https://i.postimg.cc/cJWDm79S/gambar-nmon-01.png)
+![gambar-nmon-01]({{ page.assets }}/gambar-nmon-01.png)
 
-![gambar-nmon-02](https://i.postimg.cc/FKxTnf8J/gambar-nmon-02.png)
+![gambar-nmon-02]({{ page.assets }}/gambar-nmon-02.png)
 
 nmon is short for Nigel's performance Monitor for Linux on POWER, x86, x86_64, Mainframe & now ARM (Raspberry Pi).
 
@@ -148,7 +148,7 @@ This systems administrator, tuner, benchmark tool gives you a huge amount of imp
 
 ### vizex
 
-![gambar-vizex](https://i.postimg.cc/1zDSjKr5/gambar-vizex.png)
+![gambar-vizex]({{ page.assets }}/gambar-vizex.png)
 
 Visualize disk space and disk usage in your UNIX\Linux terminal
 
@@ -162,7 +162,7 @@ vizex is the terminal program for the UNIX/Linux systems which helps the user to
 
 ### iftop
 
-![gambar-iftop](https://i.postimg.cc/rmPrFhT1/gambar-iftop.png)
+![gambar-iftop]({{ page.assets }}/gambar-iftop.png)
 
 Display bandwidth usage on an interface.
 
@@ -175,7 +175,7 @@ iftop does for network usage what top(1) does for CPU usage. It listens to netwo
 
 ### nethogs
 
-![gambar-htop](https://i.postimg.cc/L6Pxf09X/gambar-nethogs.png)
+![gambar-htop]({{ page.assets }}/gambar-nethogs.png)
 
 Net top tool grouping bandwidth per process.
 
@@ -200,7 +200,7 @@ NetHogs is a small 'net top' tool. Instead of breaking the traffic down per prot
 
 ### gping
 
-![gambar-gping](https://i.postimg.cc/85sHCZXT/gambar-gping.png)
+![gambar-gping]({{ page.assets }}/gambar-gping.png)
 
 Ping, but with a graph.
 
@@ -209,7 +209,7 @@ Ping, but with a graph.
 
 ### prettyping
 
-![gambar-prettyping](https://i.postimg.cc/rwqVqFR3/gambar-prettyping.png)
+![gambar-prettyping]({{ page.assets }}/gambar-prettyping.png)
 
 prettyping is a wrapper around the standard ping tool with the objective of making the output prettier, more colorful, more compact, and easier to read.
 
@@ -218,11 +218,11 @@ prettyping is a wrapper around the standard ping tool with the objective of maki
 
 ### wavemon
 
-![gambar-wavemon-01](https://i.postimg.cc/N08h4jQK/gambar-wavemon-01.png)
+![gambar-wavemon-01]({{ page.assets }}/gambar-wavemon-01.png)
 
-![gambar-wavemon-02](https://i.postimg.cc/k5P3KbPr/gambar-wavemon-02.png)
+![gambar-wavemon-02]({{ page.assets }}/gambar-wavemon-02.png)
 
-![gambar-wavemon-03](https://i.postimg.cc/9Mc6NHfJ/gambar-wavemon-03.png)
+![gambar-wavemon-03]({{ page.assets }}/gambar-wavemon-03.png)
 
 wavemon is an ncurses-based monitoring application for wireless network devices on Linux.
 
@@ -236,13 +236,13 @@ wavemon is a wireless device monitoring application that allows you to watch sig
 
 ### tremc
 
-![gambar-tremc-01](https://i.postimg.cc/13xYj1Cw/gambar-tremc-01.png)
+![gambar-tremc-01]({{ page.assets }}/gambar-tremc-01.png)
 
-![gambar-tremc-02](https://i.postimg.cc/K8nsXpwV/gambar-tremc-02.png)
+![gambar-tremc-02]({{ page.assets }}/gambar-tremc-02.png)
 
-![gambar-tremc-03](https://i.postimg.cc/rpjns08N/gambar-tremc-03.png)
+![gambar-tremc-03]({{ page.assets }}/gambar-tremc-03.png)
 
-![gambar-tremc-04](https://i.postimg.cc/Dznp7dKz/gambar-tremc-04.png)
+![gambar-tremc-04]({{ page.assets }}/gambar-tremc-04.png)
 
 Curses interface for transmission
 
@@ -258,7 +258,7 @@ tremc is the python3 fork of transmission-remote-cli.
 
 ### lazygit
 
-![gambar-lazygit](https://i.postimg.cc/prwk4KZR/gambar-lazygit.png)
+![gambar-lazygit]({{ page.assets }}/gambar-lazygit.png)
 
 A simple terminal UI for git commands, written in Go with the gocui library.
 
@@ -267,9 +267,9 @@ A simple terminal UI for git commands, written in Go with the gocui library.
 
 ### tig
 
-![gambar-tig-01](https://i.postimg.cc/ZRg1YBcD/gambar-tig-01.png)
+![gambar-tig-01]({{ page.assets }}/gambar-tig-01.png)
 
-![gambar-tig-02](https://i.postimg.cc/qRgPdX83/gambar-tig-02.png)
+![gambar-tig-02]({{ page.assets }}/gambar-tig-02.png)
 
 Text-mode interface for git
 
@@ -295,7 +295,7 @@ Tig is an ncurses-based text-mode interface for git. It functions mainly as a Gi
 
 ### periodic-table-tui
 
-![gambar-periodic-table](https://i.postimg.cc/5NqptQ9K/gambar-periodic-table-tui.png)
+![gambar-periodic-table]({{ page.assets }}/gambar-periodic-table-tui.png)
 
 A periodic table for the command line.
 
@@ -307,9 +307,9 @@ A periodic table for the command line.
 
 ### Weechat (IRC Client)
 
-![gambar-weechat-01](https://i.postimg.cc/J0bw07t3/gambar-weechat-01.png)
+![gambar-weechat-01]({{ page.assets }}/gambar-weechat-01.png)
 
-![gambar-weechat-02](https://i.postimg.cc/RCfxXdG3/gambar-weechat-02.png)
+![gambar-weechat-02]({{ page.assets }}/gambar-weechat-02.png)
 
 WeeChat (Wee Enhanced Environment for Chat) is a free chat client, fast and light, designed for many operating systems. It is highly customizable and extensible with scripts.
 
@@ -368,7 +368,7 @@ An ncurses mixer for PulseAudio inspired by pavucontrol.
 
 ### newsboat
 
-![gambar-newsboat](https://i.postimg.cc/ryKZJNGB/gambar-newsboat.png)
+![gambar-newsboat]({{ page.assets }}/gambar-newsboat.png)
 
 Newsboat is an RSS/Atom feed reader for the text console. It's an actively maintained fork of Newsbeuter.
 
@@ -382,7 +382,7 @@ A feed reader pulls updates directly from sites like blogs and news agencies, an
 
 ### neomutt
 
-![gambar-neomutt](https://i.postimg.cc/vHSQKzC5/gambar-neomutt.png)
+![gambar-neomutt]({{ page.assets }}/gambar-neomutt.png)
 
 Teaching an Old Dog New Tricks
 
@@ -406,7 +406,7 @@ NeoMutt was created when Richard Russon (@FlatCap) took all the old Mutt patches
 
 ### ranger
 
-![gambar-ranger](https://i.postimg.cc/ryfcdjV7/gambar-ranger.png)
+![gambar-ranger]({{ page.assets }}/gambar-ranger.png)
 
 ranger is a console file manager with VI key bindings. It provides a minimalistic and nice curses interface with a view on the directory hierarchy. It ships with rifle, a file launcher that is good at automatically finding out which program to use for what file type.
 

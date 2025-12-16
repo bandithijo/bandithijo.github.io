@@ -3,7 +3,7 @@ layout: "post"
 title: "Mendeploy Jekyll ke GitHub Pages dengan Travis CI"
 date: "2020-07-10 11:00"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-07-10-deploy-gh-page-dengan-travis-ci"
+assets: "/assets/images/posts/blog/2020/2020-07-10-deploy-gh-page-dengan-travis-ci"
 author: "BanditHijo"
 category: "blog"
 tags: ["jekyll", "githubpages", "travisci"]

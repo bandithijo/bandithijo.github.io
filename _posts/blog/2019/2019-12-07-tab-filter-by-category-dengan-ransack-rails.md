@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Tab Filter by Category dengan Ransack pada Rails"
 date: "2019-12-07 17:45"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2019/2019-12-07-tab-filter-by-category-dengan-ransack-rails"
+assets: "/assets/images/posts/blog/2019/2019-12-07-tab-filter-by-category-dengan-ransack-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "ransack"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Mudah Mengupgrade Jekyll 4"
 date: "2019-10-16 07:12"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2019/2019-10-16-upgrade-jekyll-4"
+assets: "/assets/images/posts/blog/2019/2019-10-16-upgrade-jekyll-4"
 author: "BanditHijo"
 category: "blog"
 tags: ["jekyll"]

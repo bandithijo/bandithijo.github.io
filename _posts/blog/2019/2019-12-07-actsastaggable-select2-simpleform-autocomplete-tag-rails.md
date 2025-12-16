@@ -3,7 +3,7 @@ layout: "post"
 title: "Autcomplete Tag dengan ActsAsTaggable, Select2, dan simple_form pada Rails"
 date: "2019-12-07 11:47"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2019/2019-12-07-actsastaggable-select2-simpleform-autocomplete-tag-rails"
+assets: "/assets/images/posts/blog/2019/2019-12-07-actsastaggable-select2-simpleform-autocomplete-tag-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "javascript"]

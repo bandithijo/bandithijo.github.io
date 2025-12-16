@@ -3,7 +3,7 @@ layout: "post"
 title: "Mudah Memasang PostgreSQL pada Arch Linux"
 date: "2019-11-25 06:45"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2019/2019-11-25-mudah-memasang-postgresql-pada-arch-linux"
+assets: "/assets/images/posts/blog/2019/2019-11-25-mudah-memasang-postgresql-pada-arch-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["arch linux", "postgresql"]

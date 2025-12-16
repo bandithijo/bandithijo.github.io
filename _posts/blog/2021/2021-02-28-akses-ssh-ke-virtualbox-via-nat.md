@@ -3,7 +3,7 @@ layout: "post"
 title: "Mengakses VirtualBox Instance dengan SSH via NAT"
 date: "2021-02-28 06:17"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2021/2021-02-28-akses-ssh-ke-virtualbox-via-nat"
+assets: "/assets/images/posts/blog/2021/2021-02-28-akses-ssh-ke-virtualbox-via-nat"
 author: "BanditHijo"
 category: "blog"
 tags: ["virtualbox"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Mudah Memasang Paket Aplikasi Fedora dengan Yumex-DNF"
 date: "2017-01-30"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2017/2017-01-30-mudah-memasang-aplikasi-fedora-dengan-yumex-dnf"
+assets: "/assets/images/posts/blog/2017/2017-01-30-mudah-memasang-aplikasi-fedora-dengan-yumex-dnf"
 author: "BanditHijo"
 category: "blog"
 tags: ["fedora", "dnf"]

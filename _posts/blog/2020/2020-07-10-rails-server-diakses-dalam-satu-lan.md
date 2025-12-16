@@ -3,7 +3,7 @@ layout: "post"
 title: "Rails Server Dapat Diakses oleh Perangkat dalam Satu LAN"
 date: "2020-07-10 01:03"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-07-10-rails-server-diakses-dalam-satu-lan"
+assets: "/assets/images/posts/blog/2020/2020-07-10-rails-server-diakses-dalam-satu-lan"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]

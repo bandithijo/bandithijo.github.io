@@ -3,7 +3,7 @@ layout: "post"
 title: "Mudah Mengenkripsi File dan Dokumen dengan GnuPG (GPG)"
 date: "2022-08-20 06:46"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2022/2022-08-20-mudah-mengenkripsi-file-dokumen-dengan-gnupg"
+assets: "/assets/images/posts/blog/2022/2022-08-20-mudah-mengenkripsi-file-dokumen-dengan-gnupg"
 author: "BanditHijo"
 category: "blog"
 tags: ["gpg", "gnupg", "pgp", "security"]

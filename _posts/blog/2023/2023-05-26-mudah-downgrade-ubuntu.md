@@ -3,7 +3,7 @@ layout: "post"
 title: "Mudah! Downgrade Ubuntu 22.04 ke 20.04"
 date: "2023-05-26 20:25"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2023/2023-05-26-mudah-downgrade-ubuntu"
+assets: "/assets/images/posts/blog/2023/2023-05-26-mudah-downgrade-ubuntu"
 author: "BanditHijo"
 category: "blog"
 tags: ["ubuntu"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Evince, PDF Reader yang Menjadi Favorit Saya Sejak Lama"
 date: "2019-02-04 23:24"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2019/2019-02-04-evince-pdf-reader-yang-saya-gunakan"
+assets: "/assets/images/posts/blog/2019/2019-02-04-evince-pdf-reader-yang-saya-gunakan"
 author: "BanditHijo"
 category: "blog"
 tags: ["evince"]

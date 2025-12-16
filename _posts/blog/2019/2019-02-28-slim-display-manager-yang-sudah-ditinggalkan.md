@@ -3,7 +3,7 @@ layout: "post"
 title: "SLiM, Display Manager yang Sudah Lama Ditinggalkan"
 date: "2019-02-28 17:47"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2019/2019-02-28-slim-display-manager-yang-sudah-ditinggalkan"
+assets: "/assets/images/posts/blog/2019/2019-02-28-slim-display-manager-yang-sudah-ditinggalkan"
 author: "BanditHijo"
 category: "blog"
 tags: ["slim"]

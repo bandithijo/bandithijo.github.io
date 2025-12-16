@@ -3,7 +3,7 @@ layout: "post"
 title: "Memanfaatkan Vim Sebagai Note-Taking"
 date: "2019-02-16 12:22"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2019/2019-02-16-memanfaatkan-vim-sebagai-notetaking"
+assets: "/assets/images/posts/blog/2019/2019-02-16-memanfaatkan-vim-sebagai-notetaking"
 author: "BanditHijo"
 category: "blog"
 tags: ["vim", "note-taking"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Bluetooth Headset Battery Status"
 date: "2022-05-23 20:49"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2022/2022-05-23-bluetooth-headset-battery-status"
+assets: "/assets/images/posts/blog/2022/2022-05-23-bluetooth-headset-battery-status"
 author: "BanditHijo"
 category: "blog"
 tags: ["upower"]

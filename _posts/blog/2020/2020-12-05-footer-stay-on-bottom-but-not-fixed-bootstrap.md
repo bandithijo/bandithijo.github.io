@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Footer Stay on Bottom but Not Fixed pada Bootstrap"
 date: "2020-12-05 14:41"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-12-05-footer-stay-on-bottom-but-not-fixed-bootstrap"
+assets: "/assets/images/posts/blog/2020/2020-12-05-footer-stay-on-bottom-but-not-fixed-bootstrap"
 author: "BanditHijo"
 category: "blog"
 tags: ["bootstrap", "css", "html"]

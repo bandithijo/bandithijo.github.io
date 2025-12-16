@@ -3,7 +3,7 @@ layout: "post"
 title: "Catatan Post Installation openSUSE Tumbleweed"
 date: "2022-01-01 05:50"
 permalink: "/note/:title"
-assets: "/assets/images/notes/2022-01-01-catatan-post-installation-opensuse-tumbleweed"
+assets: "/assets/images/posts/note/2022-01-01-catatan-post-installation-opensuse-tumbleweed"
 author: "BanditHijo"
 category: "note"
 tags: ["opensuse"]

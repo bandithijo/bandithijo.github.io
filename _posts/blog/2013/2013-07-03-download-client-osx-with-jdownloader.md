@@ -3,7 +3,7 @@ layout: "post"
 title: "Aplikasi Download Alternatif untuk OSX dengan JDownloader"
 date: "2013-07-03"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2013/2013-07-03-download-client-osx-with-jdownloader"
+assets: "/assets/images/posts/blog/2013/2013-07-03-download-client-osx-with-jdownloader"
 author: "BanditHijo"
 category: "blog"
 tags: ["osx", "jdownloader"]

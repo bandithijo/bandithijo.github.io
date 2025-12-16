@@ -3,7 +3,7 @@ layout: "post"
 title: "Mudah Membuat JavaScript Diagram dengan ChartKick pada Rails"
 date: "2020-07-08 11:32"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-07-08-mudah-membuat-diagram-dengan-chartkick-pada-rails"
+assets: "/assets/images/posts/blog/2020/2020-07-08-mudah-membuat-diagram-dengan-chartkick-pada-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "javascript", "chartkick"]

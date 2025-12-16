@@ -3,7 +3,7 @@ layout: "post"
 title: "Mengembalikan Nama Interface Menjadi Traditional Interface Name (eth0, wlan0, etc.)"
 date: "2020-12-26 08:48"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-12-26-mengembalikan-nama-interface-ke-traditional-interface-name"
+assets: "/assets/images/posts/blog/2020/2020-12-26-mengembalikan-nama-interface-ke-traditional-interface-name"
 author: "BanditHijo"
 category: "blog"
 tags: ["network"]

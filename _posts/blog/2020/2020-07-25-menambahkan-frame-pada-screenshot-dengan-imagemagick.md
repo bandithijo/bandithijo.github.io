@@ -3,7 +3,7 @@ layout: "post"
 title: "Menambahkan Frame pada Hasil ScreenShot dengan ImageMagick"
 date: "2020-07-25 11:45"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-07-25-menambahkan-frame-pada-screenshot-dengan-imagemagick"
+assets: "/assets/images/posts/blog/2020/2020-07-25-menambahkan-frame-pada-screenshot-dengan-imagemagick"
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby", "imagemagick"]

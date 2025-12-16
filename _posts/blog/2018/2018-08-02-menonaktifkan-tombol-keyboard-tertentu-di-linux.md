@@ -3,7 +3,7 @@ layout: "post"
 title: "Menonaktifkan Tombol Keyboard Tertentu di GNU/Linux"
 date: "2018-08-02 12:07"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2018/2018-08-02-menonaktifkan-tombol-keyboard-tertentu-di-linux"
+assets: "/assets/images/posts/blog/2018/2018-08-02-menonaktifkan-tombol-keyboard-tertentu-di-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["tips"]

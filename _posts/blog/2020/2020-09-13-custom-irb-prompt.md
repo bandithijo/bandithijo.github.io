@@ -3,7 +3,7 @@ layout: "post"
 title: "Kustomisasi IRB Prompt (Pry)"
 date: "2020-09-13 09:43"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-09-13-custom-irb-prompt"
+assets: "/assets/images/posts/blog/2020/2020-09-13-custom-irb-prompt"
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby", "irb", "pry"]

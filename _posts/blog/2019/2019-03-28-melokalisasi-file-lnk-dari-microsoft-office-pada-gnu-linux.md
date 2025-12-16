@@ -3,7 +3,7 @@ layout: "post"
 title: "Melokalisasi File .lnk yang Dihasilkan oleh Microsoft Office pada Arch Linux"
 date: "2019-03-28 08:33"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2019/2019-03-28-melokalisasi-file-lnk-dari-microsoft-office-pada-gnu-linux"
+assets: "/assets/images/posts/blog/2019/2019-03-28-melokalisasi-file-lnk-dari-microsoft-office-pada-gnu-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["wine", "arch linux", "microsoft office"]

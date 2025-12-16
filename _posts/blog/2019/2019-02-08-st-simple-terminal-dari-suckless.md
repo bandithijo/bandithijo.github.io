@@ -3,7 +3,7 @@ layout: "post"
 title: "St, Simple/Suckless Terminal yang Sudah Lama Saya Dambakan"
 date: "2019-02-08 17:08"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2019/2019-02-08-st-simple-terminal-dari-suckless"
+assets: "/assets/images/posts/blog/2019/2019-02-08-st-simple-terminal-dari-suckless"
 author: "BanditHijo"
 category: "blog"
 tags: ["terminal emulator", "simple terminal", "st"]

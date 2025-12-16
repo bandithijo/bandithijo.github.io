@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Vim Mengingat Posisi Terakhir Cursor"
 date: "2020-03-27 16:38"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-03-27-membuat-vim-mengingat-posisi-terakhir-cursor"
+assets: "/assets/images/posts/blog/2020/2020-03-27-membuat-vim-mengingat-posisi-terakhir-cursor"
 author: "BanditHijo"
 category: "blog"
 tags: ["vim"]

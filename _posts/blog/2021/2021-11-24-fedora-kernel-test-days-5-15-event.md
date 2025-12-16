@@ -3,7 +3,7 @@ layout: "post"
 title: "Berkontribusi di Fedora Kernel Test Days 5.15"
 date: "2021-11-24 06:07"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2021/2021-11-24-fedora-kernel-test-days-5-15-event"
+assets: "/assets/images/posts/blog/2021/2021-11-24-fedora-kernel-test-days-5-15-event"
 author: "BanditHijo"
 category: "blog"
 tags: ["fedora"]

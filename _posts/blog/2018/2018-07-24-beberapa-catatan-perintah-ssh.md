@@ -3,7 +3,7 @@ layout: "post"
 title: "Beberapa Catatan Kaki Mengenai Perintah-perintah SSH"
 date: "2018-07-30 21:56"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2018/2018-07-24-beberapa-catatan-perintah-ssh"
+assets: "/assets/images/posts/blog/2018/2018-07-24-beberapa-catatan-perintah-ssh"
 author: "BanditHijo"
 category: "blog"
 tags: ["ssh"]

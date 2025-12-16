@@ -3,7 +3,7 @@ layout: "post"
 title: "Mengganti Zona Waktu pada Heroku"
 date: "2021-02-06 00:15"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2021/2021-02-06-mengganti-timezone-pada-heroku"
+assets: "/assets/images/posts/blog/2021/2021-02-06-mengganti-timezone-pada-heroku"
 author: "BanditHijo"
 category: "blog"
 tags: ["heroku"]

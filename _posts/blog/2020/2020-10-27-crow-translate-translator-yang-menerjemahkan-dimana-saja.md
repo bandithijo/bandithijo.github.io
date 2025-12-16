@@ -3,7 +3,7 @@ layout: "post"
 title: "Crow-translate, Translator Online yang Dapat Menerjemahkan Di Mana Saja"
 date: "2020-10-27 05:41"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-10-27-crow-translate-translator-yang-menerjemahkan-dimana-saja"
+assets: "/assets/images/posts/blog/2020/2020-10-27-crow-translate-translator-yang-menerjemahkan-dimana-saja"
 author: "BanditHijo"
 category: "blog"
 tags: ["Crow", "translator"]

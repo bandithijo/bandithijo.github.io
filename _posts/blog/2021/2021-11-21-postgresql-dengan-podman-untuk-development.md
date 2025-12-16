@@ -3,7 +3,7 @@ layout: "post"
 title: "Mudah Banget! Pasang PostgreSQL dengan Podman untuk Development"
 date: "2021-11-21 15:06"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2021/2021-11-21-postgresql-dengan-podman-untuk-development"
+assets: "/assets/images/posts/blog/2021/2021-11-21-postgresql-dengan-podman-untuk-development"
 author: "BanditHijo"
 category: "blog"
 tags: ["database", "postgresql", "podman", "container"]

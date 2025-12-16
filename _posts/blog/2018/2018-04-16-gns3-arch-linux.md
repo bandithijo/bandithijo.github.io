@@ -3,7 +3,7 @@ layout: "post"
 title: "Instal dan Konfigurasi GNS3 pada Arch Linux"
 date: "2018-04-16 04:22"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2018/2018-04-16-gns3-arch-linux"
+assets: "/assets/images/posts/blog/2018/2018-04-16-gns3-arch-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["gns3"]

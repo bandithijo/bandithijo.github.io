@@ -3,7 +3,7 @@ layout: "post"
 title: "Memigrasikan Arch Linux ke Artix Linux (OpenRC)"
 date: "2021-01-02 07:45"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2021/2021-01-02-memigrasikan-arch-ke-artix-openrc"
+assets: "/assets/images/posts/blog/2021/2021-01-02-memigrasikan-arch-ke-artix-openrc"
 author: "BanditHijo"
 category: "blog"
 tags: ["arch linux", "artix linux"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Mudah Mengkonfigurasi Wi-Fi dengan iwd (iwctl)"
 date: "2021-01-01 00:00"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2021/2021-01-01-mudah-mengkonfigurasi-wifi-dengan-iwd"
+assets: "/assets/images/posts/blog/2021/2021-01-01-mudah-mengkonfigurasi-wifi-dengan-iwd"
 author: "BanditHijo"
 category: "blog"
 tags: ["iwctl"]

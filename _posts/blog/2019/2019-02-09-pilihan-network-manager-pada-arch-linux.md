@@ -3,7 +3,7 @@ layout: "post"
 title: "Comprehensive Network Manager yang Saya Pergunakan pada Arch Linux"
 date: "2019-02-09 05:52"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2019/2019-02-09-pilihan-network-manager-pada-arch-linux"
+assets: "/assets/images/posts/blog/2019/2019-02-09-pilihan-network-manager-pada-arch-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["network manager"]

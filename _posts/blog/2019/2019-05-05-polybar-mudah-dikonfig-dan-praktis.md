@@ -3,7 +3,7 @@ layout: "post"
 title: "Polybar, Bar yang Mudah Dikonfig, Praktis, dan Mudah Dikustomisasi"
 date: "2019-05-05 11:18"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2019/2019-05-05-polybar-mudah-dikonfig-dan-praktis"
+assets: "/assets/images/posts/blog/2019/2019-05-05-polybar-mudah-dikonfig-dan-praktis"
 author: "BanditHijo"
 category: "blog"
 tags: ["polybar"]

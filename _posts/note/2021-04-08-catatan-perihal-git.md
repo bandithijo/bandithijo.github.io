@@ -3,7 +3,7 @@ layout: "post"
 title: "Catatan dalam Berinteraksi dengan Git"
 date: "2021-04-08 15:09"
 permalink: "/note/:title"
-assets: "/assets/images/notes/2021-04-08-catatan-perihal-git"
+assets: "/assets/images/posts/note/2021-04-08-catatan-perihal-git"
 author: "BanditHijo"
 category: "note"
 tags: ["git"]

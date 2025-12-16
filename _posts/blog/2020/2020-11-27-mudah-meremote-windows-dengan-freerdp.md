@@ -3,7 +3,7 @@ layout: "post"
 title: "Mudah Meremote Windows dengan FreeRDP"
 date: "2020-11-27 09:17"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-11-27-mudah-meremote-windows-dengan-freerdp"
+assets: "/assets/images/posts/blog/2020/2020-11-27-mudah-meremote-windows-dengan-freerdp"
 author: "BanditHijo"
 category: "blog"
 tags: ["freerdp", "remotedesktop"]

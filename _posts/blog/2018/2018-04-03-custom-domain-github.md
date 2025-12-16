@@ -3,7 +3,7 @@ layout: "post"
 title: "Konfigurasi Custom Domain GitHub Page dengan Cloudflare dan Dewaweb"
 date: "2018-04-03"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2018/2018-04-03-custom-domain-github"
+assets: "/assets/images/posts/blog/2018/2018-04-03-custom-domain-github"
 author: "BanditHijo"
 category: "blog"
 tags: ["cloudflare"]

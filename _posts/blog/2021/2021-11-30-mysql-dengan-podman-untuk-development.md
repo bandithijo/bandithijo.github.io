@@ -3,7 +3,7 @@ layout: "post"
 title: "Mudah Banget! Pasang MySQL dengan Podman untuk Development"
 date: "2021-11-30 14:22"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2021/2021-11-30-mysql-dengan-podman-untuk-development"
+assets: "/assets/images/posts/blog/2021/2021-11-30-mysql-dengan-podman-untuk-development"
 author: "BanditHijo"
 category: "blog"
 tags: ["database", "mysql", "podman", "container"]

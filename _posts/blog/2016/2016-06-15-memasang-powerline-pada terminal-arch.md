@@ -3,7 +3,7 @@ layout: "post"
 title: "Memasang Powerline pada Terminal Arch Linux"
 date: "2016-06-15"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2016/2016-06-15-memasang-powerline-pada terminal-arch"
+assets: "/assets/images/posts/blog/2016/2016-06-15-memasang-powerline-pada terminal-arch"
 author: "BanditHijo"
 category: "blog"
 tags: ["powerline", "arch linux"]

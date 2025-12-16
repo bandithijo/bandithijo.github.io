@@ -3,7 +3,7 @@ layout: "post"
 title: "Konfigurasi DNSCrypt-proxy di FreeBSD"
 date: "2020-03-22 20:29"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-03-22-konfigurasi-dnscrypt-proxy-freebsd"
+assets: "/assets/images/posts/blog/2020/2020-03-22-konfigurasi-dnscrypt-proxy-freebsd"
 author: "BanditHijo"
 category: "blog"
 tags: ["dnscrypt"]

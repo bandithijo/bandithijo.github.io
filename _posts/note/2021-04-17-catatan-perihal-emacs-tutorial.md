@@ -3,7 +3,7 @@ layout: "post"
 title: "Catatan dalam Berinteraksi dengan Emacs Tutorial"
 date: "2021-04-17 10:24"
 permalink: "/note/:title"
-assets: "/assets/images/notes/2021-04-17-catatan-perihal-emacs-tutorial"
+assets: "/assets/images/posts/note/2021-04-17-catatan-perihal-emacs-tutorial"
 author: "BanditHijo"
 category: "note"
 tags: ["emacs"]

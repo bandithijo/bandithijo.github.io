@@ -3,7 +3,7 @@ layout: "post"
 title: "Fan pada ThinkPad Tidak Terdeteksi Setelah Power Adapter Dicabut"
 date: "2018-12-08 22:50"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2018/2018-12-08-konfigurasi-fanspeed-thinkpad"
+assets: "/assets/images/posts/blog/2018/2018-12-08-konfigurasi-fanspeed-thinkpad"
 author: "BanditHijo"
 category: "blog"
 tags: ["thinkpad"]

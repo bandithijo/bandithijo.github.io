@@ -3,7 +3,7 @@ layout: "post"
 title: "Export Data ke CSV pada Rails"
 date: "2020-07-09 10:07"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-07-09-export-data-ke-csv-pada-rails"
+assets: "/assets/images/posts/blog/2020/2020-07-09-export-data-ke-csv-pada-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]

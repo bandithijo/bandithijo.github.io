@@ -3,7 +3,7 @@ layout: "post"
 title: "Upgrade Fedora 21 ke Fedora 22 dengan Fedup"
 date: "2015-06-15"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2015/2015-06-15-upgrade-fedora-dengan-fedup"
+assets: "/assets/images/posts/blog/2015/2015-06-15-upgrade-fedora-dengan-fedup"
 author: "BanditHijo"
 category: "blog"
 tags: ["fedora"]

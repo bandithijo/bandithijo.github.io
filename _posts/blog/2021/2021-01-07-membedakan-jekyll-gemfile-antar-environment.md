@@ -3,7 +3,7 @@ layout: "post"
 title: "Membedakan Jekyll Gemfile antar Level Environment (Production atau Development)"
 date: "2021-01-07 19:54"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2021/2021-01-07-membedakan-jekyll-gemfile-antar-environment"
+assets: "/assets/images/posts/blog/2021/2021-01-07-membedakan-jekyll-gemfile-antar-environment"
 author: "BanditHijo"
 category: "blog"
 tags: ["jekyll"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Mudah Mengkonfigurasi Wi-Fi dengan wpa_supplicant"
 date: "2020-12-31 07:31"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-12-31-mudah-mengkonfigurasi-wifi-dengan-wpa_supplicant"
+assets: "/assets/images/posts/blog/2020/2020-12-31-mudah-mengkonfigurasi-wifi-dengan-wpa_supplicant"
 author: "BanditHijo"
 category: "blog"
 tags: ["wpasupplicant"]

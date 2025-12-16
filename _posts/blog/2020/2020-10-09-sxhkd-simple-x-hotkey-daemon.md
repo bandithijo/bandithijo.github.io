@@ -3,7 +3,7 @@ layout: "post"
 title: "SXHKD, Simple X Hotkey Daemon"
 date: "2020-10-09 21:37"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-10-09-sxhkd-simple-x-hotkey-daemon"
+assets: "/assets/images/posts/blog/2020/2020-10-09-sxhkd-simple-x-hotkey-daemon"
 author: "BanditHijo"
 category: "blog"
 tags: ["sxhkd", "hotkey"]

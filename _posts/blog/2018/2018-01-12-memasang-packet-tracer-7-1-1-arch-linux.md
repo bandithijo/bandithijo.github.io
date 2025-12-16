@@ -3,7 +3,7 @@ layout: "post"
 title: "Memasang Cisco Packet Tracer 7.1.1 pada Arch Linux"
 date: "2018-01-12"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2018/2018-01-12-memasang-packet-tracer-7-1-1-arch-linux"
+assets: "/assets/images/posts/blog/2018/2018-01-12-memasang-packet-tracer-7-1-1-arch-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["cisco packet tracer"]

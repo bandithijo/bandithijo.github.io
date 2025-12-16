@@ -3,7 +3,7 @@ layout: "post"
 title: "Cara Aman Menyimpan Credentials di Rails"
 date: "2020-11-26 11:59"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/2020/2020-11-26-cara-aman-menyimpan-credentials-di-rails"
+assets: "/assets/images/posts/blog/2020/2020-11-26-cara-aman-menyimpan-credentials-di-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]
