@@ -70,9 +70,11 @@
     if (document.addEventListener) {
       root.addEventListener('scroll', debounceOrThrottle, false);
       root.addEventListener('load', debounceOrThrottle, false);
+      root.addEventListener('resize', debounceOrThrottle, false);
     } else {
       root.attachEvent('onscroll', debounceOrThrottle);
       root.attachEvent('onload', debounceOrThrottle);
+      root.attachEvent('onresize', debounceOrThrottle);
     }
   };
 
@@ -88,41 +90,135 @@
     };
     for (var i = 0; i < length; i++) {
       elem = nodes[i];
+
+      // If element is in view, start loading it (only once)
       if (inView(elem, view)) {
 
-        if (unload) {
-          elem.setAttribute('data-echo-placeholder', elem.src);
-        }
-
+        // If element is a background placeholder
         if (elem.getAttribute('data-echo-background') !== null) {
-          elem.style.backgroundImage = 'url(' + elem.getAttribute('data-echo-background') + ')';
+          var bgSrc = elem.getAttribute('data-echo-background');
+
+          // Do not restart loading if already loading or already applied
+          if (!elem.dataset.echoBgLoading && elem.style.backgroundImage.indexOf(bgSrc) === -1) {
+            elem.dataset.echoBgLoading = 'true';
+            // Use an Image to preload background so placeholder remains until loaded
+            var bgImg = new Image();
+            bgImg.onload = (function(el, src) {
+              return function () {
+                el.style.backgroundImage = 'url(' + src + ')';
+                el.classList.remove('lazy-loading');
+                el.classList.add('lazy-loaded');
+                delete el.dataset.echoBgLoading;
+                // remove attribute if not using unload
+                if (!unload) {
+                  el.removeAttribute('data-echo-background');
+                }
+                callback(el, 'load');
+              };
+            })(elem, bgSrc);
+            bgImg.onerror = (function(el) {
+              return function () {
+                delete el.dataset.echoBgLoading;
+                // fallback to theme-aware placeholder for backgrounds
+                var placeholder = getPlaceholderPath();
+                el.style.backgroundImage = 'url(' + placeholder + ')';
+                el.classList.add('img-error');
+                callback(el, 'unload');
+              };
+            })(elem);
+            bgImg.src = bgSrc;
+            // Keep placeholder styling while loading
+            elem.classList.add('lazy-loading');
+          }
         }
-        else if (elem.src !== (src = elem.getAttribute('data-echo'))) {
+        // If element is an <img>
+        else if (elem.getAttribute('data-echo') !== null) {
+          // Avoid changing src if already loading to prevent restart
+          if (elem.dataset.echoLoading) {
+            continue;
+          }
+
+          src = elem.getAttribute('data-echo');
+
+          // Nothing to do if src is empty
+          if (!src) {
+            continue;
+          }
+
+          // If current displayed src already equals final src, treat as loaded
+          if (elem.src === src) {
+            // Clean up attributes if necessary
+            if (!unload) {
+              elem.removeAttribute('data-echo');
+            }
+            callback(elem, 'load');
+            continue;
+          }
+
+          // Begin loading: mark as loading and keep placeholder visible until onload
+          elem.dataset.echoLoading = 'true';
+          elem.classList.add('lazy-loading');
+
+          // Preserve existing handlers
+          var prevOnload = elem.onload;
+          var prevOnerror = elem.onerror;
+
+          // Attach new onload to swap UI when done
+          elem.onload = (function(el, prev) {
+            return function () {
+              try {
+                this.style.opacity = '1';
+              } catch (e) {}
+              el.classList.remove('lazy-loading');
+              el.classList.add('lazy-loaded');
+              delete el.dataset.echoLoading;
+              // Remove data attribute so we don't reload
+              if (!unload) {
+                el.removeAttribute('data-echo');
+              }
+              // call original onload if existed
+              if (typeof prev === 'function') {
+                try { prev.call(el); } catch (e) {}
+              }
+              // cleanup assigned handlers to avoid leaks
+              el.onload = null;
+              callback(el, 'load');
+            };
+          })(elem, prevOnload);
+
+          // Attach onerror to show placeholder and avoid loops
+          elem.onerror = (function(el, prevErr) {
+            return function () {
+              delete el.dataset.echoLoading;
+              // Set theme-aware placeholder
+              imgError(el);
+              // call original onerror if existed
+              if (typeof prevErr === 'function') {
+                try { prevErr.call(el); } catch (e) {}
+              }
+              // cleanup event
+              el.onerror = null;
+              callback(el, 'unload');
+            };
+          })(elem, prevOnerror);
+
+          // Trigger network load by assigning src (browser keeps showing previous src until new image paints)
           elem.src = src;
-
-          // Reset opacity when image starts loading
-          elem.onload = function() {
-            this.style.opacity = '1';
-            this.classList.remove('lazy-loading');
-            this.classList.add('lazy-loaded');
-            this.onload = null; // Clean up
-          };
         }
 
-        if (!unload) {
-          elem.removeAttribute('data-echo');
-          elem.removeAttribute('data-echo-background');
-        }
-
-        callback(elem, 'load');
+        // If unload is false, remove data-echo attributes for elements already processed above is handled.
       }
+      // If element is out of view and unload is enabled, revert to placeholder
       else if (unload && !!(src = elem.getAttribute('data-echo-placeholder'))) {
 
         if (elem.getAttribute('data-echo-background') !== null) {
           elem.style.backgroundImage = 'url(' + src + ')';
         }
         else {
-          elem.src = src;
+          // Only revert if not currently loading
+          if (!elem.dataset.echoLoading) {
+            elem.src = src;
+          }
         }
 
         elem.removeAttribute('data-echo-placeholder');
@@ -174,7 +270,18 @@ function imgError(image) {
 
   image.dataset.errorHandled = 'true';
   image.onerror = null; // Remove error handler to prevent loops
-  image.src = getPlaceholderPath();
+
+  // For <img>, set src to placeholder; for other elements, set backgroundImage
+  var placeholder = getPlaceholderPath();
+  try {
+    if (image.tagName && image.tagName.toLowerCase() === 'img') {
+      image.src = placeholder;
+    } else {
+      image.style.backgroundImage = 'url(' + placeholder + ')';
+    }
+  } catch (e) {
+    // ignore assignment errors
+  }
 
   // Optional: Add a class for styling broken images
   image.classList.add('img-error');
@@ -193,8 +300,6 @@ function initLazyLoading() {
     throttle: 250,
     unload: false,
     callback: function (element, op) {
-      console.log('Image', element.src, 'has been', op + 'ed');
-
       // Add loaded class for styling
       if (op === 'load') {
         element.classList.add('lazy-loaded');
@@ -211,7 +316,7 @@ function transformImagesToLazy() {
   const images = document.querySelectorAll(".markdown p img, .content img, article img");
 
   images.forEach(function(img) {
-    // Skip if already processed or if it's already a placeholder for either theme
+    // Skip if already has data-echo (processed)
     if (img.dataset.echo) {
       return;
     }
@@ -226,10 +331,8 @@ function transformImagesToLazy() {
       return;
     }
 
-    // Store original src in data-echo attribute
-    const originalSrc = img.src;
-
-    // Only process if there's a valid src
+    // Store original src in data-echo attribute but only if src is valid
+    var originalSrc = img.getAttribute('src') || img.src || '';
     if (originalSrc && originalSrc.trim() !== '') {
       img.setAttribute("data-echo", originalSrc);
       img.setAttribute("src", placeholder);
@@ -246,18 +349,15 @@ function transformImagesToLazy() {
       img.style.transition = 'opacity 0.3s ease';
       img.style.opacity = '0.7';
 
-      // Set up onload handler to restore opacity
-      const originalOnload = img.onload;
-      img.onload = function() {
-        this.style.opacity = '1';
-        this.classList.remove('lazy-loading');
-        this.classList.add('lazy-loaded');
-
-        // Call original onload if it existed
-        if (originalOnload) {
-          originalOnload.call(this);
-        }
-      };
+      // Note: onload will be attached by echo.render when element enters viewport
+      // but preserve existing onload if present by moving it to data attribute
+      if (img.onload) {
+        try {
+          img.dataset._originalOnload = '1'; // placeholder marker; original function can't be serialized
+          // We'll try to call existing onload from echo.render via invoking stored handler if possible,
+          // but since function references can't be stored as dataset, we preserve behavior by not overwriting here.
+        } catch (e) {}
+      }
     }
   });
 }
