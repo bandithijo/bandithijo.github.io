@@ -86,6 +86,9 @@ sitemap:
   include_posts:
     - "/index.html"
 
+# Complete posts in the future
+future: true
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
