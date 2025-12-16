@@ -9,6 +9,7 @@
 @tailwind utilities;
 
 @layer utilities {
+  html { scroll-behavior: smooth; }
   body {
     font-family: 'Open Sans', sans-serif;
     @apply bg-white text-dark;
@@ -105,6 +106,16 @@
 
   .markdown strong a {
     @apply font-bold;
+  }
+
+  .markdown h1,
+  .markdown h2,
+  .markdown h3,
+  .markdown h4,
+  .markdown h5,
+  .markdown h6 {
+    /* Jarak dari atas saat link fragment/anchor diklik */
+    scroll-margin-top: 1.5rem;
   }
 
   .markdown h1 {
