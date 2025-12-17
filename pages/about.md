@@ -14,7 +14,7 @@ assets: "/assets/images/pages/about"
 
 Dapat dikatakan **BanditHijo** adalah nama pena saya -- meminjam istilah keren para penulis buku,  meskipun saya masih sangat terlampau jauh untuk dapat menyebut diri saya sebagai seorang penulis.
 
-# Bagaimana Cara Membaca Nama Blog Ini?
+## Bagaimana Cara Membaca Nama Blog Ini?
 
 Pada mulanya, blog ini saya namai **BanditHijo (R)-Chive**. **(R)-Chive** sendiri diambil dari kata **ar.chive** /ˈärˌkīv/ yang berarti **arsip** dalam bahasa Indonesia.
 
@@ -22,7 +22,7 @@ Sehingga, apabila dibaca secara utuh menjadi, /BanditHijo Arkaiv/ yang berarti A
 
 Namun, akhirnya saya memutuskan untuk mengganti nama blog ini menjadi **BanditHijo.dev** agar lebih mudah diingat dan lebih menunjukkan identitas blog milik developer.
 
-# Apa Alasan Menulis Blog?
+## Apa Alasan Menulis Blog?
 
 Blog adalah salah satu strategi saya, agar cangkupan ilmu yang bisa saya sebarkan menjadi lebih luas dan lebih bisa menjangkau siapa saja, tanpa perlu jauh-jauh datang untuk bertemu dengan saya.
 
@@ -36,11 +36,11 @@ Mudah-mudahan catatan-catatan kecil yang sederhana di blog ini dapat bermanfaat 
 
 > Ilmu itu seharusnya mengalir, jangan sampai berhenti di kamu.
 
-# Apa yang Ditulis di dalam Blog?
+## Apa yang Ditulis di dalam Blog?
 
 Sebagian besar isi dari blog ini mengenai ulasan dari perkakas yang saya gunakan, atau juga hal-hal teknis tentang pemecahan suatu masalah yang saya alami saat menggunakan sistem operasi Linux.
 
-# Blognya Dibuat Pakai Apa?
+## Blognya Dibuat Pakai Apa?
 
 Blog ini saya bangun menggunakan *Static Site Generator* yang bernama [**Jekyll**](http://jekyllrb.com/){:target="_blank"}.
 
@@ -48,7 +48,7 @@ Tampilan dari tema blog ini juga dibuat sendiri agar saya lebih bebas membongkar
 
 Ceritanya dapat teman-teman baca [**Migrasi BLog 2.0**](/blog/migrasi-blog-2-0){:target="_blank"}.
 
-# Sistem Operasi yang digunakan?
+## Sistem Operasi yang digunakan?
 
 {% assign date0 = site.time | date: '%Y' | integer %}
 {% assign date1 = 2025 %}
@@ -61,10 +61,9 @@ Ceritanya dapat teman-teman baca [**Migrasi BLog 2.0**](/blog/migrasi-blog-2-0){
 | **OS X 10.5, 10.6, 10.7, 10.8, 10.9, 10.10, 10.11** | 2009 - 2015                      | 7 tahun                 |
 | **Linux**                                           | 2016 - Nov 2025                  | 9 tahun 10 bulan        |
 | **macOS 15**                                        | Nov 2025 - Sekarang              | ± {{ date2 }} tahun     |
-|-----------------------------------------------------|----------------------------------|-------------------------|
 
 
-# Mesin ketik yang digunakan?
+## Mesin ketik yang digunakan?
 
 {% assign date3 = 2025 %}
 {% assign date4 = date0 | minus: date3 %}
@@ -81,9 +80,8 @@ Berikut ini adalah spesifikasi mesin maupun aplikasi yang pernah atau hingga saa
 | **Lenovo ThinkPad X61**   | 2007                            | 2019 - Nov 2021                  | 3 tahun                 |
 | **Lenovo ThinkPad X260**  | 2016                            | Dec 2021 - Nov 2025              | 3 tahun 11 bulan        |
 | **Apple Macbook Air M4**  | 2025                            | Nov 2025 - Sekarang              | ± {{ date4 }} tahun     |
-|---------------------------|---------------------------------|----------------------------------|-------------------------|
 
-# Aplikasi favorit yang digunakan di Linux?
+## Aplikasi favorit yang digunakan di Linux?
 
 |------------------------|---------------------------------------------------|
 | <center>Data</center>  | <center>Keterangan</center>                       |
@@ -125,13 +123,12 @@ Berikut ini adalah spesifikasi mesin maupun aplikasi yang pernah atau hingga saa
 | Bluetooth Utility      | **bluetuith**                                     |
 | Audio Utility          | **ncpamixer** & **pulsemixer** & **pavucontrol**  |
 | Network Utility        | **networkmanager_dmenu**                          |
-|------------------------|---------------------------------------------------|
 
 Seperti yang teman-teman lihat di atas, saya banyak menggunakan *free and open source software*. Kalau teman-teman sudah memiliki penghasilan sendiri, jangan lupa untuk berdonasi terhadap project-project *free and open source software* yang teman-teman pergunakan.
 
 Catatan tentang bagaimana cara untuk berdonasi, dapat teman-teman baca di sini, [**Hanya dengan 100 Ribu Rupiah, Bisa Berdonasi ke 6 Open Source Project!**](/blog/berdonasi-ke-project-open-source-yang-digunakan).
 
-# Bagimana workflow dalam menggunakan Linux?
+## Bagimana workflow dalam menggunakan Linux?
 
 ![Gambar 1]({{ page.assets }}/01.png)
 
@@ -160,7 +157,7 @@ Gambar 5. Tools yang saya pergunakan untuk image croping, gThumb
 Tema gelap dapat berganti sesuai kebutuhan saya menjadi tema terang (*light*). Biasanya saya menyesuaikan dengan kondisi pencahayaan dari ruangan/lingkungan.
 
 
-# Bagaimana perjalanan mengenal komputer?
+## Bagaimana perjalanan mengenal komputer?
 
 Sejak duduk di bangku SMP, saya sudah bermain-main menggunakan aplikasi multimedia seperti Adobe Photoshop dan Adobe Premiere Pro pada sistem operasi Microsoft Windows.
 
@@ -168,15 +165,15 @@ Belajar secara mandiri dengan cara mencoba-coba menggunakan tiap-tiap menu *tool
 
 Kalau diingat-ingat, hampir setiap hari saya memproduksi gambar. Baik gambar baru maupun modifikasi dari gambar sebelumnya.
 
-# Bagaimana perjalanan mengenal Linux?
+## Bagaimana perjalanan mengenal Linux?
 
 **Yudo Drajat Baskoro**, seorang sahabat, teman seangkatan, sekaligus teman bertukar pikiran mengenai komputer. Beliaulah yang menjadi orang pertama yang mengenalkan saya dengan Linux di bangku sekolah.
 
-# Bagaimana perjalanan mengenal OSX
+## Bagaimana perjalanan mengenal OSX
 
 2009, mulai merasakan sistem operasi OSX, menggunakan aplikasi multimedia pada sistem operasi ini memang tidak ada bandingnya. Namun, semua kesan itu berubah sejak negara api menyerang.
 
-# Bagaimana akhirnya bisa memutuskan untuk menetap ke Linux?
+## Bagaimana akhirnya bisa memutuskan untuk menetap ke Linux?
 
 Desember 2014, saya memutuskan untuk migrasi penuh menggunakan sistem operasi Linux, saat itu Fedora. Berusaha mencoba belajar, mencari-cari dan memaksakan diri saya untuk menggunakan aplikasi multimedia FOSS. Ternyata, saya benar-benar jatuh cinta dan tenggelam.
 
@@ -184,7 +181,7 @@ Apalagi setelah akhir 2016, masuk dunia **Desktop Customization**, wah semakin m
 
 Benar-benar tidak ada jalan lagi untuk berbalik dan kembali menggunakan OSX.
 
-# Bagaimana bisa untuk memutuskan berpisah dengan Apple?
+## Bagaimana bisa untuk memutuskan berpisah dengan Apple?
 
 Saat ini sudah tidak lagi menggunakan MacBook Pro sejak Januari 2017. Saya sudah cukup lama berada di Apple Environment. Di mulai sekitar tahun 2009 dengan MacBook White. Dan berakhir dengan MacBook Pro pada tahun 2012.
 
@@ -192,32 +189,35 @@ Dengan waktu yang cukup lama tersebut, tidak menjadikan saya sebagai Apple FanBo
 
 Setelah MacBook Pro yang saya gunakan mengalami kendala pada akhir Desember 2016, saya pun memilih untuk mencoba brand dan tipe yang sudah saya incar sejak SMA, yes, ThinkPad! Kebetulan saya memang sangat mengincar ThinkPad, kalau tidak T series, X series. Menggunakan ThinkPad + Linux, adalah sebuah kombinasi yang hakiki.
 
-# Bagaimana pertemuan dengan ThinkPad pertama?
+## Bagaimana pertemuan dengan ThinkPad pertama?
 
 Di awali dengan ThinkPad X260 pada awal tahun 2017, mesin ini benar-benar membuat saya semakin produktif. Tidak ada kendala resource yang berarti, yang menghalangi saya untuk berkreasi membuat sesuatu dengan mesin ini.
 
-# Bagaimana bisa berani menantang diri menggunakan ThinkPad jadul?
+## Bagaimana bisa berani menantang diri menggunakan ThinkPad jadul?
 
 Pada Maret 2019, karena istri saya memerlukan laptop, maka saya pun bertukar laptop. Istri saya, menggunakan ThinkPad X260 dan saya pun beralih menggunakan ThinkPad X61. Laptop keluaran tahun 2007 ini, benar-benar membuat saya kagum, karena masih dapat saya gunakan sebagai *daily driver* untuk bekerja. Meskipun terdapat beberapa hal yang harus saya adaptasikan. Seperti terbatasnya Memory resource yang hanya 4 GB. Namun, hal ini tidak begitu menjadi kendala karena saya sudah mempersiapkan lingkungan sistem operasi se-minimal dan se-efektif mungkin.
 
 Hal ini sangat sesuai dengan keinginan saya untuk dapat menggunakan laptop yang tidak terbatas oleh vendor, sehingga dapat saya gunakan selama mungkin hingga menemukan batas maksimalnya.
 
-# Apakah sudah kembali menggunakan ThinkPad anyar?
+## Apakah sudah kembali menggunakan ThinkPad anyar?
 
 Akhir 2021, saya sudah kembali menggunakan ThinkPad X260, karena tuntutan pekerjaan saya sebagai Backend Software Engineer di perusahaan swasta yang berlokasi Jakarta secara remote.
 
-# Kenapa kembali menggunakan macOS?
+## Kenapa kembali menggunakan macOS?
 
-Akhir 2025, saya kembali menggunakan macOS dengan mesin MacBook Air M4.
+Akhir 2025 tepatnya pada bulan November, saya kembali menggunakan macOS dengan mesin MacBook Air M4.
 
-Keputusan ini saya ambil karena beberapa alasan, diantaranya adalah:
+Keputusan ini saya ambil karena beberapa alasan,
 
-1. Performa MacBook Air M4 yang sangat luar biasa meskipun berukuran laptop tipis dan ringan. Karena sudah menggunakan Apple Silicon dengan arsitektur ARM.
-1. Daya tahan baterai yang sangat lama, sehingga saya dapat bekerja lebih lama tanpa perlu sering-sering mengisi daya baterai.
+1. Performa MacBook Air M4 yang sudah cukup untuk kebutuhan saya sebagai backend software engineer
+1. Daya tahan baterai yang sangat lama ±12-15 jam
 
-Saya tidak terlalu tertarik dengan ekosistem Apple, karena yang saya butuhkan hanya sebuah mesin yang *powerfull* yang dapat menunjang produktivitas saya dalam bekerja.
+Kombinasi kedua hal tersebut (performa dan daya tahan battery), benar-benar sangat menunjang produktivitas saya dalam bekerja.
 
-# Akhir Kata
+Saya tidak terlalu tertarik dengan ekosistem Apple, karena yang saya butuhkan hanya sebuah mesin yang cukup *powerfull* & *battery*-nya irit yang dapat menunjang produktivitas saya dalam bekerja.
+
+
+## Akhir Kata
 
 Dengan segala kerendahan hati, saya mengucapkan selamat membaca tulisan-tulisan di blog yang sederhana ini. Bebaskan diri kalian untuk bertanya, berkomentar, membagikan artikel kepada teman, dan berinteraksi dengan saya.
 
