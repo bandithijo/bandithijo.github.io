@@ -64,4 +64,4 @@ Mengenakannya serasa tidak memakai jam tangan dan terlupakan. Tapi saat dibutuhk
 ## Referensi
 
 1. [Casio F-94W | Casio](https://www.casio.com/intl/watches/casio/product.F-94WA-9/) \
-   Tanggal diakses: 2025-12-16
+   Tanggal diakses: 2025-12-17
