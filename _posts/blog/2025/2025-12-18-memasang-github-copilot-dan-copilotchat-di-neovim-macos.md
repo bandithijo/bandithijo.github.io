@@ -309,7 +309,7 @@ Setelah menulis pertanyaan, saya bisa mengirimkannya dengan menekan `<C-s>` di m
 
 hello
 
- Copilot ───────────────────────────────────────────────────────
+ Copilot ────────────────────────────────────────────────────────
 
 Halo — ada yang bisa saya bantu hari ini?
 
