@@ -8,7 +8,7 @@ permalink: '/blog/'
   <div id="search-container" class="flex items-center">
     <span class=""></span>
     <input type="text" id="search-input" placeholder="Search for topic... CMD/CTRL+K to focus" autocomplete="off" autofocus
-      class="text-left rounded-lg border border-gray-300 dark:border-neutral-700 dark:bg-neutral-900 outline-none px-3 py-2 w-full placeholder:text-base placeholder:font-thin placeholder:text-neutral-400 focus:outline-none focus:ring-0 focus:ring-dark focus:border-dark select-none">
+      class="text-left rounded-lg border border-gray-300 dark:border-neutral-700 dark:bg-neutral-900 outline-none px-3 py-2 w-full placeholder:text-lg placeholder:font-thin placeholder:text-neutral-400 focus:outline-none focus:ring-0 focus:ring-dark focus:border-dark select-none">
   </div>
 
   <!-- Search Loader -->
@@ -45,10 +45,10 @@ permalink: '/blog/'
         <a href="{{ post.url }}" class="text-dark dark:text-white">
           <div class="flex flex-row mb-3">
             <span class="px-1 py-0 mr-3 rounded-full bg-neutral-300 dark:bg-neutral-700 group-hover:bg-neutral-700 group-hover:dark:bg-neutral-300"></span>
-            <h2 class="text-md font-bold mb-4">{{ post.title }}</h2>
+            <h2 class="text-xl font-bold mb-4">{{ post.title }}</h2>
           </div>
-          <p class="text-base text-gray-600 dark:text-neutral-300 mb-4">{{ post.description }}</p>
-          <p class="text-sm text-gray-600 dark:text-neutral-300 font-mono">{{ post.date | date: '%Y.%m.%d' }}</p>
+          <p class="text-lg text-gray-600 dark:text-neutral-300 mb-4">{{ post.description }}</p>
+          <p class="text-base text-gray-600 dark:text-neutral-300 font-mono">{{ post.date | date: '%Y.%m.%d' }}</p>
         </a>
       </div>
     {% endfor %}
@@ -61,7 +61,7 @@ function layoutMasonry(containerId) {
   const wrapper = document.getElementById(containerId);
   const items = wrapper.querySelectorAll('.masonry-item');
   const gap = 16;
-  const cols = window.innerWidth >= 1024 ? 4 : (window.innerWidth >= 640 ? 2 : 1);
+  const cols = window.innerWidth >= 1024 ? 3 : (window.innerWidth >= 640 ? 2 : 1);
   const colWidth = (wrapper.offsetWidth - (gap * (cols - 1))) / cols;
   const colHeights = new Array(cols).fill(0);
 

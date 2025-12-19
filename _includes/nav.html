@@ -16,7 +16,7 @@
         <nav id="nav-menu" class="absolute right-0 top-full hidden w-full rounded-lg bg-white dark:bg-neutral-900 py-5 shadow-lg border lg:border-0 lg:right-0 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none">
           <ul class="block lg:flex">
             <li class="group">
-              <a href="/" class="mx-6 flex justify-center py-2 text-base group-hover:underline">Home</a>
+              <a href="/" class="mx-6 flex justify-center py-2 text-lg group-hover:underline">Home</a>
             </li>
             {% for item in site.nav_top %}
             {% assign class = nil %}
@@ -24,7 +24,7 @@
             {% assign class = 'underline' %}
             {% endif %}
             <li class="group">
-              <a href="{{ item.url }}" class="mx-6 flex justify-center py-2 text-base group-hover:underline {{ class }}">{{ item.title }}</a>
+              <a href="{{ item.url }}" class="mx-6 flex justify-center py-2 text-lg group-hover:underline {{ class }}">{{ item.title }}</a>
             </li>
             {% endfor %}
             <li class="group self-center">

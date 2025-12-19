@@ -1,5 +1,5 @@
 <!-- Footer Start -->
-<footer class="text-center mt-10 mb-4 lg:mb-10 text-sm select-none">
+<footer class="text-center mt-10 mb-4 lg:mb-10 text-base select-none">
   <div class="container md:max-w-6xl">
 
     <!-- Nav Menu Start -->
@@ -11,7 +11,7 @@
         {% assign class = 'underline' %}
         {% endif %}
         <li class="group">
-          <a href="{{ item.url }}" class="mx-2 md:mx-4 flex py-2 text-base group-hover:underline {{ class }}">{{ item.title }}</a>
+          <a href="{{ item.url }}" class="mx-2 md:mx-4 flex py-2 text-lg group-hover:underline {{ class }}">{{ item.title }}</a>
         </li>
         {% endfor %}
       </ul>
@@ -27,7 +27,7 @@
     </p>
 
     <div class="mt-10">
-      <p class="text-base"><span class="text-base">&COPY;</span> <span class="font-semibold">{{ site.title }}</span> <span class="font-mono text-[14px]">2013 - {{ site.time | date: '%Y' }}</span></p>
+      <p class="text-lg"><span class="text-lg">&COPY;</span> <span class="font-semibold">{{ site.title }}</span> <span class="font-mono text-[16px]">2013 - {{ site.time | date: '%Y' }}</span></p>
     </div>
   </div>
 </footer>

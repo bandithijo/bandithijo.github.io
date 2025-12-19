@@ -12,6 +12,7 @@
   html { scroll-behavior: smooth; }
   body {
     font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
     @apply bg-white text-dark;
   }
   .navbar-fixed {
@@ -119,27 +120,27 @@
   }
 
   .markdown h1 {
-    @apply leading-tight text-3xl font-semibold mb-2 mt-8;
+    @apply leading-tight text-5xl font-semibold mb-2 mt-8;
   }
 
   .markdown h2 {
-    @apply leading-tight text-2xl font-semibold mb-2 mt-8;
+    @apply leading-tight text-4xl font-semibold mb-2 mt-8;
   }
 
   .markdown h3 {
-    @apply leading-snug text-xl font-semibold mb-2 mt-6;
+    @apply leading-snug text-3xl font-semibold mb-2 mt-6;
   }
 
   .markdown h4 {
-    @apply leading-none text-lg font-semibold mb-2 mt-6;
+    @apply leading-none text-2xl font-semibold mb-2 mt-6;
   }
 
   .markdown h5 {
-    @apply leading-tight text-base font-semibold mb-2 mt-6;
+    @apply leading-tight text-xl font-semibold mb-2 mt-6;
   }
 
   .markdown h6 {
-    @apply leading-tight text-base font-semibold mb-2 mt-6;
+    @apply leading-tight text-lg font-semibold mb-2 mt-6;
   }
 
   .markdown h1 a,
@@ -152,7 +153,7 @@
   }
 
   .markdown blockquote {
-    @apply text-base border-l-[6px] border-t border-r border-b pl-4 pr-4 py-4 mb-4 text-dark dark:text-white border-l-gray-500 dark:border-l-zinc-500 rounded-lg border-t-gray-500 dark:border-t-zinc-500 border-r-gray-500 dark:border-r-zinc-500 border-b-gray-500 dark:border-b-zinc-500;
+    @apply text-lg border-l-[6px] border-t border-r border-b pl-4 pr-4 py-4 mb-4 text-dark dark:text-white border-l-gray-500 dark:border-l-zinc-500 rounded-lg border-t-gray-500 dark:border-t-zinc-500 border-r-gray-500 dark:border-r-zinc-500 border-b-gray-500 dark:border-b-zinc-500;
     border-style: dashed dashed dashed solid; /* top, right, bottom, left */
   }
 
@@ -161,15 +162,15 @@
   }
 
   .markdown code {
-    @apply font-mono text-[14px] text-[#d4d4d4] inline bg-zinc-800 rounded-md px-1 py-0;
+    @apply font-mono text-[16px] text-[#d4d4d4] inline bg-zinc-800 rounded-md px-1 py-0;
   }
 
   .markdown pre {
-    @apply bg-zinc-800 rounded-md p-0 text-[14px] mb-5;
+    @apply bg-zinc-800 rounded-md p-0 text-[16px] mb-5;
   }
 
   .markdown pre code {
-    @apply block p-4 overflow-x-auto text-[14px];
+    @apply block p-4 overflow-x-auto text-[16px];
   }
 
   .markdown pre code > table.rouge-table {
@@ -177,21 +178,21 @@
   }
 
   .markdown pre code > table.rouge-table td.gutter.gl {
-    @apply select-none pr-3 text-[14px] text-right;
+    @apply select-none pr-3 text-[16px] text-right;
   }
 
   .markdown pre code > table.rouge-table td,
   .markdown pre code > table.rouge-table tr,
   .markdown pre code > table.rouge-table pre {
-    @apply border-none p-0 text-[14px];
+    @apply border-none p-0 text-[16px];
   }
 
   .markdown ul {
-    @apply text-base pl-8 list-disc;
+    @apply text-lg pl-8 list-disc;
   }
 
   .markdown ol {
-    @apply text-base pl-8 list-decimal;
+    @apply text-lg pl-8 list-decimal;
   }
 
   .markdown li > * {
@@ -199,11 +200,11 @@
   }
 
   .markdown kbd {
-    @apply text-[14px] font-bold font-mono border border-gray-300 px-2 py-1 rounded-md shadow-sm;
+    @apply text-[16px] font-bold font-mono border border-gray-300 px-2 py-1 rounded-md shadow-sm;
   }
 
   .markdown table {
-    @apply w-full text-base block overflow-x-auto sm:overflow-x-auto;
+    @apply w-full text-lg block overflow-x-auto sm:overflow-x-auto;
     white-space: nowrap;
   }
 
@@ -220,7 +221,7 @@
   }
 
   .markdown .footnotes > ol > li {
-    @apply text-sm !important;
+    @apply text-base !important;
   }
 
   .markdown .footnotes {
@@ -241,7 +242,7 @@
   }
 
   .markdown .line-number {
-    @apply inline-block min-w-8 mr-3 text-right text-gray-400 select-none font-mono text-[14px] leading-relaxed;
+    @apply inline-block min-w-8 mr-3 text-right text-gray-400 select-none font-mono text-[16px] leading-relaxed;
   }
 
   .markdown .code-line {

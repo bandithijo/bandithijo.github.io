@@ -8,7 +8,7 @@ permalink: '/dotfriends/'
   <div id="search-container" class="flex items-center">
     <span class=""></span>
     <input type="text" id="search-input" placeholder="Search for name... CMD/CTRL+K to focus" autocomplete="off" autofocus
-      class="text-left rounded-lg border border-gray-300 dark:border-neutral-700 dark:bg-neutral-900 outline-none px-3 py-2 w-full placeholder:text-base placeholder:font-thin placeholder:text-neutral-400 focus:outline-none focus:ring-0 focus:ring-dark focus:border-dark select-none">
+      class="text-left rounded-lg border border-gray-300 dark:border-neutral-700 dark:bg-neutral-900 outline-none px-3 py-2 w-full placeholder:text-lg placeholder:font-thin placeholder:text-neutral-400 focus:outline-none focus:ring-0 focus:ring-dark focus:border-dark select-none">
   </div>
 
   <!-- Search Loader -->
@@ -44,11 +44,11 @@ permalink: '/dotfriends/'
         style="width: calc(25% - 12px);">
         <div class="flex items-center space-x-4 mb-4">
           <img src="{{ friend.photo }}" alt="{{ friend.github_username }}" class="w-16 rounded-full">
-          <h2 class="text-md font-bold">{{ friend.name }}</h2>
+          <h2 class="text-xl font-bold">{{ friend.name }}</h2>
         </div>
-        <p class="text-base text-gray-600 dark:text-neutral-300 mb-4">{{ friend.detail }}</p>
-        <p class="text-sm text-gray-600 dark:text-neutral-300 font-mono truncate"><a href="{{ friend.url1 }}" target="_blank">{{ friend.url1 }}</a></p>
-        <p class="text-sm text-gray-600 dark:text-neutral-300 font-mono truncate"><a href="{{ friend.url2 }}" target="_blank">{{ friend.url2 }}</a></p>
+        <p class="text-lg text-gray-600 dark:text-neutral-300 mb-4">{{ friend.detail }}</p>
+        <p class="text-base text-gray-600 dark:text-neutral-300 font-mono truncate"><a href="{{ friend.url1 }}" target="_blank">{{ friend.url1 }}</a></p>
+        <p class="text-base text-gray-600 dark:text-neutral-300 font-mono truncate"><a href="{{ friend.url2 }}" target="_blank">{{ friend.url2 }}</a></p>
       </div>
     {% endunless %}
     {% endfor %}
@@ -61,7 +61,7 @@ function layoutMasonry(containerId) {
   const wrapper = document.getElementById(containerId);
   const items = wrapper.querySelectorAll('.masonry-item');
   const gap = 16;
-  const cols = window.innerWidth >= 1024 ? 4 : (window.innerWidth >= 640 ? 2 : 1);
+  const cols = window.innerWidth >= 1024 ? 3 : (window.innerWidth >= 640 ? 2 : 1);
   const colWidth = (wrapper.offsetWidth - (gap * (cols - 1))) / cols;
   const colHeights = new Array(cols).fill(0);
 
