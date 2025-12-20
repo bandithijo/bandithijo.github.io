@@ -18,19 +18,28 @@ layout: baseof
         {{ content }}
       </div>
 
-      {% assign first_friend = site.data.dotfriends.friends[0] %}
-      {% if first_friend %}
-      <div class="w-full mx-auto mt-12 border-0 border-gray-300 dark:border-neutral-700 rounded-lg p-6 flex flex-col md:flex-row items-center gap-8">
-        <div class="flex-shrink-0">
-          <img src="{{ first_friend.photo }}" alt="{{ first_friend.name }}" class="w-32 h-32 rounded-full object-cover mx-auto md:mx-0">
-        </div>
-        <div class="min-w-0 text-center md:text-left">
-          <div class="text-2xl font-semibold">{{ first_friend.name }}</div>
-          {% if first_friend.detail %}
+      {% assign author = page.author | downcase %}
+      {% assign authors = site.data.dotfriends.friends %}
+      {% assign author_data = nil %}
+      {% for a in authors %}
+        {% if a.github_username == author %}
+          {% assign author_data = a %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+      {% if author_data %}
+      <div class="mt-20">
+        <div class="mb-10 mx-auto text-center">***</div>
+        <div class="w-full mx-auto border-0 border-gray-300 dark:border-neutral-700 rounded-lg p-6 flex flex-col md:flex-row items-center gap-8">
+          <div class="flex-shrink-0">
+            <img src="{{ author_data.photo }}" alt="{{ author.github_username }}" class="w-36 h-36 rounded-full object-cover mx-auto md:mx-0">
+          </div>
+          <div class="min-w-0 text-center md:text-left">
+            <div class="text-2xl font-semibold">{{ author_data.name }} ({{ author_data.github_username}})</div>
             <div class="text-lg mt-3 leading-relaxed">
-              {{ first_friend.detail | safe }}
+              {{ author_data.detail | safe }}
             </div>
-          {% endif %}
+          </div>
         </div>
       </div>
       {% endif %}
