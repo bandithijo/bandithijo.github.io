@@ -162,7 +162,7 @@
   }
 
   .markdown code {
-    @apply font-mono text-[16px] text-[#d4d4d4] inline bg-zinc-800 rounded-md px-1 py-0;
+    @apply font-mono text-[16px] text-[#d4d4d4] inline bg-zinc-800 rounded-md px-2 py-0.5;
   }
 
   .markdown pre {
