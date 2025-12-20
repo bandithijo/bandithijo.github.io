@@ -215,3 +215,12 @@ friends:
   url2:  "https://github.com/adiprnm"
   detail: >-
     I'm a full-stack web developer. I work as a full-time software engineer (backend) at Happy5. Ruby on Rails is my go-to framework.
+
+
+- github_username: "caturhidayat"
+  name:  "Catur Hidayat"
+  photo: "https://github.com/caturhidayat.png?size=200"
+  url1:  "https://www.caturhidayat.space/"
+  url2:  "https://github.com/caturhidayat"
+  detail: >-
+    Hi, I'm Catur Hidayat. Who is currently working at Logistics Company 🚚 as a IT Support (located in indonesia). But now I am learning about software development. 👨🏻‍💻
