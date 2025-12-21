@@ -17,7 +17,7 @@ permalink: :title
           <p class="mb-4">Embracing failure, I've seamlessly transitioned from <span class="font-bold">Stethoscope to Keyboard</span>. Armed with ability for <span class="font-bold">learning and adapting faster than a Heart Beat</span>.</p>
           <p class="mb-8">I'm on a mission to turn Code into a Product.</p>
           <div class="flex justify-center lg:justify-start">
-            <a href="/about" class="rounded-full bg-dark dark:bg-white px-8 py-3 text-base text-white dark:text-dark font-semibold transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">About Me</a>
+            <a href={{ "/about" | absolute_url }} class="rounded-full bg-dark dark:bg-white px-8 py-3 text-base text-white dark:text-dark font-semibold transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">About Me</a>
           </div>
         </div>
         <!-- Hero Section Left End -->
@@ -25,7 +25,7 @@ permalink: :title
         <!-- Hero Section Right Start -->
         <div class="w-full lg:w-1/2 flex items-center justify-center self-center">
           <div class="relative lg:right-0 bg-blend-screen">
-            <img src="/assets/images/bandithijo.png" alt="bandithijo" class="relative z-10 mx-auto w-4/5 rounded-full">
+            <img src={{ "/assets/images/bandithijo.png" | absolute_url }} alt="bandithijo" class="relative z-10 mx-auto w-4/5 rounded-full">
           </div>
         </div>
         <!-- Hero Section Right End -->
@@ -85,7 +85,7 @@ permalink: :title
   <section id="intro-video" class="w-full mt-20 px-4 flex justify-center">
     <div class="container px-0 md:px-4 md:max-w-6xl">
       <video
-        src="/assets/images/bumper.mp4"
+        src={{ "/assets/images/bumper.mp4" | absolute_url }}
         autoplay
         loop
         muted
