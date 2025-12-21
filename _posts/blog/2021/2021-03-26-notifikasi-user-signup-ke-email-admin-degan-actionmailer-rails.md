@@ -135,7 +135,7 @@ Selesai!
 
 Apabila terdapat user baru yang mendaftarkan account, admin akan mendapatkan email seperti ini.
 
-![Gambar 1]({{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
 Gambar 1. Email yang dikirimkan ke admin jika ada user baru yang mendaftar
 

@@ -10,7 +10,7 @@ tags: ["cisco packet tracer"]
 description: "Catatan untuk memasang Packet Tracer dari AUR"
 ---
 
-![Banner]({{ site.baseurl }}{{ page.assets }}/Default+Header+Template+Post+2X.png)
+![Banner]({{ page.assets | absolute_url }}/Default+Header+Template+Post+2X.png)
 
 
 ## Latar Belakang

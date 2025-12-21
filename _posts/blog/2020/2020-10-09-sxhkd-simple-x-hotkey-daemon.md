@@ -52,7 +52,7 @@ Langkah selanjutnya, tinggal dipasang pada konfigurasi autostart yang teman-tema
 
 Misal, contohnya seperti yang saya pergunakan di bawah ini.
 
-![Gambar 1]({{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
 
 ## Contoh Penggunaan

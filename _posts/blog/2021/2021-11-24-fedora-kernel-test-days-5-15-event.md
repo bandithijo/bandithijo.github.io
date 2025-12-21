@@ -28,17 +28,17 @@ Kernel Test Days adalah kegiatan di mana siapa pun dapat membantu memastikan per
 
 Apabila kamu berhasil mengikuti *event* ini, kamu akan diberikan *reward* berupa *badge* seperti ini,
 
-![Gambar 1]({{ page.assets }}/kernel-tester.png)
+![Gambar 1]({{ page.assets | absolute_url }}/kernel-tester.png)
 
 Gambar 1. Science (Kernel Tester I): You completed a run of the kernel regression test suite
 
 Di dalam *badge* ini terdapat angkat, artinya *badge* ini bersifat *continue*. Setiap kelipatan 5 kali test, kamu akan mendapatkan *badge* ini dengan angka yang bertambah.
 
-![Gambar 2]({{ page.assets }}/kernel-tester-5.png)
+![Gambar 2]({{ page.assets | absolute_url }}/kernel-tester-5.png)
 
 Gambar 2. Science (Kernel Tester II): You completed 5 runs of the kernel regression test suite
 
-![Gambar 3]({{ page.assets }}/kernel-tester-10.png)
+![Gambar 3]({{ page.assets | absolute_url }}/kernel-tester-10.png)
 
 Gambar 3. Science (Kernel Tester III): You completed 10 runs of the kernel regression test suite
 
@@ -718,13 +718,13 @@ fedora-th Linux 5.15.3- 2925 5304 1707 4933.3  11.8K 6614.1 4496.1 10.K 6313.
 
 Kalau kita sudah mengkonfigurasi FAS akun pada file `.config`, setiap selesai melakukan *test*, hasil akan otomatis di submit ke [Fedora Kernel Test Results](https://apps.fedoraproject.org/kerneltest/).
 
-![Gambar 1]({{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
 Untuk melihat hasil pengujian kita, pilih nama kernel yang sesuai dengan yang kita test.
 
 Hasil pengujian kita akan berada di dalam daftar (gambar di bawah). Coba buka saja satu persatu. Salah satunya pasti milik kalian. Yang paling baru, berada di paling atas.
 
-![Gambar 2]({{ page.assets }}/gambar-02.png)
+![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
 
 ## Turn SELinux boolean selinuxuser_execheap back to default state
 
@@ -742,11 +742,11 @@ Kita akan melihat event paling baru, yaitu berkenaan dengan Kernel Test Week.
 
 Kalau kita buka, akan ketemu halaman seperti ini.
 
-![Gambar 3]({{ page.assets }}/gambar-03.png)
+![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.png)
 
 Contoh submission datanya seperti di bawah ini.
 
-![Gambar 4]({{ page.assets }}/gambar-04.png)
+![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.png)
 
 Dengan ini proses Kernel Regression Test sudah selesai.
 

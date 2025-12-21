@@ -32,7 +32,7 @@ Hal ini juga disebabkan karena minimalnya sistem notifikasi dari sistem yang say
 
 Atas dasar ini, saya berinisiatif untuk menambahkan fitur notifikasi suara apabila CPU sudah mencapai suhu tertentu.
 
-![Gambar 1]({{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
 Gambar 1. Tampilan notifikasi Peringatan Hot CPU Temperature
 

@@ -10,7 +10,7 @@ tags: ["ssh"]
 description: "Sudah hampir dua minggu ini saya terpilih sebagai peserta untuk mengikuti kelas yang membahas tentang Cloud Computing. Ini merupakan bidang yang sangat baru pertama kali saya sentuh. Sebelumnya, memang saya sering membaca (meski hanya judul) di beberapa blog GNU/Linux yang membahas tentang teknologi-teknologi yang digunakan dalam Cloud Computing. Meskipun sama-sama dalam bidang teknologi, namun jujur saja, istilah-istilah yang digunakan sangat asing buat saya pahami."
 ---
 
-![Banner]({{ page.assets }}/banner_post_18.png)
+![Banner]({{ page.assets | absolute_url }}/banner_post_18.png)
 
 
 ## Pendahuluan

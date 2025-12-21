@@ -16,17 +16,17 @@ Latar belakang dari ditulisnya post ini adalah, untuk menyempurnakan [post sebel
 
 Berkat pertanyaan dari Nabil, saya memikirkan kembali script untuk Keyboard Shortcut Helper ini.
 
-![Gambar 1]({{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
 Kalau kita lihat pada *command* di atas, saya menggunakan script bernama **help-script-browser.sh** untuk menyeleksi file dan membukanya.
 
-![Gambar 2]({{ page.assets }}/gambar-02.png)
+![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
 
 Cara ini sangat tidak praktis.
 
 Alhamdulillahnya terpikirlah cara untuk menggunakan `dmenu` saja.
 
-![Gambar 3]({{ page.assets }}/gambar-03.png)
+![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.png)
 
 Dengan begini, akan lebih sederhana dan singkat proses pemanggilan plain text yang berisi Keyboard Shortcut Helper.
 
@@ -269,11 +269,11 @@ Kalau sekenario di atas sudah teman-teman selesaikan, hasilnya akan seperti ini.
 
 **Rofi**
 
-![Gambar 4]({{ page.assets }}/gambar-04.gif)
+![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.gif)
 
 **dmenu**
 
-![Gambar 5]({{ page.assets }}/gambar-05.gif)
+![Gambar 5]({{ page.assets | absolute_url }}/gambar-05.gif)
 
 Tinggal kita pasangkan pemanggilannya pada *keyboard shortcut* pada Window Manager masing-masing.
 

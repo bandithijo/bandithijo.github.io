@@ -63,11 +63,11 @@ Namun, saya akan menuliskan penggunaan Ransack untuk membuat tab filter berdasar
 
 Kira-kira seperti ini hasilnya.
 
-![Gambar 1]({{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
 Gambar 1. Hasil dari filter pada tab All
 
-![Gambar 2]({{ page.assets }}/gambar-02.png)
+![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
 
 Gambar 2. Hasil dari filter pada tab tertentu, berdasarkan negara
 

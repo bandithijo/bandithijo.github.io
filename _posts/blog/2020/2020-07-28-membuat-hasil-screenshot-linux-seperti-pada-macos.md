@@ -24,7 +24,7 @@ Saya juga beberapa menulis konten blog menggunakan macOS dan cukup sering mengam
 
 Kira-kira seperti ini hasil screenshot window aplikasi pada macOS.
 
-![Gambar 1]({{ page.assets }}/ss-macos.png)
+![Gambar 1]({{ page.assets | absolute_url }}/ss-macos.png)
 
 
 ## Pemecahan Masalah
@@ -41,17 +41,17 @@ convert gambar.png -bordercolor none -border 30 gambar.png
 
 Misal, saya punya gambar hasil screenshot seperti ini:
 
-![Gambar 2]({{ page.assets }}/gambar-01.png)
+![Gambar 2]({{ page.assets | absolute_url }}/gambar-01.png)
 
 Kemudian, saya jalankan command dari ImageMagick di atas.
 
 Hasilnya akan seperti ini:
 
-![Gambar 3]({{ page.assets }}/gambar-02.png)
+![Gambar 3]({{ page.assets | absolute_url }}/gambar-02.png)
 
 Gambar 3. Menggunakan -shadow 50x10+0+10
 
-![Gambar 4]({{ page.assets }}/gambar-03.png)
+![Gambar 4]({{ page.assets | absolute_url }}/gambar-03.png)
 
 Gambar 4. Menggunakan -shadow 50x20+0+20
 
@@ -124,7 +124,7 @@ Biasanya untuk modifikasi yang dapat kita lakukan, kita akan menambahkan ciri kh
 
 Maka dari itu, pada modifikasi ini, saya menambahkan ciri khas untuk memberikan author.
 
-![Gambar 5]({{ page.assets }}/gambar-01.png)
+![Gambar 5]({{ page.assets | absolute_url }}/gambar-01.png)
 
 
 ### Versi Ruby

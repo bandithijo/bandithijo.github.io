@@ -24,7 +24,7 @@ Mungkin kali ini belum bisa dikatakn merakit, meskipun memang prosesnya merakit.
 
 Saya mulai dengan menggambar skema wiring ala-ala, agar tidak kehilangan arah saat merakit kembali. Meskipun rangkaian battery ini meruapakan rangkaian paralel sederhana, namun karena saya tidak terbiasa dengan hal-hal seperti ini, lebih baik saya catat. Hehe.
 
-![Gambar 1]({{ page.assets }}/gambar-01.jpg)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.jpg)
 
 Gambar 1. Gambar skema wiring battery ala-ala
 
@@ -32,7 +32,7 @@ Battery dengan cell berwarna biru ini adalah isi dari battery ThinkPad X61 yang 
 
 Battery yang saya buka ini, sudah tidak dapat bertahan lama, paling hanya 5-10 menitan kalau digunakan. Ternyata setelah dibuka dan saya periksa voltase masing-masing cell, benar saja. Hanya 1 cell yang masih 3,6V sedangkan 2 diantaranya 1,5V dan tersisa 1 yang tidak menunjukkan nilai voltase sama sekali.
 
-![Gambar 2]({{ page.assets }}/gambar-02.jpg)
+![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.jpg)
 
 Gambar 2. Cell yang ditunjuk adalah cell yang rusak (bocor)
 
@@ -43,7 +43,7 @@ Cell ini mengeluarkan cairan, meski tidak terlihat basah namun terasa basah di t
 
 Setelah cukup yakin bahwa saya mencatat semua yang saya perlukan untuk nantinya dapat saya rangkai kembali, saya mulai membongkar rangkaian. Saya mulai dari melepas kabel-kabel yang terhubung dengan battery.
 
-![Gambar 3]({{ page.assets }}/gambar-04.jpg)
+![Gambar 3]({{ page.assets | absolute_url }}/gambar-04.jpg)
 
 Gambar 3. Rangkaian battery yang sudah saya lepas perkabelannya
 
@@ -51,7 +51,7 @@ Pada Gambar 3, terlihat bahwa masing-masing battery terhubung dengan plat tipis.
 
 Selanjutnya, saya sudah menyiapkan battery ThinkPad X260 68+ (6 cell) yang benar-benar sudah tidak dapat digunakan.
 
-![Gambar 4]({{ page.assets }}/gambar-03.jpg)
+![Gambar 4]({{ page.assets | absolute_url }}/gambar-03.jpg)
 
 Gambar 4. Cell dari battery ThinkPad X260 68+
 
@@ -68,7 +68,7 @@ Sejujurnya saya sudah mencoba merapikan sobekan-sobekan plat tersebut, namun say
 
 Karena tidak memiliki alat bantu untuk memegang battery, saya mengakali dengan memanfaatkan kunci inggris dan tang. Hehe
 
-![Gambar 5]({{ page.assets }}/gambar-05.jpg)
+![Gambar 5]({{ page.assets | absolute_url }}/gambar-05.jpg)
 
 Gambar 5. Kunci inggris dan tang yang diberikaret gelang sebagai battery holder
 
@@ -86,7 +86,7 @@ Setelah battery selesai dirakit, saatnya pengukuran voltase bagian akhir. pabila
 
 #### Pengukuran Battery Bawaan
 
-![Gambar 6]({{ page.assets }}/gambar-06.jpg)
+![Gambar 6]({{ page.assets | absolute_url }}/gambar-06.jpg)
 
 Gambar 6. Battery yang saya beli (abal)
 
@@ -96,7 +96,7 @@ Battery ini adalah battery yang disertakan saat saya membeli ThinkPad X61.
 
 Kalau saya ukur berapa lama battery ini dapat digunakan dengan GNome Power Statistics.
 
-![Gambar 7]({{ page.assets }}/gambar-10.png)
+![Gambar 7]({{ page.assets | absolute_url }}/gambar-10.png)
 
 Gambar 7. Pengukuran dengan Gnome Power Statistics Battery Bawaan
 
@@ -136,7 +136,7 @@ Bisa dilihat, pada bagian yang saya marking, menunjukkan value yang aneh.
 
 Kemudian, saya mengukur battery yang saya rakit (*rebuild*).
 
-![Gambar 8]({{ page.assets }}/gambar-07.jpg)
+![Gambar 8]({{ page.assets | absolute_url }}/gambar-07.jpg)
 
 Gambar 8. Battery hasil rebuild
 
@@ -168,7 +168,7 @@ Perintah di atas akan menjalankan kalibrasi battery dimana proses bermula dari p
 
 Berikut ini adalah grafik hasil kalibrasi battery rebuild.
 
-![Gambar 9]({{ page.assets }}/gambar-08.png)
+![Gambar 9]({{ page.assets | absolute_url }}/gambar-08.png)
 
 Gambar 9. Hasil pengukuran dengan Gnome Power Statistics
 
@@ -219,7 +219,7 @@ Saya kurang paham, ini perilaku dari Cell atau module controller dari battery in
 
 **Update: 2020-05-31**
 
-![Gambar 10]({{ page.assets }}/gambar-09.png)
+![Gambar 10]({{ page.assets | absolute_url }}/gambar-09.png)
 
 Gambar 10. Hasil discharge setelah kalibrasi kedua
 

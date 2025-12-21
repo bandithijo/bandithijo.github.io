@@ -48,7 +48,7 @@ Misalkan:
 - RM 501 - RM 1000
 ```
 
-![Gambar 1]({{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
 
 ## Pemecahan Masalah

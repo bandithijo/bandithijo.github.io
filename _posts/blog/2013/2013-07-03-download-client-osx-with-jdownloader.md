@@ -10,7 +10,7 @@ tags: ["osx", "jdownloader"]
 description: "Sudah beralih ke OS X dan masih berharap bisa download video di Youtube, donwload kontent-kontetn di website yang tidak terdapat menu download, download dari situs-situs yang membutuhkan account premium, ketergantungan dengan IDM (Internet Download Manager) di Windows ? Tapi sudah benar-benar terpojok dengan OS X ? Jangan khawatir. Saya akan memperkenalkan sebuah software sebagai alternatif bagi anda sebagai pengganti IDM di Windows."
 ---
 
-![Banner]({{ page.assets }}/Default+Header+Template+Post+10.jpg)
+![Banner]({{ page.assets | absolute_url }}/Default+Header+Template+Post+10.jpg)
 
 
 ## Latar Belakang
@@ -41,11 +41,11 @@ Bagi pengguna Ubuntu & Windows, tutorial pada artikel ini bisa digunakan untuk m
 
 5. Maka pada JDownloader, akan terdapat proses decrypt yang dapat dilihat pada progress bar di bagian bawah window JDownloader (bagian yang di kotak merah).
 
-   ![Gambar 1]({{ page.assets }}/Screen+Shot+2013-07-03+at+1.09.19+AM.png)
+   ![Gambar 1]({{ page.assets | absolute_url }}/Screen+Shot+2013-07-03+at+1.09.19+AM.png)
 
 6. Ini memerlukan proses agak lama. Setelah selesai, makan akan secara otomatis berpidah ke tab "LinkGrabber" dan keluarlah file-file yang available untuk kita donwload. Seperti gambar di bawah.
 
-   ![Gambar 2]({{ page.assets }}/Screen+Shot+2013-07-03+at+1.17.00+AM.png)
+   ![Gambar 2]({{ page.assets | absolute_url }}/Screen+Shot+2013-07-03+at+1.17.00+AM.png)
 
 7. Perhatikan gambar di atas. Sama seperti IDM bukan ? Apabila website tersebut menyediakan banyak format dan ukuran file maka akan ditampilakan juga di JDownloader.
 
@@ -55,11 +55,11 @@ Bagi pengguna Ubuntu & Windows, tutorial pada artikel ini bisa digunakan untuk m
 
 10. Lalu pilih "Continue with selected item"
 
-    ![Gambar 3]({{ page.assets }}/Screen+Shot+2013-07-03+at+1.22.49+AM.png)
+    ![Gambar 3]({{ page.assets | absolute_url }}/Screen+Shot+2013-07-03+at+1.22.49+AM.png)
 
 11. Maka secara otomatis akan berpindah ke tab "Download" dimana proses download sedang berlangsung.
 
-    ![Gambar 4]({{ page.assets }}/Screen+Shot+2013-07-03+at+1.28.34+AM.png)
+    ![Gambar 4]({{ page.assets | absolute_url }}/Screen+Shot+2013-07-03+at+1.28.34+AM.png)
 
 12. Disini kita dapat melihat kecepatan bandwidth yang digunakan (lihat kotak nomer 1), melihat progress bar besar file yang sudah ter-download dan estimasi waktunya (lihat kotak nomer 2), mengatur banyaknya part donwload dalam satu file (lihat kotak nomer 3), mengatur maksimal jumlah file download dalam sekali download (lihat kotak nomer 3), dan mengatur kecepatan download apabila kita sedang menggunakan koneksi kita untuk buffering (lihat kotak nomer 3)
 
@@ -74,13 +74,13 @@ Bagi pengguna Ubuntu & Windows, tutorial pada artikel ini bisa digunakan untuk m
 
 4. Pilih tombol pojok kanan bawah "Clear List" untuk menghapus semua.
 
-   ![Gambar 5]({{ page.assets }}/Screen+Shot+2013-07-03+at+1.45.50+AM.png)
+   ![Gambar 5]({{ page.assets | absolute_url }}/Screen+Shot+2013-07-03+at+1.45.50+AM.png)
 
 5. Atau jika ingin menghapus yang kita pilih saja caranya
 
 6. Klik kanan file link yang mau dihapus (bisa di pilihin juga pake command pada  atau ctrl pada windows) lalu pilih Remove > Remove seperti pada gambar
 
-   ![Gambar 6]({{ page.assets }}/Screen+Shot+2013-07-03+at+1.48.58+AM.png)
+   ![Gambar 6]({{ page.assets | absolute_url }}/Screen+Shot+2013-07-03+at+1.48.58+AM.png)
 
 7. Jadi dengan kata lain kita bisa men-nahan dahulu untuk mendownload dan mengumpulkan file-file link lalu mendownload setelah semua file yang kita inginkan terkumpul.
 
@@ -91,7 +91,7 @@ Bagi pengguna Ubuntu & Windows, tutorial pada artikel ini bisa digunakan untuk m
 
 2. Yang paling menyebalkan terjadi Error No Connection kalau internet kita "LEMODDD" seperti punya saya.
 
-   ![Gambar 7]({{ page.assets }}/Screen+Shot+2013-07-03+at+1.40.58+AM.png)
+   ![Gambar 7]({{ page.assets | absolute_url }}/Screen+Shot+2013-07-03+at+1.40.58+AM.png)
 
 3. Kalau terjadi hal ini apa yang kita lakukan ?
 

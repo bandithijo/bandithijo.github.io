@@ -10,7 +10,7 @@ tags: ["thinkpad", "fingerprint"]
 description: "Kelebihan memiliki ThinkPad adalah terdapat fingerprint scanner module. Apakah di GNU/Linux fingerprint scanner dapat kita gunakan? Tentu saja! Saya menggunakannya setiap hari untuk authentication sudo dan unlock screenlock."
 ---
 
-![Banner]({{ site.baseurl }}{{ page.assets }}/Default+Header+Template+Post+2X.png)
+![Banner]({{ page.assets | absolute_url }}/Default+Header+Template+Post+2X.png)
 
 
 ## Latar Belakang
@@ -59,7 +59,7 @@ Setelah melakukan instalasi paket fprintd, lantas kita perlu melakukan beberapa 
 
 Untuk kalian yang menggunakan Gnome 3.26, _login manager_ diatur oleh GDM. Apabila kalian ingin menggunakan _fingerprint scanner_ untuk _login_ pada GDM, kalian dapat mengikuti langkah ini. Gnome sudah menyediakan _fingerprint option_ yang dapat kalian atur pada **Settings > Details > Users**. Kalian akan melihat window seperti di bawah ini,
 
-![Gambar 1]({{ site.baseurl }}{{ page.assets }}/gambar_1.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar_1.png)
 
 Gambar 1. Settings > Details > Users
 
@@ -217,7 +217,7 @@ Tujuannya agar kita diminta untuk memasukkan password terlebih dahulu, apabila g
 
 Kalau tidak ingin menginputkan password, langsung saja tekan <kbd>Enter</kbd> untuk melewati inputan password dan langsung ke permintaan fingerprint.
 
-![Gambar 1]({{ page.assets }}/gambar-01.gif)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.gif)
 
 
 #### Polkit
@@ -241,7 +241,7 @@ session   include     system-auth
 
 Demonya begini,
 
-![Gambar 2]({{ page.assets }}/gambar-02.gif)
+![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.gif)
 
 
 #### i3lock
@@ -271,7 +271,7 @@ auth   sufficient   pam_fprintd.so
 
 Untuk dapat menggunakannya, saat i3lock sudah aktif, terlebih dahulu kita harus menekan tombol <kbd>Enter</kbd>, maka _fingerprint scanner_ akan aktif, kemudian _unlock_ i3lock dengan melakukan _enroll fingerprint_.
 
-![Gambar 3]({{ page.assets }}/gambar-03.gif)
+![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.gif)
 
 
 ## Referensi

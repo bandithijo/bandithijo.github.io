@@ -25,7 +25,7 @@ Saya tertarik menggunakan **dwm**, *Dynamic Window Manager*, sebuah window manag
 
 Malam tadi, **Termite** salah satu Terminal emulator yang saya gunakan dan saya andalkan tiba-tiba saja salah dalam menampilkan glyph font untuk simbol-simbol bawaan dari **Devicons**. Saya mendapati kesalahan ini pada **NERDTree** (vim sidebar file manager) dan **Ranger**.
 
-![Gambar 1]({{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
 Gambar 1. Termite dan ST
 
@@ -211,7 +211,7 @@ Saya sangat puas dengan hasilnya. Dikarenakan ada beberapa hal yang saya tidak d
 1. Glyph font yang sesuai
 1. Dapat menghandle w3m dalam Ranger dengan baik
 
-![Gambar 2]({{ page.assets }}/gambar-02.gif)
+![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.gif)
 
 
 ## Kekurangan

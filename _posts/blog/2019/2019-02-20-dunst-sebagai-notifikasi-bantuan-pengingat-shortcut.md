@@ -252,7 +252,7 @@ Silahkan menambahkan menambahkan sendiri untuk membuat daftar *keyboard shortcut
 
 ## Hasilnya
 
-![Gambar 1]({{ page.assets }}/gambar-01.gif)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.gif)
 
 Gambar 1. Demonstrasi hasil akhir dari semua proses di atas
 

@@ -30,7 +30,7 @@ Contoh, untuk durasi selama **8 jam 30 menit**, berarti data akan disimpan sebes
 
 Tampilannya kira-kira seperti ini, untuk pemilihan jam dan menit.
 
-![Gambar 1]({{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
 Gambar 1. time_select untuk jam dan menit
 

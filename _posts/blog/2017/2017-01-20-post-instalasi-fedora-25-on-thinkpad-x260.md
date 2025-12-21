@@ -10,7 +10,7 @@ tags: ["thinkpad", "fedora"]
 description: "Sudah banyak yang membuat artikel semacam ini, 'Apa yang dilakukan setelah menginstal Ubuntu, Linux Mint, Fedora, Debian, Kali Linux, Arch Linux' di Internet. Pada artikel kali ini saya akan membuat hal yang sama. Sebenarnya artikel ini lebih baik saya sebut sebagai 'dokumentasi'."
 ---
 
-![Banner]({{ page.assets }}/Default+Header+Template+Post+22.png)
+![Banner]({{ page.assets | absolute_url }}/Default+Header+Template+Post+22.png)
 
 
 ## Latar Belakang

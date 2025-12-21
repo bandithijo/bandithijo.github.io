@@ -133,7 +133,7 @@ Kalau berhasil, file arsip berformat ZIP yang terenkripsi telah berhasil dibuat.
 
 Ilustrasinya kira-kira seperti ini.
 
-![Gambar 1]({{ page.assets }}/gambar-01.gif)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.gif)
 
 > INFO
 > 
@@ -191,7 +191,7 @@ Nah kalau berhasil,
 
 Ilustrasinya kira-kira seperti ini.
 
-![Gambar 2]({{ page.assets }}/gambar-02.gif)
+![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.gif)
 
 
 ## Pesan Penulis

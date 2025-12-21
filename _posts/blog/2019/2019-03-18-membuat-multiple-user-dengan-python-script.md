@@ -14,7 +14,7 @@ description: "Catatan ini mengenai cara membuat user dalam jumlah banyak sekalig
 
 Kemarin, 2019/03/17, ada salah satu anggota group Telegram BGLI (Belajar GNU/Linux Indonesia) menanyakan perihal ini.
 
-![Gambar 1]({{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
 Gambar 1. Pertanyaan oleh: **./XiongXong @sandy147**
 
@@ -37,7 +37,7 @@ Alur program yang terpikirkan oleh saya adalah seperti ini:
 1. Meminta inputan kepada user, berapa banyak jumlah user baru yang ingin dibuat.
 2. Mengulang-ulang perintah pembuatan user baru sesuai dengan jumlah yang diinputkan oleh user.
 
-![Gambar 2]({{ page.assets }}/gambar-02.png)
+![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
 
 
 ### Ngoding

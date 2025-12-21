@@ -164,11 +164,11 @@ Berarti local DNS belum di set ke 127.0.0.1.
 
 Sekarang coba test dengan [https://www.dnsleaktest.com/](https://www.dnsleaktest.com/) untuk memastikan DNSCrypt-Proxy sudah berjalan dengan baik.
 
-![gambar 1]({{ page.assets }}/gambar_1.png)
+![gambar 1]({{ page.assets | absolute_url }}/gambar_1.png)
 
 Gambar 1. Sebelum menggunakan DNSCrypt-Proxy
 
-![gambar 2]({{ page.assets }}/gambar_2.png)
+![gambar 2]({{ page.assets | absolute_url }}/gambar_2.png)
 
 Gambar 2. Setelah menggunakan DNSCrypt-Proxy
 

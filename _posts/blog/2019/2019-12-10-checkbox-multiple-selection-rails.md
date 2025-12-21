@@ -45,11 +45,11 @@ Checkbox ini akan harus dapat:
 
 Kira-kira seperti ini hasilnya,
 
-![Gambar 1]({{ page.assets }}/gambar-01.gif)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.gif)
 
 Gambar 1. Multiple checkbox dengan fitur Select All
 
-![Gambar 2]({{ page.assets }}/gambar-02.gif)
+![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.gif)
 
 Gambar 2. Uncheck Select All jika salah satu dari checkbox tidak dicentang
 

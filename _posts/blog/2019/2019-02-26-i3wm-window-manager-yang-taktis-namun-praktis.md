@@ -18,15 +18,15 @@ Berdasarkan daftar log video pada [bandithijo.com/vlog](/vlog/), saya menggunaka
 
 Saya merasa perlu untuk membuat catatan mengenai apa saja yang sudah saya manfaatkan dan pergunakan dengan i3wm. Mungkin dari catatan ini, teman-teman yang membaca mendapatkan informasi yang subjektif dari sudut pandang saya sebagai pengguna. Jujur saja, saya pun sangat menyukai tulisan-tulisan yang mengulas tentang suatu teknologi dari sudut pandang pengguna.
 
-![Gambar 18]({{ page.assets }}/gambar-18.png)
+![Gambar 18]({{ page.assets | absolute_url }}/gambar-18.png)
 
-![Gambar 19]({{ page.assets }}/gambar-19.png)
+![Gambar 19]({{ page.assets | absolute_url }}/gambar-19.png)
 
-![Gambar 20]({{ page.assets }}/gambar-20.png)
+![Gambar 20]({{ page.assets | absolute_url }}/gambar-20.png)
 
-![Gambar 21]({{ page.assets }}/gambar-21.png)
+![Gambar 21]({{ page.assets | absolute_url }}/gambar-21.png)
 
-![Gambar 22]({{ page.assets }}/gambar-22.png)
+![Gambar 22]({{ page.assets | absolute_url }}/gambar-22.png)
 
 
 ## Window Manager
@@ -143,7 +143,7 @@ Kemudian mengingat-ingat kembali, kalau distribusi Manjaro, beberapa kali selalu
 
 Setelah beberapa kali melihat video ulasan i3wm dari beberapa user, saya pun memutuskan untuk mempelajarinya terlebih dahulu. Kebetulan terdapat video yang memberikan informasi dasar bagaimana cara menggunakan i3wm.
 
-![Gambar 1]({{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
 Gambar 1. [Code Cast - i3wm (Playlist) at YouTube](https://www.youtube.com/watch?v=j1I63wGcvU4&list=PL5ze0DjYv5DbCv9vNEzFmP6sU7ZmkGzcf)
 
@@ -151,15 +151,15 @@ Menurut saya video ini sangat bagus sekali sebagai pondasi awal mengenal i3wm. V
 
 Saya sarankan untuk dapat mempelajari video-video lain yang direkomendasikan oleh i3wm.org.
 
-![Gambar 2]({{ page.assets }}/gambar-02.png)
+![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
 
 Gambar 2. [i3 window manager screencast v4.1 at YouTube](https://youtu.be/Wx0eNaGzAZU)
 
-![Gambar 3]({{ page.assets }}/gambar-03.png)
+![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.png)
 
 Gambar 3. [i3 screencast: containers and the tree data structure at YouTube](https://youtu.be/AWA8Pl57UBY)
 
-![Gambar 4]({{ page.assets }}/gambar-04.png)
+![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.png)
 
 Gambar 4. [i3 - An Improved Tiling Window Manager at YouTube](https://youtu.be/QnYN2CTb1hM)
 
@@ -247,7 +247,7 @@ bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --dmenu='rofi -dmenu -lines
 
 Pada contoh di atas, saya menggunakan aplikasi **Rofi** sebagai *application launcher* yang saya letakkan pada <kbd>SUPER</kbd>+<kbd>D</kbd>.
 
-![Gambar 5]({{ page.assets }}/gambar-05.png)
+![Gambar 5]({{ page.assets | absolute_url }}/gambar-05.png)
 
 Gambar 5. Rofi+dmenu
 
@@ -500,7 +500,7 @@ Stacking layout pada i3wm ini tidak seperti stacking pada Desktop Environment de
 
 Kalau masih bingung, saya ambilkan gambar dari i3wm.org.
 
-![Gambar 6]({{ page.assets }}/gambar-06.png)
+![Gambar 6]({{ page.assets | absolute_url }}/gambar-06.png)
 
 Gambar 6. Layout yang dimiliki oleh i3wm
 
@@ -822,7 +822,7 @@ client.urgent            $urgent-bg-color    $urgent-bg-color    $urgent-text-co
 
 Hasilnya akan seperti ini.
 
-![Gambar 7]({{ page.assets }}/gambar-08.png)
+![Gambar 7]({{ page.assets | absolute_url }}/gambar-08.png)
 
 Gambar 7. Window Container Aktif (kiri) dan Window Container Tidak Aktf (kanan)
 
@@ -880,25 +880,25 @@ Hasilnya akan seperti ini,
 
 **Border Normal 0**, menggunakan <kbd>SUPER</kbd>+<kbd>SHIFT</kbd>+<kbd>T</kbd>
 
-![Gambar 8]({{ page.assets }}/gambar-09.png)
+![Gambar 8]({{ page.assets | absolute_url }}/gambar-09.png)
 
 Gambar 8. Window Container Border Normal 0
 
 **Border Normal 1**, menggunakan <kbd>SUPER</kbd>+<kbd>T</kbd>
 
-![Gambar 9]({{ page.assets }}/gambar-10.png)
+![Gambar 9]({{ page.assets | absolute_url }}/gambar-10.png)
 
 Gambar 9. Window Container Border Normal 1
 
 **Border Pixel 1**, menggunakan <kbd>SUPER</kbd>+<kbd>SHIFT</kbd>+<kbd>Y</kbd>
 
-![Gambar 10]({{ page.assets }}/gambar-11.png)
+![Gambar 10]({{ page.assets | absolute_url }}/gambar-11.png)
 
 Gambar 10. Window Container Border Pixel 1
 
 **Border None**, menggunakan <kbd>SUPER</kbd>+<kbd>Y</kbd>
 
-![Gambar 11]({{ page.assets }}/gambar-12.png)
+![Gambar 11]({{ page.assets | absolute_url }}/gambar-12.png)
 
 Gambar 11. Window Container Border None
 
@@ -1117,7 +1117,7 @@ bindsym $mod+Tab exec --no-startup-id j4-dmenu-desktop --dmenu="rofi -show windo
 
 Saya menggunakan <kbd>SUPER</kbd>+<kbd>TAB</kbd>, sebagai ganti dari <kbd>ALT</kbd>+<kbd>TAB</kbd>.
 
-![Gambar 12]({{ page.assets }}/gambar-07.png)
+![Gambar 12]({{ page.assets | absolute_url }}/gambar-07.png)
 
 Gambar 12. Mendaftar semua Window Container dengan Rofi
 
@@ -1519,13 +1519,13 @@ bindsym $mod+Shift+p exec --no-startup-id rm -rf /tmp/clipmenu/*
 
 Dapat dilihat, saya menggunakan <kbd>SUPER</kbd>+<kbd>P</kbd> untuk memanggil Rofi yang menampilkan isi dari clipboard.
 
-![Gambar 13]({{ page.assets }}/gambar-13.png)
+![Gambar 13]({{ page.assets | absolute_url }}/gambar-13.png)
 
 Gambar 13. Clipboard dalam keadaan terisi
 
 Sedangkan untuk menghapus seluruh isi clipboard, saya menggunakan <kbd>SUPER</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd>.
 
-![Gambar 14]({{ page.assets }}/gambar-14.png)
+![Gambar 14]({{ page.assets | absolute_url }}/gambar-14.png)
 
 Gambar 14. Clipboard dalam keadaan kosong
 
@@ -1570,7 +1570,7 @@ Saya menggunakan <kbd>SUPER</kbd>+<kbd>F3</kbd> untuk memanggil `pavucontrol` ka
 
 Namun, belakangan ini sudah sangat jarang saya menggunakan `pavucontrol`, lebih sering menggunakan `ncpamixer`, tapi enah mengapa, aplikasi ini tidak dapat dijalankan dengan *keybinding*.
 
-![Gambar 15]({{ page.assets }}/gambar-15.png)
+![Gambar 15]({{ page.assets | absolute_url }}/gambar-15.png)
 
 Gambar 15. Tampilan TUI dari ncpamixer
 
@@ -1613,7 +1613,7 @@ Saya menggunakan <kbd>SUPER</kbd>+<kbd>F7</kbd>.
 
 Lagi-lagi, karena tombol <kbd>F7</kbd> saya bergambar projector, maka saya letakkan kombinasi untuk memanggil Arandr pada tombol ini.
 
-![Gambar 16]({{ page.assets }}/gambar-16.png)
+![Gambar 16]({{ page.assets | absolute_url }}/gambar-16.png)
 
 Gambar 16. Tampilan GUI dari Arandr
 
@@ -1701,7 +1701,7 @@ gui_if_available = True
 
 Hasilnya, akan seperti di bawah ini.
 
-![Gambar 17]({{ page.assets }}/gambar-17.gif)
+![Gambar 17]({{ page.assets | absolute_url }}/gambar-17.gif)
 
 Gambar 17. Tampilan NetworkManager_dmenu dengan Rofi
 

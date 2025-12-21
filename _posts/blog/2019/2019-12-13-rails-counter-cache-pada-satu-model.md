@@ -176,7 +176,7 @@ Begini kira-kira hasilnya.
 | 2    | Baik Budiman          | 1                  | 0                      |
 ```
 
-![Gambar 1]({{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
 Gambar 1. Baik Budiman melakukan registrasi dengan menggunakan kode referral yang diberikan oleh Rizqi Assyaufi.
 

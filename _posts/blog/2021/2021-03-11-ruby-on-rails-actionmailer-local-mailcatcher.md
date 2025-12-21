@@ -32,7 +32,7 @@ Kita akan menggunakan MailCatcher.
 
 Dengan MailCatcher, kita dapat manangkap email yang dikirimkan dengan prokotol SMTP ke localhost.
 
-![Gambar 1]({{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
 Gambar 1. Interface dari MailCatcher
 
@@ -127,7 +127,7 @@ Selesai!
 
 ## Demonstrasi
 
-![Gambar 2]({{ page.assets }}/gambar-02.gif)
+![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.gif)
 
 Gambar 2. Demo registration dan get confirmation email dengan MailCatcher
 

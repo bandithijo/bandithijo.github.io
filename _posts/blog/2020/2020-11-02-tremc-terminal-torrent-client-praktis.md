@@ -116,7 +116,7 @@ file_prio_low              = fg:yellow,bg:default
 file_prio_off              = fg:blue,bg:default
 ```
 
-![Gambar 1]({{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
 Gambar 1. Tampilan tremc
 
@@ -156,26 +156,26 @@ Tremc, sudah membundle keybind help info yang sangat mudah dipahami dan mudah di
 
 Tekan <kbd>F1</kbd> atau <kbd>?</kbd>.
 
-![Gambar 2]({{ page.assets }}/gambar-02.png)
+![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
 
 Apabila terdapat keterangan **More...**, kita dapat scroll ke bawah dengan <kbd>Page Down</kbd>.
 
 Untuk melihat detail dari torrent, tekan <kbd>Enter</kbd>.
 
-![Gambar 3]({{ page.assets }}/gambar-03.png)
+![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.png)
 
 Kemudian, pindah ke tab selanjutnya dengan <kbd>Tab</kbd> atau <kbd>-></kbd>.
 
-![Gambar 4]({{ page.assets }}/gambar-04.png)
+![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.png)
 
-![Gambar 5]({{ page.assets }}/gambar-05.png)
+![Gambar 5]({{ page.assets | absolute_url }}/gambar-05.png)
 
 
 ### Add Torrent
 
 Kita dapat menambahkan torrent dengan menekan tombol <kbd>a</kbd>.
 
-![Gambar 6]({{ page.assets }}/gambar-06.png)
+![Gambar 6]({{ page.assets | absolute_url }}/gambar-06.png)
 
 Saya lebih sering memasukkan alamat Magnet Link, seperti ini contohnya.
 

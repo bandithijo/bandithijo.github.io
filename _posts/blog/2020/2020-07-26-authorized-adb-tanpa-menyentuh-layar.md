@@ -117,9 +117,9 @@ Nah, setelah mendapatkan hak akses, kita bisa ngapain aja deh.
 
 Misalkan untuk menjalankan **scrcpy** dan lain-lain.
 
-![Gambar 1]({{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
-![Gambar 2]({{ page.assets }}/gambar-02.png)
+![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
 
 Mantap!!!
 

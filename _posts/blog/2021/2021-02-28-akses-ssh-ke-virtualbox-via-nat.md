@@ -27,13 +27,13 @@ Nah, biasanya karena ingin praktis, saya menggunakan konfigurasi NAT agar Guest 
 
 Karena saya menggunakan NAT untuk memberikan akses internet Guest dengan Host, saya perlu mengkonfigurasi **Port Forwarding** agar saya dapat mengakses Guest dengan SSH dari Host.
 
-![Gambar 1]({{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
 Gambar 1. Button "Port Forwarding" di dalam menu Network
 
 Saya sudah mengaktifkan service SSH di Guest, jadi tinggal saya akses saja via SSH.
 
-![Gambar 2]({{ page.assets }}/gambar-02.png)
+![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
 
 Gambar 2. Buat rule baru dengan Guest IP
 

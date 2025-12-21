@@ -33,7 +33,7 @@ Teman-teman dapat melihat contoh pertama [di sini](/blog/rails-single-table-inhe
 
 Kira-kira seperti ini ERD-nya.
 
-![Gambar 1]({{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
 Gambar 1. ERD Single Table Inheritance antara user model dengan participants dan sponsors model
 

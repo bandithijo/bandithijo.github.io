@@ -141,7 +141,7 @@ Coba buka file tersebut dengan Browser.
 
 Hasilnya akan seprti ini.
 
-![Gambar 1]({{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
 Gambar 1. Tabel daftar dosen hasil web scraping
 

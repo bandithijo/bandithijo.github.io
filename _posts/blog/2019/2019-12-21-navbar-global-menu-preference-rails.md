@@ -23,7 +23,7 @@ Tapi, mudah-mudahan judul yang saya berikan saat ini, dapat mewakili isi dari tu
 
 Mungkin saya akan mulai dengan memberikan ilustrasi gambar.
 
-![Gambar 1]({{ page.assets }}/gambar-01.gif)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.gif)
 
 Gambar 1. Navigation Bar dengan Menu Language dan Currency Preferences
 

@@ -10,7 +10,7 @@ tags: ["netbeans"]
 description: "Netbeans merupakan aplikasi yang dibangun dengan bahasa Java. Java GUI Toolkit biasanya belum terkonfigurasi dengan baik agar memiliki tampilan yang mulus. Maka kita perlu untuk mengkonfigurasi agar tampilan Netbeans kita terlihat mulus."
 ---
 
-![Banner]({{ site.baseurl }}{{ page.assets }}/Default+Header+Template+Post+2X.png)
+![Banner]({{ page.assets | absolute_url }}/Default+Header+Template+Post+2X.png)
 
 ## Latar Belakang
 

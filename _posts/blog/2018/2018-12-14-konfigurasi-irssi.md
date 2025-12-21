@@ -22,7 +22,7 @@ IRC client yang saya pergunakan adalah **Irssi**.
 
 Hal pertama adalah, Irssi berjalan di atas Terminal yang dibuat dengan library ncurses sehingga dapat menampilkan "GUI-like" di dalam Terminal.
 
-![Gambar 1]({{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
 Gambar 1. Antarmuka dari Irssi
 
@@ -78,7 +78,7 @@ Pada bagian `Exec=` bagian `termite` dapat disesuaikan dengan Terminal Emulator 
 
 Sekarang coba jalankan. Kalian akan bertemu dengan tampilan awal dari Irssi.
 
-![Gambar 2]({{ page.assets }}/gambar-02.png)
+![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
 
 Gambar 2. Antarmuka Default dari Irssi
 
@@ -288,13 +288,13 @@ Perlu diperhatikan, terkadang tampilan yang ada pada *screenshot* tidak sesuai d
 
 Saya menggunakan tema hasil modifikasi dari [`solarized.theme`](https://github.com/huyz/irssi-colors-solarized) dari **Huy Z**.
 
-![Gambar 3]({{ page.assets }}/gambar-03.png)
+![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.png)
 
 Gambar 3. Theme Solarized dari Huy Z
 
 Karena terdapat beberapa bagian yang kurang sesuai dengan selera saya, seperti indentasi pada username dan beberapa color, saya memodifikasi sesuai dengan preferensi saya.
 
-![Gambar 4]({{ page.assets }}/gambar-04.png)
+![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.png)
 
 Gambar 4. Theme Solarized setelah dimodifikasi
 
@@ -535,7 +535,7 @@ Awalnya saya langsung mengutak atik file konfigurasi, googling sana sini untuk m
 
 Kecurigaan saya adalah, Freenode memblokir alamat IP publik saya. Karena saya selalu menyalan Irssi dan terhubung secara konstan dengan Freenode. Sepanjang hari, sepanjang minggu. Mungkin ada limitasi trafik keluar dan masuk dari sebuah IP. Mungkin...Hanya asumsi.
 
-![Gambar 5]({{ page.assets }}/gambar-05.png)
+![Gambar 5]({{ page.assets | absolute_url }}/gambar-05.png)
 
 Gambar 5.  Error Closing Link
 

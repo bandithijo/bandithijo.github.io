@@ -10,7 +10,7 @@ tags: ["fedora"]
 description: "Ini pertama kali bagi saya melakukan upgrade sistem operasi Fedora dengan menggunakan tool. Karena sebelumnya saya adalah pengguna Ubuntu. Dan upgrade sistem operasi pada lingkungan Ubuntu benar-benar sangat mudah. Karena developer sudah menyediakan aplikasi GUI (Graphic User Interface)."
 ---
 
-![Banner]({{ page.assets }}/Default+Header+Template+Post+19.jpg)
+![Banner]({{ page.assets | absolute_url }}/Default+Header+Template+Post+19.jpg)
 
 
 ## Pendahuluan

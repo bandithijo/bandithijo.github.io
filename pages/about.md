@@ -6,7 +6,7 @@ permalink: '/about/'
 assets: "/assets/images/pages/about"
 ---
 
-![Banner]({{ page.assets }}/banner.png)
+![Banner]({{ page.assets | absolute_url }}/banner.png)
 
 **BanditHijo**, tidak seperti yang anda pahami, Bandit (kata ganti orang untuk konotasi yang bersifat negatif) dan Hijo (kata plesetan dari warna hijau).
 
@@ -130,27 +130,27 @@ Catatan tentang bagaimana cara untuk berdonasi, dapat teman-teman baca di sini, 
 
 ## Bagimana workflow dalam menggunakan Linux?
 
-![Gambar 1]({{ page.assets }}/01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/01.png)
 
 Gambar 1. i3 Window Manger + Polybar + Conky + Solarized Dark = My Perfect Desktop
 
-![Gambar 7]({{ page.assets }}/07.png)
+![Gambar 7]({{ page.assets | absolute_url }}/07.png)
 
 Gambar 7. Another Desktop with Wallpaper and Vim
 
-![Gambar 2]({{ page.assets }}/02.png)
+![Gambar 2]({{ page.assets | absolute_url }}/02.png)
 
 Gambar 2. Tools yang saya pergunakan untuk menulis, Vim + Tmux
 
-![Gambar 3]({{ page.assets }}/03.png)
+![Gambar 3]({{ page.assets | absolute_url }}/03.png)
 
 Gambar 3. Tools yang saya pergunakan untuk membuat vector image, Inkscape
 
-![Gambar 4]({{ page.assets }}/04.png)
+![Gambar 4]({{ page.assets | absolute_url }}/04.png)
 
 Gambar 4. Tools yang saya pergunakan untuk membuat banner image, GIMP
 
-![Gambar 5]({{ page.assets }}/05.png)
+![Gambar 5]({{ page.assets | absolute_url }}/05.png)
 
 Gambar 5. Tools yang saya pergunakan untuk image croping, gThumb
 

@@ -18,23 +18,23 @@ Sempat bingung memilih model antara Casio F-91W atau Casio F-94W. Akhirnya saya 
 
 Type yang saya punya ini adalah Casio F-94WA-9 yang memiliki warna hitam dengan aksen kuning.
 
-![Gambar 1]({{ page.assets }}/gambar_01.jpg)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar_01.jpg)
 
 Gambar 1. Box pengiriman dari Casio Gallery Indonesia
 
-![Gambar 2]({{ page.assets }}/gambar_02.jpg)
+![Gambar 2]({{ page.assets | absolute_url }}/gambar_02.jpg)
 
 Gambar 2. Isi dari dalam box pembelian jam tangan Casio F-94W di Casio Gallery Indonesia
 
-![Gambar 3]({{ page.assets }}/gambar_03.jpg)
+![Gambar 3]({{ page.assets | absolute_url }}/gambar_03.jpg)
 
 Gambar 3. Isi dari dalam box pembelian jam tangan Casio F-94W di Casio Gallery Indonesia
 
-![Gambar 4]({{ page.assets }}/gambar_04.jpg)
+![Gambar 4]({{ page.assets | absolute_url }}/gambar_04.jpg)
 
 Gambar 4. Tampak depan jam tangan Casio F-94W
 
-![Gambar 5]({{ page.assets }}/gambar_05.jpg)
+![Gambar 5]({{ page.assets | absolute_url }}/gambar_05.jpg)
 
 Gambar 5. Tampak belakang jam tangan Casio F-94W
 

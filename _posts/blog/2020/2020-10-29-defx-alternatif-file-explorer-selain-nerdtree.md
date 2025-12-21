@@ -347,9 +347,9 @@ endif
 
 ## Hasilnya
 
-![Gambar 1]({{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
-![Gambar 2]({{ page.assets }}/gambar-02.gif)
+![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.gif)
 
 Kalau diperhatikan, kenapa status bar saya dapat berbeda ketika berada di buffer Defx?
 

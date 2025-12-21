@@ -59,7 +59,7 @@ Syarat untuk melakukan verifikasi, hanya dengan menunjukkan/mengirimkan/menguplo
 
 Untuk membuat dan memverifikasi akun PayPal tidak diperlukan saldo sama sekali.
 
-![Gambar 1]({{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
 Gambar 1. Saldo PayPal saya USD$ 0.00
 
@@ -69,7 +69,7 @@ Teman-teman juga perlu membuat akun di Bank Jago.
 
 Kita akan memanfaatkan **Virtual Debit Card** yang diberikan oleh Bank Jago untuk didaftarkan pada PayPal dan membuat pengaturan pembayaran utama akan ditarik dari saldo Bank Jago melalui Virtual Debit Card Bank Jago.
 
-![Gambar 2]({{ page.assets }}/gambar-02.jpg)
+![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.jpg)
 
 Gambar 2. Virtual Debit Card dari Bank Jago
 
@@ -83,7 +83,7 @@ Ada biaya tambahan untuk mendaftarkan **Virtual Debit Card** Bank Jago ke PayPal
 > 
 > \* USD$ 1 = Rp 14.656,- (Kurs tanggal 2 April 2022)
 > 
-> ![Gambar 3]({{ page.assets }}/gambar-03.jpg)
+> ![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.jpg)
 > 
 > Gambar 3. Proses pendaftaran Virtual Debit Card Bank Jago ke PayPal
 > 
@@ -95,7 +95,7 @@ Pergi ke menu **Wallet** di PayPal, [https://www.paypal.com/myaccount/money/](ht
 
 Pilih menu **Hubungkan Kartu**, [https://www.paypal.com/myaccount/money/cards/new/manual](https://www.paypal.com/myaccount/money/cards/new/manual), untuk mendaftarkan **Virtual Debit Card** Bank Jago.
 
-![Gambar 4]({{ page.assets }}/gambar-04.png)
+![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.png)
 
 Gambar 4. Proses menghubungkan Vritual Debit Card Bank Jago di PayPal
 
@@ -105,7 +105,7 @@ Virtual Debit Card Bank Jago akan terbaca sebagai Visa Card.
 > 
 > Sebelum menghubungkan kartu, pastikan pengaturan kartu untuk **International Payment** sudah aktif.
 > 
-> ![Gambar 5]({{ page.assets }}/gambar-05.jpg)
+> ![Gambar 5]({{ page.assets | absolute_url }}/gambar-05.jpg)
 > 
 > Gambar 5. Pastikan sudah mengaktifkan "International Payment" di pengaturan Virtual Debit Card Bank Jago
 
@@ -115,7 +115,7 @@ Untuk mempermudah proses transaksi dengan merchan-merchant PayPal, kita perlu me
 
 Dengan begini, kita sama sekali tidak memerlukan/mengisi saldo PayPal sama sekali. Karena, semua transaksi akan ditarik dari saldo Bank Jago yang terkait dengan Virtual Debit Card Bank Jago.
 
-![Gambar 6]({{ page.assets }}/gambar-06.png)
+![Gambar 6]({{ page.assets | absolute_url }}/gambar-06.png)
 
 Gambar 6. Virtual Debit Card Bank Jago sudah terdaftar di PayPal
 
@@ -131,11 +131,11 @@ Penjelasan mengenai donasi dapat dibaca di [https://suckless.org/donations/](htt
 
 Akun PayPal dari Suckless: `finance@suckless.org` (Bisa dicari akun tersebut pada menu **Kirim pembayaran**)
 
-![Gambar 7]({{ page.assets }}/gambar-07.png)
+![Gambar 7]({{ page.assets | absolute_url }}/gambar-07.png)
 
 Gambar 7. Email dari PayPal setelah melakukan donasi ke Suckless Project
 
-![Gambar 8]({{ page.assets }}/gambar-08.png)
+![Gambar 8]({{ page.assets | absolute_url }}/gambar-08.png)
 
 Gambar 8. 1-2 bulan kemudian, nama saya masuk ke dalam daftar donatur di halaman [https://suckless.org/donations/](https://suckless.org/donations/)
 
@@ -147,13 +147,13 @@ Saya tidak berhasil berdonasi menggunakan **SPI PayPal**, terdapat keterangan "D
 
 Sehingga saya menggunakan **Click&Pledge**, [https://co.clickandpledge.com/advanced/default.aspx?wid=47294](https://co.clickandpledge.com/advanced/default.aspx?wid=47294).
 
-![Gambar 9]({{ page.assets }}/gambar-09.png)
+![Gambar 9]({{ page.assets | absolute_url }}/gambar-09.png)
 
 Gambar 9. Email dari Click&Pledge setelah melakukan donasi ke Arch Linux
 
 Kerennya, di Arch Linux, setelah berdonasi meski USD$ 1, nama kita akan langsung terpajang di website Arch Linux [halaman donation](https://archlinux.org/donate/).
 
-![Gambar 10]({{ page.assets }}/gambar-10.png)
+![Gambar 10]({{ page.assets | absolute_url }}/gambar-10.png)
 
 Gambar 10. Nama saya di halaman Arch Linux Donors
 

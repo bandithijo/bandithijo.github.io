@@ -152,11 +152,11 @@ Seperti itu saja. Sederhana bukan?
 
    **Sebelum,**
 
-   ![Gambar 1]({{ page.assets }}/gambar-01.png)
+   ![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
    **Sesudah,**
 
-   ![Gambar 2]({{ page.assets }}/gambar-02.png)
+   ![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
 
    Saya menggunakan NERDTree, untuk membuat file baru. Karena sudah terbiasa menggunakan NERDTree.
 
@@ -186,7 +186,7 @@ Seperti itu saja. Sederhana bukan?
 
 ## Hasilnya
 
-![Gambar 1]({{ page.assets }}/gambar-03.gif)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-03.gif)
 
 
 ## Pesan Penulis

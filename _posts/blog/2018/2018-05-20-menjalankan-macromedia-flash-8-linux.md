@@ -10,7 +10,7 @@ tags: ["wine"]
 description: "Kira-kira tiga minggu yang lalu, saya mendapat tugas kuliah oleh dosen saya untuk membuat 'Media Pembelajaran bagi siswa SMP atau SMA' dengan menggunakan aplikasi Macromedia Flash. Dalam hati ada sedikit rasa haru karena senang tapi tidak lama rasa senang itu langsung tertutupi kabut kenyataan bahwa saya saat ini sudah menggunakan sistem operasi GNU/Linux."
 ---
 
-![Banner]({{ page.assets }}/banner_post_13.png)
+![Banner]({{ page.assets | absolute_url }}/banner_post_13.png)
 
 
 ## Latar Belakang
@@ -53,7 +53,7 @@ Selanjutnya, kamu harus memiliki instalasi Macromedia Flash 8 beserta serial num
 
 Oke, setelah memasang Wine dan menyediakan Macromedia Flash 8 installer, saatnya kita pasang.
 
-![Gambar 1]({{ page.assets }}/gambar_01.gif)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar_01.gif)
 
 Gambar 1. Instalasi Macromedia Flash 8 di atas Wine
 
@@ -61,7 +61,7 @@ Nah, setelah berhasil di pasang, saatnya kita menjalankanya.
 
 Saat proses instalasi, kita mencentang pilihan untuk membuat *shortcut* di dekstop. Kita tinggal pergi ke Desktop dan mencari *shortcut* bertuliskan **Macromedia Flash 8**.
 
-![Gambar Shortcut]({{ page.assets }}/Screenshot_from_2018-05-20_13-18-33.png)
+![Gambar Shortcut]({{ page.assets | absolute_url }}/Screenshot_from_2018-05-20_13-18-33.png)
 
 Akan terdapat file satu lagi bernama **Macromedia Flash 8.lnk**, ini adalah file wine loader, tapi pada prakteknya saya tidak pernah menggunakan file ini, sehingga saya hapus saja, hehehe.
 
@@ -69,7 +69,7 @@ Kalau kalian ingin memindahkan file shortcut **Macromedia Flash 8** ini keluar d
 
 Sekarang, kita coba menjalankannya.
 
-![Gambar 2]({{ page.assets }}/gambar_02.gif)
+![Gambar 2]({{ page.assets | absolute_url }}/gambar_02.gif)
 
 Gambar 2. Menjalankan Shortcut Macromedia Flash 8
 
@@ -82,7 +82,7 @@ Pengujian ini berdasarkan subjektif saya saja, apakah saya dapat mengerjakan ani
 
 Berikut adalah hasilnya.
 
-![Gambar 3]({{ page.assets }}/gambar_03.gif)
+![Gambar 3]({{ page.assets | absolute_url }}/gambar_03.gif)
 
 Gambar 3. SneakPeek timeline dan scene
 
@@ -101,7 +101,7 @@ Aspek-aspek yang jadi penilaian subjektif saya adalah sebagai berikut:
 
 Ketika di publish, hasilnya akan seperti ini.
 
-![Gambar 4]({{ page.assets }}/gambar_04.gif)
+![Gambar 4]({{ page.assets | absolute_url }}/gambar_04.gif)
 
 Gambar 4. Setelah di Publish
 

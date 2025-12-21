@@ -48,7 +48,7 @@ Selanjutnya, **logout** dan **login** kembali.
 
 Selanjutnya, buka Jitsi dan lihat perbedannya.
 
-![Gambar 1]({{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
 Gambar 1. Setelah ditambahkan JAVA_OPTIONS
 

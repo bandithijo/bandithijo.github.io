@@ -426,7 +426,7 @@ Bisa dilihat, beberapa *patch* branch yang berkonflik pada script **suckmerge2**
 
 Nah, berikut ini adalah tangkapan layar dari DWM yang saat ini saya pergunakan.
 
-![Gambar 1]({{ page.assets }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
 
 Gambar 1. RicingShow: DeWayEm Project 2020-05
 
@@ -614,7 +614,7 @@ Saya juga hanya menggunakan top bar saja, yang sebelumnya saya menggunakan top d
 
 Nah, seperti ini tampilan bar yang saya pergunakan sekarang.
 
-![Gambar 2]({{ page.assets }}/gambar-02.png)
+![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
 
 Gambar 2. dwmsatus (custom made)
 

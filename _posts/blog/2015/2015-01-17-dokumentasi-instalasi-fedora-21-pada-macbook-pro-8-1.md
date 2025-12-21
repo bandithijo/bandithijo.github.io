@@ -10,7 +10,7 @@ tags: ["fedora"]
 description: "Tujuan dari penulisan dokumentasi ini untuk memudahkan pengguna mesin Apple khususnya Macbook Pro 8.1 (Late 2011) dalam menginstalasi sistem operasi Fedora 21. Untuk itu, saya mendokumentasikan proses setup Fedora 21 ini agar memudahkan pengguna Apple yang ingin beralih menggunakan sistem operasi Fedora 21."
 ---
 
-![Banner]({{ page.assets }}/Default_Header_Template_Post_18_D2.jpg)
+![Banner]({{ page.assets | absolute_url }}/Default_Header_Template_Post_18_D2.jpg)
 
 
 ## Pendahuluan
@@ -231,7 +231,7 @@ Untuk bisa membaca dan menulis (Read & Write) partisi Hfs+ Macintosh HD, kita pe
     rw,force,x-gvfs-show,noauto
     ```
 
-    ![Gambar 1]({{ page.assets }}/Mount+Options_003.png)
+    ![Gambar 1]({{ page.assets | absolute_url }}/Mount+Options_003.png)
 
     Kemudian klik tombol OK. Sekarang anda bisa mencoba dengan meng-klik Macintosh HD pada file manager Nautilus pada aplikasi Files, kemudian anda akan diminta memasukkan password username anda.
 

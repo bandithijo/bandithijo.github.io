@@ -10,7 +10,7 @@ tags: ["jekyll", "githubpages", "travisci"]
 description: "Terdapat whitelist plugin yang dapat digunakan apabila kita hanya menggunakan GitHub Pages untuk membuild Jekyll blog. Maka, saya memanfaatkan Travis-CI agar dapat bebas menggunakan Jekyll plugin sesuka hati. Termasuk plugin yang saya buat sendiri untuk membantu proses penulisan artikel."
 ---
 
-![Gambar 1]({{ page.assets }}/banner-2020-07-10-deploy-gh-page-dengan-travis-ci.png)
+![Gambar 1]({{ page.assets | absolute_url }}/banner-2020-07-10-deploy-gh-page-dengan-travis-ci.png)
 
 > PERHATIAN!
 > 
@@ -276,11 +276,11 @@ Atau klik link ini [Settings/Developer settings](https://github.com/settings/tok
 
 Setelah itu, klik tombol <kbd>Generate new tokens</kbd>.
 
-![Gambar 2]({{ page.assets }}/gambar-02.png)
+![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
 
 Berikan nama yang mudah untuk dikenali.
 
-![Gambar 3]({{ page.assets }}/gambar-03.png)
+![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.png)
 
 Checklist semua *permission* yang ada pada scope **repo**.
 
@@ -288,13 +288,13 @@ Sip mantap!
 
 Jangan lupa disimpan dengan menekan tombol <kbd>Generate token</kbd>.
 
-![Gambar 4]({{ page.assets }}/gambar-04.png)
+![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.png)
 
 Kita akan mendapatkan token. Copy dan simpan dulu di tempat yang aman.
 
 Token tersebut akan kita daftarkan ke environment variable GITHUB_TOKEN di Travis CI.
 
-![Gambar 5]({{ page.assets }}/gambar-05.png)
+![Gambar 5]({{ page.assets | absolute_url }}/gambar-05.png)
 
 Dengan begini, konfigurasi pada GitHub sudah selesai.
 
@@ -305,11 +305,11 @@ Buka situs [Travis-CI.Org](https://travis-ci.org/) dan login dan nanti akan munc
 
 Atau, bisa ke halaman [travis-ci.org/account/repositories](https://travis-ci.org/account/repositories).
 
-![Gambar 6]({{ page.assets }}/gambar-01.png)
+![Gambar 6]({{ page.assets | absolute_url }}/gambar-01.png)
 
 Setelah di **enable**, klik tombol <kbd>Settings</kbd>, untuk pergi ke pengaturan.
 
-![Gambar 7]({{ page.assets }}/gambar-06.png)
+![Gambar 7]({{ page.assets | absolute_url }}/gambar-06.png)
 
 Isikan environment variable seperti contoh di atas.
 
@@ -333,13 +333,13 @@ Isikan environment variable seperti contoh di atas.
 
 Setelah itu, tekan tombol <kbd>Add</kbd>.
 
-![Gambar 8]({{ page.assets }}/gambar-07.png)
+![Gambar 8]({{ page.assets | absolute_url }}/gambar-07.png)
 
 Nah, kalau tampilannya seperti di atas, artinya kita sudah berhasil mengeset environment variable GITHUB_TOKEN.
 
 Sekedar info, saya tidak mengutak atik pengaturan **General** & **Auto Cancellation**.
 
-![Gambar 9]({{ page.assets }}/gambar-08.png)
+![Gambar 9]({{ page.assets | absolute_url }}/gambar-08.png)
 
 Mantap! Konfigurasi pada Travis CI sudah selesai.
 
@@ -353,9 +353,9 @@ Kita akan melihat Travis CI akan menjalankan proses build.
 
 Kalau berhasil akan sepeti ini tampilannya.
 
-![Gambar 10]({{ page.assets }}/gambar-09.png)
+![Gambar 10]({{ page.assets | absolute_url }}/gambar-09.png)
 
-![Gambar 11]({{ page.assets }}/gambar-10.png)
+![Gambar 11]({{ page.assets | absolute_url }}/gambar-10.png)
 
 Perhatikan pada baris ke-320, kita dapat melihat pada akhir proses build, akan mendeploy hasil generate static site `_site/` di branch **master** ke GitHub Pages.
 
