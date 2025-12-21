@@ -22,6 +22,10 @@ Hal ini saya lakukan agar ketika saya sudah tidak aktif mengelola custom domain 
 
 ## Konsep Dasar
 
+Terdapat banyak cara untuk membuat banyak pintu akses yang mengarah ke blog/web kita. Yang paling umum adalah menggunakan DNS configuration, misalnya dengan membuat CNAME atau ALIAS record yang mengarah ke domain tertentu.
+
+Namun, karena saya menggunakan Jekyll sebagai static site generator, maka saya memilih cara yang lebih sederhana yaitu dengan memanfaatkan fitur konfigurasi Jekyll itu sendiri.
+
 Karena Jekyll mendukung build dengan menggunakan flag `--config` untuk menentukan file konfigurasi yang berbeda, maka saya memanfaatkan fitur ini untuk membuat dua jenis build berdasarkan file config.
 
 ```
