@@ -1,0 +1,5 @@
+books:
+  - title: "Arch Linux untuk Orang Sibuk"
+    description: ""
+    cover: "book_arch-linux-untuk-orang-sibuk.png"
+    wip: true
