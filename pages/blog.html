@@ -8,7 +8,7 @@ permalink: '/blog/'
   <div id="search-container" class="flex items-center">
     <span class=""></span>
     <input type="text" id="search-input" placeholder="Search for topic... CMD/CTRL+K to focus" autocomplete="off"
-      class="text-left rounded-lg border border-gray-300 dark:border-neutral-700 dark:bg-neutral-900 outline-none px-3 py-2 w-full placeholder:text-lg placeholder:font-thin placeholder:text-neutral-400 focus:outline-none focus:ring-0 focus:ring-gray-300 focus:border-gray-300 dark:focus:ring-neutral-700 dark:focus:border-neutral-700 select-none">
+      class="text-left rounded-lg border border-gray-900 dark:border-neutral-400 dark:bg-neutral-900 outline-none px-3 py-2 w-full placeholder:text-lg placeholder:font-thin placeholder:text-neutral-400 focus:outline-none focus:ring-0 focus:ring-gray-900 focus:border-gray-900 dark:focus:ring-neutral-400 dark:focus:border-neutral-400 select-none">
   </div>
 
   <!-- Search Loader -->
@@ -40,7 +40,7 @@ permalink: '/blog/'
   <div id="post-container">
     {% assign blog_posts = site.posts | where_exp: "post", "post.categories contains 'blog'" %}
     {% for post in blog_posts %}
-      <div class="masonry-item absolute p-4 bg-white dark:bg-neutral-900 rounded-lg border border-gray-300 dark:border-neutral-700 hover:border-dark dark:hover:border-neutral-400 group"
+      <div class="masonry-item absolute p-4 bg-white dark:bg-neutral-900 rounded-lg border border-gray-900 dark:border-neutral-400 hover:border-dark dark:hover:border-neutral-400 group"
         style="width: calc(25% - 12px);">
         <a href="{{ post.url }}" class="text-dark dark:text-white">
           <div class="flex flex-row mb-3">

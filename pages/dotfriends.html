@@ -8,7 +8,7 @@ permalink: '/dotfriends/'
   <div id="search-container" class="flex items-center">
     <span class=""></span>
     <input type="text" id="search-input" placeholder="Search for name... CMD/CTRL+K to focus" autocomplete="off"
-      class="text-left rounded-lg border border-gray-300 dark:border-neutral-700 dark:bg-neutral-900 outline-none px-3 py-2 w-full placeholder:text-lg placeholder:font-thin placeholder:text-neutral-400 focus:outline-none focus:ring-0 focus:ring-gray-300 focus:border-gray-300 dark:focus:ring-neutral-700 dark:focus:border-neutral-700 select-none">
+      class="text-left rounded-lg border border-gray-900 dark:border-neutral-400 dark:bg-neutral-900 outline-none px-3 py-2 w-full placeholder:text-lg placeholder:font-thin placeholder:text-neutral-400 focus:outline-none focus:ring-0 focus:ring-gray-900 focus:border-gray-900 dark:focus:ring-neutral-400 dark:focus:border-neutral-400 select-none">
   </div>
 
   <!-- Search Loader -->
@@ -40,7 +40,7 @@ permalink: '/dotfriends/'
   <div id="post-container">
     {% for friend in site.data.dotfriends.friends %}
     {% unless friend.name contains 'Rizqi Nur Assyaufi' %}
-      <div class="masonry-item absolute p-4 bg-white dark:bg-neutral-900 rounded-lg border border-gray-300 dark:border-neutral-700 hover:border-dark dark:hover:border-neutral-400"
+      <div class="masonry-item absolute p-4 bg-white dark:bg-neutral-900 rounded-lg border border-gray-900 dark:border-neutral-400 hover:border-dark dark:hover:border-neutral-400 group"
         style="width: calc(25% - 12px);">
         <div class="flex items-center space-x-4 mb-4">
           <img src="{{ friend.photo }}" alt="{{ friend.github_username }}" class="w-16 h-16 rounded-full border border-zinc-300 dark:border-zinc-700">
