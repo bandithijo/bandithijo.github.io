@@ -47,8 +47,9 @@ permalink: '/dotfriends/'
           <h2 class="text-xl font-bold">{{ friend.name }}</h2>
         </div>
         <p class="text-lg text-gray-600 dark:text-neutral-300 mb-4">{{ friend.detail }}</p>
-        <p class="text-base text-gray-600 dark:text-neutral-300 font-mono truncate"><a href="{{ friend.url1 }}" target="_blank">{{ friend.url1 }}</a></p>
-        <p class="text-base text-gray-600 dark:text-neutral-300 font-mono truncate"><a href="{{ friend.url2 }}" target="_blank">{{ friend.url2 }}</a></p>
+        {% for url in friend.urls %}
+          <p class="text-base text-gray-600 dark:text-neutral-300 font-mono truncate"><a href="{{ url }}">{{ url }}</a></p>
+        {% endfor %}
       </div>
     {% endunless %}
     {% endfor %}
