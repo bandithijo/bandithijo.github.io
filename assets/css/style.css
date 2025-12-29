@@ -74,11 +74,11 @@
 
   /* TOC */
   .toc ul {
-    @apply text-lg pl-6 list-disc;
+    @apply text-lg pl-6 md:pl-12 list-disc;
   }
 
   .toc ol {
-    @apply text-lg pl-6 list-decimal;
+    @apply text-lg pl-6 md:pl-12 list-decimal;
   }
 
   /* For markdown with redcarpet */
