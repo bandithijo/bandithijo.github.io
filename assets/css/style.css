@@ -73,12 +73,20 @@
   }
 
   /* TOC */
-  .toc ul {
+  .toc > ul {
     @apply text-lg pl-6 md:pl-12 list-disc;
   }
 
-  .toc ol {
+  .toc ul ul {
+    @apply text-lg pl-7 list-disc;
+  }
+
+  .toc > ol {
     @apply text-lg pl-6 md:pl-12 list-decimal;
+  }
+
+  .toc ol ol {
+    @apply text-lg pl-7 list-decimal;
   }
 
   /* For markdown with redcarpet */
