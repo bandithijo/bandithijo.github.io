@@ -10,9 +10,11 @@ layout: baseof
       </h1>
 
       <div class="flex flex-col md:flex-row gap-1 text-lg mb-6">
-        <div class="w-full md:w-[220px]">Created at: <span class="font-mono">{{ page.date | date: '%Y-%m-%d' }}</span></div>
+        <div class="w-full md:w-[230px]">Created at: <span class="">{{ page.date | date_to_string: 'ordinal', 'US' }}</span></div>
         <div class="w-full md:w-3/4">Author by: {{ page.author }}</div>
       </div>
+
+      {% include toc_gem.html %}
 
       <div class="markdown dark:text-white">
         {{ content }}

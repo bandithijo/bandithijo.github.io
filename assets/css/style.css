@@ -72,6 +72,15 @@
     100% { background-position: -200% 0; }
   }
 
+  /* TOC */
+  .toc ul {
+    @apply text-lg pl-6 list-disc;
+  }
+
+  .toc ol {
+    @apply text-lg pl-6 list-decimal;
+  }
+
   /* For markdown with redcarpet */
   .markdown {
     @apply text-dark leading-normal break-words;
