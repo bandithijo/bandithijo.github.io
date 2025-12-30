@@ -216,7 +216,7 @@
     @apply mb-4;
   }
 
-  .markdown li .language-plaintext {
+  .markdown li .highlighter-rouge {
     @apply mt-4;
   }
 
