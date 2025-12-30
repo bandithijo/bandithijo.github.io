@@ -216,6 +216,10 @@
     @apply mb-4;
   }
 
+  .markdown li .language-plaintext {
+    @apply mt-4;
+  }
+
   .markdown kbd {
     @apply text-[16px] font-bold font-mono border border-gray-300 px-2 py-1 rounded-md shadow-sm;
   }
