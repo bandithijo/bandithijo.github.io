@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Extract filename from first line using textContent
     const plainTextContent = block.textContent;
     const plainTextLines = plainTextContent.split('\n');
-    const filenameMatch = plainTextLines[0]?.match(/^!filename:(.+)$/);
+    const filenameMatch = plainTextLines[0]?.match(/^\s*!filename:(.+)$/);
 
     if (filenameMatch) {
       filenameLabel = filenameMatch[1].trim();
@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (filenameLabel) {
       const filenameElem = document.createElement("div");
       filenameElem.textContent = filenameLabel;
-      filenameElem.className = "font-semibold font-mono text-dark dark:text-white mb-2";
+      filenameElem.className = "font-semibold font-mono text-dark dark:text-white";
       block.parentElement.insertAdjacentElement("beforebegin", filenameElem);
     }
   });
