@@ -10,9 +10,9 @@ tags: ["jekyll"]
 description: "Navigasi di dalam artikel menjadi lebih mudah dengan adanya daftar isi (table of contents). Akan lebih praktis jika daftar isi dibuat otomatis di Jekyll."
 ---
 
-{{ page.description }}
-
 Navigasi di dalam artikel yang panjang kadang menjadi kurang nyaman jika tidak ada daftar isi (table of contents). Dengan adanya daftar isi, pembaca dapat dengan mudah melompat ke bagian tertentu di dalam artikel.
+
+{{ page.description }}
 
 
 ## Strategi
@@ -40,7 +40,7 @@ Saya menggunakan cara ini karena proses instalasi dan setupnya sangat mudah, han
     📁 assets/
     📁 pages/
     📄 404.html
-     _config.yml
+    ⚙️ _config.yml
     ```
 
 3. Buat file `toc_template.html` di dalam folder `_includes`. File ini berfungsi sebagai template pembungkus untuk daftar isi.
@@ -58,7 +58,7 @@ Saya menggunakan cara ini karena proses instalasi dan setupnya sangat mudah, han
     📁 assets/
     📁 pages/
     📄 404.html
-     _config.yml
+    ⚙️ _config.yml
     ```
    dengan isi sebagai berikut,
     ```html
@@ -95,7 +95,7 @@ Saya menggunakan cara ini karena proses instalasi dan setupnya sangat mudah, han
     </section>
     ```
 
-5. Sekarang CSS nya. Tambahkan style berikut ke dalam file CSS, misalnya di `assets/css/style.css`.
+5. Sekarang CSS nya. Tambahkan style kira-kira seperti di bawah ini ke dalam file CSS, misalnya di `assets/css/style.css`.
     ```css
     !filename: assets/css/style.css
     /* TOC */
@@ -107,7 +107,7 @@ Saya menggunakan cara ini karena proses instalasi dan setupnya sangat mudah, han
       @apply text-lg pl-7 list-disc;
     }
     ```
-    Saya menggunakan Tailwind CSS, jadi saya menggunakan `@apply` untuk menambahkan utility class Tailwind.
+    Karena saya menggunakan Tailwind CSS, jadi saya menggunakan `@apply` untuk menambahkan utility class Tailwind.
 
 6. Selesai. Sekarang setiap artikel yang menggunakan layout post akan memiliki daftar isi otomatis berdasarkan heading yang ada di dalam artikel tersebut.
     ```markdown
