@@ -95,7 +95,7 @@ Saya menggunakan cara ini karena proses instalasi dan setupnya sangat mudah, han
     </section>
     ```
 
-5. Sekarang CSS nya. Tambahkan style berikut ke dalam file CSS utama Anda, misalnya di `assets/css/style.css`.
+5. Sekarang CSS nya. Tambahkan style berikut ke dalam file CSS, misalnya di `assets/css/style.css`.
     ```css
     !filename: assets/css/style.css
     /* TOC */
