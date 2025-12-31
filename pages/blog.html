@@ -165,13 +165,6 @@ document.getElementById('search-input').addEventListener('input', function (e) {
            el.getAttribute && el.getAttribute('role') === 'textbox';
   }
 
-  // Fokuskan input saat halaman selesai dimuat (fallback jika autofocus diabaikan)
-  window.addEventListener('DOMContentLoaded', function () {
-    if (!isEditing()) {
-      try { input.focus(); } catch (err) {}
-    }
-  });
-
   document.addEventListener('keydown', function (e) {
     const key = e.key ? e.key.toLowerCase() : '';
     const modifier = e.ctrlKey || e.metaKey; // Ctrl on Win/Linux, Meta(CMD) on macOS
