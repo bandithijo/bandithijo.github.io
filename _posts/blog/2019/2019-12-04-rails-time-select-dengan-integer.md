@@ -3,7 +3,7 @@ layout: "post"
 title: "Rails time_select dengan Integer"
 date: "2019-12-04 08:00"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2019/2019-12-04-rails-time-select-dengan-integer"
+assets: "/assets/posts/blog/2019/2019-12-04-rails-time-select-dengan-integer"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]

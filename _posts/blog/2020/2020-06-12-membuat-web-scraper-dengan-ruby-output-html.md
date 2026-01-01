@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Web Scraper dengan Ruby (Output: HTML)"
 date: "2020-06-12 16:41"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-06-12-membuat-web-scraper-dengan-ruby-output-html"
+assets: "/assets/posts/blog/2020/2020-06-12-membuat-web-scraper-dengan-ruby-output-html"
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby"]

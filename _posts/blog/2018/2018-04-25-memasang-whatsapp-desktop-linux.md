@@ -3,7 +3,7 @@ layout: "post"
 title: "Memasang WhatsApp Desktop pada GNU/Linux"
 date: "2018-04-25 21:11"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2018/2018-04-25-memasang-whatsapp-desktop-linux"
+assets: "/assets/posts/blog/2018/2018-04-25-memasang-whatsapp-desktop-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["whatsapp"]

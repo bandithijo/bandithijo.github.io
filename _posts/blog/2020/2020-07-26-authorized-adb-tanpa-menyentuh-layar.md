@@ -3,7 +3,7 @@ layout: "post"
 title: "Mendapatkan ADB Authorized pada Layar Android yang Rusak (TWRP) di GNU/Linux & Windows"
 date: "2020-07-26 15:08"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-07-26-authorized-adb-tanpa-menyentuh-layar"
+assets: "/assets/posts/blog/2020/2020-07-26-authorized-adb-tanpa-menyentuh-layar"
 author: "BanditHijo"
 category: "blog"
 tags: ["android", "adb", "twrp"]

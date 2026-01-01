@@ -3,7 +3,7 @@ layout: "post"
 title: "Catatan Daftar Terminal Tools"
 date: "2021-05-04 04:17"
 permalink: "/note/:title"
-assets: "/assets/images/posts/note/2021-05-04-catatan-daftar-terminal-tools"
+assets: "/assets/posts/note/2021-05-04-catatan-daftar-terminal-tools"
 author: "BanditHijo"
 category: "note"
 tags: ["tui"]

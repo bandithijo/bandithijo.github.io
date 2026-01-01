@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Rails Project tanpa Database"
 date: "2019-10-09 18:57"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2019/2019-10-09-rails-project-tanpa-database"
+assets: "/assets/posts/blog/2019/2019-10-09-rails-project-tanpa-database"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]

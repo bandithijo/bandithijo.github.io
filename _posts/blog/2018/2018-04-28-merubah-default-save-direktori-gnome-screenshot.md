@@ -3,7 +3,7 @@ layout: "post"
 title: "Merubah Default Save Direktori pada GNOME-Screenshot"
 date: "2018-04-28 06:09"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2018/2018-04-28-merubah-default-save-direktori-gnome-screenshot"
+assets: "/assets/posts/blog/2018/2018-04-28-merubah-default-save-direktori-gnome-screenshot"
 author: "BanditHijo"
 category: "blog"
 tags: ["gnome"]

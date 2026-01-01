@@ -3,7 +3,7 @@ layout: "post"
 title: "Visualisasi Data Wilayah dengan Datamaps pada Rails"
 date: "2021-02-07 23:48"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2021/2021-02-07-visualisasi-data-wilayah-dengan-datamaps-pada-rails"
+assets: "/assets/posts/blog/2021/2021-02-07-visualisasi-data-wilayah-dengan-datamaps-pada-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["javascript", "rails"]

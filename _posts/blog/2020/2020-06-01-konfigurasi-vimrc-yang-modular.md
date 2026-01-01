@@ -3,7 +3,7 @@ layout: "post"
 title: "Konfigurasi Vimrc yang Modular"
 date: "2020-06-01 21:15"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-06-01-konfigurasi-vimrc-yang-modular"
+assets: "/assets/posts/blog/2020/2020-06-01-konfigurasi-vimrc-yang-modular"
 author: "BanditHijo"
 category: "blog"
 tags: ["vim"]

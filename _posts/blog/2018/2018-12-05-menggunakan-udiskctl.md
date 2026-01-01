@@ -3,7 +3,7 @@ layout: "post"
 title: "Menggunakan Udiskctl untuk Mount, Unmount, dan Power Off Drive"
 date: "2018-12-05 06:25"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2018/2018-12-05-menggunakan-udiskctl"
+assets: "/assets/posts/blog/2018/2018-12-05-menggunakan-udiskctl"
 author: "BanditHijo"
 category: "blog"
 tags: ["udiskctl"]

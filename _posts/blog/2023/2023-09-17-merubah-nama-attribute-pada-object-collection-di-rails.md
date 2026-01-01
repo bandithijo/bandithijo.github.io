@@ -3,7 +3,7 @@ layout: "post"
 title: "Merubah Nama Attribute yang Panjang pada Collection of Object di Rails"
 date: "2023-09-17 20:24"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2023/2023-09-17-merubah-nama-attribute-pada-object-collection-di-rails"
+assets: "/assets/posts/blog/2023/2023-09-17-merubah-nama-attribute-pada-object-collection-di-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]

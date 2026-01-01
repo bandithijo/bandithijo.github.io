@@ -3,7 +3,7 @@ layout: "post"
 title: "Rails Seeding dengan Spesifik Single atau Multiple Seed File (Modularisasi Seeds)"
 date: "2021-03-29 19:00"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2021/2021-03-29-rails-seeding-dengan-spesifik-single-atau-multiple-seed-file"
+assets: "/assets/posts/blog/2021/2021-03-29-rails-seeding-dengan-spesifik-single-atau-multiple-seed-file"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]

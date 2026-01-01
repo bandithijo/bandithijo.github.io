@@ -3,7 +3,7 @@ layout: "post"
 title: "Aplikasi Download Alternatif untuk Ubuntu dengan JDownloader"
 date: "2013-07-03"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2013/2013-07-03-download-client-ubuntu-with-jdownloader"
+assets: "/assets/posts/blog/2013/2013-07-03-download-client-ubuntu-with-jdownloader"
 author: "BanditHijo"
 category: "blog"
 tags: ["osx", "jdownloader"]

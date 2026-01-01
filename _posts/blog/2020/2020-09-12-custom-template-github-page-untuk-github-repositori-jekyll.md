@@ -3,7 +3,7 @@ layout: "post"
 title: "Custom Template GitHub Page untuk GitHub Repositori dengan Jekyll"
 date: "2020-09-12 17:37"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-09-12-custom-template-github-page-untuk-github-repositori-jekyll"
+assets: "/assets/posts/blog/2020/2020-09-12-custom-template-github-page-untuk-github-repositori-jekyll"
 author: "BanditHijo"
 category: "blog"
 tags: ["jekyll", "github pages"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Reclaim Old Username di SUSE Community Account (openSUSE)"
 date: "2023-09-19 23:40"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2023/2023-09-19-reclaim-username-on-suse-community-account"
+assets: "/assets/posts/blog/2023/2023-09-19-reclaim-username-on-suse-community-account"
 author: "BanditHijo"
 category: "blog"
 tags: ["opensuse"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Praktikum Multimedia Tugas 2"
 date: "2018-04-25 05:51"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2018/2018-04-25-praktikum-multimedia-tugas-2"
+assets: "/assets/posts/blog/2018/2018-04-25-praktikum-multimedia-tugas-2"
 author: "BanditHijo"
 category: "blog"
 tags: ["multimedia"]

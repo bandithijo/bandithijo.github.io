@@ -3,7 +3,7 @@ layout: "post"
 title: "MPV, Bukan Pemutar Video Biasa"
 date: "2019-01-11 17:45"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2019/2019-01-11-mpv-bukan-video-player-biasa"
+assets: "/assets/posts/blog/2019/2019-01-11-mpv-bukan-video-player-biasa"
 author: "BanditHijo"
 category: "blog"
 tags: ["mpv"]

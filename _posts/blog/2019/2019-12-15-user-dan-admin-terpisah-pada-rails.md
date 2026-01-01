@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat User dan Admin Terpisah pada Rails yang menggunakan Devise"
 date: "2019-12-15 20:18"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2019/2019-12-15-user-dan-admin-terpisah-pada-rails"
+assets: "/assets/posts/blog/2019/2019-12-15-user-dan-admin-terpisah-pada-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["tips", "rails"]

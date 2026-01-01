@@ -3,7 +3,7 @@ layout: "post"
 title: "Menjalankan Macromedia Flash 8 di GNU/Linux"
 date: '2018-05-20 10:51'
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2018/2018-05-20-menjalankan-macromedia-flash-8-linux"
+assets: "/assets/posts/blog/2018/2018-05-20-menjalankan-macromedia-flash-8-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["wine"]

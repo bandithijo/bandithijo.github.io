@@ -3,7 +3,7 @@ layout: "post"
 title: "Konfigurasi Custom Domain GitHub Pages dengan Amazon Route 53"
 date: "2019-06-01 10:10"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2019/2019-06-01-konfigurasi-custom-domain-github-pages-dengan-amazon-route53"
+assets: "/assets/posts/blog/2019/2019-06-01-konfigurasi-custom-domain-github-pages-dengan-amazon-route53"
 author: "BanditHijo"
 category: "blog"
 tags: ["github pages", "aws", "route53"]

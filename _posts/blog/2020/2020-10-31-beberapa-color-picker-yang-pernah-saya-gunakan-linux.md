@@ -3,7 +3,7 @@ layout: "post"
 title: "Beberapa Color Picker yang Pernah Saya Gunakan di GNU/Linux"
 date: "2020-10-31 17:28"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-10-31-beberapa-color-picker-yang-pernah-saya-gunakan-linux"
+assets: "/assets/posts/blog/2020/2020-10-31-beberapa-color-picker-yang-pernah-saya-gunakan-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["colorpicker"]

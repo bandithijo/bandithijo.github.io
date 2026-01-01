@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Web Scraper dengan Ruby (Output: POSTGRESQL: ACTIVERECORD)"
 date: "2020-06-18 11:06"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-06-18-membuat-web-scraper-dengan-ruby-with-activerecord"
+assets: "/assets/posts/blog/2020/2020-06-18-membuat-web-scraper-dengan-ruby-with-activerecord"
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby", "postgresql", "active record"]

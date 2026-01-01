@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Jekyll Blog Memiliki Dua URL Domain"
 date: "2025-12-21 05:40"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2025/2025-12-21-membuat-jekyll-blog-memiliki-dua-url-config"
+assets: "/assets/posts/blog/2025/2025-12-21-membuat-jekyll-blog-memiliki-dua-url-config"
 author: "BanditHijo"
 category: "blog"
 tags: ["jekyll", "netlify"]

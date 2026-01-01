@@ -3,7 +3,7 @@ layout: "post"
 title: "Mudah Memberikan Screen Annotation di Mana Saja dengan Gromit-MPX"
 date: "2020-10-26 15:44"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-10-26-mudah-memberikan-screen-annotation-dengan-gromit-mpx"
+assets: "/assets/posts/blog/2020/2020-10-26-mudah-memberikan-screen-annotation-dengan-gromit-mpx"
 author: "BanditHijo"
 category: "blog"
 tags: ["screenannotation"]

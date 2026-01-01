@@ -3,7 +3,7 @@ layout: "post"
 title: "Setup LSP Solargraph untuk Rails di Neovim"
 date: "2023-07-08 20:34"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2023/2023-07-08-setup-language-server-protocol-solargraph-on-rails"
+assets: "/assets/posts/blog/2023/2023-07-08-setup-language-server-protocol-solargraph-on-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]

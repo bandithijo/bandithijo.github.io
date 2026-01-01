@@ -3,7 +3,7 @@ layout: "post"
 title: "Review ThinkPad USB 3.0 Pro Dock type 40A7 dengan DisplayLink"
 date: "2025-12-16 06:49"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2025/2025-12-16-thinkpad-usb-3-pro-dock-40a7-displaylink"
+assets: "/assets/posts/blog/2025/2025-12-16-thinkpad-usb-3-pro-dock-40a7-displaylink"
 author: "BanditHijo"
 category: "blog"
 tags: ["thinkpad", "displaylink", "dock"]

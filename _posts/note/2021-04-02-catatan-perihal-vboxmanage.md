@@ -3,7 +3,7 @@ layout: "post"
 title: "Catatan dalam Berinteraksi dengan VBoxManage"
 date: "2021-04-02 18:38"
 permalink: "/note/:title"
-assets: "/assets/images/posts/note/2021-04-02-catatan-perihal-vboxmanage"
+assets: "/assets/posts/note/2021-04-02-catatan-perihal-vboxmanage"
 author: "BanditHijo"
 category: "note"
 tags: ["vboxmanage"]

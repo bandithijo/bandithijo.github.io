@@ -3,7 +3,7 @@ layout: "post"
 title: "Date Time Picker dengan Tempus Dominus Bootstrap 4 dan simple_form di Ruby on Rails 6"
 date: "2022-01-20 05:54"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2022/2022-01-20-datetimepicker-dengan-tempusdominus-bootstrap-4-dan-simple-form-di-rails"
+assets: "/assets/posts/blog/2022/2022-01-20-datetimepicker-dengan-tempusdominus-bootstrap-4-dan-simple-form-di-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "javascript"]

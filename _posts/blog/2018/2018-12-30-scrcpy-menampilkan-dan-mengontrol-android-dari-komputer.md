@@ -3,7 +3,7 @@ layout: "post"
 title: "Scrcpy, Menampilkan dan Mengontrol Android Device dari Komputer"
 date: "2018-12-30 10:41"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2018/2018-12-30-scrcpy-menampilkan-dan-mengontrol-android-dari-komputer"
+assets: "/assets/posts/blog/2018/2018-12-30-scrcpy-menampilkan-dan-mengontrol-android-dari-komputer"
 author: "BanditHijo"
 category: "blog"
 tags: ["scrcpy"]

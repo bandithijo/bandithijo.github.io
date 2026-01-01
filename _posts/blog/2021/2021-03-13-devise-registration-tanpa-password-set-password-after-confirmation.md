@@ -3,7 +3,7 @@ layout: "post"
 title: "Devise Registration Tanpa Password, Set Password Setelah Confirmation"
 date: "2021-03-13 14:00"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2021/2021-03-13-devise-registration-tanpa-password-set-password-after-confirmation"
+assets: "/assets/posts/blog/2021/2021-03-13-devise-registration-tanpa-password-set-password-after-confirmation"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]

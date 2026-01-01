@@ -3,7 +3,7 @@ layout: "post"
 title: "Barrier, Mengoperasikan Banyak Komputer hanya dengan Sebuah Mouse dan Keyboard"
 date: "2020-01-05 18:22"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-01-05-berbagi-mouse-keyboard-dengan-barrier"
+assets: "/assets/posts/blog/2020/2020-01-05-berbagi-mouse-keyboard-dengan-barrier"
 author: "BanditHijo"
 category: "blog"
 tags: ["barrier"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Menghapus Aplikasi di dalam Wine"
 date: "2018-05-23 09:59"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2018/2018-05-23-menghapus-aplikasi-di-dalam-wine"
+assets: "/assets/posts/blog/2018/2018-05-23-menghapus-aplikasi-di-dalam-wine"
 author: "BanditHijo"
 category: "blog"
 tags: ["wine"]

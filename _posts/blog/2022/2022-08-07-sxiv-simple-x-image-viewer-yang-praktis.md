@@ -3,7 +3,7 @@ layout: "post"
 title: "sxiv, Simple X Image Viewer (sxiv) yang Praktis namun Powerfull"
 date: "2022-08-07 15:53"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2022/2022-08-07-sxiv-simple-x-image-viewer-yang-praktis"
+assets: "/assets/posts/blog/2022/2022-08-07-sxiv-simple-x-image-viewer-yang-praktis"
 author: "BanditHijo"
 category: "blog"
 tags: ["sxiv"]

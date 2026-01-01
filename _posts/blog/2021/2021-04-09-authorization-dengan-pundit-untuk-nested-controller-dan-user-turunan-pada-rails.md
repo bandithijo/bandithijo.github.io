@@ -3,7 +3,7 @@ layout: "post"
 title: "Authorization dengan Pundit untuk Nested Controller dan User Turunan pada Rails"
 date: "2021-04-09 05:40"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2021/2021-04-09-authorization-dengan-pundit-untuk-nested-controller-dan-user-turunan-pada-rails"
+assets: "/assets/posts/blog/2021/2021-04-09-authorization-dengan-pundit-untuk-nested-controller-dan-user-turunan-pada-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "pundit", "authorization"]

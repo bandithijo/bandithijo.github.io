@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Image Derivatives dengan Shrine pada Rails"
 date: "2020-02-19 14:22"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-02-19-rails-image-derivatives-with-shrine"
+assets: "/assets/posts/blog/2020/2020-02-19-rails-image-derivatives-with-shrine"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "shrine"]

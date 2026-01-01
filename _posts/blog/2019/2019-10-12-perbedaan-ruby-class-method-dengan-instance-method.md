@@ -3,7 +3,7 @@ layout: "post"
 title: "Perbedaan Ruby Class Method dengan Instance Method"
 date: "2019-10-12 23:02"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2019/2019-10-12-perbedaan-ruby-class-method-dengan-instance-method"
+assets: "/assets/posts/blog/2019/2019-10-12-perbedaan-ruby-class-method-dengan-instance-method"
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby", "rails"]

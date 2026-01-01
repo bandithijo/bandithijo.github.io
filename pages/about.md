@@ -3,7 +3,7 @@ layout: 'page'
 title: 'Tentang Blog dan Penulis'
 author: 'BanditHijo'
 permalink: '/about/'
-assets: "/assets/images/pages/about"
+assets: "/assets/pages/about"
 ---
 
 ![Banner]({{ page.assets | absolute_url }}/banner.png)

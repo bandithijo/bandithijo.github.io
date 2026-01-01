@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Recovery Partition Artix Linux ISO dengan GRUB2"
 date: "2021-03-01 09:14"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2021/2021-03-01-membuat-recovery-partition-artix-iso-dengan-grub2"
+assets: "/assets/posts/blog/2021/2021-03-01-membuat-recovery-partition-artix-iso-dengan-grub2"
 author: "BanditHijo"
 category: "blog"
 tags: ["artix linux", "recovery partition"]

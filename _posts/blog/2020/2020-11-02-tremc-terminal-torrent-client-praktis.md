@@ -3,7 +3,7 @@ layout: "post"
 title: "Tremc, Terminal Torrent Client yang Praktis dan Mudah Digunakan"
 date: "2020-11-02 19:00"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-11-02-tremc-terminal-torrent-client-praktis"
+assets: "/assets/posts/blog/2020/2020-11-02-tremc-terminal-torrent-client-praktis"
 author: "BanditHijo"
 category: 'blog'
 tags: ["torrent", "tui"]

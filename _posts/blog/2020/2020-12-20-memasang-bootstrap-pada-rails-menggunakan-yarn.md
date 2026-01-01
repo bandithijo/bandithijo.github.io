@@ -3,7 +3,7 @@ layout: "post"
 title: "Memasang Bootstrap 4 pada Rails 6 dengan Yarn"
 date: "2020-12-20 07:52"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-12-20-memasang-bootstrap-pada-rails-menggunakan-yarn"
+assets: "/assets/posts/blog/2020/2020-12-20-memasang-bootstrap-pada-rails-menggunakan-yarn"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "bootstrap"]

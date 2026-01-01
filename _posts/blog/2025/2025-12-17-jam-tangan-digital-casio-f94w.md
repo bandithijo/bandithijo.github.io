@@ -3,7 +3,7 @@ layout: "post"
 title: "Review Jam Tangan Digital Casio F-94W"
 date: "2025-12-17 03:23"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2025/2025-12-17-jam-tangan-digital-casio-f94w"
+assets: "/assets/posts/blog/2025/2025-12-17-jam-tangan-digital-casio-f94w"
 author: "BanditHijo"
 category: "blog"
 tags: ["casio"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Mengenal Single Table Inheritance pada Rails (Contoh 1)"
 date: "2020-02-21 18:58"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-02-21-rails-single-table-inheritance-contoh-1"
+assets: "/assets/posts/blog/2020/2020-02-21-rails-single-table-inheritance-contoh-1"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "singletableinheritance"]

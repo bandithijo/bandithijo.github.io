@@ -3,7 +3,7 @@ layout: "post"
 title: "Menambahkan Database pada Rails Project"
 date: "2019-10-09 21:30"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2019/2019-10-09-menambahkan-database-pada-rails-project"
+assets: "/assets/posts/blog/2019/2019-10-09-menambahkan-database-pada-rails-project"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]

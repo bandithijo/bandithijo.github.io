@@ -3,7 +3,7 @@ layout: "post"
 title: "Lazygit, Terminal User Interface untuk Git Commands"
 date: "2021-12-15 05:57"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2021/2021-12-15-lazygit-terminal-user-interface-untuk-git"
+assets: "/assets/posts/blog/2021/2021-12-15-lazygit-terminal-user-interface-untuk-git"
 author: "BanditHijo"
 category: "blog"
 tags: ["lazygit", "git", "tui", "tool"]

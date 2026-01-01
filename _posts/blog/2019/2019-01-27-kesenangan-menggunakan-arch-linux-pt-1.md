@@ -3,7 +3,7 @@ layout: "post"
 title: "Kesenangan Dalam Menggunakan Arch Linux Pt. 1"
 date: "2019-01-27 08:56"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2019/2019-01-27-kesenangan-menggunakan-arch-linux-pt-1"
+assets: "/assets/posts/blog/2019/2019-01-27-kesenangan-menggunakan-arch-linux-pt-1"
 author: "BanditHijo"
 category: "blog"
 tags: ["arch linux"]

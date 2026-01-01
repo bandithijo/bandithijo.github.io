@@ -3,7 +3,7 @@ layout: "post"
 title: "Mudah Melacak IP Provider dan Location dengan Geocoder Gem"
 date: "2024-09-14 08:34"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2024/2024-09-14-mudah-melacak-ip-provider-dan-location-dengan-geocoder-gem"
+assets: "/assets/posts/blog/2024/2024-09-14-mudah-melacak-ip-provider-dan-location-dengan-geocoder-gem"
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby", "geocoding"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Merubah Default External Program Open Files pada Calibre"
 date: "2018-04-14 00:45"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2018/2018-04-14-merubah-external-program-open-calibre"
+assets: "/assets/posts/blog/2018/2018-04-14-merubah-external-program-open-calibre"
 author: "BanditHijo"
 category: "blog"
 tags: ["calibre"]

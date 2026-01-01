@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Web Scraper dengan Ruby (Output: POSTGRESQL: INSERT INTO)"
 date: "2020-06-15 18:49"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-06-15-membuat-web-scraper-dengan-ruby-insert-into"
+assets: "/assets/posts/blog/2020/2020-06-15-membuat-web-scraper-dengan-ruby-insert-into"
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby", "postgresql"]

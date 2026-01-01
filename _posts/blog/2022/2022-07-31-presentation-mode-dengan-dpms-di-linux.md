@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Presentation Mode tanpa XFCE4 Power Manager di GNU/Linux (Bonus! dmenu-presentationmode)"
 date: "2022-07-31 08:38"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2022/2022-07-31-presentation-mode-dengan-dpms-di-linux"
+assets: "/assets/posts/blog/2022/2022-07-31-presentation-mode-dengan-dpms-di-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["dmenu", "dpms"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Input Select yang Berbasis Rentang pada Rails"
 date: "2020-01-27 11:46"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-01-27-rails-input-select-based-on-range"
+assets: "/assets/posts/blog/2020/2020-01-27-rails-input-select-based-on-range"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]

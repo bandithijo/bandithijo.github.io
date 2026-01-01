@@ -3,7 +3,7 @@ layout: "post"
 title: "Konfigurasi DNSCrypt-Proxy di macOS"
 date: "2025-12-11 22:13"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2025/2025-12-11-konfigurasi-dnscrypt-proxy-di-macos"
+assets: "/assets/posts/blog/2025/2025-12-11-konfigurasi-dnscrypt-proxy-di-macos"
 author: "BanditHijo"
 category: "blog"
 tags: ["dnscrypt"]

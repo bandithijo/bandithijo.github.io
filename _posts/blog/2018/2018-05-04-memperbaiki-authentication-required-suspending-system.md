@@ -3,7 +3,7 @@ layout: "post"
 title: "Memperbaiki Authentication is Required for Suspending the System XFCE"
 date: "2018-05-04 21:56"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2018/2018-05-04-memperbaiki-authentication-required-suspending-system"
+assets: "/assets/posts/blog/2018/2018-05-04-memperbaiki-authentication-required-suspending-system"
 author: "BanditHijo"
 category: "blog"
 tags: ["xfce"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Lightline, Alternatif Vim Statusline selain Vim-Airline"
 date: "2019-01-26 14:34"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2019/2019-01-26-lightline-alternatif-vim-statusline"
+assets: "/assets/posts/blog/2019/2019-01-26-lightline-alternatif-vim-statusline"
 author: "BanditHijo"
 category: "blog"
 tags: ["vim", "lightline"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Menyeragamkan Theme Qt dan GTK+ pada Arch Linux"
 date: "2018-01-04"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2018/2018-01-04-menyeragamkan-theme-qt-gtk-arch-linux"
+assets: "/assets/posts/blog/2018/2018-01-04-menyeragamkan-theme-qt-gtk-arch-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["qt", "gtk"]

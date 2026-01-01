@@ -3,7 +3,7 @@ layout: "post"
 title: "Restart PulseAudio Dummy Output Tanpa Perlu Logout"
 date: "2020-06-21 12:27"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-06-21-restart-pulseaudio-dummy-output-tanpa-logout"
+assets: "/assets/posts/blog/2020/2020-06-21-restart-pulseaudio-dummy-output-tanpa-logout"
 author: "BanditHijo"
 category: "blog"
 tags: ["pulseaudio"]

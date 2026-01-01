@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Hasil ScreenShot pada GNU/Linux seperti Milik macOS"
 date: "2020-07-28 18:57"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-07-28-membuat-hasil-screenshot-linux-seperti-pada-macos"
+assets: "/assets/posts/blog/2020/2020-07-28-membuat-hasil-screenshot-linux-seperti-pada-macos"
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby", "imagemagick"]

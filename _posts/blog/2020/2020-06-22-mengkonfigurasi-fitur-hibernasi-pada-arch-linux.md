@@ -3,7 +3,7 @@ layout: "post"
 title: "Mengkonfigurasi Fitur Hibernasi pada Arch Linux"
 date: "2020-06-22 07:20"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-06-22-mengkonfigurasi-fitur-hibernasi-pada-arch-linux"
+assets: "/assets/posts/blog/2020/2020-06-22-mengkonfigurasi-fitur-hibernasi-pada-arch-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["arch linux"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Memanfaatkan Dunst Sebagai PopUp Notifikasi Bantuan Keyboard Shortcut (ver. 2)"
 date: "2019-06-17 17:18"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2019/2019-06-17-dunst-sebagai-notifikasi-bantuan-pengingat-shortcut-2"
+assets: "/assets/posts/blog/2019/2019-06-17-dunst-sebagai-notifikasi-bantuan-pengingat-shortcut-2"
 author: "BanditHijo"
 category: "blog"
 tags: ["dunst"]

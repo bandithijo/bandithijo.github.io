@@ -3,7 +3,7 @@ layout: "post"
 title: "Catatan dalam Berinteraksi dengan Disk dan Partition"
 date: "2021-03-03 13:38"
 permalink: "/note/:title"
-assets: "/assets/images/posts/note/2021-03-03-catatan-perihal-disk-dan-partition"
+assets: "/assets/posts/note/2021-03-03-catatan-perihal-disk-dan-partition"
 author: "BanditHijo"
 category: "note"
 tags: ["disk", "partition", "udisksctl"]

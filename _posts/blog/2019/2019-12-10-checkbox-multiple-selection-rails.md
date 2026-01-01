@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Checkbox dengan Multiple Selection pada Rails"
 date: "2019-12-10 09:07"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2019/2019-12-10-checkbox-multiple-selection-rails"
+assets: "/assets/posts/blog/2019/2019-12-10-checkbox-multiple-selection-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "javascript"]

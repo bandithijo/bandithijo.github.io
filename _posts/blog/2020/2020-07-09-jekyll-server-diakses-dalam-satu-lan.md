@@ -3,7 +3,7 @@ layout: "post"
 title: "Jekyll Server Dapat Diakses oleh Perangkat dalam Satu LAN"
 date: "2020-07-09 14:56"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-07-09-jekyll-server-diakses-dalam-satu-lan"
+assets: "/assets/posts/blog/2020/2020-07-09-jekyll-server-diakses-dalam-satu-lan"
 author: "BanditHijo"
 category: "blog"
 tags: ["jekyll"]

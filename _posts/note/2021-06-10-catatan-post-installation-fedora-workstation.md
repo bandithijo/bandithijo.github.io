@@ -3,7 +3,7 @@ layout: "post"
 title: "Catatan Post Installation Fedora Workstation"
 date: "2021-06-10 09:51"
 permalink: "/note/:title"
-assets: "/assets/images/posts/note/2021-06-10-catatan-post-installation-fedora-workstation"
+assets: "/assets/posts/note/2021-06-10-catatan-post-installation-fedora-workstation"
 author: "BanditHijo"
 category: "note"
 tags: ["fedora"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Jekyll Custom Tags dengan Liquid Tags"
 date: "2021-01-22 09:53"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2021/2021-01-22-membuat-jekyll-custom-tags-dengan-liquid-tags"
+assets: "/assets/posts/blog/2021/2021-01-22-membuat-jekyll-custom-tags-dengan-liquid-tags"
 author: "BanditHijo"
 category: "blog"
 tags: ["jekyll"]

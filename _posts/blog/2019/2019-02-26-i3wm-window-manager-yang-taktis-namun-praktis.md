@@ -3,7 +3,7 @@ layout: "post"
 title: "i3WM, Window Manager yang Taktis namun Praktis"
 date: "2019-02-26 20:45"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2019/2019-02-26-i3wm-window-manager-yang-taktis-namun-praktis"
+assets: "/assets/posts/blog/2019/2019-02-26-i3wm-window-manager-yang-taktis-namun-praktis"
 author: "BanditHijo"
 category: "blog"
 tags: ["i3wm"]

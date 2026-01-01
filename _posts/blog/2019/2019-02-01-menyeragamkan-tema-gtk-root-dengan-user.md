@@ -3,7 +3,7 @@ layout: "post"
 title: "Menyeragamkan Tema GTK Root dengan Tema User"
 date: "2019-02-01 01:30"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2019/2019-02-01-menyeragamkan-tema-gtk-root-dengan-user"
+assets: "/assets/posts/blog/2019/2019-02-01-menyeragamkan-tema-gtk-root-dengan-user"
 author: "BanditHijo"
 category: "blog"
 tags: ["tips"]

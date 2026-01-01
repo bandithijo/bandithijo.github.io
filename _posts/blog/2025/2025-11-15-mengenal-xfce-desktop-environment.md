@@ -3,7 +3,7 @@ layout: "post"
 title: "Mengenal XFCE Desktop Environment"
 date: "2025-11-15 07:55"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2025/2025-11-15-mengenal-xfce-desktop-environment"
+assets: "/assets/posts/blog/2025/2025-11-15-mengenal-xfce-desktop-environment"
 author: "BanditHijo"
 category: "blog"
 tags: ["xfce", "desktop environment"]

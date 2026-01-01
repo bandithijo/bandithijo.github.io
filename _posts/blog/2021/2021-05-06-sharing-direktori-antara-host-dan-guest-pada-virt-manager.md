@@ -3,7 +3,7 @@ layout: "post"
 title: "Sharing Direktori Antara Host Linux dan Guest Windows pada Virt-Manager/KVM/Qemu"
 date: "2021-05-06 00:40"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2021/2021-05-06-sharing-direktori-antara-host-dan-guest-pada-virt-manager"
+assets: "/assets/posts/blog/2021/2021-05-06-sharing-direktori-antara-host-dan-guest-pada-virt-manager"
 author: "BanditHijo"
 category: "blog"
 tags: ["virt-manager", "kvm", "qemu", "samba"]

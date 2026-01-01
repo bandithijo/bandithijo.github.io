@@ -3,7 +3,7 @@ layout: "post"
 title: "Ruby Installation Script dengan Auto Create Option for Selection"
 date: "2020-09-27 12:53"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-09-27-ruby-installation-script-auto-detect-option-for-select"
+assets: "/assets/posts/blog/2020/2020-09-27-ruby-installation-script-auto-detect-option-for-select"
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby", "cli"]

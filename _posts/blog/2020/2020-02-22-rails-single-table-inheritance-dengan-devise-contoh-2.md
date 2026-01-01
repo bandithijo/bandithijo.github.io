@@ -3,7 +3,7 @@ layout: "post"
 title: "Mengenal Single Table Inheritance dengan Devise pada Rails (Contoh 2)"
 date: "2020-02-22 06:46"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-02-22-rails-single-table-inheritance-dengan-devise-contoh-2"
+assets: "/assets/posts/blog/2020/2020-02-22-rails-single-table-inheritance-dengan-devise-contoh-2"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "singletableinheritance", "devise"]

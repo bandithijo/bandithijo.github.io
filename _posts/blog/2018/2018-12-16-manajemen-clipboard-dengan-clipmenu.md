@@ -3,7 +3,7 @@ layout: "post"
 title: "Manajemen Clipboard dengan Clipmenu pada i3wm"
 date: "2018-12-16 11:42"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2018/2018-12-16-manajemen-clipboard-dengan-clipmenu"
+assets: "/assets/posts/blog/2018/2018-12-16-manajemen-clipboard-dengan-clipmenu"
 author: "BanditHijo"
 category: "blog"
 tags: ["clipmenu"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Newsboat, Mendapatkan Info Update Artikel Terbaru Blog/Website"
 date: "2018-12-12 06:44"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2018/2018-12-12-newsboat-rss-feed-reader"
+assets: "/assets/posts/blog/2018/2018-12-12-newsboat-rss-feed-reader"
 author: "BanditHijo"
 category: "blog"
 tags: ["newsboat"]

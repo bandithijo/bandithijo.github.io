@@ -3,7 +3,7 @@ layout: "post"
 title: "Hanya dengan 100 Ribu Rupiah, Bisa Berdonasi ke 6 Open Source Project!"
 date: "2022-04-02 22:55"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2022/2022-04-02-berdonasi-ke-project-open-source-yang-digunakan"
+assets: "/assets/posts/blog/2022/2022-04-02-berdonasi-ke-project-open-source-yang-digunakan"
 author: "BanditHijo"
 category: "blog"
 tags: ["donate", "open source"]

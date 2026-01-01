@@ -3,7 +3,7 @@ layout: "post"
 title: "Mengkonfigurasi Irssi, IRC Client Berbasis Terminal"
 date: "2018-12-14 20:50"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2018/2018-12-14-konfigurasi-irssi"
+assets: "/assets/posts/blog/2018/2018-12-14-konfigurasi-irssi"
 author: "BanditHijo"
 category: "blog"
 tags: ["irssi", "irc"]

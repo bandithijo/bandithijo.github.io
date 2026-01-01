@@ -3,7 +3,7 @@ layout: "post"
 title: "Memperbaiki Blank Putih pada Aplikasi Berbasis Java di GNU/Linux"
 date: "2020-05-11 08:14"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-05-11-blank-putih-pada-aplikasi-java-di-gnu-linux"
+assets: "/assets/posts/blog/2020/2020-05-11-blank-putih-pada-aplikasi-java-di-gnu-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["java"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Multiple User pada GNU/Linux dengan Python Script"
 date: "2019-03-18 20:40"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2019/2019-03-18-membuat-multiple-user-dengan-python-script"
+assets: "/assets/posts/blog/2019/2019-03-18-membuat-multiple-user-dengan-python-script"
 author: "BanditHijo"
 category: "blog"
 tags: ["python"]

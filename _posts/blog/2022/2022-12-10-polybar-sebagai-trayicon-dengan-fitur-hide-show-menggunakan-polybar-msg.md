@@ -3,7 +3,7 @@ layout: "post"
 title: "Polybar sebagai Trayicon dengan Fitur Hide/Show Menggunakan polybar-msg"
 date: "2022-12-10 19:52"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2022/2022-12-10-polybar-sebagai-trayicon-dengan-fitur-hide-show-menggunakan-polybar-msg"
+assets: "/assets/posts/blog/2022/2022-12-10-polybar-sebagai-trayicon-dengan-fitur-hide-show-menggunakan-polybar-msg"
 author: "BanditHijo"
 category: "blog"
 tags: ["polybar"]

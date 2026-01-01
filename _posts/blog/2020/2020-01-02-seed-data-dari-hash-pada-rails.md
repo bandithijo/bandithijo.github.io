@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Seed Data dari Hash pada Rails"
 date: "2020-01-02 07:46"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-01-02-seed-data-dari-hash-pada-rails"
+assets: "/assets/posts/blog/2020/2020-01-02-seed-data-dari-hash-pada-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Merubah Open With Vim dari File Manager"
 date: "2018-04-28 09:58"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2018/2018-04-28-merubah-open-with-vim-dari-file-manager"
+assets: "/assets/posts/blog/2018/2018-04-28-merubah-open-with-vim-dari-file-manager"
 author: "BanditHijo"
 category: "blog"
 tags: ['vim', 'tips', 'tools']

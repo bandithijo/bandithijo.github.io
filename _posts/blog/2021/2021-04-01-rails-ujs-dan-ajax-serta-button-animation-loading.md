@@ -3,7 +3,7 @@ layout: "post"
 title: "Rails UJS dan AJAX, serta Button Animation Loading"
 date: "2021-04-01 14:00"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2021/2021-04-01-rails-ujs-dan-ajax-serta-button-animation-loading"
+assets: "/assets/posts/blog/2021/2021-04-01-rails-ujs-dan-ajax-serta-button-animation-loading"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]

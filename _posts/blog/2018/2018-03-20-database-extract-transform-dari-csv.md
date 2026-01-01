@@ -3,7 +3,7 @@ layout: "post"
 title: "Melakukan Extract & Transform dari .CSV ke dalam Tabel Operasional ERD"
 date: "2018-03-20"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2018/2018-03-20-database-extract-transform-dari-csv"
+assets: "/assets/posts/blog/2018/2018-03-20-database-extract-transform-dari-csv"
 author: "BanditHijo"
 category: "blog"
 tags: ["database", "csv", "mysql"]

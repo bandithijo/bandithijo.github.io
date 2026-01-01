@@ -3,7 +3,7 @@ layout: "post"
 title: "Konfigurasi Ruby on Rails ActionMailer pada Local Environment dengan MailCatcher"
 date: "2021-03-11 17:01"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2021/2021-03-11-ruby-on-rails-actionmailer-local-mailcatcher"
+assets: "/assets/posts/blog/2021/2021-03-11-ruby-on-rails-actionmailer-local-mailcatcher"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]

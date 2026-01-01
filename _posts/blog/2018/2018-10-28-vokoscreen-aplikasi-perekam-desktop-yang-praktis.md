@@ -3,7 +3,7 @@ layout: "post"
 title: "Vokoscreen, Aplikasi Screen Recorder yang Praktis"
 date: "2018-10-28 20:00"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2018/2018-10-28-vokoscreen-aplikasi-perekam-desktop-yang-praktis"
+assets: "/assets/posts/blog/2018/2018-10-28-vokoscreen-aplikasi-perekam-desktop-yang-praktis"
 author: "BanditHijo"
 category: "blog"
 tags: ["vokoscreen", "screen recorder"]

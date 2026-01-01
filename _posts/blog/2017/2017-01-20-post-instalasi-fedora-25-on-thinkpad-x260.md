@@ -3,7 +3,7 @@ layout: "post"
 title: "Setelah Memasang Fedora 25 pada ThinkPad x260"
 date: "2017-01-20"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2017/2017-01-20-post-instalasi-fedora-25-on-thinkpad-x260"
+assets: "/assets/posts/blog/2017/2017-01-20-post-instalasi-fedora-25-on-thinkpad-x260"
 author: "BanditHijo"
 category: "blog"
 tags: ["thinkpad", "fedora"]

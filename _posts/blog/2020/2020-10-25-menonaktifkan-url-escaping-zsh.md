@@ -3,7 +3,7 @@ layout: "post"
 title: "Menonaktifkan URL Escaping di ZSH (Oh-My-ZSH)"
 date: "2020-10-25 00:20"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-10-25-menonaktifkan-url-escaping-zsh"
+assets: "/assets/posts/blog/2020/2020-10-25-menonaktifkan-url-escaping-zsh"
 author: "BanditHijo"
 category: "blog"
 tags: ["zsh", "shell"]

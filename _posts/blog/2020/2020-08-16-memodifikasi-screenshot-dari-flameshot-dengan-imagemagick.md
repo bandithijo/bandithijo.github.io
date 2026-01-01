@@ -3,7 +3,7 @@ layout: "post"
 title: "Memodifikasi Hasil ScreenShot dari Flameshot dengan ImageMagick"
 date: "2020-08-16 10:13"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-08-16-memodifikasi-screenshot-dari-flameshot-dengan-imagemagick"
+assets: "/assets/posts/blog/2020/2020-08-16-memodifikasi-screenshot-dari-flameshot-dengan-imagemagick"
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby", "imagemagick"]

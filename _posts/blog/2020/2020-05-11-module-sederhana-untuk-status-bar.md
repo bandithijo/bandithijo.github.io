@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Module Sederhana untuk Status Bar GNU/Linux dan FreeBSD"
 date: "2020-05-11 23:47"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-05-11-module-sederhana-untuk-status-bar"
+assets: "/assets/posts/blog/2020/2020-05-11-module-sederhana-untuk-status-bar"
 author: "BanditHijo"
 category: "blog"
 tags: ["freebsd", "linux", "bash"]

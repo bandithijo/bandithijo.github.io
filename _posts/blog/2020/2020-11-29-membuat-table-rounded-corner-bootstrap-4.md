@@ -3,7 +3,7 @@ layout: "post"
 title: "Membuat Table dengan Rounded Corner pada Bootstrap 4"
 date: "2020-11-29 10:38"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-11-29-membuat-table-rounded-corner-bootstrap-4"
+assets: "/assets/posts/blog/2020/2020-11-29-membuat-table-rounded-corner-bootstrap-4"
 author: "BanditHijo"
 category: "blog"
 tags: ["bootstrap", "css", "html"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Catatan dalam Berinteraksi dengan Tmux"
 date: "2021-03-31 06:26"
 permalink: "/note/:title"
-assets: "/assets/images/posts/note/2021-03-31-catatan-perihal-tmux"
+assets: "/assets/posts/note/2021-03-31-catatan-perihal-tmux"
 author: "BanditHijo"
 category: "note"
 tags: ["tmux"]

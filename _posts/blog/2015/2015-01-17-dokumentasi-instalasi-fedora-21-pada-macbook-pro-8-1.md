@@ -3,7 +3,7 @@ layout: "post"
 title: "Dokumentasi Instalasi Fedora 21 pada Macbook Pro 8.1"
 date: "2015-01-17"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2015/2015-01-17-dokumentasi-instalasi-fedora-21-pada-macbook-pro-8-1"
+assets: "/assets/posts/blog/2015/2015-01-17-dokumentasi-instalasi-fedora-21-pada-macbook-pro-8-1"
 author: "BanditHijo"
 category: "blog"
 tags: ["fedora"]

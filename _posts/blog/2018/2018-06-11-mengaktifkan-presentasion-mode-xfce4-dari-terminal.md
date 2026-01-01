@@ -3,7 +3,7 @@ layout: "post"
 title: "Mengaktifkan Presentation Mode XFCE4 dari Terminal"
 date: "2018-06-11 17:58"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2018/2018-06-11-mengaktifkan-presentasion-mode-xfce4-dari-terminal"
+assets: "/assets/posts/blog/2018/2018-06-11-mengaktifkan-presentasion-mode-xfce4-dari-terminal"
 author: "BanditHijo"
 category: "blog"
 tags: ["xfce"]

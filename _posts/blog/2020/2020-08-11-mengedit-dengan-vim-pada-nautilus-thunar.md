@@ -3,7 +3,7 @@ layout: "post"
 title: "Mengedit dengan Vim pada Nautilus dan Thunar pada Window Manager"
 date: "2020-08-11 02:51"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2020/2020-08-11-mengedit-dengan-vim-pada-nautilus-thunar"
+assets: "/assets/posts/blog/2020/2020-08-11-mengedit-dengan-vim-pada-nautilus-thunar"
 author: "BanditHijo"
 category: "blog"
 tags: ["nautilus", "thunar", "vim"]

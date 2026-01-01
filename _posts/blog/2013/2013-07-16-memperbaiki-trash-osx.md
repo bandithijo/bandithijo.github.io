@@ -3,7 +3,7 @@ layout: "post"
 title: "Memperbaiki Trash OSX"
 date: "2013-07-16"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2013/2013-07-16-memperbaiki-trash-osx"
+assets: "/assets/posts/blog/2013/2013-07-16-memperbaiki-trash-osx"
 author: "BanditHijo"
 category: "blog"
 tags: ["osx", "tips"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Mudah Downgrade Paket di Artix Linux"
 date: "2021-05-12 22:13"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2021/2021-05-12-mudah-downgrade-paket-di-artix-linux"
+assets: "/assets/posts/blog/2021/2021-05-12-mudah-downgrade-paket-di-artix-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["artix linux"]

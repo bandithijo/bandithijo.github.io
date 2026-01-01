@@ -3,7 +3,7 @@ layout: "post"
 title: "Mereset Launchpad Icon Sesuai Abjad pada OSX Yosemite"
 date: "2015-01-03"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2015/2015-01-03-reset-launchpad-icon-yosemite"
+assets: "/assets/posts/blog/2015/2015-01-03-reset-launchpad-icon-yosemite"
 author: "BanditHijo"
 category: "blog"
 tags: ["osx"]

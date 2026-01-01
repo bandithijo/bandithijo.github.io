@@ -3,7 +3,7 @@ layout: "post"
 title: "Menyimpan Unfinished Modification dengan Git Stash"
 date: "2023-09-17 11:07"
 permalink: "/blog/:title"
-assets: "/assets/images/posts/blog/2023/2023-09-17-menyimpan-unfinished-modification-dengan-git-stash"
+assets: "/assets/posts/blog/2023/2023-09-17-menyimpan-unfinished-modification-dengan-git-stash"
 author: "BanditHijo"
 category: "blog"
 tags: ["git"]
