@@ -71,11 +71,15 @@ nav_bottom:
 markdown: kramdown
 kramdown:
   syntax_highlighter: rouge
-plugins:
-  - jekyll-feed
 tailwindcss:
   config: "./tailwind.config.js"
   css_path: ./_tailwind.css
+
+
+# Feed
+feed:
+  icon: /assets/images/favicon/favicon.png
+  logo: /assets/images/banner/about_bandithijo.png
 
 
 # Sitemap Generator
@@ -85,6 +89,7 @@ sitemap:
     - "/feed.xml"
   include_posts:
     - "/index.html"
+
 
 # Complete posts in the future
 future: true
