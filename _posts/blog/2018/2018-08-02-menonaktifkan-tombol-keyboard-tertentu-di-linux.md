@@ -126,7 +126,7 @@ Langkah-langkah di atas hanya berlaku pada **console**, apabila kita ingin menon
    ```bash
    !filename: /usr/share/X11/xkb/keycodes/evdev
    ...
-   &lt;PRSC> = 107;
+   <PRSC> = 107;
    ...
    ```
 
@@ -135,7 +135,7 @@ Langkah-langkah di atas hanya berlaku pada **console**, apabila kita ingin menon
    ```bash
    !filename: /usr/share/X11/xkb/keycodes/evdev
    ...
-   // &lt;PRSC> = 107;
+   // <PRSC> = 107;
    ...
    ```
 

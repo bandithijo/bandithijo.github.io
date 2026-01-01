@@ -175,7 +175,7 @@ Sangat mudah sekali penggunaannya.
 Bentuk dari perintahnya akan seperti ini.
 
 ```
-$ create_ap [options] &lt;wifi-interface> [&lt;interface-with-internet>] [&lt;access-point-name> [&lt;passphrase>]]
+$ create_ap [options] <wifi-interface> [<interface-with-internet>] [<access-point-name> [<passphrase>]]
 ```
 
 

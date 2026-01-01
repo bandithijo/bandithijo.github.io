@@ -194,7 +194,7 @@ Ganti **zsh** dengan nama yang kalian inginkan.
 Untuk membuat session baru dari dalam Tmux,
 
 ```
-:new-session -s &lt;nama_session&gt;
+:new-session -s <nama_session>
 ```
 
 
@@ -203,7 +203,7 @@ Untuk membuat session baru dari dalam Tmux,
 Kalau kita sudah berada di dalam Tmux, namun ingin membuat session lain (session baru yang lain) sambil mendefinisikan *workding directory*-nya,
 
 ```
-:new-session -s &lt;nama_session&gt; -c /lokasi/working/directory/baru
+:new-session -s <nama_session> -c /lokasi/working/directory/baru
 ```
 
 
@@ -234,7 +234,7 @@ Masuk dulu ke direktori yang ingin dijadikan cwd. Lalu jalankan perintah di bawa
 Untuk membuat session baru dari Terminal,
 
 ```
-$ tmux new-session -s &lt;nama_session&gt;
+$ tmux new-session -s <nama_session>
 ```
 
 **-s** adalah flag option untuk **name the session**.
@@ -249,7 +249,7 @@ Jadi, kalau kita buat Tmux session pada direktori **~/Desktop**, maka setiap WD 
 Namun, kita dapat membuat session baru, sambil mendefinisikan lokasi dari WD yang akan digunakan.
 
 ```
-$ tmux new-session -s &lt;nama_session&gt; -c /lokasi/working/directory/baru
+$ tmux new-session -s <nama_session> -c /lokasi/working/directory/baru
 ```
 
 **-c** adalah *specify working directory for the session*.
@@ -262,7 +262,7 @@ Apabila kita memiliki session yang masih aktif di background karena kita melakuk
 Kita dapat masuk kembali, ke dalam session tersebut dengan cara,
 
 ```
-$ tmux attach-session -t &lt;nama_session&gt;
+$ tmux attach-session -t <nama_session>
 ```
 
 Kita perlu mengetahui **nama_session** dari session yang akan kita attach.

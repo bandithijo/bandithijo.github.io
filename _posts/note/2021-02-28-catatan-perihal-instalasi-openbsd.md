@@ -122,7 +122,7 @@ Untuk melakukan scaning, misal wifi interface kita **iwn0**. Sudah dapat ditebak
 Kemudian, setelah mendapatkan SSID yang kita inginkan, tinggal connect.
 
 ```
-# ifconfig iwn0 nwid &lt;network-name> wpakey &lt;passphrase>
+# ifconfig iwn0 nwid <network-name> wpakey <passphrase>
 ```
 
 Kemudian, untuk mendapatkan IP address, dapat menggunakan dhcp.

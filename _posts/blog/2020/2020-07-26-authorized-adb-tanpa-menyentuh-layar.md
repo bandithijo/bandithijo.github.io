@@ -83,7 +83,7 @@ Agar proses mendaapatkan akses ke dalam *smartphone*, ada beberapa persyaratan y
    > Kalau di windows, lokasinya berada di:
    > 
    > ```
-   > C:\Users\&lt;username&gt;\.android\
+   > C:\Users\<username>\.android\
    > ```
 
    File **adbkey.pub** adalah file RSA public key yang kita akan *push* ke dalam *smartphone*. \

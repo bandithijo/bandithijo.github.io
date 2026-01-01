@@ -161,7 +161,7 @@ Setelah kita melakukan enkripsi Home direktori, tentunya kita ingin melakukan pe
    ```
    Arch Linux 5.1.9-arch1-1-ARCH (tty6)
 
-   BANDITHIJO-X61 login: &lt;mark&gt;bandithijo&lt;/mark&gt;
+   BANDITHIJO-X61 login: bandithijo
    Password: _
    ```
 

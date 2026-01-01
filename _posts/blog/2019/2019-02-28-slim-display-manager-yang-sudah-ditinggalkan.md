@@ -347,7 +347,7 @@ Secara garis besar proses instalasi dibagi dalam 2 tahap.
 #### Copy Direktori Themes
 
 ```
-$ sudo cp -rvf &lt;dir_themes> /usr/share/slim/themes
+$ sudo cp -rvf <dir_themes> /usr/share/slim/themes
 ```
 
 Sebagai contoh, saya memiliki themes bernama `darky_solarized_dark_yellow`.

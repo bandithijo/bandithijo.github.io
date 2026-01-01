@@ -52,7 +52,7 @@ Berbeda distro, bisa berbeda nama (new namspace atau old namespace).
 Selajutnya, tinggal kita akses dari Host menggunakan Terminal Emulator favorit.
 
 ```
-$ ssh -p 2222 &lt;username>@127.0.0.1
+$ ssh -p 2222 <username>@127.0.0.1
 ```
 
 ```
@@ -64,7 +64,7 @@ Warning: Permanently added '[127.0.0.1]:2222' (ECDSA) to the list of known hosts
 <userame>@127.0.0.1's password: _
 ```
 
-Masukkan password **&lt;username>** dari Guest.
+Masukkan password **<username>** dari Guest.
 
 Kalau berhasil, kita akan langsung masuk ke dalam Guest.
 

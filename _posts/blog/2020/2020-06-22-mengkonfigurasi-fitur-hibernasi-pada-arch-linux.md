@@ -144,7 +144,7 @@ Edit file `/etc/mkinitcpio.conf` dan cari baris berawalan `HOOKS="base ... "`.
 # This is the most important setting in this file.  The HOOKS control the
 # modules and scripts added to the image, and what happens at boot time.
 # Order is important, and it is recommended that you do not change the
-# order in which HOOKS are added.  Run 'mkinitcpio -H &lt;hook name&gt;' for
+# order in which HOOKS are added.  Run 'mkinitcpio -H <hook name>' for
 # help on a given hook.
 ...
 ...

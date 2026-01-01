@@ -111,20 +111,20 @@ scan                                              Scan Options Submenu
 gatt                                              Generic Attribute Submenu
 list                                              List available controllers
 show [ctrl]                                       Controller information
-select &lt;ctrl>                                     Select default controller
+select <ctrl>                                     Select default controller
 devices                                           List available devices
 paired-devices                                    List paired devices
-system-alias &lt;name>                               Set controller alias
+system-alias <name>                               Set controller alias
 reset-alias                                       Reset controller alias
-power &lt;on/off>                                    Set controller power
-pairable &lt;on/off>                                 Set controller pairable mode
-discoverable &lt;on/off>                             Set controller discoverable mode
+power <on/off>                                    Set controller power
+pairable <on/off>                                 Set controller pairable mode
+discoverable <on/off>                             Set controller discoverable mode
 discoverable-timeout [value]                      Set discoverable timeout
-agent &lt;on/off/capability>                         Enable/disable agent with given capability
+agent <on/off/capability>                         Enable/disable agent with given capability
 default-agent                                     Set agent as the default one
-advertise &lt;on/off/type>                           Enable/disable advertising with given type
-set-alias &lt;alias>                                 Set device alias
-scan &lt;on/off>                                     Scan for devices
+advertise <on/off/type>                           Enable/disable advertising with given type
+set-alias <alias>                                 Set device alias
+scan <on/off>                                     Scan for devices
 info [dev]                                        Device information
 pair [dev]                                        Pair with device
 cancel-pairing [dev]                              Cancel pairing with device
@@ -132,10 +132,10 @@ trust [dev]                                       Trust device
 untrust [dev]                                     Untrust device
 block [dev]                                       Block device
 unblock [dev]                                     Unblock device
-remove &lt;dev>                                      Remove device
-connect &lt;dev>                                     Connect device
+remove <dev>                                      Remove device
+connect <dev>                                     Connect device
 disconnect [dev]                                  Disconnect device
-menu &lt;name>                                       Select submenu
+menu <name>                                       Select submenu
 version                                           Display version
 quit                                              Quit program
 exit                                              Quit program

@@ -125,56 +125,56 @@ Jangan panik dan mundur, karena tidak ada petunjuk apa-apa, kamu dapat memasukka
 
 Adapters:
   adapter list                                      List adapters
-  adapter &lt;phy> show                                Show adapter info
-  adapter &lt;phy> set-property &lt;name> &lt;value>         Set property
+  adapter <phy> show                                Show adapter info
+  adapter <phy> set-property <name> <value>         Set property
 
 Ad-Hoc:
   ad-hoc list                                       List devices in Ad-hoc mode
-  ad-hoc &lt;wlan> start &lt;"network name"> &lt;passphrase> Start or join an existing
+  ad-hoc <wlan> start <"network name"> <passphrase> Start or join an existing
                                                     Ad-Hoc network called
                                                     "network name" with a
                                                     passphrase
-  ad-hoc &lt;wlan> start_open &lt;"network name">         Start or join an existing
+  ad-hoc <wlan> start_open <"network name">         Start or join an existing
                                                     open Ad-Hoc network called
                                                     "network name"
-  ad-hoc &lt;wlan> stop                                Leave an Ad-Hoc network
+  ad-hoc <wlan> stop                                Leave an Ad-Hoc network
 
 Access Point:
   ap list                                           List devices in AP mode
-  ap &lt;wlan> start &lt;"network name"> &lt;passphrase>     Start an access point
+  ap <wlan> start <"network name"> <passphrase>     Start an access point
                                                     called "network name" with
                                                     a passphrase
-  ap &lt;wlan> stop                                    Stop a started access
+  ap <wlan> stop                                    Stop a started access
                                                     point
 
 Devices:
   device list                                       List devices
-  device &lt;wlan> show                                Show device info
-  device &lt;wlan> set-property &lt;name> &lt;value>         Set property
+  device <wlan> show                                Show device info
+  device <wlan> set-property <name> <value>         Set property
 
 Known Networks:
   known-networks list                               List known networks
-  known-networks &lt;"network name"> forget            Forget known network
-  known-networks &lt;"network name"> show              Show known network
-  known-networks &lt;"network name"> set-property &lt;name> &lt;value>Set property
+  known-networks <"network name"> forget            Forget known network
+  known-networks <"network name"> show              Show known network
+  known-networks <"network name"> set-property <name> <value>Set property
 
 WiFi Simple Configuration:
   wsc list                                          List WSC-capable devices
-  wsc &lt;wlan> push-button                            PushButton mode
-  wsc &lt;wlan> start-user-pin &lt;8 digit PIN>           PIN mode
-  wsc &lt;wlan> start-pin                              PIN mode with generated
+  wsc <wlan> push-button                            PushButton mode
+  wsc <wlan> start-user-pin <8 digit PIN>           PIN mode
+  wsc <wlan> start-pin                              PIN mode with generated
                                                     8 digit PIN
-  wsc &lt;wlan> cancel                                 Aborts WSC operations
+  wsc <wlan> cancel                                 Aborts WSC operations
 
 Station:
   station list                                      List devices in Station mode
-  station &lt;wlan> connect &lt;"network name"> [security]Connect to network
-  station &lt;wlan> connect-hidden &lt;"network name">    Connect to hidden network
-  station &lt;wlan> disconnect                         Disconnect
-  station &lt;wlan> get-networks [rssi-dbms/rssi-bars] Get networks
-  station &lt;wlan> get-hidden-access-points [rssi-dbms]Get hidden APs
-  station &lt;wlan> scan                               Scan for networks
-  station &lt;wlan> show                               Show station info
+  station <wlan> connect <"network name"> [security]Connect to network
+  station <wlan> connect-hidden <"network name">    Connect to hidden network
+  station <wlan> disconnect                         Disconnect
+  station <wlan> get-networks [rssi-dbms/rssi-bars] Get networks
+  station <wlan> get-hidden-access-points [rssi-dbms]Get hidden APs
+  station <wlan> scan                               Scan for networks
+  station <wlan> show                               Show station info
 
 
 Miscellaneous:

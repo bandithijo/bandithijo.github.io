@@ -232,7 +232,7 @@ ssb   rsa4096/0x99999999 2018-08-11 [E] [expires: 2021-12-30]
 Untuk menambahkan email lain, kita gunakan option, `--edit-key` diikuti dengan keyID.
 
 ```
-$ gpg --edit-key &lt;key_id&gt;
+$ gpg --edit-key <key_id>
 ```
 
 Misal,

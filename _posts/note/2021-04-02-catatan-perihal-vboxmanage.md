@@ -112,7 +112,7 @@ Untuk membuat UUID yang permanen, dapat menggunakan USB filter.
 Untuk memindahkan perangkat USB yang terhubung dengan Host ke Guest vm.
 
 ```
-$ VBoxManage controlvm <nama_vm> usbattach &lt;UUID>
+$ VBoxManage controlvm <nama_vm> usbattach <UUID>
 ```
 
 ```
