@@ -8,6 +8,7 @@ author: "BanditHijo"
 category: "note"
 tags: ["git"]
 description: "Catatan ini berisi hal-hal terkait dengan Git. Beberapa hal mungkin terlupakan karena tidak terlalu sering digunakan. Saya merasa perlu untuk menyimpan dan merangkumnya pada sebuah catatan."
+sitemap: false
 ---
 
 ## Prakata

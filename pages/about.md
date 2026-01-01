@@ -4,6 +4,7 @@ title: 'Tentang Blog dan Penulis'
 author: 'BanditHijo'
 permalink: '/about/'
 assets: "/assets/pages/about"
+sitemap: false
 ---
 
 ![Banner]({{ page.assets | absolute_url }}/banner.png)

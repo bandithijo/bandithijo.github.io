@@ -8,6 +8,7 @@ author: "BanditHijo"
 category: "note"
 tags: ["vboxmanage"]
 description: "Hal-hal terkait command line memang sering terlupakan apabila tidak selalu digunakan. Catatan ini hadir untuk mempermudah teman-teman apabila sedang berkepentigan dengan vboxmanage."
+sitemap: false
 ---
 
 ## Prakata

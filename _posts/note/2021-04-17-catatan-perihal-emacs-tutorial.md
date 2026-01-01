@@ -8,6 +8,7 @@ author: "BanditHijo"
 category: "note"
 tags: ["emacs"]
 description: "Catatan ini merupakan snippets atau cheatsheet atau dapat pula disebut sebagai rangkuman untuk keyboard shortcut yang dijelaskan di dalam Emacs Tutorial."
+sitemap: false
 ---
 
 ## Prakata

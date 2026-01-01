@@ -8,6 +8,7 @@ author: "BanditHijo"
 category: "note"
 tags: ["fedora"]
 description: "Catatan ini merupakan kumpulan packages dan beberapa konfigurasi yang saya lakukan setelah melakukan proses instalasi Fedora Workstation."
+sitemap: false
 ---
 
 ## Prakata

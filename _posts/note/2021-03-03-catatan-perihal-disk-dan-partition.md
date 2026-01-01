@@ -8,6 +8,7 @@ author: "BanditHijo"
 category: "note"
 tags: ["disk", "partition", "udisksctl"]
 description: "Berinteraksi dengan disk partition mungkin merupakan pekerjaan harian bagi sebagian teman-teman, namun tidak dengan saya dan sebagian teman-teman yang lain. Catatan ini hadir untuk menyimpan beberapa 'Best Practice' yang dapat kita gunakan, apabila sewaktu-waktu kita berurusan dengan partition."
+sitemap: false
 ---
 
 ## Prakata

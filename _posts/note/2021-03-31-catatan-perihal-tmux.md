@@ -8,6 +8,7 @@ author: "BanditHijo"
 category: "note"
 tags: ["tmux"]
 description: "Hal-hal terkait Tmux, cukup banyak sekali yang saya lupakan. Seperti beberapa kombinasi keyboard dan command tertentu. Apabila diperlukan, saya harus Googling kembali. Agar tidak membuang waktu mencari kembali, saya akan mencatatnya saja di sini."
+sitemap: false
 ---
 
 ## Prakata
