@@ -8,7 +8,6 @@ author: "BanditHijo"
 category: "note"
 tags: ["pacman"]
 description: "Bagi teman-teman yang menggunakan Arch Linux, pasti sudah tidak asing lagi mendengar nama 'Pacman'. Pacman adalah package manager yang digunakan oleh Arch Linux. Sebenarnya ada banyak sekali fitur-fitur yang dapat kita manfaatkan untuk mempermudah masalah atau kebutuhan yang terkadang kita perlukan. Karena kebutuhan atau masalah yang muncul tidak setiap waktu, maka beberapa parameter dari Pacman mungkin tidak sering kita gunakan dan terlupakan."
-sitemap: false
 ---
 
 ## Prakata

@@ -8,7 +8,6 @@ author: "BanditHijo"
 category: "note"
 tags: ["cmd"]
 description: "Menggunakan command line shell, mungkin merupakan mimpi buruk bagi sebagian orang. Jangan khawatir, terkadang memang terasa mengerikan memasuki dunia baru yang kita belum mengenalnya. Belum terbiasa. Saya pun, terkadang masih sering lupa perintah-perintah yang akan digunakan. Untuk itulah catatan ini saya dokumentasikan."
-sitemap: false
 ---
 
 ## Prakata

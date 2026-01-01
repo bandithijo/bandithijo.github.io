@@ -8,7 +8,6 @@ author: "BanditHijo"
 category: "note"
 tags: ["tui"]
 description: "Catatan ini merupakan kumpulan dari daftar nama-nama CLI dan TUI tools yang dapat memudahkan pekerjaan kita sehari-hari."
-sitemap: false
 ---
 
 ## Prakata

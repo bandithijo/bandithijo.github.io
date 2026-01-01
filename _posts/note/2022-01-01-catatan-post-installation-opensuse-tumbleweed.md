@@ -8,7 +8,6 @@ author: "BanditHijo"
 category: "note"
 tags: ["opensuse"]
 description: "Catatan ini merupakan kumpulan packages dan beberapa konfigurasi yang saya lakukan setelah melakukan proses instalasi openSUSE Tumbleweed."
-sitemap: false
 ---
 
 ## Prakata
