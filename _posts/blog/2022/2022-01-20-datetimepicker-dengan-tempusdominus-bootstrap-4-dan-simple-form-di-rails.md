@@ -10,7 +10,7 @@ tags: ["rails", "javascript"]
 description: "Konsistensi UI di setiap browser yang digunakan oleh user untuk membuka web aplikasi yang kita bangun, merupakan hal yang penting. Date time picker sudah disediakan oleh browser modern, namun baik Google Chrome maupun Firefox memiliki tampilan yang berbeda. Kita perlu menyeragamkannya dengan menggunakan date time picker pihak ketiga. Kita akan gunakan Javascript library yang bernama Tempus Dominus Bootstrap 4 pada web aplikasi yang dibangun dengan Ruby on Rails 6. Dan juga mengunakan simple_form gem untuk mempermudah membuat form."
 ---
 
-## Prerequisite
+## Prerequisites
 
 `ruby 3.0.3` `rails 6.1.4` `simple_form 5.1` `bootstrap 4` `tempusdominus-bootstrap-4 5.39` `jquery 3.6` `moment.js 2.29`
 
