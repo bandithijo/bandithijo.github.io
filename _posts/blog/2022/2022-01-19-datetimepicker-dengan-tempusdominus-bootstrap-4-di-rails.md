@@ -20,7 +20,7 @@ Ketidakseragaman style dari date time picker pada browser.
 
 > *Unsupporting browsers gracefully degrade to a text input, but this creates problems in **consistency of user interface** (the presented controls are different) and data handling.* [1]
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.gif)
 
 Gambar 1. Default Date picker pada Google Chrome (Kiri) dan Firefox (Kanan) yang memiliki style yang berbeda
 
