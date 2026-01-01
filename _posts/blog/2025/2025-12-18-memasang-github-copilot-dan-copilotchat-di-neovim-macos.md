@@ -15,7 +15,7 @@ description: "Saya terbilang cukup terlambat untuk mencoba GitHub Copilot di Neo
 
 ## Requirements
 
-`neovim 0.10.0+`, `curl 8.0.0+`, `nodejs`, `gh`, `plenary.nvim`, `telescope.nvim`
+`neovim 0.10.0+` `curl 8.0.0+` `nodejs` `gh` `plenary.nvim` `telescope.nvim`
 
 
 ## Optional Dependencies
