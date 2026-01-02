@@ -58,8 +58,21 @@ permalink: '/dotfriends/'
 
 <!-- Masonry Layout Script -->
 <script>
+function shuffleChildren(containerId) {
+  const wrapper = document.getElementById(containerId);
+  if (!wrapper) return;
+  const items = Array.from(wrapper.querySelectorAll('.masonry-item'));
+  if (!items.length) return;
+  for (let i = items.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [items[i], items[j]] = [items[j], items[i]];
+  }
+  items.forEach(item => wrapper.appendChild(item));
+}
+
 function layoutMasonry(containerId) {
   const wrapper = document.getElementById(containerId);
+  if (!wrapper) return;
   const items = wrapper.querySelectorAll('.masonry-item');
   const gap = 16;
   const cols = window.innerWidth >= 1024 ? 3 : (window.innerWidth >= 640 ? 2 : 1);
@@ -87,6 +100,8 @@ function initMasonry() {
   const container = document.getElementById('masonry-container');
   loader.style.display = 'flex';
   container.style.opacity = '0';
+
+  shuffleChildren('post-container');
 
   setTimeout(() => {
     layoutMasonry('masonry-container');
