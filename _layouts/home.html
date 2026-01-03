@@ -41,7 +41,7 @@ permalink: :title
         <div class="flex flex-col items-center">
           {% assign experience_start = site.data.profile.profile.experience_start %}
           {% assign current_year = site.time | date: '%Y' | integer %}
-          {% assign years_of_experience = current_year | minus: experience_start | minus: 1 %}
+          {% assign years_of_experience = current_year | minus: experience_start %}
           <span class="text-4xl font-bold text-dark dark:text-white">{{ years_of_experience }}+</span>
           <span class="text-lg text-gray-600 dark:text-neutral-300">Years of Experience</span>
         </div>
