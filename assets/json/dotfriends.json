@@ -5,13 +5,14 @@ permalink: /dotfriends/index.json
 [
   {% assign friends = site.data.dotfriends.friends %}
   {% for friend in friends %}
+  {% unless friend.name contains 'Rizqi Nur Assyaufi' %}
     {
-      "name": "{{ friend.name }}",
-      "github_username": "{{ friend.github_username }}",
-      "photo": "{{ friend.photo }}",
-      "detail": "{{ friend.detail }}",
-      "url1": "{{ friend.url1 }}",
-      "url2": "{{ friend.url2 }}"
+      "name":{{ friend.name | jsonify }},
+      "github_username":{{ friend.github_username | jsonify }},
+      "photo":{{ friend.photo | jsonify }},
+      "detail":{{ friend.detail | jsonify }},
+      "urls":{{ friend.urls | jsonify }}
     }{% unless forloop.last %},{% endunless %}
+  {% endunless %}
   {% endfor %}
 ]

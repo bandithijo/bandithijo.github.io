@@ -76,7 +76,7 @@
                         }
                         return !1;
                       })(t[i], r.exclude) &&
-                      n.matches(t[i], e)
+                      typeof t[i] === 'string' && n.matches(t[i], e)
                     )
                       return t;
                 })(e[t], n, r, i);
@@ -169,14 +169,13 @@
       </div>
     `,
     dotfriends: `
-      <div class="masonry-item absolute p-4 opacity-0 bg-white dark:bg-neutral-900 rounded-lg border border-gray-300 dark:border-neutral-700 hover:border-dark dark:hover:border-neutral-400">
+      <div class="masonry-item absolute p-4 opacity-0 bg-white dark:bg-neutral-900 rounded-lg border border-gray-900 dark:border-neutral-400 hover:border-dark dark:hover:border-neutral-400">
         <div class="flex items-center space-x-4 mb-4">
-          <img src="{photo}" alt="{github_username}" class="w-16 rounded-full">
-          <h2 class="text-md font-bold">{name}</h2>
+          <img src="{photo}" alt="{github_username}" class="w-16 h-16 rounded-full border border-zinc-300 dark:border-zinc-700">
+          <h2 class="text-xl font-bold">{name}</h2>
         </div>
-        <p class="text-base text-gray-600 dark:text-neutral-300 mb-4">{detail}</p>
-        <p class="text-sm text-gray-600 dark:text-neutral-300 font-mono truncate"><a href="{url1}" target="_blank">{url1}</a></p>
-        <p class="text-sm text-gray-600 dark:text-neutral-300 font-mono truncate"><a href="{url2}" target="_blank">{url2}</a></p>
+        <p class="text-lg text-gray-600 dark:text-neutral-300 mb-4">{detail}</p>
+        {urls}
       </div>
     `
   };

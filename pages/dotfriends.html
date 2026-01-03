@@ -48,7 +48,7 @@ permalink: '/dotfriends/'
         </div>
         <p class="text-lg text-gray-600 dark:text-neutral-300 mb-4">{{ friend.detail }}</p>
         {% for url in friend.urls %}
-          <p class="text-base text-gray-600 dark:text-neutral-300 font-mono truncate"><a href="{{ url }}">{{ url }}</a></p>
+          <p class="text-lg text-gray-600 dark:text-neutral-300 font-mono truncate"><a href="{{ url }}">{{ url }}</a></p>
         {% endfor %}
       </div>
     {% endunless %}
@@ -124,7 +124,19 @@ SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
   json: '/dotfriends/index.json',
-  templateType: 'dotfriends'  // This tells the script to use the dotfriends template
+  templateType: 'dotfriends',
+  exclude: ['urls'],
+  templateMiddleware: function (prop, value) {
+    if (prop === 'urls' && Array.isArray(value)) {
+      return value
+        .map(url => `
+          <p class="text-lg text-gray-600 dark:text-neutral-300 font-mono truncate">
+            <a href="${url}" target="_blank" rel="noopener">${url}</a>
+          </p>
+        `)
+        .join('');
+    }
+  }
 });
 
 function fadeInResults() {
