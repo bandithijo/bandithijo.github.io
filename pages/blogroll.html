@@ -1,7 +1,7 @@
 ---
 layout: 'page_list'
-title: 'Dotfriends'
-permalink: '/dotfriends/'
+title: 'Blogroll'
+permalink: '/blogroll/'
 ---
 
 <div class="mb-4">
@@ -38,7 +38,7 @@ permalink: '/dotfriends/'
 <!-- Masonry Container -->
 <div id="masonry-container" class="relative opacity-0 transition-opacity duration-300">
   <div id="post-container">
-    {% for friend in site.data.dotfriends.friends %}
+    {% for friend in site.data.blogroll.friends %}
     {% unless friend.name contains 'Rizqi Nur Assyaufi' %}
       <div class="masonry-item absolute p-4 bg-white dark:bg-neutral-900 rounded-lg border border-gray-900 dark:border-neutral-400 hover:border-dark dark:hover:border-neutral-400 group"
         style="width: calc(25% - 12px);">
@@ -123,8 +123,8 @@ window.addEventListener('resize', () => {
 SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
-  json: '/dotfriends/index.json',
-  templateType: 'dotfriends',
+  json: '/blogroll/index.json',
+  templateType: 'blogroll',
   exclude: ['urls'],
   templateMiddleware: function (prop, value) {
     if (prop === 'urls' && Array.isArray(value)) {

@@ -1,9 +1,9 @@
 ---
 layout: none
-permalink: /dotfriends/index.json
+permalink: /blogroll/index.json
 ---
 [
-  {% assign friends = site.data.dotfriends.friends %}
+  {% assign friends = site.data.blogroll.friends %}
   {% for friend in friends %}
   {% unless friend.name contains 'Rizqi Nur Assyaufi' %}
     {

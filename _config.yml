@@ -59,8 +59,8 @@ nav_top:
 nav_bottom:
   - title: Books
     url: /books/
-  - title: Dotfriends
-    url: /dotfriends/
+  - title: Blogroll
+    url: /blogroll/
   - title: Contact
     url: /contact/
   - title: Stats
