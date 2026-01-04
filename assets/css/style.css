@@ -137,27 +137,27 @@
   }
 
   .markdown h1 {
-    @apply tracking-tight text-5xl font-semibold mb-2 mt-8;
+    @apply tracking-tight text-5xl font-semibold mb-4 mt-8;
   }
 
   .markdown h2 {
-    @apply tracking-tight text-4xl font-semibold mb-2 mt-8;
+    @apply tracking-tight text-4xl font-semibold mb-4 mt-8;
   }
 
   .markdown h3 {
-    @apply tracking-tight text-3xl font-semibold mb-2 mt-6;
+    @apply tracking-tight text-3xl font-semibold mb-4 mt-6;
   }
 
   .markdown h4 {
-    @apply tracking-tight text-2xl font-semibold mb-2 mt-6;
+    @apply tracking-tight text-2xl font-semibold mb-4 mt-6;
   }
 
   .markdown h5 {
-    @apply tracking-tight text-xl font-semibold mb-2 mt-6;
+    @apply tracking-tight text-xl font-semibold mb-4 mt-6;
   }
 
   .markdown h6 {
-    @apply tracking-tight text-lg font-semibold mb-2 mt-6;
+    @apply tracking-tight text-lg font-semibold mb-4 mt-6;
   }
 
   .markdown h1 a,
