@@ -241,6 +241,10 @@
     @apply block mx-auto;
   }
 
+  .markdown .img-caption {
+    @apply mb-8;
+  }
+
   .markdown .footnotes > ol > li {
     @apply text-base !important;
   }
