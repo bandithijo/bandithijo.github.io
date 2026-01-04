@@ -17,7 +17,7 @@
 
   var callback = function () { };
 
-  var offset, poll, delay, useDebounce, unload;
+  var offset = { t: 0, b: 0, l: 0, r: 0 }, poll, delay, useDebounce, unload;
 
   var isHidden = function (element) {
     return (element.offsetParent === null);
