@@ -75,10 +75,14 @@ layout: baseof
 
       <div class="mt-20 flex flex-col md:flex-row justify-between gap-4 md:gap-8">
         {% if prev_post %}
-          <div class="w-full md:w-1/2 px-3 py-2 border border-dashed border-zinc-400 rounded-lg">
+          <div class="w-full md:w-1/2 px-4 py-4 border border-dashed border-zinc-400 rounded-lg">
             <a href="{{ prev_post.url }}">
-              <div class="flex items-center justify-start">
-                <div class="mr-3">&larr;</div> <div class="text-left">{{ prev_post.title }}</div>
+              <div class="flex items-center justify-between">
+                <div class="mr-3">&larr;</div> 
+                <div class="text-right">
+                  <span class="text-sm block">Prev</span>
+                  <span class="">{{ prev_post.title }}</span>
+                </div>
               </div>
             </a>
           </div>
@@ -87,10 +91,13 @@ layout: baseof
         {% endif %}
 
         {% if next_post %}
-          <div class="w-full md:w-1/2 px-3 py-2 border border-dashed border-zinc-400 rounded-lg">
+          <div class="w-full md:w-1/2 px-4 py-4 border border-dashed border-zinc-400 rounded-lg">
             <a href="{{ next_post.url }}">
-              <div class="flex items-center justify-end">
-                <div class="text-right">{{ next_post.title }}</div> <div class="ml-3">&rarr;</div>
+              <div class="flex items-center justify-between">
+                <div class="text-left">
+                  <span class="text-sm block">Next</span>
+                  <span class="">{{ next_post.title }}</span>
+                </div> <div class="ml-3">&rarr;</div>
               </div>
             </a>
           </div>
