@@ -21,7 +21,7 @@ layout: baseof
       </div>
 
       {% assign author = page.author | downcase %}
-      {% assign authors = site.data.dotfriends.friends %}
+      {% assign authors = site.data.blogroll.friends %}
       {% assign author_data = nil %}
       {% for a in authors %}
         {% if a.github_username == author %}
