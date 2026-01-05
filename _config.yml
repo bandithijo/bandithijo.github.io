@@ -65,6 +65,8 @@ nav_bottom:
     url: /contact/
   - title: Stats
     url: /stats/
+  - title: RSS
+    url: /feed.xml
 
 
 # Build settings
