@@ -37,9 +37,15 @@ WakaTime adalah alat pelacak waktu (*time tracker*) yang dirancang khusus untuk 
 
 ## Shareables Status WakaTime
 
-WakaTime memungkinkan saya untuk membagikan statistik produktivitas saya dengan mudah melalui fitur *Shareables*.
+WakaTime memungkinkan saya untuk membagikan statistik produktivitas saya dengan mudah melalui fitur *Shareables* [https://wakatime.com/share](https://wakatime.com/share) (Login dengan akun WakaTime untuk membuat Shareables).
 
-Berikut ini adalah beberapa contoh *Shareables* status WakaTime saya:
+Berikut ini adalah beberapa contoh *Shareables* status WakaTime saya.
+
+### Total time coding activity since Sep 2019
+
+<div class="bg-white p-10 flex flex-col mb-4 items-center" markdown="1">
+[![wakatime](https://wakatime.com/badge/user/1e45775c-2d2f-46db-9f24-f0724d2323ff.svg)](https://wakatime.com/@1e45775c-2d2f-46db-9f24-f0724d2323ff)
+</div>
 
 
 ### Coding activity last 7 days
