@@ -6,13 +6,14 @@ permalink: "/blog/:title"
 assets: "/assets/posts/blog/2019/2019-12-15-user-dan-admin-terpisah-pada-rails"
 author: "BanditHijo"
 category: "blog"
-tags: ["tips", "rails"]
+tags: ["rails"]
 description: "Catatan kali ini tentang cara membuat user dan admin yang memiliki tabel terpisah pada Rails yang menggunakan Devise gem."
 ---
 
 ## Prerequisite
 
 `Ruby 2.6.3` `Rails 5.2.4` `PostgreSQL 11.5`
+
 
 ## Prakata
 
@@ -24,49 +25,51 @@ Kedua aplikasi ini disebut CMS (*Content Management System*). Di mana web aplika
 
 Nah, kegunaan pemisahan User dengan Admin pada catatan kali ini, nantinya dapat dimanfaatkan untuk membuat web aplikasi seperti CMS.
 
+
 ## Eksekusi
 
 Kali ini saya sedikit rajin.
 
 Saya akan mencatat prosesnya dari awal project dibuat. Hehehe.
 
+
 ### Inisiasi Project
 
 Saya akan membuat project baru menggunakan Rails 5.2.4 dengan PostgreSQL sebagai database engine.
 
-{% shell_user %}
-rails _5.2.4_ new blog_spot -d postgresql
-{% endshell_user %}
+```
+$ rails _5.2.4_ new blog_spot -d postgresql
+```
 
 Kalau proses pembuatan sudah selesai, masuk ke dalam project.
 
-{% shell_user %}
-cd blog_spot
-{% endshell_user %}
+```
+$ cd blog_spot
+```
 
 Periksa spesifikasi versi Rails dan Ruby.
 
-{% shell_user %}
-ruby -v
-{% endshell_user %}
+```
+$ ruby -v
+```
 
-<pre>
+```
 ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-linux]
-</pre>
+```
 
-{% shell_user %}
-rails -v
-{% endshell_user %}
+```
+$ rails -v
+```
 
-<pre>
+```
 Rails 5.2.4
-</pre>
+```
 
 Selanjutnya create database dengan perintah berikut ini.
 
-{% shell_user %}
-rails db:create
-{% endshell_user %}
+```
+$ rails db:create
+```
 
 ```
 Created database 'blog_spot_development'
@@ -75,15 +78,18 @@ Created database 'blog_spot_test'
 
 Lalu, jalankan Rails server untuk sekedar melihat apakah project berhasil dijalankan atau tidak.
 
-{% shell_user %}
-rails s
-{% endshell_user %}
+```
+$ rails s
+```
 
-{% image https://i.postimg.cc/QdHVbnLy/gambar-01.png | 1 | Default Welcome Page pada Rails Project %}
+![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+
+Gambar 1. Default Welcome Page pada Rails Project
 
 Yay! Berhasil.
 
 Entah mengapa saya suka melihat Default Rails Welcome Page ini. Dari sedikit web framework yang sudah saya coba seperti Codeigniter, Laravel, Django dan React. Rails memiliki tampilan Default Welcome Page yang menurut saya paling menarik.
+
 
 ### Devise Gem
 
@@ -91,27 +97,25 @@ Devise adalah gem yang akan saya gunakan untuk menghandle authentication system.
 
 Pasang pada `Gemfile`.
 
-{% highlight_caption Gemfile %}
-{% highlight ruby linenos %}
-
+```ruby
 # ...
 # ...
 gem 'devise', '~> 4.7', '>= 4.7.1'
-{% endhighlight %}
+```
 
 Install Devise gem yang baru saja kita pasang.
 
-{% shell_user %}
-bundle install
-{% endshell_user %}
+```
+$ bundle install
+```
 
 Jalankan generator yang disediakan oleh Devise untuk menginisiasi file config yang disediakan oleh Devise.
 
-{% shell_user %}
-rails generate devise:install
-{% endshell_user %}
+```
+$ rails generate devise:install
+```
 
-<pre>
+```
 Running via Spring preloader in process 349251
      <span class="is-success">create</span>  config/initializers/devise.rb
      <span class="is-success">create</span>  config/locales/devise.en.yml
@@ -135,15 +139,15 @@ Some setup you must do manually if you haven't yet:
   3. Ensure you have flash messages in app/views/layouts/application.html.erb.
      For example:
 
-       &lt;p class="notice"&gt;&lt;%= notice %&gt;&lt;/p&gt;
-       &lt;p class="alert"&gt;&lt;%= alert %&gt;&lt;/p&gt;
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
 
   4. You can copy Devise views (for customization) to your app by running:
 
        rails g devise:views
 
 ===============================================================================
-</pre>
+```
 
 Hasil generate tersebut akan menghasilkan dua buah file yang dapat kita lihat pada output di atas.
 
@@ -151,45 +155,45 @@ Selanjutnya saya membuat model user dan admin dengan memanfaatkan generator yang
 
 Saya akan membuat untuk model admin terlebih dahulu.
 
-{% shell_user %}
-rails g devise admin
-{% endshell_user %}
+```
+$ rails g devise admin
+```
 
-<pre>
+```
 Running via Spring preloader in process 368446
-      <span class="is-white">invoke</span>  active_record
-      <span class="is-success">create</span>    db/migrate/20191216044109_devise_create_admins.rb
-      <span class="is-success">create</span>    app/models/admin.rb
-      <span class="is-white">invoke</span>    test_unit
-      <span class="is-success">create</span>      test/models/admin_test.rb
-      <span class="is-success">create</span>      test/fixtures/admins.yml
-      <span class="is-success">insert</span>    app/models/admin.rb
-       <span class="is-success">route</span>  devise_for :admins
-</pre>
+      invoke  active_record
+      create    db/migrate/20191216044109_devise_create_admins.rb
+      create    app/models/admin.rb
+      invoke    test_unit
+      create      test/models/admin_test.rb
+      create      test/fixtures/admins.yml
+      insert    app/models/admin.rb
+       route  devise_for :admins
+```
 
 Kemudian untuk model user.
 
-{% shell_user %}
-rails g devise user
-{% endshell_user %}
+```
+$ rails g devise user
+```
 
-<pre>
+```
 Running via Spring preloader in process 368446
-      <span class="is-white">invoke</span>  active_record
-      <span class="is-success">create</span>    db/migrate/20191216044641_devise_create_users.rb
-      <span class="is-success">create</span>    app/models/user.rb
-      <span class="is-white">invoke</span>    test_unit
-      <span class="is-success">create</span>      test/models/user_test.rb
-      <span class="is-success">create</span>      test/fixtures/users.yml
-      <span class="is-success">insert</span>    app/models/user.rb
-       <span class="is-success">route</span>  devise_for :users
-</pre>
+      invoke  active_record
+      create    db/migrate/20191216044641_devise_create_users.rb
+      create    app/models/user.rb
+      invoke    test_unit
+      create      test/models/user_test.rb
+      create      test/fixtures/users.yml
+      insert    app/models/user.rb
+       route  devise_for :users
+```
 
 Lalu jalankan migration-nya.
 
-{% shell_user %}
-rails db:migrate
-{% endshell_user %}
+```
+$ rails db:migrate
+```
 
 ```
 == 20191216044109 DeviseCreateAdmins: migrating ===============================
@@ -213,9 +217,9 @@ rails db:migrate
 
 Cek status dengan.
 
-{% shell_user %}
-rails db:migrate:status
-{% endshell_user %}
+```
+$ rails db:migrate:status
+```
 
 ```
 database: blog_spot_development
@@ -233,90 +237,91 @@ Dengan begini, sekarang saya sudah memiliki beberapa fitur yang disediakan oleh 
 1. Authentikasi
 2. Registrasi
 3. Edit
-3. dll.
+4. dll.
 
 Devise juga mengenerate route untuk model admin dan user.
 
-{% highlight_caption config/routes.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: config/routes.rb
 Rails.application.routes.draw do
   devise_for :admins
   devise_for :users
 end
-{% endhighlight %}
+```
 
 Cek route yang tersedia pada Browser.
 
-<pre class="url">
+```
 http://localhost:3000/rails/info/routes
-</pre>
+```
 
 Selanjutnya, saya akan mulai dari controller.
+
 
 ### Controller
 
 Saya akan menggunakan **Controller Namespaces and Routing**.[<sup>2</sup>](https://guides.rubyonrails.org/routing.html#controller-namespaces-and-routing){:target="_blank"}. Untuk memisahkan antara admin dan user dengan struktur direktori seperti ini.
 
-<pre>
-├─ app/
-│  ├─ assets/
-│  ├─ channels/
-│  ├─ controllers/
-│  │  ├─ <mark>admins/</mark>
-│  │  │  └─ <mark>dashboard_controller.rb</mark>
-│  │  ├─ concerns/
-│  │  ├─ <mark>public/</mark>
-│  │  │  ├─ <mark>about_controller.rb</mark>
-│  │  │  ├─ <mark>contact_controller.rb</mark>
-│  │  │  └─ <mark>homepage_controller.rb</mark>
-│  │  ├─ <mark>users/</mark>
-│  │  │  └─ <mark>dashboard_controller.rb</mark>
-│  │  ├─ <mark>admins_controller.rb</mark>
-│  │  ├─ application_controller.rb
-│  │  └─ <mark>users_controller.rb</mark>
+```
+├─ 📂 app/
+│  ├─ 📁 assets/
+│  ├─ 📁 channels/
+│  ├─ 📂 controllers/
+│  │  ├─ 📂 admins/ 👈
+│  │  │  └─ 📄 dashboard_controller.rb 👈
+│  │  ├─ 📁 concerns/
+│  │  ├─ 📂 public/ 👈
+│  │  │  ├─ 📄 about_controller.rb 👈
+│  │  │  ├─ 📄 contact_controller.rb 👈
+│  │  │  └─ 📄 homepage_controller.rb 👈
+│  │  ├─ 📂 users/ 👈
+│  │  │  └─ 📄 dashboard_controller.rb 👈
+│  │  ├─ 📄 admins_controller.rb 👈
+│  │  ├─ 📄 application_controller.rb
+│  │  └─ 📄 users_controller.rb 👈
 │  ├─ ...
 │  ...
 ├─ ...
 ...
-</pre>
+```
 
 Kemudian isi dari file-file controller tersebut akan seperti ini.
 
 Untuk Controller Namespaces pada Admins.
 
-{% highlight_caption app/controllers/admins_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/admins_controller.rb
 class AdminsController < ApplicationController
   layout :admins
 end
-{% endhighlight %}
+```
 
-{% highlight_caption app/controllers/admins/dashboard_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/admins/dashboard_controller.rb
 class Admins::DashboardController < AdminsController
   def index; end
 end
-{% endhighlight %}
+```
 
 Untuk Controller Namespaces pada Users.
 
-{% highlight_caption app/controllers/users_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/users_controller.rb
 class UsersController < ApplicationController
 end
-{% endhighlight %}
+```
 
-{% highlight_caption app/controllers/users/dashboard_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/users/dashboard_controller.rb
 class Users::DashboardController < UsersController
   def index; end
 end
-{% endhighlight %}
+```
 
 Karena saya ingin membuat tampilan login yang berbeda antara Admin dengan User. Saya perlu mengaturnya pada `application_controller.rb`.[<sup>3</sup>](https://github.com/plataformatec/devise/wiki/How-To:-Create-custom-layouts){:target="_blank"}
 
-{% highlight_caption app/controllers/application_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/application_controller.rb
 class ApplicationController < ActionController::Base
   layout :layout_by_resource
 
@@ -330,41 +335,42 @@ class ApplicationController < ActionController::Base
     end
   end
 end
-{% endhighlight %}
+```
 
 Saya juga membuat `homepage_controller.rb` untuk menghandle halaman Homepage yang saya letakkan pada direktori `public/`
 
-{% highlight_caption app/controllers/public/homepage_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/public/homepage_controller.rb
 class Public::HomepageController < ApplicationController
   def index; end
 end
-{% endhighlight %}
+```
 
 Serta halaman About dan Contact.
 
-{% highlight_caption app/controllers/public/about_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/public/about_controller.rb
 class Public::AboutController < ApplicationController
   def index; end
 end
-{% endhighlight %}
+```
 
-{% highlight_caption app/controllers/public/contact_controller.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: app/controllers/public/contact_controller.rb
 class Public::ContactController < ApplicationController
   def index; end
 end
-{% endhighlight %}
+```
 
 Langsung saja membuat action `:index`, yang nantinya akan digunakan untuk menampilkan text sederhana pada view template.
+
 
 ### Route
 
 Kemudian, untuk routingnya akan seperti ini.
 
-{% highlight_caption config/routes.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: config/routes.rb
 Rails.application.routes.draw do
   # Root
   root to: "public/homepage#index"
@@ -389,73 +395,74 @@ Rails.application.routes.draw do
     resources :dashboard, only: %w[index]
   end
 end
-{% endhighlight %}
+```
 
 Pada block Public, saya menggunakan `scope` karena ingin membuat url yang singkat, seperti ini.
 
-<pre class="url">
+```
 http://localhost:3000/about
-</pre>
+```
 
 Kalau menggunakan `namespace` maka url yang dihasilkan akan seperti ini.
 
-<pre class="url">
+```
 http://localhost:3000/public/about
-</pre>
+```
 
 Maka dari itu, saya menggunakan `scope` untuk controller yang berada pada module Public
 
 Selanjutnya ke view template.
 
+
 ### View
 
 Berikut ini struktur direktorinya.
 
-<pre>
-├─ app/
-│  ├─ assets/
-│  ├─ channels/
-│  ├─ controllers/
-│  ├─ helpers/
-│  ├─ jobs/
-│  ├─ mailers/
-│  ├─ models/
-│  └─ views/
-│     ├─ <mark>admins/</mark>
-│     │  └─ <mark>dashboard/</mark>
-│     │     └─ <mark>index.html.erb</mark>
-│     ├─ layouts/
-│     │  ├─ <mark>admins/</mark>
-│     │  │  └─ <mark>_nav.html.erb</mark>
-│     │  ├─ <mark>users/</mark>
-│     │  │  └─ <mark>_nav.html.erb</mark>
-│     │  ├─ <mark>admins.html.erb</mark>
-│     │  ├─ <mark>admins_devise.html.erb</mark>
-│     │  ├─ application.html.erb
-│     │  ├─ mailer.html.erb
-│     │  ├─ mailer.text.erb
-│     │  └─ <mark>users.html.erb</mark>
-│     ├─ <mark>public/</mark>
-│     │  ├─ <mark>about/</mark>
-│     │  │  └─ <mark>index.html.erb</mark>
-│     │  ├─ <mark>contact/</mark>
-│     │  │  └─ <mark>index.html.erb</mark>
-│     │  └─ <mark>homepage/</mark>
-│     │     └─ <mark>index.html.erb</mark>
-│     └─ <mark>users/</mark>
-│        └─ <mark>dashboard/</mark>
-│           └─ <mark>index.html.erb</mark>
+```
+├─ 📂 app/
+│  ├─ 📁 assets/
+│  ├─ 📁 channels/
+│  ├─ 📁 controllers/
+│  ├─ 📁 helpers/
+│  ├─ 📁 jobs/
+│  ├─ 📁 mailers/
+│  ├─ 📁 models/
+│  └─ 📂 views/
+│     ├─ 📂 admins/ 👈
+│     │  └─ 📂 dashboard/ 👈
+│     │     └─ 📄 index.html.erb 👈
+│     ├─ 📂 layouts/
+│     │  ├─ 📂 admins/ 👈
+│     │  │  └─ 📄 _nav.html.erb 👈
+│     │  ├─ 📂 users/ 👈
+│     │  │  └─ 📄 _nav.html.erb 👈
+│     │  ├─ 📄 admins.html.erb 👈
+│     │  ├─ 📄 admins_devise.html.erb 👈
+│     │  ├─ 📄 application.html.erb
+│     │  ├─ 📄 mailer.html.erb
+│     │  ├─ 📄 mailer.text.erb
+│     │  └─ 📄 users.html.erb 👈
+│     ├─ 📂 public/ 👈
+│     │  ├─ 📂 about/ 👈
+│     │  │  └─ 📄 index.html.erb 👈
+│     │  ├─ 📂 contact/ 👈
+│     │  │  └─ 📄 index.html.erb 👈
+│     │  └─ 📂 homepage/ 👈
+│     │     └─ 📄 index.html.erb 👈
+│     └─ 📂 users/ 👈
+│        └─ 📂 dashboard/ 👈
+│           └─ 📄 index.html.erb 👈
 │
 ├─ ...
 ...
-</pre>
+```
 
 Berikut ini isi dari file-file view tersebut.
 
 Kita mulai dari `layouts/`.
 
-{% highlight_caption app/views/layouts/application.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/layouts/application.html.erb
 <!DOCTYPE html>
 <html>
   <head>
@@ -472,10 +479,10 @@ Kita mulai dari `layouts/`.
     <%= yield %>
   </body>
 </html>
-{% endhighlight %}
+```
 
-{% highlight_caption app/views/layouts/admins.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/layouts/admins.html.erb
 <!DOCTYPE html>
 <html>
   <head>
@@ -492,10 +499,10 @@ Kita mulai dari `layouts/`.
     <%= yield %>
   </body>
 </html>
-{% endhighlight %}
+```
 
-{% highlight_caption app/views/layouts/users.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/layouts/users.html.erb
 <!DOCTYPE html>
 <html>
   <head>
@@ -512,14 +519,14 @@ Kita mulai dari `layouts/`.
     <%= yield %>
   </body>
 </html>
-{% endhighlight %}
+```
 
 Saya membuat halaman login yang berbeda antara Admin dengan User.
 
 Halamn login untuk User akan menggunakan template dari Devise, sedangkan Admin, akan saya custom sendiri. Seperti di bawah ini.
 
-{% highlight_caption app/views/layouts/admins_devise.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/layouts/admins_devise.html.erb
 <!DOCTYPE html>
 <html>
   <head>
@@ -564,7 +571,7 @@ Halamn login untuk User akan menggunakan template dari Devise, sedangkan Admin, 
 
   </body>
 </html>
-{% endhighlight %}
+```
 
 Pada keempat file view template di atas, saya menambahkan render partial untuk menu navigasi.
 
@@ -572,8 +579,8 @@ Saya juga mengarahkan `stylesheet_link_tag` dan `javascript_include_tag` pada ma
 
 Oke, selanjutnya file render partial untuk menu navigasi.
 
-{% highlight_caption app/views/layouts/admins/_nav.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/layouts/admins/_nav.html.erb
 <nav>
   <% unless controller_name == 'homepage' && action_name == 'index' %>
       <%= link_to "Homepage", root_path %> |
@@ -588,10 +595,10 @@ Oke, selanjutnya file render partial untuk menu navigasi.
     | <%= link_to "User?", user_session_path %>
   <% end %>
 </nav>
-{% endhighlight %}
+```
 
-{% highlight_caption app/views/layouts/users/_nav.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/layouts/users/_nav.html.erb
 <nav>
   <% unless controller_name == 'homepage' && action_name == 'index' %>
       <%= link_to "Homepage", root_path %> |
@@ -609,12 +616,12 @@ Oke, selanjutnya file render partial untuk menu navigasi.
     | <%= link_to "Admin?", admin_session_path %>
   <% end %>
 </nav>
-{% endhighlight %}
+```
 
 Selanjutnya Homepage.
 
-{% highlight_caption app/views/public/homepage/index.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/public/homepage/index.html.erb
 <header>
   <h1>Homepage</h1>
 </header>
@@ -624,12 +631,12 @@ Selanjutnya Homepage.
     => <%= controller_name %>#<%= action_name %>
   </p>
 </div>
-{% endhighlight %}
+```
 
 Halaman About dan Contact.
 
-{% highlight_caption app/views/public/about/index.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/public/about/index.html.erb
 <header>
   <h1>About</h1>
 </header>
@@ -639,10 +646,10 @@ Halaman About dan Contact.
     => <%= controller_name %>#<%= action_name %>
   </p>
 </div>
-{% endhighlight %}
+```
 
-{% highlight_caption app/views/public/contact/index.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/public/contact/index.html.erb
 <header>
   <h1>Contact</h1>
 </header>
@@ -652,12 +659,12 @@ Halaman About dan Contact.
     => <%= controller_name %>#<%= action_name %>
   </p>
 </div>
-{% endhighlight %}
+```
 
 Kemudian, halan Dashboard untuk Admin dan User.
 
-{% highlight_caption app/views/admins/dashboard/index.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/admins/dashboard/index.html.erb
 <header>
   <h1>DashBoard Admin</h1>
 </header>
@@ -665,10 +672,10 @@ Kemudian, halan Dashboard untuk Admin dan User.
 <div>
   Admin: <%= current_admin.email %>
 </div>
-{% endhighlight %}
+```
 
-{% highlight_caption app/views/users/dashboard/index.html.erb %}
-{% highlight eruby linenos %}
+```eruby
+!filename: app/views/users/dashboard/index.html.erb
 <header>
   <h1>DashBoard User</h1>
 </header>
@@ -676,67 +683,69 @@ Kemudian, halan Dashboard untuk Admin dan User.
 <div>
   User: <%= current_user.email %>
 </div>
-{% endhighlight %}
+```
 
 Sekarang tinggal Stylesheet dan Javascript.
 
-<pre>
-├─ app/
-│  ├─ assets/
-│  │  ├─ config/
-│  │  ├─ images/
-│  │  ├─ javascripts/
-│  │  │  ├─ <mark>admins/</mark>
-│  │  │  │  └─ <mark>custom.js</mark>
-│  │  │  ├─ channels/
-│  │  │  ├─ <mark>users/</mark>
-│  │  │  │  └─ <mark>custom.js</mark>
-│  │  │  ├─ <mark>admins.js</mark>
-│  │  │  ├─ application.js
-│  │  │  ├─ cable.js
-│  │  │  └─ <mark>users.js</mark>
-│  │  └─ stylesheets/
-│  │     ├─ <mark>admins/</mark>
-│  │     │  └─ <mark>custom.css</mark>
-│  │     ├─ <mark>users/</mark>
-│  │     │  └─ <mark>custom.css</mark>
-│  │     ├─ <mark>admins.css</mark>
-│  │     ├─ application.css
-│  │     └─ <mark>users.css</mark>
+```
+├─ 📂 app/
+│  ├─ 📂 assets/
+│  │  ├─ 📁 config/
+│  │  ├─ 📁 images/
+│  │  ├─ 📂 javascripts/
+│  │  │  ├─ 📂 admins/ 👈
+│  │  │  │  └─ 📄 custom.js 👈
+│  │  │  ├─ 📁 channels/
+│  │  │  ├─ 📂 users/ 👈
+│  │  │  │  └─ 📄 custom.js 👈
+│  │  │  ├─ 📄 admins.js 👈
+│  │  │  ├─ 📄 application.js
+│  │  │  ├─ 📄 cable.js
+│  │  │  └─ 📄 users.js 👈
+│  │  └─ 📂 stylesheets/
+│  │     ├─ 📂 admins/ 👈
+│  │     │  └─ 📄 custom.css 👈
+│  │     ├─ 📂 users/ 👈
+│  │     │  └─ 📄 custom.css 👈
+│  │     ├─ 📄 admins.css 👈
+│  │     ├─ 📄 application.css
+│  │     └─ 📄 users.css 👈
 │  ├─ ...
 │  ├─ ...
 ...
-</pre>
+```
 
 Mengikuti struktur direktori di atas.
+
 
 ### Javascript Assets
 
 Pada `javascripts/application.js` tambahkan `user.js`. Karena saya akan menggunakan sebagai satu kesatuan assets.
 
-{% highlight_caption app/assets/javascripts/application.js %}
-{% highlight javascript linenos %}
+```javascript
+!filename: app/assets/javascripts/application.js
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
 //= require users
-{% endhighlight %}
+```
 
 Lalu pada masing-masing file Javascript untuk Admin dan User, tambahkan `rails-ujs` agar Devise dapat Logout.
 
 Kalau tidak menambahkan ini, Devise akan mengalami routing error saat melakukan Logout.
 
-{% highlight_caption app/assets/javascripts/admins.js %}
-{% highlight javascript linenos %}
+```javascript
+!filename: app/assets/javascripts/admins.js
 //= require rails-ujs
-{% endhighlight %}
+```
 
-{% highlight_caption app/assets/javascripts/users.js %}
-{% highlight javascript linenos %}
+```javascript
+!filename: app/assets/javascripts/users.js
 //= require rails-ujs
-{% endhighlight %}
+```
 
 Untuk `admins/custom.js` dan `users/custom.js` digunakan untuk Javascript buatan kita sendiri. Namun karena masih kosong, jadi tidak saya contohkan.
+
 
 ### Stylesheet Assets
 
@@ -744,26 +753,26 @@ Pada `stylesheets/application.css` tambahkan `user.css`. Karena saya akan menggu
 
 Saya menghapus `*=require ` file yang lain agar file stylesheet tidak saling tumpang tindih dan dipanggil dimana-mana.
 
-{% highlight_caption app/assets/stylesheets/application.css %}
-{% highlight css linenos %}
+```css
+!filename: app/assets/stylesheets/application.css
 /*
  *= require users
  */
-{% endhighlight %}
+```
 
 Kemudian pada `admins.css` dan `users.css` saya akan mengarahkan asset pada `custom.css` di masing-masing direktori.
 
 File `custom.css` inilah yang nantinya akan digunakan apabila ingin mengkostumisasi style pada Admin atau User view.
 
-{% highlight_caption app/assets/stylesheets/admins.css %}
-{% highlight css linenos %}
+```css
+!filename: app/assets/stylesheets/admins.css
 @import 'admins/custom.css';
-{% endhighlight %}
+```
 
-{% highlight_caption app/assets/stylesheets/users.css %}
-{% highlight css linenos %}
+```css
+!filename: app/assets/stylesheets/users.css
 @import 'users/custom.css';
-{% endhighlight %}
+```
 
 Selanjutnya, isi dari `../admins/custom.css` dan `../users/custom.css`.
 
@@ -771,8 +780,8 @@ Untuk contoh kali ini, saya membuat style antar Admin dan User menjadi terlihat 
 
 Namun, pada project yang sesungguhnya, kedua file ini akan memiliki isi yang berbeda, sesuai dengan keperluan.
 
-{% highlight_caption app/assets/stylesheets/admins/custom.css %}
-{% highlight css linenos %}
+```css
+!filename: app/assets/stylesheets/admins/custom.css
 h1,h2 {
   color: #c52f24;
 }
@@ -794,10 +803,10 @@ nav {
 .active {
   font-weight: bold;
 }
-{% endhighlight %}
+```
 
-{% highlight_caption app/assets/stylesheets/users/custom.css %}
-{% highlight css linenos %}
+```css
+!filename: app/assets/stylesheets/users/custom.css
 h1,h2 {
   color: #c52f24;
 }
@@ -819,19 +828,19 @@ nav {
 .active {
   font-weight: bold;
 }
-{% endhighlight %}
+```
 
 Selanjutnya, saya perlu untuk menambahkan konfigurasi tambahan untuk **Precompile Additional Assets**, karena saya sudah membuat custom assets untuk admins dan users.
 
 Buka file `config/initializers/assets.rb`.
 
-{% highlight_caption config/initializers/assets.rb %}
-{% highlight ruby linenos %}
+```ruby
+!filename: config/initializers/assets.rb
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 Rails.application.config.assets.precompile += %w( admins.js admins.css users.js users.css )
-{% endhighlight %}
+```
 
 *Uncomment* dan tambahkan `users.js` dan `users.css`.
 
@@ -839,17 +848,23 @@ Oke, saya rasa, sudah semuanya.
 
 Sekarang web aplikasi siap untuk di jalankan.
 
-<pre>
-$ <b>rails s</b>
-</pre>
+```
+$ rails s
+```
 
 Kira-kira, seperti inilah hasilnya.
 
-{% image https://i.postimg.cc/15mvFB1T/gambar-02.gif | 2 | Public Page %}
+![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.gif)
 
-{% image https://i.postimg.cc/NjLbJ0Mk/gambar-03.gif | 3 | User Login, Register Dashboard %}
+Gambar 2. Public Page
 
-{% image https://i.postimg.cc/pXsqJj2d/gambar-04.gif | 4 | Admin Login dan Register %}
+![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.gif)
+
+Gambar 3. User Login, Register Dashboard
+
+![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.gif)
+
+Gambar 4. Admin Login dan Register
 
 Selesai!
 

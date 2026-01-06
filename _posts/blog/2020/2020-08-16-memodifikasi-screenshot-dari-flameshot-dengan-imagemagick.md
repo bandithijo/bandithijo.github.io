@@ -429,9 +429,9 @@ Terima kasih kepada bro Berrabe telah mem-porting ke Bash.
 
 Teman-teman dapat menikmati source nya di sini yaa, [**Bash version oleh Berrabe**](https://github.com/berrabe/awesome-flameshot).
 
-{% image https://github.com/berrabe/awesome-flameshot/raw/master/docs/logo.png | 3 %}
+![Gambar 3](https://github.com/berrabe/awesome-flameshot/raw/master/docs/logo.png)
 
-{% image https://github.com/berrabe/awesome-flameshot/raw/master/docs/output.png | 4 %}
+![Gambar 4](https://github.com/berrabe/awesome-flameshot/raw/master/docs/output.png)
 
 
 ### Versi Python
