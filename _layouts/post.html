@@ -77,9 +77,9 @@ layout: baseof
         {% if prev_post %}
           <div class="w-full md:w-1/2 px-4 py-4 border border-dashed border-zinc-400 rounded-lg">
             <a href="{{ prev_post.url }}">
-              <div class="flex items-center justify-between">
+              <div class="flex items-center justify-between h-full">
                 <div class="mr-3">&larr;</div> 
-                <div class="text-right">
+                <div class="text-right self-start">
                   <span class="text-sm block">Prev</span>
                   <span class="">{{ prev_post.title }}</span>
                 </div>
@@ -93,11 +93,12 @@ layout: baseof
         {% if next_post %}
           <div class="w-full md:w-1/2 px-4 py-4 border border-dashed border-zinc-400 rounded-lg">
             <a href="{{ next_post.url }}">
-              <div class="flex items-center justify-between">
-                <div class="text-left">
+              <div class="flex items-center justify-between h-full">
+                <div class="text-left self-start">
                   <span class="text-sm block">Next</span>
                   <span class="">{{ next_post.title }}</span>
-                </div> <div class="ml-3">&rarr;</div>
+                </div>
+                <div class="ml-3">&rarr;</div>
               </div>
             </a>
           </div>
