@@ -18,6 +18,8 @@
   <link rel="shortcut icon" href={{ "/assets/images/favicon/favicon.png" | absolute_url }} type="image/png">
   <link rel="apple-touch-icon" href={{ "/assets/images/favicon/apple-touch-icon.png" | absolute_url }}>
 
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ site.url | replace: 'https://', '' }}' href="/rss/">
+
   {% if jekyll.environment == 'production' %}
     {% seo title=false %}
     {% include opengraph.html %}
