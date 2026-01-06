@@ -3,8 +3,9 @@
   publish = "_site"
 
 [build.environment]
-  JEKYLL_ENV = "production"
-  RUBY_VERSION = "3.3.5"
+  JEKYLL_ENV = ""
+  RUBY_VERSION = ""
+  BUNDLE_WITHOUT = ""
 
 [[redirects]]
   from = "https://bandithijo.netlify.app/*"
