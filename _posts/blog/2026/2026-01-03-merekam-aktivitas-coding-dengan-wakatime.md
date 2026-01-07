@@ -128,6 +128,15 @@ Gambar 6. Code Stats for 2024, [https://wakatime.com/a-look-back-at-2024](https:
 Gambar 7. Code Stats for 2025, [https://wakatime.com/a-look-back-at-2025](https://wakatime.com/a-look-back-at-2025) (Login to see your stats)
 
 
+## Strava but for Programmers
+
+Kalau di dunia olahraga ada Strava yang digunakan untuk melacak aktivitas bersepeda atau lari, maka WakaTime bisa dianggap sebagai Strava-nya para programmer. Dengan WakaTime, saya bisa melihat "rute" coding saya, "kecepatan" menulis kode, dan "jarak" yang telah saya tempuh dalam dunia pemrograman.
+
+![Gambar 8]({{ page.assets | absolute_url }}/gambar_08.png)
+
+Gambar 8. Saya memodifikasi Gambar 7 dengan memberikan background foto laptop saya dengan menggunakan GIMP (GNI Image Manipulation Program)
+
+
 ## Pesan Penulis
 
 Melacak waktu yang dihabiskan untuk coding dengan WakaTime telah membantu saya menjadi lebih sadar akan produktivitas dan pentingnya menjaga keseimbangan antara kerja dan istirahat. 
@@ -135,6 +144,7 @@ Melacak waktu yang dihabiskan untuk coding dengan WakaTime telah membantu saya m
 Saya merekomendasikan WakaTime kepada sesama teman programmer untuk membantu mereka memahami kebiasaan kerja mereka dan meningkatkan produktivitas secara keseluruhan.
 
 Terima kasih telah membaca cerita saya tentang pengalaman menggunakan WakaTime. Semoga bermanfaat!
+
 
 ## Referensi
 
