@@ -137,6 +137,18 @@ Kalau di dunia olahraga ada Strava yang digunakan untuk melacak aktivitas bersep
 Gambar 8. Saya memodifikasi Gambar 7 dengan memberikan background foto laptop saya dengan menggunakan GIMP (GNI Image Manipulation Program)
 
 
+## FAQ
+
+Untuk membantu memahami WakaTime lebih jauh, bisa dibaca di halaman FAQ resmi WakaTime di [https://wakatime.com/faq](https://wakatime.com/faq).
+
+Halaman ini meliputi berbagai pertanyaan umum seperti:
+1. Bagaimana cara kerja WakaTime?
+2. Apakah WakaTime aman digunakan?
+3. Bagaimana project terdeteksi oleh WakaTime?
+4. Bagaimana cara men-disable WakaTime di folder tertentu?
+5. dll.
+
+
 ## Pesan Penulis
 
 Melacak waktu yang dihabiskan untuk coding dengan WakaTime telah membantu saya menjadi lebih sadar akan produktivitas dan pentingnya menjaga keseimbangan antara kerja dan istirahat. 
