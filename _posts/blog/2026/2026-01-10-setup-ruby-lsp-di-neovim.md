@@ -26,7 +26,7 @@ Gambar 1. Ruby LSP icon
 > *The Ruby LSP is an implementation of the language server protocol for Ruby, used to improve rich features in editors. It is a part of a wider goal to provide a state-of-the-art experience to Ruby developers using modern standards for cross-editor features, documentation and debugging.*
 
 
-## Instalasi Ruby LSP
+## Instalasi
 
 
 ### Install ruby-lsp gem
@@ -35,6 +35,15 @@ Install `ruby-lsp` gem menggunakan perintah berikut:
 
 ```
 $ gem install ruby-lsp
+```
+
+
+### Install standard gem
+
+Karena saya menggunakan `standard` sebagai code formatter dan linter, maka saya juga menginstall `standard` gem.
+
+```
+$ gem install standard
 ```
 
 
@@ -95,4 +104,10 @@ Pengalaman saya sejauh ini sangat positif. Saya bahkan lupa kalau saya menggunak
   Tanggal diakses: 2026-01-10
 
 1. [GitHub: Shopify/ruby-lsp](https://github.com/Shopify/ruby-lsp) \
+  Tanggal diakses: 2026-01-10
+
+1. []() \
+  Tanggal diakses: 2026-01-10
+
+1. [https://rubygems.org/gems/standard](https://rubygems.org/gems/standard) \
   Tanggal diakses: 2026-01-10
