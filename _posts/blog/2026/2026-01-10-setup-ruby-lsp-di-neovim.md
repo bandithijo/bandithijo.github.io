@@ -106,7 +106,7 @@ Pengalaman saya sejauh ini sangat positif. Saya bahkan lupa kalau saya menggunak
 1. [GitHub: Shopify/ruby-lsp](https://github.com/Shopify/ruby-lsp) \
   Tanggal diakses: 2026-01-10
 
-1. []() \
+1. [https://rubygems.org/gems/ruby-lsp](https://rubygems.org/gems/ruby-lsp) \
   Tanggal diakses: 2026-01-10
 
 1. [https://rubygems.org/gems/standard](https://rubygems.org/gems/standard) \
