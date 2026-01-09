@@ -90,6 +90,9 @@ Gambar 2. Post terkait Ruby LSP di Threads saya.
 Pengalaman saya sejauh ini sangat positif. Saya bahkan lupa kalau saya menggunakan Ruby LSP dan bukan lagi Solargraph.
 
 
+## Artikel Menarik Lainnya
+
+1. [Andy Waite. An Introduction to the Ruby LSP Add-on System. 2024. Rails at Scale](https://railsatscale.com/2024-10-03-the-ruby-lsp-addon-system/)
 
 
 ## Referensi
