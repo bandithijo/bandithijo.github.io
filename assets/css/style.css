@@ -12,8 +12,7 @@
   html { scroll-behavior: smooth; }
   body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    @apply bg-white text-dark;
+    @apply bg-white text-dark text-lg;
   }
   .navbar-fixed {
     @apply fixed z-[9999] bg-white bg-opacity-70 backdrop-blur-sm;
@@ -179,7 +178,7 @@
   }
 
   .markdown code {
-    @apply font-mono text-[16px] text-[#d4d4d4] inline bg-zinc-800 rounded-md px-1 py-0.5;
+    @apply font-mono text-[16px] text-[#d4d4d4] inline bg-zinc-800 rounded-md px-1.5 py-0.5;
   }
 
   .markdown pre {
