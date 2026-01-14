@@ -3,8 +3,8 @@
   publish = "_site"
 
 [build.environment]
-  JEKYLL_ENV = ""
-  RUBY_VERSION = ""
+  JEKYLL_ENV = "production"
+  RUBY_VERSION = "3.3.5"
   BUNDLE_WITHOUT = ""
 
 [[redirects]]
