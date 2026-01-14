@@ -1,11 +1,10 @@
 [build]
-  command = "bundle exec jekyll build --config _config.yml,_config_netlify.yml"
+  command = "bundle install && bundle exec jekyll build --config _config.yml,_config_netlify.yml"
   publish = "_site"
 
 [build.environment]
   JEKYLL_ENV = "production"
   RUBY_VERSION = "3.3.5"
-  BUNDLE_WITHOUT = ""
 
 [[redirects]]
   from = "https://bandithijo.netlify.app/*"
