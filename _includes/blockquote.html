@@ -1,0 +1,54 @@
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const styleMap = {
+    PERHATIAN: {
+      bq: ['bg-red-50', 'dark:bg-red-900', 'border-l-red-500', 'border-red-500'],
+      title:  ['text-red-800', 'dark:text-red-200', 'font-bold']
+    },
+    INFO: {
+      bq: ['bg-sky-50', 'dark:bg-sky-900', 'border-l-blue-500', 'border-sky-500'],
+      title:  ['text-sky-800', 'dark:text-sky-200', 'font-bold']
+    },
+    TIPS: {
+      bq: ['bg-green-50', 'dark:bg-green-900', 'border-l-green-500', 'border-green-500'],
+      title:  ['text-green-800', 'dark:text-green-200', 'font-bold']
+    },
+    NOTE: {
+      bq: ['bg-yellow-50', 'dark:bg-yellow-900', 'border-l-yellow-500', 'border-yellow-500'],
+      title:  ['text-yellow-800', 'dark:text-yellow-200', 'font-bold']
+    },
+    PERTANYAAN: {
+      bq: ['bg-violet-50', 'dark:bg-violet-900', 'border-l-violet-500', 'border-violet-500'],
+      title:  ['text-violet-800', 'dark:text-violet-200', 'font-bold']
+    }
+  };
+
+  const removeOldBorderGray = (el) => {
+    const grayClasses = [
+      'border-l-gray-500','border-t-gray-500','border-r-gray-500','border-b-gray-500',
+      'dark:border-l-zinc-500','dark:border-t-zinc-500','dark:border-r-zinc-500','dark:border-b-zinc-500'
+    ];
+    el.classList.remove(...grayClasses);
+  };
+
+  document.querySelectorAll('blockquote').forEach(bq => {
+    const firstP = bq.querySelector('p');
+    if (!firstP) return;
+
+    const text = firstP.textContent.trim().toUpperCase();
+    const key = Object.keys(styleMap).find(k => text.startsWith(k));
+    if (!key) return;
+
+    // ubah kelas pada blockquote (background + border)
+    removeOldBorderGray(bq);
+    bq.classList.add(...styleMap[key].bq);
+
+    // ubah styling pada paragraph pertama (warna teks + bold)
+    // hapus kelas teks/default yang mungkin mengganggu (opsional)
+    firstP.classList.add(...styleMap[key].title);
+
+    // pastikan border-left tampil solid (meng-override style sebelumnya jika perlu)
+    bq.style.borderLeftStyle = 'solid';
+  });
+});
+</script>
