@@ -63,6 +63,8 @@ nav_bottom:
     url: /blogroll/
   - title: Contact
     url: /contact/
+  # - title: Contribute
+  #   url: /contribute/
   - title: Stats
     url: /stats/
   - title: RSS
