@@ -268,3 +268,14 @@ friends:
     - "https://github.com/ferryops"
   detail: >-
     Full Stack Engineer focused on end-to-end digital solutions, scalable architecture, and CI/CD to accelerate delivery and improve reliability and user experience.
+
+
+- github_username: "datfooldive"
+  name:  "Dwiky Rizky Ananditya"
+  photo: "https://github.com/datfooldive.png?size=200"
+  urls:
+    - "https://datfooldive.github.io/"
+    - "https://github.com/datfooldive"
+  detail: >-
+    Full-Stack Developer and Linux Enthusiast with hands-on experience building and deploying web applications across multiple production environments.<br>
+    Strong foundation in backend development using Laravel and Node.js, complemented by frontend expertise in React. I am deeply passionate about the Linux ecosystem, focusing on delivering performance-driven solutions and highly reliable systems.
