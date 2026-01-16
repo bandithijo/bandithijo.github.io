@@ -244,10 +244,12 @@ To add a caption or description below the image, use the following format.
 
 ```markdown
 ![Gambar 1]({% raw %}{{ page.assets }}{% endraw %}/about_bandithijo.png)
+
 Gambar 1. Deskripsi gambar di sini.
 ```
 
 ![Gambar 1]({{ page.assets }}/about_bandithijo.png)
+
 Gambar 1. Deskripsi gambar di sini.
 
 
