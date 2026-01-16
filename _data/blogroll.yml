@@ -279,3 +279,14 @@ friends:
   detail: >-
     Full-Stack Developer and Linux Enthusiast with hands-on experience building and deploying web applications across multiple production environments.<br>
     Strong foundation in backend development using Laravel and Node.js, complemented by frontend expertise in React. I am deeply passionate about the Linux ecosystem, focusing on delivering performance-driven solutions and highly reliable systems.
+
+
+- github_username: "alipnf"
+  name:  "Muhammad Alif Nur Firdaus"
+  photo: "https://github.com/alipnf.png?size=200"
+  urls:
+    - "https://www.alipnf.my.id/"
+    - "https://github.com/alipnf"
+    - "https://www.linkedin.com/in/alipnf/"
+  detail: >-
+    Final-year Informatics Engineering student specializing in Frontend Web Development with React and Next.js. Built and open-sourced 5+ web projects on GitHub, focusing on responsive UI, reusable components, and clean code structure. Comfortable translating Figma designs into production-ready interfaces and integrating REST APIs for data-driven features. Familiar with TypeScript, Zustand, and modern UI tools (Tailwind CSS, Bootstrap, shadcn/ui). Interested in Frontend internship roles where I can contribute to shipping reliable features and improving user experience. 
