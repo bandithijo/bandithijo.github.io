@@ -10,15 +10,18 @@ layout: baseof
 
         {% if page.permalink == '/blog/' %}
           {% assign blog_posts = site.posts | where: "category", "blog" %}
+          {% assign type_posts = 'posts' %}
         {% elsif page.permalink == '/note/' %}
           {% assign blog_posts = site.posts | where: "category", "note" %}
+          {% assign type_posts = 'notes' %}
         {% elsif page.permalink == '/blogroll/' %}
           {% assign blog_posts = site.data.blogroll.friends %}
+          {% assign type_posts = '' %}
         {% endif %}
 
         {% if blog_posts.size > 0 %}
         <span class="text-lg font-normal text-gray-600 bg-gray-100 px-3 py-1 rounded-full self-end">
-          {{ blog_posts.size }}
+          {{ blog_posts.size }} {{ type_posts }}
         </span>
         {% endif %}
       </h1>
