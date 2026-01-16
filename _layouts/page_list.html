@@ -12,11 +12,13 @@ layout: baseof
           {% assign blog_posts = site.posts | where: "category", "blog" %}
         {% elsif page.permalink == '/note/' %}
           {% assign blog_posts = site.posts | where: "category", "note" %}
+        {% elsif page.permalink == '/blogroll/' %}
+          {% assign blog_posts = site.data.blogroll.friends %}
         {% endif %}
 
         {% if blog_posts.size > 0 %}
         <span class="text-lg font-normal text-gray-600 bg-gray-100 px-3 py-1 rounded-full self-end">
-          {{ blog_posts.size }} posts
+          {{ blog_posts.size }}
         </span>
         {% endif %}
       </h1>
