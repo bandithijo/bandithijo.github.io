@@ -1,1 +1,1 @@
-app: bundle exec jekyll s --watch
+app: bundle exec jekyll s --watch --livereload
