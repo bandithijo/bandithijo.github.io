@@ -12,7 +12,7 @@
   html { scroll-behavior: smooth; }
   body {
     font-family: 'Open Sans', sans-serif;
-    @apply bg-white text-dark text-lg;
+    @apply bg-white text-dark text-base;
   }
   .navbar-fixed {
     @apply fixed z-[9999] bg-white bg-opacity-70 backdrop-blur-sm;
@@ -73,19 +73,19 @@
 
   /* TOC */
   .toc > ul {
-    @apply text-lg pl-6 md:pl-12 list-disc;
+    @apply pl-6 md:pl-12 list-disc;
   }
 
   .toc ul ul {
-    @apply text-lg pl-7 list-disc;
+    @apply pl-7 list-disc;
   }
 
   .toc > ol {
-    @apply text-lg pl-6 md:pl-12 list-decimal;
+    @apply pl-6 md:pl-12 list-decimal;
   }
 
   .toc ol ol {
-    @apply text-lg pl-7 list-decimal;
+    @apply pl-7 list-decimal;
   }
 
   /* For markdown with redcarpet */
@@ -169,7 +169,7 @@
   }
 
   .markdown blockquote {
-    @apply text-lg border-l-[6px] border-t border-r border-b pl-4 pr-4 py-4 mb-4 text-dark dark:text-white border-l-gray-500 dark:border-l-zinc-500 rounded-lg border-t-gray-500 dark:border-t-zinc-500 border-r-gray-500 dark:border-r-zinc-500 border-b-gray-500 dark:border-b-zinc-500;
+    @apply border-l-[6px] border-t border-r border-b pl-4 pr-4 py-4 mb-4 text-dark dark:text-white border-l-gray-500 dark:border-l-zinc-500 rounded-lg border-t-gray-500 dark:border-t-zinc-500 border-r-gray-500 dark:border-r-zinc-500 border-b-gray-500 dark:border-b-zinc-500;
     border-style: dashed dashed dashed solid; /* top, right, bottom, left */
   }
 
@@ -204,11 +204,11 @@
   }
 
   .markdown ul {
-    @apply text-lg pl-8 list-disc;
+    @apply pl-8 list-disc;
   }
 
   .markdown ol {
-    @apply text-lg pl-8 list-decimal;
+    @apply pl-8 list-decimal;
   }
 
   .markdown li > * {
@@ -224,7 +224,7 @@
   }
 
   .markdown table {
-    @apply w-full text-lg block overflow-x-auto sm:overflow-x-auto;
+    @apply w-full block overflow-x-auto sm:overflow-x-auto;
     white-space: nowrap;
   }
 

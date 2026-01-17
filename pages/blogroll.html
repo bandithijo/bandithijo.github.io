@@ -54,7 +54,7 @@ permalink: '/blogroll/'
           <img src="{{ friend.photo }}" alt="{{ friend.github_username }}" class="w-16 h-16 rounded-full border border-zinc-300 dark:border-zinc-700">
           <h2 class="text-xl font-bold">{{ friend.name }} ({{ friend.github_username }})</h2>
         </div>
-        <p class="text-lg text-gray-600 dark:text-neutral-300 mb-4">{{ friend.detail }}</p>
+        <p class="text-gray-600 dark:text-neutral-300 mb-4">{{ friend.detail }}</p>
         {% for url in friend.urls %}
           <p class="text-base text-gray-600 dark:text-neutral-300 font-mono truncate"><a href="{{ url }}">{{ url }}</a></p>
         {% endfor %}
