@@ -88,6 +88,17 @@
     @apply pl-7 list-decimal;
   }
 
+  /* Ghostyline */
+  .ghostyline-t {
+    @apply border-t border-dotted border-gray-300 dark:border-zinc-300;
+  }
+  .ghostyline-b {
+    @apply border-b border-dotted border-gray-300 dark:border-zinc-300;
+  }
+  .ghostyline-lr {
+    @apply border-l border-r border-dotted border-gray-300 dark:border-zinc-300;
+  }
+
   /* For markdown with redcarpet */
   .markdown {
     @apply text-dark leading-normal break-words;
