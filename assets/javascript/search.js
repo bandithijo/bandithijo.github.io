@@ -157,7 +157,7 @@
   // Template definitions
   const TEMPLATES = {
     posts: `
-      <div class="masonry-item absolute p-4 opacity-0 bg-white dark:bg-neutral-900 rounded-lg border border-gray-300 dark:border-neutral-700 hover:border-dark dark:hover:border-neutral-400 group">
+      <div class="masonry-item absolute p-4 bg-white dark:bg-neutral-900 rounded-lg border border-gray-900 dark:border-neutral-400 hover:border-dark dark:hover:border-neutral-400 group">
         <a href="{url}" class="text-dark dark:text-white">
           <div class="flex flex-row mb-3">
             <span class="px-1 py-0 mr-3 rounded-full bg-neutral-300 dark:bg-neutral-700 group-hover:bg-neutral-700 group-hover:dark:bg-neutral-300"></span>
@@ -179,7 +179,7 @@
           <img src="{photo}" alt="{github_username}" class="w-16 h-16 rounded-full border border-zinc-300 dark:border-zinc-700">
           <h2 class="text-xl font-bold">{name} ({github_username})</h2>
         </div>
-        <p class="text-lg text-gray-600 dark:text-neutral-300 mb-4">{detail}</p>
+        <p class="text-gray-600 dark:text-neutral-300 mb-4">{detail}</p>
         {urls}
       </div>
     `
