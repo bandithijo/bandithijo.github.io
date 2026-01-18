@@ -163,8 +163,13 @@
             <span class="px-1 py-0 mr-3 rounded-full bg-neutral-300 dark:bg-neutral-700 group-hover:bg-neutral-700 group-hover:dark:bg-neutral-300"></span>
             <h2 class="text-xl font-bold mb-4">{title}</h2>
           </div>
-          <p class="text-lg text-gray-600 dark:text-neutral-300 mb-4">{description}</p>
-          <p class="text-base text-gray-600 dark:text-neutral-300 font-mono">{date}</p>
+          <p class="text-gray-600 dark:text-neutral-300 mb-4">{description}</p>
+          <div class="flex justify-between items-end gap-2">
+            <div class="w-2/3">
+              {tags}
+            </div>
+            <p class="w-1/3 text-base text-right text-gray-600 dark:text-neutral-300 font-mono">{date}</p>
+          </div>
         </a>
       </div>
     `,
