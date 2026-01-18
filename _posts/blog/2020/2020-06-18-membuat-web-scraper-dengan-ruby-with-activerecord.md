@@ -6,7 +6,7 @@ permalink: "/blog/:title"
 assets: "/assets/posts/blog/2020/2020-06-18-membuat-web-scraper-dengan-ruby-with-activerecord"
 author: "BanditHijo"
 category: "blog"
-tags: ["ruby", "postgresql", "active record"]
+tags: ["ruby", "postgresql", "activerecord"]
 description: "Web scraping adalah teknik mengambil atau mengekstrak sebagian data dari suatu website secara spesifik secara otomatis."
 ---
 
