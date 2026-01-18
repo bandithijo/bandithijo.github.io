@@ -1,24 +1,26 @@
 <!-- Header Start -->
-<header class="absolute left-0 top-0 lg:top-6 z-10 flex w-full items-center bg-transparent-screen select-none">
-  <div class="container md:max-w-6xl">
-    <div class="relative flex items-center justify-between">
-      <div class="px-2 lg:px-0 py-6 block font-bold text-3xl md:text-4xl">BanditHijo<span class="font-thin text-2xl md:text-3xl">.dev</span></div>
-      <div class="flex items-center px-4 md:px-0">
-        <!-- Hambuger Menu Start -->
-        <button id="hamburger" name="hamburger" type="button" class="absolute right-2 block lg:hidden">
-          <span class="hamburger-line origin-top-right transition duration-300 ease-in-out"></span>
-          <span class="hamburger-line transition duration-300 ease-in-out"></span>
-          <span class="hamburger-line origin-bottom-right transition duration-300 ease-in-out"></span>
-        </button>
-        <!-- Hambuger Menu End -->
+<div class="flex flex-col select-none">
+  <header class="z-10 flex flex-col w-full items-center bg-transparent-screen select-none">
+    <div class="container md:max-w-6xl">
+      <div class="relative flex items-center justify-between">
+        <div class="px-2 lg:px-0 py-6 block font-bold text-3xl md:text-4xl">BanditHijo<span class="font-thin text-2xl md:text-3xl">.dev</span></div>
+        <div class="flex items-center px-4 md:px-0">
+          <!-- Hambuger Menu Start -->
+          <button id="hamburger" name="hamburger" type="button" class="absolute right-2 block lg:hidden">
+            <span class="hamburger-line origin-top-right transition duration-300 ease-in-out"></span>
+            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+            <span class="hamburger-line origin-bottom-right transition duration-300 ease-in-out"></span>
+          </button>
+          <!-- Hambuger Menu End -->
 
-        <!-- Nav Menu Start -->
-        {% include nav_top.html %}
-        <!-- Nav Menu End -->
+          <!-- Nav Menu Start -->
+          {% include nav_top.html %}
+          <!-- Nav Menu End -->
+        </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
+</div>
 <!-- Header End -->
 
 <script>
