@@ -3,6 +3,7 @@ friends:
   name:  "Rizqi Nur Assyaufi"
   photo: "https://github.com/bandithijo.png?size=200"
   urls:
+    - "https://bandithijo.dev"
     - "https://bandithijo.github.io"
     - "https://github.com/bandithijo"
   detail: >-
@@ -126,7 +127,7 @@ friends:
   name:  "Yunindyo Prabowo"
   photo: "https://github.com/ypraw.png?size=200"
   urls:
-    - "https://ypraw.github.io/"
+    - "https://ypraw.github.io"
     - "https://github.com/ypraw"
   detail: >-
     Noob Programmer, always getting errors everywhere when typing the codes.<br>
@@ -169,7 +170,7 @@ friends:
   name:  "Tsara Fatma"
   photo: "https://github.com/tsara27.png?size=200"
   urls:
-    - "https://tsarafatma.com/"
+    - "https://tsarafatma.com"
     - "https://github.com/tsara27"
   detail: >-
     I am a mom, a wife, and also a programmer who is trying to improve and spread good things for others.<br>
@@ -180,7 +181,7 @@ friends:
   name:  "Galih Wisnuaji"
   photo: "https://github.com/nekonako.png?size=200"
   urls:
-    - "https://nekonako.github.io/"
+    - "https://nekonako.github.io"
     - "https://github.com/nekonako"
   detail: >-
     My name is Galih Wisnuaaji, I'm currently 20 year old from Pekalongan, Indonesia. Love linux, love programming, love cooking ( sometimes i think i'm more passionate in this stuff than coding :D ), weebs.
@@ -190,7 +191,7 @@ friends:
   name:  "Dicha Zelianivan Arkana"
   photo: "https://github.com/elianiva.png?size=200"
   urls:
-    - "https://elianiva.my.id/"
+    - "https://elianiva.my.id"
     - "https://github.com/elianiva"
   detail: >-
     Hello internet people! My real name is Dicha Zelianivan Arkana. I'm a self taught front end web developer and Linux enthusiast. I do some random project just for a hobby for now.
@@ -200,7 +201,7 @@ friends:
   name:  "Harry Kurn"
   photo: "https://github.com/owl4ce.png?size=200"
   urls:
-    - "https://vio.int.eu.org/"
+    - "https://vio.int.eu.org"
     - "https://github.com/owl4ce"
   detail: >-
     It's right for me, but not for you. Either way, the concept of “right“ means no more than that.
@@ -221,7 +222,7 @@ friends:
   name:  "Adi Purnama"
   photo: "https://github.com/adiprnm.png?size=200"
   urls:
-    - "https://adipurnm.com/"
+    - "https://adipurnm.com"
     - "https://github.com/adiprnm"
   detail: >-
     I'm a full-stack web developer. I work as a full-time software engineer (backend) at Happy5. Ruby on Rails is my go-to framework.
@@ -231,7 +232,7 @@ friends:
   name:  "Catur Hidayat"
   photo: "https://github.com/caturhidayat.png?size=200"
   urls:
-    - "https://www.caturhidayat.space/"
+    - "https://www.caturhidayat.space"
     - "https://github.com/caturhidayat"
   detail: >-
     Hi, I'm Catur Hidayat. Who is currently working at Logistics Company 🚚 as a IT Support (located in indonesia). But now I am learning about software development. 👨🏻‍💻
@@ -241,7 +242,7 @@ friends:
   name:  "Febra"
   photo: "https://github.com/FebraS.png?size=200"
   urls:
-    - "https://blog.febra.web.id/"
+    - "https://blog.febra.web.id"
     - "https://github.com/FebraS"
   detail: >-
     I'm Febra, a dedicated cybersecurity enthusiast hailing from Indonesia, currently contributing my skills and knowledge at a distinguished educational institution. My professional journey is driven by a profound passion for uncovering the intricacies of software - specifically, I thrive on delving deep into the challenging realms of reverse engineering and binary exploitation, where I explore the hidden mechanics and potential vulnerabilities within complex systems.
@@ -251,8 +252,8 @@ friends:
   name:  "Yoga Sukma"
   photo: "https://github.com/yogasukma.png?size=200"
   urls:
-    - "https://yogasukma.com/"
-    - "https://yogasukma.web.id/"
+    - "https://yogasukma.com"
+    - "https://yogasukma.web.id"
     - "https://github.com/yogasukma"
   detail: >-
     Nama saya Yoga Sukma, sejak tahun 2008 saya bekerja sebagai Web Developer di bebeberapa perusahaan termasuk bekerja sebagai fulltime freelancer.<br>
@@ -265,7 +266,7 @@ friends:
   photo: "https://github.com/ferryops.png?size=200"
   urls:
     - "https://dev.to/ferryops"
-    - "https://ferryops.vercel.app/"
+    - "https://ferryops.vercel.app"
     - "https://github.com/ferryops"
   detail: >-
     Full Stack Engineer focused on end-to-end digital solutions, scalable architecture, and CI/CD to accelerate delivery and improve reliability and user experience.
@@ -275,7 +276,7 @@ friends:
   name:  "Dwiky Rizky Ananditya"
   photo: "https://github.com/datfooldive.png?size=200"
   urls:
-    - "https://datfooldive.github.io/"
+    - "https://datfooldive.github.io"
     - "https://github.com/datfooldive"
   detail: >-
     Full-Stack Developer and Linux Enthusiast with hands-on experience building and deploying web applications across multiple production environments.<br>
@@ -286,11 +287,11 @@ friends:
   name:  "Muhammad Alif Nur Firdaus"
   photo: "https://github.com/alipnf.png?size=200"
   urls:
-    - "https://www.alipnf.my.id/"
+    - "https://www.alipnf.my.id"
     - "https://github.com/alipnf"
-    - "https://www.linkedin.com/in/alipnf/"
+    - "https://www.linkedin.com/in/alipnf"
   detail: >-
-    Final-year Informatics Engineering student specializing in Frontend Web Development with React and Next.js. Built and open-sourced 5+ web projects on GitHub, focusing on responsive UI, reusable components, and clean code structure. Comfortable translating Figma designs into production-ready interfaces and integrating REST APIs for data-driven features. Familiar with TypeScript, Zustand, and modern UI tools (Tailwind CSS, Bootstrap, shadcn/ui). Interested in Frontend internship roles where I can contribute to shipping reliable features and improving user experience. 
+    Final-year Informatics Engineering student specializing in Frontend Web Development with React and Next.js. Built and open-sourced 5+ web projects on GitHub, focusing on responsive UI, reusable components, and clean code structure. Comfortable translating Figma designs into production-ready interfaces and integrating REST APIs for data-driven features. Familiar with TypeScript, Zustand, and modern UI tools (Tailwind CSS, Bootstrap, shadcn/ui). Interested in Frontend internship roles where I can contribute to shipping reliable features and improving user experience.
 
 
 - github_username: "nesstero"
