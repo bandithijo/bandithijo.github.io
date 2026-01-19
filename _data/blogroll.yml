@@ -291,3 +291,14 @@ friends:
     - "https://www.linkedin.com/in/alipnf/"
   detail: >-
     Final-year Informatics Engineering student specializing in Frontend Web Development with React and Next.js. Built and open-sourced 5+ web projects on GitHub, focusing on responsive UI, reusable components, and clean code structure. Comfortable translating Figma designs into production-ready interfaces and integrating REST APIs for data-driven features. Familiar with TypeScript, Zustand, and modern UI tools (Tailwind CSS, Bootstrap, shadcn/ui). Interested in Frontend internship roles where I can contribute to shipping reliable features and improving user experience. 
+
+
+- github_username: "nesstero"
+  name:  "Ara Nestero"
+  photo: "https://github.com/nesstero.png?size=200"
+  urls:
+    - "https://nesstero.gitlab.io"
+    - "https://github.com/nesstero"
+    - "https://gitlab.com/nesstero"
+  detail: >-
+    nesstero.gitlab.io merupakan 📑 blog pribadi yang diperuntukan untuk membuat catatan ✍ seputar gnu/linux dan open source. Mohon ma'af apabila catatan ini sulit untuk dipahami dan dimengerti bagi kawan-kawan yang membaca catatan ini, dikarenakan tulisan yang kurang tertata.
