@@ -303,3 +303,15 @@ friends:
     - "https://gitlab.com/nesstero"
   detail: >-
     nesstero.gitlab.io merupakan 📑 blog pribadi yang diperuntukan untuk membuat catatan ✍ seputar gnu/linux dan open source. Mohon ma'af apabila catatan ini sulit untuk dipahami dan dimengerti bagi kawan-kawan yang membaca catatan ini, dikarenakan tulisan yang kurang tertata.
+
+
+- github_username: "hervyqa"
+  name:  "Hervy Qurrotul Ainur Rozi"
+  photo: "https://github.com/hervyqa.png?size=200"
+  urls:
+    - "https://hervyqa.dev"
+    - "https://github.com/hervyqa"
+    - "https://git.sr.ht/~hervyqa"
+    - "https://www.linkedin.com/in/hervyqa"
+  detail: >-
+    An enthusiast in Data Science, Data Analytics and Data Visualization. Currently pursuing R, Python, SQL and Scala programming. The tools I use include Neovim, Git, MariaDB, Jupyter Notebook, DBeaver and RStudio. Currently as LangitKetujuh OS developer.
