@@ -315,3 +315,17 @@ friends:
     - "https://www.linkedin.com/in/hervyqa"
   detail: >-
     An enthusiast in Data Science, Data Analytics and Data Visualization. Currently pursuing R, Python, SQL and Scala programming. The tools I use include Neovim, Git, MariaDB, Jupyter Notebook, DBeaver and RStudio. Currently as LangitKetujuh OS developer.
+
+
+- github_username: "akhy"
+  name:  "Akhyar Amarullah"
+  photo: "https://github.com/akhy.png?size=200"
+  urls:
+    - "https://akhy.my.id/"
+    - "https://akhy.dev/"
+    - "https://nulisajadulu.web.id/"
+    - "https://github.com/akhy"
+  detail: >-
+    I'm Akhyar (Akhy for short, pronounced "a-khee"). I write code and build things.<br>
+    During the day, I work on deployment platform and infrastructure stuff. Kubernetes clusters, CI/CD pipelines, that kind of thing. Outside of work, I build small tools that solve my own problems and wishing others find them useful too.<br>
+    I write about the technical stuff I'm working on. Not tutorials or guides, just what I built, why, and how it went. Sometimes it works great. Sometimes there are trade-offs. Either way, I write about it.
