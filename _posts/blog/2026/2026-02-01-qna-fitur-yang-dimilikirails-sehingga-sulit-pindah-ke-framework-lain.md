@@ -18,6 +18,7 @@ description: "QnA ini di-request oleh mas Rizky Ramadhan via email. Pertanyaan i
 > 
 > Saya kesulitan mencari alamat email dari mas Rizky Ramadhan, jika mas Rizky membaca ini dan tidak berkenan untuk mempublikasikan tulisan ini, boleh hubungi saya via email yaa.
 
+
 ## Question: from Rizky Ramadhan
 
 Halo, mas. Perkenalkan, saya Rizky, baru lulus tahun ini, sekarang sudah bekerja, sekitar 1 bulan lebih dikit. Kalau di kantor biasa pakai Yii, untuk hobi saya suka Laravel. Mau tanya soal Ruby on Rails.
@@ -61,7 +62,7 @@ Kelebihan-kelebihan yang saya rasakan ketika pakai Rails saat bekerja:
 
    Dengan begini, perdebatan terkait hal-hal teknis, yang umumnya terjadi di tempat kami:
 
-   * **Nama tabel** di Rails, sudah dikonvensikan kalau nama tabel harus kata benda yang plurarl
+   * **Nama tabel** di Rails, sudah dikonvensikan kalau nama tabel harus kata benda yang plural
    * **Penggunaan HTTP method** harus mengikuti aturan RESTful API. Dimana ketika membuat endpoint harus menggunakan HTTP method yang sesuai untuk fungsi yang sesuai (GET/POST/PATCH/PUT/DELETE).
 
 3. Metaprogramming. Ruby memiliki kemampuan metaprogramming yang diadopsi oleh Rails untuk mempermudah proses pembuatan aplikasi.
