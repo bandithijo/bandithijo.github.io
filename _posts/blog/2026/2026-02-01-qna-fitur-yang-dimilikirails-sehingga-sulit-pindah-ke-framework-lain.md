@@ -7,7 +7,7 @@ assets: "/assets/posts/blog/2026/2026-02-01-qna-fitur-yang-dimilikirails-sehingg
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby", "rails", ]
-description: "QnA ini di-request oleh mas Rizqi Ramadhan via email. Pertanyaan ini diajukan sekitar tahun 2023. Ia bertanya sebagian besar terkait dengan Ruby on Rails. Saya merasa pertanyaan dan jawaban ini akan memberikan lebih banyak manfaat jika dipublikasikan. Semoga bermanfaat yaa."
+description: "QnA ini di-request oleh mas Rizky Ramadhan via email. Pertanyaan ini diajukan sekitar tahun 2023. Ia bertanya sebagian besar terkait dengan Ruby on Rails. Saya merasa pertanyaan dan jawaban ini akan memberikan lebih banyak manfaat jika dipublikasikan. Semoga bermanfaat yaa."
 ---
 
 ## Pendahuluan
