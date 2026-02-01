@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Qna: Fitur Apa yang Dimiliki Rails Sehingga Sulit untuk Pindah ke Framework Lain?"
+title: "QnA: Fitur Apa yang Dimiliki Rails Sehingga Sulit untuk Pindah ke Framework Lain?"
 date: "2026-02-01 18:13"
 permalink: "/blog/:title"
 assets: "/assets/posts/blog/2026/2026-02-01-qna-fitur-yang-dimilikirails-sehingga-sulit-pindah-ke-framework-lain"
