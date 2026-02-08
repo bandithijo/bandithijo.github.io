@@ -395,7 +395,7 @@ Dalam artikel ini, saya telah mendokumentasikan cara menjalankan OpenStreetMap N
 ## Referensi
 
 1. [https://nominatim.openstreetmap.org/ui/about.html](https://nominatim.openstreetmap.org/ui/about.html) \
-  Diakses teanggal: 2026-02-07
+  Diakses tanggal: 2026-02-07
 
 2. [https://nominatim.org/release-docs/develop/api/Overview/](https://nominatim.org/release-docs/develop/api/Overview/) \
-  Diakses teanggal: 2026-02-07
+  Diakses tanggal: 2026-02-07
