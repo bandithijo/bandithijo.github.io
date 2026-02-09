@@ -182,7 +182,7 @@ $ curl http://localhost:8080/status?format=json
 
 Outputnya,
 
-```
+```json
 {
   "status": 0,
   "message": "OK",
@@ -203,7 +203,7 @@ $ curl "http://localhost:8080/search?q=jakarta&format=json"
 
 Outputnya,
 
-```
+```json
 [
   {
     "place_id": 144282,
@@ -242,7 +242,7 @@ $ curl "http://localhost:8080/reverse?lat=-1.2398711&lon=116.8593379&format=json
 
 Outputnya,
 
-```
+```json
 {
   "place_id": 144282,
   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
@@ -288,7 +288,7 @@ $ curl "http://localhost:8080/lookup?osm_ids=W795600162&format=json"
 
 Outputnya,
 
-```
+```json
 [
   {
     "place_id": 144282,
@@ -323,7 +323,6 @@ Outputnya,
     ]
   }
 ]
-
 ```
 
 
@@ -337,7 +336,7 @@ $ curl "http://localhost:8080/details?osmtype=W&osmid=795600162&format=json"
 
 Outputnya,
 
-```
+```json
 {
   "place_id": 144282,
   "parent_place_id": 142133,
@@ -390,6 +389,8 @@ $ docker-compose down
 ## Kesimpulan
 
 Dalam artikel ini, saya telah mendokumentasikan cara menjalankan OpenStreetMap Nominatim menggunakan Docker, mulai dari membuat Docker Compose, mempersiapkan file `.pbf`, menjalankan Docker Compose, mencoba Nominatim API, hingga menghentikan Docker Compose. Dengan menggunakan Docker, proses setup Nominatim menjadi lebih mudah dan cepat, tanpa perlu repot mengatur lingkungan dan dependensi secara manual.
+
+Pada artikel selanjutnya, saya akan mendokumentasikan cara menggunakan Nominatim self-hosted pada Geocoder gem untuk melakukan geocoding dan reverse geocoding di aplikasi Ruby on Rails, "[Menggunakan Nominatim Self-Hosted pada Geocoder Gem]({{ site.url }}/blog/menggunakan-nominatim-self-hosted-pada-geocoder-gem)"
 
 
 ## Referensi
