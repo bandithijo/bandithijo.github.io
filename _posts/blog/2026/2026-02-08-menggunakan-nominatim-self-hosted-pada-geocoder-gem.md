@@ -65,11 +65,15 @@ Bisa juga disesuaikan dengan host dan port tempat Nominatim dijalankan. Misal, s
 ```ruby
 !filename: config/initializers/geocoder.rb
 Geocoder.configure(
+  # ...
+  # ...
+
   use_https: true,
   lookup: :nominatim,
   nominatim: {
     host: 'nominatim.bandithijo.dev',
   },
+)
 ```
 
 Dengan begini saya sudah berhasil mengonfigurasi Geocoder gem untuk menggunakan Nominatim self-hosted sebagai geocoding service lookup. Selanjutnya, saya bisa menggunakan Geocoder gem untuk melakukan geocoding dan reverse geocoding pada aplikasi Ruby on Rails saya dengan menggunakan instance Nominatim yang saya jalankan sendiri.
