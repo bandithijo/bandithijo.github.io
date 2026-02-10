@@ -1,3 +1,9 @@
+merch:
+  - title: "T-shirt BanditHijo.dev"
+    description: ""
+    cover: ""
+    wip: true
+
 books:
   - title: "Arch Linux untuk Orang Sibuk"
     description: ""
