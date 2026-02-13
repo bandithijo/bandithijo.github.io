@@ -45,7 +45,7 @@ Berikut adalah contoh penggunaan Nominatim API:
 
 ## OpenStreetMap Nominatim dengan Docker
 
-Untuk menjalankan OpenStreetMap Nominatim dengan Docker, bisa menggunakan image yang sudah tersedia di Docker Hub. Agar prosesnya lebih mudah, saya lebih prefer untuk membuat docker compose saja. Berikut adalah langkah-langkahnya:
+Untuk menjalankan OpenStreetMap Nominatim dengan Docker, bisa menggunakan image yang sudah tersedia di Docker Hub. Agar prosesnya lebih mudah, saya prefer untuk membuat docker compose saja. Berikut adalah langkah-langkahnya:
 
 
 ### 1. Buat Docker Compose untuk Nominatim Service

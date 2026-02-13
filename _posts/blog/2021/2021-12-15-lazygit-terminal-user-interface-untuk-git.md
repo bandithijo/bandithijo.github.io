@@ -7,7 +7,7 @@ assets: "/assets/posts/blog/2021/2021-12-15-lazygit-terminal-user-interface-untu
 author: "BanditHijo"
 category: "blog"
 tags: ["lazygit", "git", "tui", "tool"]
-description: "Lazygit adalah Git Tools berupa Terminal User Interface yang dapat kita manfaatkan sebagai alat bantu yang mempermudah kita dalam berinteraksi dengan perintah-perintah Git. Saya lebih prefer menggunakan veri TUI ketimbang Git Tools lain yang menggunakan GUI karena dengan menggunakan TUI, saya masih dapat memanfaatkan keyboard shortcut untuk mengoperasikan tools tersebut."
+description: "Lazygit adalah Git Tools berupa Terminal User Interface yang dapat kita manfaatkan sebagai alat bantu yang mempermudah kita dalam berinteraksi dengan perintah-perintah Git. Saya prefer menggunakan veri TUI ketimbang Git Tools lain yang menggunakan GUI karena dengan menggunakan TUI, saya masih dapat memanfaatkan keyboard shortcut untuk mengoperasikan tools tersebut."
 ---
 
 ## Tentang Lazygit
