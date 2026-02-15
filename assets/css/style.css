@@ -277,7 +277,7 @@
   }
 
   .markdown .line-number {
-    @apply inline-block min-w-6 mr-3 text-right text-gray-400 select-none font-mono text-[16px] leading-relaxed;
+    @apply inline-block min-w-6 mr-3 text-right text-gray-400 select-none font-mono text-[14px] leading-relaxed;
   }
 
   .markdown .code-line {
