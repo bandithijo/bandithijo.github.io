@@ -79,9 +79,9 @@ networks:
 
 Saya menggunakan docker image `mediagis/nominatim:5.2` yang sudah tersedia di Docker Hub.
 
-Pada `PBF_PATH` diisi dengan file `.pbf`. PBF adalah format file yang digunakan untuk menyimpan data OpenStreetMap. File ini berisi informasi tentang jalan, bangunan, dan fitur geografis lainnya yang ada di wilayah tertentu. Dalam contoh ini, saya menggunakan file `kalimantan-latest.osm.pbf` yang berisi data OpenStreetMap untuk wilayah Kalimantan. Untuk mendapatkan file `.pbf` untuk wilayah lain, bisa mengunduhnya dari situs [Geofabrik](https://download.geofabrik.de/).
+Pada `PBF_PATH` diisi dengan file `.osm.pbf`. PBF adalah format file yang digunakan untuk menyimpan data OpenStreetMap. File ini berisi informasi tentang jalan, bangunan, dan fitur geografis lainnya yang ada di wilayah tertentu. Dalam contoh ini, saya menggunakan file `kalimantan-latest.osm.pbf` yang berisi data OpenStreetMap untuk wilayah Kalimantan. Untuk mendapatkan file `.osm.pbf` untuk wilayah lain, bisa mengunduhnya dari situs [Geofabrik](https://download.geofabrik.de/).
 
-Kisaran size file `.pbf` untuk wilayah Indonesia dan beberapa wilayah lainnya adalah sebagai berikut:
+Kisaran size file `.osm.pbf` untuk wilayah Indonesia dan beberapa wilayah lainnya adalah sebagai berikut:
 
 | Region | Size |
 | :--- | ---: |
@@ -96,18 +96,18 @@ Kisaran size file `.pbf` untuk wilayah Indonesia dan beberapa wilayah lainnya ad
 
 Saya menggunakan 2 values untuk `volumes`,
 1. `.geofabrik/kalimantan-latest.osm.pbf:/nominatim/data/kalimantan-latest.osm.pbf` \
-  Volume ini digunakan untuk menghubungkan file `.pbf` yang ada di host dengan file `.pbf` yang ada di dalam container. Dengan begitu, saya dapat menggunakannya di `PBF_PATH` untuk proses import data. Proses persiapan file `.pbf` ini akan saya jelaskan di bagian selanjutnya.
+  Volume ini digunakan untuk menghubungkan file `.osm.pbf` yang ada di host dengan file `.osm.pbf` yang ada di dalam container. Dengan begitu, saya dapat menggunakannya di `PBF_PATH` untuk proses import data. Proses persiapan file `.osm.pbf` ini akan saya jelaskan di bagian selanjutnya.
 2. `nominatim-data:/var/lib/postgresql` \
   Volume ini digunakan untuk menyimpan data yang dihasilkan oleh Nominatim. Data ini akan disimpan di dalam container, sehingga jika container dihapus, data ini tidak akan hilang. `nominatim-data` ini adalah nama volume yang dibuat dibagian `volumes` di bawah `nominatim-data:`. Volume ini akan dihubungkan dengan direktori `/var/lib/postgresql` di dalam container, yang merupakan direktori tempat Nominatim menyimpan data yang dihasilkan.
 
 Secara default nonimatin mengekspose port `8080` di dalam container, sehingga saya juga expose port `8080` di bagian `expose`. Agar bisa diakses dari luar container, saya juga memetakan port `8080` di host ke port `8080` di dalam container dengan menggunakan `ports`.
 
 
-### 2. Persiapkan data OSM berupa file `.pbf`
+### 2. Persiapkan data OSM berupa file `.osm.pbf`
 
-Sebelum menjalankan Docker Compose, pastikan sudah memiliki file `.pbf` yang akan digunakan untuk proses import data. File `.pbf` ini bisa didapatkan dari situs [Geofabrik](https://download.geofabrik.de/). 
+Sebelum menjalankan Docker Compose, pastikan sudah memiliki file `.osm.pbf` yang akan digunakan untuk proses import data. File `.osm.pbf` ini bisa didapatkan dari situs [Geofabrik](https://download.geofabrik.de/). 
 
-Setelah mengunduh file `.pbf`, letakkan file tersebut di dalam direktori `geofabrik/` yang berada di root project. Buat direktori `geofabrik/` jika belum ada.
+Setelah mengunduh file `.osm.pbf`, letakkan file tersebut di dalam direktori `geofabrik/` yang berada di root project. Buat direktori `geofabrik/` jika belum ada.
 
 ```
 $ mkdir geofabrik
@@ -115,9 +115,9 @@ $ cd geofabrik
 $ wget -c https://download.geofabrik.de/asia/indonesia/kalimantan-latest.osm.pbf
 ```
 
-Tunggu proses download selesai, setelah itu pastikan file `.pbf` sudah berada di dalam direktori `geofabrik/`.
+Tunggu proses download selesai, setelah itu pastikan file `.osm.pbf` sudah berada di dalam direktori `geofabrik/`.
 
-Berikut adalah struktur direktori yang diharapkan setelah menambahkan file `.pbf`:
+Berikut adalah struktur direktori yang diharapkan setelah menambahkan file `.osm.pbf`:
 
 ```
 geofabrik/
@@ -125,7 +125,7 @@ geofabrik/
 docker-compose.yml
 ```
 
-Sip, sekarang file `.pbf` sudah siap untuk digunakan dalam proses import data oleh Nominatim.
+Sip, sekarang file `.osm.pbf` sudah siap untuk digunakan dalam proses import data oleh Nominatim.
 
 
 ### 3. Jalankan Docker Compose
@@ -138,7 +138,7 @@ $ docker-compose up -d
 
 > PERHATIAN
 >
-> Untuk pertama kali menjalankan docker compose, Nominatim service akan melakukan proses import data dari file `.pbf` ke dalam Nominatim, proses ini membutuhkan waktu yang cukup lama, tergantung pada ukuran file `.pbf` yang digunakan. Untuk file `kalimantan-latest.osm.pbf` yang berukuran 138 MB, proses import data bisa memakan waktu sekitar 30 menit hingga 1 jam.
+> Untuk pertama kali menjalankan docker compose, Nominatim service akan melakukan proses import data dari file `.osm.pbf` ke dalam Nominatim, proses ini membutuhkan waktu yang cukup lama, tergantung pada ukuran file `.osm.pbf` yang digunakan. Untuk file `kalimantan-latest.osm.pbf` yang berukuran 138 MB, proses import data bisa memakan waktu sekitar 30 menit hingga 1 jam.
 
 Untuk melihat log dari container, bisa menggunakan perintah berikut:
 
@@ -388,7 +388,7 @@ $ docker-compose down
 
 ## Kesimpulan
 
-Dalam artikel ini, saya telah mendokumentasikan cara menjalankan OpenStreetMap Nominatim menggunakan Docker, mulai dari membuat Docker Compose, mempersiapkan file `.pbf`, menjalankan Docker Compose, mencoba Nominatim API, hingga menghentikan Docker Compose. Dengan menggunakan Docker, proses setup Nominatim menjadi lebih mudah dan cepat, tanpa perlu repot mengatur lingkungan dan dependensi secara manual.
+Dalam artikel ini, saya telah mendokumentasikan cara menjalankan OpenStreetMap Nominatim menggunakan Docker, mulai dari membuat Docker Compose, mempersiapkan file `.osm.pbf`, menjalankan Docker Compose, mencoba Nominatim API, hingga menghentikan Docker Compose. Dengan menggunakan Docker, proses setup Nominatim menjadi lebih mudah dan cepat, tanpa perlu repot mengatur lingkungan dan dependensi secara manual.
 
 Pada artikel selanjutnya, saya akan mendokumentasikan cara menggunakan Nominatim self-hosted pada Geocoder gem untuk melakukan geocoding dan reverse geocoding di aplikasi Ruby on Rails, "[Menggunakan Nominatim Self-Hosted pada Geocoder Gem]({{ site.url }}/blog/menggunakan-nominatim-self-hosted-pada-geocoder-gem)"
 
