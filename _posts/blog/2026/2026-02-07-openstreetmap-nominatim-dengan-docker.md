@@ -103,7 +103,7 @@ Saya menggunakan 2 values untuk `volumes`,
 Secara default nonimatin mengekspose port `8080` di dalam container, sehingga saya juga expose port `8080` di bagian `expose`. Agar bisa diakses dari luar container, saya juga memetakan port `8080` di host ke port `8080` di dalam container dengan menggunakan `ports`.
 
 
-### 2. Persiapkan File `.pbf`
+### 2. Persiapkan data OSM berupa file `.pbf`
 
 Sebelum menjalankan Docker Compose, pastikan sudah memiliki file `.pbf` yang akan digunakan untuk proses import data. File `.pbf` ini bisa didapatkan dari situs [Geofabrik](https://download.geofabrik.de/). 
 
