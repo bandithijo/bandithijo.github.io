@@ -189,15 +189,15 @@
   }
 
   .markdown code {
-    @apply font-mono text-[16px] text-[#d4d4d4] inline bg-zinc-800 rounded-md px-1.5 py-0.5;
+    @apply font-mono text-[14px] text-[#d4d4d4] inline bg-zinc-800 rounded-md px-1.5 py-0.5;
   }
 
   .markdown pre {
-    @apply bg-zinc-800 rounded-md p-0 text-[16px] mb-5;
+    @apply bg-zinc-800 rounded-md p-0 text-[14px] mb-5;
   }
 
   .markdown pre code {
-    @apply block p-4 overflow-x-auto text-[16px];
+    @apply block p-4 overflow-x-auto text-[14px];
   }
 
   .markdown pre code > table.rouge-table {
@@ -205,13 +205,13 @@
   }
 
   .markdown pre code > table.rouge-table td.gutter.gl {
-    @apply select-none pr-3 text-[16px] text-right;
+    @apply select-none pr-3 text-[14px] text-right;
   }
 
   .markdown pre code > table.rouge-table td,
   .markdown pre code > table.rouge-table tr,
   .markdown pre code > table.rouge-table pre {
-    @apply border-none p-0 text-[16px];
+    @apply border-none p-0 text-[14px];
   }
 
   .markdown ul {
