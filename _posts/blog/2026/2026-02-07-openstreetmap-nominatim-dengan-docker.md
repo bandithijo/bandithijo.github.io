@@ -71,10 +71,6 @@ services:
 
 volumes:
  nominatim-data:
-
-networks:
- default:
-   name: osm-net
 ```
 
 Saya menggunakan docker image `mediagis/nominatim:5.2` yang sudah tersedia di Docker Hub.
