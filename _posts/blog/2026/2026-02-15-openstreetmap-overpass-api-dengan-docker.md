@@ -181,7 +181,7 @@ Nah, tinggal tambahkan query untuk mencari data OSM berdasarkan kriteria tertent
 
 Gunakan juga header `Content-Type: application/x-www-form-urlencoded` untuk mengirim data query dalam format URL encoded.
 
-Misalnya, untuk mencari semua POI dengan tag `amenity=restaurant` di wilayah Kalimantan, kita bisa menggunakan query berikut:
+Misalnya, untuk mencari semua POI dengan tag `amenity=cafe` di wilayah Kalimantan, kita bisa menggunakan query berikut:
 
 ```
 $ curl -X POST http://localhost:8081/api/interpreter -H "Content-Type: application/x-www-form-urlencoded" --data "data=[out:json];node[amenity=cafe](around:5000, -1.2286365, 116.8941987);out;"
