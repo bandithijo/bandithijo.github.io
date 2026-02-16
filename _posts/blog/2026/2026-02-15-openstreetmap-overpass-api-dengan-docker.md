@@ -181,10 +181,10 @@ Nah, tinggal tambahkan query untuk mencari data OSM berdasarkan kriteria tertent
 
 Gunakan juga header `Content-Type: application/x-www-form-urlencoded` untuk mengirim data query dalam format URL encoded.
 
-Misalnya, untuk mencari semua POI dengan tag `amenity=cafe` di wilayah Kalimantan, kita bisa menggunakan query berikut:
+Misalnya, untuk mencari semua POI dengan tag `amenity=cafe` pada radius 5000 meter dari titik user berada (`-1.2286365, 116.8941987`), kita bisa menggunakan query berikut:
 
 ```
-$ curl -X POST http://localhost:8081/api/interpreter -H "Content-Type: application/x-www-form-urlencoded" --data "data=[out:json];node[amenity=cafe](around:5000, -1.2286365, 116.8941987);out;"
+$ curl -X POST http://localhost:8081/api/interpreter -H "Content-Type: application/x-www-form-urlencoded" --data "data=[out:json];node[amenity=cafe](around:5000, -1.2286365, 116.8941987);out center;"
 ```
 
 Outputnya dalam bentuk JSON akan seperti ini,
@@ -279,6 +279,16 @@ Outputnya dalam bentuk JSON akan seperti ini,
 ```
 
 Dari data di atas, kita bisa melihat bahwa terdapat beberapa POI dengan tag `amenity=cafe` pada radius 5000 meter dari latitude dan longitude yang saya definisikan  yang berhasil ditemukan oleh Overpass API.
+
+Silahkan sesuaikan query sesuai dengan kebutuhan untuk mencari data OSM berdasarkan kriteria tertentu. Berikut adalah contoh query dalam format Overpass QL yang digunakan di atas:
+
+```xml
+[out:json];
+(
+  node[amenity=cafe](around:5000, -1.2286365, 116.8941987);
+);
+out center;
+```
 
 
 ### 5. Stop Docker Compose
