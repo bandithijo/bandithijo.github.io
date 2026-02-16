@@ -10,6 +10,9 @@ tags: ["openstreetmap", "nominatim"]
 description: "OpenStreetMap Nominatim adalah sebuah layanan geocoding yang memungkinkan pengguna untuk mencari lokasi berdasarkan nama tempat  atau alamat (forward search) atau geographic coordinate (reverse search). Dalam artikel ini, saya akan mendokumentasikan cara menjalankan OpenStreetMap Nominatim menggunakan Docker agar proses setup Nominatim menjadi lebih mudah dan cepat, tanpa perlu repot mengatur lingkungan dan dependensi secara manual."
 ---
 
+![Gambar 1]({{ site.url }}{{ page.assets }}/gambar_01.png)
+
+
 ## Pendahuluan
 
 {{ page.description }}

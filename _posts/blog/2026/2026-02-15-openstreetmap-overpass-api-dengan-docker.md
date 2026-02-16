@@ -10,6 +10,9 @@ tags: ["openstreetmap", "overpass", "overpassapi"]
 description: "Overpass API adalah sebuah API yang memungkinkan untuk melakukan query terhadap data OpenStreetMap yang dapat digunakan untuk mencari POI (Point of Interest) pada radius tertentu dari lokasi yang didefinisikan. Pada artikel ini, saya akan mencatat langkah-langkah untuk menjalankan instance Overpass API menggunakan Docker."
 ---
 
+![Gambar 1]({{ site.url }}{{ page.assets }}/gambar_01.png)
+
+
 ## Apa itu Overpass API?
 
 Overpass API adalah sebuah API yang memungkinkan untuk melakukan query terhadap data OpenStreetMap (OSM) yang dapat digunakan untuk mencari POI (Point of Interest) pada radius tertentu dari lokasi yang didefinisikan. Overpass API menggunakan bahasa query yang disebut Overpass QL. Dengan Overpass API, kita dapat melakukan query untuk mencari data OSM berdasarkan kriteria tertentu, seperti jenis POI, lokasi, dan lain-lain.
