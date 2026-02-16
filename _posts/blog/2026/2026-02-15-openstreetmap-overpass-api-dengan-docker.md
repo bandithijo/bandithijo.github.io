@@ -278,6 +278,8 @@ Outputnya dalam bentuk JSON akan seperti ini,
 }
 ```
 
+Dari data di atas, kita bisa melihat bahwa terdapat beberapa POI dengan tag `amenity=cafe` pada radius 5000 meter dari latitude dan longitude yang saya definisikan  yang berhasil ditemukan oleh Overpass API.
+
 
 ### 5. Stop Docker Compose
 
