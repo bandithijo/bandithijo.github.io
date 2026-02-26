@@ -134,7 +134,6 @@ SimpleJekyllSearch({
   resultsContainer: document.getElementById('results-container'),
   json: '/blogroll/index.json',
   templateType: 'blogroll',
-  exclude: ['urls'],
   templateMiddleware: function (prop, value) {
     if (prop === 'urls' && Array.isArray(value)) {
       return value

@@ -67,18 +67,26 @@
               const o = [];
               for (let t = 0; t < e.length && o.length < i.limit; t++) {
                 var u = (function (t, e, n, r) {
-                  for (const i in t)
-                    if (
-                      !(function (n, r) {
-                        for (let t = 0, e = r.length; t < e; t++) {
-                          var i = r[t];
-                          if (new RegExp(i).test(n)) return !0;
-                        }
-                        return !1;
-                      })(t[i], r.exclude) &&
-                      typeof t[i] === 'string' && n.matches(t[i], e)
-                    )
-                      return t;
+                  for (const i in t) {
+                    // skip excluded fields
+                    if ((function (n, r) {
+                      for (let t = 0, e = r.length; t < e; t++) {
+                        var i = r[t];
+                        if (new RegExp(i).test(n)) return !0;
+                      }
+                      return !1;
+                    })(t[i], r.exclude)) continue;
+
+                    // string fields (title, description, etc.)
+                    if (typeof t[i] === 'string' && n.matches(t[i], e)) return t;
+
+                    // array fields (e.g., tags) - check each element
+                    if (Array.isArray(t[i])) {
+                      for (let k = 0; k < t[i].length; k++) {
+                        if (typeof t[i][k] === 'string' && n.matches(t[i][k], e)) return t;
+                      }
+                    }
+                  }
                 })(e[t], n, r, i);
                 u && o.push(u);
               }
@@ -192,7 +200,16 @@
         json: [],
         success: Function.prototype,
         searchResultTemplate: '', // Will be set based on template type
-        templateMiddleware: Function.prototype,
+        // Default middleware will render tags array into HTML if present
+        templateMiddleware: function(key, value, template) {
+          if (key === 'tags' && Array.isArray(value)) {
+            return value
+              .map(tag => `<span class="inline-block bg-neutral-200 dark:bg-neutral-800 text-sm px-2 py-1 rounded mr-2">#${tag}</span>`)
+              .join(' ');
+          }
+          // fallback: return undefined so compile will use original value
+          return undefined;
+        },
         sortMiddleware: function () {
           return 0;
         },
@@ -242,12 +259,12 @@
     t.SimpleJekyllSearch = function (t) {
       var n;
       0 < o.validate(t).length && a("You must specify the following required options: " + r);
-      
+
       // Set template based on templateType
       if (t.templateType && TEMPLATES[t.templateType]) {
         t.searchResultTemplate = TEMPLATES[t.templateType];
       }
-      
+
       (i = w.merge(i, t)),
         f.setOptions({ template: i.searchResultTemplate, middleware: i.templateMiddleware }),
         d.setOptions({ fuzzy: i.fuzzy, limit: i.limit, sort: i.sortMiddleware, exclude: i.exclude }),

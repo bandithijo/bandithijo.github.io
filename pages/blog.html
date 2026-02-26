@@ -124,7 +124,6 @@ SimpleJekyllSearch({
   resultsContainer: document.getElementById('results-container'),
   json: '/blog/index.json',
   templateType: 'posts',  // This tells the script to use the posts template
-  exclude: ['tags'],
   templateMiddleware: function (prop, value) {
     if (prop === 'tags' && Array.isArray(value)) {
       return value
