@@ -22,7 +22,8 @@ layout: baseof
 
       <div class="w-full mt-10">Tags: 
         {% for tag in page.tags %}
-          <span class="inline-block bg-neutral-200 dark:bg-neutral-700 text-sm px-2 py-1 rounded-md mr-2 mb-1">#{{ tag }}</span>
+          {% if page.categories contains 'note' %}{% assign tag_base = '/note/tag/' %}{% else %}{% assign tag_base = '/blog/tag/' %}{% endif %}
+          <a href="{{ tag_base }}#{{ tag | downcase }}" class="inline-block bg-neutral-200 dark:bg-neutral-700 text-sm px-2 py-1 rounded-md mr-2 mb-1 hover:underline">#{{ tag }}</a>
         {% endfor %}
       </div>
 
