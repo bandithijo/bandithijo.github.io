@@ -4,7 +4,8 @@
       "Bash(rtk git *)",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(rtk read *)"
+      "Bash(rtk read *)",
+      "Bash(rtk grep *)"
     ]
   }
 }
