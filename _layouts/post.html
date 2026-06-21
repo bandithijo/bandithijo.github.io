@@ -5,7 +5,7 @@ layout: baseof
 <section id="content" class="pt-10 pb-10">
   <div class="container px-0 md:max-w-6xl">
     <div class="px-4">
-      <h1 class="text-5xl tracking-tight font-bold mb-8 break-words">
+      <h1 class="text-5xl tracking-tight font-bold mb-8 wrap-break-word">
         {{ page.title }}
       </h1>
 
@@ -117,8 +117,81 @@ layout: baseof
   </div>
 </section>
 
+<style>
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  cursor: zoom-out;
+}
+.lightbox-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.lightbox-overlay img {
+  max-width: 92vw;
+  max-height: 92vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 8px 48px rgba(0, 0, 0, 0.6);
+  cursor: default;
+  user-select: none;
+}
+.lightbox-close {
+  position: fixed;
+  top: 1rem;
+  right: 1.25rem;
+  color: white;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  background: none;
+  border: none;
+  opacity: 0.75;
+  transition: opacity 0.15s;
+  z-index: 10000;
+}
+.lightbox-close:hover { opacity: 1; }
+.markdown img { cursor: zoom-in; }
+</style>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+  // Lightbox for images
+  const overlay = document.createElement('div');
+  overlay.className = 'lightbox-overlay';
+  overlay.innerHTML = '<button class="lightbox-close" aria-label="Tutup">&times;</button><img alt="">';
+  document.body.appendChild(overlay);
+
+  const lightboxImg = overlay.querySelector('img');
+  const closeBtn   = overlay.querySelector('.lightbox-close');
+
+  const openLightbox = (src, alt) => {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || '';
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+  const closeLightbox = () => {
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  document.querySelectorAll('.markdown img').forEach((img) => {
+    img.addEventListener('click', () => openLightbox(img.src, img.alt));
+  });
+
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) closeLightbox(); });
+  closeBtn.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
   // Center paragraphs that match "Gambar (number)." pattern
   document.querySelectorAll('.markdown p').forEach((p) => {
     const text = p.textContent.trim();
