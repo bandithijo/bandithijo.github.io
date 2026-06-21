@@ -43,7 +43,7 @@ module.exports = {
         solarized_green:   "#859900",
       },
       fontFamily: {
-        sans: ["Open Sans"],
+        sans: ["Plus Jakarta Sans"],
         mono: ["Roboto Mono"]
       },
     }

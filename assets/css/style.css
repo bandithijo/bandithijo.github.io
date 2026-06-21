@@ -11,7 +11,7 @@
 @layer utilities {
   html { scroll-behavior: smooth; }
   body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     @apply bg-white text-dark text-base;
   }
   .navbar-fixed {
