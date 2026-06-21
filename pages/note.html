@@ -59,7 +59,7 @@ permalink: '/note/'
           <div class="flex justify-between items-end gap-2">
             <div class="w-2/3">
               {% for tag in post.tags %}
-                <span class="text-sm text-gray-600 dark:text-neutral-300">#{{ tag }}</span>
+                <a href="/note/tag/#{{ tag | downcase }}" class="text-sm text-gray-600 dark:text-neutral-300 hover:underline">#{{ tag }}</a>
               {% endfor %}
             </div>
             <p class="w-1/3 text-base text-right text-gray-600 dark:text-neutral-300 font-mono">{{ post.date | date: '%Y.%m.%d' }}</p>
