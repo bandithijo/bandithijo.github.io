@@ -49,7 +49,7 @@ pagenote: 'Data will be randomly generated on each page refresh.'
   <div id="post-container">
     {% for friend in site.data.blogroll.friends %}
     {% unless friend.name contains 'Rizqi Nur Assyaufi' %}
-      <div class="masonry-item absolute p-4 bg-white dark:bg-neutral-900 rounded-lg border border-gray-900 dark:border-neutral-400 hover:border-dark dark:hover:border-neutral-400 group"
+      <div class="masonry-item absolute p-2 sm:p-4 bg-white dark:bg-neutral-900 rounded-lg border border-gray-900 dark:border-neutral-400 hover:border-dark dark:hover:border-neutral-400 group"
         style="width: calc(25% - 12px);">
         <div class="flex items-center space-x-4 mb-4">
           <img src="{{ friend.photo }}" alt="{{ friend.github_username }}" class="w-16 h-16 rounded-full border border-zinc-300 dark:border-zinc-700">

@@ -48,7 +48,7 @@ permalink: '/blog/'
   <div id="post-container">
     {% assign blog_posts = site.posts | where_exp: "post", "post.categories contains 'blog'" %}
     {% for post in blog_posts %}
-      <div class="masonry-item absolute p-4 bg-white dark:bg-neutral-900 rounded-lg border border-gray-900 dark:border-neutral-400 hover:border-dark dark:hover:border-neutral-400 group"
+      <div class="masonry-item absolute p-2 sm:p-4 bg-white dark:bg-neutral-900 rounded-lg border border-gray-900 dark:border-neutral-400 hover:border-dark dark:hover:border-neutral-400 group"
         style="width: calc(25% - 12px);">
         <a href="{{ post.url }}" class="text-dark dark:text-white">
           <div class="flex flex-row mb-3">

@@ -30,7 +30,7 @@ category: 'note'
   <div id="post-container">
     {% assign filtered_posts = site.posts | where_exp: "post", "post.categories contains page.category" %}
     {% for post in filtered_posts %}
-      <div class="masonry-item absolute p-4 bg-white dark:bg-neutral-900 rounded-lg border border-gray-900 dark:border-neutral-400 hover:border-dark dark:hover:border-neutral-400 group"
+      <div class="masonry-item absolute p-2 sm:p-4 bg-white dark:bg-neutral-900 rounded-lg border border-gray-900 dark:border-neutral-400 hover:border-dark dark:hover:border-neutral-400 group"
         style="width: calc(25% - 12px);" data-tags="{{ post.tags | join: ',' | downcase }}">
         <a href="{{ post.url }}" class="text-dark dark:text-white">
           <div class="flex flex-row mb-3">
