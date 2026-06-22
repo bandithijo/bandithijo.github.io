@@ -14,7 +14,9 @@ layout: baseof
         <div class="w-full md:w-4/5">Author by: {{ page.author }}</div>
       </div>
 
-      {% include toc_template.html %}
+      {% if content contains '<h2' or content contains '<h3' %}
+        {% include toc_template.html %}
+      {% endif %}
 
       <div class="markdown dark:text-white">
         {{ content }}
