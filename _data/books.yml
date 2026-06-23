@@ -41,7 +41,7 @@ books:
 
   - title: "The Psychology of Money"
     subtitle: "Pelajaran abadi mengenai kekayaan, ketamakan, dan kebahagiaan"
-    genre: "selfimprovement"
+    genre: "finance"
     publisher: "baca"
     author: "Morgan Housel"
     publish_at: "2021/05"
@@ -49,7 +49,7 @@ books:
 
   - title: "Rework"
     subtitle: "Ubahlah cara kerjamu selamanya!"
-    genre: "selfimprovement"
+    genre: "business"
     publisher: "renebook"
     author: "Jason Fried, David Heinemeier Hansson"
     publish_at: "2021/04"
@@ -57,7 +57,7 @@ books:
   
   - title: "Indonesian Mental Health First Aid Booklet"
     subtitle: "Panduan pertolongan pertama kesehatan jiwa Indonesia"
-    genre: "selfimprovement"
+    genre: "health"
     publisher: "Kompas"
     author: "Dr. Sandersan Onie"
     publish_at: "2021/08"
@@ -65,7 +65,7 @@ books:
 
   - title: "Pendidikan Kaum Tertindas"
     subtitle: ""
-    genre: "selfimprovement"
+    genre: "philosophy"
     publisher: "Narasi"
     author: "Paulo Freire"
     publish_at: "2019"
