@@ -190,6 +190,17 @@
         <p class="text-gray-600 dark:text-neutral-300 mb-4">{detail}</p>
         {urls}
       </div>
+    `,
+    books: `
+      <div class="masonry-item absolute p-2 sm:p-4 opacity-0 bg-white dark:bg-neutral-900 rounded-lg border border-gray-900 dark:border-neutral-400 hover:border-dark dark:hover:border-neutral-400">
+        <h2 class="text-lg font-bold">{title}</h2>
+        <p class="text-sm text-gray-600 dark:text-neutral-300 italic">{subtitle}</p>
+        <p class="text-base mt-2">{author}</p>
+        <div class="flex justify-between items-center mt-3 text-sm text-gray-600 dark:text-neutral-300 font-mono">
+          <span>{genre}</span>
+          <span>({publish_at}) {read_at}</span>
+        </div>
+      </div>
     `
   };
 

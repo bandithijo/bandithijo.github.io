@@ -1,0 +1,17 @@
+---
+layout: none
+permalink: /book/index.json
+---
+[
+  {% for book in site.data.books.books %}
+    {
+      "title":{{ book.title | jsonify }},
+      "subtitle":{{ book.subtitle | jsonify }},
+      "genre":{{ book.genre | jsonify }},
+      "publisher":{{ book.publisher | jsonify }},
+      "author":{{ book.author | jsonify }},
+      "publish_at":{{ book.publish_at | jsonify }},
+      "read_at":{{ book.read_at | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

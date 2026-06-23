@@ -1,0 +1,236 @@
+---
+layout: 'page_list'
+title: 'Book'
+permalink: '/book/'
+---
+
+<div class="mb-4">
+  <!-- Search Input -->
+  <div id="search-container" class="flex items-center">
+    <span class="sr-only">Search</span>
+    <div class="relative w-full">
+      <input type="text" id="search-input" placeholder="Search by title, subtitle, or author..." autocomplete="off"
+        class="text-left rounded-lg border border-gray-900 dark:border-neutral-400 dark:bg-neutral-900 outline-none px-3 py-2 pr-20 w-full placeholder:text-base placeholder:font-thin placeholder:text-neutral-400 focus:outline-none focus:ring-0 focus:ring-gray-900 focus:border-gray-900 dark:focus:ring-neutral-400 dark:focus:border-neutral-400 select-none">
+      <div class="absolute inset-y-0 right-1 flex items-center space-x-2">
+        <kbd class="inline-flex items-center border border-gray-200 dark:border-neutral-700 rounded-md px-2 py-0.5 text-xs font-medium dark:bg-neutral-900 text-gray-400 dark:text-neutral-400 select-none">
+          <span class="text-lg">⌘</span><span class="mx-1">K</span>
+        </kbd>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Loader -->
+  <div id="search-loader" class="flex items-center justify-center py-8 hidden">
+    <div class="flex items-center space-x-2">
+      <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse"></div>
+      <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+      <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+    </div>
+  </div>
+
+  <!-- Search Results -->
+  <div id="results-wrapper" class="relative opacity-0 transition-opacity duration-300 mt-4 hidden">
+    <div id="results-container"></div>
+  </div>
+</div>
+
+<!-- Genre Filter Indicator -->
+<div id="genre-label" class="mb-6 hidden">
+  <span id="genre-name" class="text-lg font-mono text-gray-600 dark:text-neutral-300"></span>
+  <a href="#" id="genre-clear" class="ml-1 text-xs text-gray-600 dark:text-neutral-300 hover:underline align-super">&times;</a>
+</div>
+
+<!-- Masonry Loader -->
+<div id="masonry-loader" class="flex items-center justify-center py-4">
+  <div class="flex items-center space-x-2">
+    <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse"></div>
+    <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+    <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+  </div>
+</div>
+
+<!-- Masonry Container -->
+<div id="masonry-container" class="relative opacity-0 transition-opacity duration-300">
+  <div id="post-container">
+    {% assign sorted_books = site.data.books.books | sort: "read_at" | reverse %}
+    {% for book in sorted_books %}
+      <div class="masonry-item absolute p-2 sm:p-4 bg-white dark:bg-neutral-900 rounded-lg border border-gray-900 dark:border-neutral-400 hover:border-dark dark:hover:border-neutral-400 group"
+        data-genre="{{ book.genre }}" style="width: calc(25% - 12px);">
+        <div class="flex flex-row mb-2">
+          <span class="px-1 py-0 mr-3 rounded-full bg-neutral-300 dark:bg-neutral-700 group-hover:bg-neutral-700 group-hover:dark:bg-neutral-300"></span>
+          <h2 class="text-lg font-bold">{{ book.title }}</h2>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-neutral-300 italic">{{ book.subtitle }}</p>
+        <p class="text-base mt-2">{{ book.author }}</p>
+        <div class="flex justify-between items-center mt-3 text-sm text-gray-600 dark:text-neutral-300 font-mono">
+          <a href="#" class="genre-tag hover:underline" data-genre="{{ book.genre }}">#{{ book.genre }}</a>
+          <span>({{ book.publish_at }}) {{ book.read_at }}</span>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Masonry Layout Script -->
+<script>
+function layoutMasonry(containerId) {
+  const wrapper = document.getElementById(containerId);
+  if (!wrapper) return;
+  const items = Array.from(wrapper.querySelectorAll('.masonry-item')).filter(el => el.style.display !== 'none');
+  const gap = 16;
+  const cols = window.innerWidth >= 1024 ? 3 : (window.innerWidth >= 640 ? 2 : 1);
+  const colWidth = (wrapper.offsetWidth - (gap * (cols - 1))) / cols;
+  const colHeights = new Array(cols).fill(0);
+
+  items.forEach((item, index) => {
+    const col = index % cols;
+    const x = col * (colWidth + gap);
+    const y = colHeights[col];
+
+    item.style.left = x + 'px';
+    item.style.top = y + 'px';
+    item.style.width = colWidth + 'px';
+
+    colHeights[col] += item.offsetHeight + gap;
+  });
+
+  wrapper.style.height = Math.max(...colHeights) + 'px';
+  wrapper.style.opacity = '1';
+}
+
+function initMasonry() {
+  const loader = document.getElementById('masonry-loader');
+  const container = document.getElementById('masonry-container');
+  loader.style.display = 'flex';
+  container.style.opacity = '0';
+
+  setTimeout(() => {
+    layoutMasonry('masonry-container');
+    loader.style.display = 'none';
+    container.style.opacity = '1';
+  }, 50);
+}
+
+window.addEventListener('load', initMasonry);
+window.addEventListener('resize', () => {
+  layoutMasonry('masonry-container');
+  layoutMasonry('results-wrapper');
+});
+</script>
+
+<!-- Search -->
+<script src="/assets/javascript/search.js" type="text/javascript"></script>
+<script>
+SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  json: '/book/index.json',
+  templateType: 'books'
+});
+
+function fadeInResults() {
+  const items = document.querySelectorAll('#results-container .masonry-item');
+  items.forEach((el, index) => {
+    el.classList.remove('opacity-0');
+    el.classList.add('fade-in');
+    el.style.animationDelay = `${index * 50}ms`;
+  });
+}
+
+document.getElementById('search-input').addEventListener('input', function (e) {
+  const value = e.target.value.trim();
+  const postContainer = document.getElementById('post-container');
+  const masonryContainer = document.getElementById('masonry-container');
+  const resultsWrapper = document.getElementById('results-wrapper');
+  const resultsContainer = document.getElementById('results-container');
+  const searchLoader = document.getElementById('search-loader');
+
+  if (value.length > 0) {
+    postContainer.style.display = 'none';
+    masonryContainer.style.display = 'none';
+    resultsWrapper.classList.remove('hidden');
+    searchLoader.classList.remove('hidden');
+    resultsWrapper.style.opacity = '0';
+
+    setTimeout(() => {
+      layoutMasonry('results-wrapper');
+      fadeInResults();
+      searchLoader.classList.add('hidden');
+      resultsWrapper.style.opacity = '1';
+    }, 200);
+  } else {
+    postContainer.style.display = 'block';
+    masonryContainer.style.display = 'block';
+    resultsWrapper.classList.add('hidden');
+    searchLoader.classList.add('hidden');
+  }
+});
+
+// Genre Filter
+const totalBooks = document.querySelectorAll('#post-container .masonry-item').length;
+let activeGenre = null;
+
+function applyGenreFilter(genre) {
+  const items = document.querySelectorAll('#post-container .masonry-item');
+  const label = document.getElementById('genre-label');
+  const nameEl = document.getElementById('genre-name');
+  const countEl = document.getElementById('page-count');
+
+  if (!genre || activeGenre === genre) {
+    activeGenre = null;
+    items.forEach(el => el.style.display = '');
+    label.classList.add('hidden');
+    if (countEl) countEl.textContent = totalBooks + ' books';
+  } else {
+    activeGenre = genre;
+    let visible = 0;
+    items.forEach(el => {
+      const match = el.dataset.genre === genre;
+      el.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+    nameEl.textContent = '#' + genre;
+    label.classList.remove('hidden');
+    if (countEl) countEl.textContent = visible + ' books';
+  }
+  layoutMasonry('masonry-container');
+}
+
+document.getElementById('post-container').addEventListener('click', function (e) {
+  const tag = e.target.closest('.genre-tag');
+  if (!tag) return;
+  e.preventDefault();
+  applyGenreFilter(tag.dataset.genre);
+});
+
+document.getElementById('genre-clear').addEventListener('click', function (e) {
+  e.preventDefault();
+  applyGenreFilter(null);
+});
+
+// Keyboard Shortcut for Search Input
+(function () {
+  const input = document.getElementById('search-input');
+  if (!input) return;
+
+  function isEditing() {
+    const el = document.activeElement;
+    if (!el) return false;
+    const tag = el.tagName;
+    return el.isContentEditable ||
+           tag === 'INPUT' ||
+           tag === 'TEXTAREA' ||
+           tag === 'SELECT' ||
+           el.getAttribute && el.getAttribute('role') === 'textbox';
+  }
+
+  document.addEventListener('keydown', function (e) {
+    const key = e.key ? e.key.toLowerCase() : '';
+    const modifier = e.ctrlKey || e.metaKey;
+    if (!modifier || key !== 'k') return;
+    if (isEditing()) return;
+    e.preventDefault();
+    input.focus();
+  });
+})();
+</script>
