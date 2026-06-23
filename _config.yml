@@ -52,13 +52,13 @@ nav_top:
     url: /blog/
   - title: Note
     url: /note/
-  - title: Portfolio
-    url: /portfolio/
+  - title: Book
+    url: /book/
   - title: About
     url: /about/
 nav_bottom:
-  - title: Book
-    url: /book/
+  - title: Portfolio
+    url: /portfolio/
   - title: Product
     url: /product/
   - title: Blogroll
