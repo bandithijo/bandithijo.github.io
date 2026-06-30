@@ -70,3 +70,11 @@ books:
     author: "Paulo Freire"
     publish_at: "2019"
     read_at: "2026/04"
+
+  - title: "Remote"
+    subtitle: ""
+    genre: "business"
+    publisher: "renebook"
+    author: "Jason Fried, David Heinemeier Hansson"
+    publish_at: "2021"
+    read_at: "2026/06"
