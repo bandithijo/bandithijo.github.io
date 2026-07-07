@@ -329,3 +329,13 @@ friends:
     I'm Akhyar (Akhy for short, pronounced "a-khee"). I write code and build things.<br>
     During the day, I work on deployment platform and infrastructure stuff. Kubernetes clusters, CI/CD pipelines, that kind of thing. Outside of work, I build small tools that solve my own problems and wishing others find them useful too.<br>
     I write about the technical stuff I'm working on. Not tutorials or guides, just what I built, why, and how it went. Sometimes it works great. Sometimes there are trade-offs. Either way, I write about it.
+
+
+- github_username: "pirey"
+  name:  "Yeri Pratama"
+  photo: "https://github.com/pirey.png?size=200"
+  urls:
+    - "https://yeripratama.com/"
+    - "https://github.com/pirey"
+  detail: >-
+    I’m a software engineer with experience contributing to and maintaining production systems, including multi-tenant platforms and developer tooling. I’ve worked on live-service gaming and SaaS products, collaborated with global teams, and partnered closely with clients to deliver practical, maintainable solutions used in production.
