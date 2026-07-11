@@ -252,7 +252,7 @@
   }
   
   .markdown img {
-    @apply block mx-auto;
+    @apply block mx-auto mt-8;
   }
 
   .markdown .img-caption {
