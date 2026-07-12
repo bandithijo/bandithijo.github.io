@@ -79,7 +79,7 @@ Berikut ini profil dari Chocofi.
 3. Column Staggered dengan kolom pinky (kolom ke 5) dibuat lebih turun mengikuti bentuk anatomi jari kelingking. Menurut saya, layout ini cocok untuk tipikal jari orang asia yang memiliki jari jemari yang mungil
 4. Terinspirasi dari keyboard Fifi, dan menggunakan firmware Seperti Corne dan Miryoku
 5. Support ZMK Studio untuk kebutuhan custom mapping keys sesuai kebutuhan tanpa perlu flash tinggal copy & paste
-6. Dilengkapi Switch On Off dan menggunakan baterai 500mah di masing-masing sisi.
+6. Dilengkapi Switch On Off dan menggunakan baterai 500 mAh di masing-masing sisi.
 
 Berikut ini spesifikasi dari Chocofi.
 
@@ -105,6 +105,54 @@ Berikut ini spesifikasi dari Chocofi.
 ![gambar 8]({{ page.assets | absolute_url }}/gambar_08.jpg)
 
 ![gambar 9]({{ page.assets | absolute_url }}/gambar_09.jpg)
+
+![gambar 15]({{ page.assets | absolute_url }}/gambar_15.jpg)
+
+![gambar 16]({{ page.assets | absolute_url }}/gambar_16.jpg)
+
+![gambar 17]({{ page.assets | absolute_url }}/gambar_17.jpg)
+
+![gambar 18]({{ page.assets | absolute_url }}/gambar_18.jpg)
+
+![gambar 19]({{ page.assets | absolute_url }}/gambar_19.jpg)
+
+![gambar 20]({{ page.assets | absolute_url }}/gambar_20.jpg)
+
+![gambar 21]({{ page.assets | absolute_url }}/gambar_21.jpg)
+
+![gambar 22]({{ page.assets | absolute_url }}/gambar_22.jpg)
+
+![gambar 23]({{ page.assets | absolute_url }}/gambar_23.jpg)
+
+![gambar 24]({{ page.assets | absolute_url }}/gambar_24.jpg)
+
+![gambar 25]({{ page.assets | absolute_url }}/gambar_25.jpg)
+
+![gambar 26]({{ page.assets | absolute_url }}/gambar_26.jpg)
+
+![gambar 27]({{ page.assets | absolute_url }}/gambar_27.jpg)
+
+![gambar 28]({{ page.assets | absolute_url }}/gambar_28.jpg)
+
+![gambar 29]({{ page.assets | absolute_url }}/gambar_29.jpg)
+
+![gambar 30]({{ page.assets | absolute_url }}/gambar_30.jpg)
+
+![gambar 31]({{ page.assets | absolute_url }}/gambar_31.jpg)
+
+![gambar 32]({{ page.assets | absolute_url }}/gambar_32.jpg)
+
+![gambar 33]({{ page.assets | absolute_url }}/gambar_33.jpg)
+
+![gambar 34]({{ page.assets | absolute_url }}/gambar_34.jpg)
+
+![gambar 35]({{ page.assets | absolute_url }}/gambar_35.jpg)
+
+![gambar 36]({{ page.assets | absolute_url }}/gambar_36.jpg)
+
+![gambar 37]({{ page.assets | absolute_url }}/gambar_37.jpg)
+
+![gambar 38]({{ page.assets | absolute_url }}/gambar_38.jpg)
 
 Awal mula mencoba ngetik, saya hanya dapat 5 WPM. Beberapa jam kemudian mulai naik ke 15 WPM. Setalah 24 jam mulai naik ke 40 WPM.
 
