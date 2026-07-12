@@ -63,7 +63,7 @@ Dengan menggunakan split keyboard, akan memberikan jarak antara kedua tangan, se
 
 ## Chocofi
 
-Sebelum mengenal Chocofi, sebenarnya saya hanya mengincar Corne. Tapi setelah berkeliling market place, saya tidak menemukan pre-built model Corne yang saya suka. Saya cenderung menyukai Chocofi pre-built yang sudah sesuai dengan selera saya, yaitu:
+Sebelum mengenal Chocofi, sebenarnya saya hanya mengincar Corne. Tapi setelah berkeliling marketplace, saya tidak menemukan pre-built model Corne yang saya suka. Saya cenderung menyukai Chocofi pre-built yang sudah sesuai dengan selera saya, yaitu:
 
 1. Full black
 2. Low profile
@@ -92,11 +92,19 @@ Berikut ini spesifikasi dari Chocofi.
 7. Type C Connector
 8. 1 Meter braided USB Type C Cable
 
-![gambar 3]({{ page.assets | absolute_url }}/gambar_03.webp)
+![gambar 3]({{ page.assets | absolute_url }}/gambar_03.jpg)
 
-![gambar 4]({{ page.assets | absolute_url }}/gambar_04.webp)
+![gambar 4]({{ page.assets | absolute_url }}/gambar_04.jpg)
 
-![gambar 5]({{ page.assets | absolute_url }}/gambar_05.webp)
+![gambar 5]({{ page.assets | absolute_url }}/gambar_05.jpg)
+
+![gambar 6]({{ page.assets | absolute_url }}/gambar_06.jpg)
+
+![gambar 7]({{ page.assets | absolute_url }}/gambar_07.jpg)
+
+![gambar 8]({{ page.assets | absolute_url }}/gambar_08.jpg)
+
+![gambar 9]({{ page.assets | absolute_url }}/gambar_09.jpg)
 
 Awal mula mencoba ngetik, saya hanya dapat 5 WPM. Beberapa jam kemudian mulai naik ke 15 WPM. Setalah 24 jam mulai naik ke 40 WPM.
 
@@ -118,21 +126,21 @@ Berikut ini layer-layer yang saya pergunakan.
 3. layer 2 (fun_layer), function buttons
 4. layer 3 (sys_layer), system layer untuk pengaturan konektifitas bluetooth
 
-![gambar 6]({{ page.assets | absolute_url }}/gambar_06.png)
+![gambar 10]({{ page.assets | absolute_url }}/gambar_10.png)
 
-Gambar 6. layer 0 (qwerty_layer), base layer atau front layer
+Gambar 10. layer 0 (qwerty_layer), base layer atau front layer
 
-![gambar 7]({{ page.assets | absolute_url }}/gambar_07.png)
+![gambar 11]({{ page.assets | absolute_url }}/gambar_11.png)
 
-Gambar 7. layer 1 (numsym_layer), numeric & symbol layer
+Gambar 11. layer 1 (numsym_layer), numeric & symbol layer
 
-![gambar 8]({{ page.assets | absolute_url }}/gambar_08.png)
+![gambar 12]({{ page.assets | absolute_url }}/gambar_12.png)
 
-Gambar 8. layer 2 (fun_layer), function buttons
+Gambar 12. layer 2 (fun_layer), function buttons
 
-![gambar 9]({{ page.assets | absolute_url }}/gambar_09.png)
+![gambar 13]({{ page.assets | absolute_url }}/gambar_13.png)
 
-Gambar 9. layer 3 (sys_layer), system layer untuk pengaturan konektifitas bluetooth
+Gambar 13. layer 3 (sys_layer), system layer untuk pengaturan konektifitas bluetooth
 
 Pada layer-layer tersebut dapat dilihat pada layer 0 atau base layer atau qwerty_layer, terdapat tombol referensi untuk mengakse layer 1 dan 2 yang terdapat pada thumb cluster kiri dan kanan.
 
@@ -142,7 +150,7 @@ Untuk mengakses layer 3, saya perlu berada di layer 2, lalu menekan button refer
 
 Saya masih bereksperimen dengan layout layring seperti apa yang cocok. Jadi akan sangat besar dikemudian hari layout ini akan berubah.
 
-Selain layering juga ada combo button.
+Selain pendekatan layer juga ada pendekatan combo button.
 
 
 ## Combo
@@ -151,16 +159,28 @@ Sesuai namanya combo button berarti menekan 2 atau lebih button secara bersama-s
 
 Saya tidak terlalu banyak menggunakan combo button. Hanya saya pergunakan untuk hal-hal yang berkaitan dengan pengaturan saja.
 
-![gambar 10]({{ page.assets | absolute_url }}/gambar_10.png)
+![gambar 14]({{ page.assets | absolute_url }}/gambar_14.png)
 
 
 ## Kesan penuls
 
-Beberapa manfaat yang saya rasakan setelah mencoba menggunakan split keyboard.
+Beberapa manfaat yang saya rasakan setelah mencoba menggunakan Chocofi split keyboard.
 
 1. Kita di-*encourage* untuk menggunakan *touch typing*. Karena (dengan split keyboard) jika tidak menggunakan *touch typing* artinya kita akan melihat ke dua sisi keyboard, bisa di sisi kanan atau kiri. Split keyboard membuat proses mengetik menjadi tidak efektif.
 2. Karena "dipaksa" untuk menggunakan *touch typing*, membuat jari-jemari menjadi lebih disiplin dengan porsinya masing-masing. Ini sangat cocok dengan layout split keyboard yang terbelah jadi dua di sisi kanan dan kiri. Tidak ada jari di tangan kiri yang menyeberang ke sisi kanan, begitu pula sebaliknya.
 3. Minim typo. Karena jarak tangan cukup berjarak dan tidak saling berdekatan. Ini menyebabkan tidak terjadi *race condition* saat pengiriman sinyal dari otak ke dua sisi tangan (note: ini pendapat saya, saya belum mencari literaturenya).
+4. Proses adaptasi jika sudah bisa mengetik dengan *touch typing* tidak terlalu lama. Adaptasi dari staggered ke column-staggered juga tidak terlalu lama. Saya 1 pekan sudah bisa menyesuaikan dengan column-staggered dari staggered. Jujur lebih nyaman menggetik di column-staggered (bisa jadi ortholinear juga lebih nyaman, saya belum punya keyboard dengan ortholinear). Karena posisi jari dari homerow hanya perlu bergerak ke atas atau ke bawah, bukan serong atas atas atau serong bawah.
+5. Sangat mudah diprogram ulang. Karena menggunakan ZMK Firmware, sehingga sangat mudah untuk diprogram ulang jika kita mau memodifikasi tombol dan layer sesuai dengan kebutuhan kita.
+6. Berpotensi besar untuk dicustom sendiri sesuai keinginan dan kebutuhan. Misal ingin ganti keycaps, ganti switch, ingin ganti case shield nya, dan lain-lain.
+7. Karena point 6, artinya juga mudah untuk diperbaiki sendiri.
+
+> Dari beberapa kesan tersebut, dapat terlihat jelas bahwa fondasi utama jika ingin menikmati mengetik dengan keyboard adalah *touch typing*.
+
+Beberapa hal yang saya tidak begitu nyaman dengan Chocofi split keyboard.
+
+1. Barangnya sulit didapat. Karena builder ada di luar negeri, yang tersedia di marketplace Indo tidak begitu beragam.
+2. Learning cuve nya lumayan. Untuk dapat menggunakan split keyboard, kita harus menyediakan waktu untuk menggunakan. Berteman dengan ketidaknyamanan untuk beberapa saat.
+3. Chocofi tidak sepopuler Corne. Sehingga tidak banyak yang membuat modifikasi, terutama dibagian case. Karena kelebihan dari keyboard seperti ini adalah sangat mudah untuk bergonta-ganti case.
 
 
 ## Pesan penulis
@@ -173,5 +193,5 @@ Split keyboard bukanlah level tertinggi dari penggunaan keyboard. Split keyboard
 1. [ZMK Firmware](https://zmk.dev/) \
    Diakses tanggal: 2026-07-11
 
-2. [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/) \
+2. [Nickcoutsos Keymap Editor](https://nickcoutsos.github.io/keymap-editor/) \
    Diakses tanggal: 2026-07-11
