@@ -154,7 +154,16 @@ Saya tidak terlalu banyak menggunakan combo button. Hanya saya pergunakan untuk 
 ![gambar 10]({{ page.assets | absolute_url }}/gambar_10.png)
 
 
-## Pesan Penulis
+## Kesan penuls
+
+Beberapa manfaat yang saya rasakan setelah mencoba menggunakan split keyboard.
+
+1. Kita di-*encourage* untuk menggunakan *touch typing*. Karena (dengan split keyboard) jika tidak menggunakan *touch typing* artinya kita akan melihat ke dua sisi keyboard, bisa di sisi kanan atau kiri. Split keyboard membuat proses mengetik menjadi tidak efektif.
+2. Karena "dipaksa" untuk menggunakan *touch typing*, membuat jari-jemari menjadi lebih disiplin dengan porsinya masing-masing. Ini sangat cocok dengan layout split keyboard yang terbelah jadi dua di sisi kanan dan kiri. Tidak ada jari di tangan kiri yang menyeberang ke sisi kanan, begitu pula sebaliknya.
+3. Minim typo. Karena jarak tangan cukup berjarak dan tidak saling berdekatan. Ini menyebabkan tidak terjadi *race condition* saat pengiriman sinyal dari otak ke dua sisi tangan (note: ini pendapat saya, saya belum mencari literaturenya).
+
+
+## Pesan penulis
 
 Split keyboard bukanlah level tertinggi dari penggunaan keyboard. Split keyboard hanya opsi atau pilihan dari beberapa pilihan model keyboard yang beredar di pasaran saat ini. Tidak semua orang cocok menggunakan split keyboard. Pergunakan perkakas/tools (dalam hal ini keyboard) yang memang nyaman kamu gunakan.
 
