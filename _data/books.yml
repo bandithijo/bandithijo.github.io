@@ -86,3 +86,11 @@ books:
     author: "Satria Dharma"
     publish_at: "2020/09"
     read_at: "2026/07"
+
+  - title: "Seni Merahasiakan Amal di Era Digital"
+    subtitle: "Tetap bahagia tanpa perlu jadi viral"
+    genre: "religion"
+    publisher: "Cipta Prima Nusantara"
+    author: "Dinar Rafikhalif, Gilang R. Aprianto"
+    publish_at: "2026/01"
+    read_at: "2026/07"
