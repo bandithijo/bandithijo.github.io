@@ -94,3 +94,11 @@ books:
     author: "Dinar Rafikhalif, Gilang R. Aprianto"
     publish_at: "2026/01"
     read_at: "2026/07"
+
+  - title: "Software Engineer's Notes"
+    subtitle: "... Keresahan antara logika dan realita"
+    genre: "selfimprovement"
+    publisher: ""
+    author: "@kotaroisme"
+    publish_at: "2025/02"
+    read_at: "2026/07"
