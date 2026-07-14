@@ -35,7 +35,7 @@ Kelas 2 SMA, saya mengikuti lomba web beregu tingkat nasional. Di tim ini saya k
 
 Singkat cerita, sampai kuliah yang kedua, salah satu teman yang juga seorang Finance, menilai ketikan saya cukup cepat tapi jarinya tidak sesuai. Tidak *touch typing*. Karena ia sempat belajar *touch typing* di kampus dan menjadi persyaratan lulus. Dari sini saya pertama kali mengetahui tentang *touch typing* (mengetik tanpa melihat tuts keyboard).
 
-Sampai saat COVID-19 saya sudah bekerja sebagai software developer, saya menyadari dalam proses mengetik, proses problem solving di pikiran saya juga bercampur dengan proses mengetik. Saya masih memikirkan beberapa lokasi key yang belum saya hafal, terutama key yang berkaitan dengan simbol-simbol code. Terkadang juga harus melihat posisi dari key yang ingin saya tekan jika saya kehilangan referensi posisinya. Pada tahap ini, saya mulai menyadari *touch typing* mungkin bisa membuat proses mengetik code tidak bercampur dengan proses berfikir.
+Sampai saat COVID-19 saya sudah bekerja sebagai software engineer, saya menyadari dalam proses mengetik, proses problem solving di pikiran saya juga bercampur dengan proses mengetik. Saya masih memikirkan beberapa lokasi key yang belum saya hafal, terutama key yang berkaitan dengan simbol-simbol code. Terkadang juga harus melihat posisi dari key yang ingin saya tekan jika saya kehilangan referensi posisinya. Pada tahap ini, saya mulai menyadari *touch typing* mungkin bisa membuat proses mengetik code tidak bercampur dengan proses berfikir.
 
 Saya putuskan untuk mulai belajar *touch typing*. Ternyata saya harus mulai belajar dari awal lagi untuk membiasakan jari-jari agar mengetik sesuai dengan posisi dan porsinya masing-masing.
 
@@ -79,18 +79,25 @@ Berikut ini profil dari Chocofi.
 3. Column Staggered dengan kolom pinky (kolom ke 5) dibuat lebih turun mengikuti bentuk anatomi jari kelingking. Menurut saya, layout ini cocok untuk tipikal jari orang asia yang memiliki jari jemari yang mungil
 4. Terinspirasi dari keyboard Fifi, dan menggunakan firmware Seperti Corne dan Miryoku
 5. Support ZMK Studio untuk kebutuhan custom mapping keys sesuai kebutuhan tanpa perlu flash tinggal copy & paste
-6. Dilengkapi Switch On Off dan menggunakan baterai 500 mAh di masing-masing sisi.
+6. Dilengkapi Switch On-Off dan menggunakan baterai 500 mAh di masing-masing sisi.
 
 Berikut ini spesifikasi dari Chocofi.
 
-1. Hotswappable Kailh Choc V1 Red Pro (linear switch)
-2. Programmable buttons
-3. 3D Printed PLA+ Case
-4. Support ZMK Studio
-5. Rubber Feets
-6. Suport 5 Multiple Device through Bluetooth
-7. Type C Connector
-8. 1 Meter braided USB Type C Cable
+1. 3x5 Column staggered + 3 buttons on thumb cluster
+2. NRF52840 controller (type c, ble, bluetooth)
+3. OLED 0.91 inchi 128x32 pixel SSD1306 I2C
+4. Socket Kailh choc hot swap low profile 1350
+5. Switch Kailh choc v1 red pro low profile (linear)
+6. Keycap Kailh choc v1 PBT black blank
+7. 3D Printed PLA+ Case
+8. Programmable buttons
+9. Support ZMK Studio (menggunakan ZMK Firmware)
+10. Rubber Feets
+11. Suport 5 Multiple Device through Bluetooth
+12. Li-Po Battery 500 mAh
+12. Type C Connector
+13. 1 Meter braided USB Type C Cable
+
 
 ![gambar 3]({{ page.assets | absolute_url }}/gambar_03.jpg)
 
@@ -154,7 +161,29 @@ Berikut ini spesifikasi dari Chocofi.
 
 ![gambar 38]({{ page.assets | absolute_url }}/gambar_38.jpg)
 
-Awal mula mencoba ngetik, saya hanya dapat 5 WPM. Beberapa jam kemudian mulai naik ke 15 WPM. Setalah 24 jam mulai naik ke 40 WPM.
+{% youtube 0SucDZzEbdA %}
+
+Karena keyboard ini tidak ada case dan karena bentuknya yang kecil dan terlihat ringkih, saya khawatir jika dimasukkan tas akan baku hantam dengan barang-barang lain di dalam tas, maka saya putuskan untuk membeli case. Setelah saya hitung-hitung dimensinya cocok dengan Fujifilm Instax Mini case.
+
+![gambar 39]({{ page.assets | absolute_url }}/gambar_39.jpg)
+
+![gambar 40]({{ page.assets | absolute_url }}/gambar_40.jpg)
+
+![gambar 41]({{ page.assets | absolute_url }}/gambar_41.jpg)
+
+![gambar 42]({{ page.assets | absolute_url }}/gambar_42.jpg)
+
+![gambar 43]({{ page.assets | absolute_url }}/gambar_43.jpg)
+
+![gambar 44]({{ page.assets | absolute_url }}/gambar_44.jpg)
+
+![gambar 45]({{ page.assets | absolute_url }}/gambar_45.jpg)
+
+![gambar 46]({{ page.assets | absolute_url }}/gambar_46.jpg)
+
+{% youtube Dsu2pJZkFy4 %}
+
+Awal mula mencoba mengetik, saya hanya mendapatkan 5 WPM. Beberapa jam kemudian mulai naik ke 15 WPM. Setalah 24 jam mulai naik ke 40 WPM.
 
 Ini adalah progres setelah seminggu.
 
@@ -196,7 +225,9 @@ Untuk mengakses layer 1, saya menekan dan tahan tombol space. Dengan begini, say
 
 Untuk mengakses layer 3, saya perlu berada di layer 2, lalu menekan button referensi untuk ke layer 3 yang juga terdapat di thumb cluster sebelah kanan.
 
-Saya masih bereksperimen dengan layout layring seperti apa yang cocok. Jadi akan sangat besar dikemudian hari layout ini akan berubah.
+Saya masih bereksperimen dengan layout layering seperti apa yang cocok. Jadi akan sangat besar dikemudian hari layout ini akan berubah.
+
+Saya menghindari menggunakan layer yang terlalu banyak agar tidak terjadi "layering fatigue" yaitu kondisi "keblinger" atau kelelahan otak karena kebanyakan layer. Hahaha.
 
 Selain pendekatan layer juga ada pendekatan combo button.
 
@@ -210,7 +241,7 @@ Saya tidak terlalu banyak menggunakan combo button. Hanya saya pergunakan untuk 
 ![gambar 14]({{ page.assets | absolute_url }}/gambar_14.png)
 
 
-## Kesan penuls
+## Kesan penulis
 
 Beberapa manfaat yang saya rasakan setelah mencoba menggunakan Chocofi split keyboard.
 
