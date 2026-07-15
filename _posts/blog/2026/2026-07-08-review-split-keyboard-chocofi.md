@@ -121,11 +121,7 @@ Berikut ini spesifikasi dari Chocofi.
 
 ![gambar 18]({{ page.assets | absolute_url }}/gambar_18.jpg)
 
-![gambar 19]({{ page.assets | absolute_url }}/gambar_19.jpg)
-
 ![gambar 20]({{ page.assets | absolute_url }}/gambar_20.jpg)
-
-![gambar 21]({{ page.assets | absolute_url }}/gambar_21.jpg)
 
 ![gambar 22]({{ page.assets | absolute_url }}/gambar_22.jpg)
 
