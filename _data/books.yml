@@ -102,3 +102,11 @@ books:
     author: "@kotaroisme"
     publish_at: "2025/02"
     read_at: "2026/07"
+
+  - title: "Animal Farm"
+    subtitle: ""
+    genre: "politic"
+    publisher: "Bentang Pustaka"
+    author: "George Orwell"
+    publish_at: "2015/01"
+    read_at: "2026/07"
