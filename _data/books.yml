@@ -110,3 +110,11 @@ books:
     author: "George Orwell"
     publish_at: "2015/01"
     read_at: "2026/07"
+
+  - title: "Pembentukan Partai Politik Islam"
+    subtitle: ""
+    genre: "politic"
+    publisher: "Pustaka Fikrul Islam"
+    author: "Taqiyuddin an-Nabhani"
+    publish_at: "1953"
+    read_at: "2026/07"
