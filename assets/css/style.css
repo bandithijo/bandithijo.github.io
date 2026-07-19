@@ -125,7 +125,7 @@
   }
 
   .markdown strong {
-    @apply font-semibold;
+    @apply font-bold;
   }
 
   .markdown a {
