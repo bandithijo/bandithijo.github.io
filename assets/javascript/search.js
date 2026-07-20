@@ -197,7 +197,7 @@
         <p class="text-sm text-gray-600 dark:text-neutral-300 italic">{subtitle}</p>
         <p class="text-base mt-2">{author}</p>
         <div class="flex justify-between items-center mt-3 text-sm text-gray-600 dark:text-neutral-300 font-mono">
-          <span>{genre}</span>
+          <a href="#" class="genre-tag hover:underline" data-genre="{genre}">#{genre}</a>
           <span>({publish_at}) {read_at}</span>
         </div>
       </div>
@@ -217,6 +217,9 @@
             return value
               .map(tag => `<span class="inline-block bg-neutral-200 dark:bg-neutral-800 text-sm px-2 py-1 rounded mr-2">#${tag}</span>`)
               .join(' ');
+          }
+          if (key === 'subtitle' && !value) {
+            return '';
           }
           // fallback: return undefined so compile will use original value
           return undefined;

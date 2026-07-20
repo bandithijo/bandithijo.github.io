@@ -18,26 +18,26 @@ permalink: '/book/'
       </div>
     </div>
   </div>
-
-  <!-- Search Loader -->
-  <div id="search-loader" class="flex items-center justify-center py-8 hidden">
-    <div class="flex items-center space-x-2">
-      <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse"></div>
-      <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
-      <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
-    </div>
-  </div>
-
-  <!-- Search Results -->
-  <div id="results-wrapper" class="relative opacity-0 transition-opacity duration-300 mt-4 hidden">
-    <div id="results-container"></div>
-  </div>
 </div>
 
 <!-- Genre Filter Indicator -->
 <div id="genre-label" class="mb-6 hidden">
   <span id="genre-name" class="text-lg font-mono text-gray-600 dark:text-neutral-300"></span>
   <a href="#" id="genre-clear" class="ml-1 text-xs text-gray-600 dark:text-neutral-300 hover:underline align-super">&times;</a>
+</div>
+
+<!-- Search Loader -->
+<div id="search-loader" class="flex items-center justify-center py-8 hidden">
+  <div class="flex items-center space-x-2">
+    <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse"></div>
+    <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+    <div class="w-2 h-2 bg-dark dark:bg-white rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+  </div>
+</div>
+
+<!-- Search Results -->
+<div id="results-wrapper" class="relative opacity-0 transition-opacity duration-300 mt-4 mb-6 hidden">
+  <div id="results-container"></div>
 </div>
 
 <!-- Masonry Loader -->
@@ -60,7 +60,7 @@ permalink: '/book/'
           <span class="px-1 py-0 mr-3 rounded-full bg-neutral-300 dark:bg-neutral-700 group-hover:bg-neutral-700 group-hover:dark:bg-neutral-300"></span>
           <h2 class="text-lg font-bold">{{ book.title }}</h2>
         </div>
-        <p class="text-sm text-gray-600 dark:text-neutral-300 italic">{{ book.subtitle }}</p>
+        {% if book.subtitle %}<p class="text-sm text-gray-600 dark:text-neutral-300 italic">{{ book.subtitle }}</p>{% endif %}
         <p class="text-base mt-2">{{ book.author }}</p>
         <div class="flex justify-between items-center mt-3 text-sm text-gray-600 dark:text-neutral-300 font-mono">
           <a href="#" class="genre-tag hover:underline" data-genre="{{ book.genre }}">#{{ book.genre }}</a>
@@ -151,6 +151,7 @@ document.getElementById('search-input').addEventListener('input', function (e) {
     resultsWrapper.classList.remove('hidden');
     searchLoader.classList.remove('hidden');
     resultsWrapper.style.opacity = '0';
+    if (activeGenre) filterItemsByGenre('results-container', activeGenre);
 
     setTimeout(() => {
       layoutMasonry('results-wrapper');
@@ -163,6 +164,8 @@ document.getElementById('search-input').addEventListener('input', function (e) {
     masonryContainer.style.display = 'block';
     resultsWrapper.classList.add('hidden');
     searchLoader.classList.add('hidden');
+    if (activeGenre) filterItemsByGenre('post-container', activeGenre);
+    layoutMasonry('masonry-container');
   }
 });
 
@@ -170,38 +173,52 @@ document.getElementById('search-input').addEventListener('input', function (e) {
 const totalBooks = document.querySelectorAll('#post-container .masonry-item').length;
 let activeGenre = null;
 
+function isSearchActive() {
+  return document.getElementById('search-input').value.trim().length > 0;
+}
+
+function filterItemsByGenre(containerId, genre) {
+  const items = document.querySelectorAll('#' + containerId + ' .masonry-item');
+  let visible = 0;
+  items.forEach(el => {
+    const match = !genre || el.dataset.genre === genre;
+    el.style.display = match ? '' : 'none';
+    if (match) visible++;
+  });
+  return visible;
+}
+
 function applyGenreFilter(genre) {
-  const items = document.querySelectorAll('#post-container .masonry-item');
+  const searching = isSearchActive();
+  const containerId = searching ? 'results-container' : 'post-container';
+  const wrapperId = searching ? 'results-wrapper' : 'masonry-container';
   const label = document.getElementById('genre-label');
   const nameEl = document.getElementById('genre-name');
   const countEl = document.getElementById('page-count');
 
-  if (!genre || activeGenre === genre) {
-    activeGenre = null;
-    items.forEach(el => el.style.display = '');
+  activeGenre = (!genre || activeGenre === genre) ? null : genre;
+  const visible = filterItemsByGenre(containerId, activeGenre);
+
+  if (!activeGenre) {
     label.classList.add('hidden');
     if (countEl) countEl.textContent = totalBooks + ' books';
   } else {
-    activeGenre = genre;
-    let visible = 0;
-    items.forEach(el => {
-      const match = el.dataset.genre === genre;
-      el.style.display = match ? '' : 'none';
-      if (match) visible++;
-    });
-    nameEl.textContent = '#' + genre;
+    nameEl.textContent = '#' + activeGenre;
     label.classList.remove('hidden');
     if (countEl) countEl.textContent = visible + ' books';
   }
-  layoutMasonry('masonry-container');
+  layoutMasonry(wrapperId);
 }
 
-document.getElementById('post-container').addEventListener('click', function (e) {
+function handleGenreTagClick(e) {
   const tag = e.target.closest('.genre-tag');
   if (!tag) return;
   e.preventDefault();
   applyGenreFilter(tag.dataset.genre);
-});
+}
+
+document.getElementById('post-container').addEventListener('click', handleGenreTagClick);
+document.getElementById('results-container').addEventListener('click', handleGenreTagClick);
 
 document.getElementById('genre-clear').addEventListener('click', function (e) {
   e.preventDefault();
