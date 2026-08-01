@@ -9,6 +9,12 @@ layout: baseof
         {{ page.title }}
       </h1>
 
+      {% if page.toc == 'true' %}
+      {% if content contains '<h2' or content contains '<h3' %}
+        {% include toc_template.html %}
+	{% endif %}
+	{% endif %}
+
       <div class="markdown dark:text-white">
         {{ content }}
       </div>
