@@ -1,6 +1,6 @@
 <div class="w-full px-4 py-0 mb-6">
   <ul class="flex flex-wrap justify-center items-center">
-    {% for item in site.nav_bottom %}
+    {% for item in site.navigations.bottom %}
     {% assign class = nil %}
     {% if page.url contains item.url %}
     {% assign class = 'underline' %}

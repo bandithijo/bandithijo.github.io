@@ -18,74 +18,92 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: BanditHijo.dev
-email: bandithijo@duck.com
-description: Here's where I started writing some notes that someday I will call it, a book
+title: "BanditHijo.dev"
+email: "bandithijo@duck.com"
+description: "Here's where I started writing some notes that someday I will call it, a book"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://bandithijo.github.io # the base hostname & protocol for your site, e.g. http://example.com
-author: Rizqi Nur Assyaufi
-keywords: bandithijo, rizqi nur assyaufi, arch linux, vim, neovim, i3wm, dwm, suckless, jekyll, thinkpad, ruby, rails, ruby on rails
+url: "https://bandithijo.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+author: "Rizqi Nur Assyaufi"
+keywords: "bandithijo, rizqi nur assyaufi, arch linux, vim, neovim, i3wm, dwm, suckless, jekyll, thinkpad, ruby, rails, ruby on rails"
 
 
 # Missing timezone in metadata date can lead to wrong date in url
-timezone: Asia/Makassar
+timezone: "Asia/Makassar"
 
 
 # Google Analytics
-google_analytics: UA-116004889-1
-google_tag: G-688BWZGJ84
+google_analytics: "UA-116004889-1"
+google_tag: "G-688BWZGJ84"
 
 
 # Google Site Verification (Webmaster)
-google_verify: qXp9Kgb5hIHVp5T9vFOa_motqUmNuF5STbkJKF70wLc
+google_verify: "qXp9Kgb5hIHVp5T9vFOa_motqUmNuF5STbkJKF70wLc"
 
 
 # Opengraph
-lang: id
-logo_author: /assets/images/logo_author.png
-image: /assets/images/banner/banner_og.png
+lang: "id"
+logo_author: "/assets/images/logo_author.png"
+image: "/assets/images/banner/banner_og.png"
 
 
 # Navigations
-nav_top:
-  - title: Blog
-    url: /blog/
-  - title: Note
-    url: /note/
-  - title: Book
-    url: /book/
-  - title: About
-    url: /about/
-nav_bottom:
-  - title: Portfolio
-    url: /portfolio/
-  - title: Product
-    url: /product/
-  - title: Blogroll
-    url: /blogroll/
-  - title: Contact
-    url: /contact/
-  # - title: Contribute
-  #   url: /contribute/
-  - title: Stats
-    url: /stats/
-  - title: RSS
-    url: /feed.xml
+navigations:
+  top:
+    - title: "Blog"
+      url: "/blog/"
+    - title: "Note"
+      url: "/note/"
+    - title: "Book"
+      url: "/book/"
+    - title: "About"
+      url: "/about/"
+  bottom:
+    - title: "Portfolio"
+      url: "/portfolio/"
+    - title: "Product"
+      url: "/product/"
+    - title: "Blogroll"
+      url: "/blogroll/"
+    - title: "Contact"
+      url: "/contact/"
+    # - title: "Contribute"
+    #   url: "/contribute/"
+    - title: "Stats"
+      url: "/stats/"
+    - title: "RSS"
+      url: "/feed.xml"
+
+
+# Collections
+collections:
+  blogs:
+    output: true
+    permalink: "/blog/:title"
+  notes:
+    output: true
+    permalink: "/note/:title"
+  pages:
+    output: true
+    permalink: "/:title/"
 
 
 # Build settings
-markdown: kramdown
+markdown: "kramdown"
 kramdown:
-  syntax_highlighter: rouge
+  syntax_highlighter: "rouge"
 tailwindcss:
   config: "./tailwind.config.js"
-  css_path: ./_tailwind.css
+  css_path: "./_tailwind.css"
 
 
 # Feed
 feed:
-  icon: /assets/images/favicon/favicon.png
-  logo: /assets/images/banner/about_bandithijo.png
+  path: "/empty-feed.xml"
+  icon: "/assets/images/favicon/favicon.png"
+  logo: "/assets/images/banner/about_bandithijo.png"
+  collections:
+    blogs:
+      path: "/feed.xml"
 
 
 # Sitemap Generator

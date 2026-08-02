@@ -3,7 +3,7 @@ layout: none
 permalink: /note/index.json
 ---
 [
-  {% assign notes = site.posts | where: "category", "note" %}
+  {% assign notes = site.notes | where: "category", "note" | reverse %}
   {% for post in notes %}
     {
       "title"       : "{{ post.title | escape }}",

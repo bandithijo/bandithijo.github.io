@@ -3,7 +3,7 @@ layout: none
 permalink: /blog/index.json
 ---
 [
-  {% assign blogs = site.posts | where: "category", "blog" %}
+  {% assign blogs = site.blogs | where: "category", "blog" | reverse %}
   {% for post in blogs %}
     {
       "title"       : "{{ post.title | escape }}",

@@ -11,10 +11,10 @@ layout: baseof
             {{ page.title }}
 
             {% if page.permalink == '/blog/' %}
-              {% assign blog_posts = site.posts | where: "category", "blog" %}
+              {% assign blog_posts = site.blogs | where: "category", "blog" %}
               {% assign type_posts = 'posts' %}
             {% elsif page.permalink == '/note/' %}
-              {% assign blog_posts = site.posts | where: "category", "note" %}
+              {% assign blog_posts = site.notes | where: "category", "note" %}
               {% assign type_posts = 'notes' %}
             {% elsif page.permalink == '/blogroll/' %}
               {% assign blog_posts = site.data.blogroll.friends %}

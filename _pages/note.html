@@ -1,7 +1,7 @@
 ---
 layout: 'page_list'
-title: 'Blog'
-permalink: '/blog/'
+title: 'Note'
+permalink: '/note/'
 ---
 
 <div class="mb-4">
@@ -46,8 +46,8 @@ permalink: '/blog/'
 <!-- Masonry Container -->
 <div id="masonry-container" class="relative opacity-0 transition-opacity duration-300">
   <div id="post-container">
-    {% assign blog_posts = site.posts | where_exp: "post", "post.categories contains 'blog'" %}
-    {% for post in blog_posts %}
+    {% assign note_posts = site.notes | where_exp: "post", "post.categories contains 'note'" | reverse %}
+    {% for post in note_posts %}
       <div class="masonry-item absolute p-2 sm:p-4 bg-white dark:bg-neutral-900 rounded-lg border border-gray-900 dark:border-neutral-400 hover:border-dark dark:hover:border-neutral-400 group"
         style="width: calc(25% - 12px);">
         <a href="{{ post.url }}" class="text-dark dark:text-white">
@@ -59,7 +59,7 @@ permalink: '/blog/'
           <div class="flex justify-between items-end gap-2">
             <div class="w-2/3">
               {% for tag in post.tags %}
-                <a href="/blog/tag/#{{ tag | downcase }}" class="text-sm text-gray-600 dark:text-neutral-300 hover:underline">#{{ tag }}</a>
+                <a href="/note/tag/#{{ tag | downcase }}" class="text-sm text-gray-600 dark:text-neutral-300 hover:underline">#{{ tag }}</a>
               {% endfor %}
             </div>
             <p class="w-1/3 text-base text-right text-gray-600 dark:text-neutral-300 font-mono">{{ post.date | date: '%Y.%m.%d' }}</p>
@@ -122,7 +122,7 @@ window.addEventListener('resize', () => {
 SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
-  json: '/blog/index.json',
+  json: '/note/index.json',
   templateType: 'posts',  // This tells the script to use the posts template
   templateMiddleware: function (prop, value) {
     if (prop === 'tags' && Array.isArray(value)) {
