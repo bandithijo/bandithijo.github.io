@@ -97,7 +97,7 @@ Berikut ini adalah spesifikasi mesin maupun aplikasi yang pernah atau hingga saa
 | Shell                  | **bash**                                          |
 | Application Launcher   | **dmenu** & **rofi**                              |
 | Format Text            | **markdown** & **asciidoc**                       |
-| Text Editor            | **neovim**                                        |
+| Text Editor            | **neovim** -> **emacs**                           |
 | Raster Image Editor    | **gimp** & **gthumb**                             |
 | Vector Image Editor    | **inkscape**                                      |
 | Image Preview          | **nsxiv**                                         |
