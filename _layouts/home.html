@@ -56,7 +56,7 @@ permalink: :title
           <span class="text-lg text-gray-600 dark:text-neutral-300">Hours of Coding</span>
         </div>
         <div class="flex flex-col items-center">
-          {% assign blog_posts = site.posts | where: "category", "blog" %}
+          {% assign blog_posts = site.blogs %}
           {% assign total = blog_posts.size %}
           {% assign remainder = total | modulo: 10 %}
           {% assign rounded = total | minus: remainder %}
