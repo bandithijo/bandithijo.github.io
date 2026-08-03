@@ -7,7 +7,6 @@ assets: "/assets/posts/blog/2026/2026-08-02-10-tahun-pakai-vim-akhirnya-migrasi-
 author: "BanditHijo"
 category: "blog"
 tags: ["emacs"]
-
 description: "Tidak satu atau dua vim user yang bermigrasi ke Emacs tetapi tidak kembali dan tetap menggunakan Emacs. Kok bisa? Apa alasannya? Ada apa di Emacs?"
 ---
 
@@ -177,6 +176,12 @@ Oh ya! Artikel ini adalah artikel pertama yang saya tulis dengan Emacs.
 ![gambar_2]({{ page.assets | absolute_url }}/gambar_02.png)
 
 Gambar 02. Statistik Wakatime terhadap project blog ini dan artikel ini
+
+
+## Bahan Belajar Tambahan
+
+1. [**GNU.org - A Guided Tour of Emacs**](https://www.gnu.org/savannah-checkouts/gnu/emacs/tour/index.html)
+2. [**emacsrocks.com (Video Playlist)**](https://emacsrocks.com/)
 
 
 ## Referensi
