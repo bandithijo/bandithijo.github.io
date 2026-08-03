@@ -3,7 +3,6 @@ layout: "post"
 title: "Menggabungkan Beberapa Sub-Region Geofabrik"
 date: "2026-02-23 01:46"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2026/2026-02-23-menggabungkan-beberapa-sub-region-geofabrik"
 author: "BanditHijo"
 category: "blog"
 tags: ["openstreetmap", "geofabrik"]

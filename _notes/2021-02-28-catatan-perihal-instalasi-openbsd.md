@@ -3,7 +3,6 @@ layout: "post"
 title: "Catatan Instalasi OpenBSD"
 date: "2021-02-28 05:54"
 permalink: "/note/:title"
-assets: "/assets/posts/note/2021-02-28-catatan-perihal-instalasi-openbsd"
 author: "BanditHijo"
 category: "note"
 tags: ["openbsd"]

@@ -3,7 +3,6 @@ layout: "post"
 title: "Membuat Footer Stay on Bottom but Not Fixed pada Bootstrap"
 date: "2020-12-05 14:41"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-12-05-footer-stay-on-bottom-but-not-fixed-bootstrap"
 author: "BanditHijo"
 category: "blog"
 tags: ["bootstrap", "css", "html"]
@@ -16,7 +15,7 @@ Kalian pasti pernah melihat Footer yang manja di sebuah website.
 
 Kira-kira seperti ini contohnya.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Footer yang menempel pada bagian bawah body
 
@@ -30,7 +29,7 @@ Namun, saya juga tidak ingin membuat Footer ini terlalu keras kepala (Fixed), se
 
 Idealnya, Footer yang saya inginkan seperti ini.
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 2]({% assets_path %}/gambar-02.png)
 
 Gambar 2. Footer yang menempel manja pada bagian bawah halaman
 

@@ -3,7 +3,6 @@ layout: "post"
 title: "Selected Menu Item pada Rails View Template"
 date: "2021-02-09 18:13"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2021/2021-02-09-selected-menu-item-pada-rails-view-template"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]
@@ -19,7 +18,7 @@ description: "Membuat menu item untuk menampilkan menu yang aktif dan yang tidak
 
 Kali ini saya kembali mencatat perihal front-end pada Ruby on Rails untuk membuat menu yang dapat menampilkan indikator aktif (selected) saat berada pada halaman yang dipilih.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.gif)
+![Gambar 1]({% assets_path %}/gambar-01.gif)
 
 Gambar 1. Selected menu item di Rails
 

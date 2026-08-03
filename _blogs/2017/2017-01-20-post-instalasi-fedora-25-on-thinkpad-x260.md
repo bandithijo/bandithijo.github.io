@@ -3,14 +3,13 @@ layout: "post"
 title: "Setelah Memasang Fedora 25 pada ThinkPad x260"
 date: "2017-01-20"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2017/2017-01-20-post-instalasi-fedora-25-on-thinkpad-x260"
 author: "BanditHijo"
 category: "blog"
 tags: ["thinkpad", "fedora"]
 description: "Sudah banyak yang membuat artikel semacam ini, 'Apa yang dilakukan setelah menginstal Ubuntu, Linux Mint, Fedora, Debian, Kali Linux, Arch Linux' di Internet. Pada artikel kali ini saya akan membuat hal yang sama. Sebenarnya artikel ini lebih baik saya sebut sebagai 'dokumentasi'."
 ---
 
-![Banner]({{ page.assets | absolute_url }}/Default+Header+Template+Post+22.png)
+![Banner]({% assets_path %}/Default+Header+Template+Post+22.png)
 
 
 ## Latar Belakang

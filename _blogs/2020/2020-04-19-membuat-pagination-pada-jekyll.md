@@ -3,7 +3,6 @@ layout: "post"
 title: "Membuat Pagination pada Jekyll"
 date: "2020-04-19 07:39"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-04-19-membuat-pagination-pada-jekyll"
 author: "BanditHijo"
 category: "blog"
 tags: ["jekyll"]

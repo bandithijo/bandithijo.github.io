@@ -3,7 +3,6 @@ layout: "post"
 title: "Mendapatkan ADB Authorized pada Layar Android yang Rusak (TWRP) di GNU/Linux & Windows"
 date: "2020-07-26 15:08"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-07-26-authorized-adb-tanpa-menyentuh-layar"
 author: "BanditHijo"
 category: "blog"
 tags: ["android", "adb", "twrp"]
@@ -117,9 +116,9 @@ Nah, setelah mendapatkan hak akses, kita bisa ngapain aja deh.
 
 Misalkan untuk menjalankan **scrcpy** dan lain-lain.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 2]({% assets_path %}/gambar-02.png)
 
 Mantap!!!
 

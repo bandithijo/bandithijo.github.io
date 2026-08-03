@@ -3,7 +3,6 @@ layout: "post"
 title: "Mengenal Single Table Inheritance pada Rails (Contoh 1)"
 date: "2020-02-21 18:58"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-02-21-rails-single-table-inheritance-contoh-1"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "singletableinheritance"]
@@ -31,7 +30,7 @@ Catatan kali ini adalah contoh pertama.
 
 Kira-kira seperti ini ERD-nya.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. ERD Single Table Inheritance contacts dengan friends dan emergencies
 

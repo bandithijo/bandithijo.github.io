@@ -3,7 +3,6 @@ layout: "post"
 title: "Scrcpy, Menampilkan dan Mengontrol Android Device dari Komputer"
 date: "2018-12-30 10:41"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2018/2018-12-30-scrcpy-menampilkan-dan-mengontrol-android-dari-komputer"
 author: "BanditHijo"
 category: "blog"
 tags: ["scrcpy"]
@@ -108,7 +107,7 @@ Kita tidak perlu menambahkan aplikasi pada *smartphone* Android kita.
 
    Pada saat ini, akan muncul *window* baru yang akan menampilkan tampilan dari layar *smartphone* Andorid kita.
 
-   ![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+   ![Gambar 1]({% assets_path %}/gambar-01.png)
 
    Gambar 1. Scrcpy saat dijalankan
 
@@ -119,7 +118,7 @@ Untuk menghubungkan *smartphone* Android dengan laptop/komputer menggukanan kone
 
 1. Langkah pertama, kita harus mengetahui **IP address** yang dimilii oleh *smartphone* kita. Langkah paling mudah menurut saya, buka menu **Settings → About Phone → Status**.
 
-   ![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.jpg)
+   ![Gambar 2]({% assets_path %}/gambar-02.jpg)
 
    Gambar 2. Melihat IP address dari smartphone
 

@@ -3,7 +3,6 @@ layout: "post"
 title: "Bootstrap 4 Custom File Input dengan bs-custom-file-input Javascript pada Rails 6"
 date: "2021-02-05 01:19"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2021/2021-02-05-bootstrap-4-custom-file-inpu-pada-rails-6"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "bootstrap"]
@@ -19,7 +18,7 @@ description: "Bootstrap 4 menyediakan component untuk custom file input, namun c
 
 Catatan kali ini, saya akan membicarakan developing dari sisi front-dend. Yaitu memasang component **Custom File Input** Bootstrap 4 pada Rails 6.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Form input csv file
 
@@ -34,7 +33,7 @@ Component custom file input milik Bootstrap tersebut memerlukan Javascript libra
 
 Kalau kita belum memasang library tersebut, maka akan seperti di bawah ini.
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.gif)
+![Gambar 2]({% assets_path %}/gambar-02.gif)
 
 Gambar 2. Demo tidak bisa melakukan import CSV file
 
@@ -87,7 +86,7 @@ Hanya seperti ini saja.
 
 Sekarang, seharusnya sudah berhasil memunculkan nama file pada input field.
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.gif)
+![Gambar 3]({% assets_path %}/gambar-03.gif)
 
 Gambar 3. Demo proses import CSV file
 

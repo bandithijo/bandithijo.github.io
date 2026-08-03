@@ -3,7 +3,6 @@ layout: "post"
 title: "Mengupgrade Versi Ruby di dalam Rbenv"
 date: "2019-10-21 09:25"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-10-21-upgrade-ruby-di-dalam-rbenv"
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby"]

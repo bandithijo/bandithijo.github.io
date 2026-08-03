@@ -3,7 +3,6 @@ layout: "post"
 title: "Konfigurasi Sleep/Standby Ketika Lid Laptop Ditutup pada FreeBSD"
 date: "2020-03-25 08:26"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-03-25-konfigurasi-sleep-saat-lid-closed-freebsd"
 author: "BanditHijo"
 category: "blog"
 tags: ["freebsd"]

@@ -3,7 +3,6 @@ layout: "post"
 title: "Kesenangan Dalam Menggunakan Arch Linux Pt. 1"
 date: "2019-01-27 08:56"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-01-27-kesenangan-menggunakan-arch-linux-pt-1"
 author: "BanditHijo"
 category: "blog"
 tags: ["arch linux"]
@@ -16,7 +15,7 @@ Salah satu kesenangan menggunakan distribusi Arch adalah kemudahan dalam hal men
 
 Beberapa waktu lalu `dunstify` masih terdapat di AUR, namun begitu sudah di merge dari upstream, repo `dunst` official pun ikut membawa `dunstify`.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Kemudahan mengecek paket pada archlinux.org
 
@@ -28,7 +27,7 @@ Untuk mengecek apakah `dunstify` sudah terdapat pada paket `dunst`, kita dapat m
 $ sudo pacman -Ql dunst
 ```
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 2]({% assets_path %}/gambar-02.png)
 
 Gambar 2. Kemudahan mengecek paket pada pacman
 
@@ -48,7 +47,7 @@ $ sudo pacman -S dunst
 
 Saya menggunakan `dunstify` untuk keperluan menampilkan **HELP** dari daftar keyboard shortcut pada masing-masing aplikasi yang saya pergunakan.
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.gif)
+![Gambar 3]({% assets_path %}/gambar-03.gif)
 
 Gambar 3. Salah satu pemanfaatan dunstify
 

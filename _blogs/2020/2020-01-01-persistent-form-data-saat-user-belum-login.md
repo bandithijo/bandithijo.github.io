@@ -3,7 +3,6 @@ layout: "post"
 title: "Mempertahankan Data pada Form ketika User Belum Melakukan Authentication"
 date: "2020-01-01 11:36"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-01-01-persistent-form-data-saat-user-belum-login"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]

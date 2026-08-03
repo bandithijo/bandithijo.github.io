@@ -3,7 +3,6 @@ layout: "post"
 title: "Mudah Melacak IP Provider dan Location dengan Geocoder Gem"
 date: "2024-09-14 08:34"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2024/2024-09-14-mudah-melacak-ip-provider-dan-location-dengan-geocoder-gem"
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby", "geocoding"]
@@ -14,7 +13,7 @@ description: "Sebelum menggunakan Geocoder Gem, saya menggunakan infosniper.net 
 
 {{ page.description }}
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Tampilan Website infosniper.net
 

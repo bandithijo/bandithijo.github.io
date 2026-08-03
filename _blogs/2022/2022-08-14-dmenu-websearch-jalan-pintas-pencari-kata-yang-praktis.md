@@ -3,7 +3,6 @@ layout: "post"
 title: "dmenu-websearch, Jalan Pintas Pencari Kata yang Praktis"
 date: "2022-08-14 08:47"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2022/2022-08-14-dmenu-websearch-jalan-pintas-pencari-kata-yang-praktis"
 author: "BanditHijo"
 category: "blog"
 tags: ["dmenu"]

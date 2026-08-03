@@ -3,7 +3,6 @@ layout: "post"
 title: "St, Simple/Suckless Terminal yang Sudah Lama Saya Dambakan"
 date: "2019-02-08 17:08"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-02-08-st-simple-terminal-dari-suckless"
 author: "BanditHijo"
 category: "blog"
 tags: ["terminal emulator", "simple terminal", "st"]
@@ -25,7 +24,7 @@ Saya tertarik menggunakan **dwm**, *Dynamic Window Manager*, sebuah window manag
 
 Malam tadi, **Termite** salah satu Terminal emulator yang saya gunakan dan saya andalkan tiba-tiba saja salah dalam menampilkan glyph font untuk simbol-simbol bawaan dari **Devicons**. Saya mendapati kesalahan ini pada **NERDTree** (vim sidebar file manager) dan **Ranger**.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Termite dan ST
 
@@ -211,7 +210,7 @@ Saya sangat puas dengan hasilnya. Dikarenakan ada beberapa hal yang saya tidak d
 1. Glyph font yang sesuai
 1. Dapat menghandle w3m dalam Ranger dengan baik
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.gif)
+![Gambar 2]({% assets_path %}/gambar-02.gif)
 
 
 ## Kekurangan

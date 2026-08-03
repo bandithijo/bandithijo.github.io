@@ -3,7 +3,6 @@ layout: "post"
 title: "Menjalankan Python Virtualenv Versi Python yang Spesifik pada Arch Linux"
 date: "2019-01-05 12:07"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-01-05-menjalankan-python-virtualenv-versi-tertentu"
 author: "BanditHijo"
 category: "blog"
 tags: ["python"]

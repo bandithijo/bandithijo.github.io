@@ -3,7 +3,6 @@ layout: "post"
 title: "Notifikasi User Sign Up ke Email Admin dengan ActionMailer Rails"
 date: "2021-03-26 19:00"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2021/2021-03-26-notifikasi-user-signup-ke-email-admin-degan-actionmailer-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]
@@ -135,7 +134,7 @@ Selesai!
 
 Apabila terdapat user baru yang mendaftarkan account, admin akan mendapatkan email seperti ini.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Email yang dikirimkan ke admin jika ada user baru yang mendaftar
 

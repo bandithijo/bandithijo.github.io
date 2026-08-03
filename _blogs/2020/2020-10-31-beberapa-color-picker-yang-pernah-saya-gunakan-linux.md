@@ -3,7 +3,6 @@ layout: "post"
 title: "Beberapa Color Picker yang Pernah Saya Gunakan di GNU/Linux"
 date: "2020-10-31 17:28"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-10-31-beberapa-color-picker-yang-pernah-saya-gunakan-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["colorpicker"]
@@ -26,7 +25,7 @@ Catatan kali ini adalah mengenai beberapa aplikasi yang sudah saya kenal, sejak 
 
 ### Gpick
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 **Gpick**.
 
@@ -43,7 +42,7 @@ Saya pribadi, awal-awal mengenal Gpick, sangat menyukainya. Namun, karena kebutu
 
 ### Gcolor2
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 2]({% assets_path %}/gambar-02.png)
 
 **Gcolor2**
 
@@ -62,7 +61,7 @@ Saya pribadi, sempat memakai Gcolor2 dalam waktu yang cukup lama.
 
 ### Gcolor3
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.png)
+![Gambar 3]({% assets_path %}/gambar-03.png)
 
 **Gcolor3**
 
@@ -79,7 +78,7 @@ Alasan saya menggunakan Gcolor3, ketimbang Gcolor2, karena mengikuti trend saja.
 
 ### ColorGrab
 
-![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.png)
+![Gambar 4]({% assets_path %}/gambar-04.png)
 
 **ColorGrab**
 

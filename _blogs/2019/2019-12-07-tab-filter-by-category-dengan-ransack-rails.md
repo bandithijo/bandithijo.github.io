@@ -3,7 +3,6 @@ layout: "post"
 title: "Membuat Tab Filter by Category dengan Ransack pada Rails"
 date: "2019-12-07 17:45"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-12-07-tab-filter-by-category-dengan-ransack-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "ransack"]
@@ -63,11 +62,11 @@ Namun, saya akan menuliskan penggunaan Ransack untuk membuat tab filter berdasar
 
 Kira-kira seperti ini hasilnya.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Hasil dari filter pada tab All
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 2]({% assets_path %}/gambar-02.png)
 
 Gambar 2. Hasil dari filter pada tab tertentu, berdasarkan negara
 

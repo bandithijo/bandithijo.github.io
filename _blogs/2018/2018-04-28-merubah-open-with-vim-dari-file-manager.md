@@ -3,14 +3,13 @@ layout: "post"
 title: "Merubah Open With Vim dari File Manager"
 date: "2018-04-28 09:58"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2018/2018-04-28-merubah-open-with-vim-dari-file-manager"
 author: "BanditHijo"
 category: "blog"
 tags: ['vim', 'tips', 'tools']
 description: "Saat ini saya sudah tidak lagi menggunakan Vim, karena beberapa alasan yang salah satunya adalah dukungan terhadap clipboard -- salah satu kegunannya adalah copy paste dari Vim ke dalam sistem dan sebaliknya. Sehingga saya lebih memilih turunan dari Vim yang membawa lebih banyak fitur, yaitu NeoVim."
 ---
 
-![Banner]({{ page.assets | absolute_url }}/banner_post_09.png)
+![Banner]({% assets_path %}/banner_post_09.png)
 
 
 ## Latar Belakang
@@ -62,7 +61,7 @@ Jangan lupa untuk mengeset atribute `Terminal=false` apabila nilainya masih `tru
 
 Apabila berhasil, nanti akan seperti ini hasilnya.
 
-![Gambar 1]({{ page.assets | absolute_url }}/nvim-on-pcmanfm.gif)
+![Gambar 1]({% assets_path %}/nvim-on-pcmanfm.gif)
 
 Gambar 1. Open With Text Format pada PCMANFM File Manager
 

@@ -3,7 +3,6 @@ layout: "post"
 title: "Navigation Bar Global Menu Preferences pada Rails"
 date: "2019-12-21 10:23"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-12-21-navbar-global-menu-preference-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]
@@ -23,7 +22,7 @@ Tapi, mudah-mudahan judul yang saya berikan saat ini, dapat mewakili isi dari tu
 
 Mungkin saya akan mulai dengan memberikan ilustrasi gambar.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.gif)
+![Gambar 1]({% assets_path %}/gambar-01.gif)
 
 Gambar 1. Navigation Bar dengan Menu Language dan Currency Preferences
 

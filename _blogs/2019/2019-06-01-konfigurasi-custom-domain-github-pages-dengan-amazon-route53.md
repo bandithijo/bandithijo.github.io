@@ -3,7 +3,6 @@ layout: "post"
 title: "Konfigurasi Custom Domain GitHub Pages dengan Amazon Route 53"
 date: "2019-06-01 10:10"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-06-01-konfigurasi-custom-domain-github-pages-dengan-amazon-route53"
 author: "BanditHijo"
 category: "blog"
 tags: ["github pages", "aws", "route53"]
@@ -42,7 +41,7 @@ Di sini, saya mengasumsikan teman-teman sudah memiliki GitHub Pages.
 
 Secara *default* GitHub Pages memiliki nama domain seperti ini **username.github.io**.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Untuk mengatur konfirgurasi dari *custom domain* pada GitHub Pages, caranya sangat mudah.
 
@@ -52,7 +51,7 @@ Untuk mengatur konfirgurasi dari *custom domain* pada GitHub Pages, caranya sang
 
 3. Scrolling ke bawah, sampai menemukan section "GitHub Pages", seperti di bawah.
 
-   ![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+   ![Gambar 2]({% assets_path %}/gambar-02.png)
 
 4. Pada bagian **Custom domain**, isikan dengan domain yang teman-teman miliki.
 
@@ -95,7 +94,7 @@ Selanjutnya akan saya bagi dalam 3 tahapan.
 
 3. Buat Hosted Zone baru dengan memilih tombol biru pada bagian atas bertuliskan "**Create Hosted Zone**".
 
-   ![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.png)
+   ![Gambar 3]({% assets_path %}/gambar-03.png)
 
 4. Isikan **Domain Name:** dengan domain yang teman-teman miliki.
 
@@ -109,7 +108,7 @@ Selanjutnya akan saya bagi dalam 3 tahapan.
 
 9. Tampilannya akan seperti di bawah ini.
 
-   ![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.png)
+   ![Gambar 4]({% assets_path %}/gambar-04.png)
 
 10. Saat pertama kali dibuat, hanya akan terdapat dua buah record set, **Nameservers** dan **SOA (*Start of authority*)**, seperti yang saya kotak merah pada gambar di atas.
 
@@ -133,7 +132,7 @@ Selanjutnya akan saya bagi dalam 3 tahapan.
 
 1. Buat record set A dengan memilih tombol biru **Create Record Set** di bagian atas.
 
-   ![Gambar 5]({{ page.assets | absolute_url }}/gambar-05.png)
+   ![Gambar 5]({% assets_path %}/gambar-05.png)
 
 2. Lalu isikan seperti gambar di atas.
 
@@ -157,7 +156,7 @@ Selanjutnya akan saya bagi dalam 3 tahapan.
 
 1. Buat record set CNAME dengan memilih tombol biru **Create Record Set** di bagian atas.
 
-   ![Gambar 6]({{ page.assets | absolute_url }}/gambar-06.png)
+   ![Gambar 6]({% assets_path %}/gambar-06.png)
 
 2. Lalu isikan seperti gambar di atas.
 
@@ -187,7 +186,7 @@ Bagi teman-teman yang tidak membeli domain di Dewaweb, jangan khawatir, karena m
 
 Secara garis besar, tampilannya akan mirip seperti di bawah ini.
 
-![Gambar 7]({{ page.assets | absolute_url }}/gambar-07.png)
+![Gambar 7]({% assets_path %}/gambar-07.png)
 
 Masukkan 4 alamat Nameservers yang sudah kita catat sebelumnya.
 
@@ -278,7 +277,7 @@ Terima kasih.
 
 Alhamdulillah, Final Submission saya telah dinyatakan lulus.
 
-![Gamabr 8]({{ page.assets | absolute_url }}/gambar-08.png)
+![Gamabr 8]({% assets_path %}/gambar-08.png)
 
 
 ## Referensi

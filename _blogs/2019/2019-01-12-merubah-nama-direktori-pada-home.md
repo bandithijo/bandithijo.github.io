@@ -3,7 +3,6 @@ layout: "post"
 title: "Merubah Nama-nama Direktori pada Home"
 date: "2019-01-12 08:40"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-01-12-merubah-nama-direktori-pada-home"
 author: "BanditHijo"
 category: "blog"
 tags: ["xdg-user-dirs"]

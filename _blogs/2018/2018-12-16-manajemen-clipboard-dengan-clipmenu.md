@@ -3,7 +3,6 @@ layout: "post"
 title: "Manajemen Clipboard dengan Clipmenu pada i3wm"
 date: "2018-12-16 11:42"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2018/2018-12-16-manajemen-clipboard-dengan-clipmenu"
 author: "BanditHijo"
 category: "blog"
 tags: ["clipmenu"]
@@ -23,7 +22,7 @@ Hal yang saya alami tidak akan terjadi apabila saya menggunakan *clipboard manag
 
 Clipmenu adalah *clipboard manager* yang menggunakan dmenu atau Rofi sebagai antar muka.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Tampilan Clipmenu menggunakan Rofi sebagai antar muka
 
@@ -249,7 +248,7 @@ Saya menggunakan :
 
 Untuk memilih clip mana yang ingin kita pergunakan kembali, tinggal menekan arrow key <kbd> ↓ </kbd> / <kbd> ↑ </kbd> untuk memilih, tekan <kbd>ENTER</kbd> untuk memasukkannya pada PRIMARY. Kemudian, tinggal kita *paste* di mana saja.
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.gif)
+![Gambar 2]({% assets_path %}/gambar-02.gif)
 
 Gambar 2. Ilustrasi penggunaan Clipmenu dengan Rofi
 

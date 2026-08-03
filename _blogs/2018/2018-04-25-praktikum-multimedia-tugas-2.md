@@ -3,21 +3,20 @@ layout: "post"
 title: "Praktikum Multimedia Tugas 2"
 date: "2018-04-25 05:51"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2018/2018-04-25-praktikum-multimedia-tugas-2"
 author: "BanditHijo"
 category: "blog"
 tags: ["multimedia"]
 description: ""
 ---
 
-![Banner]({{ page.assets | absolute_url }}/banner_post_06.png)
+![Banner]({% assets_path %}/banner_post_06.png)
 
 
 ## Hasil
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar_01.png)
+![Gambar 1]({% assets_path %}/gambar_01.png)
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar_02.png)
+![Gambar 2]({% assets_path %}/gambar_02.png)
 
 
 ## Video Dokumentasi

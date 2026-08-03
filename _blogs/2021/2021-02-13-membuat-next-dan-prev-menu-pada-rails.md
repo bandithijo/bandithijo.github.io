@@ -3,7 +3,6 @@ layout: "post"
 title: "Membuat Go To Next dan Previous Post Menu pada Blog Post yang Dibangun dengan Rails"
 date: "2021-02-13 18:07"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2021/2021-02-13-membuat-next-dan-prev-menu-pada-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]
@@ -20,7 +19,7 @@ Catatan kali ini, saya akan membahas Ruby on Rails dari sisi front-end.
 
 Apabila kita memiliki sebuah fitur blog pada web aplikasi yang kita bangun menggunakan Ruby on Rails, mungkin akan cukup praktis kalau kita dapat menavigasikan halaman blog post dengan go to next & previous post pada halaman di mana saat ini kita berada.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.gif)
+![Gambar 1]({% assets_path %}/gambar-01.gif)
 
 Gambar 1. Fitur Go to Next-Prev di post/article
 

@@ -3,7 +3,6 @@ layout: "post"
 title: "Mengganti BIOS Logo ThinkPad pada GNU/Linux"
 date: "2019-01-13 10:59"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-01-13-custom-bios-logo-thinkpad"
 author: "BanditHijo"
 category: "blog"
 tags: ["thinkpad", "bios"]
@@ -23,7 +22,7 @@ description: "Saya kurang menyukai tampilan BIOS logo ThinkPad X260 bawaan. Kare
 
 Sudah sejak 15 Oktober 2018 lalu, saya begitu mengincar untuk dapat mengganti BIOS logo ThinkPad saya yang bertuliskan gambar ini.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.jpg)
+![Gambar 1]({% assets_path %}/gambar-01.jpg)
 
 Gambar 1. Default BIOS Logo pada ThinkPad X260 saya
 
@@ -110,7 +109,7 @@ Nah, dari penjelasan README.TXT tersebut kita dapat mengambil kesimpulan:
 
 Setelah mendapatkan informasi yang valid, saya pun menyiapkan gambar yang saya inginkan.
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 2]({% assets_path %}/gambar-02.png)
 
 Gambar 2. Gambar pertama yang saya siapkan (440x440)
 
@@ -122,7 +121,7 @@ File gambar ini saya buat berukuran lebar 440px dan tinggi 440px, tidak transpar
 
 Caranya sangat mudah. Dengan menggunakan GIMP, buka menu **Image → Mode → Indexed...**.
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-06.png)
+![Gambar 3]({% assets_path %}/gambar-06.png)
 
 Gambar 3. Mode Indexed Window pada GIMP
 
@@ -205,7 +204,7 @@ Akan ada tambahan pertanyaan yang kira-kira berisi konfirmasi bahwa di dalam dir
 
 Setelah selesai, hasilnya akan seperti ini.
 
-![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.gif)
+![Gambar 4]({% assets_path %}/gambar-04.gif)
 
 Gambar 4. Percobaan pertama
 
@@ -217,7 +216,7 @@ Kemduian saya coba menambahkan **Canvas Size** pada bagian atas dengan menggunak
 
 Kira-kira seperti ini hasilnya.
 
-![Gambar 5]({{ page.assets | absolute_url }}/gambar-03.png)
+![Gambar 5]({% assets_path %}/gambar-03.png)
 
 Gambar 5. Gambar kedua dengan ukuran (440x600)
 
@@ -227,7 +226,7 @@ Kemudian saya ulangin langkah memasukkan gambar ke dalam *bootable flash drive* 
 
 Hasilnya seperti ini.
 
-![Gambar 6]({{ page.assets | absolute_url }}/gambar-05.gif)
+![Gambar 6]({% assets_path %}/gambar-05.gif)
 
 Gambar 6. Percobaan kedua, logo terlihat lebih di tengah.
 

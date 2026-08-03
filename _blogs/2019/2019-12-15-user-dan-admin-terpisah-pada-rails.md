@@ -3,7 +3,6 @@ layout: "post"
 title: "Membuat User dan Admin Terpisah pada Rails yang menggunakan Devise"
 date: "2019-12-15 20:18"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-12-15-user-dan-admin-terpisah-pada-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]
@@ -82,7 +81,7 @@ Lalu, jalankan Rails server untuk sekedar melihat apakah project berhasil dijala
 $ rails s
 ```
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Default Welcome Page pada Rails Project
 
@@ -854,15 +853,15 @@ $ rails s
 
 Kira-kira, seperti inilah hasilnya.
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.gif)
+![Gambar 2]({% assets_path %}/gambar-02.gif)
 
 Gambar 2. Public Page
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.gif)
+![Gambar 3]({% assets_path %}/gambar-03.gif)
 
 Gambar 3. User Login, Register Dashboard
 
-![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.gif)
+![Gambar 4]({% assets_path %}/gambar-04.gif)
 
 Gambar 4. Admin Login dan Register
 

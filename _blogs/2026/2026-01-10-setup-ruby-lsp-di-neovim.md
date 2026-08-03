@@ -3,7 +3,6 @@ layout: "post"
 title: "Setup Ruby LSP di Neovim"
 date: "2026-01-10 00:24"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2026/2026-01-10-setup-ruby-lsp-di-neovim"
 author: "BanditHijo"
 category: "blog"
 tags: ["neovim", "ruby"]
@@ -19,7 +18,7 @@ description: "Language Server Protocol sangat membantu developer saat proses dev
 
 {{ page.description }}
 
-![Gambar 1]({{ page.assets}}/gambar_01.png)
+![Gambar 1]({% assets_path %}/gambar_01.png)
 
 Gambar 1. Ruby LSP icon
 
@@ -83,7 +82,7 @@ Saya sangat merekomendasikan Ruby LSP ini untuk dicoba, terutama bagi Anda yang 
 
 Sejak Maret 2025, saya sudah mulai menggunakan Ruby LSP ini di Neovim, setelah sebelumnya sejak 2019 menggunakan Solargraph.
 
-![Gambar 2]({{ page.assets}}/gambar_02.png)
+![Gambar 2]({% assets_path %}/gambar_02.png)
 
 Gambar 2. Post terkait Ruby LSP di Threads saya.
 

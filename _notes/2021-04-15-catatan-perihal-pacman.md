@@ -3,7 +3,6 @@ layout: "post"
 title: "Catatan dalam Berinteraksi dengan Pacman"
 date: "2021-04-15 22:23"
 permalink: "/note/:title"
-assets: "/assets/posts/note/2021-04-15-catatan-perihal-pacman"
 author: "BanditHijo"
 category: "note"
 tags: ["pacman"]

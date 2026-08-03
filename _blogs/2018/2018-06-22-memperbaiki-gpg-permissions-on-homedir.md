@@ -3,14 +3,13 @@ layout: "post"
 title: "Memperbaiki GPG: Warning: Unsafe Permissions on Homedir"
 date: "2018-06-22 17:58"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2018/2018-06-22-memperbaiki-gpg-permissions-on-homedir"
 author: "BanditHijo"
 category: 'blog'
 tags: ['gnupg', 'gpg']
 description: "Masalah yang ingin saya angkat pada dokumentasi ini adalah adanya *warning* yang muncul setiap kali saya menjalankan perintah gpg di Terminal."
 ---
 
-![Banner]({{ page.assets | absolute_url }}/banner_post_17.png)
+![Banner]({% assets_path %}/banner_post_17.png)
 
 
 ## Pendahuluan

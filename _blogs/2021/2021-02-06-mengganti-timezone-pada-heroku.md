@@ -3,7 +3,6 @@ layout: "post"
 title: "Mengganti Zona Waktu pada Heroku"
 date: "2021-02-06 00:15"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2021/2021-02-06-mengganti-timezone-pada-heroku"
 author: "BanditHijo"
 category: "blog"
 tags: ["heroku"]
@@ -89,7 +88,7 @@ Kalau mau dipastikan lagi kalian dapat membuka Heroku Dashboard, pergi ke web ap
 
 Seharusnya sudah ada variable **TZ** dengan value TimeZone yang kita definisikan.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Config environment variable TZ di Heroku
 

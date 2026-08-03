@@ -3,7 +3,6 @@ layout: "post"
 title: "sxiv, Simple X Image Viewer (sxiv) yang Praktis namun Powerfull"
 date: "2022-08-07 15:53"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2022/2022-08-07-sxiv-simple-x-image-viewer-yang-praktis"
 author: "BanditHijo"
 category: "blog"
 tags: ["sxiv"]
@@ -49,11 +48,11 @@ Kalau kekurangan dari sxiv (subjektif menurut saya):
 
 ## Screenshots
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. sxiv with image mode
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 2]({% assets_path %}/gambar-02.png)
 
 Gambar 2. sxiv with thumbnail mode
 
@@ -63,40 +62,40 @@ Gambar 2. sxiv with thumbnail mode
 
 ### Rotation
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.gif)
+![Gambar 3]({% assets_path %}/gambar-03.gif)
 
 Gambar 3. sxiv with rotate left & right
 
 
 ### Flipping
 
-![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.gif)
+![Gambar 4]({% assets_path %}/gambar-04.gif)
 
 Gambar 4. sxiv with flip vertical & horizontal
 
 
 ### Zooming & Panning
 
-![Gambar 5]({{ page.assets | absolute_url }}/gambar-05.gif)
+![Gambar 5]({% assets_path %}/gambar-05.gif)
 
 Gambar 5. sxiv with zoom in & out
 
-![Gambar 6]({{ page.assets | absolute_url }}/gambar-06.gif)
+![Gambar 6]({% assets_path %}/gambar-06.gif)
 
 Gambar 6. sxiv with zoom in movement, zoom level 100%, fit image to window
 
 
 ### Navigation
 
-![Gambar 7]({{ page.assets | absolute_url }}/gambar-07.gif)
+![Gambar 7]({% assets_path %}/gambar-07.gif)
 
 Gambar 7. sxiv with navibation next & previous
 
-![Gambar 8]({{ page.assets | absolute_url }}/gambar-08.gif)
+![Gambar 8]({% assets_path %}/gambar-08.gif)
 
 Gambar 8. sxiv with navigation on thumbnails mode
 
-![Gambar 9]({{ page.assets | absolute_url }}/gambar-09.gif)
+![Gambar 9]({% assets_path %}/gambar-09.gif)
 
 Gambar 9. sxiv with zoom in/out thumbnails
 

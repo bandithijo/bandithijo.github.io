@@ -3,7 +3,6 @@ layout: "post"
 title: "Memasang Heroku-CLI pada FreeBSD"
 date: "2020-04-03 19:31"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-04-03-memasang-heroku-cli-pada-freebsd"
 author: "BanditHijo"
 category: "blog"
 tags: ["freebsd", "heroku"]

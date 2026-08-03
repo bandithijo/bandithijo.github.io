@@ -3,7 +3,6 @@ layout: "post"
 title: "Apa yang Baru di Blog BanditHijo versi 3?"
 date: "2026-01-16 10:06"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2026/2026-01-16-apa-yang-baru-di-blog-bandithijo-versi-3"
 author: "BanditHijo"
 category: "blog"
 tags: ["blog"]
@@ -22,7 +21,7 @@ Sedikit kilas balik, pada versi pertama blog ini [1], saya menggunakan modifikas
 
 ### Versi Pertama (Markdown + Jekyll Custom Tags)
 
-![Gambar 1]({{ page.assets }}/gambar_01.png)
+![Gambar 1]({% assets_path %}/gambar_01.png)
 
 Gambar 1. BanditHijo's Blog versi pertama
 
@@ -67,7 +66,7 @@ Pada mulanya, saya merasa bahwa dengan menggunakan custom tag/notasi markdown te
 
 Saya juga sempat mencoba merubah format artikel di versi kedua [2], yang tadinya menggunakan Markdown pada versi pertama, saya ubah menjadi AsciiDoc. Pertimbangan saya menggunakan AsciiDoc, karena blog saya sebagian besar berisi hal-hal teknis. Sehingga cocok menggunakan notasi AsciiDoc yang luwes untuk dokumen teknis.
 
-![Gambar 2]({{ page.assets }}/gambar_02.png)
+![Gambar 2]({% assets_path %}/gambar_02.png)
 
 Gambar 2. BanditHijo's Blog versi kedua
 
@@ -104,7 +103,7 @@ Saya menggunakan thema baru yang lebih minimalis dan fokus pada konten artikel.
 
 Kali ini saya tidak lagi menggunakan plain CSS yang dibuat sendiri seperti pada versi sebelumnya, melainkan menggunakan framework CSS bernama [Tailwind CSS](https://tailwindcss.com/). Framework ini memungkinkan saya untuk membuat desain yang responsif dan modern dengan lebih mudah.
 
-![Gambar 3]({{ page.assets }}/gambar_03.png)
+![Gambar 3]({% assets_path %}/gambar_03.png)
 
 Gambar 3. BanditHijo's Blog versi ketiga
 

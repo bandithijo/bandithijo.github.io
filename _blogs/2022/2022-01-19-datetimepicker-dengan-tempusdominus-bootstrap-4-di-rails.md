@@ -3,7 +3,6 @@ layout: "post"
 title: "Date Time Picker dengan Tempus Dominus Bootstrap 4 di Ruby on Rails 6"
 date: "2022-01-19 05:22"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2022/2022-01-19-datetimepicker-dengan-tempusdominus-bootstrap-4-di-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "javascript"]
@@ -20,11 +19,11 @@ Ketidakseragaman style dari date time picker pada browser.
 
 > *Unsupporting browsers gracefully degrade to a text input, but this creates problems in **consistency of user interface** (the presented controls are different) and data handling.* [1]
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.gif)
+![Gambar 1]({% assets_path %}/gambar-01.gif)
 
 Gambar 1. Default Date picker pada Google Chrome (Kiri) dan Firefox (Kanan) yang memiliki style yang berbeda
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-03.png)
+![Gambar 2]({% assets_path %}/gambar-03.png)
 
 Gambar 2. Default Date Picker dari Google Chrome (Kiri) & Firefox (Kanan)
 
@@ -262,11 +261,11 @@ Selesai!
 
 ## Hasil
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-02.gif)
+![Gambar 3]({% assets_path %}/gambar-02.gif)
 
 Gambar 3. Date picker yang sudah menggunakan tempusdominus-bootstrap-4
 
-![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.png)
+![Gambar 4]({% assets_path %}/gambar-04.png)
 
 Gambar 4. Date picker yang sudah menggunakan tempusdominus-bootstrap-4
 

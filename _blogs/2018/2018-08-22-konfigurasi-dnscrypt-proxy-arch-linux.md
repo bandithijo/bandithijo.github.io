@@ -3,14 +3,13 @@ layout: "post"
 title: "Konfigurasi DNSCrypt di Arch Linux"
 date: "2018-08-22 12:52"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2018/2018-08-22-konfigurasi-dnscrypt-proxy-arch-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["dnscrypt"]
 description: "Kesulitan dalam mengakses beberapa portal informasi membuat saya gerah. Pasalnya saya kehilangan beberapa bahan bacaan dan sumber informasi yang bagus sekali dari internet berskala global. Ada banyak cara, ini cara yang saya pergunakan untuk lolos dari pembatasan yang dilakukan pemerintah."
 ---
 
-![Banner]({{ page.assets | absolute_url }}/banner_post_20.png)
+![Banner]({% assets_path %}/banner_post_20.png)
 
 
 ## Pendahuluan
@@ -132,7 +131,7 @@ Sekarang lanjut ke konfigurasi nameserver pada `/etc/resolv.conf`.
 > 
 > Bagian ini telah diperbaharui sejak tanggal 2020-06-26.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar_01.png)
+![Gambar 1]({% assets_path %}/gambar_01.png)
 
 Sebelumnya, terima kasih kepada mas [DØNIX (@dsnvhlm)](https://t.me/dsnvhlm) yang telah memberikan informasi dan masukan untuk bagian ini.
 

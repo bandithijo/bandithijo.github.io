@@ -3,7 +3,6 @@ layout: "post"
 title: "Membuat LightDM Berjalan pada External Monitor"
 date: "2025-07-13 16:40"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2025/2025-07-13-membuat-lightdm-running-on-external-monitor"
 author: "BanditHijo"
 category: "blog"
 tags: ["lightdm"]

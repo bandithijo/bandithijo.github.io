@@ -3,7 +3,6 @@ layout: "post"
 title: "Rails Server Dapat Diakses oleh Perangkat dalam Satu LAN"
 date: "2020-07-10 01:03"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-07-10-rails-server-diakses-dalam-satu-lan"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]
@@ -48,7 +47,7 @@ Maka, kita akses dari smartphone dengan tujuan `192.168.1.5:3000`.
 
 Voila!
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Tampilan Desktop dan Mobile
 

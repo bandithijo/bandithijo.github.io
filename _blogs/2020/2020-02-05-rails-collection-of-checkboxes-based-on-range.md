@@ -3,7 +3,6 @@ layout: "post"
 title: "Membuat Collection of Checkbox yang Berbasis Rentang pada Rails"
 date: "2020-02-05 06:09"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-02-05-rails-collection-of-checkboxes-based-on-range"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "jquery"]
@@ -19,7 +18,7 @@ description: "Catatan kali ini mengenai cara membuat daftar checkbox yang berbas
 
 Catatan kali ini, saya akan kembali mendokumentasikan tentang search filter yang menggunakan Ransack sebagai backend dengan tampilan frontend berupa checkbox.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.gif)
+![Gambar 1]({% assets_path %}/gambar-01.gif)
 
 Gambar 1. Rails view helper collection_check_boxes
 

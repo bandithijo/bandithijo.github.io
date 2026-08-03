@@ -3,7 +3,6 @@ layout: "post"
 title: "Mengenal Single Table Inheritance dengan Devise pada Rails (Contoh 2)"
 date: "2020-02-22 06:46"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-02-22-rails-single-table-inheritance-dengan-devise-contoh-2"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "singletableinheritance", "devise"]
@@ -33,7 +32,7 @@ Teman-teman dapat melihat contoh pertama [di sini](/blog/rails-single-table-inhe
 
 Kira-kira seperti ini ERD-nya.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. ERD Single Table Inheritance antara user model dengan participants dan sponsors model
 

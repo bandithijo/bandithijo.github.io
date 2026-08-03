@@ -3,7 +3,6 @@ layout: "post"
 title: "Membuat Jekyll Blog Memiliki Dua URL Domain"
 date: "2025-12-21 05:40"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2025/2025-12-21-membuat-jekyll-blog-memiliki-dua-url-config"
 author: "BanditHijo"
 category: "blog"
 tags: ["jekyll", "netlify"]
@@ -139,7 +138,7 @@ Pada bagian `BUild command`, saya menambahkan flag `--config` untuk menggunakan 
 bundle exec jekyll build --config _config.yml,_config_netlify.yml
 ```
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar_01.png)
+![Gambar 1]({% assets_path %}/gambar_01.png)
 
 Gambar 1. Pengaturan Build Command di Netlify
 

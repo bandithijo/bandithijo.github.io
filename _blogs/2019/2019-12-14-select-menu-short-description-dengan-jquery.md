@@ -3,7 +3,6 @@ layout: "post"
 title: "Select Menu dengan Short Description Menggunakan jQuery pada Rails"
 date: "2019-12-14 01:44"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-12-14-select-menu-short-description-dengan-jquery"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "javascript", "jquery"]
@@ -21,7 +20,7 @@ Pernah membuat menu select atau dropdown menu, namun merasa keterngan nama yang 
 
 Misalnya, seperti pada project yang sedang saya kerjakan. Terdapat menu select untuk memilih salah satu Cancellation Policy melalui menu select. Seperti di bawah ini.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Cancellation Policy Menu Select
 
@@ -126,7 +125,7 @@ Atau dapat juga menggunakan inspect element pada Browser untuk mengetahui id dar
 
 Nah, kalau sudah semua, hasilnya akan seperti ini.
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.gif)
+![Gambar 2]({% assets_path %}/gambar-02.gif)
 
 Gambar 2. Cancellation Policy Menu Select dengan Short Description
 

@@ -3,14 +3,13 @@ layout: "post"
 title: "OpenStreetMap Nominatim (Geocoding Machine) dengan Docker"
 date: "2026-02-07 11:21"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2026/2026-02-07-openstreetmap-nominatim-dengan-docker"
 author: "BanditHijo"
 category: "blog"
 tags: ["openstreetmap", "nominatim"]
 description: "OpenStreetMap Nominatim adalah sebuah layanan geocoding yang memungkinkan pengguna untuk mencari lokasi berdasarkan nama tempat  atau alamat (forward search) atau geographic coordinate (reverse search). Dalam artikel ini, saya akan mendokumentasikan cara menjalankan OpenStreetMap Nominatim menggunakan Docker agar proses setup Nominatim menjadi lebih mudah dan cepat, tanpa perlu repot mengatur lingkungan dan dependensi secara manual."
 ---
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar_01.png)
+![Gambar 1]({% assets_path %}/gambar_01.png)
 
 
 ## Pendahuluan

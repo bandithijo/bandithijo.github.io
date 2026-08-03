@@ -3,7 +3,6 @@ layout: "post"
 title: "Defx, Alternatif Vim File Explorer selain NERDTree"
 date: "2020-10-27 05:41"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-10-29-defx-alternatif-file-explorer-selain-nerdtree"
 author: "BanditHijo"
 category: "blog"
 tags: ["vim", "defx"]
@@ -347,9 +346,9 @@ endif
 
 ## Hasilnya
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.gif)
+![Gambar 2]({% assets_path %}/gambar-02.gif)
 
 Kalau diperhatikan, kenapa status bar saya dapat berbeda ketika berada di buffer Defx?
 

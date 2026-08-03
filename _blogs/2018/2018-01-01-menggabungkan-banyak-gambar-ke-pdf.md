@@ -3,7 +3,6 @@ layout: "post"
 title: "Menggabungkan Banyak Gambar Menjadi Satu PDF dengan ImageMagick"
 date: "2018-01-01 03:20:58"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2018/2018-01-01-menggabungkan-banyak-gambar-ke-pdf"
 author: "BanditHijo"
 category: "blog"
 tags: ["imagemagick"]

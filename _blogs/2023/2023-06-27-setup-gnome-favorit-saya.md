@@ -3,7 +3,6 @@ layout: "post"
 title: "GNOME Desktop dan Setup Favorit Saya"
 date: "2023-06-27 20:32"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2023/2023-06-27-setup-gnome-favorit-saya"
 author: "BanditHijo"
 category: "blog"
 tags: ["gnome"]

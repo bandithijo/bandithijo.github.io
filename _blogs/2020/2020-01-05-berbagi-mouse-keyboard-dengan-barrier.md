@@ -3,7 +3,6 @@ layout: "post"
 title: "Barrier, Mengoperasikan Banyak Komputer hanya dengan Sebuah Mouse dan Keyboard"
 date: "2020-01-05 18:22"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-01-05-berbagi-mouse-keyboard-dengan-barrier"
 author: "BanditHijo"
 category: "blog"
 tags: ["barrier"]
@@ -20,7 +19,7 @@ Artinya, semakin banyak komputer/laptop, semakin banyak mouse dan keyboard yang 
 
 Saat masih menggunakan MacbookPro, beberapa tahun silam, saya pernah mencari-cari tools yang dapat mempermudah saya untuk berpindah-pindah cursor di antara dua laptop. Dalam pencarian ini, saya menemukan aplikasi yang bernama **Synergy**.[<sup>1</sup>](#referensi)
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Synergy
 
@@ -75,7 +74,7 @@ Terdapat dua tipe, Barrier GUI dan Barrier Headless
     Open-source KVM software based on Synergy (GUI)
 ```
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 3]({% assets_path %}/gambar-02.png)
 
 Gambar 3. Proses instalasi Barrier dengan Yay
 
@@ -85,11 +84,11 @@ Bagi yang ingin memasang sendiri dari source code, dapat merujuk ke panduan yang
 
 Nah, kalo sudah dipasang, saat pertama kali dijalankan, kita akan dihadapkan pada tampilan window seperti ini.
 
-![Gambar 4]({{ page.assets | absolute_url }}/gambar-03.png)
+![Gambar 4]({% assets_path %}/gambar-03.png)
 
 Gambar 4. Welcome Page dari Barrier
 
-![Gambar 5]({{ page.assets | absolute_url }}/gambar-04.png)
+![Gambar 5]({% assets_path %}/gambar-04.png)
 
 Gambar 5. Window Utama untuk Memilih Sebagai Client atau Server
 
@@ -97,7 +96,7 @@ Pada contoh di atas, saya menggunakan ThinkPad X61 (GNU/Linux) sebagai server, d
 
 Server artinya, mesin yang kita setup sebagai server akan kita gunakan mouse dan keyboardnya untuk menjelajah ke mesin-mesin lain yang di setup sebagai client.
 
-![Gambar 6]({{ page.assets | absolute_url }}/gambar-05.png)
+![Gambar 6]({% assets_path %}/gambar-05.png)
 
 Gambar 6. Konfigurasi Layout yang ada di Server
 

@@ -3,7 +3,6 @@ layout: "post"
 title: "Menambahkan Frame pada Hasil ScreenShot dengan ImageMagick"
 date: "2020-07-25 11:45"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-07-25-menambahkan-frame-pada-screenshot-dengan-imagemagick"
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby", "imagemagick"]
@@ -16,7 +15,7 @@ Saya baru-baru saja menyeragamkan semua produksi video yang saya jadikan [vlog d
 
 Dalam video tersebut, saya menggunakan frame seperti ini:
 
-![Gambar 1]({{ page.assets | absolute_url }}/obs-frame.png)
+![Gambar 1]({% assets_path %}/obs-frame.png)
 
 Gambar 1. obs-frame
 
@@ -26,7 +25,7 @@ Nah, permasalahannya adalah:
 
 Saat ini, hasil screenshot yang diambil langsung dari laptop ThinkPad X61 saya, seperti ini:
 
-![Gambar 2]({{ page.assets | absolute_url }}/thinkpad-x61-1024x768.png)
+![Gambar 2]({% assets_path %}/thinkpad-x61-1024x768.png)
 
 Gambar 2. thinkpad-x61-1024x768
 
@@ -34,7 +33,7 @@ Nah, hasil screenshot di atas memiliki resolusi 1024x768.
 
 Saya ingin menggabungkan hasil screenshot dengan frame.
 
-![Gambar 3]({{ page.assets | absolute_url }}/mockup-imagemagick.png)
+![Gambar 3]({% assets_path %}/mockup-imagemagick.png)
 
 Gambar 3. mockup-imagemagick
 
@@ -90,7 +89,7 @@ super + Print
 
 Hasilnya seperti ini.
 
-![Gambar 4]({{ page.assets | absolute_url }}/hasil-screenshot-frame-imagemagick.png)
+![Gambar 4]({% assets_path %}/hasil-screenshot-frame-imagemagick.png)
 
 Gambar 4. hasil-screenshot-frame-imagemagick
 

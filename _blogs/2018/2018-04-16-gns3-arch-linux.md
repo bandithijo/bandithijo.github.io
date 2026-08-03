@@ -3,14 +3,13 @@ layout: "post"
 title: "Instal dan Konfigurasi GNS3 pada Arch Linux"
 date: "2018-04-16 04:22"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2018/2018-04-16-gns3-arch-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["gns3"]
 description: "Panduan dan catatan untuk memasang GNS3 mungkin lebih banyak untuk distribusi turunan Debian atau Ubuntu. Apakah tidak dapat dipasang di Arch Linux? Tentu saja bisa."
 ---
 
-![Banner]({{ page.assets | absolute_url }}/banner_post_03.png)
+![Banner]({% assets_path %}/banner_post_03.png)
 
 
 ## Latar Belakang

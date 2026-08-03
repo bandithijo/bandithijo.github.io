@@ -3,11 +3,10 @@ layout: 'page'
 title: 'Tentang Blog dan Penulis'
 author: 'BanditHijo'
 permalink: '/about/'
-assets: "/assets/pages/about"
 toc: 'true'
 ---
 
-![Banner]({{ page.assets | absolute_url }}/banner.png)
+![Banner]({% assets_path %}/banner.png)
 
 **BanditHijo**, tidak seperti yang anda pahami, Bandit (kata ganti orang untuk konotasi yang bersifat negatif) dan Hijo (kata plesetan dari warna hijau).
 
@@ -43,11 +42,11 @@ Sebagian besar isi dari blog ini mengenai ulasan dari perkakas yang saya gunakan
 
 ## Blognya Dibuat Pakai Apa?
 
-Blog ini saya bangun menggunakan *Static Site Generator* yang bernama [**Jekyll**](http://jekyllrb.com/){:target="_blank"}.
+Blog ini saya bangun menggunakan *Static Site Generator* yang bernama [**Jekyll**](http://jekyllrb.com/).
 
 Tampilan dari tema blog ini juga dibuat sendiri agar saya lebih bebas membongkar dan memasang fitur-fitur yang ingin saya tambah dan kurangi di dalam blog ini.
 
-Ceritanya dapat teman-teman baca [**Migrasi BLog 2.0**](/blog/migrasi-blog-2-0){:target="_blank"}.
+Ceritanya dapat teman-teman baca [**Migrasi BLog 2.0**]({{ absolute_url }}/blog/migrasi-blog-2-0).
 
 ## Sistem Operasi yang digunakan?
 
@@ -131,27 +130,27 @@ Catatan tentang bagaimana cara untuk berdonasi, dapat teman-teman baca di sini, 
 
 ## Bagimana workflow dalam menggunakan Linux?
 
-![Gambar 1]({{ page.assets | absolute_url }}/01.png)
+![Gambar 1]({% assets_path %}/01.png)
 
 Gambar 1. i3 Window Manger + Polybar + Conky + Solarized Dark = My Perfect Desktop
 
-![Gambar 7]({{ page.assets | absolute_url }}/07.png)
+![Gambar 7]({% assets_path %}/07.png)
 
 Gambar 7. Another Desktop with Wallpaper and Vim
 
-![Gambar 2]({{ page.assets | absolute_url }}/02.png)
+![Gambar 2]({% assets_path %}/02.png)
 
 Gambar 2. Tools yang saya pergunakan untuk menulis, Vim + Tmux
 
-![Gambar 3]({{ page.assets | absolute_url }}/03.png)
+![Gambar 3]({% assets_path %}/03.png)
 
 Gambar 3. Tools yang saya pergunakan untuk membuat vector image, Inkscape
 
-![Gambar 4]({{ page.assets | absolute_url }}/04.png)
+![Gambar 4]({% assets_path %}/04.png)
 
 Gambar 4. Tools yang saya pergunakan untuk membuat banner image, GIMP
 
-![Gambar 5]({{ page.assets | absolute_url }}/05.png)
+![Gambar 5]({% assets_path %}/05.png)
 
 Gambar 5. Tools yang saya pergunakan untuk image croping, gThumb
 

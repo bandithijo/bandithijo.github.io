@@ -3,7 +3,6 @@ layout: "post"
 title: "Export Data ke XLSX (SpreadSheet) pada Rails"
 date: "2020-07-09 00:56"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-07-09-export-data-ke-xlsx-spreadsheet-pada-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]

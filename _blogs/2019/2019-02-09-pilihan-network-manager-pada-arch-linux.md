@@ -3,7 +3,6 @@ layout: "post"
 title: "Comprehensive Network Manager yang Saya Pergunakan pada Arch Linux"
 date: "2019-02-09 05:52"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-02-09-pilihan-network-manager-pada-arch-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["network manager"]
@@ -98,11 +97,11 @@ Ada beberapa paket tambahan yang saya pergunakan, Seperti
 
 Berikut ini adalah beberapa tampilan NetworkManager menggunakan GUI.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. nm-applet
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 2]({% assets_path %}/gambar-02.png)
 
 Gambar 2. nm-connection-editor
 
@@ -113,19 +112,19 @@ Untuk saat ini, saya lebih sering menggunakan TUI, dan tidak menggunakan kedua p
 
 Fungsinya sama saja, hanya berbeda tampilan.
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.png)
+![Gambar 3]({% assets_path %}/gambar-03.png)
 
 Gambar 3. nmtui, bagian depan
 
-![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.png)
+![Gambar 4]({% assets_path %}/gambar-04.png)
 
 Gambar 4. nmtui, bagian Edit connection
 
-![Gambar 5]({{ page.assets | absolute_url }}/gambar-05.png)
+![Gambar 5]({% assets_path %}/gambar-05.png)
 
 Gambar 5. nmtui, bagian Activate a connection
 
-![Gambar 6]({{ page.assets | absolute_url }}/gambar-06.png)
+![Gambar 6]({% assets_path %}/gambar-06.png)
 
 Gambar 6. nmtui, bagian Set system hostname
 
@@ -151,7 +150,7 @@ bindsym $mod+F8 exec --no-startup-id networkmanager_dmenu
 
 Aplikasi ini dapat kita gunakan untuk memilih-mili jaringan dan beberapa menu jaringan. Dapat menggunakan `dmenu` atau `rofi` sebagai frontend nya. Tentu saja saya memilih menggunakan `rofi` agar seragam dengan theme. Hehehe.
 
-![Gambar 7]({{ page.assets | absolute_url }}/gambar-07.gif)
+![Gambar 7]({% assets_path %}/gambar-07.gif)
 
 Gambar 7. Tampilan NetworkManager_dmenu dengan Rofi
 
@@ -164,11 +163,11 @@ Menggunakan Arch Linux memberikan kita kemudahan untuk membongkar-pasang berbaga
 
 Beberapa waktu yang lalu, saya pun sempat mencoba **connman** dan **wicd**.
 
-![Gambar 8]({{ page.assets | absolute_url }}/gambar-08.png)
+![Gambar 8]({% assets_path %}/gambar-08.png)
 
 Gambar 8. Tampilan GUI dari `connman-gtk`
 
-![Gambar 9]({{ page.assets | absolute_url }}/gambar-09.png)
+![Gambar 9]({% assets_path %}/gambar-09.png)
 
 Gambar 9. Tampilan GUI dari `wicd-gtk`
 

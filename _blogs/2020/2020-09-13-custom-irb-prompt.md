@@ -3,7 +3,6 @@ layout: "post"
 title: "Kustomisasi IRB Prompt (Pry)"
 date: "2020-09-13 09:43"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-09-13-custom-irb-prompt"
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby", "irb", "pry"]
@@ -138,7 +137,7 @@ Sebelum versi Ruby 2.7. IRB memiliki tampilan yang flat tanpa sintax highlightin
 
 Nah, sebelum IRB mendapatkan *facelift* tersebut, saya sudah lebih dahulu menggunakan alternatif dari IRB, yaitu [**Pry**](https://github.com/pry/pry).
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Pry sudah lebih dahulu menggunakan sintax highlighting dan juga memiliki beberapa fitur-fitur yang dapat mempermudah pekerjaan. Beberapa fitur dari Pry dapat kalian lihat [di sini](https://github.com/pry/pry#key-features).
 

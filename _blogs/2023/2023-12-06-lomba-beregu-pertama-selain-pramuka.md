@@ -3,18 +3,17 @@ layout: "post"
 title: "Lomba Beregu Pertama selain Pramuka"
 date: "2023-12-06 20:34"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2023/2023-12-06-lomba-beregu-pertama-selain-pramuka"
 author: "BanditHijo"
 category: "blog"
 tags: ["lomba", "computerkid", "computerstar"]
 description: "Sejak SD mungkin sangat jarang saya mengikuti lomba beregu selain dari Kepramukaan. Tapi di masa SMA, pertama kalinya bagi saya mengikuti lomba selain Pramuka dan menang juara 1."
 ---
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar_01.jpg)
+![Gambar 1]({% assets_path %}/gambar_01.jpg)
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar_02.jpg)
+![Gambar 2]({% assets_path %}/gambar_02.jpg)
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar_03.jpg)
+![Gambar 3]({% assets_path %}/gambar_03.jpg)
 
 Waktu beres-beres barang weekend kemarin, nemu medali ini.
 

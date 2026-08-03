@@ -3,7 +3,6 @@ layout: "post"
 title: "Mengedit dengan Vim pada Nautilus dan Thunar pada Window Manager"
 date: "2020-08-11 02:51"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-08-11-mengedit-dengan-vim-pada-nautilus-thunar"
 author: "BanditHijo"
 category: "blog"
 tags: ["nautilus", "thunar", "vim"]
@@ -55,7 +54,7 @@ Sangat merepotkan. 😅
 
 Kalau sudah diset, sekarang coba buka salah satu plain text, dengan klik kanan "Open With Vim/NeoVim". Seperti yang saya demokan di bawah.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.gif)
+![Gambar 1]({% assets_path %}/gambar-01.gif)
 
 Mantap!!!
 

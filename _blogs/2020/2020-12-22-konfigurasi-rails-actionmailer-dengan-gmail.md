@@ -3,7 +3,6 @@ layout: "post"
 title: "Konfigurasi Ruby on Rails ActionMailer dengan Gmail"
 date: "2020-12-22 08:13"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-12-22-konfigurasi-rails-actionmailer-dengan-gmail"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]
@@ -14,7 +13,7 @@ description: "Pada umumnya, tutorial ActionMailer pasti mendemonstrasikan penggu
 
 Catatan kali ini terinspirasi saat saya mencoba menggunakan SendGrid dengan Heroku sebagai Add-ons, namun tidak berjalan dengan baik.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Virtual User untuk SendGrid yang dibuatkan oleh Heroku, dibanned oleh SendGrid
 
@@ -60,25 +59,25 @@ Caranya, teman-teman dapat mengikuti langkah-langkahnya di bawah ini.
 
 2. Pastikan **2-Step Verification** sudah di-**enable**-kan (1).
 
-   ![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+   ![Gambar 2]({% assets_path %}/gambar-02.png)
 
 3. Pilih **App passwords** (2), untuk men-generate App passwords.
 
 4. Berikan nama aplikasi dengan cara seperti gambar di bawah ini (3).
 
-   ![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.png)
+   ![Gambar 3]({% assets_path %}/gambar-03.png)
 
 5. Isikan saja dengan nama bebas sesuai nama Rails project yang sedang dikerjakan, agar tidak bingung (4).
 
-   ![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.png)
+   ![Gambar 4]({% assets_path %}/gambar-04.png)
 
 6. Catat password yang berada di kotak kuning (5).
 
-   ![Gambar 5]({{ page.assets | absolute_url }}/gambar-05.png)
+   ![Gambar 5]({% assets_path %}/gambar-05.png)
 
 7. Nah, kalau sudah seperti ini. Kita telah berhasil men-generate App password yang nantinya akan kita gunakan untuk ActionMailer.
 
-   ![Gambar 6]({{ page.assets | absolute_url }}/gambar-06.png)
+   ![Gambar 6]({% assets_path %}/gambar-06.png)
 
 > INFO
 > 

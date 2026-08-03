@@ -3,14 +3,13 @@ layout: "post"
 title: "Generate Random Password menggunakan PWGEN"
 date: "2018-03-27"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2018/2018-03-27-generate-passowrd-dengan-pwgen"
 author: "BanditHijo"
 category: "blog"
 tags: ["security", "pwgen"]
 description: "pwgen adalah perkakas command line interface yang praktis digunakan untuk mengenerate password."
 ---
 
-![Banner]({{ page.assets | absolute_url }}/banner_post_00.png)
+![Banner]({% assets_path %}/banner_post_00.png)
 
 
 ## Latar Belakang

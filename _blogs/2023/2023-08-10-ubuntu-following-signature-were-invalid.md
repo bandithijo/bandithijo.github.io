@@ -3,7 +3,6 @@ layout: "post"
 title: "Ubuntu: the following signatures were invalid: EXPKEYSIG"
 date: "2023-08-10 01:41"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2023/2023-08-10-ubuntu-following-signature-were-invalid"
 author: "BanditHijo"
 category: "blog"
 tags: ["ubuntu"]

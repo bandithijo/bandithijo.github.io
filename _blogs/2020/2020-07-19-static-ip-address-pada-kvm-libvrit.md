@@ -3,7 +3,6 @@ layout: "post"
 title: "Membuat IP Address Static pada KVM libvirt (virt-manager)"
 date: "2020-07-19 13:04"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-07-19-static-ip-address-pada-kvm-libvrit"
 author: "BanditHijo"
 category: "blog"
 tags: ["virtmanager", "libvirt", "network"]

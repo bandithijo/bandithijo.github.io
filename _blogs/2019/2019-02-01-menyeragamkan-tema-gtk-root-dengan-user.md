@@ -3,7 +3,6 @@ layout: "post"
 title: "Menyeragamkan Tema GTK Root dengan Tema User"
 date: "2019-02-01 01:30"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-02-01-menyeragamkan-tema-gtk-root-dengan-user"
 author: "BanditHijo"
 category: "blog"
 tags: ["tips"]
@@ -50,7 +49,7 @@ Lakukan pengecekan untuk syarat pertama, apakah GKT theme yang kita pakai sudah 
 
    Atau, cek menggunakan File Manager,
 
-   ![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+   ![Gambar 1]({% assets_path %}/gambar-01.png)
 
    Apabila GTK theme yang kita pergunakan ternyata tidak terdapat pada direktori `/usr/share/themes`, lantas coba lakukan pengecekan pada direktori `~/.local/share/themes/`.
 
@@ -90,7 +89,7 @@ Selanjutnya, lakukan pengecekan apakah teman yang kita pergunakan memiliki kompa
 
    Atau, cek menggunakan File Manager,
 
-   ![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+   ![Gambar 2]({% assets_path %}/gambar-02.png)
 
    Apabila hanya terdapat salah satu dari keduanya, artinya GTK theme yang kalian pergunakan hanya mendukung GTK versi yang tersedia di tema.
 
@@ -140,7 +139,7 @@ gtk-modules="canberra-gtk-module:gail:atk-bridge"
 
 Dapat dilihat bahwa, pada sistem saya, file `gtkrc-2.0` ini digenerate oleh `LXAppearance`.
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.png)
+![Gambar 3]({% assets_path %}/gambar-03.png)
 
 Gambar 3. Interface dari LXAppearance
 
@@ -154,7 +153,7 @@ $ sudo cp ~/.gtkrc-2.0 /root/
 
 Berikut ini adalah ilustrasinya.
 
-![Gambar 4]({{ page.assets | absolute_url }}/gtk2.gif)
+![Gambar 4]({% assets_path %}/gtk2.gif)
 
 Gambar 4. gtk2
 
@@ -210,7 +209,7 @@ Sekarang coba buka aplikasi GTK3 dengan root permission.
 
 Berikut ilustrasinya.
 
-![Gambar 5]({{ page.assets | absolute_url }}/gtk3.gif)
+![Gambar 5]({% assets_path %}/gtk3.gif)
 
 Gambar 5. gtk3
 

@@ -3,7 +3,6 @@ layout: "post"
 title: "Membuat Table dengan Rounded Corner pada Bootstrap 4"
 date: "2020-11-29 10:38"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-11-29-membuat-table-rounded-corner-bootstrap-4"
 author: "BanditHijo"
 category: "blog"
 tags: ["bootstrap", "css", "html"]
@@ -14,7 +13,7 @@ description: "Hal yang masih menjadi misteri buat saya saat menggunakan Bootstra
 
 Kalau teman-teman menggunakan Bootstrap sebagai CSS Framework--terkhusus Bootstrap 4--pasti akan mendapatkan table dengan bagian corner yang bersiku.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 ```html
 <table class="table table-bordered table-hover my-3">
@@ -147,7 +146,7 @@ Tujuannya agar terlihat menyatu dan seragam --tidak terlihat seperti custom abal
 
 Dan beginilah hasilnya setelah modifikasi di atas kita lakukan.
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 2]({% assets_path %}/gambar-02.png)
 
 
 ## Pesan Penulis

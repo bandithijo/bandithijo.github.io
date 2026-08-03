@@ -3,14 +3,13 @@ layout: "post"
 title: "Beberapa Command untuk Mengecek Kondisi Battery Laptop pada GNU/Linux"
 date: "2018-10-14 18:38"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2018/2018-10-14-beberapa-command-mengecek-laptop-battery"
 author: "BanditHijo"
 category: "blog"
 tags: ["battery", "upower", "acpi"]
 description: "Karena tidak memiliki PC dan keseharian saya menggunakan laptop dalam menyelesaikan pekerjaan, saya merasa butuh untuk mencatat beberapa hal penting terkait dengan perintah-perintah yang biasa digunakan untuk membantu menegakkan diagnosis dalam pemeriksaan kondisi laptop."
 ---
 
-![Banner]({{ page.assets | absolute_url }}/banner_post_21.png)
+![Banner]({% assets_path %}/banner_post_21.png)
 
 ## Prakata
 

@@ -3,7 +3,6 @@ layout: "post"
 title: "Mudah Mengupgrade Jekyll 4"
 date: "2019-10-16 07:12"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-10-16-upgrade-jekyll-4"
 author: "BanditHijo"
 category: "blog"
 tags: ["jekyll"]
@@ -121,7 +120,7 @@ Namun sepertinya gem ini belum mengupgrade gemspec mereka, jadi dengan senang ha
 
 Kemudian, saya mendapati bahwa untuk Jekyll, kita sudah dapat mengeset **Environment variables** pada Netlify. Seingat saya, diawal-awal saya menggunakan Netlify, memang belum bisa, maka dari itu saya menggunakan bantuan gem jekyll-netlify.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Netlify Deploy Environment Variables
 

@@ -3,7 +3,6 @@ layout: "post"
 title: "Rails Counter Cache pada Satu Model"
 date: '2019-12-13 20:49'
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-12-13-rails-counter-cache-pada-satu-model"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]
@@ -176,7 +175,7 @@ Begini kira-kira hasilnya.
 | 2    | Baik Budiman          | 1                  | 0                      |
 ```
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Baik Budiman melakukan registrasi dengan menggunakan kode referral yang diberikan oleh Rizqi Assyaufi.
 

@@ -3,7 +3,6 @@ layout: "post"
 title: "Polybar, Bar yang Mudah Dikonfig, Praktis, dan Mudah Dikustomisasi"
 date: "2019-05-05 11:18"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-05-05-polybar-mudah-dikonfig-dan-praktis"
 author: "BanditHijo"
 category: "blog"
 tags: ["polybar"]
@@ -42,9 +41,9 @@ Status indikator yang *optional* seperti:
 
 Di bawah ini adalah contoh Polybar yang saya pergunakan.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 2]({% assets_path %}/gambar-02.png)
 
 Jangan bingung, tampilan Polybar saya memang sederhana seperti ini saja.
 
@@ -329,7 +328,7 @@ Kalau sudah, restart BSPWM.
 
 Saat pertama kali menjalankan Polybar, secara *default* akan menampilkan tampilan seperti ini.
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.png)
+![Gambar 3]({% assets_path %}/gambar-03.png)
 
 Gambar di atas adalah contoh dari pemanggilan `[bar/example]` dari file `config` yang belum kita modifikasi.
 
@@ -1225,7 +1224,7 @@ Saya menggunakan kombinasi keyboard <kbd>SUPER</kbd>+<kbd>F12</kbd> untuk mengak
 
 Berikut ini adalah demonstrasinya.
 
-![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.gif)
+![Gambar 4]({% assets_path %}/gambar-04.gif)
 
 
 ## Contoh File Konfigurasi

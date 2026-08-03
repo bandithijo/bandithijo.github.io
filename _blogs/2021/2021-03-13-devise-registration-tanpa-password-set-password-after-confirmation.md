@@ -3,7 +3,6 @@ layout: "post"
 title: "Devise Registration Tanpa Password, Set Password Setelah Confirmation"
 date: "2021-03-13 14:00"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2021/2021-03-13-devise-registration-tanpa-password-set-password-after-confirmation"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]
@@ -393,7 +392,7 @@ Modifikasi view template **registrations/new**.
 <%= render "devise/shared/links" %>
 ```
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 1]({% assets_path %}/gambar-02.png)
 
 Gambar 1. Sign up form or Registration form
 
@@ -429,7 +428,7 @@ Saya memindahkan field `password` dan `password_confirmation` ke halaman yang la
 <% end %>
 ```
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-03.png)
+![Gambar 2]({% assets_path %}/gambar-03.png)
 
 Gambar 2. Account Activation form
 
@@ -498,7 +497,7 @@ Pasang nav untuk menempatkan link indikator apabila user telah login atau belum.
 
 ## Demonstrasi
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-01.gif)
+![Gambar 3]({% assets_path %}/gambar-01.gif)
 
 Gambar 3. Demonstrasi register and activation
 

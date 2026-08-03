@@ -3,7 +3,6 @@ layout: "post"
 title: "Custom Template GitHub Page untuk GitHub Repositori dengan Jekyll"
 date: "2020-09-12 17:37"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-09-12-custom-template-github-page-untuk-github-repositori-jekyll"
 author: "BanditHijo"
 category: "blog"
 tags: ["jekyll", "github pages"]
@@ -14,7 +13,7 @@ description: "Saat membuat repositori di GitHub kita dapat membuat GitHub Pages 
 
 Kalau teman-teman berkunjung ke ["HelloDev Online Meetup: 💎 Ruby for Beginner"](https://bandithijo.github.io/hellodev_ruby_meetup/).
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Kemudian, memperhatikan URL-nya.
 
@@ -36,15 +35,15 @@ Sedangkan, halaman pengumuman tersebut, berada pada repositori ini:
 https://github.com/bandithijo/hellodev_ruby_meetup
 ```
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-07.png)
+![Gambar 2]({% assets_path %}/gambar-07.png)
 
 Sebenarnya, GitHub Page sudah menyediakan beberapa template default apabila kita mengaktifkan memilih "Theme" pada pengaturan yang ada pada masing-masing repositori --lihat gambar di bawah.
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 3]({% assets_path %}/gambar-02.png)
 
 Namun, terkadang, theme yang disediakan kurang sesuai "feel"-nya dengan konten yang ingin kita tampilkan.
 
-![Gambar 4]({{ page.assets | absolute_url }}/gambar-03.png)
+![Gambar 4]({% assets_path %}/gambar-03.png)
 
 
 ## Solusinya
@@ -264,7 +263,7 @@ http://localhost:4000
 
 Kalau konfigurasinya sudah benar, maka akan menampilkan isi dari halaman **README.md** yang ada di project direktori kita.
 
-![Gambar 5]({{ page.assets | absolute_url }}/gambar-04.png)
+![Gambar 5]({% assets_path %}/gambar-04.png)
 
 
 ## Let's Push
@@ -279,7 +278,7 @@ Kemudian, pergi ke tab **⚙️ Settings**.
 
 Pada section **GitHub Pages**, pilih branch **master** sebagai source yang akan ditampilkan sebagai GitHub Pages.
 
-![Gambar 6]({{ page.assets | absolute_url }}/gambar-08.png)
+![Gambar 6]({% assets_path %}/gambar-08.png)
 
 Kalau sudah dirubah, notifkasi dengan pita hijau akan muncul bertuliskan,
 
@@ -297,11 +296,11 @@ Nah, selesai!
 
 Kalau teman-teman ke bagian TOPICS, akan melihat bagian yang dapat "collapsible", seperti di bawah ini.
 
-![Gambar 7]({{ page.assets | absolute_url }}/gambar-05.png)
+![Gambar 7]({% assets_path %}/gambar-05.png)
 
 Kemudian, saat di klik, maka akan terbuka, seperti di bawah ini.
 
-![Gambar 8]({{ page.assets | absolute_url }}/gambar-06.png)
+![Gambar 8]({% assets_path %}/gambar-06.png)
 
 **Bagaimana cara membuatnya?**
 

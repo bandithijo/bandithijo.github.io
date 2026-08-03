@@ -3,7 +3,6 @@ layout: "post"
 title: "Membuat Fitur Search dengan Ransack dan EasyAutocomplete pada Rails"
 date: "2019-12-08 17:02"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-12-08-search-dengan-ransack-dan-easyautocomplete-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "javascript", "ransack"]
@@ -27,11 +26,11 @@ Misal, dalam project yang saya kerjakan adalah field location dan nama dari expe
 
 Kira-kira, hasilnya akan seperti ini.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Autocomplete suggestion pada input field pencarian
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.gif)
+![Gambar 2]({% assets_path %}/gambar-02.gif)
 
 Gambar 2. Ilustrasi bergerak dari autocomplete suggestion pada pencarian
 
@@ -297,7 +296,7 @@ http://localhost:3000/experiences.json?q=location_atau_nama_experience
 
 akan seperti ini hasilnya.
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.png)
+![Gambar 3]({% assets_path %}/gambar-03.png)
 
 Gambar 3. Hasil pencarian dalam bentuk JSON
 

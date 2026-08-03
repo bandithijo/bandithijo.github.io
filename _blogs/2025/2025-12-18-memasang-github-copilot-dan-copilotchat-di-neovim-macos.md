@@ -3,7 +3,6 @@ layout: "post"
 title: "Memasang GitHub Copilot dan CopilotChat di Neovim macOS"
 date: "2025-12-18 00:52"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2025/2025-12-18-memasang-github-copilot-dan-copilotchat-di-neovim-macos"
 author: "BanditHijo"
 category: "blog"
 tags: ["neovim", "github", "copilot"]

@@ -3,7 +3,6 @@ layout: "post"
 title: "Menangani Redirect ke Website Lain pada Jekyll"
 date: "2020-07-06 15:08"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-07-06-menangani-redirect-ke-website-lain-pada-jekyll"
 author: "BanditHijo"
 category: "blog"
 tags: ["jekyll"]

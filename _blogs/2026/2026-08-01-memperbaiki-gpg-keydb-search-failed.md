@@ -3,7 +3,6 @@ layout: "post"
 title: "Memperbaiki GPG: Keydb Search Failed"
 date: "2026-08-01 06:11"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2026/2026-08-01-memperbaiki-gpg-keydb-search-failed"
 author: "BanditHijo"
 category: "blog"
 tags: ["gpg", "gnupg", "keyboxd", "keydb"]

@@ -3,7 +3,6 @@ layout: "post"
 title: "Rekam Aktivitas Coding dengan WakaTime"
 date: "2026-01-03 13:24"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2026/2026-01-03-merekam-aktivitas-coding-dengan-wakatime"
 author: "BanditHijo"
 category: "blog"
 tags: ["wakatime"]
@@ -99,31 +98,31 @@ Di akhir tahun, WakaTime menyediakan ringkasan statistik tahunan yang menarik. S
 
 Berikut ini adalah ringkasan statistik kode saya dari WakaTime setiap tahunnya sejak 2019 hingga 2025.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar_01.png)
+![Gambar 1]({% assets_path %}/gambar_01.png)
 
 Gambar 1. Code Stats for 2019, [https://wakatime.com/a-look-back-at-2019](https://wakatime.com/a-look-back-at-2019) (Login to see your stats)
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar_02.png)
+![Gambar 2]({% assets_path %}/gambar_02.png)
 
 Gambar 2. Code Stats for 2020, [https://wakatime.com/a-look-back-at-2020](https://wakatime.com/a-look-back-at-2020) (Login to see your stats)
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar_03.png)
+![Gambar 3]({% assets_path %}/gambar_03.png)
 
 Gambar 3. Code Stats for 2021, [https://wakatime.com/a-look-back-at-2021](https://wakatime.com/a-look-back-at-2021) (Login to see your stats)
 
-![Gambar 4]({{ page.assets | absolute_url }}/gambar_04.png)
+![Gambar 4]({% assets_path %}/gambar_04.png)
 
 Gambar 4. Code Stats for 2022, [https://wakatime.com/a-look-back-at-2022](https://wakatime.com/a-look-back-at-2022) (Login to see your stats)
 
-![Gambar 5]({{ page.assets | absolute_url }}/gambar_05.png)
+![Gambar 5]({% assets_path %}/gambar_05.png)
 
 Gambar 5. Code Stats for 2023, [https://wakatime.com/a-look-back-at-2023](https://wakatime.com/a-look-back-at-2023) (Login to see your stats)
 
-![Gambar 6]({{ page.assets | absolute_url }}/gambar_06.png)
+![Gambar 6]({% assets_path %}/gambar_06.png)
 
 Gambar 6. Code Stats for 2024, [https://wakatime.com/a-look-back-at-2024](https://wakatime.com/a-look-back-at-2024) (Login to see your stats)
 
-![Gambar 7]({{ page.assets | absolute_url }}/gambar_07.png)
+![Gambar 7]({% assets_path %}/gambar_07.png)
 
 Gambar 7. Code Stats for 2025, [https://wakatime.com/a-look-back-at-2025](https://wakatime.com/a-look-back-at-2025) (Login to see your stats)
 
@@ -132,7 +131,7 @@ Gambar 7. Code Stats for 2025, [https://wakatime.com/a-look-back-at-2025](https:
 
 Kalau di dunia olahraga ada Strava yang digunakan untuk melacak aktivitas bersepeda atau lari, maka WakaTime bisa dianggap sebagai Strava-nya para programmer. Dengan WakaTime, saya bisa melihat "rute" coding saya, "kecepatan" menulis kode, dan "jarak" yang telah saya tempuh dalam dunia pemrograman.
 
-![Gambar 8]({{ page.assets | absolute_url }}/gambar_08.png)
+![Gambar 8]({% assets_path %}/gambar_08.png)
 
 Gambar 8. Saya memodifikasi Gambar 7 dengan memberikan background foto laptop saya dengan menggunakan GIMP (GNI Image Manipulation Program)
 

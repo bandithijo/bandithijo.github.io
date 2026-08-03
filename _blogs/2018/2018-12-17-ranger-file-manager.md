@@ -3,7 +3,6 @@ layout: "post"
 title: "Ranger, Terminal Based File Manager yang Ternyata Sangat Memudahkan"
 date: "2018-12-17 09:18"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2018/2018-12-17-ranger-file-manager"
 author: "BanditHijo"
 category: "blog"
 tags: ["ranger", "tui"]
@@ -16,27 +15,27 @@ Ranger adalah *Terminal User Interface file manager* (aplikasi untuk memanajemen
 
 Ranger menampilkan konten dalam bentuk kolom per kolom. Terdapat tiga buah kolom, yaitu: kolom direktori sebelumnya, direktori sekarang, dan file preview atau direktori selanjutnya.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.gif)
+![Gambar 1]({% assets_path %}/gambar-01.gif)
 
 Gambar 1. Antar muka Ranger. (1) Direktori sebelumnya, (2) Direktori Sekarang, (3) Direktori Selanjutnya atau file preview
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 2]({% assets_path %}/gambar-02.png)
 
 Gambar 2. Kolom ke-3 menampilkan konten dari file teks
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.png)
+![Gambar 3]({% assets_path %}/gambar-03.png)
 
 Gambar 3. Kolom ke-3 menampilkan preview dari gambar
 
-![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.png)
+![Gambar 4]({% assets_path %}/gambar-04.png)
 
 Gambar 4. Kolom ke-3 menampilkan detail dari audio atau video file
 
-![Gambar 5]({{ page.assets | absolute_url }}/gambar-06.gif)
+![Gambar 5]({% assets_path %}/gambar-06.gif)
 
 Gambar 5. Kolom ke-3 menampilkan detail dari file teks dengan highlight dan dapat di-*scrolldown*
 
-![Gambar 6]({{ page.assets | absolute_url }}/gambar-07.gif)
+![Gambar 6]({% assets_path %}/gambar-07.gif)
 
 Gambar 6. Kolom ke-3 menampilkan detail dari file Open Document Format (.odt, .ods, .odp)
 
@@ -315,7 +314,7 @@ $ sudo pacman -S perl-image-exiftool
 
 Kemudian, untuk melakukan toggling antar image preview dengan file info, kita dapat menggunakan keybind <kbd>z</kbd>+<kbd>i</kbd>.
 
-![Gambar 7]({{ page.assets | absolute_url }}/gambar-08.gif)
+![Gambar 7]({% assets_path %}/gambar-08.gif)
 
 
 #### Memilih Colorscheme
@@ -461,7 +460,7 @@ Dari konfigurasi di atas, sederhananya, saya membuat file `.pdf` akan terbuka de
 
 Nah, apabila saya ingin membukanya dengan `calibre`, kita dapat menekan tombol <kbd>R</kbd>. Ranger akan menampilkan pilihan yang mirip sseperti menu *Open with...*.
 
-![Gambar 8]({{ page.assets | absolute_url }}/gambar-05.gif)
+![Gambar 8]({% assets_path %}/gambar-05.gif)
 
 Gambar 8. Ilustrasi penggunaan tombol R, seperti menu *Open with...*
 

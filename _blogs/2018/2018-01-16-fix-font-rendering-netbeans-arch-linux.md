@@ -3,14 +3,13 @@ layout: "post"
 title: "Memperbaiki Font Rendering Netbeans pada Arch Linux"
 date: "2018-01-16"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2018/2018-01-16-fix-font-rendering-netbeans-arch-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["netbeans"]
 description: "Netbeans merupakan aplikasi yang dibangun dengan bahasa Java. Java GUI Toolkit biasanya belum terkonfigurasi dengan baik agar memiliki tampilan yang mulus. Maka kita perlu untuk mengkonfigurasi agar tampilan Netbeans kita terlihat mulus."
 ---
 
-![Banner]({{ page.assets | absolute_url }}/Default+Header+Template+Post+2X.png)
+![Banner]({% assets_path %}/Default+Header+Template+Post+2X.png)
 
 ## Latar Belakang
 

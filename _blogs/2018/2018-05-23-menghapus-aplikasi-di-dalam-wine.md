@@ -3,14 +3,13 @@ layout: "post"
 title: "Menghapus Aplikasi di dalam Wine"
 date: "2018-05-23 09:59"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2018/2018-05-23-menghapus-aplikasi-di-dalam-wine"
 author: "BanditHijo"
 category: "blog"
 tags: ["wine"]
 description: "Terkadang kita ingin mengujicoba apakah aplikasi yang kita maksud dapat berjalan dengan lancar di sistem operasi GNU/Linux yang kita miliki saat ini. Namun, setelah dipasang, kita bingung bagaimana cara menghapusnya. Apakah cukup menghapus direktori program tersebut yang terdapat pada Program Files atau harus menjalankan tool Uninstall Program seperti yang terdapat pada Microsoft Windows."
 ---
 
-![Banner]({{ page.assets | absolute_url }}/banner_post_14.png)
+![Banner]({% assets_path %}/banner_post_14.png)
 
 
 ## Pendahuluan
@@ -43,7 +42,7 @@ $ wine uninstaller
 
 Berikut saya sertakan ilustrasinya.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar_01.gif)
+![Gambar 1]({% assets_path %}/gambar_01.gif)
 
 Gimana? Sangat mudah sekali bukan?
 

@@ -3,14 +3,13 @@ layout: "post"
 title: "Memasang Powerline pada Terminal Arch Linux"
 date: "2016-06-15"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2016/2016-06-15-memasang-powerline-pada terminal-arch"
 author: "BanditHijo"
 category: "blog"
 tags: ["powerline", "arch linux"]
 description: "Powerline adalah plugin vim yang menyediakan statusline dan prompts dan juga untuk beberapa aplikasi lainnya, termasuk zsh, bash, tmux, IPython, Awesome, i3, dan Qtile."
 ---
 
-![Banner]({{ page.assets | absolute_url }}/Default+Header+Template+Post+21.1.png)
+![Banner]({% assets_path %}/Default+Header+Template+Post+21.1.png)
 
 > Powerline adalah plugin vim yang menyediakan statusline dan prompts dan juga untuk beberapa aplikasi lainnya, termasuk zsh, bash, tmux, IPython, Awesome, i3, dan Qtile.
 >

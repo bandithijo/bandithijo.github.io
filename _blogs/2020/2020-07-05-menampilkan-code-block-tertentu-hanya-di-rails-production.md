@@ -3,7 +3,6 @@ layout: "post"
 title: "Menampilkan Code Block Tertentu Hanya di Environment Production pada Rails"
 date: "2020-07-05 08:14"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-07-05-menampilkan-code-block-tertentu-hanya-di-rails-production"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]

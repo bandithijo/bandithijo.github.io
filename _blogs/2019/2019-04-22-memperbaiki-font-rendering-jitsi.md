@@ -3,7 +3,6 @@ layout: "post"
 title: "Memperbaiki Font Rendering pada Jitsi - VoIP dan IM Client pada GNU/Linux"
 date: "2019-04-22 14:11"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-04-22-memperbaiki-font-rendering-jitsi"
 author: "BanditHijo"
 category: "blog"
 tags: ["jitsi"]
@@ -48,7 +47,7 @@ Selanjutnya, **logout** dan **login** kembali.
 
 Selanjutnya, buka Jitsi dan lihat perbedannya.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Setelah ditambahkan JAVA_OPTIONS
 

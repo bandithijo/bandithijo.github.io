@@ -3,7 +3,6 @@ layout: "post"
 title: "Konfigurasi DNSCrypt-proxy di FreeBSD"
 date: "2020-03-22 20:29"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-03-22-konfigurasi-dnscrypt-proxy-freebsd"
 author: "BanditHijo"
 category: "blog"
 tags: ["dnscrypt"]
@@ -392,7 +391,7 @@ Kalau sudah begini, langsung bisa kita gunakan.
 
 Coba lakukan pengetesan dengan [**dnsleaktest.com**](https://www.dnsleaktest.com/).
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Hasil pengetesan dengan dnsleaktest.com (*gambar menyusul server postimages sedang maintenance*)
 

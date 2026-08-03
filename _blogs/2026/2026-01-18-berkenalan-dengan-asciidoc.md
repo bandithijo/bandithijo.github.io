@@ -3,7 +3,6 @@ layout: "post"
 title: "Berkenalan dengan AsciiDoc"
 date: "2026-01-18 12:37"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2026/2026-01-18-berkenalan-dengan-asciidoc"
 author: "BanditHijo"
 category: "blog"
 tags: ["asciidoc"]
@@ -69,7 +68,7 @@ toc::[]
 
 ```
 
-![Gambar 1]({{ page.assets}}/gambar_01.png)
+![Gambar 1]({% assets_path %}/gambar_01.png)
 
 Gambar 1. Table of Contents dan Judul Dokumen
 
@@ -86,7 +85,7 @@ _This is cursive text_
 
 ```
 
-![Gambar 2]({{ page.assets}}/gambar_02.png)
+![Gambar 2]({% assets_path %}/gambar_02.png)
 
 Gambar 2. Paragraf dengan format teks
 
@@ -103,7 +102,7 @@ Docker allows to package the full stack in a container:
 * Application with its configuration
 ```
 
-![Gambar 3]({{ page.assets}}/gambar_03.png)
+![Gambar 3]({% assets_path %}/gambar_03.png)
 
 Gambar 3. Nested list
 
@@ -117,7 +116,7 @@ ____
 
 ```
 
-![Gambar 4]({{ page.assets}}/gambar_04.png)
+![Gambar 4]({% assets_path %}/gambar_04.png)
 
 Gambar 4. Block quote
 
@@ -145,7 +144,7 @@ cat.meow <5>
 <5> calling the method
 ```
 
-![Gambar 5]({{ page.assets}}/gambar_05.png)
+![Gambar 5]({% assets_path %}/gambar_05.png)
 
 Gambar 5. Cross reference in code block
 
@@ -168,7 +167,7 @@ CAUTION: Ensure that...
 
 ```
 
-![Gambar 6]({{ page.assets}}/gambar_06.png)
+![Gambar 6]({% assets_path %}/gambar_06.png)
 
 Gambar 6. Admonition blocks
 
@@ -176,7 +175,7 @@ Gambar 6. Admonition blocks
 Hi, my name is {author}. I'm a Backend Software Engineer at Small Startup footnote:[Startup is a new company, often technology-focused, designed for rapid growth by validating a scalable business model, seeking external funding (like venture capital), and aiming to disrupt existing markets with innovative products or services — Wikipedia] in Jakarta that are working remotely from Balikpapan. Feel free to ask me anything about Software Develop-thing or Linux-thing on {email}.
 ```
 
-![Gambar 7]({{ page.assets}}/gambar_07.png)
+![Gambar 7]({% assets_path %}/gambar_07.png)
 
 Gambar 7. Footnote example
 
@@ -188,11 +187,11 @@ $ asciidoctor-pdf sample_document.adoc
 
 Maka akan menghasilkan file `sample_document.pdf` yang berisi dokumen yang sudah terformat dengan baik.
 
-![Gambar 8]({{ page.assets}}/gambar_08.png)
+![Gambar 8]({% assets_path %}/gambar_08.png)
 
 Gambar 8. Hasil eksport dokumen ke format PDF halaman 1
 
-![Gambar 9]({{ page.assets}}/gambar_09.png)
+![Gambar 9]({% assets_path %}/gambar_09.png)
 
 Gambar 9. Hasil eksport dokumen ke format PDF halaman 2
 

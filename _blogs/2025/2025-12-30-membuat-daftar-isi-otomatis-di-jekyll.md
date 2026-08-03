@@ -3,7 +3,6 @@ layout: "post"
 title: "Membuat Daftar Isi Otomatis di Jekyll"
 date: "2025-12-30 02:40"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2025/2025-12-30-membuat-daftar-isi-otomatis-di-jekyll"
 author: "BanditHijo"
 category: "blog"
 tags: ["jekyll"]

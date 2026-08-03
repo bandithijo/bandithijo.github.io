@@ -3,7 +3,6 @@ layout: "post"
 title: "Memanfaatkan Dunst Sebagai PopUp Notifikasi Bantuan Keyboard Shortcut"
 date: "2019-02-20 10:45"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-02-20-dunst-sebagai-notifikasi-bantuan-pengingat-shortcut"
 author: "BanditHijo"
 category: "blog"
 tags: ["dunst"]
@@ -252,7 +251,7 @@ Silahkan menambahkan menambahkan sendiri untuk membuat daftar *keyboard shortcut
 
 ## Hasilnya
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.gif)
+![Gambar 1]({% assets_path %}/gambar-01.gif)
 
 Gambar 1. Demonstrasi hasil akhir dari semua proses di atas
 

@@ -3,7 +3,6 @@ layout: "post"
 title: "Mengakses VirtualBox Instance dengan SSH via NAT"
 date: "2021-02-28 06:17"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2021/2021-02-28-akses-ssh-ke-virtualbox-via-nat"
 author: "BanditHijo"
 category: "blog"
 tags: ["virtualbox"]
@@ -27,13 +26,13 @@ Nah, biasanya karena ingin praktis, saya menggunakan konfigurasi NAT agar Guest 
 
 Karena saya menggunakan NAT untuk memberikan akses internet Guest dengan Host, saya perlu mengkonfigurasi **Port Forwarding** agar saya dapat mengakses Guest dengan SSH dari Host.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Button "Port Forwarding" di dalam menu Network
 
 Saya sudah mengaktifkan service SSH di Guest, jadi tinggal saya akses saja via SSH.
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 2]({% assets_path %}/gambar-02.png)
 
 Gambar 2. Buat rule baru dengan Guest IP
 

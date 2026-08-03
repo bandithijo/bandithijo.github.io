@@ -3,7 +3,6 @@ layout: "post"
 title: "Membedakan Jekyll Gemfile antar Level Environment (Production atau Development)"
 date: "2021-01-07 19:54"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2021/2021-01-07-membedakan-jekyll-gemfile-antar-environment"
 author: "BanditHijo"
 category: "blog"
 tags: ["jekyll"]
@@ -16,7 +15,7 @@ Saat memindahkan proses build blog ini dari Netlify ke GitHub Pages, saya menyad
 
 Dengan waktu build yang selama itu, mungkin tidak akan terasa mengganggu apabila terjadi pada level production.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Proses build di production dengan Travis-CI
 

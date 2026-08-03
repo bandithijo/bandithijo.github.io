@@ -3,7 +3,6 @@ layout: "post"
 title: "Menjalankan Distro Linux yang Lain dengan Distrobox di Fedora Linux"
 date: "2022-01-21 17:41"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2022/2022-01-21-menjalankan-distro-linux-lain-dengan-distrobox-di-fedora-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["distrobox", "container"]
@@ -305,7 +304,7 @@ Setelah selesai, kita bisa menjalankan `neofetch`.
 [bandithijo@arch-distrobox ~]$ █
 ```
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Shell default host system (kiri) & Shell pada arch-distrobox container (kanan)
 
@@ -359,7 +358,7 @@ $ gping google.com
 
 Berikut ini demonstrasinya,
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.gif)
+![Gambar 2]({% assets_path %}/gambar-02.gif)
 
 Gambar 2. Demonstrasi menjalankan gping hasil export dari distrobox-export
 
@@ -475,7 +474,7 @@ StartupWMClass=spotify
 
 Berikut ini demonstrasinya,
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.gif)
+![Gambar 3]({% assets_path %}/gambar-03.gif)
 
 Gambar 3. Demonstrasi pemasangan Spotify menggunakan yay dengan Distrobox
 
@@ -526,7 +525,7 @@ Atau, tinggal kita export agar dapat dipanggil lebih mudah dari host system.
 
 Berikut ini demonstrasinya,
 
-![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.gif)
+![Gambar 4]({% assets_path %}/gambar-04.gif)
 
 Gambar 4. Demonstrasi pemasangan Beekeeper Studio menggunakan yay pada Distrobox
 

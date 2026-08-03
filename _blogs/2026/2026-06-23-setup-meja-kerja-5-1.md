@@ -3,7 +3,6 @@ layout: "post"
 title: "Setup Meja Kerja 5.1"
 date: "2026-06-23 06:00"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2026/2026-06-23-setup-meja-kerja-5-1"
 author: "BanditHijo"
 category: "blog"
 tags: ["desk"]
@@ -24,11 +23,11 @@ Penamaan meja kerja 5.1 ini artinya meja kerja yang saya gunakan saat ini adalah
 
 Berikut ini adalah perjalanan modifikasi meja kerja 5.0 menjadi 5.1.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar_01.jpg)
+![Gambar 1]({% assets_path %}/gambar_01.jpg)
 
 Gambar 1. Setup meja belajar 5.0 sebelum dimodifikasi (tampak depan)
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar_02.jpg)
+![Gambar 2]({% assets_path %}/gambar_02.jpg)
 
 Gambar 2. Setup meja belajar 5.0 sebelum dimodifikasi (tampak samping)
 
@@ -51,23 +50,23 @@ Bahan-bahan yang saya beli untuk membuat rak level 1, sebagai berikut:
 4. Plat siku x 12 lembar
 5. Kaki karet untuk besi siku x 2 buah
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar_03.jpg)
+![Gambar 3]({% assets_path %}/gambar_03.jpg)
 
 Gambar 3. Wah ternyata tripleknya kebesaran, padahal saya cuma akan menggunakan 120x20 cm
 
-![Gambar 4]({{ page.assets | absolute_url }}/gambar_04.jpg)
+![Gambar 4]({% assets_path %}/gambar_04.jpg)
 
 Gambar 4. Besi siku (tampak jauh)
 
-![Gambar 5]({{ page.assets | absolute_url }}/gambar_05.jpg)
+![Gambar 5]({% assets_path %}/gambar_05.jpg)
 
 Gambar 5. Besi siku (tampak dekat)
 
-![Gambar 6]({{ page.assets | absolute_url }}/gambar_06.jpg)
+![Gambar 6]({% assets_path %}/gambar_06.jpg)
 
 Gambar 6. Mur, Baut, dan kaki karet untuk besi siku
 
-![Gambar 7]({{ page.assets | absolute_url }}/gambar_07.jpg)
+![Gambar 7]({% assets_path %}/gambar_07.jpg)
 
 Gambar 7. Plat siku
 
@@ -101,29 +100,29 @@ Dari desain yang saya buat, saya membutuhkan ukuran:
 
 ## Implementasi
 
-![Gambar 8]({{ page.assets | absolute_url }}/gambar_08.jpg)
+![Gambar 8]({% assets_path %}/gambar_08.jpg)
 
 Gambar 8. Besi siku yang sudah dipotong sesuai desain
 
 Setelah dipotong, selanjutnya dirakit dengan mur dan baut dan setiap sudut sikunya dibantu dengan plat siku agar bentuknya tidak berubah.
 
-![Gambar 9]({{ page.assets | absolute_url }}/gambar_09.jpg)
+![Gambar 9]({% assets_path %}/gambar_09.jpg)
 
 Gambar 9. Setelah dirakit mulai kelihatan bentuknya
 
 Selanjutnya tinggal diberikan papan. Tapi saya memilih menggunakan triplek agar tidak berat.
 
-![Gambar 10]({{ page.assets | absolute_url }}/gambar_10.jpg)
+![Gambar 10]({% assets_path %}/gambar_10.jpg)
 
 Gambar 10. Proses pembuatan lubang di triplek
 
 Setelah keempat sudut triplek sudah dilubangi, selanjutnya tinggal dirakit ke rak.
 
-![Gambar 11]({{ page.assets | absolute_url }}/gambar_11.jpg)
+![Gambar 11]({% assets_path %}/gambar_11.jpg)
 
 Gambar 11. Meja kerja setelah ditambahkan rak level 1 dengan besi siku (tampak samping)
 
-![Gambar 12]({{ page.assets | absolute_url }}/gambar_12.jpg)
+![Gambar 12]({% assets_path %}/gambar_12.jpg)
 
 Gambar 12. Meja kerja setelah ditambahkan rak level 1 dengan besi siku (tampak depan)
 
@@ -136,7 +135,7 @@ Sekarang saya sudah punya rak level 1. Sekarang meja saya tidak terlalu penuh de
 
 Setelah 1 tahun menggunakan rak ini, saya merasa raknya kurang tinggi. Jadi saya tinggikan kakinya 10 cm. Penambahan tinggi 10 cm ini lumayan memberikan tambahan space untuk monitor eksternal agar bisa lebih tinggi selevel mata saya.
 
-![Gambar 13]({{ page.assets | absolute_url }}/gambar_13.jpg)
+![Gambar 13]({% assets_path %}/gambar_13.jpg)
 
 Gambar 13. Sebelum ditinggikan (kiri), setelah ditinggikan (kanan)
 

@@ -3,7 +3,6 @@ layout: "post"
 title: "Jekyll Server Dapat Diakses oleh Perangkat dalam Satu LAN"
 date: "2020-07-09 14:56"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-07-09-jekyll-server-diakses-dalam-satu-lan"
 author: "BanditHijo"
 category: "blog"
 tags: ["jekyll"]
@@ -75,7 +74,7 @@ Maka, kita akses dari smartphone dengan tujuan `192.168.1.5:4000`.
 
 Voila!
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Tampilan Desktop dan Mobile
 

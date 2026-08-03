@@ -3,7 +3,6 @@ layout: "post"
 title: "Bagaimana Menulis Rake Task Buatan Sendiri"
 date: "2020-06-26 16:38"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-06-26-bagaimana-menulis-rake-task-sendiri"
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby", "rake"]

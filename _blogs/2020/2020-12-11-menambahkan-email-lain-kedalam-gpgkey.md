@@ -3,7 +3,6 @@ layout: "post"
 title: "Menambahkan Email Kedua ke dalam GPG Key"
 date: "2020-12-11 10:43"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-12-11-menambahkan-email-lain-kedalam-gpgkey"
 author: "BanditHijo"
 category: "blog"
 tags: ["gpg", "gnupg"]

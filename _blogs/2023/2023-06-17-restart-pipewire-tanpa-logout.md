@@ -3,7 +3,6 @@ layout: "post"
 title: "Restart PipeWire Tanpa Perlu Logout"
 date: "2023-06-17 03:51"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2023/2023-06-17-restart-pipewire-tanpa-logout"
 author: "BanditHijo"
 category: "blog"
 tags: ["pipewire"]

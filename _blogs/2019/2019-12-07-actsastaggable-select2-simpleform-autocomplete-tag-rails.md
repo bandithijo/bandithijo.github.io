@@ -3,7 +3,6 @@ layout: "post"
 title: "Autcomplete Tag dengan ActsAsTaggable, Select2, dan simple_form pada Rails"
 date: "2019-12-07 11:47"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-12-07-actsastaggable-select2-simpleform-autocomplete-tag-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "javascript"]
@@ -41,11 +40,11 @@ Nah, atas dasar permasalah tersebut, catatan ini saya buat.
 Kira-kira, tampilan jadinya akan seperti ini.
 
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Multiple tag
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 2]({% assets_path %}/gambar-02.png)
 
 Gambar 2. Autcomplete tag suggestion
 

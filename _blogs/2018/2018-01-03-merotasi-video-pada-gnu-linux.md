@@ -3,7 +3,6 @@ layout: "post"
 title: "Cara Mudah Merotasi Video pada GNU/Linux"
 date: "2018-01-03"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2018/2018-01-03-merotasi-video-pada-gnu-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["tools", "tips"]

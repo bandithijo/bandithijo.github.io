@@ -3,21 +3,20 @@ layout: "post"
 title: "Instal dan Konfigurasi WinBox pada GNU/Linux"
 date: "2018-04-24 00:59"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2018/2018-04-24-instal-dan-konfigurasi-winbox-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["wine", "winbox", "mikrotik"]
 description: "Semester ini saya mengikuti mata kuliah Sekuriti Jaringan. Pada salah satu pembahasan, terdapat praktik membuat dan mengkonfigurasi VPN (Virtual Private Network). Perangkat yang digunakan adalah perangkat dari MikroTik yang membutuhkan aplikasi WinBox untuk mempermudah proses konfigurasi. Dapat lebih memudahkan karena konfigurasi dilakukan dengan menggunakan GUI (Graphical User Interface)."
 ---
 
-![Banner]({{ page.assets | absolute_url }}/banner_post_05.png)
+![Banner]({% assets_path %}/banner_post_05.png)
 
 
 ## Latar Belakang
 
 Semester ini saya mengikuti mata kuliah **Sekuriti Jaringan**. Pada salah satu pembahasan, terdapat praktik membuat dan mengkonfigurasi VPN (*Virtual Private Network*). Perangkat yang digunakan adalah perangkat dari **MikroTik** yang membutuhkan aplikasi **WinBox** untuk mempermudah proses konfigurasi. Dapat lebih memudahkan karena konfigurasi dilakukan dengan menggunakan GUI (*Graphical User Interface*).
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar_01.png)
+![Gambar 1]({% assets_path %}/gambar_01.png)
 
 Gambar 1. User Interface dari WinBox
 
@@ -58,7 +57,7 @@ Untuk kebutuhan dokumentasi ini (instalasi WinBox), hanya sejauh ini saja yang d
 
 Terlebih dahulu kalian harus mengunduh WinBox installer pada situs *official* MikroTik [di sini](https://mikrotik.com/download).
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar_02.png)
+![Gambar 2]({% assets_path %}/gambar_02.png)
 
 Klik tombol **WinBox** untuk mengunduh file **.exe** pada versi paling baru. Setelah proses unduh selesai, letakkan WinBox pada direktori dimana kamu mudah untuk mengaksesnya. Saya biasa mengelompokkan file instalasi pada direktori tersendiri. Sebagai contoh seperti ini `~/app/winbox/`.
 
@@ -82,7 +81,7 @@ $ wine winbox.exe
 
 Apabila berhasil, akan menampilkan jendela WinBox seperti di bawah.
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar_03.png)
+![Gambar 3]({% assets_path %}/gambar_03.png)
 
 Untuk pertama kali, karena belum pernah digunakan, *text input* **Connect To:** belum akan terisi MAC address apapun.
 
@@ -126,7 +125,7 @@ Dengan demikian proses instalasi dan konfigurasi WinBox pada GNU/Linux saya rasa
 > 
 > Solusi 3:
 > 
-> ![Gambar 4]({{ page.assets | absolute_url }}/komentar-01.png)
+> ![Gambar 4]({% assets_path %}/komentar-01.png)
 
 
 ## Video Sample

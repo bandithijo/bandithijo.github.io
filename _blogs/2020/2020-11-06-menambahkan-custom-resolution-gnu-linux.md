@@ -3,7 +3,6 @@ layout: "post"
 title: "Menambahkan Custom Resolution pada GNU/Linux"
 date: "2020-11-06 13:16"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-11-06-menambahkan-custom-resolution-gnu-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ['screenresolution']
@@ -14,15 +13,15 @@ description: "Saya tidak menyangka, kalau di GNU/Linux, kita dapat dengan bebas 
 
 Saya memiliki external monitor berupa TV yang dihubungkan dengan ThinkPad X61 menggunakan kabel HDMI dengan bantuan konektor VGA to HDMI.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.jpg)
+![Gambar 1]({% assets_path %}/gambar-01.jpg)
 
 Eksternal monitor ini terbaca sebagai **VGA1**.
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 2]({% assets_path %}/gambar-02.png)
 
 Sayangnya, resolusi maksimal yang dapat dihasilkan adalah **1024x768**.
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.png)
+![Gambar 3]({% assets_path %}/gambar-03.png)
 
 Sedangkan external monitor saya memiliki resolusi maksimal sebesar **1920x1080**.
 
@@ -121,7 +120,7 @@ Selesai!
 
 Kalau sudah seperti ini, tinggal kita gunakan saja.
 
-![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.png)
+![Gambar 4]({% assets_path %}/gambar-04.png)
 
 
 ### Menghapus Custom Resolution

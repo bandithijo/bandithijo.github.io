@@ -3,14 +3,13 @@ layout: "post"
 title: "Merubah Default External Program Open Files pada Calibre"
 date: "2018-04-14 00:45"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2018/2018-04-14-merubah-external-program-open-calibre"
 author: "BanditHijo"
 category: "blog"
 tags: ["calibre"]
 description: "Untuk mengelola ebook yang saya kumpulkan, karena jumlahnya tidak sedikit, saya tidak menggunakan manajemen direktori untuk mengatur dan mengkategorikan koleksi ebook yang saya miliki. Karena, akan sangat merepotkan apabila kita ingin mencari dan menelusuri semua ebook yang kita miliki dalam satu waktu. Lebih mudah apabila kita menggunakan aplikasi yang menampilkan koleksi ebook yang kita miliki layaknya sebuah galeri foto atau rak buku di toko buku. Sehingga dapat memudahkan kita dalam memilih ebook apa yang akan kita baca, dan masih banyak segudang kemudahan lainnya yang bisa kita nikmati apabila kita menggunakan aplikasi untuk memanajemen koleksi ebook yang kita miliki. Karena latar belakang tersebut, saya menggunakan aplikasi ebook management yang bernama, Calibre."
 ---
 
-![Banner]({{ page.assets | absolute_url }}/banner_post_02.png)
+![Banner]({% assets_path %}/banner_post_02.png)
 
 
 ## Latar Belakang
@@ -19,7 +18,7 @@ Beberapa hari lalu saya sedang giat-giatnya membaca beberapa *ebook* yang saya k
 
 Untuk mengelola *ebook* yang saya kumpulkan, karena jumlahnya ~~tidak sedikit~~, saya tidak menggunakan manajemen direktori untuk mengatur dan mengkategorikan koleksi *ebook* yang saya miliki. Karena, akan sangat merepotkan apabila kita ingin mencari dan menelusuri semua *ebook* yang kita miliki dalam satu waktu. Lebih mudah apabila kita menggunakan aplikasi yang menampilkan koleksi *ebook* yang kita miliki layaknya sebuah galeri foto atau rak buku di toko buku. Sehingga dapat memudahkan kita dalam memilih *ebook* apa yang akan kita baca, dan masih banyak segudang kemudahan lainnya yang bisa kita nikmati apabila kita menggunakan aplikasi untuk memanajemen koleksi *ebook* yang kita miliki. Karena latar belakang tersebut, saya menggunakan aplikasi *ebook management* yang bernama, [**Calibre**](https://calibre-ebook.com/).
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar_1.png)
+![Gambar 1]({% assets_path %}/gambar_1.png)
 
 Gambar 1. Calibre pada GNU/Linux
 
@@ -62,15 +61,15 @@ Kita dapat menggunakan plugins yang sudah disediakan oleh Calibre, yaitu **Open 
 
 Berikut ilustrasinya.
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar_02.gif)
+![Gambar 2]({% assets_path %}/gambar_02.gif)
 
 Gambar 2. Sebelum dipasang Plugin
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar_03.gif)
+![Gambar 3]({% assets_path %}/gambar_03.gif)
 
 Gambar 3. Instalasi Plugin
 
-![Gambar 4]({{ page.assets | absolute_url }}/gambar_04.gif)
+![Gambar 4]({% assets_path %}/gambar_04.gif)
 
 Gambar 4. Konfigurasi Open With
 

@@ -3,7 +3,6 @@ layout: "post"
 title: "Penjadwalan Tasks dengan Cron Menggunakan Whenever Gem pada Ruby/Rails"
 date: "2020-07-07 14:47"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-07-07-penjadwalan-tasks-dengan-whenever-gem-pada-rails"
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby", "rails"]

@@ -3,14 +3,13 @@ layout: "post"
 title: "Masih Menggunakan Laptop Keluaran Tahun 2016"
 date: "2024-10-26 06:59"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2024/2024-10-26-masih-menggunakan-laptop-tahun-2016"
 author: "BanditHijo"
 category: "blog"
 tags: ["thinkpad"]
 description: "Menggunakan mesin keluaran terbaru memang ideal. Tapi, masih menggunakan mesin lama, not a big deal."
 ---
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar_01.jpg)
+![Gambar 1]({% assets_path %}/gambar_01.jpg)
 
 Gambar 1. dwm (Dynamic Window Manager)
 

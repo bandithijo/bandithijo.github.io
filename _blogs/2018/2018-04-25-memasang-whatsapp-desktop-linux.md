@@ -3,14 +3,13 @@ layout: "post"
 title: "Memasang WhatsApp Desktop pada GNU/Linux"
 date: "2018-04-25 21:11"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2018/2018-04-25-memasang-whatsapp-desktop-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["whatsapp"]
 description: "Memegang *smartphone* adalah hal yang jarang sekali saya lakukan. Tangan saya setiap saat selalu berada di atas keyboard. Dampaknya, setiap pesan yang masuk melalui aplikasi messenger tidak segera dapat saya baca dan balas. Waktu-waktu dimana saya baru akan memegang *smartphone* adalah ketika urusan saya di atas keyboard telah selesai. Hahaha."
 ---
 
-![Banner]({{ page.assets | absolute_url }}/banner_post_07.png)
+![Banner]({% assets_path %}/banner_post_07.png)
 
 
 ## Latar Belakang
@@ -28,7 +27,7 @@ Mayoritas teman-teman yang mempunyai urusan dengan saya belum menggunakan platfo
 
 Sebenarnya, WhatsApp menyediakan layanan [WhatsApp-Web](https://web.whatsapp.com/) untuk pengguna Linux -- sedangkan untuk Windows dan macOS, mereka memberikan aplikasi *native desktop*.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar_02.png)
+![Gambar 1]({% assets_path %}/gambar_02.png)
 
 Namun, saya merasa kurang praktis karena sebagian besar saya beraktifitas menggunakan browser yang saya tidak ingin diganggu oleh hal-hal lain selain pekerjaan yang sedang saya kerjakan.
 
@@ -39,7 +38,7 @@ Pada tahun 2016 - 2017 saya masih sempat menggunakan aplikasi *unofficial* yang 
 
 Beberapa waktu lalu saya menemukan sebuah aplikasi yang mirip dengan Whatsie. Aplikasi yang berbasis Whatsapp Web dan dibangun menggunakan [Electron](http://electron.atom.io/) juga. Aplikasi ini bernama **Whatsapp-Desktop** yang dikelola oleh **Enrico204** yang semula dikelola oleh **bcalik**.
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar_01.png)
+![Gambar 2]({% assets_path %}/gambar_01.png)
 
 Gambar 2. User Interface dari Whatsapp-Desktop
 

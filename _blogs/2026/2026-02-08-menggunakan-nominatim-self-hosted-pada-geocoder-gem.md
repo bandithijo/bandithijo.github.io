@@ -3,7 +3,6 @@ layout: "post"
 title: "Menggunakan Nominatim Self-Hosted pada Geocoder Gem"
 date: "2026-02-08 23:22"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2026/2026-02-08-menggunakan-nominatim-self-hosted-pada-geocoder-gem"
 author: "BanditHijo"
 category: "blog"
 tags: ["openstreetmap", "nominatim", "geocoder", "geocoding", "rails"]

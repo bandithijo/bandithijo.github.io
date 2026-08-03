@@ -3,7 +3,6 @@ layout: "post"
 title: "Zgen, ZSH Plugin Manager"
 date: "2019-02-18 12:15"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-02-18-zgen-zsh-plugin-manager"
 author: "BanditHijo"
 category: "blog"
 tags: ["zsh", "zgen"]
@@ -253,11 +252,11 @@ Selesai.
 
 Sebenarnya, sudah pernah mengalami hal ini, namun karena lupa melakukan pencatatan, dan ternyata mengalami untuk kedua kali, malah jadi kebingungan.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.gif)
+![Gambar 1]({% assets_path %}/gambar-01.gif)
 
 Dapat dilihat pada ilustrasi di atas, apapun perintah (*command*) yang saya tulisakan, akan ditampilkan kembali pada baris *output*.
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 2]({% assets_path %}/gambar-02.png)
 
 Saya mengalami permasalah ini pada terminal URxvt dan Termite, namun tidak pada ST terminal yang sehari-hari saya pergunakan.
 
@@ -267,7 +266,7 @@ Untung saja ada group [BGLI (Belajar GNU/Linux Indonesia)](https://t.me/GNULinux
 
 > Terkadang perlu "sudut pandang" orang lain dalam menemukan "kata kunci" yang tepat untuk mencari solusi dari sebuah masalah.
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.png)
+![Gambar 3]({% assets_path %}/gambar-03.png)
 
 Gambar 3. URL: [ZSH repeats command in output](https://stackoverflow.com/questions/30940299/zsh-repeats-command-in-output)
 

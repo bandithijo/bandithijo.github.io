@@ -3,7 +3,6 @@ layout: "post"
 title: "Membuat CPU Temperature Alert dengan Ruby"
 date: "2019-10-20 21:29"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-10-20-cpu-temperature-alert-with-ruby"
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby"]
@@ -32,7 +31,7 @@ Hal ini juga disebabkan karena minimalnya sistem notifikasi dari sistem yang say
 
 Atas dasar ini, saya berinisiatif untuk menambahkan fitur notifikasi suara apabila CPU sudah mencapai suhu tertentu.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Tampilan notifikasi Peringatan Hot CPU Temperature
 

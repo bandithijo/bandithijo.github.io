@@ -234,7 +234,7 @@ Ini adalah contoh [Link Text](https://example.com).
 Use the following format to include images or files.
 
 ```markdown
-![Gambar 1]({% raw %}{{ page.assets | absolute_url }}{% endraw %}/about_bandithijo.png)
+![Gambar 1]({% raw %}{% assets_path %}{% endraw %}/about_bandithijo.png)
 ```
 
 ![Gambar 1]({{ page.assets | absolute_url }}/about_bandithijo.png)
@@ -243,7 +243,7 @@ Use the following format to include images or files.
 To add a caption or description below the image, use the following format.
 
 ```markdown
-![Gambar 1]({% raw %}{{ page.assets | absolute_url }}{% endraw %}/about_bandithijo.png)
+![Gambar 1]({% raw %}{% assets_path %}{% endraw %}/about_bandithijo.png)
 
 Gambar 1. Deskripsi gambar di sini.
 ```

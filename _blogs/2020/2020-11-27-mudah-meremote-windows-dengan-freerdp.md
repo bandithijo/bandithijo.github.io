@@ -3,7 +3,6 @@ layout: "post"
 title: "Mudah Meremote Windows dengan FreeRDP"
 date: "2020-11-27 09:17"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-11-27-mudah-meremote-windows-dengan-freerdp"
 author: "BanditHijo"
 category: "blog"
 tags: ["freerdp", "remotedesktop"]
@@ -20,7 +19,7 @@ Baru 2019-2020 ini saya memanfaatkan workflow dimana saya me-remote laptop Windo
 
 Bukan bukan. Ini lebih ke "menunjukkan betapa fleksibel-nya GNU/Linux (dalam hal ini user dan didukung oleh aplikasinya)" dalam menyelesaikan suatu pekerjaan.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Tampilan dual monitor yang saya pergunakan
 
@@ -30,7 +29,7 @@ Saya dapat dengan mudah berpindah-pindah antar Windows dan Linux.
 
 Misal, saya manfaatkan untuk melihat desain dari web yang sedang saya kerjakan dengan menggunakan Chrome.
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 2]({% assets_path %}/gambar-02.png)
 
 Gambar 2. Workflow saya dalam bekerja ketika mendevelop web
 

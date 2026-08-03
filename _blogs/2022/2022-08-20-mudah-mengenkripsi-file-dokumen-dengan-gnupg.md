@@ -3,7 +3,6 @@ layout: "post"
 title: "Mudah Mengenkripsi File dan Dokumen dengan GnuPG (GPG)"
 date: "2022-08-20 06:46"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2022/2022-08-20-mudah-mengenkripsi-file-dokumen-dengan-gnupg"
 author: "BanditHijo"
 category: "blog"
 tags: ["gpg", "gnupg", "pgp", "security"]
@@ -111,7 +110,7 @@ $ gpg --symmetric tabel_users.md
 
 Setelah itu, kita akan diminta memasukkan password sebanyak 2x.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Popup window
 

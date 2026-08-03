@@ -3,7 +3,6 @@ layout: "post"
 title: "Membuat Input Select yang Berbasis Rentang pada Rails"
 date: "2020-01-27 11:46"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-01-27-rails-input-select-based-on-range"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]
@@ -48,7 +47,7 @@ Misalkan:
 - RM 501 - RM 1000
 ```
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 
 ## Pemecahan Masalah

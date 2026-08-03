@@ -3,7 +3,6 @@ layout: "post"
 title: "Exclude Spesifik Value pada Jekyll Collection"
 date: "2020-07-21 20:30"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-07-21-exclude-spesifik-value-pada-jekyll-collection"
 author: "BanditHijo"
 category: "blog"
 tags: ["jekyll", "liquid"]

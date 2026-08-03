@@ -3,7 +3,6 @@ layout: "post"
 title: "Unified Remote, Mengontrol Mouse Cursor GNU/Linux dari Android"
 date: "2019-01-14 19:35"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-01-14-unified-remote-mengontrol-cursor-linux-dari-android"
 author: "BanditHijo"
 category: "blog"
 tags: ["unified remote", "tool"]
@@ -256,7 +255,7 @@ Untuk menjalankan server, sangat mudah sekali.
 
 3. Buka ip address yang diberikan dengan browser.
 
-   ![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+   ![Gambar 1]({% assets_path %}/gambar-01.png)
 
    Gambar 1. Status Bluetooth Interface
 
@@ -269,7 +268,7 @@ Untuk menjalankan server, sangat mudah sekali.
 
 1. Buka Google PlayStore dan cari "**Unified Remote**"
 
-   ![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.jpg)
+   ![Gambar 2]({% assets_path %}/gambar-02.jpg)
 
    Gambar 2. Unified Remote di Google PlayStore
 
@@ -280,11 +279,11 @@ Untuk menjalankan server, sangat mudah sekali.
 
 1. Hubungkan komputer/laptop dengan Android menggunakan Bluetooth. Saya menggunakan aplikasi `blueman-manager`
 
-   ![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.png)
+   ![Gambar 3]({% assets_path %}/gambar-03.png)
 
    Gambar 3. Interface dari Blueman Manager
 
-   ![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.jpg)
+   ![Gambar 4]({% assets_path %}/gambar-04.jpg)
 
    Gambar 4. Tampilan Bluetooth Settings Android
 
@@ -292,7 +291,7 @@ Untuk menjalankan server, sangat mudah sekali.
 
 2. Setelah laptop dan Android saling terhubung, buka aplikasi Unified Remote di Android.
 
-   ![Gambar 5]({{ page.assets | absolute_url }}/gambar-05.jpg)
+   ![Gambar 5]({% assets_path %}/gambar-05.jpg)
 
    Gambar 5. Hamburger menu
 
@@ -300,7 +299,7 @@ Untuk menjalankan server, sangat mudah sekali.
 
 3. Kita perlu untuk menambahkan server
 
-   ![Gambar 6]({{ page.assets | absolute_url }}/gambar-06.jpg)
+   ![Gambar 6]({% assets_path %}/gambar-06.jpg)
 
    Gambar 6. Tambahkan server
 
@@ -308,19 +307,19 @@ Untuk menjalankan server, sangat mudah sekali.
 
 4. Pada bagian **Servers** ini lah kita akan memilih konektifitas.
 
-   ![Gambar 7]({{ page.assets | absolute_url }}/gambar-07.jpg)
+   ![Gambar 7]({% assets_path %}/gambar-07.jpg)
 
    Gambar 7. Tempat untuk memilih, membuat, mengubah, atau menghapus konektifitas dengan server
 
    Pilh nama dari Bluetooth Android *smartphone* kita.
 
-   ![Gambar 8]({{ page.assets | absolute_url }}/gambar-08.jpg)
+   ![Gambar 8]({% assets_path %}/gambar-08.jpg)
 
    Gambar 8. Android kita sudah masuk dalam daftar "saved Servers"
 
 5. Selanjutnya kembali ke menu, dan pilih Remotes
 
-   ![Gambar 9]({{ page.assets | absolute_url }}/gambar-09.jpg)
+   ![Gambar 9]({% assets_path %}/gambar-09.jpg)
 
    Gambar 9. Dapat dilihat status server yang kota hijau, kita sudah terhubung dengan Bluetooth Android
 
@@ -328,17 +327,17 @@ Untuk menjalankan server, sangat mudah sekali.
 
 6. Pada bagian ini, kita dapat memilih berbagai macam jenis fungsi remote
 
-   ![Gambar 10]({{ page.assets | absolute_url }}/gambar-10.jpg)
+   ![Gambar 10]({% assets_path %}/gambar-10.jpg)
 
    Gambar 10. Tekan tanda ( + ) untuk menambahkan fungsi remote baru
 
    Silhkan bereksplorasi sendiri, karena di dalamnya terdapat banyak sekali fungsi remote yang berbeda-beda. Saya hanya menggunakan 2 fungsi remote, yaitu : **Basic Input** dan **Slide Show**
 
-   ![Gambar 11]({{ page.assets | absolute_url }}/gambar-11.jpg)
+   ![Gambar 11]({% assets_path %}/gambar-11.jpg)
 
    Gambar 11. Tampilan Basic Input remote
 
-   ![Gambar 12]({{ page.assets | absolute_url }}/gambar-12.jpg)
+   ![Gambar 12]({% assets_path %}/gambar-12.jpg)
 
    Gambar 12. Tampilan Slide Show remote
 

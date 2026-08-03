@@ -3,14 +3,13 @@ layout: "post"
 title: "Mudah Memasang Paket Aplikasi Fedora dengan Yumex-DNF"
 date: "2017-01-30"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2017/2017-01-30-mudah-memasang-aplikasi-fedora-dengan-yumex-dnf"
 author: "BanditHijo"
 category: "blog"
 tags: ["fedora", "dnf"]
 description: "YumEx (YUM Extender) adalah Graphical User Interface untuk yum package manager. Seperti Synapctic pada distribusi sistem operasi Ubuntu/Debian/Mint dan Octopi/Pamac pada Arch/Manjaro."
 ---
 
-![Banner]({{ page.assets | absolute_url }}/Default+Header+Template+Post+23.5.png)
+![Banner]({% assets_path %}/Default+Header+Template+Post+23.5.png)
 
 
 ## Latar Belakang
@@ -39,7 +38,7 @@ Sebelumnya saya mencari tahu lewat Google, aplikasi apa yang saya butuhkan untuk
 
 Agar lebih mudah dalam menggunakan YumEx-DNF maka saya akan mengenalkan anatomi (bagian-bagian) dari YumEx-DNF.
 
-![Gambar1]({{ page.assets | absolute_url }}/Gambar+1.0.png)
+![Gambar1]({% assets_path %}/Gambar+1.0.png)
 
 Gambar 1. YumEx-DNF
 

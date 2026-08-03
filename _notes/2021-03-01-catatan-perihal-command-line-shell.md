@@ -3,7 +3,6 @@ layout: "post"
 title: "Catatan dalam Menggunakan Command Line Shell"
 date: "2021-03-01 00:35"
 permalink: "/note/:title"
-assets: "/assets/posts/note/2021-03-01-catatan-perihal-command-line-shell"
 author: "BanditHijo"
 category: "note"
 tags: ["cmd"]

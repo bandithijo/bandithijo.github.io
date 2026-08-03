@@ -3,14 +3,13 @@ layout: "post"
 title: "Aplikasi Download Alternatif untuk Ubuntu dengan JDownloader"
 date: "2013-07-03"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2013/2013-07-03-download-client-ubuntu-with-jdownloader"
 author: "BanditHijo"
 category: "blog"
 tags: ["osx", "jdownloader"]
 description: "Sudah beralih ke Ubuntu Linux dan masih berharap bisa download video di Youtube, donwload kontent-kontetn di website yang tidak terdapat menu download, download dari situs-situs yang membutuhkan account premium, ketergantungan dengan IDM (Internet Download Manager) di Windows ? Tapi sudah benar-benar terpojok dengan Ubuntu ? Jangan khawatir. Saya akan memperkenalkan sebuah software sebagai alternatif bagi anda sebagai pengganti IDM di Windows."
 ---
 
-![Banner]({{ page.assets | absolute_url }}/Default+Header+Template+Post+9.jpg)
+![Banner]({% assets_path %}/Default+Header+Template+Post+9.jpg)
 
 
 ## Latar Belakang

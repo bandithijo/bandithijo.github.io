@@ -3,7 +3,6 @@ layout: "post"
 title: "Konfigurasi DNSCrypt-Proxy di macOS"
 date: "2025-12-11 22:13"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2025/2025-12-11-konfigurasi-dnscrypt-proxy-di-macos"
 author: "BanditHijo"
 category: "blog"
 tags: ["dnscrypt"]
@@ -164,11 +163,11 @@ Berarti local DNS belum di set ke 127.0.0.1.
 
 Sekarang coba test dengan [https://www.dnsleaktest.com/](https://www.dnsleaktest.com/) untuk memastikan DNSCrypt-Proxy sudah berjalan dengan baik.
 
-![gambar 1]({{ page.assets | absolute_url }}/gambar_1.png)
+![gambar 1]({% assets_path %}/gambar_1.png)
 
 Gambar 1. Sebelum menggunakan DNSCrypt-Proxy
 
-![gambar 2]({{ page.assets | absolute_url }}/gambar_2.png)
+![gambar 2]({% assets_path %}/gambar_2.png)
 
 Gambar 2. Setelah menggunakan DNSCrypt-Proxy
 

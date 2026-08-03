@@ -3,7 +3,6 @@ layout: "post"
 title: "Translate-shell, Translator CLI Online yang Praktis"
 date: "2020-10-16 22:05"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-10-16-translate-shell-translator-cli-mudah"
 author: "BanditHijo"
 category: "blog"
 tags: ["cli", "translator"]
@@ -393,7 +392,7 @@ esac
 
 Hasilnya akan seperti ini,
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.gif)
+![Gambar 1]({% assets_path %}/gambar-01.gif)
 
 Saya biasa gunakan untuk mentranslate beberapa kata/frase/atau kalimat yang saya tidak paham maksudnya.
 
@@ -408,11 +407,11 @@ Ada beberapa plugin yang dapat kita gunakan untuk mengintegrasikan Translate She
 
 Saat tulisan ini dibuat, saya baru mencoba **VincentCordobes/vim-translate**.
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.gif)
+![Gambar 2]({% assets_path %}/gambar-02.gif)
 
 Gambar 2. Mencoba `:translate` dan `:TranslateReplave`
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.gif)
+![Gambar 3]({% assets_path %}/gambar-03.gif)
 
 Gambar 3. Perbandingan kecepatan Translate Shell dengan vim-translate
 

@@ -3,7 +3,6 @@ layout: "post"
 title: "Menjaga Sistem Tetap Bersih di Arch Linux"
 date: "2020-12-24 12:23"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-12-24-menjaga-sistem-tetap-bersih-di-arch"
 author: "BanditHijo"
 category: "blog"
 tags: ["pacman"]
@@ -261,7 +260,7 @@ Lalu, bisa coba jalankan di Home direktori.
 $ ncdu ~
 ```
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.gif)
+![Gambar 1]({% assets_path %}/gambar-01.gif)
 
 Gambar 1. Proses listing direktori yang kegemukan
 

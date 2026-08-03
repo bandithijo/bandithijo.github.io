@@ -3,7 +3,6 @@ layout: "post"
 title: "Reclaim Old Username di SUSE Community Account (openSUSE)"
 date: "2023-09-19 23:40"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2023/2023-09-19-reclaim-username-on-suse-community-account"
 author: "BanditHijo"
 category: "blog"
 tags: ["opensuse"]
@@ -31,7 +30,7 @@ Ternyata, terdapat berita "Community Account Migration" pada portal [^2] yang ma
 
 Saya coba daftarkan username saya `bandithijo`, ternyata sudah terdaftar. Namun, saya **tidak bisa melakukan password reset**, dan mendapatkan pesan error,
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Error saat Password Reset
 
@@ -286,7 +285,7 @@ Setelah saya coba lagi langkah 1 (password reset), ternyata berhasil! 🎉
 
 #### 1. Reset Password
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 2]({% assets_path %}/gambar-02.png)
 
 Gambar 2. Memilih media untuk menerima token reset password
 
@@ -324,13 +323,13 @@ Dapat dilihat token untuk mereset password sudah didapatkan.
 
 Copy token atau klik link yang diberikan.
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.png)
+![Gambar 3]({% assets_path %}/gambar-03.png)
 
 Gambar 3. Memperbaharui password dengan token
 
 Kemudian tekan **CHANGE PASSWORD**.
 
-![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.png)
+![Gambar 4]({% assets_path %}/gambar-04.png)
 
 Gambar 4. Popup ketika berhasil memperbahrui password
 
@@ -367,7 +366,7 @@ Copy token atau click link yang diberikan.
 
 Jika berhasil, akan mendapatkan popup seperti ini.
 
-![Gambar 5]({{ page.assets | absolute_url }}/gambar-05.png)
+![Gambar 5]({% assets_path %}/gambar-05.png)
 
 Gambar 5. Berhasil Memvalidasi Email
 

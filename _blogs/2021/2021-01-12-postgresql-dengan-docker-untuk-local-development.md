@@ -3,7 +3,6 @@ layout: "post"
 title: "Memasang PostgreSQL dengan Docker untuk Local Development"
 date: "2021-01-12 09:29"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2021/2021-01-12-postgresql-dengan-docker-untuk-local-development"
 author: "BanditHijo"
 category: "blog"
 tags: ["docker", "postgresql"]

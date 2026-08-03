@@ -3,7 +3,6 @@ layout: "post"
 title: "Rails UJS dan AJAX, serta Button Animation Loading"
 date: "2021-04-01 14:00"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2021/2021-04-01-rails-ujs-dan-ajax-serta-button-animation-loading"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]
@@ -266,7 +265,7 @@ document.querySelector("#published-at").innerHTML = "<%= @book.published_at %>";
 
 Jadinya akan seperti ini.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.gif)
+![Gambar 1]({% assets_path %}/gambar-01.gif)
 
 Gambar 1. Demo Rails UJS & AJAX pada button
 
@@ -312,7 +311,7 @@ end
 
 Hasilnya akan seperti ini,
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.gif)
+![Gambar 2]({% assets_path %}/gambar-02.gif)
 
 Gambar 2. Demo Rails UJS & AJAX pada button dengan animation loading
 

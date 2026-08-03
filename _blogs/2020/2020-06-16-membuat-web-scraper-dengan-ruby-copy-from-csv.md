@@ -3,7 +3,6 @@ layout: "post"
 title: "Membuat Web Scraper dengan Ruby (Output: POSTGRESQL: COPY FROM CSV)"
 date: "2020-06-16 18:49"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-06-16-membuat-web-scraper-dengan-ruby-copy-from-csv"
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby", "postgresql"]

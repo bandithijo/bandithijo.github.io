@@ -3,7 +3,6 @@ layout: "post"
 title: "10 Tahun Pakai Vim, Akhirnya Migrasi ke Emacs"
 date: "2026-08-02"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2026/2026-08-02-10-tahun-pakai-vim-akhirnya-migrasi-ke-emacs"
 author: "BanditHijo"
 category: "blog"
 tags: ["emacs"]
@@ -104,7 +103,7 @@ Konsep ini menarik bagi saya yang sudah ngoding lebih dari 10 ribu jam (sumber: 
 
 ## Berhasil Migrasi!
 
-![gambar_01]({{ page.assets | absolute_url }}/gambar_01.png)
+![gambar_1]({% assets_path %}/gambar_01.png)
 
 Gambar 01. Diagram ini menunjukkan waktu yang saya perlukan untuk bisa commit bermigrasi ke Emacs.
 
@@ -173,7 +172,7 @@ Dengan menggunakan Strategi B, kita dapat dengan mudah dan cepat untuk memperole
 
 Oh ya! Artikel ini adalah artikel pertama yang saya tulis dengan Emacs.
 
-![gambar_2]({{ page.assets | absolute_url }}/gambar_02.png)
+![gambar_2]({% assets_path %}/gambar_02.png)
 
 Gambar 02. Statistik Wakatime terhadap project blog ini dan artikel ini
 

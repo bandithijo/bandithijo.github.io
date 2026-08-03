@@ -3,7 +3,6 @@ layout: "post"
 title: "Review ThinkPad USB 3.0 Pro Dock type 40A7 dengan DisplayLink"
 date: "2025-12-16 06:49"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2025/2025-12-16-thinkpad-usb-3-pro-dock-40a7-displaylink"
 author: "BanditHijo"
 category: "blog"
 tags: ["thinkpad", "displaylink", "dock"]
@@ -32,59 +31,59 @@ Dukungan DisplayLink di Linux telah meningkat pesat dalam beberapa tahun terakhi
 Di Arch Linux, dukungan untuk perangkat DisplayLink dapat diaktifkan dengan menginstal paket `displaylink` (AUR). Setelah menginstal paket tersebut, saya dapat menghubungkan monitor eksternal ke docking station dan menggunakannya tanpa masalah. Hanya saja, performa grafis pada monitor eksternal mungkin tidak sebaik jika menggunakan koneksi langsung seperti HDMI atau DisplayPort. 
 
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar_01.jpg)
+![Gambar 1]({% assets_path %}/gambar_01.jpg)
 
 Gambar 1. ThinkPad USB 3.0 Pro Dock type 40A7 dengan Kabel USB 3.0 Type A Male to Type B Male dan VGA to Mini DisplayPort Adapter
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar_02.jpg)
+![Gambar 2]({% assets_path %}/gambar_02.jpg)
 
 Gambar 2. ThinkPad USB 3.0 Pro Dock type 40A7 tampak atas-depan
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar_03.jpg)
+![Gambar 3]({% assets_path %}/gambar_03.jpg)
 
 Gambar 3. ThinkPad USB 3.0 Pro Dock type 40A7 tampak depan-kanan
 
-![Gambar 4]({{ page.assets | absolute_url }}/gambar_04.jpg)
+![Gambar 4]({% assets_path %}/gambar_04.jpg)
 
 Gambar 4. ThinkPad USB 3.0 Pro Dock type 40A7 tampak depan-kiri
 
-![Gambar 5]({{ page.assets | absolute_url }}/gambar_05.jpg)
+![Gambar 5]({% assets_path %}/gambar_05.jpg)
 
 Gambar 5. ThinkPad USB 3.0 Pro Dock type 40A7 tampak belakang-kiri
 
-![Gambar 6]({{ page.assets | absolute_url }}/gambar_06.jpg)
+![Gambar 6]({% assets_path %}/gambar_06.jpg)
 
 Gambar 6. ThinkPad USB 3.0 Pro Dock type 40A7 tampak belakang
 
-![Gambar 7]({{ page.assets | absolute_url }}/gambar_07.jpg)
+![Gambar 7]({% assets_path %}/gambar_07.jpg)
 
 Gambar 7. Charger 45 Watt
 
-![Gambar 8]({{ page.assets | absolute_url }}/gambar_08.jpg)
+![Gambar 8]({% assets_path %}/gambar_08.jpg)
 
 Gambar 8. Setelah dipasang di meja kerja
 
-![Gambar 9]({{ page.assets | absolute_url }}/gambar_09.jpg)
+![Gambar 9]({% assets_path %}/gambar_09.jpg)
 
 Gambar 9. Setelah dipasang di meja kerja
 
-![Gambar 10]({{ page.assets | absolute_url }}/gambar_10.jpg)
+![Gambar 10]({% assets_path %}/gambar_10.jpg)
 
 Gambar 10. Setelah dipasang di meja kerja
 
-![Gambar 11]({{ page.assets | absolute_url }}/gambar_11.jpg)
+![Gambar 11]({% assets_path %}/gambar_11.jpg)
 
 Gambar 11. Setelah dipasang di meja kerja
 
-![Gambar 12]({{ page.assets | absolute_url }}/gambar_12.jpg)
+![Gambar 12]({% assets_path %}/gambar_12.jpg)
 
 Gambar 12. Dihubungkan dengan ThinkPad X260 melalui kabel USB 3.0
 
-![Gambar 13]({{ page.assets | absolute_url }}/gambar_13.jpg)
+![Gambar 13]({% assets_path %}/gambar_13.jpg)
 
 Gambar 13. Kabel USB 3.0 Type A Male to Type B Male 2 meter
 
-![Gambar 14]({{ page.assets | absolute_url }}/gambar_14.jpg)
+![Gambar 14]({% assets_path %}/gambar_14.jpg)
 
 Gambar 14. Kabel USB 3.0 Type A Male to Type B Male 2 meter
 

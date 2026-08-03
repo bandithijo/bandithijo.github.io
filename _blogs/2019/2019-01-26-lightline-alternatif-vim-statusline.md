@@ -3,7 +3,6 @@ layout: "post"
 title: "Lightline, Alternatif Vim Statusline selain Vim-Airline"
 date: "2019-01-26 14:34"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-01-26-lightline-alternatif-vim-statusline"
 author: "BanditHijo"
 category: "blog"
 tags: ["vim", "lightline"]
@@ -29,7 +28,7 @@ Setelah saya amati, statusline yang dihandle oleh `vim-airline` mengalami delay 
 
 Coba perhatikan perbandingan Vim pada user biasa dan pada user root di bawah ini.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.gif)
+![Gambar 1]({% assets_path %}/gambar-01.gif)
 
 Gambar 1. Perbandingan startup Vim pada root dan Vim pada user
 
@@ -52,23 +51,23 @@ Dan untuk menghandle bufferline, saya menggunakan [**mengelbrecht/lightline-buff
 
 Berikut ini adalah gambar perbandingan tampilan antara **Vim-Airline** versus **Lightline** dan **Lightline-Bufferline**.
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 2]({% assets_path %}/gambar-02.png)
 
 Gambar 2. irline (Kiri), Lightline (Kanan)
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-07.gif)
+![Gambar 3]({% assets_path %}/gambar-07.gif)
 
 Gambar 3. Startup dengan Vim-Airline
 
-![Gambar 4]({{ page.assets | absolute_url }}/gambar-08.gif)
+![Gambar 4]({% assets_path %}/gambar-08.gif)
 
 Gambar 4. Startup dengan Lightline
 
-![Gambar 5]({{ page.assets | absolute_url }}/gambar-05.png)
+![Gambar 5]({% assets_path %}/gambar-05.png)
 
 Gambar 5. Vim-Airline
 
-![Gambar 6]({{ page.assets | absolute_url }}/gambar-06.png)
+![Gambar 6]({% assets_path %}/gambar-06.png)
 
 Gambar 6. Lightline
 
@@ -302,11 +301,11 @@ endfunction
 
 ## Hasilnya
 
-![Gambar 7]({{ page.assets | absolute_url }}/gambar-03.png)
+![Gambar 7]({% assets_path %}/gambar-03.png)
 
 Gambar 7. Lightline + Lightline-Bufferline
 
-![Gambar 8]({{ page.assets | absolute_url }}/gambar-04.png)
+![Gambar 8]({% assets_path %}/gambar-04.png)
 
 Gambar 8. Tampilan saat tidak sibuk
 
@@ -413,11 +412,11 @@ Juga penambahan Devicons pada Filetype dan Fileformat.
 
 **Hasilnya**,
 
-![Gambar 9]({{ page.assets | absolute_url }}/gambar-09.png)
+![Gambar 9]({% assets_path %}/gambar-09.png)
 
 Gambar 9. Dengan tambahan powerline symbol untuk master dan readonly
 
-![Gambar 10]({{ page.assets | absolute_url }}/gambar-10.png)
+![Gambar 10]({% assets_path %}/gambar-10.png)
 
 Gambar 10. Dengan penambahan Devicon pada Filetype dan Fileformat
 

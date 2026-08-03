@@ -3,7 +3,6 @@ layout: "post"
 title: "Reflector, Python Script untuk Memfilter Pacman Mirrorlist Arch Linux"
 date: "2018-12-11 01:59"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2018/2018-12-11-reflector-tools-rankmirror-archlinux"
 author: "BanditHijo"
 category: "blog"
 tags: ["arch linux", "reflector"]

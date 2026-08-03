@@ -3,7 +3,6 @@ layout: "post"
 title: "Pertama Kali Mencoba RSpec"
 date: "2019-12-05 07:10"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-12-05-pertama-kali-mencoba-rspec"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "rspec"]

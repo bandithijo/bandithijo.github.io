@@ -3,7 +3,6 @@ layout: "post"
 title: "Memberikan Label Temperature pada ThinkPad Sensors"
 date: "2021-02-26 07:19"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2021/2021-02-26-memberikan-label-temperature-pada-thinkpad-sensors"
 author: "BanditHijo"
 category: "blog"
 tags: ["thinkpad"]

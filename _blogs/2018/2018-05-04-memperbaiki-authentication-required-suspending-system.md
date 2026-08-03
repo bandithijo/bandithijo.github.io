@@ -3,14 +3,13 @@ layout: "post"
 title: "Memperbaiki Authentication is Required for Suspending the System XFCE"
 date: "2018-05-04 21:56"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2018/2018-05-04-memperbaiki-authentication-required-suspending-system"
 author: "BanditHijo"
 category: "blog"
 tags: ["xfce"]
 description: "Saya baru saja berpindah desktop environment kembali menggunakan XFCE4. Permasalahan yang dulu pernah muncul salah satunya setiap kali sistem baru bangkit dari kondisi *sleep* terdapat sebuah popup window yang bertuliskan 'Authentication is required for suspending the system'."
 ---
 
-![Banner]({{ page.assets | absolute_url }}/banner_post_11.png)
+![Banner]({% assets_path %}/banner_post_11.png)
 
 
 ## Permasalahan

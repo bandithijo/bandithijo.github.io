@@ -3,7 +3,6 @@ layout: "post"
 title: "Memanfaatkan Vim Sebagai Note-Taking"
 date: "2019-02-16 12:22"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-02-16-memanfaatkan-vim-sebagai-notetaking"
 author: "BanditHijo"
 category: "blog"
 tags: ["vim", "note-taking"]
@@ -152,11 +151,11 @@ Seperti itu saja. Sederhana bukan?
 
    **Sebelum,**
 
-   ![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+   ![Gambar 1]({% assets_path %}/gambar-01.png)
 
    **Sesudah,**
 
-   ![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+   ![Gambar 2]({% assets_path %}/gambar-02.png)
 
    Saya menggunakan NERDTree, untuk membuat file baru. Karena sudah terbiasa menggunakan NERDTree.
 
@@ -186,7 +185,7 @@ Seperti itu saja. Sederhana bukan?
 
 ## Hasilnya
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-03.gif)
+![Gambar 1]({% assets_path %}/gambar-03.gif)
 
 
 ## Pesan Penulis

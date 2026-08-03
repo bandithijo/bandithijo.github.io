@@ -3,7 +3,6 @@ layout: "post"
 title: "Preferensi Saya dalam Menyimpan Assets Gambar di Jekyll"
 date: "2025-12-31 04:40"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2025/2025-12-31-preferensi-saya-dalam-menyimpan-assets-gambar-di-jekyll"
 author: "BanditHijo"
 category: "blog"
 tags: ["jekyll"]

@@ -3,7 +3,6 @@ layout: "post"
 title: "Newsboat, Mendapatkan Info Update Artikel Terbaru Blog/Website"
 date: "2018-12-12 06:44"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2018/2018-12-12-newsboat-rss-feed-reader"
 author: "BanditHijo"
 category: "blog"
 tags: ["newsboat"]
@@ -227,7 +226,7 @@ Silahkan diisi sesuai dengan daftar RSS feed masing-masing.
 
 Biasanya pemilik blog/website tanpa sadar atau dengan sengaja meletakkan icon/tulisan RSS.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-04.png)
+![Gambar 1]({% assets_path %}/gambar-04.png)
 
 Gambar 1.  Icon dari RSS Feed
 
@@ -250,15 +249,15 @@ Namun, cara di atas tidak sepenuhnya berhasil. Hanya berhasil terhadap blog/webs
 
 ## Tampilan Newsboat
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 2]({% assets_path %}/gambar-01.png)
 
 Gambar 2. Tampilan Depan, daftar RSS feed
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 3]({% assets_path %}/gambar-02.png)
 
 Gambar 3. Daftar Artikel dari Salah Satu Blog
 
-![Gambar 4]({{ page.assets | absolute_url }}/gambar-03.png)
+![Gambar 4]({% assets_path %}/gambar-03.png)
 
 Gambar 4. Tampilan Isi
 

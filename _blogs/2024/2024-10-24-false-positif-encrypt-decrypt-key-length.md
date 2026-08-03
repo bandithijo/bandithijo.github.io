@@ -3,14 +3,13 @@ layout: "post"
 title: "False Positif Encrypt dan Decrypt Akibat Key Length"
 date: "2024-10-24 07:14"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2024/2024-10-24-false-positif-encrypt-decrypt-key-length"
 author: "BanditHijo"
 category: "blog"
 tags: ["encryption"]
 description: "Tidak semua tool webapp converter atau encrypt/decrypt itu mampu mengkonversi dengan benar."
 ---
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar_01.jpg)
+![Gambar 1]({% assets_path %}/gambar_01.jpg)
 
 TLDR; TIL. Tidak semua tool webapp converter atau encrypt/decrypt itu mampu mengkonversi dengan benar.
 

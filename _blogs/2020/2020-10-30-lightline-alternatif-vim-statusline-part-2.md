@@ -3,7 +3,6 @@ layout: "post"
 title: "Lightline, Alternatif Vim Statusline Bagian 2 (feat. Defx, Tagbar)"
 date: "2020-10-30 09:26"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-10-30-lightline-alternatif-vim-statusline-part-2"
 author: "BanditHijo"
 category: "blog"
 tags: ["vim", "lightline", "statusline"]

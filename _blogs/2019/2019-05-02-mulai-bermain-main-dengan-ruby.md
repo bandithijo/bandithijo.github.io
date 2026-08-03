@@ -3,7 +3,6 @@ layout: "post"
 title: "Mulai Bermain-main dengan Ruby"
 date: "2019-05-02 00:29"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-05-02-mulai-bermain-main-dengan-ruby"
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby"]
@@ -14,7 +13,7 @@ description: "Catatan ini adalah awal pertama kali saya mulai menekuni bahasa pe
 
 Awal saya bertemu dengan bahasa Ruby adalah saat mengikuti "[*Online Course Ruby on Rails*](https://www.idrails.com/training-ruby-on-rails)" yang dibawakan oleh mas [Agung Setiawan](http://agung-setiawan.com/) pada Agustus 2017.
 
-![Gambar 1]({{ page.assets | absolute_url }}/50041702-10217428365690776-8442941827375431680-n.jpg)
+![Gambar 1]({% assets_path %}/50041702-10217428365690776-8442941827375431680-n.jpg)
 
 Gambar 1. Sumber: [Facebook Agung Setiawan](https://www.facebook.com/photo.php?fbid=10217428365610774&set=pb.1524018222.-2207520000.1556728701.&type=3&theater) Batch 9 (Posted: 18 Januari 2019)
 

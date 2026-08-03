@@ -3,7 +3,6 @@ layout: "post"
 title: "Mudah Memberikan Screen Annotation di Mana Saja dengan Gromit-MPX"
 date: "2020-10-26 15:44"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-10-26-mudah-memberikan-screen-annotation-dengan-gromit-mpx"
 author: "BanditHijo"
 category: "blog"
 tags: ["screenannotation"]
@@ -16,7 +15,7 @@ Saat presentasi menggunakan aplikasi presentasi semacam LibreOffice Impress, pas
 
 Menurut saya, memberikan anotasi pada slide, lebih efektif untuk menjelaskan dan lebih mudah dimengerti oleh penyimak, ketimbang hanya menunjuk-nujuk bagian-bagian dari slide.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Slide Annotation pada LibreOffice
 
@@ -43,11 +42,11 @@ Latar belakang Simon Budig mengembangkan Gromit karena saat ia membuat presentas
 
 Berikut ini adalah ilustrasi dari Simon Budig yang saya ambil dari website [Gromit](http://www.home.unix-ag.org/simon/gromit/).
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.jpg)
+![Gambar 2]({% assets_path %}/gambar-02.jpg)
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.jpg)
+![Gambar 3]({% assets_path %}/gambar-03.jpg)
 
-![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.jpg)
+![Gambar 4]({% assets_path %}/gambar-04.jpg)
 
 
 ## Instalasi
@@ -154,11 +153,11 @@ UNDOKEY = "F8";
 
 ## Demonstrasi
 
-![Gambar 5]({{ page.assets | absolute_url }}/gambar-05.gif)
+![Gambar 5]({% assets_path %}/gambar-05.gif)
 
-![Gambar 6]({{ page.assets | absolute_url }}/gambar-06.gif)
+![Gambar 6]({% assets_path %}/gambar-06.gif)
 
-![Gambar 7]({{ page.assets | absolute_url }}/gambar-07.gif)
+![Gambar 7]({% assets_path %}/gambar-07.gif)
 
 
 ## Pesan Penulis

@@ -3,7 +3,6 @@ layout: "post"
 title: "Memperbaiki systemd-timesyncd Failed to Start Saat Booting pada Arch Linux"
 date: "2019-04-24 20:34"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-04-24-memperbaiki-systemd-timesyncd-failed-to-start"
 author: "BanditHijo"
 category: "blog"
 tags: ["arch linux"]

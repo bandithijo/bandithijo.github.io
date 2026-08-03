@@ -3,7 +3,6 @@ layout: "post"
 title: "Membuat Vim Mengingat Posisi Terakhir Cursor"
 date: "2020-03-27 16:38"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-03-27-membuat-vim-mengingat-posisi-terakhir-cursor"
 author: "BanditHijo"
 category: "blog"
 tags: ["vim"]
@@ -58,7 +57,7 @@ Jika tanda `"` mengandung nilai **X** line number lebih dari 1 dan tidak lebih d
 
 Nah, dengan begini, cursor akan tetap berada pada posisi terakhir ketika file atau buffer ditutup.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. NeoVim (kiri), Vim (kanan), Posisi kursor berada di baris 59
 
@@ -66,7 +65,7 @@ Kalau teman-teman menggunakan **Vim**, kalian dapat melihan informasi yang disim
 
 Kalau teman-teman menggunakan **NeoVim**, kalian dapat melihat informasi yang disimpan pada **ShaDa File** yang berada di `~/.local/share/nvim/shada/main.shada`.
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 2]({% assets_path %}/gambar-02.png)
 
 Gambar 2. Data disimpan pada ShaDa file di NeoVim (kiri), Data disimpan pada .viminfo pada Vim (kanan)
 

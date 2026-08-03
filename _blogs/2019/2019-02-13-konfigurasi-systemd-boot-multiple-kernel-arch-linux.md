@@ -3,7 +3,6 @@ layout: "post"
 title: "Konfigurasi systemd-boot untuk Multiple Kernel pada Arch Linux"
 date: '2019-02-13 23:30'
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-02-13-konfigurasi-systemd-boot-multiple-kernel-arch-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["systemd-boot"]

@@ -3,7 +3,6 @@ layout: "post"
 title: "Memodifikasi Hasil ScreenShot dari Flameshot dengan ImageMagick"
 date: "2020-08-16 10:13"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-08-16-memodifikasi-screenshot-dari-flameshot-dengan-imagemagick"
 author: "BanditHijo"
 category: "blog"
 tags: ["ruby", "imagemagick"]
@@ -121,7 +120,7 @@ File Original tidak dimodifikasi, tujuannya sebagai backup. Karena saya menyadar
 
 File Modifikasi adalah hasil pengolahan dengan imagemagick, kalau dibuka akan seperti ini hasilnya.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Nah, dengan seperti ini, kita tetap dapat memanfaatkan fitur annotate milik flameshot.
 
@@ -381,7 +380,7 @@ Jangan lupa untuk mendisable tombol save pada configurasi interface di Flameshot
 $ flameshot config
 ```
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 2]({% assets_path %}/gambar-02.png)
 
 Tujuannya agar kita tidak latah lalu menekan tombol save. Agar hanya ada satu pilihan untuk menyimpan, yaitu menekan tombol <kbd>ENTER</kbd>.
 

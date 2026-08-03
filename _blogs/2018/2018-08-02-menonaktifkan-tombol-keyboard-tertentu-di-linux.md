@@ -3,14 +3,13 @@ layout: "post"
 title: "Menonaktifkan Tombol Keyboard Tertentu di GNU/Linux"
 date: "2018-08-02 12:07"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2018/2018-08-02-menonaktifkan-tombol-keyboard-tertentu-di-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["tips"]
 description: "Terkadang kita ingin membuat tombol tertentu pada keyboard untuk tidak aktif atau mengganti fungsinya menjadi fungsi yang lain. Misal, menonaktifkan tombol PrtSc pada keyboard ThinkPad keluaran 2014 ke atas karena letaknya yang diapit dua tombol lain, Right Alt + PrtSc + Right Ctrl, sehingga lebih sering salah pencet saat akan menekan Alt atau Ctrl."
 ---
 
-![Banner]({{ page.assets | absolute_url }}/banner_post_19.png)
+![Banner]({% assets_path %}/banner_post_19.png)
 
 
 ## Permasalahan

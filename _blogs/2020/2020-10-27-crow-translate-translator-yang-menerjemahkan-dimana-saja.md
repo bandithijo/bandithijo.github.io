@@ -3,7 +3,6 @@ layout: "post"
 title: "Crow-translate, Translator Online yang Dapat Menerjemahkan Di Mana Saja"
 date: "2020-10-27 05:41"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-10-27-crow-translate-translator-yang-menerjemahkan-dimana-saja"
 author: "BanditHijo"
 category: "blog"
 tags: ["Crow", "translator"]
@@ -95,7 +94,7 @@ Keyboard shortcut ini dapat kita langsung panggil di dalam desktop --mungkin aka
 
 ## Demonstrasi
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.gif)
+![Gambar 1]({% assets_path %}/gambar-01.gif)
 
 
 ## Pesan Penulis

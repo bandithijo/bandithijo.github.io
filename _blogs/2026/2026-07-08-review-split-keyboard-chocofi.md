@@ -3,7 +3,6 @@ layout: "post"
 title: "Review Split Keyboard Chocofi"
 date: "2026-07-08 06:05"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2026/2026-07-08-review-split-keyboard-chocofi"
 author: "BanditHijo"
 category: "blog"
 tags: ["splitkeyboard", "chocofi"]
@@ -23,7 +22,7 @@ Berhubung ini adalah artikel pertama saya yang membahas tentang *typing*, saya a
 
 SD kelas 4 atau 5 saya pertama kali bertemu komputer dan keyboard, karena ikut les komputer yang diadakan dari sekolah SD tapi ruang komputernya ada di gedung SMA. Saat itu kami dikenalkan dengan game di komputer. Saya paling suka bermain Mario Teaches Typing (1993).
 
-![gambar 1]({{ page.assets | absolute_url }}/gambar_01.webp)
+![gambar 1]({% assets_path %}/gambar_01.webp)
 
 Gambar 1. Mario Teaches Typing (1993). Source [https://www.uvlist.net/game-211662-Mario+Teaches+Typing](https://www.uvlist.net/game-211662-Mario+Teaches+Typing)
 
@@ -54,7 +53,7 @@ Singkat cerita saya juga sudah mulai ~~jenuh~~/*fatigue* dengan *high profile sw
 
 Saya merasa saat menggunakan standard keyboard sering tertukar antara kiri dan kanan. Seperti terjadi semacam interfere signal karena tangan kanan dan kiri berdekatan. Mungkin kalau diilustrasikan akan seperti ini.
 
-![gambar 2]({{ page.assets | absolute_url }}/gambar_02.webp)
+![gambar 2]({% assets_path %}/gambar_02.webp)
 
 Gambar 2. Ilustrasi tentang interfere signal yang saya bayangkan
 
@@ -99,83 +98,83 @@ Berikut ini spesifikasi dari Chocofi.
 13. 1 Meter braided USB Type C Cable
 
 
-![gambar 3]({{ page.assets | absolute_url }}/gambar_03.jpg)
+![gambar 3]({% assets_path %}/gambar_03.jpg)
 
-![gambar 4]({{ page.assets | absolute_url }}/gambar_04.jpg)
+![gambar 4]({% assets_path %}/gambar_04.jpg)
 
-![gambar 5]({{ page.assets | absolute_url }}/gambar_05.jpg)
+![gambar 5]({% assets_path %}/gambar_05.jpg)
 
-![gambar 6]({{ page.assets | absolute_url }}/gambar_06.jpg)
+![gambar 6]({% assets_path %}/gambar_06.jpg)
 
-![gambar 7]({{ page.assets | absolute_url }}/gambar_07.jpg)
+![gambar 7]({% assets_path %}/gambar_07.jpg)
 
-![gambar 8]({{ page.assets | absolute_url }}/gambar_08.jpg)
+![gambar 8]({% assets_path %}/gambar_08.jpg)
 
-![gambar 9]({{ page.assets | absolute_url }}/gambar_09.jpg)
+![gambar 9]({% assets_path %}/gambar_09.jpg)
 
-![gambar 15]({{ page.assets | absolute_url }}/gambar_15.jpg)
+![gambar 15]({% assets_path %}/gambar_15.jpg)
 
-![gambar 16]({{ page.assets | absolute_url }}/gambar_16.jpg)
+![gambar 16]({% assets_path %}/gambar_16.jpg)
 
-![gambar 17]({{ page.assets | absolute_url }}/gambar_17.jpg)
+![gambar 17]({% assets_path %}/gambar_17.jpg)
 
-![gambar 18]({{ page.assets | absolute_url }}/gambar_18.jpg)
+![gambar 18]({% assets_path %}/gambar_18.jpg)
 
-![gambar 20]({{ page.assets | absolute_url }}/gambar_20.jpg)
+![gambar 20]({% assets_path %}/gambar_20.jpg)
 
-![gambar 22]({{ page.assets | absolute_url }}/gambar_22.jpg)
+![gambar 22]({% assets_path %}/gambar_22.jpg)
 
-![gambar 23]({{ page.assets | absolute_url }}/gambar_23.jpg)
+![gambar 23]({% assets_path %}/gambar_23.jpg)
 
-![gambar 24]({{ page.assets | absolute_url }}/gambar_24.jpg)
+![gambar 24]({% assets_path %}/gambar_24.jpg)
 
-![gambar 25]({{ page.assets | absolute_url }}/gambar_25.jpg)
+![gambar 25]({% assets_path %}/gambar_25.jpg)
 
-![gambar 26]({{ page.assets | absolute_url }}/gambar_26.jpg)
+![gambar 26]({% assets_path %}/gambar_26.jpg)
 
-![gambar 27]({{ page.assets | absolute_url }}/gambar_27.jpg)
+![gambar 27]({% assets_path %}/gambar_27.jpg)
 
-![gambar 28]({{ page.assets | absolute_url }}/gambar_28.jpg)
+![gambar 28]({% assets_path %}/gambar_28.jpg)
 
-![gambar 29]({{ page.assets | absolute_url }}/gambar_29.jpg)
+![gambar 29]({% assets_path %}/gambar_29.jpg)
 
-![gambar 30]({{ page.assets | absolute_url }}/gambar_30.jpg)
+![gambar 30]({% assets_path %}/gambar_30.jpg)
 
-![gambar 31]({{ page.assets | absolute_url }}/gambar_31.jpg)
+![gambar 31]({% assets_path %}/gambar_31.jpg)
 
-![gambar 32]({{ page.assets | absolute_url }}/gambar_32.jpg)
+![gambar 32]({% assets_path %}/gambar_32.jpg)
 
-![gambar 33]({{ page.assets | absolute_url }}/gambar_33.jpg)
+![gambar 33]({% assets_path %}/gambar_33.jpg)
 
-![gambar 34]({{ page.assets | absolute_url }}/gambar_34.jpg)
+![gambar 34]({% assets_path %}/gambar_34.jpg)
 
-![gambar 35]({{ page.assets | absolute_url }}/gambar_35.jpg)
+![gambar 35]({% assets_path %}/gambar_35.jpg)
 
-![gambar 36]({{ page.assets | absolute_url }}/gambar_36.jpg)
+![gambar 36]({% assets_path %}/gambar_36.jpg)
 
-![gambar 37]({{ page.assets | absolute_url }}/gambar_37.jpg)
+![gambar 37]({% assets_path %}/gambar_37.jpg)
 
-![gambar 38]({{ page.assets | absolute_url }}/gambar_38.jpg)
+![gambar 38]({% assets_path %}/gambar_38.jpg)
 
 {% youtube 0SucDZzEbdA %}
 
 Karena keyboard ini tidak ada case dan karena bentuknya yang kecil dan terlihat ringkih, saya khawatir jika dimasukkan tas akan baku hantam dengan barang-barang lain di dalam tas, maka saya putuskan untuk membeli case. Setelah saya hitung-hitung dimensinya cocok dengan Fujifilm Instax Mini case.
 
-![gambar 39]({{ page.assets | absolute_url }}/gambar_39.jpg)
+![gambar 39]({% assets_path %}/gambar_39.jpg)
 
-![gambar 40]({{ page.assets | absolute_url }}/gambar_40.jpg)
+![gambar 40]({% assets_path %}/gambar_40.jpg)
 
-![gambar 41]({{ page.assets | absolute_url }}/gambar_41.jpg)
+![gambar 41]({% assets_path %}/gambar_41.jpg)
 
-![gambar 42]({{ page.assets | absolute_url }}/gambar_42.jpg)
+![gambar 42]({% assets_path %}/gambar_42.jpg)
 
-![gambar 43]({{ page.assets | absolute_url }}/gambar_43.jpg)
+![gambar 43]({% assets_path %}/gambar_43.jpg)
 
-![gambar 44]({{ page.assets | absolute_url }}/gambar_44.jpg)
+![gambar 44]({% assets_path %}/gambar_44.jpg)
 
-![gambar 45]({{ page.assets | absolute_url }}/gambar_45.jpg)
+![gambar 45]({% assets_path %}/gambar_45.jpg)
 
-![gambar 46]({{ page.assets | absolute_url }}/gambar_46.jpg)
+![gambar 46]({% assets_path %}/gambar_46.jpg)
 
 {% youtube Dsu2pJZkFy4 %}
 
@@ -199,19 +198,19 @@ Berikut ini layer-layer yang saya pergunakan.
 3. layer 2 (fun_layer), function buttons
 4. layer 3 (sys_layer), system layer untuk pengaturan konektifitas bluetooth
 
-![gambar 10]({{ page.assets | absolute_url }}/gambar_10.png)
+![gambar 10]({% assets_path %}/gambar_10.png)
 
 Gambar 10. layer 0 (qwerty_layer), base layer atau front layer
 
-![gambar 11]({{ page.assets | absolute_url }}/gambar_11.png)
+![gambar 11]({% assets_path %}/gambar_11.png)
 
 Gambar 11. layer 1 (numsym_layer), numeric & symbol layer
 
-![gambar 12]({{ page.assets | absolute_url }}/gambar_12.png)
+![gambar 12]({% assets_path %}/gambar_12.png)
 
 Gambar 12. layer 2 (fun_layer), function buttons
 
-![gambar 13]({{ page.assets | absolute_url }}/gambar_13.png)
+![gambar 13]({% assets_path %}/gambar_13.png)
 
 Gambar 13. layer 3 (sys_layer), system layer untuk pengaturan konektifitas bluetooth
 
@@ -234,7 +233,7 @@ Sesuai namanya combo button berarti menekan 2 atau lebih button secara bersama-s
 
 Saya tidak terlalu banyak menggunakan combo button. Hanya saya pergunakan untuk hal-hal yang berkaitan dengan pengaturan saja.
 
-![gambar 14]({{ page.assets | absolute_url }}/gambar_14.png)
+![gambar 14]({% assets_path %}/gambar_14.png)
 
 
 ## Kesan penulis

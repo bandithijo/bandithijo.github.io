@@ -3,7 +3,6 @@ layout: "post"
 title: "Sharing Direktori Antara Host Linux dan Guest Windows pada Virt-Manager/KVM/Qemu"
 date: "2021-05-06 00:40"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2021/2021-05-06-sharing-direktori-antara-host-dan-guest-pada-virt-manager"
 author: "BanditHijo"
 category: "blog"
 tags: ["virt-manager", "kvm", "qemu", "samba"]
@@ -16,7 +15,7 @@ Saat membuat VM baru pada virt-manager, biasanya sharing Home direktori antara H
 
 **Bang, yang seperti apa sih "Sharing Home Direktori" itu?**
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-04.png)
+![Gambar 1]({% assets_path %}/gambar-04.png)
 
 Gambar 1. Home Dir Linux pada My Computer Windows
 
@@ -128,7 +127,7 @@ Tambahkan network baru dengan menu **+** di pojok kiri bawah.
 
 Nanti akan terbuka window seperti di bawah ini.
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 2]({% assets_path %}/gambar-01.png)
 
 Gambar 2. Proses create Virtual Network
 
@@ -145,7 +144,7 @@ Lalu tekan **Finish**.
 
 Nanti virt-manager secara pintar, akan mengalokasikan IP address yang tersedia untuk kita gunakan.
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 3]({% assets_path %}/gambar-02.png)
 
 Gambar 3. Detail dari Virtual Network
 
@@ -162,7 +161,7 @@ Pasang/attach Network Interface Controller (NIC) dengan Virtual Network yang kit
 
 Seperti ini ilustrasinya,
 
-![Gambar 4]({{ page.assets | absolute_url }}/gambar-03.png)
+![Gambar 4]({% assets_path %}/gambar-03.png)
 
 Gambar 4. Detail dari Virtual Network Interface
 
@@ -229,13 +228,13 @@ Buka Guest OS --dalam hal ini adalah Windows, kemudian buka **My Computer**.
 
 Klik kanan dan pilih **Add a network location**.
 
-![Gambar 5]({{ page.assets | absolute_url }}/gambar-05.png)
+![Gambar 5]({% assets_path %}/gambar-05.png)
 
 Gambar 5. Proses menambahkan network location baru
 
 Next-next aja, sampai ketemu halaman seperti di bawah ini.
 
-![Gambar 6]({{ page.assets | absolute_url }}/gambar-06.png)
+![Gambar 6]({% assets_path %}/gambar-06.png)
 
 Gambar 6. Masukkan IP address host dan hostname
 
@@ -253,7 +252,7 @@ Dapat dilihat bahwa formulanya adalah,
 
 Halaman selanjutnya adalah memberikan nama,
 
-![Gambar 7]({{ page.assets | absolute_url }}/gambar-07.png)
+![Gambar 7]({% assets_path %}/gambar-07.png)
 
 Gambar 7. Proses memberikan nama dari network location
 
@@ -261,7 +260,7 @@ Finish!
 
 Kalau berhasil, akan ada Home dari Host OS di my computer.
 
-![Gambar 8]({{ page.assets | absolute_url }}/gambar-04.png)
+![Gambar 8]({% assets_path %}/gambar-04.png)
 
 Gambar 8. Home Directory Linux sudah berhasil ditambahkan
 
@@ -279,14 +278,14 @@ Tinggal buat saja locationnya seperti ini.
 
 Hasilnya,
 
-![Gambar 9]({{ page.assets | absolute_url }}/gambar-08.png)
+![Gambar 9]({% assets_path %}/gambar-08.png)
 
 Gambar 9. Contoh network location selain Home Directory
 
 
 ## Demo
 
-![Gambar 10]({{ page.assets | absolute_url }}/gambar-09.gif)
+![Gambar 10]({% assets_path %}/gambar-09.gif)
 
 Gambar 10. Demo menambhakn network location
 

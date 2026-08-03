@@ -3,7 +3,6 @@ layout: "post"
 title: "Mengenkripsi Home Direktori pada GNU/Linux"
 date: "2019-06-14 15:41"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-06-14-mengenkripsi-home-direktori-pada-gnu-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["ecryptfs"]

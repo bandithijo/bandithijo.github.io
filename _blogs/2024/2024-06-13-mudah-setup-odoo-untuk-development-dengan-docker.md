@@ -3,7 +3,6 @@ layout: "post"
 title: "Mudah Setup Odoo untuk Development dengan Docker"
 date: "2024-06-13 07:52"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2024/2024-06-13-mudah-setup-odoo-untuk-development-dengan-docker"
 author: "BanditHijo"
 category: "blog"
 tags: ["docker", "odoo"]

@@ -3,7 +3,6 @@ layout: "post"
 title: "Konfigurasi Anonymized DNSCrypt dengan DNSCrypt-Proxy di macOS"
 date: "2025-12-14 06:30"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2025/2025-12-14-konfigurasi-anonymized-dnscrypt-dengan-dnscrypt-proxy-di-macos"
 author: "BanditHijo"
 category: "blog"
 tags: ["dnscrypt"]
@@ -152,15 +151,15 @@ $ networksetup -getdnsservers Wi-Fi
 
 Sekarang coba test dengan [https://www.dnsleaktest.com/](https://www.dnsleaktest.com/) untuk memastikan DNSCrypt-Proxy sudah berjalan dengan baik.
 
-![gambar 1]({{ page.assets | absolute_url }}/gambar_1.png)
+![gambar 1]({% assets_path %}/gambar_1.png)
 
 Gambar 1. Sebelum menggunakan DNSCrypt-Proxy dengan Anonymized DNS
 
-![gambar 2]({{ page.assets | absolute_url }}/gambar_2.png)
+![gambar 2]({% assets_path %}/gambar_2.png)
 
 Gambar 2. Setelah menggunakan DNSCrypt-Proxy tanpa Anonymized DNS
 
-![gambar 3]({{ page.assets | absolute_url }}/gambar_3.png)
+![gambar 3]({% assets_path %}/gambar_3.png)
 
 Gambar 3. Setelah menggunakan DNSCrypt-Proxy dengan Anonymized DNS
 

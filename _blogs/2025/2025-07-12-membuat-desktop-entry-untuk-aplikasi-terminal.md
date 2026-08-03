@@ -3,7 +3,6 @@ layout: "post"
 title: "Membuat Desktop Entry untuk Aplikasi Terminal (TUI)"
 date: "2025-07-12 11:48"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2025/2025-07-12-membuat-desktop-entry-untuk-aplikasi-terminal"
 author: "BanditHijo"
 category: "blog"
 tags: ["tui", "desktop entry"]

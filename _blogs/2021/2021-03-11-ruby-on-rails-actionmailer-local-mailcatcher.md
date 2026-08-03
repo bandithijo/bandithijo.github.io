@@ -3,7 +3,6 @@ layout: "post"
 title: "Konfigurasi Ruby on Rails ActionMailer pada Local Environment dengan MailCatcher"
 date: "2021-03-11 17:01"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2021/2021-03-11-ruby-on-rails-actionmailer-local-mailcatcher"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails"]
@@ -32,7 +31,7 @@ Kita akan menggunakan MailCatcher.
 
 Dengan MailCatcher, kita dapat manangkap email yang dikirimkan dengan prokotol SMTP ke localhost.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Interface dari MailCatcher
 
@@ -127,7 +126,7 @@ Selesai!
 
 ## Demonstrasi
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.gif)
+![Gambar 2]({% assets_path %}/gambar-02.gif)
 
 Gambar 2. Demo registration dan get confirmation email dengan MailCatcher
 

@@ -3,14 +3,13 @@ layout: "post"
 title: "Memasang Cisco Packet Tracer 7.1.1 pada Arch Linux"
 date: "2018-01-12"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2018/2018-01-12-memasang-packet-tracer-7-1-1-arch-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["cisco packet tracer"]
 description: "Catatan untuk memasang Packet Tracer dari AUR"
 ---
 
-![Banner]({{ page.assets | absolute_url }}/Default+Header+Template+Post+2X.png)
+![Banner]({% assets_path %}/Default+Header+Template+Post+2X.png)
 
 
 ## Latar Belakang

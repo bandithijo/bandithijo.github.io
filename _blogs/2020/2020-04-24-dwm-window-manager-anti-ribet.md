@@ -3,7 +3,6 @@ layout: "post"
 title: "DWM, Window Manager yang Gak Pake Ribet"
 date: "2020-04-24 14:23"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-04-24-dwm-window-manager-anti-ribet"
 author: "BanditHijo"
 category: "blog"
 tags: ["dwm"]
@@ -426,7 +425,7 @@ Bisa dilihat, beberapa *patch* branch yang berkonflik pada script **suckmerge2**
 
 Nah, berikut ini adalah tangkapan layar dari DWM yang saat ini saya pergunakan.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. RicingShow: DeWayEm Project 2020-05
 
@@ -614,7 +613,7 @@ Saya juga hanya menggunakan top bar saja, yang sebelumnya saya menggunakan top d
 
 Nah, seperti ini tampilan bar yang saya pergunakan sekarang.
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 2]({% assets_path %}/gambar-02.png)
 
 Gambar 2. dwmsatus (custom made)
 

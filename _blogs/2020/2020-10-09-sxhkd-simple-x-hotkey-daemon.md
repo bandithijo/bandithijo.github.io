@@ -3,7 +3,6 @@ layout: "post"
 title: "SXHKD, Simple X Hotkey Daemon"
 date: "2020-10-09 21:37"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-10-09-sxhkd-simple-x-hotkey-daemon"
 author: "BanditHijo"
 category: "blog"
 tags: ["sxhkd", "hotkey"]
@@ -52,7 +51,7 @@ Langkah selanjutnya, tinggal dipasang pada konfigurasi autostart yang teman-tema
 
 Misal, contohnya seperti yang saya pergunakan di bawah ini.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 
 ## Contoh Penggunaan

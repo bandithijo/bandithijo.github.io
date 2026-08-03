@@ -3,7 +3,6 @@ layout: "post"
 title: "Berbagi WiFi Tethering dengan create_ap pada GNU/Linux"
 date: "2019-12-22 09:51"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-12-22-wifi-tethering-dengan-create-ap-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["create_ap"]

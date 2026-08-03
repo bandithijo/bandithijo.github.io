@@ -3,7 +3,6 @@ layout: "post"
 title: "Setup WordPress Multisite"
 date: "2026-01-13 06:28"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2026/2026-01-13-setup-wordpress-multisite"
 author: "BanditHijo"
 category: "blog"
 tags: ["wordpress"]
@@ -44,17 +43,17 @@ Setelah menambahkan kode tersebut, simpan perubahan pada file `wp-config.php`.
 
 Pada bagian WordPress Admin Dashboard, Anda akan melihat pada menu **Tools** terdapat submenu baru bernama **Network Setup**.
 
-![Gambar 1]({{ page.assets }}/gambar_01.png)
+![Gambar 1]({% assets_path %}/gambar_01.png)
 
 Gambar 1. Sebelum mengaktifkan fitur Multisite
 
-![Gambar 2]({{ page.assets }}/gambar_02.png)
+![Gambar 2]({% assets_path %}/gambar_02.png)
 
 Gambar 2. Setelah mengaktifkan fitur Multisite
 
 Kemudian, coba refresh halaman admin dashboard WordPress Anda untuk memastikan bahwa fitur Multisite telah diaktifkan dengan benar.
 
-![Gambar 3]({{ page.assets }}/gambar_03.png)
+![Gambar 3]({% assets_path %}/gambar_03.png)
 
 Gambar 3. Halaman Network Setup
 
@@ -71,7 +70,7 @@ Setelah menentukan **Network Title** dan **Network Admin Email**, klik tombol **
 
 ### Update File Konfigurasi
 
-![Gambar 4]({{ page.assets }}/gambar_04.png)
+![Gambar 4]({% assets_path %}/gambar_04.png)
 
 Gambar 4. Konfigurasi tambahan setelah instalasi Multisite untuk dipasang di `wp-config.php` dan `.htaccess`
 
@@ -126,19 +125,19 @@ Kemudian, tekan link "Log in" di pojok kiri bawah halaman tersebut untuk masuk k
 
 Setelah login kembali, akan terdapat menu **My Sites** di bagian atas dashboard admin WordPress, yang menunjukkan bahwa jaringan multisite telah berhasil dikonfigurasi.
 
-![Gambar 5]({{ page.assets }}/gambar_05.png)
+![Gambar 5]({% assets_path %}/gambar_05.png)
 
 Gambar 5. Menu My Sites di dashboard admin WordPress
 
-![Gambar 6]({{ page.assets }}/gambar_06.png)
+![Gambar 6]({% assets_path %}/gambar_06.png)
 
 Gambar 6. WordPress Network Admin Dashboard
 
-![Gambar 7]({{ page.assets }}/gambar_07.png)
+![Gambar 7]({% assets_path %}/gambar_07.png)
 
 Gambar 7. Daftar situs di WordPress Multisite
 
-![Gambar 8]({{ page.assets }}/gambar_08.png)
+![Gambar 8]({% assets_path %}/gambar_08.png)
 
 Gambar 8. Plugin Install di WordPress Multisite. Bisa mengaktifkan untuk semua situs dengan "Network Activate"
 

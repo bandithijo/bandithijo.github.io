@@ -3,7 +3,6 @@ layout: "post"
 title: "Membuat Form's Output dengan AJAX"
 date: "2020-12-01 20:43"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-12-01-membuat-output-dari-form-dengan-ajax"
 author: "BanditHijo"
 category: "blog"
 tags: ["rails", "ajax"]
@@ -14,7 +13,7 @@ description: "Membuat output hasil akan ditampilkan tanpa perlu merefresh halama
 
 Tujuannya menggunakan AJAX untuk menampilkan hasil tanpa perlu mereload tempate berulang kali. Cukup sekali panggil dan yang berubah adalah pada bagian hasilnya saja.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.png)
+![Gambar 1]({% assets_path %}/gambar-01.png)
 
 Gambar 1. Kotak merah adalah satu-satunya bagian yang berubah, sedangkan bagian lain tidak
 
@@ -230,7 +229,7 @@ Terakhir, tinggal menambahkan asynchronous form pada form pencarian dengan `remo
 
 Hasilnya,
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.gif)
+![Gambar 2]({% assets_path %}/gambar-02.gif)
 
 Gambar 2. Hasil jadinya
 

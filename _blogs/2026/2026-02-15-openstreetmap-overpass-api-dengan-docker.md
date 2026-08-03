@@ -3,14 +3,13 @@ layout: "post"
 title: "OpenStreetMap Overpass API dengan Docker"
 date: "2026-02-15 10:05"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2026/2026-02-09-openstreetmap-overpass-api-dengan-docker"
 author: "BanditHijo"
 category: "blog"
 tags: ["openstreetmap", "overpass", "overpassapi"]
 description: "Overpass API memungkinkan kita untuk melakukan query terhadap data OpenStreetMap yang dapat digunakan untuk mencari POI (Point of Interest) pada radius tertentu dari lokasi yang didefinisikan. Pada artikel ini, saya akan mencatat langkah-langkah untuk menjalankan instance Overpass API menggunakan Docker."
 ---
 
-![Gambar 1]({{ site.url }}{{ page.assets }}/gambar_01.png)
+![Gambar 1]({% assets_path %}/gambar_01.png)
 
 
 ## Apa itu Overpass API?

@@ -3,7 +3,6 @@ layout: "post"
 title: "Melokalisasi File .lnk yang Dihasilkan oleh Microsoft Office pada Arch Linux"
 date: "2019-03-28 08:33"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2019/2019-03-28-melokalisasi-file-lnk-dari-microsoft-office-pada-gnu-linux"
 author: "BanditHijo"
 category: "blog"
 tags: ["wine", "arch linux", "microsoft office"]
@@ -14,45 +13,45 @@ description: "File .lnk dapat benar-benar membuat kotor direktori home kalian ap
 
 Beberapa waktu yang lalu, saya mencoba memasang **Microsoft Office 2010** pada distribusi sistem operasi **Arch Linux** menggunakan **Wine 4.4-1**.
 
-![Gambar 1]({{ page.assets | absolute_url }}/gambar-01.gif)
+![Gambar 1]({% assets_path %}/gambar-01.gif)
 
 Hasilnya lumayan memuaskan, meskipun beberapa aplikasi yang dibawa oleh Microsoft Office ini belum dapat dijalankan.
 
-![Gambar 2]({{ page.assets | absolute_url }}/gambar-02.png)
+![Gambar 2]({% assets_path %}/gambar-02.png)
 
 Gambar 2. Microsoft Word 2010
 
-![Gambar 3]({{ page.assets | absolute_url }}/gambar-03.png)
+![Gambar 3]({% assets_path %}/gambar-03.png)
 
 Gambar 3. Microsoft Excel 2010
 
-![Gambar 4]({{ page.assets | absolute_url }}/gambar-04.png)
+![Gambar 4]({% assets_path %}/gambar-04.png)
 
 Gambar 4. Microsoft Access 2010
 
-![Gambar 5]({{ page.assets | absolute_url }}/gambar-05.png)
+![Gambar 5]({% assets_path %}/gambar-05.png)
 
 Gambar 5. Microsoft Outlook 2010
 
-![Gambar 6]({{ page.assets | absolute_url }}/gambar-06.png)
+![Gambar 6]({% assets_path %}/gambar-06.png)
 
 Gambar 6. Microsoft Clip Organizer
 
-![Gambar 7]({{ page.assets | absolute_url }}/gambar-07.png)
+![Gambar 7]({% assets_path %}/gambar-07.png)
 
 Gambar 7. Microsoft Publisher 2010
 
-![Gambar 8]({{ page.assets | absolute_url }}/gambar-08.png)
+![Gambar 8]({% assets_path %}/gambar-08.png)
 
 Gambar 8. Microsoft Office Picture Manager
 
 Beberapa aplikasi Microsoft Office yang belum dapat dijalankan, diantaranya :
 
-![Gambar 9]({{ page.assets | absolute_url }}/gambar-09.png)
+![Gambar 9]({% assets_path %}/gambar-09.png)
 
 Gambar 9. Microsoft OneNote 2010
 
-![Gambar 10]({{ page.assets | absolute_url }}/gambar-10.png)
+![Gambar 10]({% assets_path %}/gambar-10.png)
 
 Gambar 10. Microsoft PowerPoint 2010
 

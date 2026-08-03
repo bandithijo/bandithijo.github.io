@@ -3,7 +3,6 @@ layout: "post"
 title: "Membuat Navigasi Post (Next Prev) pada Jekyll"
 date: "2020-04-18 13:20"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/2020/2020-04-18-membuat-post-navigasi-pada-jekyll"
 author: "BanditHijo"
 category: "blog"
 tags: ["jekyll"]
