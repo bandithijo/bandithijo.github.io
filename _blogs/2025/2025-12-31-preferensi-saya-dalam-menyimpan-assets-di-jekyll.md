@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Preferensi Saya dalam Menyimpan Assets Gambar di Jekyll"
+title: "Preferensi Saya dalam Menyimpan Assets di Jekyll"
 date: "2025-12-31 04:40"
 permalink: "/blog/:title"
 author: "BanditHijo"
