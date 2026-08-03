@@ -113,7 +113,7 @@
   }
 
   .markdown li > a {
-    @apply break-all !important;
+    @apply break-words !important;
   }
 
   .markdown li + li {
@@ -176,7 +176,7 @@
   .markdown h4 a,
   .markdown h5 a,
   .markdown h6 a {
-    @apply text-dark dark:text-white;
+    @apply text-dark dark:text-white break-words;
   }
 
   .markdown blockquote {
