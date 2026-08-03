@@ -55,7 +55,11 @@ layout: baseof
       </div>
       {% endif %}
 
-      {% assign blog_posts = site.categories.blog %}
+      {% if page.categories contains 'note' %}
+        {% assign blog_posts = site.notes | where_exp: "post", "post.categories contains 'note'" | reverse %}
+      {% else %}
+        {% assign blog_posts = site.blogs | where_exp: "post", "post.categories contains 'blog'" | reverse %}
+      {% endif %}
       {% assign index = nil %}
 
       {% for post in blog_posts %}
