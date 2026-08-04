@@ -350,3 +350,14 @@ friends:
     - "https://www.youtube.com/@protesilaos"
   detail: >-
     I am a philosopher living in the mountains of Cyprus at a house I built myself which I affectionately call “the hut.” I spend my free time programming on GNU Emacs, writing essays on a wide range of life issues, and doing infrastructure work around my house. My background is diverse and reflects my intellectual curiosity as well as consistently high work ethic.
+
+
+- github_username: "sachac"
+  name:  "Sacha Chua"
+  photo: "https://github.com/sachac.png?size=200"
+  urls:
+    - "https://sachachua.com/"
+    - "https://github.com/sachac"
+    - "https://www.youtube.com/@sachactube"
+  detail: >-
+    Interests include: Emacs, Org mode, Elisp, NodeJS, Python, sketchnotes, parenting, captioning, and a bunch of other things.
