@@ -339,3 +339,14 @@ friends:
     - "https://github.com/pirey"
   detail: >-
     I’m a software engineer with experience contributing to and maintaining production systems, including multi-tenant platforms and developer tooling. I’ve worked on live-service gaming and SaaS products, collaborated with global teams, and partnered closely with clients to deliver practical, maintainable solutions used in production.
+
+
+- github_username: "protesilaos"
+  name:  "Protesilaos Stavrou"
+  photo: "https://github.com/protesilaos.png?size=200"
+  urls:
+    - "https://protesilaos.com/"
+    - "https://github.com/protesilaos"
+    - "https://www.youtube.com/@protesilaos"
+  detail: >-
+    I am a philosopher living in the mountains of Cyprus at a house I built myself which I affectionately call “the hut.” I spend my free time programming on GNU Emacs, writing essays on a wide range of life issues, and doing infrastructure work around my house. My background is diverse and reflects my intellectual curiosity as well as consistently high work ethic.
