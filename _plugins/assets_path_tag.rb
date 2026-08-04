@@ -7,12 +7,9 @@ module Jekyll
       page = context.registers[:page]
 
       relative_path =
-        if page["collection"] == "blogs"
+        if page["collection"] == "blogs" || page["collection"] == "notes"
           basename = File.basename(page["name"].to_s, ".*")
-          "/assets/posts/#{page["category"]}/#{basename[0, 4]}/#{basename}"
-        elsif page["collection"] == "notes"
-          basename = File.basename(page["name"].to_s, ".*")
-          "/assets/posts/#{page["category"]}/#{basename}"
+          "/assets/#{page["category"]}/#{basename}"
         else
           slug = File.basename(page["name"].to_s, ".*")
           "/assets/pages/#{slug}"

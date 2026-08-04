@@ -12,11 +12,11 @@ description: "Pengelolaan assets yang baik pada sebuah blog merupakan kunci untu
 
 ## Background Story
 
-Pada artikel saya sebelumnya, [**Preferensi Saya dalam Menyimpan Assets di Jekyll**]({% link _blogs/2025/2025-12-31-preferensi-saya-dalam-menyimpan-assets-di-jekyll.md %}), saya menambahkan attribute `assets:` pada front-matter di setiap post. Kekurangan dari pendekatan ini adalah:
+Pada artikel saya sebelumnya, [**Preferensi Saya dalam Menyimpan Assets di Jekyll**]({% link _blogs/2025-12-31-preferensi-saya-dalam-menyimpan-assets-di-jekyll.md %}), saya menambahkan attribute `assets:` pada front-matter di setiap post. Kekurangan dari pendekatan ini adalah:
 
 1. Ribet. Karena saya harus mengeset assets path secara manual di setiap post.
 
-   ```
+   ```yaml
    ---
    layout: "post"
    title: "Ruby Promgrammers Best Friend"
@@ -27,13 +27,13 @@ Pada artikel saya sebelumnya, [**Preferensi Saya dalam Menyimpan Assets di Jekyl
    Sangat tidak praktis!
 
 2. Sintaks image jadi panjang dan terlihat tidak praktis.
-   ```
+   ```liquid
    ![gambar_01]({% raw %}{{ page.assets | absolute_url }}{% endraw %}/gambar_01.png)
    ```
 
 ## Pemecahan Masalah
 
-Untuk saat ini yang terpikirkan oleh saya adalah dengan memanfaatkan Jekyll Custom Tag. Saya sudah pernah menulis tentang membuat Jekyll Custom Tag pada artikel ini, [**Membuat Jekyll Custom Tags dengan Liquid Tags**]({% link _blogs/2021/2021-01-22-membuat-jekyll-custom-tags-dengan-liquid-tags.md %}).
+Untuk saat ini yang terpikirkan oleh saya adalah dengan memanfaatkan Jekyll Custom Tag. Saya sudah pernah menulis tentang membuat Jekyll Custom Tag pada artikel ini, [**Membuat Jekyll Custom Tags dengan Liquid Tags**]({% link _blogs/2021-01-22-membuat-jekyll-custom-tags-dengan-liquid-tags.md %}).
 
 Tapi sebelum membuat Jekyll Custom Tag, kenali dulu struktur direktori antara file post dengan assetsnya. Punya saya seperti di bawah ini.
 
@@ -121,12 +121,12 @@ Untuk menggunakannya tinggal panggil dengan cara seperti ini,
 
 ![gambar-02]({% raw %}{% assets_path %}{% endraw %}/gambar-02.png)
 
-[Document 01]({% raw %}{% assets_path %}{% endraw %}/file-01.pdf)
+Berikut ini [Document 01]({% raw %}{% assets_path %}{% endraw %}/file-01.pdf) yang harus dikerjakan.
 ```
 
 Dengan begini, tidak perlu lagi menggunakan attribute `assets:` pada front-matter.
 
-```
+```yaml
 ---
 layout: "post"
 title: "Ruby Promgrammers Best Friend"
@@ -135,6 +135,16 @@ date: "2025-12-29"
 ```
 
 Selesai!
+
+
+## Keuntungan
+
+Dengan menggunakan pendekatan ini saya mendapatkan keuntungan,
+
+1. Path yang ditulis pada pemanggilan assets menjadi tidak terlalu panjang. Hanya perlu memanggil `{% raw %}{% assets_path %}{% endraw %}` kemudian diikuti nama file assetnya.
+2. Jika ingin mengganti struktur direktori dari assets, tidak perlu melakukan edit ke semua link assets yang ada di masing-masing artikel. Tapi cukup melakukan edit pada file `_plugins/assets_path_tag`. Maka semua assets path akan ikut berubah.
+
+Sangat praktis!
 
 
 ## Pesan Penulis
