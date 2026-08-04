@@ -55,8 +55,6 @@ navigations:
       url: "/note/"
     - title: "Book"
       url: "/book/"
-    - title: "About"
-      url: "/about/"
   bottom:
     #- title: "Portfolio"
     #  url: "/portfolio/"
@@ -66,6 +64,8 @@ navigations:
       url: "/blogroll/"
     - title: "Contact"
       url: "/contact/"
+    - title: "About"
+      url: "/about/"
     # - title: "Contribute"
     #   url: "/contribute/"
     - title: "Stats"
