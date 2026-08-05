@@ -11,7 +11,7 @@ description: "Aplikasi translator ini sangat convenient untuk digunakan. Karena 
 
 ## Latar Belakang
 
-Minggu kemarin, saya baru saja memperkenalkan tentang aplikasi **translate-shell** (artikelnya dapat dibaca [di sini](/blog/translate-shell-translator-cli-mudah).
+Minggu kemarin, saya baru saja memperkenalkan tentang aplikasi **translate-shell** (artikelnya dapat dibaca [di sini]({% link _blogs/2020-10-16-translate-shell-translator-cli-mudah.md %}).
 
 Sebenarnya, sebelum memutuskan untuk menggunakan **translate-shell**, saya lebih dulu memutuskan untuk menggunakan **crow-translate**. Namun, karena aplikasi ini menggunakan Qt library dan harus melakukan kompilasi terlebih dahulu, saya jadi mengurungkan niat untuk memasang. Karena, beberapa library Qt memerlukan kompilasi terlebih dahulu. Oleh karena itu, kemarin saya memutuskan untuk menggunakan translate-shell terlebih dahulu.
 

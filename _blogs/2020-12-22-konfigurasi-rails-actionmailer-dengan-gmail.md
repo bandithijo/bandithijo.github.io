@@ -115,7 +115,7 @@ ActionMailer::Base.smtp_settings = {
 
 Baris ke 7- 4, adalah baris yang kita tambahkan.
 
-Dapat dilihat, pada `user_name` & `password`, saya menyimpan credential dengan cara Rails, yaitu memanfaatkan file **config/credentials.yml.enc**. Yang belum pernah tahu, boleh baca di artikel ini, ["Cara Aman Menyimpan Credentials di Rails"](/blog/cara-aman-menyimpan-credentials-di-rails).
+Dapat dilihat, pada `user_name` & `password`, saya menyimpan credential dengan cara Rails, yaitu memanfaatkan file **config/credentials.yml.enc**. Yang belum pernah tahu, boleh baca di artikel ini, ["Cara Aman Menyimpan Credentials di Rails"]({% link _blogs/2020-11-26-cara-aman-menyimpan-credentials-di-rails.md %}).
 
 Selanjutnya, daftarkan dulu credential tersebut.
 

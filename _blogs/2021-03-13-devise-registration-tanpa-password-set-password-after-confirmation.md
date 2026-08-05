@@ -76,7 +76,7 @@ end
 
 Baris 7 dan 8, adalah configurasi untuk MailCatcher.
 
-Untuk yang belum tahu MailCatcher, dapat dibaca di sini, [**Konfigurasi Ruby on Rails ActionMailer pada Local Environment dengan MailCatcher**](/blog/ruby-on-rails-actionmailer-local-mailcatcher).
+Untuk yang belum tahu MailCatcher, dapat dibaca di sini, [**Konfigurasi Ruby on Rails ActionMailer pada Local Environment dengan MailCatcher**]({% link _blogs/2021-03-11-ruby-on-rails-actionmailer-local-mailcatcher.md %}).
 
 
 ### Devise Initializer

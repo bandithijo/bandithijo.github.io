@@ -33,7 +33,7 @@ Alasannya bukan karena menerapkan jadwal khusus untuk berganti *password* secara
 
 Karena Home direktori saya adalah direktori yang terenkripsi (menggunakan eCryptfs), disinilah letak tantangannya. Karena tentu saja prosedur untuk mengganti *password* menjadi tidak biasa.
 
-Teman-teman dapat melihat catatan proses enkripsi Home direktori yang saya lakukan di sini, "[Mengenkripsi Home Direktori pada GNU/Linux](/blog/mengenkripsi-home-direktori-pada-gnu-linux)".
+Teman-teman dapat melihat catatan proses enkripsi Home direktori yang saya lakukan di sini, "[Mengenkripsi Home Direktori pada GNU/Linux]({% link _blogs/2019-06-14-mengenkripsi-home-direktori-pada-gnu-linux.md %})".
 
 
 ## Pemecahan Masalah

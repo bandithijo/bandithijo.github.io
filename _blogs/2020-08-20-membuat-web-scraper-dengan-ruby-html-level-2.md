@@ -18,7 +18,7 @@ description: "Catatan ini adalah modifikasi untuk tulisan sebelumnya, dimana scr
 
 ## Sekenario Masalah
 
-Blog post ini adalah modifikasi dari post sebelumnya yang berjudul, ["Membuat Web Scraper dengan Ruby (Output: HTML)"](/blog/membuat-web-scraper-dengan-ruby-output-html).
+Blog post ini adalah modifikasi dari post sebelumnya yang berjudul, ["Membuat Web Scraper dengan Ruby (Output: HTML)"]({% link _blogs/2020-06-12-membuat-web-scraper-dengan-ruby-output-html.md %}).
 
 Permasalahan dengan script sebelumnya adalah tidak dapat mendapatkan hasil.
 

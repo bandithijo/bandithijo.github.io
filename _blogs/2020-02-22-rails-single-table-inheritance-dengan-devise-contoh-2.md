@@ -28,7 +28,7 @@ Pada saat mengimplementasikan Single Table Inheritance (STI), saya menemukan leb
 
 Catatan kali ini adalah contoh kedua.
 
-Teman-teman dapat melihat contoh pertama [di sini](/blog/rails-single-table-inheritance-contoh-1).
+Teman-teman dapat melihat contoh pertama [di sini]({% link _blogs/2020-02-21-rails-single-table-inheritance-contoh-1.md %}).
 
 Kira-kira seperti ini ERD-nya.
 
@@ -345,7 +345,7 @@ Terima kasih.
 
 ## Tambahan
 
-1. [**Membuat Relasi dengan Hanya Salah Satu Type pada Single Table Inheritance Model di Rails**](/blog/relasi-dengan-salah-satu-type-pada-sti-pada-rails)
+1. [**Membuat Relasi dengan Hanya Salah Satu Type pada Single Table Inheritance Model di Rails**]({% link _blogs/2021-02-17-relasi-dengan-salah-satu-type-pada-sti-pada-rails.md %})
 
 
 ## Referensi

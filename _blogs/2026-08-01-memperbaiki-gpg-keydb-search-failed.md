@@ -11,6 +11,8 @@ description: "Memperbaiki error gpg: keydb_search_failed: Operation time out."
 
 ## Latar Belakang Masalah
 
+Saya juga sudah pernah menulis terkait GPG di [**Memperbaiki GPG: Warning: Unsafe Permissions on Homedir**]({% link _blogs/2018-06-22-memperbaiki-gpg-permissions-on-homedir.md %}).
+
 Saat akan membuka file yang dienkripsi dengan GnuPG (`.gpg`), saya mendapati error sebagai berikut.
 
 ```

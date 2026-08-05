@@ -24,7 +24,7 @@ Gambar 1. Rails view helper collection_check_boxes
 
 Seperti ilustrasi di atas, dapat teman-teman lihat, bahwa collection checkbox pada search filter panel tersebut memiliki rentang tertentu pada setiap listnya.
 
-Hampir sama dengan tulisan saya sebelumnya, mengenai ["Membuat Input Select yang Berbasis Rentang pada Rails"](/blog/rails-input-select-based-on-range), yang mana pada tulisan tersebut, saya menggunakan view helper berupa `select`, kali ini saya akan menggunakan view helper berupa `collection_check_boxes`.
+Hampir sama dengan tulisan saya sebelumnya, mengenai ["Membuat Input Select yang Berbasis Rentang pada Rails"]({% link _blogs/2020-01-27-rails-input-select-based-on-range.md %}), yang mana pada tulisan tersebut, saya menggunakan view helper berupa `select`, kali ini saya akan menggunakan view helper berupa `collection_check_boxes`.
 
 Secara default, `collection_check_boxes` ini dapat menampung multiple value yang akan disimpan dalam bentuk array. Namun, untuk menyederhanakan proses pencarian, saya membuat `collection_check_boxes` hanya dapat dipilih satu saja dengan bantuan jQuery.
 

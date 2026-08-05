@@ -11,7 +11,7 @@ description: "Siapa yang tidak kagum dengan remote control? Menggerakkan benda j
 
 ## Prakata
 
-Setelah pada postingan sebelumnya, saya menuliskan tentang "[Bagaimana Mengrontrol Android Device dari Komputer](/blog/scrcpy-menampilkan-dan-mengontrol-android-dari-komputer)". Sekarang saya akan mereview aplikasi yang mempunyai fungsi kebalikan dari **scrcpy**, yaitu mengontrol komputer dari Android.
+Setelah pada postingan sebelumnya, saya menuliskan tentang "[Bagaimana Mengrontrol Android Device dari Komputer]({% link _blogs/2018-12-30-scrcpy-menampilkan-dan-mengontrol-android-dari-komputer.md %})". Sekarang saya akan mereview aplikasi yang mempunyai fungsi kebalikan dari **scrcpy**, yaitu mengontrol komputer dari Android.
 
 **Unified Remote**, adalah aplikasi yang saya gunakan untuk membuat Android *smartphone* saya menjadi *remote control*. Seperti tagline dari Unified Remote, "*Turn your smartphone into a universal remote control*".
 

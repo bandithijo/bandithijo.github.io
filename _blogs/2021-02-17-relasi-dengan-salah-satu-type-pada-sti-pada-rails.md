@@ -18,7 +18,7 @@ description: "Menyambung catatan tentang Single Table Inheritance, namun kali in
 
 Catatan kali ini, saya akan membahas Ruby on Rails dari sisi back-end.
 
-Melanjutkan catatan mengenai Single Table Inheritance sebelumnya, yaitu tentang [**Mengenal Single Table Inheritance dengan Devise pada Rails (Contoh 2)**](/blog/rails-single-table-inheritance-dengan-devise-contoh-2).
+Melanjutkan catatan mengenai Single Table Inheritance sebelumnya, yaitu tentang [**Mengenal Single Table Inheritance dengan Devise pada Rails (Contoh 2)**]({% link _blogs/2020-02-22-rails-single-table-inheritance-dengan-devise-contoh-2.md %}).
 
 Sekarang saya akan lanjutkan dengan relasi antar type, namun catatan kali ini mencontohkan salah satu type saja.
 

@@ -17,7 +17,7 @@ Ditambah lagi [Donovan Nagel](https://www.i-bsd.com/) melalui [video-video log-n
 
 Selama ini saya hanya memanfaatkan **dmenu**, itu pun tidak benar-benar menggunakan dmenu karena saya kombinasikan dengan **Rofi** sebagai application launcher dan banyak hal lainnya.
 
-Saya tertarik menggunakan **dwm**, *Dynamic Window Manager*, sebuah window manager yang dikelola oleh Suckless. Karena kedua orang di atas menggunakan window manager ini. Namun, saya masih menyukai [**i3wm** dan belum menemukan jalan buntu](/blog/i3wm-window-manager-yang-taktis-namun-praktis).
+Saya tertarik menggunakan **dwm**, *Dynamic Window Manager*, sebuah window manager yang dikelola oleh Suckless. Karena kedua orang di atas menggunakan window manager ini. Namun, saya masih menyukai [**i3wm** dan belum menemukan jalan buntu]({% link _blogs/2019-02-26-i3wm-window-manager-yang-taktis-namun-praktis.md %}).
 
 
 ## Permasalahan
@@ -231,7 +231,7 @@ Saya sangat puas dengan hasilnya. Dikarenakan ada beberapa hal yang saya tidak d
 
 Secara *default*, pada Window Title, st hanya menampilkan detail berupa tulisan "st".
 
-Untuk dapat membuat Window Title menjadi lebih dinamis, dapat mengikuti catatan yang sudah saya tulis pada artikel ini, ["Konfigurasi Window Title untuk Simple/Suckless Terminal"](/blog/konfigurasi-window-title-st-terminal).
+Untuk dapat membuat Window Title menjadi lebih dinamis, dapat mengikuti catatan yang sudah saya tulis pada artikel ini, ["Konfigurasi Window Title untuk Simple/Suckless Terminal"]({% link _blogs/2019-04-15-konfigurasi-window-title-st-terminal.md %}).
 
 
 ### Pengetesan Font

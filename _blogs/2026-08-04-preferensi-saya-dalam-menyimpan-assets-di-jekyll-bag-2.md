@@ -12,6 +12,10 @@ description: "Pengelolaan assets yang baik pada sebuah blog merupakan kunci untu
 
 ## Background Story
 
+Ini adalah artikel yang bereferensi ke [**Membuat Rails Project tanpa Database**]({% link _blogs/2019-10-09-rails-project-tanpa-database.md %})
+
+[**Konfigurasi DNSCrypt di Arch Linux**]({% link _blogs/2018-08-22-konfigurasi-dnscrypt-proxy-arch-linux.md %})
+
 Pada artikel saya sebelumnya, [**Preferensi Saya dalam Menyimpan Assets di Jekyll**]({% link _blogs/2025-12-31-preferensi-saya-dalam-menyimpan-assets-di-jekyll.md %}), saya menambahkan attribute `assets:` pada front-matter di setiap post. Kekurangan dari pendekatan ini adalah:
 
 1. Ribet. Karena saya harus mengeset assets path secara manual di setiap post.

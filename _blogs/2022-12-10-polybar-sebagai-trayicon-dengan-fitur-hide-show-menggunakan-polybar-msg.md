@@ -16,7 +16,7 @@ description: "Tidak dipungkiri, beberapa aplikasi masih memerlukan trayicon. Bah
 
 ## Latar Belakang Masalah
 
-Saya sudah pernah menggunakan metode konvensional untuk melakukan hide/show pada Polybar sebagai trayicon di artikel ini, [**Polybar, Bar yang Mudah Dikonfig, Praktis, dan Mudah Dikustomisasi**](/blog/polybar-mudah-dikonfig-dan-praktis#showhide-bar-untuk-trayicon-konvensional)
+Saya sudah pernah menggunakan metode konvensional untuk melakukan hide/show pada Polybar sebagai trayicon di artikel ini, [**Polybar, Bar yang Mudah Dikonfig, Praktis, dan Mudah Dikustomisasi**]({% link _blogs/2019-05-05-polybar-mudah-dikonfig-dan-praktis.md %}#showhide-bar-untuk-trayicon-konvensional)
 
 Terdapat banyak sekali kelemahan dari menggunakan pendekatan tersebut.
 

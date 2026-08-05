@@ -11,7 +11,7 @@ description: "Memasang service database seperti MySQL merupakan sebuah tantangan
 
 ## Latar Belakang Masalah
 
-Kalau kemarin kita sudah membahas [**Mudah Banget! Pasang PostgreSQL dengan Podman untuk Development**](/blog/postgresql-dengan-podman-untuk-development), kali ini kita akan bahasa untuk MySQL.
+Kalau kemarin kita sudah membahas [**Mudah Banget! Pasang PostgreSQL dengan Podman untuk Development**]({% link _blogs/2021-11-21-postgresql-dengan-podman-untuk-development.md %}), kali ini kita akan bahasa untuk MySQL.
 
 Memasang service database seperti MySQL merupakan sebuah tantangan tersendiri di setiap distribusi sistem operasi GNU/Linux. Karena, setiap distribusi memiliki cara yang berbeda-beda untuk menjalankan MySQL service karena pilihan stack yang digunakan pada masing-masing distribusi biasanya berbeda. Yang merepotkan adalah apabila cara yang sebelumnya kita lakukan berhasil, namun tidak berhasil pada versi distribusi yang terbaru.
 

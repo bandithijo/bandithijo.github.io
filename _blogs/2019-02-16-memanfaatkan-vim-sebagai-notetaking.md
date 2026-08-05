@@ -52,7 +52,7 @@ Seperti itu saja. Sederhana bukan?
    $ mkdir -p ~/doc/notetaking
    ```
 
-   **doc** -- adalah Kependekan dari **Documents**. [Lihat bagaimana cara saya merubah penamaan direktori ini](/blog/merubah-nama-direktori-pada-home).
+   **doc** -- adalah Kependekan dari **Documents**. [Lihat bagaimana cara saya merubah penamaan direktori ini]({% link _blogs/2019-01-12-merubah-nama-direktori-pada-home.md %}).
 
 2. Selanjutnya, saya akan membuat file `README.md`, hanya untuk gaya-gaya saja, sebagai penanda bahwa ini adalah direktori yang saya pergunakan untuk *note-taking* dan mungkin di lain waktu akan saya tambahkan beberapa *rules* yang akan saya pergunakan dalam melakukan *note-taking* versi saya sendiri.
 

@@ -17,7 +17,7 @@ Polybar adalah *standalone* taskbar/panel yang dapat kita gunakan sebagai wadah 
 
 Biasanya pengguna Desktop Environment menyebutnya dengan istilah "Panel".
 
-Saya juga pernah menyinggung sedikit tentang Polybar pada tulisan sebelumnya, mengenai "[i3wm, Window Manager yang Taktis namun Praktis](/blog/i3wm-window-manager-yang-taktis-namun-praktis)".
+Saya juga pernah menyinggung sedikit tentang Polybar pada tulisan sebelumnya, mengenai "[i3wm, Window Manager yang Taktis namun Praktis]({% link _blogs/2019-02-26-i3wm-window-manager-yang-taktis-namun-praktis.md %})".
 
 Taskbar/panel adalah salah satu aplikasi pendukung agar kita dapat menggunakan sistem kita dengan mudah.
 
@@ -64,8 +64,8 @@ Mumpung sedang pembahasan taskbar/panel, saya sekalian memberi informasi bahwa m
 
 Dalam proses konfigurasi Polybar, saya akan membagi menjadi 2 sesi, yaitu:
 
-1. [Konfigurasi Menjalankan Polybar](/blog/polybar-mudah-dikonfig-dan-praktis#1-konfigurasi-menjalankan-polybar)
-2. [Konfigurasi Memodifikasi Polybar](/blog/polybar-mudah-dikonfig-dan-praktis#2-konfigurasi-memodifikasi-polybar)
+1. [Konfigurasi Menjalankan Polybar]({% link _blogs/2019-05-05-polybar-mudah-dikonfig-dan-praktis.md %}#1-konfigurasi-menjalankan-polybar)
+2. [Konfigurasi Memodifikasi Polybar]({% link _blogs/2019-05-05-polybar-mudah-dikonfig-dan-praktis.md %}#2-konfigurasi-memodifikasi-polybar)
 
 Tujuannya untuk memudahkan saat ada pertanyaan mengenai "konfigurasi Polybar".
 
@@ -192,8 +192,8 @@ Memanggil/menjalankan Polybar diperlukan agar Polybar dapat menampakkan diri pad
 
 Cara menjalankan Polybar saya bagi menjadi 2, yaitu :
 
-1. [Langsung](/blog/polybar-mudah-dikonfig-dan-praktis#1-langsung)
-2. [Tidak Langsung](/blog/polybar-mudah-dikonfig-dan-praktis#2-tidak-langsung)
+1. [Langsung]({% link _blogs/2019-05-05-polybar-mudah-dikonfig-dan-praktis.md %}#1-langsung)
+2. [Tidak Langsung]({% link _blogs/2019-05-05-polybar-mudah-dikonfig-dan-praktis.md %}#2-tidak-langsung)
 
 
 ##### 1. Langsung
@@ -338,10 +338,10 @@ Nah sekarang kita akan mem-*breakdown* isi dari file config.
 
 Secara garis besar, di dalam file config, baris-baris kode tersebut terkelompokkan menjadi beberapa blok.
 
-1. [**Blok [colors]**](/blog/polybar-mudah-dikonfig-dan-praktis#blok-colors)
-2. [**Blok [bar/nama_bar]**](/blog/polybar-mudah-dikonfig-dan-praktis#blok-barnama_bar)
-3. [**Blok-blok [module/nama_modul]**](/blog/polybar-mudah-dikonfig-dan-praktis#blok-modulenama_modul)
-4. [**Blok [settings]**](/blog/polybar-mudah-dikonfig-dan-praktis#blok-settings)
+1. [**Blok [colors]**]({% link _blogs/2019-05-05-polybar-mudah-dikonfig-dan-praktis.md %}#blok-colors)
+2. [**Blok [bar/nama_bar]**]({% link _blogs/2019-05-05-polybar-mudah-dikonfig-dan-praktis.md %}#blok-barnama_bar)
+3. [**Blok-blok [module/nama_modul]**]({% link _blogs/2019-05-05-polybar-mudah-dikonfig-dan-praktis.md %}#blok-modulenama_modul)
+4. [**Blok [settings]**]({% link _blogs/2019-05-05-polybar-mudah-dikonfig-dan-praktis.md %}#blok-settings)
 
 Selanjutnya, akan kita bahas satu-persatu mengenai isi yang ada di dalam blok-blok tersebut.
 
@@ -1101,7 +1101,7 @@ Untuk penjelasan lebih lengkap mengenai kode blok global/wm di atas, silahkan me
 > 
 > Cara terbaru ini memanfaatkan IPC (*Interprocess Communication*) agar kita dapat mengirimkan message process ke Polybar dengan menggunakan perintah `polybar-msg`.
 > 
-> Cara terbaru saya tulis pada artikel terpisah, [**Polybar sebagai Trayicon dengan Fitur Hide/Show Menggunakan polybar-msg**](/blog/2022-12-10-polybar-sebagai-trayicon-dengan-fitur-hide-show-menggunakan-polybar-msg)
+> Cara terbaru saya tulis pada artikel terpisah, [**Polybar sebagai Trayicon dengan Fitur Hide/Show Menggunakan polybar-msg**]({% link _blogs/2022-12-10-polybar-sebagai-trayicon-dengan-fitur-hide-show-menggunakan-polybar-msg.md %})
 
 Karena saya tidak memerlukan trayicon selalu muncul pada tampilan Polybar saya. Karena icon-icon pada trayicon tidak selalu berinteraksi dengan saya. Saya berinteraksi dengan trayicon hanya apabila saya perlukan saja.
 

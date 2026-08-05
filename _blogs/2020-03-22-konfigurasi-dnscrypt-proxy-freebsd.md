@@ -11,7 +11,7 @@ description: "Kali ini adalah catatan mengenai konfigurasi dnscrypt-proxy pada l
 
 ## Pendahuluan
 
-Kalau sebelumnya, saya sudah pernah menuliskan mengenai ["Konfigurasi DNSCrypt di Arch Linux"](/blog/konfigurasi-dnscrypt-proxy), maka kali ini masih mengenai konfigurasi DNSCrypt juga namun pada sistem operasi FreeBSD. Woho!
+Kalau sebelumnya, saya sudah pernah menuliskan mengenai ["Konfigurasi DNSCrypt di Arch Linux"]({% link _blogs/2018-08-22-konfigurasi-dnscrypt-proxy-arch-linux.md %}), maka kali ini masih mengenai konfigurasi DNSCrypt juga namun pada sistem operasi FreeBSD. Woho!
 
 Kira-kira awal Maret 2020, saya sudah resmi bermigrasi menggunakan FreeBSD. Sebenarnya beberapa hari setelahnya saya sudah mengkonfigurasi DNSCrypt-proxy agar dapat berjalan di FreeBSD. Namun, gagal. Ahaha.
 

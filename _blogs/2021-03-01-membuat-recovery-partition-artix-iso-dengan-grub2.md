@@ -11,7 +11,7 @@ description: "Sebelumnya, saya sudah pernah mencatat tentang bagaimana booting k
 
 ## Latar Belakang Masalah
 
-Sebelumnya, saya sudah membuat catatan dengan judul serupa, [**Booting ke Linux ISO menggunakan GRUB2 (Tanpa Bootable FlashDrive) a.k.a RecoveryHD**](/blog/booting-ke-iso-linux-menggunakan-grub).
+Sebelumnya, saya sudah membuat catatan dengan judul serupa, [**Booting ke Linux ISO menggunakan GRUB2 (Tanpa Bootable FlashDrive) a.k.a RecoveryHD**]({% link _blogs/2020-08-30-booting-ke-iso-linux-menggunakan-grub.md %}).
 
 Namun, ternyata setelah saya gunakan untuk melakukan **arch-chroot**, partisi tidak dapat di-mounting ke **/mnt**.
 

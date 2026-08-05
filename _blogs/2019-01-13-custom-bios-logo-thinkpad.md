@@ -46,12 +46,12 @@ Ini adalah langkah yang penting, agar kita dapat fleksibel untuk mengupdate dan 
 
 ### Racik Bahan-bahan
 
-Proses merubah BIOS logo ini sebenarnya hampir sama dengan proses update firmware BIOS yang sudah pernah saya tuliskan - [Update BIOS Lenovo di GNU/Linux Tanpa Menggunakan Windows](/blog/update-lenovo-bios-dari-linux). Hanya ada sedikit modifikasi pada *bootable flash drive* yang sudah kita buat. Kita hanya perlu memasukkan file gambar ke dalam direktori FLASH/. Just it!
+Proses merubah BIOS logo ini sebenarnya hampir sama dengan proses update firmware BIOS yang sudah pernah saya tuliskan - [Update BIOS Lenovo di GNU/Linux Tanpa Menggunakan Windows]({% link _blogs/2018-05-16-update-lenovo-bios-dari-linux.md %}). Hanya ada sedikit modifikasi pada *bootable flash drive* yang sudah kita buat. Kita hanya perlu memasukkan file gambar ke dalam direktori FLASH/. Just it!
 
 
 #### Membuat Bootable Flash Drive
 
-Untuk proses pembuatan *bootable flash drive* yang sudah berisi *firmware update* bisa disimak pada post [di sini](/blog/update-lenovo-bios-dari-linux).
+Untuk proses pembuatan *bootable flash drive* yang sudah berisi *firmware update* bisa disimak pada post [di sini]({% link _blogs/2018-05-16-update-lenovo-bios-dari-linux.md %}).
 
 Ikuti langkah-langkah yang diberikan sampai pada "**Step 4: Bakar Image ke dalam Flash Drive**" selesai. Kemudian kembali lagi ke sini, yaa.
 
@@ -64,7 +64,7 @@ Saya akan langsung lompat pada tahap memodifikasi *bootable flash drive*.
 
 #### Mempersiapkan File Gambar
 
-Ada beberapa persyaratan yang saya dapat dari sumber referensi **iBSD** pada videonya yang menunjukkan isi dari file README.TXT.<sup>[2](/blog/custom-bios-logo-thinkpad#referensi)</sup>
+Ada beberapa persyaratan yang saya dapat dari sumber referensi **iBSD** pada videonya yang menunjukkan isi dari file README.TXT.<sup>[2]({% link _blogs/2019-01-13-custom-bios-logo-thinkpad.md %}#referensi)</sup>
 
 ```
 (TO ALL USER)
@@ -247,7 +247,7 @@ Gambar 6. Percobaan kedua, logo terlihat lebih di tengah.
 
 Meskipun proses mengkustomisasi BIOS logo ini terdengar sangat "berbahaya" namun aslinya tidak seseram kedengarannya. Dapat dilihat di atas prosesnya sangat mudah.
 
-Bagian paling ***crucial*** adalah pada saat pembuatan *bootable flash drive* yang ada pada tulisan saya berjudul "[Update BIOS Lenovo di GNU/Linux Tanpa Menggunakan Windows](/blog/update-lenovo-bios-dari-linux)". Apabila pada proses tersebut tidak tepat, saya juga kurang begitu paham akan seperti apa laptop kita. Mungkin saja *bricked*.
+Bagian paling ***crucial*** adalah pada saat pembuatan *bootable flash drive* yang ada pada tulisan saya berjudul "[Update BIOS Lenovo di GNU/Linux Tanpa Menggunakan Windows]({% link _blogs/2018-05-16-update-lenovo-bios-dari-linux.md %})". Apabila pada proses tersebut tidak tepat, saya juga kurang begitu paham akan seperti apa laptop kita. Mungkin saja *bricked*.
 
 Meskipun demikian, apabila berhasil, ada kepuasan tersendiri karena laptop akan terasa lebih *personal* dengan *custom BIOS logo* yang kita buat sendiri.
 

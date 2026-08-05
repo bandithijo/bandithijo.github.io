@@ -16,7 +16,7 @@ description: "Catatan kali ini mengenai cara membuat fitur pencari dengan memanf
 
 ## Prakata
 
-Pada artikel sebelumnya, ["Membuat Tab Filter by Category dengan Ransack pada Rails"](/blog/tab-filter-by-category-dengan-ransack-rails), saya sudah pernah membahas mengenai Ransack gem. Namun, bukan dimanfaatkan untuk pencarian, melainkan untuk mengakali dalam membuat fungsi tab yang akan menghasilkan index list yang sudah difilter berdasarkan hasil dari field tertentu. Wkwkwk.
+Pada artikel sebelumnya, ["Membuat Tab Filter by Category dengan Ransack pada Rails"]({% link _blogs/2019-12-07-tab-filter-by-category-dengan-ransack-rails.md %}), saya sudah pernah membahas mengenai Ransack gem. Namun, bukan dimanfaatkan untuk pencarian, melainkan untuk mengakali dalam membuat fungsi tab yang akan menghasilkan index list yang sudah difilter berdasarkan hasil dari field tertentu. Wkwkwk.
 
 Nah, kali ini saya akan menuliskan catatan yang memanfaatkan Ransack gem dengan benar (mungkin). (^_^)
 

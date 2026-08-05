@@ -15,7 +15,7 @@ Simple/Suckless Terminal (st) adalah Terminal Emulator yang saat ini menjadi ana
 
 Meskipun, masih terdapat beberapa fungsi-fungsi yang belum bisa saya dapatkan pada st namun fungsi-fungsi mendasar dan ketepatan dalam menampilkan warna dan simbol, sudah lebih dari cukup untuk menyelesaikan pekerjaan rumah tangga.
 
-Kisah migrasi, meng-*compile* dan mem-*patching*-nya dapat teman-teman baca pada posting ini, ["St, Simple Terminal yang Sudah Lama Saya Dambakan"](/blog/st-simple-terminal-dari-suckless).
+Kisah migrasi, meng-*compile* dan mem-*patching*-nya dapat teman-teman baca pada posting ini, ["St, Simple Terminal yang Sudah Lama Saya Dambakan"]({% link _blogs/2019-02-08-st-simple-terminal-dari-suckless.md %}).
 
 
 ## Permasalahan

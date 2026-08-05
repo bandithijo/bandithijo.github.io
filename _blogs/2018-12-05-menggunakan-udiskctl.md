@@ -176,7 +176,7 @@ Agar lebih yakin sebaiknya kita mematikan _external drive_ tersebut, kemudian ba
 
 Untuk penjelasan lebih lengkap dan literatur tambahan silahkan membaca dari referensi yang saya sertakan di bawah. Karena sebaik-baiknya dokumentasi adalah dokumentasi yang ditulis sendiri oleh developer yang membuat aplikasi.
 
-**udisksctl** juga dapat digunakan untuk melakukan mounting untuk file ISO image. Saya sudah pernah mencatatnya di sini, [**Mudah Mount & Unmount File ISO Image dengan Ruby Script (feat. udisksctl)**](/blog/mudah-mount-iso-dengan-ruby-script#alternatif-recommended).
+**udisksctl** juga dapat digunakan untuk melakukan mounting untuk file ISO image. Saya sudah pernah mencatatnya di sini, [**Mudah Mount & Unmount File ISO Image dengan Ruby Script (feat. udisksctl)**]({% link _blogs/2020-10-22-mudah-mount-iso-dengan-ruby-script.md %}#alternatif-recommended).
 
 
 ## Referensi

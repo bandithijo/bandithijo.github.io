@@ -11,7 +11,7 @@ description: "Mount file ISO mungkin merupakan hal yang sangat mudah kalau kita 
 
 ## Latar Belakang
 
-Sejak 2018 hingga saat ini (2020), saya sudah jarang sekali memanfaatkan file manager GUI, seperti Thunar, PCMANFM, ataupun Nautlius untuk mengurusi pekerjaan manajemen file. Hal-hal seperti explorasi file dokumen, file gambar, video, audio, semuanya dapat saya lakukan di **ranger** --[baca tentang ranger](/blog/ranger-file-manager).
+Sejak 2018 hingga saat ini (2020), saya sudah jarang sekali memanfaatkan file manager GUI, seperti Thunar, PCMANFM, ataupun Nautlius untuk mengurusi pekerjaan manajemen file. Hal-hal seperti explorasi file dokumen, file gambar, video, audio, semuanya dapat saya lakukan di **ranger** --[baca tentang ranger]({% link _blogs/2018-12-17-ranger-file-manager.md %}).
 
 
 ## Masalah

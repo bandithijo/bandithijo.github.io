@@ -30,9 +30,9 @@ Oke, kita langsung ke konfigurasi yaa.
 
 Pada tahap ini, saya akan membagi menjadi 3 tahapan.
 
-1. [Konfigurasi *Custom Domain* di GitHub](/blog/konfigurasi-custom-domain-github-pages-dengan-amazon-route53#1-konfigurasi-custom-domain-di-github)
-2. [Konfigurasi *Hosted Zone* di Route 53](/blog/konfigurasi-custom-domain-github-pages-dengan-amazon-route53#2-konfigurasi-hosted-zone-di-route-53)
-3. [Konfigurasi *Nameservers* di Dewaweb (Platform penyedia layanan Domain yang saya gunakan)](/blog/konfigurasi-custom-domain-github-pages-dengan-amazon-route53#3-konfigurasi-nameservers-di-penyedia-layanan-domain)
+1. [Konfigurasi *Custom Domain* di GitHub]({% link _blogs/2019-06-01-konfigurasi-custom-domain-github-pages-dengan-amazon-route53.md %}#1-konfigurasi-custom-domain-di-github)
+2. [Konfigurasi *Hosted Zone* di Route 53]({% link _blogs/2019-06-01-konfigurasi-custom-domain-github-pages-dengan-amazon-route53.md %}#2-konfigurasi-hosted-zone-di-route-53)
+3. [Konfigurasi *Nameservers* di Dewaweb (Platform penyedia layanan Domain yang saya gunakan)]({% link _blogs/2019-06-01-konfigurasi-custom-domain-github-pages-dengan-amazon-route53.md %}#3-konfigurasi-nameservers-di-penyedia-layanan-domain)
 
 
 ### 1. Konfigurasi Custom Domain di GitHub

@@ -1364,7 +1364,7 @@ exec --no-startup-id xfce4-power-manager
 
 Saya menggunakan aplikasi ini karena mudah digunakan, secara dulunya saya adalah XFCE user.
 
-Beberapa pemanfaatan aplikasi xfce-power-manager yang pernah saya tuliskan ada [di sini](/blog/mengaktifkan-presentasion-mode-xfce4-dari-terminal).
+Beberapa pemanfaatan aplikasi xfce-power-manager yang pernah saya tuliskan ada [di sini]({% link _blogs/2018-06-11-mengaktifkan-presentasion-mode-xfce4-dari-terminal.md %}).
 
 
 ##### Clipboard
@@ -1380,7 +1380,7 @@ Saya menggunakan Clipmenu.
 exec --no-startup-id clipmenud
 ```
 
-Konfigurasi ini sudah pernah saya bahas pada postingan, [di sini](/blog/manajemen-clipboard-dengan-clipmenu).
+Konfigurasi ini sudah pernah saya bahas pada postingan, [di sini]({% link _blogs/2018-12-16-manajemen-clipboard-dengan-clipmenu.md %}).
 
 
 ##### Disable Touchpad
@@ -1739,7 +1739,7 @@ Terima kasih.
 
 > INFO
 > 
-> Per-April 2020, [saya sudah beralih menggunakan DWM (*Dynamic Window Manager*)](/blog/dwm-window-manager-anti-ribet)
+> Per-April 2020, [saya sudah beralih menggunakan DWM (*Dynamic Window Manager*)]({% link _blogs/2020-04-24-dwm-window-manager-anti-ribet.md %})
 
 
 ## Referensi

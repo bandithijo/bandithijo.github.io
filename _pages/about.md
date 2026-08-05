@@ -126,7 +126,7 @@ Berikut ini adalah spesifikasi mesin maupun aplikasi yang pernah atau hingga saa
 
 Seperti yang teman-teman lihat di atas, saya banyak menggunakan *free and open source software*. Kalau teman-teman sudah memiliki penghasilan sendiri, jangan lupa untuk berdonasi terhadap project-project *free and open source software* yang teman-teman pergunakan.
 
-Catatan tentang bagaimana cara untuk berdonasi, dapat teman-teman baca di sini, [**Hanya dengan 100 Ribu Rupiah, Bisa Berdonasi ke 6 Open Source Project!**](/blog/berdonasi-ke-project-open-source-yang-digunakan).
+Catatan tentang bagaimana cara untuk berdonasi, dapat teman-teman baca di sini, [**Hanya dengan 100 Ribu Rupiah, Bisa Berdonasi ke 6 Open Source Project!**]({% link _blogs/2022-04-02-berdonasi-ke-project-open-source-yang-digunakan.md %}).
 
 ## Bagimana workflow dalam menggunakan Linux?
 

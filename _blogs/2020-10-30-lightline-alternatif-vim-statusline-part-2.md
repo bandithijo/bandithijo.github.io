@@ -14,7 +14,7 @@ description: "Pembaharuan konfig dari catatan sebelumnya. Kali ini dengan peruba
 ## Latar Belakang
 
 Post ini saya tulis sebagai update catatan bagian pertama yang berjudul: <br>
-[**Lightline, Alternatif Vim Statusline**](/blog/lightline-alternatif-vim-statusline).
+[**Lightline, Alternatif Vim Statusline**]({% link _blogs/2019-01-26-lightline-alternatif-vim-statusline.md %}).
 
 Saya memutuskan untuk membuat bagian kedua, karena sudah cukup banyak perubahan yang saya tambahkan dari bagian pertama. Terutama pada bagian pengecualian statusline pada Defx buffer.
 

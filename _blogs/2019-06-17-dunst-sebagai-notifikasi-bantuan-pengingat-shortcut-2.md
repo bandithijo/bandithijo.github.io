@@ -11,7 +11,7 @@ description: "Dunst adalah replacement untuk standalone notification daemon yang
 
 ## Prakata
 
-Latar belakang dari ditulisnya post ini adalah, untuk menyempurnakan [post sebelumnya](/blog/dunst-sebagai-notifikasi-bantuan-pengingat-shortcut) dengan judul yang sama.
+Latar belakang dari ditulisnya post ini adalah, untuk menyempurnakan [post sebelumnya]({% link _blogs/2019-02-20-dunst-sebagai-notifikasi-bantuan-pengingat-shortcut.md %}) dengan judul yang sama.
 
 Berkat pertanyaan dari Nabil, saya memikirkan kembali script untuk Keyboard Shortcut Helper ini.
 

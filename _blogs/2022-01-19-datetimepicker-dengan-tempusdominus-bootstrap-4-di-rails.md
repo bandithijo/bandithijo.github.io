@@ -72,7 +72,7 @@ Pada web dokumentasi dari Tempus Dominus - Bootstrap 4, terdapat beberapa cara u
 
 Namun, terlebih dahulu Rails project yang digunakan sebaiknya perlu dipasang Bootstrap 4.
 
-Kalau belum, dapat melihat caranya di sini, [**Memasang Bootstrap 4 pada Rails 6 dengan Yarn**](/blog/memasang-bootstrap-pada-rails-menggunakan-yarn).
+Kalau belum, dapat melihat caranya di sini, [**Memasang Bootstrap 4 pada Rails 6 dengan Yarn**]({% link _blogs/2020-12-20-memasang-bootstrap-pada-rails-menggunakan-yarn.md %}).
 
 Setelah Bootstrap 4 selesai dipasang & disetting pada project dengan Rails 6, kemudian baru pasang **tempusdominus-bootstrap4** & **moment.js** library.
 

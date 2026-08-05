@@ -16,7 +16,7 @@ description: "Ide untuk mempercantik hasil screenshot dari Flameshot ini terinsp
 
 ## Sekenario Masalah
 
-Beberapa waktu yang lalu, saya menulis tentang ["Membuat Hasil ScreenShot pada GNU/Linux seperti Milik macOS"](/blog/membuat-hasil-screenshot-linux-seperti-pada-macos).
+Beberapa waktu yang lalu, saya menulis tentang ["Membuat Hasil ScreenShot pada GNU/Linux seperti Milik macOS"]({% link _blogs/2020-07-28-membuat-hasil-screenshot-linux-seperti-pada-macos.md %}).
 
 Pada artikel tersebut, script dijalankan setelah gambar hasil screenshot jadi.
 
@@ -510,5 +510,5 @@ if size == '0' or size <= '20':
 
 ## Referensi
 
-1. [Membuat Hasil ScreenShot pada GNU/Linux seperti Milik macOS](/blog/membuat-hasil-screenshot-linux-seperti-pada-macos) \
+1. [Membuat Hasil ScreenShot pada GNU/Linux seperti Milik macOS]({% link _blogs/2020-07-28-membuat-hasil-screenshot-linux-seperti-pada-macos.md %}) \
    Diakses tanggal: 2020-08-16

@@ -55,7 +55,7 @@ Kapan-kapan akan saya tuliskan mengenai "Pemanfaatan **dunstify** untuk menjadi 
 
 ---
 
-Sesuai janji, saya sudah menuliskan catatan mengenai hal ini, [di sini](/blog/dunst-sebagai-notifikasi-bantuan-pengingat-shortcut).
+Sesuai janji, saya sudah menuliskan catatan mengenai hal ini, [di sini]({% link _blogs/2019-02-20-dunst-sebagai-notifikasi-bantuan-pengingat-shortcut.md %}).
 
 
 ## Referensi

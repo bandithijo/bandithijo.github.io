@@ -98,7 +98,7 @@ Punya saya bernama `wlan0`.
 
 > INFO
 > 
-> Kalau teman-teman ingin menggunakan **Traditional Network Interface Name** seperti `wlan0`, kalian dapat mengunjungi catatan saya [**Mengembalikan Nama Interface Menjadi Traditional Interface Name (eth0, wlan0, etc.)**](/blog/mengembalikan-nama-interface-ke-raditional-interface-name).
+> Kalau teman-teman ingin menggunakan **Traditional Network Interface Name** seperti `wlan0`, kalian dapat mengunjungi catatan saya [**Mengembalikan Nama Interface Menjadi Traditional Interface Name (eth0, wlan0, etc.)**]({% link _blogs/2020-12-26-mengembalikan-nama-interface-ke-traditional-interface-name.md %}).
 > 
 > Tapi, **saya tidak merekomendasikan** yaa.
 

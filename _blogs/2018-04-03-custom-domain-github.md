@@ -361,7 +361,7 @@ Terima kasih saya ucapkan kepada kang [Sucipto](https://sucipto.net/) yang telah
 > 
 > Pertanggal 28 Januari 2019, saya sudah bermigrasi dari layanan CloudFlare ke Netlify.
 > 
-> Ceritanya, dapat teman-teman baca di sini, "[BanditHijo.com, Bermigrasi dari Cloudflare ke Netlify](/blog/bermigrasi-dari-cloudflare-ke-netlify)".
+> Ceritanya, dapat teman-teman baca di sini, "[BanditHijo.com, Bermigrasi dari Cloudflare ke Netlify]({% link _blogs/2019-01-28-bermigrasi-dari-cloudflare-ke-netlify.md %})".
 
 
 ## Referensi

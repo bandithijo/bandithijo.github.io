@@ -14,7 +14,7 @@ description: "Masalah yang ingin saya angkat pada dokumentasi ini adalah adanya 
 
 ## Pendahuluan
 
-Sejujurnya saya belum memahami benar pengaturan dan penggunaan **GnuPG** (*GNU Privacy Guard*). Mengutip dari situs [gnupg.org<sup>1</sup>](/blog/memperbaiki-gpg-permissions-on-homedir#referensi), GnuPG adalah implementasi yang lengkap dan berlisensi bebas pakai dari **OpenPGP standard** sebagaimana yang dijelaskan pada [RFC4880](https://www.ietf.org/rfc/rfc4880.txt) (dikenal juga dengan sebutan PGP). GnuPG memungkinkan kita untuk mengenkripsi dan memberikan *signature* pada data dan komunikasi kita. GnuPG juga dikenal sebagai **GPG**, yang merupakan aplikasi *command line* dengan fitur-fitur untuk memudahkan integrasi dengan aplikasi yang lain.
+Sejujurnya saya belum memahami benar pengaturan dan penggunaan **GnuPG** (*GNU Privacy Guard*). Mengutip dari situs [gnupg.org<sup>1</sup>]({% link _blogs/2018-06-22-memperbaiki-gpg-permissions-on-homedir.md %}#referensi), GnuPG adalah implementasi yang lengkap dan berlisensi bebas pakai dari **OpenPGP standard** sebagaimana yang dijelaskan pada [RFC4880](https://www.ietf.org/rfc/rfc4880.txt) (dikenal juga dengan sebutan PGP). GnuPG memungkinkan kita untuk mengenkripsi dan memberikan *signature* pada data dan komunikasi kita. GnuPG juga dikenal sebagai **GPG**, yang merupakan aplikasi *command line* dengan fitur-fitur untuk memudahkan integrasi dengan aplikasi yang lain.
 
 Sejak diperkenalkan pada tahun 1997, GnuPG adalah aplikasi bebas merdeka yang artinya dapat digunakan secara bebas, dimodifikasi, dan didistribusikan di bawah syarat-syarat GNU *General Public License*.
 
@@ -34,7 +34,7 @@ gpg: WARNING: unsafe permissions on homedir
 
 Dari *warning* yang diberikan, sudah sangat jelas bahwa yang menjadi perhatian adalah direktori `~/.gnupg/` yang berada di direktori home saya. Maka kita akan memperbaiki *permissions* dari direktori tersebut.
 
-Berdasarkan jawaban yang dituliskan oleh Alex Stragies pada [superuser.com<sup>2</sup>](/blog/memperbaiki-gpg-permissions-on-homedir#referensi) yang juga merujuk pada [wikipedia.com - file system permission<sup>3</sup>](/blog/memperbaiki-gpg-permissions-on-homedir#referensi) diperkuat oleh jawaban dari Neil Williams pada [lists.gnupg.com<sup>4</sup>](/blog/memperbaiki-gpg-permissions-on-homedir#referensi), untuk memperbaiki permasalahan *unsafe permissions* sebagai berikut.
+Berdasarkan jawaban yang dituliskan oleh Alex Stragies pada [superuser.com<sup>2</sup>]({% link _blogs/2018-06-22-memperbaiki-gpg-permissions-on-homedir.md %}#referensi) yang juga merujuk pada [wikipedia.com - file system permission<sup>3</sup>]({% link _blogs/2018-06-22-memperbaiki-gpg-permissions-on-homedir.md %}#referensi) diperkuat oleh jawaban dari Neil Williams pada [lists.gnupg.com<sup>4</sup>]({% link _blogs/2018-06-22-memperbaiki-gpg-permissions-on-homedir.md %}#referensi), untuk memperbaiki permasalahan *unsafe permissions* sebagai berikut.
 
 1. Pastikan bahwa *permissions* dari direktori dan file-file yang terdapat pada `~/.gnupg/` adalah milik kita sendiri.
 

@@ -11,7 +11,7 @@ description: "iwd adalah perkakas wireless daemon yang dikembangkan oleh Intel. 
 
 ## Latar Belakang
 
-Setelah pada catatan sebelumnya, saya menulis tentang [**Mudah Mengkonfigurasi Wi-Fi dengan wpa_supplicant**](/blog/mudah-mengkonfigurasi-wifi-dengan-wpa_supplicant).
+Setelah pada catatan sebelumnya, saya menulis tentang [**Mudah Mengkonfigurasi Wi-Fi dengan wpa_supplicant**]({% link _blogs/2020-12-31-mudah-mengkonfigurasi-wifi-dengan-wpa_supplicant.md %}).
 
 Catatan kali ini, saya akan menulis calon penerus dari **wpa_supplicant**, yaitu **iwd**.
 

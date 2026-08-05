@@ -13,7 +13,7 @@ description: "Sedikit catatan-catatan kecil dalam memanajemen service dengan Ope
 
 Akhir Desember 2020, saya memigrasikan Arch Linux yang sudah saya pakai sejak April 2020 -- karena Maret 2020, saya bermigrasi ke FreeBSD -- ke Artix Linux OpenRC.
 
-Teman-teman dapat membaca catatan migrasi saya di sini, [**Memigrasikan Arch Linux ke Artix Linux (OpenRC)**](/blog/memigrasikan-arch-ke-artix-openrc).
+Teman-teman dapat membaca catatan migrasi saya di sini, [**Memigrasikan Arch Linux ke Artix Linux (OpenRC)**]({% link _blogs/2021-01-02-memigrasikan-arch-ke-artix-openrc.md %}).
 
 Menggunakan init system, selain **systemd** merupakan hal yang baru bagi saya. Karena sejak Desember 2014 -- awal migrasi saya menggunakan GNU/Linux dengan distribusi sistem operasi **Fedora Linux**, sudah menggunakan **systemd**.
 

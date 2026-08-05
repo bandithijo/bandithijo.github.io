@@ -11,7 +11,7 @@ description: "Catatan kali ini mengenai cara menambahkan atau mengganti database
 
 ## Latar Belakang Masalah
 
-Setelah pada blog post sebelumnya saya menulis tentang "[Membuat Rails Project tanpa Database](/blog/rails-project-tanpa-database)".
+Setelah pada blog post sebelumnya saya menulis tentang "[Membuat Rails Project tanpa Database]({% link _blogs/2019-10-09-rails-project-tanpa-database.md %})".
 
 Pada tulisan kali ini, saya akan membahas mengenai bagaimana cara menambahkan database engine pada Rails project yang sudah ada.
 

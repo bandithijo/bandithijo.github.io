@@ -130,7 +130,7 @@ Tepat tengah malam, _layout_ yang saya _develop_ sudah berhasil dan sesuai denga
 > 
 > Serunya lagi, kita dapat membuat sendiri Liquid tags sesuai dengan kebutuhan kita.
 > 
-> Simak catatannya di sini, [**Membuat Tampilan Command Prompt untuk Blog dengan Jekyll Liquid Tags**](/blog/membuat-tampilan-command-prompt-dengan-jekyll-liquid-tags)
+> Simak catatannya di sini, [**Membuat Jekyll Custom Tags dengan Liquid Tags**]({% link _blogs/2021-01-22-membuat-jekyll-custom-tags-dengan-liquid-tags.md %})
 
 
 ## Template yang Saya Gunakan

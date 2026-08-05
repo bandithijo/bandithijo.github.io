@@ -1319,7 +1319,7 @@ PostgreSQL is an advanced Object-Relational database management system (DBMS). T
 > 
 > Saya lebih memilih menggunakan container untuk memasang PostgreSQL.
 > 
-> Bisa baca catatannya di sini, [Mudah Banget! PostgreSQL dengan Podman untuk Development](/blog/postgresql-dengan-podman-untuk-development)
+> Bisa baca catatannya di sini, [Mudah Banget! PostgreSQL dengan Podman untuk Development]({% link _blogs/2021-11-21-postgresql-dengan-podman-untuk-development.md %})
 
 ```
 $ sudo dnf in postgresql-server

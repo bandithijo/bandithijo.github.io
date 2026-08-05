@@ -15,7 +15,7 @@ description: "Sudah mulai merasakan kalau vim-airline terasa berat atau terasa b
 > 
 > Post ini sudah tidak up to date !
 
-Post terbaru ada di sini: [**Lightline, Alternatif Vim Statusline Bagian 2 (feat. Defx)**](/blog/lightline-alternatif-vim-statusline-part-2).
+Post terbaru ada di sini: [**Lightline, Alternatif Vim Statusline Bagian 2 (feat. Defx)**]({% link _blogs/2020-10-30-lightline-alternatif-vim-statusline-part-2.md %}).
 
 
 ## Latar Belakang Masalah
@@ -404,7 +404,7 @@ set showtabline=2  " Show tabline
 set guioptions-=e  " Don't use GUI tabline
 ```
 
-Pada bagian `'right': [['string1'], ['string2']]` juga sudah saya lakukan modifikasi dari yang sebelumnya `'right': [['close']]` pada bagian [Tabline](/blog/lightline-alternatif-vim-statusline#tabline).
+Pada bagian `'right': [['string1'], ['string2']]` juga sudah saya lakukan modifikasi dari yang sebelumnya `'right': [['close']]` pada bagian [Tabline]({% link _blogs/2019-01-26-lightline-alternatif-vim-statusline.md %}#tabline).
 
 Saya juga melakukan modifikasi terhadap `modified` indikator yang tadinya `+` saya ubah agar lebih terlihat jelas menjadi `●`.
 

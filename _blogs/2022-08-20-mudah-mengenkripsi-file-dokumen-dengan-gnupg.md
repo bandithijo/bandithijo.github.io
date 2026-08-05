@@ -220,9 +220,9 @@ Terima kasih sudah mampir yaa.
 
 Saya juga pernah menulis terkait GnuPG di catatan sebelumnya.
 
-1. [Memperbaiki GPG: Warning: Unsafe Permissions on Homedir](/blog/memperbaiki-gpg-permissions-on-homedir)
-1. [Generate Private dan Public GPG Key Sendiri](/blog/generate-gpg-key)
-1. [Menambahkan Email Kedua ke dalam GPG Key](/blog/menambahkan-email-lain-kedalam-gpgkey)
+1. [Memperbaiki GPG: Warning: Unsafe Permissions on Homedir]({% link _blogs/2018-06-22-memperbaiki-gpg-permissions-on-homedir.md %})
+1. [Generate Private dan Public GPG Key Sendiri]({% link _blogs/2018-12-09-generate-gpg-key.md %})
+1. [Menambahkan Email Kedua ke dalam GPG Key]({% link _blogs/2020-12-11-menambahkan-email-lain-kedalam-gpgkey.md %})
 
 
 ## Referensi

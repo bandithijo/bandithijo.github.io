@@ -185,7 +185,7 @@ Terima kasih.
 > 
 > Saya sudah migrasi menggunakan model partition.
 > 
-> [**Membuat Recovery Partition Artix Linux ISO dengan GRUB2**](/blog/membuat-recovery-partition-artix-iso-dengan-grub2)
+> [**Membuat Recovery Partition Artix Linux ISO dengan GRUB2**]({% link _blogs/2021-03-01-membuat-recovery-partition-artix-iso-dengan-grub2.md %})
 
 
 ## Referensi

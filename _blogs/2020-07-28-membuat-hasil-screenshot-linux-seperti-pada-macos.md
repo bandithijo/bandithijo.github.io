@@ -17,9 +17,9 @@ Kebetulan sejak 2009 sampai 2014 akhir, saya menggunakan macOS (dulu namanya OSX
 
 Saya juga beberapa menulis konten blog menggunakan macOS dan cukup sering mengambil gambar screenshot. Seperti yang ada di blog post yang ini:
 
-1. [Aplikasi Download Alternatif untuk OSX dengan JDownloader](/blog/download-client-osx-with-jdownloader)
-2. [Memperbaiki Trash OSX](/blog/memperbaiki-trash-osx)
-3. [Memory Cleaner untuk OSX](/blog/memory-cleaner-osx)
+1. [Aplikasi Download Alternatif untuk OSX dengan JDownloader]({% link _blogs/2013-07-03-download-client-osx-with-jdownloader.md %})
+2. [Memperbaiki Trash OSX]({% link _blogs/2013-07-16-memperbaiki-trash-osx.md %})
+3. [Memory Cleaner untuk OSX]({% link _blogs/2014-06-28-memory-cleaner-osx.md %})
 
 Kira-kira seperti ini hasil screenshot window aplikasi pada macOS.
 

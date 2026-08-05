@@ -15,7 +15,7 @@ description: "Dunst adalah replacement untuk standalone notification daemon yang
 > 
 > Silahkan mengunjungi alamat di bawah.
 > 
-> [Memanfaatkan Dunst Sebagai PopUp Notifikasi Bantuan Keyboard Shortcut (ver. 2)](/blog/dunst-sebagai-notifikasi-bantuan-pengingat-shortcut-2)
+> [Memanfaatkan Dunst Sebagai PopUp Notifikasi Bantuan Keyboard Shortcut (ver. 2)]({% link _blogs/2019-06-17-dunst-sebagai-notifikasi-bantuan-pengingat-shortcut-2.md %})
 
 
 ## Prakata

@@ -95,7 +95,7 @@ Mantap!
 
 ## Pesan Penulis
 
-Ngomong-ngomong, kalau masih kesulitan mengintegrasikan Bootstrap 4 dengan Rails 6, dapat membaca catatan saya di sini, [**Memasang Bootstrap 4 pada Rails 6 dengan Yarn**](/blog/memasang-bootstrap-pada-rails-menggunakan-yarn).
+Ngomong-ngomong, kalau masih kesulitan mengintegrasikan Bootstrap 4 dengan Rails 6, dapat membaca catatan saya di sini, [**Memasang Bootstrap 4 pada Rails 6 dengan Yarn**]({% link _blogs/2020-12-20-memasang-bootstrap-pada-rails-menggunakan-yarn.md %}).
 
 Sepertinya, segini dulu yang dapat saya tuliskan.
 
