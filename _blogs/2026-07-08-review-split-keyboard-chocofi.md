@@ -262,6 +262,11 @@ Beberapa hal yang saya tidak begitu nyaman dengan Chocofi split keyboard.
 Split keyboard bukanlah level tertinggi dari penggunaan keyboard. Split keyboard hanya opsi atau pilihan dari beberapa pilihan model keyboard yang beredar di pasaran saat ini. Tidak semua orang cocok menggunakan split keyboard. Pergunakan perkakas/tools (dalam hal ini keyboard) yang memang nyaman kamu gunakan.
 
 
+## Update Keymap 2026-08-06
+
+{% youtube 8fjaZJeFjAI %}
+
+
 ## Referensi
 
 1. [ZMK Firmware](https://zmk.dev/) \
