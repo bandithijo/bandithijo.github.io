@@ -24,7 +24,7 @@ description: "Here's where I started writing some notes that someday I will call
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://bandithijo.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 author: "Rizqi Nur Assyaufi"
-keywords: "bandithijo, rizqi nur assyaufi, arch linux, vim, neovim, i3wm, dwm, suckless, jekyll, thinkpad, ruby, rails, ruby on rails"
+keywords: "bandithijo, rizqi nur assyaufi, arch linux, vim, neovim, emacs, i3wm, dwm, suckless, jekyll, thinkpad, ruby, rails, ruby on rails"
 
 
 # Missing timezone in metadata date can lead to wrong date in url
