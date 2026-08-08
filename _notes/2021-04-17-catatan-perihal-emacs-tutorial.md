@@ -256,6 +256,17 @@ Maka, hasilnya akan menjadi,
 <kbd>M-k</kbd>
 
 
+### Undo
+
+Jika membuat kesalahan kita bisa menggunakan <kbd>C-/</kbd> untuk mengembalikan ke kondisi sebelumnya.
+
+Alternatif lain, dapat menggunakan <kbd>C-_</kbd> atau <kbd>C-x</kbd> <kbd>u</kbd>. Tergantung mana yang lebih nyaman.
+
+
+### Files
+
+Untuk mencari file kita dapat menggunakan <kbd>C-x</kbd> <kbd>C-f</kbd>. Kemudian mini buffer di bawah akan terbuka, dan kita bisa mencari file dengan memasukan nama file. Atau juga bisa membuka file dari direktori lain.
+
 ### Text Selection
 
 Akan melakukan selection dimulai dari posisi cursor berada.
