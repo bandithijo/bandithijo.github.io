@@ -115,6 +115,9 @@ sitemap:
     - "/index.html"
 
 
+# ToC folding default
+toc_fold_default: true
+
 # Complete posts in the future
 future: true
 
