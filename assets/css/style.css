@@ -112,6 +112,11 @@
     @apply mt-0;
   }
 
+  /* Filename label directly above a non-highlighted (rouge-undetected) code block */
+  .markdown > .code-filename-label:has(+ pre) {
+    @apply mb-0;
+  }
+
   .markdown li > a {
     @apply break-words !important;
   }
