@@ -4,6 +4,7 @@ title: 'Writing Rules'
 author: 'BanditHijo'
 permalink: '/writing-rules/'
 assets: "/assets/images/banner"
+toc: 'true'
 ---
 
 This page provides guidelines for writing blog posts on our website.
@@ -23,7 +24,6 @@ layout: "post"
 title: "Your Post Title Here"
 date: "YYYY-MM-DD HH:MM"
 permalink: "/blog/:title"
-assets: "/assets/posts/blog/YYYY/YYYY-MM-DD-your-post-title-here"
 author: "Your GitHub Username"
 category: "blog"
 tags: ["tag1", "tag2"]
@@ -218,15 +218,27 @@ Untuk mencetak "Hello, world!" di Ruby, gunakan method `puts`.
 Untuk mencetak "Hello, world!" di Ruby, gunakan method `puts`.
 
 <br>
-# Links
+# Links 
 
-Use the following format to create links.
+## External Link
+
+Use the following format to create external link.
 
 ```markdown
 Ini adalah contoh [Link Text](https://example.com).
 ```
 
 Ini adalah contoh [Link Text](https://example.com).
+
+## Internal Link
+
+Use the following format to create internal link.
+
+```markdown
+Ini adalah contoh [Writing Rules]({% raw %}{% link _pages/writing_rules.md %}{% endraw %}).
+```
+
+Ini adalah contoh [Writing Rules]({% link _pages/writing_rules.md %}).
 
 <br>
 # Images & Files
