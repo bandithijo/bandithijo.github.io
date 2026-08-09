@@ -84,7 +84,7 @@ Berikut ini adalah spesifikasi mesin maupun aplikasi yang pernah atau hingga saa
 ## Aplikasi favorit yang digunakan di Linux?
 
 |------------------------|---------------------------------------------------|
-| <center>Data</center>  | <center>Keterangan</center>                       |
+| <center>Data</center>  | <center>On Linux</center>                         |
 | :---                   | :---                                              |
 |------------------------|---------------------------------------------------|
 | Static Site Generator  | **Jekyll**                                        |
