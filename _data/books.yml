@@ -118,3 +118,11 @@ books:
     author: "Taqiyuddin an-Nabhani"
     publish_at: "1953"
     read_at: "2026/07"
+
+  - title: "Khilafah dan Kerajaan"
+    subtitle: "Konsep Pemerintahan Islam serta Studi Kritis terhadap 'Kerajaan' Bani Umayyah dan Bani Abbas"
+    genre: "politic"
+    publisher: "Penerbit Mizan"
+    author: "Abul A'la Al-Maududi"
+    publish_at: "1984"
+    read_at: "2026/07"
