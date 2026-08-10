@@ -62,9 +62,9 @@ permalink: '/book/'
         </div>
         {% if book.subtitle %}<p class="text-sm text-gray-600 dark:text-neutral-300 italic">{{ book.subtitle }}</p>{% endif %}
         <p class="text-base mt-2">{{ book.author }}</p>
-        <div class="flex justify-between items-center mt-3 text-sm text-gray-600 dark:text-neutral-300 font-mono">
-          <a href="#" class="genre-tag hover:underline" data-genre="{{ book.genre }}">#{{ book.genre }}</a>
-          <span>({{ book.publish_at }}) {{ book.read_at }}</span>
+        <div class="flex flex-col mt-3 text-sm text-gray-600 dark:text-neutral-300 font-mono space-y-3">
+          <p><span>({{ book.publish_at }}) {{ book.read_at }}</span></p>
+          <p><a href="#" class="genre-tag hover:underline" data-genre="{{ book.genre }}">#{{ book.genre }}</a></p>
         </div>
       </div>
     {% endfor %}
