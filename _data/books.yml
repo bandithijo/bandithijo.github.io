@@ -1,7 +1,7 @@
 books:
   - title: "Makanya, Mikir!"
     subtitle: "Panduan berpikir untuk hidup lebih bahagia"
-    genre: "selfimprovement"
+    genre: ["selfimprovement"]
     publisher: "SiMPUL"
     author: "Abigail Limuria, Cania Citta"
     publish_at: "2025/01"
@@ -9,7 +9,7 @@ books:
 
   - title: "Generasi Zombie"
     subtitle: ""
-    genre: "selfimprovement"
+    genre: ["selfimprovement"]
     publisher: "Kompas"
     author: "Andriy Hadinata"
     publish_at: "2025/04"
@@ -17,7 +17,7 @@ books:
 
   - title: "Kami (Bukan) Jongos Berdasi"
     subtitle: ""
-    genre: "novel"
+    genre: ["novel"]
     publisher: "Grasindo"
     author: "J.S. Khairen"
     publish_at: "2024/04"
@@ -25,7 +25,7 @@ books:
 
   - title: "Jangan Membuat Masalah Kecil jadi Masalah Besar"
     subtitle: "Cara mudah mencegah masalah kecil mengganggu hidup kita"
-    genre: "selfimprovement"
+    genre: ["selfimprovement"]
     publisher: "Gramedia"
     author: "Richard Carlson"
     publish_at: "2019/05"
@@ -33,7 +33,7 @@ books:
 
   - title: "Dompet Ayah Sepatu Ibu"
     subtitle: ""
-    genre: "novel"
+    genre: ["novel"]
     publisher: "Grasindo"
     author: "J.S. Khairen"
     publish_at: "2023/08"
@@ -41,7 +41,7 @@ books:
 
   - title: "The Psychology of Money"
     subtitle: "Pelajaran abadi mengenai kekayaan, ketamakan, dan kebahagiaan"
-    genre: "finance"
+    genre: ["finance"]
     publisher: "baca"
     author: "Morgan Housel"
     publish_at: "2021/05"
@@ -49,7 +49,7 @@ books:
 
   - title: "Rework"
     subtitle: "Ubahlah cara kerjamu selamanya!"
-    genre: "business"
+    genre: ["business"]
     publisher: "renebook"
     author: "Jason Fried, David Heinemeier Hansson"
     publish_at: "2021/04"
@@ -57,7 +57,7 @@ books:
   
   - title: "Indonesian Mental Health First Aid Booklet"
     subtitle: "Panduan pertolongan pertama kesehatan jiwa Indonesia"
-    genre: "health"
+    genre: ["health"]
     publisher: "Kompas"
     author: "Dr. Sandersan Onie"
     publish_at: "2021/08"
@@ -65,7 +65,7 @@ books:
 
   - title: "Pendidikan Kaum Tertindas"
     subtitle: "Untuk kaum tertindas dan yang menderita dengan mereka atau yang berjuang di sisi mereka"
-    genre: "philosophy"
+    genre: ["philosophy"]
     publisher: "Narasi"
     author: "Paulo Freire"
     publish_at: "2019"
@@ -73,7 +73,7 @@ books:
 
   - title: "Remote"
     subtitle: "Ketika kerja jarak jauh jadi keharusan dan ngantor jadi hambatan, peluang apa yang bisa kita dapatkan?"
-    genre: "business"
+    genre: ["business"]
     publisher: "renebook"
     author: "Jason Fried, David Heinemeier Hansson"
     publish_at: "2021"
@@ -81,7 +81,7 @@ books:
 
   - title: "Mitos Khilafah Ajaran Islam?"
     subtitle: "Menguji Argumentasi Soal Khilafah Ala HTI"
-    genre: "politic"
+    genre: ["politic"]
     publisher: "Maghza Pustaka"
     author: "Satria Dharma"
     publish_at: "2020/09"
@@ -89,7 +89,7 @@ books:
 
   - title: "Seni Merahasiakan Amal di Era Digital"
     subtitle: "Tetap bahagia tanpa perlu jadi viral"
-    genre: "religion"
+    genre: ["religion"]
     publisher: "Cipta Prima Nusantara"
     author: "Dinar Rafikhalif, Gilang R. Aprianto"
     publish_at: "2026/01"
@@ -97,7 +97,7 @@ books:
 
   - title: "Software Engineer's Notes"
     subtitle: "... Keresahan antara logika dan realita"
-    genre: "selfimprovement"
+    genre: ["selfimprovement"]
     publisher: ""
     author: "@kotaroisme"
     publish_at: "2025/02"
@@ -105,7 +105,7 @@ books:
 
   - title: "Animal Farm"
     subtitle: ""
-    genre: "politic"
+    genre: ["politic"]
     publisher: "Bentang Pustaka"
     author: "George Orwell"
     publish_at: "2015/01"
@@ -113,7 +113,7 @@ books:
 
   - title: "Pembentukan Partai Politik Islam"
     subtitle: ""
-    genre: "politic"
+    genre: ["politic"]
     publisher: "Pustaka Fikrul Islam"
     author: "Taqiyuddin an-Nabhani"
     publish_at: "1953"
@@ -121,7 +121,7 @@ books:
 
   - title: "Khilafah dan Kerajaan"
     subtitle: "Konsep Pemerintahan Islam serta Studi Kritis terhadap 'Kerajaan' Bani Umayyah dan Bani Abbas"
-    genre: "politic"
+    genre: ["politic"]
     publisher: "Penerbit Mizan"
     author: "Abul A'la Al-Maududi"
     publish_at: "1984"

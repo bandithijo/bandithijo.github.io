@@ -192,13 +192,16 @@
       </div>
     `,
     books: `
-      <div class="masonry-item absolute p-2 sm:p-4 opacity-0 bg-white dark:bg-neutral-900 rounded-lg border border-gray-900 dark:border-neutral-400 hover:border-dark dark:hover:border-neutral-400">
-        <h2 class="text-lg font-bold">{title}</h2>
-        <p class="text-sm text-gray-600 dark:text-neutral-300 italic">{subtitle}</p>
+      <div class="masonry-item absolute p-2 sm:p-4 opacity-0 bg-white dark:bg-neutral-900 rounded-lg border border-gray-900 dark:border-neutral-400 hover:border-dark dark:hover:border-neutral-400 group">
+        <div class="flex flex-row mb-2">
+          <span class="px-1 py-0 mr-3 rounded-full bg-neutral-300 dark:bg-neutral-700 group-hover:bg-neutral-700 group-hover:dark:bg-neutral-300"></span>
+          <h2 class="text-lg font-bold">{title}</h2>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-neutral-300 italic empty:hidden">{subtitle}</p>
         <p class="text-base mt-2">{author}</p>
-        <div class="flex justify-between items-center mt-3 text-sm text-gray-600 dark:text-neutral-300 font-mono">
-          <a href="#" class="genre-tag hover:underline" data-genre="{genre}">#{genre}</a>
-          <span>({publish_at}) {read_at}</span>
+        <div class="flex flex-col mt-3 text-sm text-gray-600 dark:text-neutral-300 font-mono space-y-3">
+          <p><span>({publish_at}) {read_at}</span></p>
+          <p>{genre}</p>
         </div>
       </div>
     `
@@ -217,6 +220,11 @@
             return value
               .map(tag => `<span class="inline-block bg-neutral-200 dark:bg-neutral-800 text-sm px-2 py-1 rounded mr-2">#${tag}</span>`)
               .join(' ');
+          }
+          if (key === 'genre' && Array.isArray(value)) {
+            return value
+              .map(genre => `<a href="#" class="genre-tag hover:underline mr-2" data-genre="${genre}">#${genre}</a>`)
+              .join('');
           }
           if (key === 'subtitle' && !value) {
             return '';

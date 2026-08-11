@@ -55,7 +55,7 @@ permalink: '/book/'
     {% assign sorted_books = site.data.books.books | sort: "read_at" | reverse %}
     {% for book in sorted_books %}
       <div class="masonry-item absolute p-2 sm:p-4 bg-white dark:bg-neutral-900 rounded-lg border border-gray-900 dark:border-neutral-400 hover:border-dark dark:hover:border-neutral-400 group"
-        data-genre="{{ book.genre }}" style="width: calc(25% - 12px);">
+        style="width: calc(25% - 12px);">
         <div class="flex flex-row mb-2">
           <span class="px-1 py-0 mr-3 rounded-full bg-neutral-300 dark:bg-neutral-700 group-hover:bg-neutral-700 group-hover:dark:bg-neutral-300"></span>
           <h2 class="text-lg font-bold">{{ book.title }}</h2>
@@ -64,7 +64,7 @@ permalink: '/book/'
         <p class="text-base mt-2">{{ book.author }}</p>
         <div class="flex flex-col mt-3 text-sm text-gray-600 dark:text-neutral-300 font-mono space-y-3">
           <p><span>({{ book.publish_at }}) {{ book.read_at }}</span></p>
-          <p><a href="#" class="genre-tag hover:underline" data-genre="{{ book.genre }}">#{{ book.genre }}</a></p>
+          <p>{% for g in book.genre %}<a href="#" class="genre-tag hover:underline mr-2" data-genre="{{ g }}">#{{ g }}</a>{% endfor %}</p>
         </div>
       </div>
     {% endfor %}
@@ -181,7 +181,8 @@ function filterItemsByGenre(containerId, genre) {
   const items = document.querySelectorAll('#' + containerId + ' .masonry-item');
   let visible = 0;
   items.forEach(el => {
-    const match = !genre || el.dataset.genre === genre;
+    const genres = Array.from(el.querySelectorAll('.genre-tag')).map(a => a.dataset.genre);
+    const match = !genre || genres.includes(genre);
     el.style.display = match ? '' : 'none';
     if (match) visible++;
   });
