@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: "BanditHijo.dev"
-email: "bandithijo@duck.com"
+email: "bandithijo.dev[at]gmail.com"
 description: "Here's where I started writing some notes that someday I will call it, a book"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://bandithijo.github.io" # the base hostname & protocol for your site, e.g. http://example.com

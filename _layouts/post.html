@@ -29,6 +29,9 @@ layout: baseof
         {% endfor %}
       </div>
 
+      <div class="w-full mt-10">Feel free to email me your thoughts on this article: <a href="mailto:bandithijo.dev@gmail.com?subject=[{{ site.title }}] [{{ page.categories }}] {{ page.title }}" class="text-blue-500">{{ site.email }}</a>
+      </div>
+
       {% assign author = page.author | downcase %}
       {% assign authors = site.data.blogroll.friends %}
       {% assign author_data = nil %}
