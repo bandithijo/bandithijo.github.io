@@ -61,12 +61,12 @@ Tidak ada. Karena saya pemula, saya memilih untuk menggunakan tipe kertas yang l
 
 ## Apakah tulisan tangan harus bagus?
 
-Tidak perlu. Journal tidak untuk dibaca semua orang. Tulisan tangan saya juga tidak bagus. Saya ingat komentar dari om saya, ketika ia main ke kamar saya dan melihat tulisan saya saat sedang belajar, saat itu saya masih SD, ia bilang gini, "Bagaimanapun bentuk tulisannya kalau disusun dengan rapi, maka akan terlihat rapi." Lihatlah tulisan saya tidak bagus sama sekali. Mungkin hanya saya yang bisa baca. Karena beberapa huruf hilang di beberapa kata. Beberapa huruf juga bentuknya tidak sesuai.
+Tidak perlu. Journal tidak untuk dibaca semua orang. Tulisan tangan saya juga tidak bagus. Saya ingat komentar dari om saya, ketika ia main ke kamar saya dan melihat tulisan saya saat sedang belajar, saat itu saya masih SD, ia bilang gini, "Bagaimanapun bentuk tulisannya kalau disusun dengan rapi sebaris-sebaris, pada akhirnya akan terlihat rapi satu halaman." Waktu itu dicontohkannya tulisan di buku bergaris. Saya menulis dengan menempelkan huruf di garis. Yang om saya contohkan adalah menulis di tengah-tengah antara garis atas dan garis bawah. Magic! Seketika nuansa tulisannya jadi berubah. Jadi terlihat rapi. Lihatlah tulisan saya tidak bagus sama sekali. Mungkin hanya saya yang bisa baca. Karena beberapa huruf hilang di beberapa kata. Beberapa huruf juga bentuknya tidak sesuai.
 
 
 ## Menulis journal untuk anak perempuan?
 
-Tidak setuju. Banyak catatan sejarah ditulis oleh laki-laki. Kalau kamu nonton film "The Last Samurai" (2003), Nathan Algren seorang US Army Captain yang ditawan oleh kelompok samurai, ia menulis journal, dan journalnya dipelajari oleh pemimpin kelompok samurai tersebut yang bernama Katsumoto. Katsumoto mempelajari bagaimana pola pikir dari tawanannnya melalui catatan yang ia tulis di journal. Jadi, dari film ini kita belajar, nasibmu bisa saja berbeda jika kamu punya journal, dan journal tersebut jatuh ke tangan musuhmu.
+Tidak setuju. Banyak catatan sejarah ditulis oleh laki-laki. Kalau kamu nonton film "The Last Samurai" (2003), Nathan Algren seorang US Army Captain yang ditawan oleh kelompok samurai, ia menulis journal, dan journalnya dipelajari oleh pemimpin kelompok samurai bernama Katsumoto. Katsumoto mempelajari bagaimana pola pikir dari tawanannnya melalui Journal milik Algren. Jadi, dari film ini kita belajar, nasibmu bisa saja berbeda jika kamu punya journal, dan journal tersebut jatuh ke tangan musuhmu. Wkwkwk.
 
 
 (^_^)
