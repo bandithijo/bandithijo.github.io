@@ -126,3 +126,11 @@ books:
     author: "Abul A'la Al-Maududi"
     publish_at: "1984"
     read_at: "2026/07"
+
+  - title: "Max Havelaar"
+    subtitle: "Atau lelang kopi maskapai dagang Belanda"
+    genre: ["politic", "novel"]
+    publisher: "medpress"
+    author: "Multatuli (Eduard Douwes Dekker)"
+    publish_at: "2018/05"
+    read_at: "2026/08"
