@@ -9,7 +9,7 @@ tags: ["etchosts"]
 description: "Salah satu distraksi ketika bekerja menggunakan laptop adalah Social Media. Disable saja aksesnya!"
 ---
 
-Jika sosial media mulai merasa sebagai distraksi produktivitas kamu sehari-hari, mungkin sudah waktunya untuk break up dengan social media.
+Jika sosial media mulai terasa sebagai distraksi produktivitas kamu sehari-hari, mungkin sudah waktunya untuk break up dengan social media.
 
 Tidak perlu sampai tutup akun. Sekedar membatasi akses atau bahkan menutup aksesnya, saya rasa sudah cukup.
 
