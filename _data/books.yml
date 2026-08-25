@@ -134,3 +134,11 @@ books:
     author: "Multatuli (Eduard Douwes Dekker)"
     publish_at: "2018/05"
     read_at: "2026/08"
+
+  - title: "One Day, Everyone Will Have Always Been Against This"
+    subtitle: "Suatu Masa, Semua Orang Akan Mengaku Membela Palestina"
+    genre: ["politic", "social"]
+    publisher: "renebook"
+    author: "Omar El Akkad"
+    publish_at: "2026/03"
+    read_at: "2026/08"
