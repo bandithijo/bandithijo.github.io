@@ -28,14 +28,15 @@ Tapi di jaman serba AI ini saya malah menyenangi menulis journal dengan tulisan 
 
 Sebab terbesarnya bisa jadi karena saya mulai menyenangi kembali membaca buku fisik. Sepanjang 2026 ini, saya banyak membaca buku fisik. Mungkin karena terlalu sering memegang kertas, saya jadi ingin menulis di atas kertas.
 
-![gambar_7]({% assets_path %}/gambar_07.jpg)
+![gambar_5]({% assets_path %}/gambar_05.jpg)
 
 Karena berinteraksi dengan kertas, selain menulis, saya juga jadi tertarik untuk menggambar. Dari dulu saya ingin sekali bisa menggambar sketsa. Saya mulai dari yang paling sederhana dulu (setidaknya menurut saya sederhana) yaitu "doodle". Karena saya tidak menyenangi menggunakan element stiker di jurnal saya, saya menggunakan element gambar untuk mengisi bagian-bagian yang kosong di jurnal.
 
-![gambar_5]({% assets_path %}/gambar_05.jpg)
-
 ![gambar_6]({% assets_path %}/gambar_06.jpg)
 
+![gambar_7]({% assets_path %}/gambar_07.jpg)
+
+![gambar_8]({% assets_path %}/gambar_08.jpg)
 
 Sebab lain yang mendorong keinginan menulis di kertas lagi adalah karena masa-masa sekarang ini lagi cukup sering mati lampu. Dan jika sudah mati lampu, saya hanya bisa membaca, tapi begitu ingin mencatat hal-hal yang menurut saya menarik, belum tentu laptop saya masih hidup. Kertas menjadi solusi yang paling dekat.
 
