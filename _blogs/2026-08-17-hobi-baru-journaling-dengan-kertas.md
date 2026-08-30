@@ -72,6 +72,6 @@ Tidak setuju. Banyak catatan sejarah ditulis oleh laki-laki. Kalau kamu nonton f
 
 ## Apa yang saya tulis di journal saya?
 
-{% youtube Y37PrFJHmbA }%
+{% youtube Y37PrFJHmbA %}
 
 (^_^)
