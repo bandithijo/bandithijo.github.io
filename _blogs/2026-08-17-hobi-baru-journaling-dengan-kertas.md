@@ -70,4 +70,8 @@ Tidak perlu. Journal tidak untuk dibaca semua orang. Tulisan tangan saya juga ti
 Tidak setuju. Banyak catatan sejarah ditulis oleh laki-laki. Kalau kamu nonton film "The Last Samurai" (2003), Nathan Algren seorang US Army Captain yang ditawan oleh kelompok samurai, ia menulis journal, dan journalnya dipelajari oleh pemimpin kelompok samurai bernama Katsumoto. Katsumoto mempelajari bagaimana pola pikir dari tawanannnya melalui Journal milik Algren. Jadi, dari film ini kita belajar, nasibmu bisa saja berbeda jika kamu punya journal, dan journal tersebut jatuh ke tangan musuhmu. Wkwkwk.
 
 
+## Apa yang saya tulis di journal saya?
+
+{% youtube Y37PrFJHmbA }%
+
 (^_^)
