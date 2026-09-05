@@ -79,4 +79,8 @@ Tidak setuju. Banyak catatan sejarah ditulis oleh laki-laki. Kalau kamu nonton f
 
 ## Pesan penulis
 
-Catatan digital memang masa depan. Tapi di masa depan, catatan tersebut tidak membawa bau kertas, tidak membawa warna kertas yang menguning karena waktu, tidak membawa noda kopi yang tumpah ke atas kertas, tidak membawa tekukan di badan kertas, tidak membawa darah nyamuk yang ditepuk saat menulis malam-malam, dan hal-hal lain yang terbawa oleh kertas bersama waktu. Analog Action! Sampai ketemu di masa depan!
+Catatan digital memang masa depan. Tapi di masa depan, catatan tersebut tidak membawa bau kertas, tidak membawa warna kertas yang menguning karena waktu, tidak membawa noda kopi yang tumpah ke atas kertas, tidak membawa tekukan di badan kertas, tidak membawa darah nyamuk yang ditepuk saat menulis malam-malam, dan hal-hal lain yang terbawa oleh kertas bersama waktu.
+
+Di masa sekarang, saya senang saat melihat tulisan-tulisan tangan saya saat jaman sekolah. Maka di masa sekarang, saya akan membuat tulisan tangan saya untuk saya tunjukkan kepada diri saya di masa depan. Saya yakin ia akan tersenyum. Saya yakin akan meringankan harinya jika hari-harinya terasa sulit. Saya yakin akan memberikan ia semangat positif untuk melaluinya, sama seperti yang sudah ia lakukan sebelum-sebelumnya.
+
+Analog Action! Sampai ketemu di masa depan!
