@@ -75,3 +75,8 @@ Tidak setuju. Banyak catatan sejarah ditulis oleh laki-laki. Kalau kamu nonton f
 {% youtube Y37PrFJHmbA %}
 
 (^_^)
+
+
+## Pesan penulis
+
+Catatan digital memang masa depan. Tapi di masa depan, catatan tersebut tidak membawa bau kertas, tidak membawa warna kertas yang menguning karena waktu, tidak membawa noda kopi yang tumpah ke atas kertas, tidak membawa tekukan di badan kertas, tidak membawa darah nyamuk yang ditepuk saat menulis malam-malam, dan hal-hal lain yang terbawa oleh kertas bersama waktu. Analog Action! Sampai ketemu di masa depan!
