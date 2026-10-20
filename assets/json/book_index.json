@@ -3,7 +3,12 @@ layout: none
 permalink: /book/index.json
 ---
 [
-  {% for book in site.data.books.books %}
+  {% assign all_books = site.data.books.books | sort: "read_at" | reverse %}
+  {% assign reading_books = all_books | where: "status", "READING" %}
+  {% assign waiting_books = all_books | where: "status", "WAITING" %}
+  {% assign done_books = all_books | where: "status", "DONE" %}
+  {% assign sorted_books = reading_books | concat: waiting_books | concat: done_books %}
+  {% for book in sorted_books %}
     {
       "title":{{ book.title | jsonify }},
       "subtitle":{{ book.subtitle | jsonify }},
@@ -11,7 +16,8 @@ permalink: /book/index.json
       "publisher":{{ book.publisher | jsonify }},
       "author":{{ book.author | jsonify }},
       "publish_at":{{ book.publish_at | jsonify }},
-      "read_at":{{ book.read_at | jsonify }}
+      "read_at":{{ book.read_at | jsonify }},
+      "status":{{ book.status | jsonify }}
     }{% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]

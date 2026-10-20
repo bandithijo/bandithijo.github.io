@@ -194,11 +194,12 @@
     books: `
       <div class="masonry-item absolute p-2 sm:p-4 opacity-0 bg-white dark:bg-neutral-900 rounded-lg border border-gray-900 dark:border-neutral-400 hover:border-dark dark:hover:border-neutral-400 group">
         <div class="flex flex-row mb-2">
-          <span class="px-1 py-0 mr-3 rounded-full bg-neutral-300 dark:bg-neutral-700 group-hover:bg-neutral-700 group-hover:dark:bg-neutral-300"></span>
+          <span data-status="{status}" title="{status}" class="px-1 py-0 mr-3 rounded-full bg-neutral-300 data-[status=DONE]:bg-lime-600 data-[status=READING]:bg-red-700 data-[status=WAITING]:bg-amber-500"></span>
           <h2 class="text-lg font-bold">{title}</h2>
         </div>
         <p class="text-sm text-gray-600 dark:text-neutral-300 italic empty:hidden">{subtitle}</p>
         <p class="text-base mt-2">{author}</p>
+        <p class="text-sm text-gray-600 dark:text-neutral-300 mt-2">{publisher}</p>
         <div class="flex flex-col mt-3 text-sm text-gray-600 dark:text-neutral-300 font-mono space-y-3">
           <p><span>({publish_at}) {read_at}</span></p>
           <p>{genre}</p>

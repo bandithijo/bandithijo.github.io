@@ -6,6 +6,7 @@ books:
     author: "Abigail Limuria, Cania Citta"
     publish_at: "2025/01"
     read_at: "2025/02"
+    status: "DONE"
 
   - title: "Generasi Zombie"
     subtitle: ""
@@ -14,6 +15,7 @@ books:
     author: "Andriy Hadinata"
     publish_at: "2025/04"
     read_at: "2025/05"
+    status: "DONE"
 
   - title: "Kami (Bukan) Jongos Berdasi"
     subtitle: ""
@@ -22,6 +24,7 @@ books:
     author: "J.S. Khairen"
     publish_at: "2024/04"
     read_at: "2025/11"
+    status: "DONE"
 
   - title: "Jangan Membuat Masalah Kecil jadi Masalah Besar"
     subtitle: "Cara mudah mencegah masalah kecil mengganggu hidup kita"
@@ -30,6 +33,7 @@ books:
     author: "Richard Carlson"
     publish_at: "2019/05"
     read_at: "2026/01"
+    status: "DONE"
 
   - title: "Dompet Ayah Sepatu Ibu"
     subtitle: ""
@@ -38,6 +42,7 @@ books:
     author: "J.S. Khairen"
     publish_at: "2023/08"
     read_at: "2026/02"
+    status: "DONE"
 
   - title: "The Psychology of Money"
     subtitle: "Pelajaran abadi mengenai kekayaan, ketamakan, dan kebahagiaan"
@@ -46,6 +51,7 @@ books:
     author: "Morgan Housel"
     publish_at: "2021/05"
     read_at: "2026/02"
+    status: "DONE"
 
   - title: "Rework"
     subtitle: "Ubahlah cara kerjamu selamanya!"
@@ -54,6 +60,7 @@ books:
     author: "Jason Fried, David Heinemeier Hansson"
     publish_at: "2021/04"
     read_at: "2026/03"
+    status: "DONE"
   
   - title: "Indonesian Mental Health First Aid Booklet"
     subtitle: "Panduan pertolongan pertama kesehatan jiwa Indonesia"
@@ -62,6 +69,7 @@ books:
     author: "Dr. Sandersan Onie"
     publish_at: "2021/08"
     read_at: "2026/04"
+    status: "DONE"
 
   - title: "Pendidikan Kaum Tertindas"
     subtitle: "Untuk kaum tertindas dan yang menderita dengan mereka atau yang berjuang di sisi mereka"
@@ -70,6 +78,7 @@ books:
     author: "Paulo Freire"
     publish_at: "2019"
     read_at: "2026/04"
+    status: "DONE"
 
   - title: "Remote"
     subtitle: "Ketika kerja jarak jauh jadi keharusan dan ngantor jadi hambatan, peluang apa yang bisa kita dapatkan?"
@@ -78,6 +87,7 @@ books:
     author: "Jason Fried, David Heinemeier Hansson"
     publish_at: "2021"
     read_at: "2026/06"
+    status: "DONE"
 
   - title: "Mitos Khilafah Ajaran Islam?"
     subtitle: "Menguji Argumentasi Soal Khilafah Ala HTI"
@@ -86,6 +96,7 @@ books:
     author: "Satria Dharma"
     publish_at: "2020/09"
     read_at: "2026/07"
+    status: "DONE"
 
   - title: "Seni Merahasiakan Amal di Era Digital"
     subtitle: "Tetap bahagia tanpa perlu jadi viral"
@@ -94,6 +105,7 @@ books:
     author: "Dinar Rafikhalif, Gilang R. Aprianto"
     publish_at: "2026/01"
     read_at: "2026/07"
+    status: "DONE"
 
   - title: "Software Engineer's Notes"
     subtitle: "... Keresahan antara logika dan realita"
@@ -102,6 +114,7 @@ books:
     author: "@kotaroisme"
     publish_at: "2025/02"
     read_at: "2026/07"
+    status: "DONE"
 
   - title: "Animal Farm"
     subtitle: ""
@@ -110,6 +123,7 @@ books:
     author: "George Orwell"
     publish_at: "2015/01"
     read_at: "2026/07"
+    status: "DONE"
 
   - title: "Pembentukan Partai Politik Islam"
     subtitle: ""
@@ -118,6 +132,7 @@ books:
     author: "Taqiyuddin an-Nabhani"
     publish_at: "1953"
     read_at: "2026/07"
+    status: "DONE"
 
   - title: "Khilafah dan Kerajaan"
     subtitle: "Konsep Pemerintahan Islam serta Studi Kritis terhadap 'Kerajaan' Bani Umayyah dan Bani Abbas"
@@ -126,6 +141,7 @@ books:
     author: "Abul A'la Al-Maududi"
     publish_at: "1984"
     read_at: "2026/07"
+    status: "DONE"
 
   - title: "Max Havelaar"
     subtitle: "Atau lelang kopi maskapai dagang Belanda"
@@ -134,6 +150,7 @@ books:
     author: "Multatuli (Eduard Douwes Dekker)"
     publish_at: "2018/05"
     read_at: "2026/08"
+    status: "DONE"
 
   - title: "One Day, Everyone Will Have Always Been Against This"
     subtitle: "Suatu Masa, Semua Orang Akan Mengaku Membela Palestina"
@@ -142,3 +159,50 @@ books:
     author: "Omar El Akkad"
     publish_at: "2026/03"
     read_at: "2026/08"
+    status: "DONE"
+
+  - title: "Building a Second Brain"
+    subtitle: "Metode Efektif Mengelola Kehidupan Digital agar Lebih Produktif dan Kreatif"
+    genre: ["selfimprovement", "productivity"]
+    publisher: "renebook"
+    author: "Tiago Forte"
+    publish_at: "2024/02"
+    read_at: "2026/09"
+    status: "DONE"
+
+  - title: "Logical Fallacy"
+    subtitle: "Menguak Kesalahan-kesalahan Berpikir yang Kerap Kita Jumpai Sehari-hari"
+    genre: ["filsafat", "religion"]
+    publisher: "Keira"
+    author: "Muhammad Nuruddin"
+    publish_at: "2021/07"
+    read_at: "-"
+    status: "WAITING"
+
+  - title: "Kitab Firasat"
+    subtitle: "Ilmu Membaca Sifat dan Karakter Manusia dari Bentuk Tubuhnya"
+    genre: ["fisiognomi", "religion"]
+    publisher: "Turos"
+    author: "Imam Fakhruddin Ar-Razi"
+    publish_at: "2024/03"
+    read_at: "-"
+    status: "READING"
+
+  - title: "The Power of Now"
+    subtitle: "Pedoman Menuju Pencerahan Spiritual"
+    genre: ["selfimprovement"]
+    publisher: "Bhuana Ilmu Populer Kelompok Gramedia"
+    author: "Eckhart Tolle"
+    publish_at: "2025/08"
+    read_at: "-"
+    status: "WAITING"
+
+  - title: "The Bullet Journal Method"
+    subtitle: "Track Your Past, Order Your Present, Plan Your Future"
+    genre: ["selfimprovement", "journaling"]
+    publisher: "4th Estate"
+    author: "Ryder Carrol"
+    publish_at: "2018"
+    read_at: "-"
+    status: "WAITING"
+

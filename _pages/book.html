@@ -52,16 +52,21 @@ permalink: '/book/'
 <!-- Masonry Container -->
 <div id="masonry-container" class="relative opacity-0 transition-opacity duration-300">
   <div id="post-container">
-    {% assign sorted_books = site.data.books.books | sort: "read_at" | reverse %}
+    {% assign all_books = site.data.books.books | sort: "read_at" | reverse %}
+    {% assign reading_books = all_books | where: "status", "READING" %}
+    {% assign waiting_books = all_books | where: "status", "WAITING" %}
+    {% assign done_books = all_books | where: "status", "DONE" %}
+    {% assign sorted_books = reading_books | concat: waiting_books | concat: done_books %}
     {% for book in sorted_books %}
       <div class="masonry-item absolute p-2 sm:p-4 bg-white dark:bg-neutral-900 rounded-lg border border-gray-900 dark:border-neutral-400 hover:border-dark dark:hover:border-neutral-400 group"
         style="width: calc(25% - 12px);">
         <div class="flex flex-row mb-2">
-          <span class="px-1 py-0 mr-3 rounded-full bg-neutral-300 dark:bg-neutral-700 group-hover:bg-neutral-700 group-hover:dark:bg-neutral-300"></span>
+          <span data-status="{{ book.status }}" title="{{ book.status }}" class="px-1 py-0 mr-3 rounded-full bg-neutral-300 data-[status=DONE]:bg-lime-600 data-[status=READING]:bg-red-700 data-[status=WAITING]:bg-amber-500"></span>
           <h2 class="text-lg font-bold">{{ book.title }}</h2>
         </div>
         {% if book.subtitle %}<p class="text-sm text-gray-600 dark:text-neutral-300 italic">{{ book.subtitle }}</p>{% endif %}
         <p class="text-base mt-2">{{ book.author }}</p>
+        <p class="text-sm text-gray-600 dark:text-neutral-300 mt-2">{{ book.publisher }}</p>
         <div class="flex flex-col mt-3 text-sm text-gray-600 dark:text-neutral-300 font-mono space-y-3">
           <p><span>({{ book.publish_at }}) {{ book.read_at }}</span></p>
           <p>{% for g in book.genre %}<a href="#" class="genre-tag hover:underline mr-2" data-genre="{{ g }}">#{{ g }}</a>{% endfor %}</p>
@@ -119,12 +124,12 @@ window.addEventListener('resize', () => {
 </script>
 
 <!-- Search -->
-<script src="/assets/javascript/search.js" type="text/javascript"></script>
+<script src="/assets/javascript/search.js?v={{ site.time | date: "%s" }}" type="text/javascript"></script>
 <script>
 SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
-  json: '/book/index.json',
+  json: '/book/index.json?v={{ site.time | date: "%s" }}',
   templateType: 'books'
 });
 
